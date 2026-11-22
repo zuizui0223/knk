@@ -79,6 +79,14 @@ def audit_zip(zippath: Path) -> dict:
                 raise ValueError(f"Empty data file {name}")
             unique_keys = {(r["plot"], r["quadrat"], r["taxon"]) for r in recs}
             duplicated = len(recs) - len(unique_keys)
+            dup_groups = defaultdict(list)
+            for rec in recs:
+                dup_groups[(rec["plot"],rec["quadrat"],rec["taxon"])].append(
+                    {"gram":rec["mass"],"row":rec["row_number"]})
+            dup_examples = [
+                {"plot":p,"quadrat":q,"species":sp,"records":v}
+                for (p,q,sp),v in dup_groups.items() if len(v)>1
+            ]
             cohorts = Counter(r["year"] for r in recs)
             harvest_labels = Counter(r["harvest"] for r in recs)
             vals = [r["mass"] for r in recs]
@@ -112,6 +120,7 @@ def audit_zip(zippath: Path) -> dict:
                 "n_missing_or_non_numeric_mass": bad,
                 "n_negative_mass": neg,
                 "n_duplicate_plot_quadrat_species": duplicated,
+                "duplicate_examples_first15": dup_examples[:15],
                 "plot_examples": plot_keys[:10],
                 "unparsed_plot_examples": unmatched[:15],
                 "parsed_treatment_plot_counts": dict(treatment_counts),
@@ -140,6 +149,10 @@ def audit_zip(zippath: Path) -> dict:
             refs = [(ix, l[:240]) for ix, l in enumerate(lines, 1) if patterns.search(l)]
             source["rmd_key_lines"] = [{"line": i, "code": line} for i, line in refs[:120]]
             source["rmd_n_lines"] = len(lines)
+            source["rmd_source_excerpt_35_105"] = [
+                {"line":i+1, "text":line[:220]}
+                for i,line in enumerate(lines[34:105],34)
+            ]
         readmes = [n for n in zf.namelist() if n.endswith("Data/README.txt")]
         if len(readmes) == 1:
             readme = zf.read(readmes[0]).decode("utf-8-sig", errors="replace")
@@ -170,6 +183,7 @@ def main() -> None:
                                    if k not in ("all_species","all_plot_ids","member_name")},ensure_ascii=False)[:4000])
     print("README_EXTRACT", report.get("data_readme_text","")[:8000])
     print("RMD_REFERENCES", json.dumps(report.get("rmd_key_lines",[])[:55],ensure_ascii=False)[:12000])
+    print("RMD_SOURCE_EXCERPT",json.dumps(report.get("rmd_source_excerpt_35_105",[]),ensure_ascii=False)[:14500])
     print("POEM_DESIGN_AUDIT_DONE",args.output)
 
 
