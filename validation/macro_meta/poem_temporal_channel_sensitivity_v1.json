@@ -1,0 +1,327 @@
+{
+  "status": "POSTHOC_SECONDARY_ANALYSIS_REPRODUCIBLE_NO_META_POOLED",
+  "parent_source_run": "https://github.com/zuizui0223/knk/actions/runs/45085174472",
+  "secondary_run": "https://github.com/zuizui0223/knk/actions/runs/45085506739",
+  "data_doi": "10.5281/zenodo.10119982",
+  "source_archive_sha256": "7541ce47b61244f34a6b3b7f1187a2ef16f79bc173d73e6abed206203939ef8f",
+  "source_level_three_age_plot_composite": [
+    {
+      "cohort": "2020",
+      "n_independent_plots": 20,
+      "n_repeated_seasons": 3,
+      "n_features": 147,
+      "named": {
+        "r2": 0.28405204932463357,
+        "null_median": 0.1554981383482905,
+        "null_ci95": [
+          0.09408910734742516,
+          0.23772268366660818
+        ],
+        "E": 0.12855391097634308,
+        "p_upper": 0.0011,
+        "n_units": 20,
+        "n_response_columns": 147,
+        "n_permutations": 9999
+      },
+      "rank": {
+        "r2": 0.3867755627794179,
+        "null_median": 0.14959179976565964,
+        "null_ci95": [
+          0.06740266150948251,
+          0.2930975999055305
+        ],
+        "E": 0.23718376301375824,
+        "p_upper": 0.0004,
+        "n_units": 20,
+        "n_response_columns": 147,
+        "n_permutations": 9999
+      },
+      "delta_E": -0.10862985203741515
+    },
+    {
+      "cohort": "2021",
+      "n_independent_plots": 20,
+      "n_repeated_seasons": 3,
+      "n_features": 147,
+      "named": {
+        "r2": 0.3472717391531157,
+        "null_median": 0.15443503539234538,
+        "null_ci95": [
+          0.09624899226349772,
+          0.2382380013454942
+        ],
+        "E": 0.19283670376077033,
+        "p_upper": 0.0002,
+        "n_units": 20,
+        "n_response_columns": 147,
+        "n_permutations": 9999
+      },
+      "rank": {
+        "r2": 0.2423932593168687,
+        "null_median": 0.1535642140897646,
+        "null_ci95": [
+          0.07500535661017678,
+          0.26100683150052106
+        ],
+        "E": 0.08882904522710411,
+        "p_upper": 0.048,
+        "n_units": 20,
+        "n_response_columns": 147,
+        "n_permutations": 9999
+      },
+      "delta_E": 0.10400765853366623
+    }
+  ],
+  "posthoc_age2_channel_audits": [
+    {
+      "cohort": "2020",
+      "hellinger_named": {
+        "R2": 0.3144971489834586,
+        "null_median": 0.1529160212624276,
+        "E": 0.161581127721031,
+        "p_upper": 0.0025,
+        "null_ci95": [
+          0.09461353160268704,
+          0.2513964511438502
+        ],
+        "n_permutations": 9999
+      },
+      "hellinger_sorted": {
+        "R2": 0.5207339941476359,
+        "null_median": 0.14011743721818223,
+        "E": 0.3806165569294536,
+        "p_upper": 0.0015,
+        "null_ci95": [
+          0.043165148089675136,
+          0.36580383697394675
+        ],
+        "n_permutations": 9999
+      },
+      "unsown_species_only": {
+        "status": "SCORED",
+        "n_unsown_taxa": 35,
+        "named": {
+          "r2": 0.2140547159634969,
+          "null_median": 0.15086027237837613,
+          "null_ci95": [
+            0.0741825065025286,
+            0.2805456758938215
+          ],
+          "E": 0.06319444358512077,
+          "p_upper": 0.1471,
+          "n_units": 20,
+          "n_response_columns": 35,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.27776183420251505,
+          "null_median": 0.14088638916106655,
+          "null_ci95": [
+            0.031378088884021375,
+            0.3934872170912249
+          ],
+          "E": 0.1368754450414485,
+          "p_upper": 0.1128,
+          "n_units": 20,
+          "n_response_columns": 35,
+          "n_permutations": 9999
+        }
+      },
+      "treatment_descriptives": {
+        "F": {
+          "n_plots": 5,
+          "sown_share_mean": 0.6470603066450874,
+          "top1_share_mean": 0.421910255751672,
+          "mean_total_grams_per_quadrat": 23.426242000000002
+        },
+        "G": {
+          "n_plots": 5,
+          "sown_share_mean": 0.7781666652331781,
+          "top1_share_mean": 0.7924633540638284,
+          "mean_total_grams_per_quadrat": 35.935733
+        },
+        "L": {
+          "n_plots": 5,
+          "sown_share_mean": 0.6918390577681919,
+          "top1_share_mean": 0.5301174132345923,
+          "mean_total_grams_per_quadrat": 25.677763
+        },
+        "S": {
+          "n_plots": 5,
+          "sown_share_mean": 0.9527644305478663,
+          "top1_share_mean": 0.8146990473658425,
+          "mean_total_grams_per_quadrat": 34.220501999999996
+        }
+      },
+      "rank1_winner_counts_by_treatment": {
+        "F": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 3
+          },
+          {
+            "species": "Anthoxanthum odoratum",
+            "count": 1
+          },
+          {
+            "species": "Anthemis arvensis",
+            "count": 1
+          }
+        ],
+        "G": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 4
+          },
+          {
+            "species": "Rumex acetosella",
+            "count": 1
+          }
+        ],
+        "L": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 4
+          },
+          {
+            "species": "Anthemis arvensis",
+            "count": 1
+          }
+        ],
+        "S": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 5
+          }
+        ]
+      },
+      "raw_data_scoring_n_units": 20,
+      "delta_R2_named_minus_sorted_bootstrap": {
+        "point_estimate": -0.22640312652078498,
+        "percentile95": [
+          -0.3370239113634003,
+          -0.03241560022189269
+        ],
+        "n_plot_bootstrap": 3000
+      }
+    },
+    {
+      "cohort": "2021",
+      "hellinger_named": {
+        "R2": 0.43606099186316594,
+        "null_median": 0.14996084139777474,
+        "E": 0.28610015046539117,
+        "p_upper": 0.0001,
+        "null_ci95": [
+          0.07962692078481362,
+          0.2760251611065322
+        ],
+        "n_permutations": 9999
+      },
+      "hellinger_sorted": {
+        "R2": 0.16958460148943355,
+        "null_median": 0.14814180689190068,
+        "E": 0.02144279459753287,
+        "p_upper": 0.3745,
+        "null_ci95": [
+          0.05817522727352371,
+          0.31019195214962786
+        ],
+        "n_permutations": 9999
+      },
+      "unsown_species_only": {
+        "status": "STOP_ZERO_UNSOWN_MASS",
+        "zero_unsown_plots": 1
+      },
+      "treatment_descriptives": {
+        "F": {
+          "n_plots": 5,
+          "sown_share_mean": 0.9020932243248792,
+          "top1_share_mean": 0.4878883673178036,
+          "mean_total_grams_per_quadrat": 25.14162
+        },
+        "G": {
+          "n_plots": 5,
+          "sown_share_mean": 0.9690733467175716,
+          "top1_share_mean": 0.6060598765568355,
+          "mean_total_grams_per_quadrat": 26.48147
+        },
+        "L": {
+          "n_plots": 5,
+          "sown_share_mean": 0.8455340490993237,
+          "top1_share_mean": 0.47461338972378264,
+          "mean_total_grams_per_quadrat": 28.471600000000002
+        },
+        "S": {
+          "n_plots": 5,
+          "sown_share_mean": 0.9889147682561299,
+          "top1_share_mean": 0.512225150628202,
+          "mean_total_grams_per_quadrat": 29.08724
+        }
+      },
+      "rank1_winner_counts_by_treatment": {
+        "F": [
+          {
+            "species": "Jasione montana",
+            "count": 3
+          },
+          {
+            "species": "Bromus hordeaceus",
+            "count": 2
+          }
+        ],
+        "G": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 5
+          }
+        ],
+        "L": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 4
+          },
+          {
+            "species": "Trifolium arvense",
+            "count": 1
+          }
+        ],
+        "S": [
+          {
+            "species": "Bromus hordeaceus",
+            "count": 4
+          },
+          {
+            "species": "Anthoxanthum odoratum",
+            "count": 1
+          }
+        ]
+      },
+      "raw_data_scoring_n_units": 20,
+      "delta_R2_named_minus_sorted_bootstrap": {
+        "point_estimate": 0.3043829292836302,
+        "percentile95": [
+          -0.007986278611736987,
+          0.497949537132215
+        ],
+        "n_plot_bootstrap": 3000
+      }
+    }
+  ],
+  "paired_cohort_deltaR2_bootstrap": {
+    "point_difference": 0.5307860558044152,
+    "percentile95": [
+      0.13311803808737574,
+      0.7336398734328321
+    ],
+    "bootstrap_reps": 3000,
+    "interpretation": "Within-cohort plot resampling cannot generalize to new weather years (n=1 per establishment year)"
+  },
+  "limitations": [
+    "Age-2 and unsown/sown separation selected after primary inspection",
+    "Each cohort contributes 20 distinct repeatedly observed experimental plots and one establishment year; not 3 independent temporal studies",
+    "Inter-cohort difference does not identify weather, competition, or generalize to unseen years",
+    "Within-treatment bootstrap uncertainty is conditional on source plots, not cross-year uncertainty",
+    "Keep frozen KNK v28-v38 and original Ecology Letters submission unchanged"
+  ]
+}
