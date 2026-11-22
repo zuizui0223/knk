@@ -8,6 +8,7 @@ on:
       - "benchmarks/probe_poem_archive.py"
       - "benchmarks/audit_poem_design.py"
       - "benchmarks/score_poem_field_storage.py"
+      - "benchmarks/audit_poem_history_channel_switch.py"
   workflow_dispatch:
 
 permissions:
@@ -44,6 +45,10 @@ jobs:
         shell: bash
         run: |
           python -m benchmarks.score_poem_field_storage --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_field_storage_results.json" --permutations 9999
+      - name: Run exploratory cohort-change and source-level trajectory checks
+        shell: bash
+        run: |
+          python -m benchmarks.audit_poem_history_channel_switch --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_secondary_results.json" --permutations 9999 --bootstrap 3000
       - name: Upload manifest only (NEVER the original source archive)
         if: success()
         uses: actions/upload-artifact@v4
@@ -53,4 +58,5 @@ jobs:
             ${{ runner.temp }}/poem/poem_source_manifest.json
             ${{ runner.temp }}/poem/poem_design_audit.json
             ${{ runner.temp }}/poem/poem_field_storage_results.json
+            ${{ runner.temp }}/poem/poem_secondary_results.json
           retention-days: 14
