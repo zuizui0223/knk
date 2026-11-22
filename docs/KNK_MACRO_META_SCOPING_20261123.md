@@ -16,6 +16,9 @@ Zou & Rudolf (2023, *TREE*, DOI https://doi.org/10.1016/j.tree.2023.08.001) revi
 
 The source review's code and underlying 45,448-byte SupportingData.xlsx are publicly archived at https://github.com/hengxingzou/Zou2023TrendsEcolEvol. The individual spreadsheet rows have **not** been independently screened in this phase. These 268 reports are an older *review universe*, not 268 meta-effect sizes or 268 new KNK studies.
 
+
+**Complementary restoration-focused review, not effect-size evidence:** Weidlich et al. (2021), *Restoration Ecology*, DOI https://doi.org/10.1111/rec.13317, systematically screened restoration assembly-history studies (43 eligible, 30 temperate grassland). Its frequently cited positive priority-effect counts address whether *any* treatment effect was reported, **not** whether history is retained in named versus identity-free abundance architecture; they are not new independent KNK outcomes or meta-effect estimates. The review universe also differs from Zou & Rudolf (2023), so the two denominators must not be added together.
+
 ## Three independent datasets with matched identity-stripping calculations
 
 | Source | n experimental units | Endpoint | E(labeled) | E(sorted) | Difference ΔE | rank p |
