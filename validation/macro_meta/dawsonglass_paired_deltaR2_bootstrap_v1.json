@@ -1,0 +1,28 @@
+{
+  "source": "user-provided Dawson-Glass_ECY24-0464_assembly_data.csv",
+  "dataset_doi": "10.5061/dryad.sbcc2frh4",
+  "source_sha256": "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230",
+  "n_units": 24,
+  "n_components": 15,
+  "treatment_counts": {
+    "Ambient Order": 12,
+    "Warm Order": 12
+  },
+  "R2_named": 0.4289594186777021,
+  "R2_sorted": 0.032899491172527814,
+  "delta_R2_named_minus_sorted": 0.39605992750517427,
+  "bootstrap": {
+    "sampling_unit": "whole mesocosm",
+    "resample": "12 pots with replacement within each original assignment group",
+    "n": 5000,
+    "seed": 20261123,
+    "median": 0.38941744476119877,
+    "percentile_95": [
+      0.18891252,
+      0.54153643
+    ],
+    "fraction_nonpositive": 0.0002
+  },
+  "status": "exploratory within-study sampling uncertainty only; not a meta-analytic CI, does not adjudicate causal interaction",
+  "reproducibility": "Dawson-Glass raw file not redistributed; source hash fixed; no change to KNK v28-v38"
+}

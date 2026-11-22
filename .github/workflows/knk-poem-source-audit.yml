@@ -1,0 +1,62 @@
+name: KNK POEM public-source archive audit
+
+on:
+  push:
+    branches: [analysis/knk-macro-meta-20261123]
+    paths:
+      - ".github/workflows/knk-poem-source-audit.yml"
+      - "benchmarks/probe_poem_archive.py"
+      - "benchmarks/audit_poem_design.py"
+      - "benchmarks/score_poem_field_storage.py"
+      - "benchmarks/audit_poem_history_channel_switch.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  poem-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install read-only workbook parser
+        run: python -m pip install openpyxl numpy
+      - name: Retrieve original public source in ephemeral job storage only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/poem"
+          URL="https://zenodo.org/records/10119982/files/POEMexperiment/Data_POEM_Paper1_Alonso-Crespo_et_al_2024-v1.0.zip?download=1"
+          curl --fail --location --retry 3 --retry-delay 5 --connect-timeout 30 --max-time 240 "$URL" -o "$RUNNER_TEMP/poem/source.zip"
+          echo "3faa5f7d1619a3beae5941ba763b7a26  $RUNNER_TEMP/poem/source.zip" | md5sum -c -
+      - name: Audit archive structure, hashes and candidate schemas (no outcome scoring)
+        shell: bash
+        run: |
+          python benchmarks/probe_poem_archive.py --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_source_manifest.json"
+      - name: Audit experimental-unit structure in all six POEM tables
+        shell: bash
+        run: |
+          python -m benchmarks.audit_poem_design --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_design_audit.json"
+      - name: POEM field identity/rank pilot scoring under the precommitted contract
+        shell: bash
+        run: |
+          python -m benchmarks.score_poem_field_storage --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_field_storage_results.json" --permutations 9999
+      - name: Run exploratory cohort-change and source-level trajectory checks
+        shell: bash
+        run: |
+          python -m benchmarks.audit_poem_history_channel_switch --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_secondary_results.json" --permutations 9999 --bootstrap 3000
+      - name: Upload manifest only (NEVER the original source archive)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poem-source-schema-audit-20261123
+          path: |
+            ${{ runner.temp }}/poem/poem_source_manifest.json
+            ${{ runner.temp }}/poem/poem_design_audit.json
+            ${{ runner.temp }}/poem/poem_field_storage_results.json
+            ${{ runner.temp }}/poem/poem_secondary_results.json
+          retention-days: 14
