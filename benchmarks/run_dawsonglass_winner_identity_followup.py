@@ -133,7 +133,7 @@ def within_arm_compensation(x: np.ndarray, y: np.ndarray, idx: dict) -> dict:
 
     observed = correlation(rumex, grasses, y)
     if not np.isfinite(observed):
-        raise AuditStop("Degenerate within-arm correlation")
+        return {"status": "NOT_ESTIMABLE", "reason": "Zero within-arm covariance variance"}
     rng = np.random.default_rng(20261124)
     shuffled = np.empty(19999)
     for b in range(len(shuffled)):
