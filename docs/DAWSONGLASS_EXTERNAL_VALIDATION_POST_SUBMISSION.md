@@ -1,6 +1,6 @@
 # Independent KNK validation (post-submission) — Dawson-Glass et al. 2025
 
-**Status (2026-11-22): source metadata verified; experimental CSV not downloaded in this environment; no real-data results scored.**
+**Updated status (2026-11-22): the original CSV was supplied by the user, audited and scored. Primary results are in `DAWSONGLASS_EXTERNAL_RESULT_V1.md`; the exploratory winner/biomass follow-up is in `DAWSONGLASS_WINNER_IDENTITY_FOLLOWUP_V1.md`. This file preserves the original pre-access analysis specification and its historical access blocker.**
 
 This is an *unmerged*, non-v39 analysis candidate. It does not reopen or modify
 KNK's v28–v38 frozen results, Ecology Letters manuscript, or submission package.
@@ -18,14 +18,11 @@ KNK's v28–v38 frozen results, Ecology Letters manuscript, or submission packag
   manipulations in a *separate germination experiment*. The mesocosms themselves
   were grown in shared greenhouse conditions, not warmed vs ambient temperatures.
 
-## Access status and source audit STOP
+## Historical access STOP (resolved later on 2026-11-22)
 
 - The Dryad landing page and file manifest were readable on 2026-11-22.
 - Direct requests for individual CSV file_stream/3629006 returned HTTP 403.
-- Therefore **no raw-row audit, source checksum, treatment verification,
-  null permutation, validation score, or ecological conclusion is available yet**.
-- Reattempt source download via legitimate browser export or author mirror. Do not
-  construct pseudo-data from the paper's tables or reconstruct fake row-level values.
+- At that initial stage the source data were **not yet locally accessible**. Subsequently, the user supplied the raw CSV (SHA-256 `1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230`) and all audit gates passed. **The initial STOP is resolved, not a current blocker.**
 - Raw CSV must remain local and must not be redistributed into this repository.
 - Source checks performed *by the script once data are present*:
   24 unique pots, 15 unique species, 12 pots per order, consistent treatment
@@ -34,7 +31,7 @@ KNK's v28–v38 frozen results, Ecology Letters manuscript, or submission packag
   A STOP on missing or duplicated records requires human reconciliation with
   the actual source; do not silently sum/zero-fill.
 
-## Reproducible execution after source download
+## Reproducible execution from the audited local CSV
 
 Run from the KNK checkout with Python >= 3.10 and NumPy:
 
@@ -87,9 +84,9 @@ niche-preemption / niche-modification mechanism is identified by this reanalysis
 - [x] Source schema verified from Dryad README.
 - [x] Independent analysis code committed to a separate branch.
 - [x] Synthetic tests to verify identity-only and architecture-rich signatures.
-- [ ] Actual source CSV downloaded and SHA-256 recorded.
-- [ ] Pot-level audit PASS.
-- [ ] Original-source raw-biomass PERMANOVA comparison audited.
-- [ ] Predefined real-data endpoints scored.
+- [x] User-supplied original CSV audited and SHA-256 recorded.
+- [x] Pot-level audit PASS.
+- [x] Original-source raw-biomass PERMANOVA pseudo-F matched to 16.61.
+- [x] Predefined real-data endpoints scored; see standalone result report.
 - [ ] Independent result/interpretation review.
 - [ ] Submission-ready main manuscript completed before using this as an additional-study result.
