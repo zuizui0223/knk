@@ -1,0 +1,130 @@
+{
+  "status": "POSTHOC_EXPLORATORY_SCORED_LOCAL",
+  "source_sha256": "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230",
+  "n_pots": 24,
+  "n_species": 15,
+  "groups": {
+    "Ambient Order": 12,
+    "Warm Order": 12
+  },
+  "paired_identity_rank_contrast": {
+    "labeled_R2": 0.42895941867770204,
+    "rank_only_R2": 0.032899491172527856,
+    "delta_R2": 0.39605992750517416,
+    "null_median": -0.0013797309273958867,
+    "null_95pct": [
+      -0.10132341,
+      0.11507118
+    ],
+    "permutation_p_one_sided": 0.0001,
+    "permutations": 9999,
+    "seed": 20261122
+  },
+  "winner_identity_exact": {
+    "names": [
+      "Bromus inermis",
+      "Dactylis glomerata",
+      "Rumex crispus"
+    ],
+    "ambient_counts": [
+      6,
+      6,
+      0
+    ],
+    "warm_counts": [
+      2,
+      2,
+      8
+    ],
+    "G2": 15.276340039075507,
+    "exact_conditional_p": 0.0038829120805160657,
+    "possible_conditioned_tables": 61,
+    "total_treatment_labelings": 2704156
+  },
+  "between_group_BrayCurtis_of_mean_proportions": {
+    "labeled": 0.384118670739301,
+    "rank_sorted": 0.0515052899303487
+  },
+  "grams_mean_contrast_warm_minus_ambient": {
+    "Rumex crispus": {
+      "delta": 15.933333333333337,
+      "bootstrap95": [
+        11.92479166666666,
+        19.941666666666666
+      ]
+    },
+    "Bromus inermis + Dactylis glomerata": {
+      "delta": -18.95,
+      "bootstrap95": [
+        -28.099999999999994,
+        -9.566666666666666
+      ]
+    },
+    "Other species except Rumex": {
+      "delta": -20.374583333333334
+    },
+    "Total aboveground biomass": {
+      "delta": -4.441250000000004,
+      "bootstrap95": [
+        -11.820212916666673,
+        3.1431741666666384
+      ]
+    }
+  },
+  "top_share_difference_warm_minus_ambient": {
+    "ambient_mean": 0.486,
+    "warm_mean": 0.466,
+    "bootstrap95": [
+      -0.08378758391883043,
+      0.043225927972412384
+    ]
+  },
+  "source_initial_height_Rumex_cm": {
+    "ambient_mean": 0.7833333333333332,
+    "warm_mean": 2.2083333333333335,
+    "description": "Initial height prior to planting; not safe to treat as randomized pre-exposure covariate."
+  },
+  "exploratory_species_permutation_BH_q": {
+    "Rumex crispus": 0.0008,
+    "Solidago canadensis": 0.0008,
+    "Dactylis glomerata": 0.017,
+    "Hypericum punctatum": 0.0486,
+    "Ranunculus pennsylvanicus": 0.0486
+  },
+  "caveats": [
+    "Winner identity exact p is a global conditional test of the 24 observed winner labels and should not be interpreted as an independent experiment.",
+    "The paired R2 permutation p tests the global label-exchangeability null for differential response representation, not equivalence of the ranked response.",
+    "The selected Rumex/two-grass compensation contrast is post hoc; absolute-mass means do not prove competitive replacement.",
+    "Relative share effects are compositional; review absolute gram changes and source author's adjusted species-level results.",
+    "Planting initial height differs across treatments; arrival time, plant age, growth period and ecological interactions cannot be separately identified in these data.",
+    "Maintain existing frozen manuscript v28-v38 unchanged."
+  ],
+  "within_treatment_absolute_biomass_covariance_exploratory": {
+    "species": "Rumex crispus vs sum(Bromus inermis, Dactylis glomerata)",
+    "sample_unit": "one pot",
+    "n": 24,
+    "centered_within": [
+      "Ambient Order",
+      "Warm Order"
+    ],
+    "r": -0.5306127089483622,
+    "permutation_two_sided_p": 0.00575,
+    "permutations": 19999,
+    "permutation_seed": 20261124,
+    "bootstrap95": [
+      -0.74509016,
+      -0.2394312
+    ],
+    "bootstrap_resamples": 20000,
+    "bootstrap_seed": 20261125,
+    "leave_one_pot_r_range": [
+      -0.5842129987198744,
+      -0.4741940107436927
+    ],
+    "other_12_species_r": -0.06396556840955868,
+    "total_biomass_r": -0.15735399387119364,
+    "within_ambient_r": -0.5541736705007513,
+    "within_warm_r": -0.5702694172343037,
+    "caveat": "Absolute grams remove compositional closure but not finite shared carrying-capacity, pot microenvironment, or duration/size confounding; post hoc hypothesis."
+  }
+}
