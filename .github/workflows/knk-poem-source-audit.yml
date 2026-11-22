@@ -7,6 +7,7 @@ on:
       - ".github/workflows/knk-poem-source-audit.yml"
       - "benchmarks/probe_poem_archive.py"
       - "benchmarks/audit_poem_design.py"
+      - "benchmarks/score_poem_field_storage.py"
   workflow_dispatch:
 
 permissions:
@@ -22,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install read-only workbook parser
-        run: python -m pip install openpyxl
+        run: python -m pip install openpyxl numpy
       - name: Retrieve original public source in ephemeral job storage only
         shell: bash
         run: |
@@ -39,6 +40,10 @@ jobs:
         shell: bash
         run: |
           python -m benchmarks.audit_poem_design --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_design_audit.json"
+      - name: POEM field identity/rank pilot scoring under the precommitted contract
+        shell: bash
+        run: |
+          python -m benchmarks.score_poem_field_storage --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_field_storage_results.json" --permutations 9999
       - name: Upload manifest only (NEVER the original source archive)
         if: success()
         uses: actions/upload-artifact@v4
@@ -47,4 +52,5 @@ jobs:
           path: |
             ${{ runner.temp }}/poem/poem_source_manifest.json
             ${{ runner.temp }}/poem/poem_design_audit.json
+            ${{ runner.temp }}/poem/poem_field_storage_results.json
           retention-days: 14
