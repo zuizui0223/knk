@@ -19,7 +19,7 @@ jobs:
           python-version: '3.12'
       - name: Install pinned EOG methodology dependency and test tools
         run: python -m pip install -e '.[dev]'
-      - name: Verify 83 migrated original Git blob identities
+      - name: Verify 109 migrated original Git blob identities
         run: python scripts/verify_migration_integrity.py
       - name: Validate Python and frozen protocols
         run: |

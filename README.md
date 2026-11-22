@@ -29,17 +29,25 @@
 | v35 | 優占 vs 下位順位の分解 | **優占側でAlternaria依存が大きい** |
 | v36 | Alternaria対他履歴の直接対比 | **優占 E=+0.11812、下位順位 E=+0.04723** |
 | v37 | 宿主遺伝子型に対する一般性 | **11/12で同方向、交互作用は不支持** |
+| v38 | 特定機構の識別可能性を監査 | **機構上限を確定。相互作用機構は未同定** |
+
+草地と菌類のv31一般化仮説およびv32の初着役割機構は反証記録を必ず併記します。
 
 詳細な効果量と論文に使える主張は [生態学的成果台帳](docs/ECOLOGICAL_RESULTS.md) を参照。
+
+## 論文・投稿準備
+
+`manuscript/history_storage/` に Ecology Letters向け本文、4図の生成コード、引用監査、カバーレター、投稿準備チェックリストを原文のまま移管しました。研究結果はv38で凍結済み。原資料上は投稿準備済みですが、著者情報・利益相反確認・投稿版DOIの最終確認は未完了で、**投稿済みとは扱いません**。図表生成には `python -m pip install -e '.[figures]'` を利用できます。
 
 ## ディレクトリ
 
 - `benchmarks/`：原データ出典・ハッシュを固定した解析とsource-only監査
 - `validation/`：変更しないprotocol / frozen summary / 凍結manifest
 - `docs/`：各バージョンのプロトコル、結果、否定結果、解釈境界
-- `tests/`：各実験の単体テスト
+- `tests/`：各実験と論文内容の整合テスト
+- `manuscript/history_storage/`：生態学論文原稿・図・投稿資料
 - `archive/eog_workflows/`：旧EOG Actions定義の原文保管（誤って全再解析を走らせないため無効化）
-- `migration/source_inventory_20261122.json`：移管した83ファイルのGit blob SHA照合用台帳
+- `migration/source_inventory_20261122.json`：移管した109ファイルのGit blob SHA照合用台帳
 
 ## 再現方法
 

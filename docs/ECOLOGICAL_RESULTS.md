@@ -35,6 +35,12 @@
 - **v36:** Alternaria対他4履歴でrank-1優占 E=+0.11812, p=0.0002、rank2–5 E=+0.04723, p=0.0316。[詳細](eog_alternaria_binary_components_v36_result.md)
 - **v37:** Alternaria到着履歴によるrank-1増大は12遺伝子型中11型で正。平均+0.06099、p=0.0001。genotype-specific interaction p=0.7548で不支持。[詳細](eog_alternaria_genotype_generality_v37_result.md)
 
+## 研究の到達点（v38）
+
+`docs/eog_mechanistic_ceiling_v38.md` は、現行の公開実験資料には菌の成長率・競争対照・資源消費・時系列相互作用観測がないため、観測された優占構造から**特定の生物間相互作用機構を識別できない**とする上限を固定しています。v32の機構仮説は復活させません。
+
+Ecology Letters原稿、4図の生成コード、投稿チェックリスト・著者向け資料は [`manuscript/history_storage/`](../manuscript/history_storage/) に移管済み。原稿記録上の状態は**scientific analysis closed / submission-ready pending author/admin**, not submitted。
+
 ## STOPおよび未採点資料を肯定結果に含めない
 
 - **v27:** Catano修復草地は再利用許諾とspecies/trait NMDSのplot ID欠如でSTOP。履歴効果は採点していない。[STOP文書](eog_original_idea_empirical_history_retention_v27_result.md)

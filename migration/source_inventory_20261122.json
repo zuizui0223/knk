@@ -3,7 +3,7 @@
   "date": "2026-11-22",
   "source_repo": "zuizui0223/eog",
   "source_commit": "bd8531144e5ff655334990a664313ebc5e734308",
-  "claim": "Preserved byte-for-byte; external source raw data not redistributed; no biological result re-scored",
+  "claim": "Original files preserved byte-for-byte; no re-scoring or raw biological source data re-distribution",
   "files": [
     {
       "source": ".github/workflows/eog-alternaria-binary-components-v36.yml",
@@ -58,6 +58,24 @@
       "destination": "archive/eog_workflows/eog-role-mapping-specificity-v33.yml",
       "git_blob_sha": "94d0b9efbff85ae9022fd02ffe419194407d8c79",
       "size_bytes": 1283
+    },
+    {
+      "source": ".github/workflows/eog-wood-decomposer-history-retention-v29-schema.yml",
+      "destination": "archive/eog_workflows/eog-wood-decomposer-history-retention-v29-schema.yml",
+      "git_blob_sha": "fd8dc67ff35638e6e071fcdf4ea41ae2daf776f4",
+      "size_bytes": 1152
+    },
+    {
+      "source": ".github/workflows/history-storage-manuscript-figures.yml",
+      "destination": "archive/eog_workflows/history-storage-manuscript-figures.yml",
+      "git_blob_sha": "a70726ac1bfc241b90f4ab88dbcd3b9b48db6fdb",
+      "size_bytes": 2836
+    },
+    {
+      "source": ".github/workflows/history-storage-manuscript-integrity.yml",
+      "destination": "archive/eog_workflows/history-storage-manuscript-integrity.yml",
+      "git_blob_sha": "b474c4ce31b714323ba80c6fd9408bfef50172bb",
+      "size_bytes": 1475
     },
     {
       "source": "benchmarks/audit_czech_grassland_schema.py",
@@ -240,6 +258,12 @@
       "size_bytes": 5054
     },
     {
+      "source": "docs/eog_mechanistic_ceiling_v38.md",
+      "destination": "docs/eog_mechanistic_ceiling_v38.md",
+      "git_blob_sha": "36b696421292ac6168c09ace18c10deda60b7429",
+      "size_bytes": 7113
+    },
+    {
       "source": "docs/eog_original_idea_empirical_history_retention_v27.md",
       "destination": "docs/eog_original_idea_empirical_history_retention_v27.md",
       "git_blob_sha": "e695c787174e8ae3373fe3e282c9e8caea75c668",
@@ -292,6 +316,120 @@
       "destination": "docs/eog_wood_decomposer_history_retention_v29_result.md",
       "git_blob_sha": "8a4e2baf9d90c64ffe60ef6ce8ddba77665ce354",
       "size_bytes": 3717
+    },
+    {
+      "source": "manuscript/history_storage/ABSTRACT_RESULTS_DRAFT_V1.md",
+      "destination": "manuscript/history_storage/ABSTRACT_RESULTS_DRAFT_V1.md",
+      "git_blob_sha": "51b166aa7ba1149aab6a80158bb28989534f4e10",
+      "size_bytes": 12781
+    },
+    {
+      "source": "manuscript/history_storage/AUTHOR_METADATA_INTAKE_V1.md",
+      "destination": "manuscript/history_storage/AUTHOR_METADATA_INTAKE_V1.md",
+      "git_blob_sha": "92b35198769d666475e697dec2a89e50b6a6d616",
+      "size_bytes": 4518
+    },
+    {
+      "source": "manuscript/history_storage/COVER_LETTER_ECOLOGY_LETTERS_V1.md",
+      "destination": "manuscript/history_storage/COVER_LETTER_ECOLOGY_LETTERS_V1.md",
+      "git_blob_sha": "7824f33e824ff99c2f4e028461c084fa9dea9c1a",
+      "size_bytes": 4066
+    },
+    {
+      "source": "manuscript/history_storage/ECOLOGY_LETTERS_SUBMISSION_CHECKLIST_V1.md",
+      "destination": "manuscript/history_storage/ECOLOGY_LETTERS_SUBMISSION_CHECKLIST_V1.md",
+      "git_blob_sha": "fa6c971405b4f665dd9b197fdca4ea27a71add8b",
+      "size_bytes": 4187
+    },
+    {
+      "source": "manuscript/history_storage/FIGURE_LEGENDS_V1.md",
+      "destination": "manuscript/history_storage/FIGURE_LEGENDS_V1.md",
+      "git_blob_sha": "9dc6d985a00c5a1874e6aac1b3b8799349962f4e",
+      "size_bytes": 4777
+    },
+    {
+      "source": "manuscript/history_storage/FIGURE_PLAN_V1.md",
+      "destination": "manuscript/history_storage/FIGURE_PLAN_V1.md",
+      "git_blob_sha": "1cb9ababf91f37a7ebfc64d3a755d1e727dbdef0",
+      "size_bytes": 7118
+    },
+    {
+      "source": "manuscript/history_storage/GRAPHICAL_ABSTRACT_TEXT_V1.md",
+      "destination": "manuscript/history_storage/GRAPHICAL_ABSTRACT_TEXT_V1.md",
+      "git_blob_sha": "66fc2b085fb7d655f8f1285e594a2a9078570932",
+      "size_bytes": 454
+    },
+    {
+      "source": "manuscript/history_storage/LITERATURE_POSITIONING_V1.md",
+      "destination": "manuscript/history_storage/LITERATURE_POSITIONING_V1.md",
+      "git_blob_sha": "85338b10a121a3657341ebacfc077512c441ef0f",
+      "size_bytes": 8829
+    },
+    {
+      "source": "manuscript/history_storage/MANUSCRIPT_DRAFT_V1.md",
+      "destination": "manuscript/history_storage/MANUSCRIPT_DRAFT_V1.md",
+      "git_blob_sha": "0f4201e15e97fc01644ec6f379b29f9b652d045b",
+      "size_bytes": 39815
+    },
+    {
+      "source": "manuscript/history_storage/MANUSCRIPT_ECOLOGY_LETTERS_V1.md",
+      "destination": "manuscript/history_storage/MANUSCRIPT_ECOLOGY_LETTERS_V1.md",
+      "git_blob_sha": "f59500157099985d1ef587994ccfc8fa64c896f9",
+      "size_bytes": 39453
+    },
+    {
+      "source": "manuscript/history_storage/MANUSCRIPT_SPINE_V1.md",
+      "destination": "manuscript/history_storage/MANUSCRIPT_SPINE_V1.md",
+      "git_blob_sha": "f88c4c5fc8870f7a5edebd2c68eb14de72966405",
+      "size_bytes": 21453
+    },
+    {
+      "source": "manuscript/history_storage/NOVELTY_STATEMENT_ECOLOGY_LETTERS_V1.md",
+      "destination": "manuscript/history_storage/NOVELTY_STATEMENT_ECOLOGY_LETTERS_V1.md",
+      "git_blob_sha": "1fbe4a7c4153ad43b171a4d10656cfd43a4faa82",
+      "size_bytes": 2133
+    },
+    {
+      "source": "manuscript/history_storage/REVIEWER_EDITOR_CANDIDATES_V1.md",
+      "destination": "manuscript/history_storage/REVIEWER_EDITOR_CANDIDATES_V1.md",
+      "git_blob_sha": "c19f2e842d36958c89063f6f086ae1bd3b362c74",
+      "size_bytes": 4714
+    },
+    {
+      "source": "manuscript/history_storage/SUBMISSION_PACKAGE_MANIFEST_V1.json",
+      "destination": "manuscript/history_storage/SUBMISSION_PACKAGE_MANIFEST_V1.json",
+      "git_blob_sha": "a68e85e4da213122d010b25308fe642cb419642b",
+      "size_bytes": 2852
+    },
+    {
+      "source": "manuscript/history_storage/SUBMISSION_READINESS_V1.md",
+      "destination": "manuscript/history_storage/SUBMISSION_READINESS_V1.md",
+      "git_blob_sha": "ed034a5738b58fa3a4dd7953288348803c9eb8d4",
+      "size_bytes": 8789
+    },
+    {
+      "source": "manuscript/history_storage/SUBMISSION_STRATEGY_V1.md",
+      "destination": "manuscript/history_storage/SUBMISSION_STRATEGY_V1.md",
+      "git_blob_sha": "6d0b967f7307e4bf090dbe001359d30114dc513a",
+      "size_bytes": 10861
+    },
+    {
+      "source": "manuscript/history_storage/__init__.py",
+      "destination": "manuscript/history_storage/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "source": "manuscript/history_storage/build_figure_data_v1.py",
+      "destination": "manuscript/history_storage/build_figure_data_v1.py",
+      "git_blob_sha": "0f5d57b0f8d3c39c72436107f9107226f547056c",
+      "size_bytes": 7366
+    },
+    {
+      "source": "manuscript/history_storage/build_figures_v1.py",
+      "destination": "manuscript/history_storage/build_figures_v1.py",
+      "git_blob_sha": "c9e4a9d1596559305a8f1d8018c0aef4cac141f1",
+      "size_bytes": 12231
     },
     {
       "source": "tests/test_eog_alternaria_binary_components_v36.py",
@@ -352,6 +490,18 @@
       "destination": "tests/test_eog_wood_decomposer_history_retention_v29.py",
       "git_blob_sha": "0b84c739b03ff50ad5122d67ba66b909179634b8",
       "size_bytes": 1474
+    },
+    {
+      "source": "tests/test_history_storage_figure_data_v1.py",
+      "destination": "tests/test_history_storage_figure_data_v1.py",
+      "git_blob_sha": "1584bfbb8c9538c19d000ecbadc0dd443ec76a16",
+      "size_bytes": 870
+    },
+    {
+      "source": "tests/test_history_storage_manuscript_v1.py",
+      "destination": "tests/test_history_storage_manuscript_v1.py",
+      "git_blob_sha": "9bf7d69936fb14e5286c2df038d55e09750d88db",
+      "size_bytes": 2917
     },
     {
       "source": "validation/eog_alternaria_binary_components_v36/protocol_v36.json",
@@ -436,6 +586,12 @@
       "destination": "validation/eog_identity_storage_rank_abundance_v31/result_summary_v31.json",
       "git_blob_sha": "07f70c99a16eba9dc73cf404365655e3012efa10",
       "size_bytes": 2760
+    },
+    {
+      "source": "validation/eog_mechanistic_ceiling_v38/audit_v38.json",
+      "destination": "validation/eog_mechanistic_ceiling_v38/audit_v38.json",
+      "git_blob_sha": "e91082a80dae84851e3ad41441305b8e9a1e863b",
+      "size_bytes": 1608
     },
     {
       "source": "validation/eog_original_idea_empirical_history_retention_v27/protocol_v27.json",

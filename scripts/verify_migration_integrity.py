@@ -13,7 +13,7 @@ def git_blob_sha(data: bytes) -> str:
 
 def main() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    if len(manifest["files"]) != 83:
+    if len(manifest["files"]) != 109:
         raise SystemExit("unexpected migration manifest file count")
     for rec in manifest["files"]:
         p = ROOT / rec["destination"]

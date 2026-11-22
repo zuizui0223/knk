@@ -1,6 +1,6 @@
 # Frozen EOG workflows — archival copies
 
-These are exact copies of the original EOG Actions YAML for v28 and v30–v37. They are deliberately stored outside `.github/workflows/` so merging KNK does **not** automatically re-score experiments or write new authoritative fingerprints.
+These are exact copies of the original EOG Actions YAML for v28–v37 (including v29 source-only) and the former manuscript workflows. They are deliberately stored outside `.github/workflows/` so merging KNK does **not** automatically re-score experiments or write new authoritative fingerprints.
 
 Source EOG commit: [`bd8531144e5ff655334990a664313ebc5e734308`](https://github.com/zuizui0223/eog/tree/bd8531144e5ff655334990a664313ebc5e734308).
 
