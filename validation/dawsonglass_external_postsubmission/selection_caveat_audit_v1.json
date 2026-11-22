@@ -1,0 +1,76 @@
+{
+  "status": "POSTHOC_SELECTION_AUDIT_NOT_CAUSAL",
+  "source_doi": "10.5061/dryad.sbcc2frh4",
+  "source_sha256": "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230",
+  "n_pots": 24,
+  "n_species": 15,
+  "arm_counts": {
+    "Ambient Order": 12,
+    "Warm Order": 12
+  },
+  "mean_species_composition": {
+    "bray_curtis_between_group_mean_proportions": 0.384118670739301,
+    "fraction_of_sum_absolute_mean_species_shifts_from_Rumex_Bromus_Dactylis": 0.7937111205195594,
+    "absolute_shift_contributions": {
+      "Rumex crispus": 0.41245967377076775,
+      "Dactylis glomerata": 0.2199039540874988,
+      "Bromus inermis": 0.16134749266129286
+    },
+    "note": "These are descriptive L1 turnover shares, not causal attribution or fraction of historical information."
+  },
+  "negative_absolute_mass_covariance": {
+    "Rumex_vs_Bromus_plus_Dactylis_r_within_arms_pooled": -0.5306127089483622,
+    "ambient_r": -0.5541736705007514,
+    "warm_order_r": -0.5702694172343037,
+    "Rumex_vs_remaining12_r": -0.06396556840955811,
+    "candidate_pair_stratified_permutation_one_sided_p": 0.00368,
+    "maxT_familywise_one_sided_p_among_91_possible_pairs": 0.0669,
+    "permutations": 49999,
+    "seed": 20261124,
+    "warning": "91-pair correction assumes Rumex is fixed in advance; Rumex itself was selected after outcome inspection. Significance does not survive even this partial search correction."
+  },
+  "algebraic_covariance_check": {
+    "formula": "Cov(R,G)=Cov(R,Total)-Var(R)-Cov(R,Other12)",
+    "cov_R_G": -32.51855072463768,
+    "cov_R_Total": -7.6961563043478085,
+    "var_R": 26.469202898550723,
+    "cov_R_Other12": -1.6468084782608554,
+    "note": "Identity is exact; correlation and compensation do not identify pairwise competition."
+  },
+  "initial_height_common_support": {
+    "Rumex_mean_height_ambient_cm": 0.7833333333333332,
+    "Rumex_mean_height_warm_order_cm": 2.2083333333333335,
+    "overlap_height_range_cm": [
+      0.8,
+      1.4
+    ],
+    "ambient_within_overlap": 4,
+    "warm_order_within_overlap": 2,
+    "note": "Initial height follows germination/timing manipulation; adjustment cannot identify interaction mechanism and common support is sparse."
+  },
+  "posthoc_taxon_removal_sensitivity": {
+    "full_15": {
+      "labeled_relative_E": 0.3958850056709716,
+      "p": 0.0001,
+      "rank_E": -0.0018458623152796394,
+      "rank_p": 0.5256
+    },
+    "without_Rumex": {
+      "labeled_relative_E": 0.07290690035900987,
+      "p": 0.0262,
+      "raw_gram_E": 0.2176,
+      "raw_gram_p": 0.0001
+    },
+    "without_Rumex_Bromus_Dactylis": {
+      "retained_taxa": 12,
+      "raw_gram_E": 0.239,
+      "raw_gram_p": 0.0001,
+      "labeled_relative_E": 0.3159,
+      "labeled_relative_p": 0.0001,
+      "rank_relative_E": 0.0572,
+      "rank_relative_p": 0.1233
+    },
+    "note": "Removing species changes the response and its variance; E values are not additive and selection is exploratory."
+  },
+  "manuscript_status": "unchanged frozen v28-v38; independent post-submission draft PR only"
+}
