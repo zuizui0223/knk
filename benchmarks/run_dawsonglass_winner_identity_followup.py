@@ -106,6 +106,77 @@ def bootstrap_differences(x: np.ndarray, y: np.ndarray, idx: dict) -> dict:
     }
 
 
+
+def within_arm_compensation(x: np.ndarray, y: np.ndarray, idx: dict) -> dict:
+    """One exploratory association: Rumex vs two dominant grasses in absolute grams.
+
+    Permutes grass totals across whole mesocosms *within* treatment groups.
+    Correlation is not a causal competition estimand.
+    """
+    rumex = x[:, idx["Rumex crispus"]]
+    grasses = x[:, [idx["Bromus inermis"], idx["Dactylis glomerata"]]].sum(axis=1)
+    other = x.sum(axis=1) - rumex - grasses
+    n = len(y)
+
+    def center_within(values: np.ndarray, groups: np.ndarray) -> np.ndarray:
+        out = values.astype(float).copy()
+        for k in [0, 1]:
+            j = groups == k
+            out[j] -= out[j].mean()
+        return out
+
+    def correlation(a: np.ndarray, b: np.ndarray, groups: np.ndarray) -> float:
+        u, v = center_within(a, groups), center_within(b, groups)
+        if np.std(u) == 0 or np.std(v) == 0:
+            return float("nan")
+        return float(np.corrcoef(u, v)[0, 1])
+
+    observed = correlation(rumex, grasses, y)
+    if not np.isfinite(observed):
+        raise AuditStop("Degenerate within-arm correlation")
+    rng = np.random.default_rng(20261124)
+    shuffled = np.empty(19999)
+    for b in range(len(shuffled)):
+        permuted = grasses.copy()
+        for k in [0, 1]:
+            loc = np.flatnonzero(y == k)
+            permuted[loc] = grasses[rng.permutation(loc)]
+        shuffled[b] = correlation(rumex, permuted, y)
+
+    leave_one = []
+    for i in range(n):
+        keep = np.arange(n) != i
+        leave_one.append(correlation(rumex[keep], grasses[keep], y[keep]))
+
+    # Stratified whole-pot bootstrap, separate seed from the main bootstrap.
+    bootstrap_rng = np.random.default_rng(20261125)
+    by_group = [np.flatnonzero(y == k) for k in [0, 1]]
+    boot_corr = np.empty(20000)
+    for b in range(len(boot_corr)):
+        selected = np.r_[
+            bootstrap_rng.choice(group, len(group), replace=True)
+            for group in by_group
+        ]
+        boot_corr[b] = correlation(rumex[selected], grasses[selected], y[selected])
+    boot_corr = boot_corr[np.isfinite(boot_corr)]
+    return {
+        "Rumex_vs_two_grasses_r_within_treatment": observed,
+        "two_sided_permutation_p": float(
+            (1 + np.count_nonzero(np.abs(shuffled) >= abs(observed) - 1e-12))
+            / (len(shuffled) + 1)
+        ),
+        "within_treatment_permutations": len(shuffled),
+        "permutation_seed": 20261124,
+        "bootstrap95": np.quantile(boot_corr, [0.025, 0.975]).tolist(),
+        "bootstrap_seed": 20261125,
+        "leave_one_pot_r_range": [float(np.min(leave_one)), float(np.max(leave_one))],
+        "Rumex_vs_other_12_species_r": correlation(rumex, other, y),
+        "Rumex_vs_total_biomass_r": correlation(rumex, x.sum(axis=1), y),
+        "caution": "Exploratory, selected after seeing species changes. "
+                   "Absolute grams avoid proportion closure but do not "
+                   "isolate competition from shared carrying-capacity constraints.",
+    }
+
 def analyze(x: np.ndarray, y: np.ndarray, species: list[str],
             seed: int = DEFAULT_SEED, n_perm: int = 9999) -> dict:
     if x.shape != (24, 15) or len(species) != 15:
@@ -121,7 +192,6 @@ def analyze(x: np.ndarray, y: np.ndarray, species: list[str],
     g_l = centered_gower(bray_curtis(proportions))
     g_s = centered_gower(bray_curtis(ranks))
     r2_l, r2_s = between_r2(g_l, y), between_r2(g_s, y)
-    perms = np.asarray([np.random.default_rng(seed).permutation(y)]) if n_perm == 1 else None
     rng = np.random.default_rng(seed)
     perms = np.asarray([rng.permutation(y) for _ in range(n_perm)])
     deltas = np.asarray([
@@ -187,6 +257,7 @@ def analyze(x: np.ndarray, y: np.ndarray, species: list[str],
             "caution": "Descriptive; distances are not percentages of information",
         },
         "bootstrap_key_effects": bootstrap_differences(x, y, idx),
+        "within_arm_compensation_exploratory": within_arm_compensation(x, y, idx),
         "individual_species_exploratory": species_effects,
         "boundaries": [
             "The original paper already established assembly timing versus species biomass",
