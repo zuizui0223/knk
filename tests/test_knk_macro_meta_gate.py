@@ -45,7 +45,7 @@ def test_five_rows_same_paper_do_not_pass():
 
 
 def test_unfrozen_and_missing_se_never_pass():
-    rows = [fixture_row(key=str(i), cluster=f"p{i}", frozen=i%2==0, se="" if i==0 else "0.1") for i in range(12)]
+    rows = [fixture_row(key=str(i), cluster=f"p{i}", frozen=i<4, se="" if i==0 else "0.1") for i in range(12)]
     assert evaluate(rows)["all_pooled_analyses_blocked"]
 
 
