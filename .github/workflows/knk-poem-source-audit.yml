@@ -38,7 +38,7 @@ jobs:
       - name: Audit experimental-unit structure in all six POEM tables
         shell: bash
         run: |
-          python benchmarks/audit_poem_design.py --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_design_audit.json"
+          python -m benchmarks.audit_poem_design --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_design_audit.json"
       - name: Upload manifest only (NEVER the original source archive)
         if: success()
         uses: actions/upload-artifact@v4
