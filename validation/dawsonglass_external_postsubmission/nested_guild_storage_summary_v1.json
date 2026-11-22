@@ -1,0 +1,140 @@
+{
+  "status": "POSTHOC_NESTED_GUILD_EXPLORATION_NOT_PART_OF_FROZEN_MANUSCRIPT",
+  "source": "Dawson-Glass et al. Ecology 2025 doi:10.1002/ecy.4504 Dryad doi:10.5061/dryad.sbcc2frh4",
+  "source_sha256": "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230",
+  "source_grain": {
+    "pots": 24,
+    "species": 15,
+    "records": 360,
+    "ambient_pots": 12,
+    "warm_order_pots": 12
+  },
+  "guild_mapping": {
+    "grass_count": 5,
+    "forb_count": 10,
+    "source_field_caveat": "Dryad species_info.csv Functional field not directly read; mapping externally confirmed with botanical Poaceae genera",
+    "grass_source_names": [
+      "Andropogon gerardii",
+      "Bromus inermis",
+      "Dactylis glomerata",
+      "Sorgastrum nutans",
+      "Tridens flavus"
+    ]
+  },
+  "method": {
+    "metric": "Bray-Curtis distance-based R2, E=R2obs-median(null)",
+    "permutations": 9999,
+    "seed": 20261122,
+    "bootstrap_stratified_pots": 20000,
+    "bootstrap_seed": 20261124,
+    "posthoc_multiplicity": "Holm correction across 11 nested endpoints",
+    "guild_normalization": "Each guild closed to its own pot guild-biomass total",
+    "status": "Exploratory, post-selection"
+  },
+  "endpoints": {
+    "full15_named": {
+      "E": 0.395885,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "full15_sorted": {
+      "E": -0.001846,
+      "p": 0.5256,
+      "holm_p": 1
+    },
+    "guild2_relative": {
+      "R2": 0.520771,
+      "E": 0.500434,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "forb10_named_internal": {
+      "R2": 0.54104,
+      "E": 0.512124,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "forb10_sorted_internal": {
+      "R2": 0.64151,
+      "E": 0.617726,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "forb10_top1_internal": {
+      "R2": 0.6833,
+      "E": 0.661606,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "grass5_named_internal": {
+      "R2": 0.035315,
+      "E": 0.003672,
+      "p": 0.4332,
+      "holm_p": 1
+    },
+    "grass5_sorted_internal": {
+      "R2": 0.108351,
+      "E": 0.085528,
+      "p": 0.1135,
+      "holm_p": 0.5675
+    },
+    "forb9_without_Rumex_named_internal": {
+      "R2": 0.419888,
+      "E": 0.387011,
+      "p": 0.0001,
+      "holm_p": 0.0011
+    },
+    "forb9_without_Rumex_sorted_internal": {
+      "R2": 0.088,
+      "E": 0.056587,
+      "p": 0.1142,
+      "holm_p": 0.5675
+    },
+    "guild2_relative_without_Rumex": {
+      "R2": 0.0007,
+      "E": -0.02187,
+      "p": 0.9037,
+      "holm_p": 1
+    }
+  },
+  "descriptives": {
+    "forb_share_ambient": 0.261842,
+    "forb_share_warm": 0.521506,
+    "forb_share_delta": 0.259664,
+    "forb_share_delta_bootstrap95": [
+      0.158196,
+      0.357891
+    ],
+    "grass_mean_g_ambient": 42.545508,
+    "grass_mean_g_warm": 25.280283,
+    "forb_mean_g_ambient": 13.898092,
+    "forb_mean_g_warm": 26.722067,
+    "within_forb_max_share_ambient": 0.496707,
+    "within_forb_max_share_warm": 0.803277,
+    "without_Rumex_other_forbs_share_of_14_ambient": 0.177414,
+    "without_Rumex_other_forbs_share_of_14_warm": 0.172686
+  },
+  "placebo": {
+    "equal_group_size_partitions": 3003,
+    "observed_forb10_sorted_R2": 0.6415095,
+    "at_least_as_high": 22,
+    "global_partition_tail_fraction": 0.007326007326007326,
+    "conditioned_rule": "Bromus and Dactylis assigned to grass, Rumex assigned to forbs",
+    "conditioned_partitions": 220,
+    "conditioned_at_least_as_high": 22,
+    "conditioned_tail_fraction": 0.1,
+    "two_functional_group_share_R2": 0.5207713,
+    "two_functional_group_share_placebo_tail_fraction": 0.18914419,
+    "interpretation": "Partition-rank diagnostics, not a randomized treatment p-value; grouping post hoc"
+  },
+  "interpretation": "Whole-community unlabeled ranks weak, broadleaf-guild unlabeled rank highly history-associated; strong forb guild shift primarily Rumex; without Rumex, among 9 forbs, labeled identities retain history but their unlabeled ranks do not. Signals are not additive across differently normalized representations.",
+  "limitations": [
+    "The original paper already showed effects of germination timing and species-specific biomass; new claims are descriptive nested decomposition only.",
+    "Post hoc analysis of same 24 mesocosms; no new independent biological replication.",
+    "No inference of competition mechanism or ecosystem function from group biomass shares.",
+    "No direct reading of source species-info Functional column; botanical guild classification externally verified.",
+    "Forb guild mapping unusually high among 3003 partitions but ordinary among 220 anchored partitions; do not claim unique guild mechanism.",
+    "p>.05 is not proof of no effect; E is not Shannon/mutual information.",
+    "Main KNK manuscript frozen v28-v38 unchanged; new validation PR stays draft."
+  ]
+}
