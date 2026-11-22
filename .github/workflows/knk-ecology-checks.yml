@@ -1,0 +1,29 @@
+name: KNK migration integrity and ecological unit tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned EOG methodology dependency and test tools
+        run: python -m pip install -e '.[dev]'
+      - name: Verify 109 migrated original Git blob identities
+        run: python scripts/verify_migration_integrity.py
+      - name: Validate Python and frozen protocols
+        run: |
+          python -m compileall -q benchmarks tests
+          python -c "import pathlib,json; [json.loads(p.read_text()) for p in pathlib.Path('validation').glob('**/*.json')]"
+      - name: Run archived ecological unit tests without rescore
+        run: python -m pytest tests -q

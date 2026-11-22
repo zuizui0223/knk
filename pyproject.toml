@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knk-assembly-history"
+version = "0.1.0"
+description = "Source-locked ecological experiments of fungal and grassland assembly-history retention"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "ZHANG RUIQI"}]
+dependencies = ["numpy>=1.24", "environmental-occupancy-geometry @ git+https://github.com/zuizui0223/eog.git@bd8531144e5ff655334990a664313ebc5e734308"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+figures = ["matplotlib>=3.8"]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
