@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/knk-poem-source-audit.yml"
       - "benchmarks/probe_poem_archive.py"
+      - "benchmarks/audit_poem_design.py"
   workflow_dispatch:
 
 permissions:
@@ -34,10 +35,16 @@ jobs:
         shell: bash
         run: |
           python benchmarks/probe_poem_archive.py --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_source_manifest.json"
+      - name: Audit experimental-unit structure in all six POEM tables
+        shell: bash
+        run: |
+          python benchmarks/audit_poem_design.py --zip "$RUNNER_TEMP/poem/source.zip" --output "$RUNNER_TEMP/poem/poem_design_audit.json"
       - name: Upload manifest only (NEVER the original source archive)
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: poem-source-schema-audit-20261123
-          path: ${{ runner.temp }}/poem/poem_source_manifest.json
+          path: |
+            ${{ runner.temp }}/poem/poem_source_manifest.json
+            ${{ runner.temp }}/poem/poem_design_audit.json
           retention-days: 14
