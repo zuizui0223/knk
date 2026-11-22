@@ -23,6 +23,8 @@ Each taxon-by-pot biomass vector was evaluated with the same 9,999 whole-pot tre
 | Same nine forbs, unlabeled within-forb ranks | +0.0566 | .1142 | .5675 |
 | Grass vs forb shares after deleting Rumex | −0.0219 | .9037 | 1.0000 |
 
+**Information-theoretic guard:** Group membership is retained in a within-forb representation, even though species names *within that group* are discarded. Therefore the within-forb sorted response is NOT a function of the full-community sorted response, and the two need not have ordered predictive information. This is not a paradox or any increase of information through rank sorting; both are deterministic, distinct summaries of the original 15-species vector.
+
 **Biological result:** the full-community sorted rank profile contains a weak measured history signal, whereas sorting the within-forb 10-species profile produces a strong, dominance-centered signal. Removing Rumex weakens that within-forb rank signal, yet the identities of the other nine forbs still differ by treatment. The grass-only relative internal profile does not show similarly strong evidence. This is **nested, scale-dependent visibility**, not an information increase when names are removed.
 
 Forb share: ambient **26.18%**, warmed-order **52.15%**, mean pot-level difference **+25.97 percentage points** (stratified whole-pot bootstrap 95% interval **+15.82 to +35.79 pp**, 20,000 replicates). Within-forb maximum share: ambient **49.67%**, warm **80.33%**. After removing Rumex and re-closing remaining biomass, forb9 share **17.74% vs 17.27%**. Grass mean mass **42.55→25.28 g/pot** and forb mean mass **13.90→26.72 g/pot**.
