@@ -33,6 +33,20 @@ Since v33 previously showed that seemingly biological mapping results can be art
 
 However, **conditional on placing Bromus and Dactylis in the five-species group, and Rumex in the other ten**, the real grouping ranks at or above **22 of 220 (10%)**. Thus the apparent functional-group specificity is **largely traceable to separating major dominant species**. The actual two-guild share R² is not unusual among arbitrary partitions (upper fraction **18.9%**). These mapping fractions are descriptive diagnostics, not treatment-randomization p-values.
 
+## Leave-one-pot-out predictive check (exploratory, not independent external validation)
+
+A **fixed L2-penalty logistic model** (lambda=4), with fold-local scaling and each pot held out once, gives these same-sample leave-one-pot-out histories:
+
+| Representation | Correct out of 24 | Held-out log loss | Gain over train-fold prior |
+|---|---:|---:|---:|
+| Full-community unlabeled rank profile | 14 | 0.8903 | −0.1546 |
+| Two functional-group mass shares | 17 | 0.4577 | +0.2780 |
+| **Ten-forb internal unlabeled rank** | **23** | **0.2520** | **+0.4837** |
+| Nine forbs excluding Rumex, labeled | 19 | 0.4300 | +0.3057 |
+| Nine forbs excluding Rumex, unlabeled | 10 | 0.8054 | −0.0697 |
+
+Training-fold prior baseline log loss = 0.7357. **Critical selection caveat:** the choice to analyze the forb guild was motivated by the same outcome dataset. LOO does not remove this representation-selection optimism; it is not an independent test of which storage channel generalizes. No p-value is attached to these scores.
+
 ## What was already known vs what is new
 
 The original source paper already demonstrated species-dependent biomass responses and the connection to advanced germination dates. Its functional-type covariate on *species-level treatment response* was not significant (p=.127); this is **not** a test of the two-guild *community total biomass shares*, which we analyze. No contradiction is implied.
