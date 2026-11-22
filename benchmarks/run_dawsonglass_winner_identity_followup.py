@@ -153,10 +153,10 @@ def within_arm_compensation(x: np.ndarray, y: np.ndarray, idx: dict) -> dict:
     by_group = [np.flatnonzero(y == k) for k in [0, 1]]
     boot_corr = np.empty(20000)
     for b in range(len(boot_corr)):
-        selected = np.r_[
+        selected = np.concatenate([
             bootstrap_rng.choice(group, len(group), replace=True)
             for group in by_group
-        ]
+        ])
         boot_corr[b] = correlation(rumex[selected], grasses[selected], y[selected])
     boot_corr = boot_corr[np.isfinite(boot_corr)]
     return {
