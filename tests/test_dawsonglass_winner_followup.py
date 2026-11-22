@@ -4,7 +4,7 @@ import pytest
 
 from benchmarks.run_dawsonglass_storage_post_submission import AuditStop
 from benchmarks.run_dawsonglass_winner_identity_followup import (
-    analyze, bh_adjust, exact_winner_test,
+    analyze, bh_adjust, exact_winner_test, within_arm_compensation,
 )
 
 
@@ -55,3 +55,16 @@ def test_bh_bounds_and_order():
     assert np.all(q >= p)
     assert np.all(q <= 1)
     assert np.all(np.argsort(p) == np.argsort(q))
+
+
+def test_within_arm_compensation_detects_synthetic_opposite_gram_changes():
+    # No observed data here. Each arm has a deliberately opposite absolute-mass trend.
+    x = np.full((24, 15), 0.05)
+    x[:, 0] = np.tile(np.arange(1.0, 13.0), 2)
+    x[:, 1] = np.tile(np.arange(20.0, 8.0, -1.0), 2)
+    x[:, 2] = 1.0
+    idx = {name: j for j, name in enumerate(NAMES)}
+    result = within_arm_compensation(x, Y, idx)
+    assert result["Rumex_vs_two_grasses_r_within_treatment"] < -0.99
+    assert result["two_sided_permutation_p"] <= 0.001
+    assert result["bootstrap95"][1] < 0
