@@ -136,5 +136,46 @@
     "Forb guild mapping unusually high among 3003 partitions but ordinary among 220 anchored partitions; do not claim unique guild mechanism.",
     "p>.05 is not proof of no effect; E is not Shannon/mutual information.",
     "Main KNK manuscript frozen v28-v38 unchanged; new validation PR stays draft."
-  ]
+  ],
+  "loo_posthoc_descriptive": {
+    "model": "fixed-penalty L2 logistic (lambda=4), each whole pot held out once, fold-local scaling",
+    "warning": "Subgroup was selected after inspecting this same dataset. Not an independent external performance estimate, no formal p value.",
+    "baseline_training_fold_logloss": 0.7357067949787414,
+    "full15_sorted": {
+      "correct": 14,
+      "of": 24,
+      "logloss": 0.8902775290112607,
+      "gain_vs_baseline": -0.1545707340325193
+    },
+    "functional2_share": {
+      "correct": 17,
+      "of": 24,
+      "logloss": 0.4577317295390863,
+      "gain_vs_baseline": 0.27797506543965506
+    },
+    "forb10_sorted": {
+      "correct": 23,
+      "of": 24,
+      "logloss": 0.2520359739319194,
+      "gain_vs_baseline": 0.48367082104682196
+    },
+    "forb9_without_Rumex_sorted": {
+      "correct": 10,
+      "of": 24,
+      "logloss": 0.8053622747220887,
+      "gain_vs_baseline": -0.06965547974334729
+    },
+    "forb9_without_Rumex_named": {
+      "correct": 19,
+      "of": 24,
+      "logloss": 0.43003622692622745,
+      "gain_vs_baseline": 0.3056705680525139
+    },
+    "grass5_sorted": {
+      "correct": 17,
+      "of": 24,
+      "logloss": 0.5973273329622958,
+      "gain_vs_baseline": 0.13837946201644558
+    }
+  }
 }
