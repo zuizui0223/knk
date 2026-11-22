@@ -1,6 +1,6 @@
 # KNK macroecology / meta-analysis scoping programme (2026-11-23)
 
-**Status: source-verified evidence map and nonpooled three-experiment pilot; NOT a completed effect-size meta-analysis.** This is a NEW branch separate from Dawson-Glass Draft PR #3 and the frozen v28–v38 Ecology Letters submission.
+**Status: four distinct source-study experiments now have scores (three original source endpoints plus POEM repeated field cohorts), all NONPOOLED; NOT a completed effect-size meta-analysis.** This is a NEW branch separate from Dawson-Glass Draft PR #3 and the frozen v28–v38 Ecology Letters submission.
 
 ## Question
 Across experimental ecological communities, **where in the present does assembly history remain distinguishable**? Compare named taxon or functional-group composition, the same values sorted without identity, within-guild hierarchy, and ecosystem/host-state outcomes. Test whether these modes vary with organism group, actual number of generations, timing treatment, species richness and experimental timescale once enough independent studies are available.
@@ -33,16 +33,34 @@ Statistic: null-calibrated Bray–Curtis distance partial R², E=R²observed−m
 
 For Dawson-Glass, the independently recalculated 24-pot n=360-row original CSV (SHA256 `1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230`) gives R²labeled=0.4289594, R²sorted=0.0328995, ΔR²=**+0.3960599**. A fresh **5,000 whole-pot stratified bootstrap** (seed 20261123) gives a **percentile 95% interval +0.1889 to +0.5415**. This is within-experiment sampling uncertainty **not a meta CI**, and source-study intervention assignment still needs paper-design verification. Raw CSV is not redistributed.
 
-## Priority external experimental datasets (not yet scored)
+## Fourth source, repeated-cohort field experiment: POEM (NEW real-data scoring)
 
-1. **POEM field experiment — Alonso-Crespo et al. 2025**. Article DOI https://doi.org/10.1111/jvs.70026 and raw files DOI https://doi.org/10.5281/zenodo.10119982. Two start-year cohorts, each with five arrival-history conditions × five replicate mixture plots (25 mixture plots/cohort) plus 14 monoculture plots/cohort. Each plot has species-level shoot biomass and longitudinal root observations. Original paper finds initiation year/time-since-establishment important for shoots, but functional-group arrival history impacts vertical root distribution. **Strongest independent counterpattern candidate.** Zenodo ZIP file (6.6 MB) was identified but not downloaded here.
+**Source archive retrieved & hash-verified 2026-11-23.** The Zenodo v1.0 ZIP https://doi.org/10.5281/zenodo.10119982 was read in ephemeral GitHub Actions runs. Six original Excel shoot-biomass workbooks, **49 identified species** and 5 source treatment levels (S,F,G,L,B) were audited. 50 unique assigned plots across 2 start-year cohorts, each observed for 3 growing seasons. The whole-plot F/G/L/S **primary** history test uses **20 unique plots per cohort and age**; B is excluded as an unseeded natural-succession control. All snapshots reuse the *same plot identities and assignment* and **belong to one publication cluster**.
+
+| Cohort age 2 | Named-species E (p) | Identity-free sorted E (p) |
+|---|---:|---:|
+| POEM2020 (harvest 2021-06) | +0.1872 (.0038) | **+0.4270 (.0022)** |
+| POEM2021 (harvest 2022-06) | **+0.3226 (.0003)** | +0.0230 (.3955) |
+
+Both highlighted results survive Holm adjustment across the 12 primary study-snapshot tests, but **differences in significance alone do not prove an interaction**. A treatment-stratified plot bootstrap of the cohort contrast in \(R²_{named}-R²_{sorted}\) gave **+.5308, 95% +.1331 to +.7336** (2021−2020). This interval is conditional on the **two** tested establishment years, not a climate-year replication CI. Hellinger–Euclidean reanalysis corroborated the opposite directions; F/G/L-only sensitivity agreed. The 2020 rank result weakens if restricted to the 14 intentionally sown taxa. Neither this contrast nor the paper's original data determines whether weather, unsown species recruitment, initial size or interactions were causal.
+
+A no-pseudoreplication sensitivity concatenated all **three annual 49-taxon compositions per plot** into one 147-coordinate vector. Cohort2020 named E=+.1286 (p=.0011) vs sorted E=+.2372 (p=.0004). Cohort2021 named E=+.1928 (p=.0002) vs sorted E=+.0888 (p=.048). The latter is not evidence of complete rank-memory absence.
+
+Full prescored protocol: `docs/POEM_FIELD_PRE_SCORE_CONTRACT_20261123.md`. Real-data results and limitation review: `docs/POEM_FIELD_RESULTS_AND_BOUNDARIES_20261123.md`. Result JSONs: `validation/macro_meta/poem_field_cohort_age_results_v1.json` and `validation/macro_meta/poem_temporal_channel_sensitivity_v1.json`. Source Actions passed: https://github.com/zuizui0223/knk/actions/runs/45085174472 and https://github.com/zuizui0223/knk/actions/runs/45085506739. **No raw ZIP or workbooks are committed.**
+
+**Do not append both start-year cohorts as two independent effect sizes in the future meta-analysis.** They share one experimental publication/research group and geography; the within-source temporal and endpoint contrasts are meaningful, but not independent source clusters.
+
+
+## Remaining independent candidate datasets (not yet scored)
+
+1. **POEM is now scored** in its own section above; next source to retrieve is Toju/Tucker nectar microbiome or another direct-order randomized grassland.
 2. **Toju et al. 2017 floral nectar microbes**. Dryad https://doi.org/10.5061/dryad.0j4b2, sample × OTU metadata XLSX; manipulates initial dominance and tests persistence across floral generations; **separate initial-dominance lane**.
 3. **Carlström et al. 2019 synthetic 62-strain Arabidopsis phyllosphere**. DOI https://doi.org/10.1038/s41559-019-0994-z; raw ENA PRJEB32997, code https://github.com/cmfield/carlstrom2019; drop-outs/late introductions are **not** simple full order permutations.
 4. **Tucker & Fukami 2014 nectar microbial communities**. Dryad https://doi.org/10.5061/dryad.1cg26. Temperature × arrival timing; source XLSX available but uninspected.
 5. **Torres et al. 2023 inverse arrival/removal**. Dryad https://doi.org/10.5061/dryad.80gb5mkws; **field 51 plots and mesocosm 66 pots**, same publication (cluster them), 41/40 field-cover variable ambiguity to audit. Removal of invasive species is **not pooled with initial colonization arrival**.
 6. **Weidlich et al. 2017 grassland**. Published experimental report https://doi.org/10.3389/fpls.2016.02008; 64 plots, sowing first PFG × soil/diversity; full raw species×plot source still unverified.
 
-The complete **16-record** targeted (non-exhaustive) candidate map is `database/macro_meta/candidate_studies_v1.csv`. Pairwise 2-species mechanisms and initial-condition proxies are flagged as *separate lanes* rather than misleading mainline replications.
+The **16-record** targeted (non-exhaustive) candidate map is `database/macro_meta/candidate_studies_v1.csv`. Pairwise 2-species mechanisms and initial-condition proxies are flagged as *separate lanes* rather than misleading mainline replications.
 
 ## Meta-analysis protocol and gates
 
@@ -54,7 +72,7 @@ The complete **16-record** targeted (non-exhaustive) candidate map is `database/
 
 **Conservative pooling gate:** need >=5 independent publication clusters in the **same intervention × endpoint-granularity lane**, design-verified original data and paired study SE before a random-effects meta-estimate is even considered. This minimum is NOT enough by itself for stable moderator regression: reserve temperature/taxonomy/time moderators for a larger audited pool (prefer ~10+ independent clusters per moderator). This rule is implemented in `benchmarks/knk_macro_meta_gate.py` and synthetic tests; by design it **does not output an illegitimate pooled estimate** today.
 
-**Current verdict: BLOCKED FOR POOLING.** Three scored experiments (2 frozen, 1 draft), two structural taxon-grain kinds, no comparable paired ΔE SE for two frozen studies, no new POEM raw scores. This is an evidence map plus pilot, not a new global finding. Also, KNK v38 explicitly has not identified which biological interaction generates fungal dominance, and the new Dawson-Glass result cannot identify competition separately from plant age and growth duration.
+**Current verdict: BLOCKED FOR POOLING.** Four distinct source publications have some scored real-data structural results (two frozen, Dawson-Glass and POEM both in separate drafts), but POEM contributes repeated cohort/age scores rather than one independently comparable study-level effect. The four vary in design, taxon/functional-group grain, and study-level paired uncertainty. This is a source-audited evidence map and new field experiment, **not a random-effects meta-analysis or cross-taxon universal law**. Also, KNK v38 explicitly has not identified which biological interaction generates fungal dominance, and the new Dawson-Glass result cannot identify competition separately from plant age and growth duration.
 
 ## References and audit trail
 
