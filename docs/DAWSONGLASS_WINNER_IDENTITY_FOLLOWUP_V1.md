@@ -33,6 +33,14 @@ Changes in treatment mean **grams per pot**, warm-order minus ambient:
 
 Thus there is an **observed group-level biomass compensation pattern** (one growing species and two shrinking grasses with similar overall community output). This is a candidate *ecological explanation* for why named community composition changes greatly without a comparable unlabeled-rank or total-biomass change. But the design cannot demonstrate a within-pot competitive tradeoff or niche pre-emption.
 
+## Within-treatment absolute-mass covariance (additional exploratory mechanism clue)
+
+After subtracting the respective ambient- or warmed-order **treatment mean** from each pot, *Rumex crispus* mass and the summed *Bromus inermis* + *Dactylis glomerata* **absolute grams per pot** remained negatively associated: **Pearson r = −0.5306** (n=24 pots). Shuffling the grass totals among pots **within each assembly-order arm** (19,999 permutations; seed 20261124) gave a two-sided **p≈0.00575**. A stratified whole-pot bootstrap (20,000 resamples; seed 20261125) gave a 95% interval **−0.745 to −0.239**. Leaving out any individual pot gives r in **[−0.584, −0.474]**.
+
+The corresponding correlation with the **other 12 species combined** is **r = −0.064**, and with total pot biomass **r = −0.157**. Each individual arm also has a negative descriptive association (r around −0.55 to −0.57).
+
+This supports a **within-treatment compensatory biomass pattern**, rather than merely a difference between treatment means. Because the test was chosen **after** inspecting the initial species changes, it is exploratory and does **not** independently establish competitive exclusion, resource pre-emption, or any specific mechanism. Shared finite pot capacity, environmental heterogeneity, initial plant-size differences, and experimental growth duration remain viable alternatives. Relative-share closure was avoided by using absolute grams, but that does not remove these alternatives.
+
 ## Additional explanatory constraints
 - **Initial height (measured immediately before planting):** *R. crispus* average **0.78 cm** in ambient order vs **2.21 cm** in warm order. This variable may be affected by schedule/age and is not an unconfounded pre-treatment covariate; adjustment cannot by itself identify competition.
 - Original authors did not directly separate species arrival-time advantages from changed interaction strength. Greenhouse mesocosms were under common growth temperatures; “warm order” was based on separate warmed-germination trials.
