@@ -1,0 +1,768 @@
+{
+  "status": "REAL_DATA_SCORED_EXPLORATORY_NO_META_POOLING",
+  "source": "Alonso-Crespo et al 2025 Journal of Vegetation Science DOI 10.1111/jvs.70026",
+  "data_doi": "10.5281/zenodo.10119982",
+  "source_archive_sha256": "7541ce47b61244f34a6b3b7f1187a2ef16f79bc173d73e6abed206203939ef8f",
+  "source_archive_md5": "3faa5f7d1619a3beae5941ba763b7a26",
+  "source_audit": {
+    "status": "PASS",
+    "source_zip_md5": "3faa5f7d1619a3beae5941ba763b7a26",
+    "source_zip_sha256": "7541ce47b61244f34a6b3b7f1187a2ef16f79bc173d73e6abed206203939ef8f",
+    "n_cohorts": 2,
+    "n_unique_independent_plots_across_cohorts": 50,
+    "n_harvests": 6,
+    "n_species_after_excluding_unknown": 49,
+    "n_sown_taxa": 14,
+    "total_source_rows": 5210,
+    "total_duplicate_fragment_records": 62,
+    "total_explicit_zero_records": 2121,
+    "original_repeated_plot_units_per_cohort": 25,
+    "plot_aggregation": "sum separate entries within species×quadrat; average quadrats to plot",
+    "implicit_zero_policy": "source listed species absence in otherwise observed quadrat is recorded as zero harvested biomass",
+    "cohort_years": [
+      2020,
+      2021
+    ]
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45085174472",
+  "source_contract": "docs/POEM_FIELD_PRE_SCORE_CONTRACT_20261123.md",
+  "method": {
+    "primary_four_treatments": [
+      "F",
+      "G",
+      "L",
+      "S"
+    ],
+    "exclude": "B free succession",
+    "permutations": 9999,
+    "seed": 20261123,
+    "experimental_unit": "whole independent plot",
+    "n_plots_per_cohort": 20,
+    "cohorts": 2,
+    "ages": 3,
+    "repeated_timepoints_independent": false,
+    "response": "mean biomass per plot species across equal-area quadrats",
+    "named_vs_sorted": "49 identified taxa, fixed dimensions, proportions Bray-Curtis",
+    "Holm": "12 primary named and sorted tests"
+  },
+  "primary_results": [
+    {
+      "cohort": "2020",
+      "age": 1,
+      "harvest": "2020-07",
+      "named": {
+        "r2": 0.18498849528448422,
+        "null_median": 0.14795079768307212,
+        "null_ci95": [
+          0.052125400178704574,
+          0.3155189240741655
+        ],
+        "E": 0.037037697601412095,
+        "p_upper": 0.3063,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.6126
+      },
+      "sorted": {
+        "r2": 0.27050026888303774,
+        "null_median": 0.14887197782414963,
+        "null_ci95": [
+          0.04733409998981378,
+          0.31485290096831986
+        ],
+        "E": 0.12162829105888812,
+        "p_upper": 0.0677,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.4014
+      },
+      "delta_E": -0.08459059345747602,
+      "total_biomass": {
+        "r2": 0.45724050372238834,
+        "null_median": 0.13119202035233893,
+        "null_ci95": [
+          0.013313701549291878,
+          0.4464389760286492
+        ],
+        "E": 0.32604848337004944,
+        "p_upper": 0.0216,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.4422948703706625,
+        "null_median": 0.13429454396706367,
+        "null_ci95": [
+          0.015818695155426984,
+          0.426196618189096
+        ],
+        "E": 0.30800032640359887,
+        "p_upper": 0.0214,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    },
+    {
+      "cohort": "2020",
+      "age": 2,
+      "harvest": "2021-06",
+      "named": {
+        "r2": 0.3387177590415342,
+        "null_median": 0.15149203260629726,
+        "null_ci95": [
+          0.07982732490514585,
+          0.2773021879600683
+        ],
+        "E": 0.18722572643523697,
+        "p_upper": 0.0038,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.038
+      },
+      "sorted": {
+        "r2": 0.5651208855623192,
+        "null_median": 0.1381352567150433,
+        "null_ci95": [
+          0.027681186783953985,
+          0.4028300260358728
+        ],
+        "E": 0.4269856288472759,
+        "p_upper": 0.0022,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.024200000000000003
+      },
+      "delta_E": -0.23975990241203896,
+      "total_biomass": {
+        "r2": 0.30312841995979734,
+        "null_median": 0.13381753690831483,
+        "null_ci95": [
+          0.022746751815132145,
+          0.4244423249825468
+        ],
+        "E": 0.1693108830514825,
+        "p_upper": 0.1057,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.5486820639969122,
+        "null_median": 0.13638604627778683,
+        "null_ci95": [
+          0.022234272413975895,
+          0.4121576318549862
+        ],
+        "E": 0.4122960177191254,
+        "p_upper": 0.0041,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    },
+    {
+      "cohort": "2020",
+      "age": 3,
+      "harvest": "2022-06",
+      "named": {
+        "r2": 0.2291407274763983,
+        "null_median": 0.15424185408448401,
+        "null_ci95": [
+          0.08271137727554337,
+          0.25562867583023496
+        ],
+        "E": 0.07489887339191428,
+        "p_upper": 0.0669,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.4014
+      },
+      "sorted": {
+        "r2": 0.2703022873514221,
+        "null_median": 0.1434259551608697,
+        "null_ci95": [
+          0.039880514276094424,
+          0.35381796516459724
+        ],
+        "E": 0.1268763321905524,
+        "p_upper": 0.098,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.4014
+      },
+      "delta_E": -0.051977458798638104,
+      "total_biomass": {
+        "r2": 0.09110727621470707,
+        "null_median": 0.13457932968180447,
+        "null_ci95": [
+          0.020771436735454372,
+          0.42293364940100286
+        ],
+        "E": -0.0434720534670974,
+        "p_upper": 0.6784,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.31588124426245473,
+        "null_median": 0.1348727803279147,
+        "null_ci95": [
+          0.02611324500638272,
+          0.4087864634365514
+        ],
+        "E": 0.18100846393454004,
+        "p_upper": 0.0859,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 1,
+      "harvest": "2021-07",
+      "named": {
+        "r2": 0.2947200656327037,
+        "null_median": 0.14822687542761262,
+        "null_ci95": [
+          0.06334973330217457,
+          0.2968631927928374
+        ],
+        "E": 0.14649319020509108,
+        "p_upper": 0.0262,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.2358
+      },
+      "sorted": {
+        "r2": 0.2892262286543542,
+        "null_median": 0.13736330626725404,
+        "null_ci95": [
+          0.031603918145318106,
+          0.38440626919935544
+        ],
+        "E": 0.15186292238710017,
+        "p_upper": 0.0988,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.4014
+      },
+      "delta_E": -0.00536973218200909,
+      "total_biomass": {
+        "r2": 0.06827439015527928,
+        "null_median": 0.13365038709402377,
+        "null_ci95": [
+          0.023212822614987663,
+          0.4177383104741635
+        ],
+        "E": -0.06537599693874449,
+        "p_upper": 0.789,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.3164033719636555,
+        "null_median": 0.13160278708775985,
+        "null_ci95": [
+          0.016256609323338143,
+          0.42773840677371083
+        ],
+        "E": 0.18480058487589562,
+        "p_upper": 0.0948,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 2,
+      "harvest": "2022-06",
+      "named": {
+        "r2": 0.47149390280834674,
+        "null_median": 0.14893134051348178,
+        "null_ci95": [
+          0.06031614108131573,
+          0.3015865019047205
+        ],
+        "E": 0.32256256229486496,
+        "p_upper": 0.0003,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.0036
+      },
+      "sorted": {
+        "r2": 0.16711097352471654,
+        "null_median": 0.1441605367651889,
+        "null_ci95": [
+          0.038480542424268176,
+          0.3503072735377399
+        ],
+        "E": 0.022950436759527654,
+        "p_upper": 0.3955,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.6126
+      },
+      "delta_E": 0.29961212553533734,
+      "total_biomass": {
+        "r2": 0.07046877240645688,
+        "null_median": 0.13255681419971896,
+        "null_ci95": [
+          0.016676091750281802,
+          0.44435589731233627
+        ],
+        "E": -0.06208804179326208,
+        "p_upper": 0.7587,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.08410829057589901,
+        "null_median": 0.13598109516769286,
+        "null_ci95": [
+          0.026296484508290304,
+          0.40912466463990305
+        ],
+        "E": -0.051872804591793845,
+        "p_upper": 0.7274,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 3,
+      "harvest": "2023-06",
+      "named": {
+        "r2": 0.24844601485936582,
+        "null_median": 0.15340266613074818,
+        "null_ci95": [
+          0.07805822827278688,
+          0.2650885601452585
+        ],
+        "E": 0.09504334872861764,
+        "p_upper": 0.043,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.344
+      },
+      "sorted": {
+        "r2": 0.3206989335095404,
+        "null_median": 0.14075024495931546,
+        "null_ci95": [
+          0.045025159416506956,
+          0.3534969123605964
+        ],
+        "E": 0.17994868855022492,
+        "p_upper": 0.0463,
+        "n_units": 20,
+        "n_response_columns": 49,
+        "n_permutations": 9999,
+        "holm_p_12_tests": 0.344
+      },
+      "delta_E": -0.08490533982160728,
+      "total_biomass": {
+        "r2": 0.16542730559231905,
+        "null_median": 0.13685856392752574,
+        "null_ci95": [
+          0.03484207484310098,
+          0.3930174529437775
+        ],
+        "E": 0.028568741664793312,
+        "p_upper": 0.3887,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      },
+      "rank1": {
+        "r2": 0.41056537534153287,
+        "null_median": 0.1321970893679345,
+        "null_ci95": [
+          0.02766064521584232,
+          0.4103328546897939
+        ],
+        "E": 0.27836828597359836,
+        "p_upper": 0.025,
+        "n_units": 20,
+        "n_response_columns": 1,
+        "n_permutations": 9999
+      }
+    }
+  ],
+  "predeclared_sensitivities": [
+    {
+      "cohort": "2020",
+      "age": 1,
+      "sown14_4level": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.6878170548610214,
+          "null_median": 0.14495348392516247,
+          "null_ci95": [
+            0.051434183274744326,
+            0.32299486738154176
+          ],
+          "E": 0.5428635709358589,
+          "p_upper": 0.0001,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.4038538842837365,
+          "null_median": 0.140013136255332,
+          "null_ci95": [
+            0.024708031100108916,
+            0.41363209078058566
+          ],
+          "E": 0.2638407480284045,
+          "p_upper": 0.0285,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        }
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.1364896186590508,
+          "null_median": 0.13067387870312352,
+          "null_ci95": [
+            0.03321573454467675,
+            0.31497624943855285
+          ],
+          "E": 0.005815739955927268,
+          "p_upper": 0.4694,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.3224372961820257,
+          "null_median": 0.13108932065380832,
+          "null_ci95": [
+            0.026229580838821848,
+            0.3258769060473218
+          ],
+          "E": 0.1913479755282174,
+          "p_upper": 0.0265,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    },
+    {
+      "cohort": "2020",
+      "age": 2,
+      "sown14_4level": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.29355956300782304,
+          "null_median": 0.15397611911144785,
+          "null_ci95": [
+            0.0825182146838019,
+            0.2616798653562994
+          ],
+          "E": 0.1395834438963752,
+          "p_upper": 0.0071,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.2922621365271052,
+          "null_median": 0.13628288696420313,
+          "null_ci95": [
+            0.023105399348911794,
+            0.409500384847489
+          ],
+          "E": 0.15597924956290207,
+          "p_upper": 0.1121,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        }
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.27259689814235355,
+          "null_median": 0.13534355477850046,
+          "null_ci95": [
+            0.06507212446778857,
+            0.27387684342512947
+          ],
+          "E": 0.1372533433638531,
+          "p_upper": 0.0259,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.49557901550663835,
+          "null_median": 0.11330390400369049,
+          "null_ci95": [
+            0.015724306893577556,
+            0.4276599162409315
+          ],
+          "E": 0.38227511150294785,
+          "p_upper": 0.0105,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    },
+    {
+      "cohort": "2020",
+      "age": 3,
+      "sown14_4level": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.26100219609718317,
+          "null_median": 0.15079165382460913,
+          "null_ci95": [
+            0.0642178424851238,
+            0.286323971550219
+          ],
+          "E": 0.11021054227257404,
+          "p_upper": 0.0527,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.16774113899014545,
+          "null_median": 0.14479340129090568,
+          "null_ci95": [
+            0.045978242314851425,
+            0.3292589287710175
+          ],
+          "E": 0.022947737699239773,
+          "p_upper": 0.3837,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        }
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.21404240702914754,
+          "null_median": 0.13758668133515492,
+          "null_ci95": [
+            0.06353933529678397,
+            0.250076879854562
+          ],
+          "E": 0.07645572569399262,
+          "p_upper": 0.0832,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.2696215020560058,
+          "null_median": 0.12226864944629938,
+          "null_ci95": [
+            0.023156927636425954,
+            0.36465622586890073
+          ],
+          "E": 0.14735285260970643,
+          "p_upper": 0.0935,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 1,
+      "sown14_4level": {
+        "status": "STOP_ZERO_SOWN_TOTAL",
+        "n_zero_sown_plots": 2
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.22235506885043607,
+          "null_median": 0.135352529688998,
+          "null_ci95": [
+            0.043993633909923724,
+            0.27733307126813195
+          ],
+          "E": 0.08700253916143807,
+          "p_upper": 0.1158,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.06780635707429139,
+          "null_median": 0.11720837622173146,
+          "null_ci95": [
+            0.023261638253776702,
+            0.3925839069763115
+          ],
+          "E": -0.049402019147440066,
+          "p_upper": 0.7489,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 2,
+      "sown14_4level": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.4979624516735836,
+          "null_median": 0.14805460781548907,
+          "null_ci95": [
+            0.04983163469097471,
+            0.3204587921054604
+          ],
+          "E": 0.34990784385809454,
+          "p_upper": 0.0004,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.14131167744679962,
+          "null_median": 0.142558602764236,
+          "null_ci95": [
+            0.03891094088963788,
+            0.3594256501128704
+          ],
+          "E": -0.0012469253174363648,
+          "p_upper": 0.506,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        }
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.5096406185882788,
+          "null_median": 0.13148829285781527,
+          "null_ci95": [
+            0.03407849128578961,
+            0.33659164313855794
+          ],
+          "E": 0.37815232573046353,
+          "p_upper": 0.0001,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.20312764976525366,
+          "null_median": 0.12730686637967953,
+          "null_ci95": [
+            0.02565353349322847,
+            0.34079657494303245
+          ],
+          "E": 0.07582078338557413,
+          "p_upper": 0.2235,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    },
+    {
+      "cohort": "2021",
+      "age": 3,
+      "sown14_4level": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.271590186592128,
+          "null_median": 0.15246325971940508,
+          "null_ci95": [
+            0.06864360992662985,
+            0.2770621735277233
+          ],
+          "E": 0.11912692687272294,
+          "p_upper": 0.0302,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.24053617510280748,
+          "null_median": 0.14053897133419616,
+          "null_ci95": [
+            0.04509867561031877,
+            0.3567432862754416
+          ],
+          "E": 0.09999720376861132,
+          "p_upper": 0.1566,
+          "n_units": 20,
+          "n_response_columns": 14,
+          "n_permutations": 9999
+        }
+      },
+      "all49_FGLonly": {
+        "status": "SCORED",
+        "named": {
+          "r2": 0.26913574197985074,
+          "null_median": 0.1366845720361412,
+          "null_ci95": [
+            0.0607567268791758,
+            0.258028404193003
+          ],
+          "E": 0.13245116994370953,
+          "p_upper": 0.0171,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        },
+        "rank": {
+          "r2": 0.3855313741442129,
+          "null_median": 0.11856464295994279,
+          "null_ci95": [
+            0.026681365238138362,
+            0.39637107444251424
+          ],
+          "E": 0.2669667311842701,
+          "p_upper": 0.0281,
+          "n_units": 15,
+          "n_response_columns": 49,
+          "n_permutations": 9999
+        }
+      }
+    }
+  ],
+  "meta_note": "One new independently published study cluster; six cohort×age outcomes are not six independently published studies",
+  "interpretation_boundaries": [
+    "Relative abundance rank is not mutual information",
+    "different starting years are two cohorts, not randomized climate years",
+    "p>.05 does not prove absence of history",
+    "rank effects may involve unsown recruits",
+    "root imaging not species-specific root biomass",
+    "do not modify frozen KNK v28-v38"
+  ]
+}
