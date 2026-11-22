@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "status": "independent_local_scoring_provisional_not_part_of_frozen_v28_v38",
+    "date": "2026-11-22",
+    "source_doi": "10.5061/dryad.sbcc2frh4",
+    "source_paper_doi": "10.1002/ecy.4504",
+    "source_filename": "Dawson-Glass_ECY24-0464_assembly_data.csv",
+    "source_sha256": "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230",
+    "n_pots": 24,
+    "n_species": 15,
+    "n_rows": 360,
+    "counts": {
+      "Ambient Order": 12,
+      "Warm Order": 12
+    },
+    "zero_biomass_cells": 21,
+    "missing_cells": 0,
+    "duplicate_pot_species": 0
+  },
+  "method": {
+    "sample_unit": "whole pot",
+    "representation": "15 species biomass proportions vs same values sorted descending",
+    "distance": "Bray-Curtis",
+    "model": "one-way treatment",
+    "permutations": 9999,
+    "seed": 20261122,
+    "statistic": "E=R2_observed-median(permutation_R2)",
+    "permutation_restriction": "unblocked (verify allocation design)",
+    "source_raw_biomass_pseudo_F_recomputed": 16.605953261111146,
+    "source_published_pseudo_F": 16.61
+  },
+  "primary": {
+    "labeled_proportions": {
+      "R2": 0.42895941867770204,
+      "null_median": 0.033074413006730405,
+      "E": 0.3958850056709716,
+      "p": 0.0001
+    },
+    "unlabeled_sorted_proportions": {
+      "R2": 0.032899491172527856,
+      "null_median": 0.034745353487807495,
+      "E": -0.0018458623152796394,
+      "p": 0.5256
+    },
+    "delta_E_descriptive": 0.39773086798625124
+  },
+  "preplanned_sensitivities": {
+    "raw_biomass": {
+      "R2": 0.43013970277580965,
+      "E": 0.39744272623167715,
+      "p": 0.0001
+    },
+    "total_biomass": {
+      "R2": 0.044018117942295536,
+      "E": 0.022738829576651187,
+      "p": 0.3284
+    },
+    "rank1": {
+      "R2": 0.015222356295916435,
+      "E": -0.005061499618292857,
+      "p": 0.5654
+    },
+    "shannon": {
+      "R2": 0.0023896517663430142,
+      "E": -0.01806709660567671,
+      "p": 0.8314
+    }
+  },
+  "leave_one_pot_out_predictive": {
+    "model": "L2 ridge logistic penalty=4, fold-local scaling, leave one whole pot out",
+    "train_fold_prior_logloss": 0.7357067949787414,
+    "labeled": {
+      "logloss": 0.30085300254614794,
+      "accuracy": 0.875,
+      "logloss_gain": 0.4348537924325934
+    },
+    "unlabeled": {
+      "logloss": 0.8902775290112607,
+      "accuracy": 0.5833333333333334,
+      "logloss_gain": -0.1545707340325193
+    }
+  },
+  "exploratory_independent_checks": {
+    "hellinger_euclidean_labeled": {
+      "E": 0.34997995144934047,
+      "p": 0.0001
+    },
+    "hellinger_euclidean_unlabeled": {
+      "E": 0.04875323281105834,
+      "p": 0.0989
+    },
+    "euclidean_proportions_labeled": {
+      "E": 0.39761218408098925,
+      "p": 0.0001
+    },
+    "euclidean_proportions_unlabeled": {
+      "E": 0.02389677129031055,
+      "p": 0.2681
+    },
+    "hellinger_dispersion_difference_p": 0.939,
+    "leave_one_pot_out_1999_permutations": {
+      "labeled_E_range": [
+        0.3738125739459678,
+        0.4283735325918532
+      ],
+      "labeled_p_max": 0.001,
+      "unlabeled_p_min": 0.2975
+    },
+    "delete_Rumex_then_renormalize": {
+      "labeled_E": 0.07290690035900987,
+      "p": 0.0262
+    }
+  },
+  "biological_descriptives": {
+    "mean_biomass_shares": {
+      "Rumex crispus": {
+        "ambient": 0.1071,
+        "warm_order": 0.424
+      },
+      "Dactylis glomerata": {
+        "ambient": 0.3723,
+        "warm_order": 0.2033
+      },
+      "Bromus inermis": {
+        "ambient": 0.3578,
+        "warm_order": 0.2339
+      }
+    },
+    "Rumex_rank1_counts": {
+      "ambient": 0,
+      "warm_order": 8,
+      "denominator_each": 12
+    },
+    "mean_rank1": {
+      "ambient": 0.486,
+      "warm_order": 0.466
+    }
+  },
+  "boundaries": [
+    "Not a direct test of niche-preemption or interaction mechanism.",
+    "Arrival schedule also changes time available for growth.",
+    "Non-significant rank test does not prove absence or equivalence.",
+    "E differences and E ratios are not mutual information decomposition.",
+    "Independent post-submission only: don't change frozen v28-v38."
+  ]
+}
