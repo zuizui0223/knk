@@ -98,5 +98,33 @@
     "Relative share effects are compositional; review absolute gram changes and source author's adjusted species-level results.",
     "Planting initial height differs across treatments; arrival time, plant age, growth period and ecological interactions cannot be separately identified in these data.",
     "Maintain existing frozen manuscript v28-v38 unchanged."
-  ]
+  ],
+  "within_treatment_absolute_biomass_covariance_exploratory": {
+    "species": "Rumex crispus vs sum(Bromus inermis, Dactylis glomerata)",
+    "sample_unit": "one pot",
+    "n": 24,
+    "centered_within": [
+      "Ambient Order",
+      "Warm Order"
+    ],
+    "r": -0.5306127089483622,
+    "permutation_two_sided_p": 0.00575,
+    "permutations": 19999,
+    "permutation_seed": 20261124,
+    "bootstrap95": [
+      -0.74509016,
+      -0.2394312
+    ],
+    "bootstrap_resamples": 20000,
+    "bootstrap_seed": 20261125,
+    "leave_one_pot_r_range": [
+      -0.5842129987198744,
+      -0.4741940107436927
+    ],
+    "other_12_species_r": -0.06396556840955868,
+    "total_biomass_r": -0.15735399387119364,
+    "within_ambient_r": -0.5541736705007513,
+    "within_warm_r": -0.5702694172343037,
+    "caveat": "Absolute grams remove compositional closure but not finite shared carrying-capacity, pot microenvironment, or duration/size confounding; post hoc hypothesis."
+  }
 }
