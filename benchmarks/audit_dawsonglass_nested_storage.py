@@ -17,7 +17,8 @@ from pathlib import Path
 import numpy as np
 
 from benchmarks.run_dawsonglass_storage_post_submission import (
-    AuditStop, between_r2, bray_curtis, centered_gower, load_panel, permutation_test
+    AuditStop, between_r2, bray_curtis, centered_gower, load_panel, permutation_test,
+    fitted_logistic_probability
 )
 
 SOURCE_SHA = "1514d4501a0bdf7a61ace6c250566c5a0b8e4a24a0f4737646d182ebad7b8230"
@@ -139,6 +140,27 @@ def analyze(x: np.ndarray, y: np.ndarray, names: list[str],
     }
     stats = {name: permutation_test(matrix, y, perms)
              for name, matrix in matrices.items()}
+    # Fixed-penalty whole-pot LOO; subgroup selection was post hoc, so this
+    # is a descriptive reconstruction, NOT independent external validation.
+    cv = {}
+    for name in ("full15_sorted", "functional2_share",
+                 "forb10_sorted_internal", "forb9_omit_Rumex_named_internal",
+                 "forb9_omit_Rumex_sorted_internal", "grass5_sorted_internal"):
+        matrix = matrices[name]
+        pred, baseline_loss = [], []
+        for i in range(len(y)):
+            keep = np.arange(len(y)) != i
+            pi = fitted_logistic_probability(matrix[keep], y[keep], matrix[i], penalty=4.0)
+            prior = (np.count_nonzero(y[keep]) + 0.5) / (len(y[keep]) + 1)
+            pred.append(pi)
+            baseline_loss.append(-y[i]*np.log(prior)-(1-y[i])*np.log(1-prior))
+        pred = np.asarray(pred)
+        loss = -y*np.log(pred)-(1-y)*np.log(1-pred)
+        cv[name] = {"n_holdouts":len(y), "accuracy":float(np.mean((pred>=0.5)==y)),
+                    "correct":int(np.sum((pred>=0.5)==y)),
+                    "logloss":float(np.mean(loss)),
+                    "baseline_logloss":float(np.mean(baseline_loss)),
+                    "logloss_gain_vs_prior":float(np.mean(baseline_loss)-np.mean(loss))}
     q = holm_adjust({name: float(v["p_upper"]) for name, v in stats.items()})
     for name, v in stats.items():
         v["posthoc_holm_adjusted_p_11_tests"] = q[name]
@@ -163,6 +185,7 @@ def analyze(x: np.ndarray, y: np.ndarray, names: list[str],
                      "within_group": "within-pot renormalized to each guild's mass",
                      "multiple_testing": "Holm across 11 exploratory endpoints"},
         "results": stats,
+        "leave_one_pot_out_prediction": cv,
         "means": {
             "forb_share_ambient": float(FG[a, 1].mean()),
             "forb_share_warm": float(FG[w, 1].mean()),
