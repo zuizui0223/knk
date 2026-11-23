@@ -38,11 +38,17 @@ jobs:
         run: |
           python -m benchmarks.score_delory_chemical_legacy \
             --csv "$RUNNER_TEMP/delory/Data_plants.csv" \
-            --output "$RUNNER_TEMP/delory/chemical_legacy_aggregate.json"
+            --output "$RUNNER_TEMP/delory/chemical_legacy_source_faithful_58.json" \
+            --original-author-filter
+          python -m benchmarks.score_delory_chemical_legacy \
+            --csv "$RUNNER_TEMP/delory/Data_plants.csv" \
+            --output "$RUNNER_TEMP/delory/chemical_legacy_full_60_sensitivity.json"
       - name: Retain ONLY aggregate statistical results, NOT raw data
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: delory-chemical-legacy-aggregate-20261124
-          path: ${{ runner.temp }}/delory/chemical_legacy_aggregate.json
+          path: |
+            ${{ runner.temp }}/delory/chemical_legacy_source_faithful_58.json
+            ${{ runner.temp }}/delory/chemical_legacy_full_60_sensitivity.json
           retention-days: 14
