@@ -22,7 +22,9 @@ def _toy():
             fm=traits[f]["traits"]
             nm=traits[n]["traits"]
             val=-.5+.30*fm[0]-.65*nm[6]+rng.normal(0,.02)
-            rows.append({"focal":f,"neighbor":n,"Cdelta_total":float(val)})
+            rows.append({"focal":f,"neighbor":n,"Cdelta_total":float(val),
+                         "RII_late_total":float(val/2),
+                         "RII_sim_total":float(-0.1+0.2*fm[0])})
     return rows,traits
 
 
@@ -67,3 +69,15 @@ def test_shuffle_keeps_partner_guild_without_mutating_focal_traits():
     assert all(traits[a]["guild"]==traits[b]["guild"] for a,b in mapping.items())
     p=gr_mapping_placebo(rows,traits,n_perm=7)
     assert 0<=p["fraction_shuffles_as_good_or_better"]<=1
+
+
+def test_source_RII_endpoint_target_plumbing():
+    rows,traits=_toy()
+    priority=score(rows,traits,models=(BASELINE,MAIN),target="RII_late_total")
+    simultaneous=score(rows,traits,models=(BASELINE,MAIN),target="RII_sim_total")
+    assert priority["target"]=="RII_late_total"
+    assert simultaneous["target"]=="RII_sim_total"
+    assert priority["model_scores"][MAIN]["species_equal_MSE"] < \
+           priority["model_scores"][BASELINE]["species_equal_MSE"]
+    audit=gr_mapping_placebo(rows,traits,n_perm=7,target="RII_late_total")
+    assert audit["target"]=="RII_late_total"
