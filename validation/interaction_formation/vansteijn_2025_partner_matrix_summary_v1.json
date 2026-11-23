@@ -1,0 +1,120 @@
+{
+  "analysis_date": "2026-11-23",
+  "status": "SECONDARY_REANALYSIS_PUBLISHED_PRIORITY_COMPETITION_NOT_DIRECT_CAUSAL_INTERACTION_ESTIMATE",
+  "study": "van Steijn et al. (2025), Ecology 106:e4528, DOI 10.1002/ecy.4528",
+  "dataset_doi": "10.5281/zenodo.10512662",
+  "source_version": "v2",
+  "code_branch": "analysis/interaction-formation-20261123",
+  "source_runs": {
+    "schema": "https://github.com/zuizui0223/knk/actions/runs/45094845862",
+    "primary": "https://github.com/zuizui0223/knk/actions/runs/45095129265",
+    "partner_specificity": "https://github.com/zuizui0223/knk/actions/runs/45095655693"
+  },
+  "source_files": {
+    "alone": {
+      "n": 74,
+      "md5": "0df05c9e417947e7aaecb84913184fc5"
+    },
+    "simultaneous": {
+      "n": 206,
+      "md5": "3a6742d98e4311bf8cd64dc06ddf433b"
+    },
+    "second_arrival": {
+      "n": 206,
+      "md5": "17f876d2ba031248f6813bddde9a33be"
+    },
+    "traits": {
+      "n": 15,
+      "md5": "e7b1ffaeff71b05d79c1e9ae158aa55f"
+    }
+  },
+  "pair_audit": {
+    "unique_species": 15,
+    "paired_directed_combinations": 202,
+    "reciprocal_unordered_pairs": 99,
+    "one_pot_per_directed_pair": true,
+    "missing_pair_mismatches": "4 simultaneous-only +4 late-only; excluded from matched response"
+  },
+  "focal_cluster_late_response": {
+    "mean": -0.7308686335834672,
+    "bootstrap95": [
+      -0.814371756079212,
+      -0.6344500358388185
+    ],
+    "n_focal_species": 15,
+    "negative_focal_means": 15,
+    "exact_signflip_p_two_sided": 0.00006103515625,
+    "negative_directed_pairs": 200,
+    "positive_directed_pairs": 2
+  },
+  "organ_difference": {
+    "mean_late_RII_above_minus_below": -0.004757325125883019,
+    "bootstrap95": [
+      -0.027862307001344615,
+      0.020261454311496382
+    ],
+    "focal_signflip_p_two_sided": 0.71160888671875
+  },
+  "partner_identity": {
+    "focal_centered_neighbor_name_R2": 0.4773708656887386,
+    "null_median": 0.07196281714391026,
+    "null95": [
+      0.030660572576951445,
+      0.1349903952851178
+    ],
+    "label_exchange_p": 0.0001,
+    "focal_and_neighbor_guild_residual_neighbor_name_R2": 0.41146569768868757,
+    "within_focal_guild_label_null_median": 0.05790997093227776,
+    "within_focal_guild_null95": [
+      0.02078521333352725,
+      0.12768506909108157
+    ],
+    "within_guild_label_exchange_p": 0.0001,
+    "neighbor_guild_R2_after_focal_centering": 0.11506621843540588,
+    "random_555_guild_partition_upper_fraction": 0.169,
+    "remove_Antennaria_and_Briza_neighbor_name_R2": 0.2043187935011951,
+    "hub_deletion_label_exchange_p": 0.0005
+  },
+  "extreme_neighbors": {
+    "Antennaria dioica": {
+      "focal_adjusted_mean_late_RII": 0.45524766109834897,
+      "responders_above_focal_mean": 13,
+      "n_responders": 13,
+      "all15_maxT_mapping_p": 0.0001
+    },
+    "Briza media": {
+      "focal_adjusted_mean_late_RII": 0.24021640751187273,
+      "responders_above_focal_mean": 11,
+      "n_responders": 13,
+      "all15_maxT_mapping_p": 0.0044
+    },
+    "Trifolium repens": {
+      "focal_adjusted_mean_late_RII": -0.18733118116536968,
+      "responders_below_focal_mean": 14,
+      "n_responders": 14,
+      "all15_maxT_mapping_p": 0.0456
+    }
+  },
+  "heldout_unordered_pair_loo": {
+    "n_unordered_pairs": 103,
+    "focal_only_rmse": 0.24335113223619995,
+    "focal_plus_neighbor_name_rmse": 0.19145143660315572,
+    "fixed_ridge_penalty": 4,
+    "both_directions_heldout_together": true,
+    "external_validation": false
+  },
+  "reciprocal_asymmetry": {
+    "n_unordered_pairs_with_both_orientations": 99,
+    "mean_absolute_RII_late_difference": 0.38749117223468305,
+    "correlation_orientations": -0.2300501909918131,
+    "opposite_signs": 2
+  },
+  "caveats": [
+    "RII_late is later-planted versus simultaneous-planted biomass in the same nominal ordered species pair, not pure competition coefficient alpha_ij.",
+    "Timing treatments change growth duration; no age-matched late-arrival-alone controls.",
+    "All 202 directed responses reuse 15 focal and 15 neighbor identities, typically one pot per pair; never use 202 as biological replicates for one effect.",
+    "MaxT and within-focal label tests are conditional exchangeability diagnostics, not actual randomized-treatment p values.",
+    "Source paper already studied pairwise priority effects and competitive traits; current contribution is an independent auditable matrix decomposition and its link to KNK concepts.",
+    "No changes to KNK v28-v38 Ecology Letters submission; all work in unmerged post-submission PR."
+  ]
+}
