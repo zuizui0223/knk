@@ -189,6 +189,129 @@
     "A main penalty-10 cluster bootstrap confidence interval crosses zero, so improvement across unseen species is suggestive not decisive.",
     "Observed within-guild mapping rank is a specificity diagnostic not a randomized experiment p.",
     "Original Ecology 2025 article already linked traits and priority effects.",
-    "No modification of frozen KNK v28-v38 or other experimental draft PRs."
-  ]
+    "No modification of frozen KNK v28-v38 or other experimental draft PRs.",
+    "The additional RII_late and RII_sim endpoints are posthoc sensitivity checks defined in docs/VANSTEIJN_GR_ENDPOINT_TRIANGULATION_PRE_SCORE_20261124.md, not independent experimental replications.",
+    "RII_late uses only late-vs-simultaneous focal biomass and so excludes the solo-control denominator mathematically.",
+    "Relative improvement is larger in RII_late than RII_sim on their distinct response scales, but no preplanned between-endpoint statistical contrast was performed; do not infer specific priority-only causation."
+  ],
+  "endpoint_triangulation_posthoc": {
+    "RII_late_total": {
+      "models": {
+        "focal_morph6": {
+          "directed_pair_RMSE": 0.25038009528963956,
+          "species_equal_MSE": 0.06337667527105657,
+          "species_equal_RMSE": 0.25174724481323835
+        },
+        "focal_morph6_plus_neighbor_GR": {
+          "directed_pair_RMSE": 0.21597314780678611,
+          "species_equal_MSE": 0.046846891039005224,
+          "species_equal_RMSE": 0.21644142634672603
+        }
+      },
+      "species_cluster_gain": {
+        "candidate": "focal_morph6_plus_neighbor_GR",
+        "baseline": "focal_morph6",
+        "mean_MSE_gain_positive_is_better": 0.01652978423205134,
+        "bootstrap_95pct": [
+          -0.0008805031978323314,
+          0.0400336335739802
+        ],
+        "n_heldout_species_improved": 10,
+        "n_heldout_species_worse": 5,
+        "total_heldout_species": 15,
+        "excluding_Antennaria_species_mean_MSE_gain": 0.007377356177108026,
+        "species_level_gains": {
+          "Agrostis capillaris": -0.004257581163555922,
+          "Antennaria dioica": 0.14466377700125774,
+          "Briza media": 0.06472523969256036,
+          "Cardamine pratensis": -0.00004294276593759527,
+          "Dianthus deltoides": -0.03339486597812726,
+          "Festuca rubra": 0.0009947759202821854,
+          "Lathyrus sylvestris": 0.0006262440926776969,
+          "Leucanthemum vulgare": -0.0016020466863387907,
+          "Lotus corniculatus": 0.008281454556286497,
+          "Phalaris arundinacea": 0.0091174843761648,
+          "Poa pratensis": 0.0014719210734509755,
+          "Sedum acre": -0.008255798593980776,
+          "Trifolium pratense": 0.02062621193603295,
+          "Trifolium repens": 0.042175167423980676,
+          "Viccia cracca": 0.002817722596016585
+        },
+        "unit": "early-neighbor species, bootstrap is descriptive; 15 source taxa not random flora sample"
+      },
+      "neighbor_GR_mapping_placebo": {
+        "observed_MSE": 0.046846891039005224,
+        "target": "RII_late_total",
+        "within_guild_shuffled_neighbor_GR_MSE_median": 0.06271369358966301,
+        "within_guild_shuffled_neighbor_GR_MSE_95pct": [
+          0.053358350165120576,
+          0.06629824057716824
+        ],
+        "fraction_shuffles_as_good_or_better": 0.005,
+        "n_permutations": 199,
+        "seed": 20261126,
+        "caution": "Posthoc mapping specificity diagnostic, not source randomized trait intervention"
+      }
+    },
+    "RII_sim_total": {
+      "models": {
+        "focal_morph6": {
+          "directed_pair_RMSE": 0.184834177453288,
+          "species_equal_MSE": 0.03459647473536216,
+          "species_equal_RMSE": 0.18600127616595044
+        },
+        "focal_morph6_plus_neighbor_GR": {
+          "directed_pair_RMSE": 0.17553537758708243,
+          "species_equal_MSE": 0.03115993509158607,
+          "species_equal_RMSE": 0.17652176945517534
+        }
+      },
+      "species_cluster_gain": {
+        "candidate": "focal_morph6_plus_neighbor_GR",
+        "baseline": "focal_morph6",
+        "mean_MSE_gain_positive_is_better": 0.0034365396437760825,
+        "bootstrap_95pct": [
+          -0.0011614030362561724,
+          0.008721853708496803
+        ],
+        "n_heldout_species_improved": 7,
+        "n_heldout_species_worse": 8,
+        "total_heldout_species": 15,
+        "excluding_Antennaria_species_mean_MSE_gain": 0.001576143034884264,
+        "species_level_gains": {
+          "Agrostis capillaris": -0.000561054600196835,
+          "Antennaria dioica": 0.029482092168261545,
+          "Briza media": 0.015789716923688118,
+          "Cardamine pratensis": -0.00641598132177941,
+          "Dianthus deltoides": -0.003387110016055968,
+          "Festuca rubra": -0.0006438544712324516,
+          "Lathyrus sylvestris": 0.0025587237847994257,
+          "Leucanthemum vulgare": -0.0006542022093597132,
+          "Lotus corniculatus": -0.01169068897675071,
+          "Phalaris arundinacea": 0.008226597240311967,
+          "Poa pratensis": -0.003478744043984558,
+          "Sedum acre": 0.008635617339695922,
+          "Trifolium pratense": -0.001311815153777495,
+          "Trifolium repens": 0.007768321224138737,
+          "Viccia cracca": 0.0072304767688826654
+        },
+        "unit": "early-neighbor species, bootstrap is descriptive; 15 source taxa not random flora sample"
+      },
+      "neighbor_GR_mapping_placebo": {
+        "observed_MSE": 0.03115993509158607,
+        "target": "RII_sim_total",
+        "within_guild_shuffled_neighbor_GR_MSE_median": 0.03481064406438834,
+        "within_guild_shuffled_neighbor_GR_MSE_95pct": [
+          0.03268588283800059,
+          0.03832145179963262
+        ],
+        "fraction_shuffles_as_good_or_better": 0.005,
+        "n_permutations": 199,
+        "seed": 20261127,
+        "caution": "Posthoc mapping specificity diagnostic, not source randomized trait intervention"
+      }
+    }
+  },
+  "endpoint_triangulation_run": "https://github.com/zuizui0223/knk/actions/runs/45207378978",
+  "interpretation_update": "Neighbor solo GR improves strict species-out predictions of both RII_late (priority-only outcome, no solo-control denominator) and RII_sim (simultaneous competition). Thus the signal is not solely caused by A_focal denominator coupling, but cannot be called priority-specific. Both source-species 15-cluster bootstrap intervals include zero."
 }
