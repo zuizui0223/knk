@@ -1,0 +1,51 @@
+name: KNK independent interaction-formation source audit
+
+on:
+  push:
+    branches: [analysis/interaction-formation-20261123]
+    paths:
+      - ".github/workflows/knk-interaction-formation-audit.yml"
+      - "benchmarks/audit_fragata_interaction_order.py"
+      - "tests/test_fragata_interaction_order.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-verified-mite-experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-test dependencies
+        run: python -m pip install numpy pytest
+      - name: Run synthetic whole-box and permutation tests
+        run: python -m pytest tests/test_fragata_interaction_order.py -q
+      - name: Download pinned PUBLIC original experiment in ephemeral runner only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/mite"
+          COMMIT=f1568dfb4a0da7bc9811985e416daec86447d0f3
+          ROOT="https://raw.githubusercontent.com/irfragata/order_arrival_niche_preemption/$COMMIT/Data"
+          curl --fail --location --retry 3 --retry-delay 3 "$ROOT/Coexistence_data_final_corr.csv" -o "$RUNNER_TEMP/mite/source.csv"
+          curl --fail --location --retry 3 --retry-delay 3 "$ROOT/leaf_conversion.txt" -o "$RUNNER_TEMP/mite/leaf_conversion.txt"
+          test "$(git hash-object "$RUNNER_TEMP/mite/source.csv")" = "dd734646364eb75464ab16b0169afb4b06b6e6d4"
+          test "$(git hash-object "$RUNNER_TEMP/mite/leaf_conversion.txt")" = "354dd41ece632b8e5f8bd0266233f5a88f1517e5"
+      - name: Aggregate 90 independent boxes and enumerate 63504 blocked assignments
+        shell: bash
+        run: |
+          python -m benchmarks.audit_fragata_interaction_order \
+            --coexistence "$RUNNER_TEMP/mite/source.csv" \
+            --leaf-map "$RUNNER_TEMP/mite/leaf_conversion.txt" \
+            --output "$RUNNER_TEMP/mite/interaction_formation_audit.json"
+      - name: Upload aggregate results ONLY (raw source files are excluded)
+        uses: actions/upload-artifact@v4
+        with:
+          name: interaction-formation-mite-aggregate-20261123
+          path: ${{ runner.temp }}/mite/interaction_formation_audit.json
+          retention-days: 14
