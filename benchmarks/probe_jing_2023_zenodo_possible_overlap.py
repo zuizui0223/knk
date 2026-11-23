@@ -35,6 +35,12 @@ def audit(original_workbook:Path,readme:Path):
             "n_cols":max(map(len,rows)),
             "headers":headers[:60],
             "sample_rows_first20cols":samples,
+            "last_6_rows_first20cols":[row[:20] for row in rows[-6:]],
+            "water_soil_row_counts":{
+                key:sum(str(row[0]).strip()+"|"+str(row[1]).strip()==key for row in rows)
+                for key in sorted(set(str(row[0]).strip()+"|"+str(row[1]).strip()
+                                      for row in rows[1:] if len(row)>=2))
+            },
             "n_formula_cells":v["formula_cells"],
             "n_complete_nonblank_rows":sum(all(y is not None and str(y).strip()!="" for y in row)
                                          for row in rows[1:])
