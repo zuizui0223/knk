@@ -12,6 +12,8 @@ on:
       - "tests/test_vansteijn_age_matched_neighbor_effect.py"
       - "benchmarks/predict_vansteijn_unseen_neighbor_traits.py"
       - "tests/test_vansteijn_unseen_neighbor_traits.py"
+      - "benchmarks/decompose_vansteijn_neighbor_growth_rate.py"
+      - "tests/test_vansteijn_neighbor_GR_transfer.py"
       - "tests/test_vansteijn_partner_specificity.py"
   workflow_dispatch:
 
@@ -40,7 +42,7 @@ jobs:
       - name: Validate source-free neighbor specificity under synthetic nulls
         run: |
           python -m pip install pytest
-          python -m pytest tests/test_vansteijn_partner_specificity.py tests/test_vansteijn_age_matched_neighbor_effect.py tests/test_vansteijn_unseen_neighbor_traits.py -q
+          python -m pytest tests/test_vansteijn_partner_specificity.py tests/test_vansteijn_age_matched_neighbor_effect.py tests/test_vansteijn_unseen_neighbor_traits.py tests/test_vansteijn_neighbor_GR_transfer.py -q
       - name: Inspect primary-source columns, grain, and published analysis
         shell: bash
         run: |
@@ -70,6 +72,13 @@ jobs:
             --source-dir "$RUNNER_TEMP/vansteijn" \
             --output "$RUNNER_TEMP/vansteijn/unseen_neighbor_transfer.json" \
             --mapping-permutations 199
+      - name: Disentangle focal and earlier-neighbor GR transfer under strict species holdout
+        shell: bash
+        run: |
+          python -m benchmarks.decompose_vansteijn_neighbor_growth_rate \
+            --source-dir "$RUNNER_TEMP/vansteijn" \
+            --output "$RUNNER_TEMP/vansteijn/neighbor_GR_role_decomposition.json" \
+            --permutations 499
       - name: Upload aggregate analysis and schema only (never raw data)
         if: success()
         uses: actions/upload-artifact@v4
@@ -81,4 +90,5 @@ jobs:
             ${{ runner.temp }}/vansteijn/partner_specificity_results.json
             ${{ runner.temp }}/vansteijn/age_matched_net_neighbor_effect.json
             ${{ runner.temp }}/vansteijn/unseen_neighbor_transfer.json
+            ${{ runner.temp }}/vansteijn/neighbor_GR_role_decomposition.json
           retention-days: 14
