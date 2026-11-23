@@ -1,0 +1,42 @@
+name: KNK published plant competition interaction audit
+
+on:
+  push:
+    branches: [analysis/interaction-formation-20261123]
+    paths:
+      - ".github/workflows/knk-vansteijn-interactions.yml"
+      - "benchmarks/probe_vansteijn_competition.py"
+      - "benchmarks/score_vansteijn_partner_effects.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download public original source (ephemeral; hash verified)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/vansteijn"
+          for FILE in alone.csv simultaneous_arrival.csv second_arrival.csv traits.csv R_code.Rmd; do
+            curl --fail --location --retry 3 --retry-delay 3 --max-time 90               "https://zenodo.org/records/10512662/files/${FILE}?download=1"               -o "$RUNNER_TEMP/vansteijn/$FILE"
+          done
+      - name: Inspect primary-source columns, grain, and published analysis
+        shell: bash
+        run: |
+          python -m benchmarks.probe_vansteijn_competition             --source-dir "$RUNNER_TEMP/vansteijn"             --out "$RUNNER_TEMP/vansteijn/schema_audit.json"
+      - name: Upload schema only (never raw dataset)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vansteijn-source-schema-20261123
+          path: ${{ runner.temp }}/vansteijn/schema_audit.json
+          retention-days: 14
