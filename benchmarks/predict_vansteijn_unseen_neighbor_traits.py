@@ -97,7 +97,7 @@ def build_features(rows:list[dict],source:dict,
         else:
             raise AuditStop("Unknown fixed model "+model)
         vectors.append(vec)
-    return np.asarray(vectors,dtype=float).reshape((len(rows),-1))
+    return np.asarray(vectors,dtype=float)
 
 
 def ridge_prediction(train_features:np.ndarray,train_y:np.ndarray,
