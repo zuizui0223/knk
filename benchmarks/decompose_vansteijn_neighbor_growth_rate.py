@@ -149,7 +149,7 @@ def permute_GR_within_guild(traits:dict,rng:np.random.Generator):
     return mapping
 
 
-def test_GR_mapping(rows:list[dict],traits:dict,n_perm:int=499,seed:int=20261124):
+def gr_mapping_placebo(rows:list[dict],traits:dict,n_perm:int=499,seed:int=20261124):
     base=score(rows,traits,models=(MAIN,))["model_scores"][MAIN]["species_equal_MSE"]
     rng=np.random.default_rng(seed)
     null=np.empty(n_perm)
@@ -175,7 +175,7 @@ def audit(source:Path,n_perm:int=499):
     s=score(rows,t,penalty=10.)
     controls=[c for c in MODELS if c!=BASELINE]
     contrast={c:paired_bootstrap(s,c,n_boot=20000,seed=20261124) for c in controls}
-    permutations=test_GR_mapping(rows,t,n_perm=n_perm)
+    permutations=gr_mapping_placebo(rows,t,n_perm=n_perm)
     sens={}
     for lam in (1.,100.):
         fit=score(rows,t,models=(BASELINE,MAIN),penalty=lam)
