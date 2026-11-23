@@ -99,6 +99,11 @@ def prep(source_dir: Path):
         rec={"focal":f,"neighbor":n,"focal_guild":guild[f],
              "neighbor_guild":guild[n]}
         for k in organ:
+            # In-memory original source values to support correctly age-matched
+            # pre-established neighbor vs solo contrast; never export row-level data.
+            rec[f"biomass_alone_{k}"]=c[k]
+            rec[f"biomass_sim_{k}"]=s[k]
+            rec[f"biomass_pre_{k}"]=q[k]
             d1=s[k]+c[k]
             d2=q[k]+s[k]
             if d1<=0 or d2<=0:
