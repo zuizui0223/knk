@@ -3,7 +3,7 @@ import numpy as np
 
 from benchmarks.decompose_vansteijn_neighbor_growth_rate import (
     BASELINE, MAIN, MODELS, feat, score, paired_bootstrap,
-    permute_GR_within_guild, test_GR_mapping,
+    permute_GR_within_guild, gr_mapping_placebo,
 )
 from benchmarks.predict_vansteijn_unseen_neighbor_traits import GUILDS
 
@@ -65,5 +65,5 @@ def test_shuffle_keeps_partner_guild_without_mutating_focal_traits():
     mapping=permute_GR_within_guild(traits,np.random.default_rng(1))
     assert set(mapping)==set(traits)
     assert all(traits[a]["guild"]==traits[b]["guild"] for a,b in mapping.items())
-    p=test_GR_mapping(rows,traits,n_perm=7)
+    p=gr_mapping_placebo(rows,traits,n_perm=7)
     assert 0<=p["fraction_shuffles_as_good_or_better"]<=1
