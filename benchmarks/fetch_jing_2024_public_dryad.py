@@ -78,7 +78,13 @@ def fetch_original(output_dir:Path)->dict:
         raise ValueError(f"Expected one Fulldata.xlsx, found {len(file_targets)}; files={[x.get('path') for x in files]}")
     file=file_targets[0]
     file_id=file.get("id")
-    if not isinstance(file_id,int):raise ValueError("Expected public file ID")
+    if not isinstance(file_id,int):
+        fl=(file.get("_links") or {}).get("self") or {}
+        href=fl.get("href","") if isinstance(fl,dict) else str(fl)
+        file_id_string=href.rsplit("/",1)[-1] if href.startswith("/api/v2/files/") else ""
+        if not file_id_string.isdigit():
+            raise ValueError("Expected public file ID or file self href, got "+repr(href))
+        file_id=int(file_id_string)
     links=file.get("_links") or {}
     link=links.get("stash:download",{})
     if isinstance(link,str):download_url=link
