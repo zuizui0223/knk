@@ -32,7 +32,7 @@ class AuditStop(ValueError):
     pass
 
 
-def read_source(path:Path):
+def read_source(path:Path,exclude_sample_ids:tuple[int,...]=()):
     blob=path.read_bytes()
     blob_sha=hashlib.sha1(f"blob {len(blob)}\0".encode()+blob).hexdigest()
     if blob_sha!=SOURCE_BLOB_SHA:
@@ -56,6 +56,8 @@ def read_source(path:Path):
         if key in keys or sid in samples:
             raise AuditStop("Repeated biological unit")
         keys.add(key);samples.add(sid)
+        if sid in exclude_sample_ids:
+            continue
         vals={}
         for k in PRIMARY+SECONDARY:
             v=row[k].strip()
@@ -70,12 +72,24 @@ def read_source(path:Path):
                 raise AuditStop(f"Nonpositive primary response {k}")
             vals[k]=number
         grouped[(sp,tr)].append(vals)
-    if len(grouped)!=6 or any(len(x)!=10 for x in grouped.values()):
-        raise AuditStop("Missing 10 pots per species × solution treatment")
+    if len(grouped)!=6:
+        raise AuditStop("Missing species × solution cell")
+    expected=(
+        {("Dd","Forbs"):9,("Dd","Grasses"):10,("Dd","Soil"):9,
+         ("Fr","Forbs"):10,("Fr","Grasses"):10,("Fr","Soil"):10}
+        if tuple(sorted(exclude_sample_ids))==(3,22)
+        else {(sp,tr):10 for sp in SPECIES for tr in TREATMENTS}
+    )
+    if any(len(grouped[(sp,tr)])!=n for (sp,tr),n in expected.items()):
+        raise AuditStop("Unexpected original-author sample exclusion or source panel")
+    if set(samples)!=set(range(1,61)):
+        raise AuditStop("Raw source SampleID panel 1..60 incomplete")
     source={
         "source_git_blob_sha":blob_sha,
         "source_sha256":hashlib.sha256(blob).hexdigest(),
-        "n_plants":len(rows),"n_columns":len(rows[0]),
+        "n_plants_original":len(rows),"n_plants_analyzed":sum(len(v) for v in grouped.values()),
+        "original_author_excluded_sample_ids":list(exclude_sample_ids),
+        "n_columns":len(rows[0]),
         "n_species":2,"n_solution_treatments":3,
         "counts":{f"{s}|{t}":len(grouped[(s,t)]) for s in SPECIES for t in TREATMENTS},
         "primary_missing":0,"status":"SOURCE_PANEL_PASS",
@@ -158,8 +172,9 @@ def holm(raw):
     return corr.tolist()
 
 
-def analysis(path:Path,n_boot=N_BOOT,n_perm=N_PERM):
-    grouped,meta=read_source(path)
+def analysis(path:Path,n_boot=N_BOOT,n_perm=N_PERM,
+             exclude_sample_ids:tuple[int,...]=()):
+    grouped,meta=read_source(path,exclude_sample_ids=exclude_sample_ids)
     results=[]
     interactions=[]
     rng=np.random.default_rng(SEED)
@@ -185,7 +200,7 @@ def analysis(path:Path,n_boot=N_BOOT,n_perm=N_PERM):
         "source_audit":meta,
         "design":{"species":list(SPECIES),"solution_conditions":list(TREATMENTS),
                   "primary_outcomes":list(PRIMARY),
-                  "n_per_species_condition":10,
+                  "n_per_species_condition":"9-10 after original-author exclusions" if exclude_sample_ids else 10,
                   "bootstrap_plant_unit_resamples":n_boot,
                   "bootstrap_seed":SEED,
                   "conditional_unblocked_plant_permutations":n_perm,
@@ -210,8 +225,11 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--csv",type=Path,required=True)
     ap.add_argument("--output",type=Path,required=True)
+    ap.add_argument("--original-author-filter",action="store_true",
+                    help="Exclude original authors' IDs 3 and 22 before scoring (58 plants)")
     args=ap.parse_args()
-    data=analysis(args.csv)
+    removed=(3,22) if args.original_author_filter else ()
+    data=analysis(args.csv,exclude_sample_ids=removed)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
     print("DELORY_LEGACY_RESULT_START")
