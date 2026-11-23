@@ -53,9 +53,11 @@ def audit(original_workbook:Path,readme:Path):
     by_assembly={}
     for ci,name in enumerate(h):
         if isinstance(name,str):
-            mm=re.match(r"^\\(([A-Z-]+)\\)_([A-Z]+)$",name.strip())
+            mm=name.startswith("(") and ")_" in name
             if mm:
-                by_assembly.setdefault(mm.group(1),[]).append((ci,mm.group(2)))
+                assembly,_,taxon=name[1:].partition(")_")
+                by_assembly.setdefault(assembly,[]).append((ci,taxon))
+
     absent=[]
     n_valid_data_rows=0
     replicate_counter={}
