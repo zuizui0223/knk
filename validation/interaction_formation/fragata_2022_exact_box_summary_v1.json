@@ -1,0 +1,129 @@
+{
+  "source_doi": "10.1111/ele.14021",
+  "original_repo": "https://github.com/irfragata/order_arrival_niche_preemption",
+  "source_commit": "f1568dfb4a0da7bc9811985e416daec86447d0f3",
+  "analysis_run": "https://github.com/zuizui0223/knk/actions/runs/45094006190",
+  "status": "SOURCE_VERIFIED_REPLICATION_OF_ALREADY_PUBLISHED_MECHANISTIC_RESULT",
+  "source_audit": {
+    "coexistence_sha256": "c1c12add4d8bbfe898259b0e24018a225a32b36631b4b2ffe888f62fa7538a41",
+    "leafmap_sha256": "76c505ebce74acc89ab602bfbb0d6e1e7b10f49bdb19686591b7414b1d941712",
+    "raw_count_rows": 3214,
+    "n_independent_boxes": 90,
+    "n_treatments": 9,
+    "boxes_per_treatment": {
+      "10Te10Tu": 10,
+      "10Te10Tu48h": 10,
+      "10Te48h10Tu": 10,
+      "19Te1Tu": 10,
+      "19Te48h1Tu": 10,
+      "1Te19Tu": 10,
+      "1Te19Tu48h": 10,
+      "20Te": 10,
+      "20Tu": 10
+    },
+    "n_blocks": 2,
+    "status": "SOURCE_AUDIT_PASS"
+  },
+  "means": {
+    "simultaneous": {
+      "fraction_Te": 0.5956550615787616,
+      "Te": 236.8,
+      "Tu": 149.2,
+      "fraction_Te_leaf4": 0.4613823110168111,
+      "fraction_Te_leaf3": 0.20540699569199852,
+      "fraction_Te_new_leaf": 0.5168419913091509,
+      "fraction_Tu_new_leaf": 0.5775515767904351,
+      "spatial_leaf_overlap": 0.696938599181369
+    },
+    "Tu_first": {
+      "fraction_Te": 0.4104050147485232,
+      "Te": 153.1,
+      "Tu": 204.7,
+      "fraction_Te_leaf4": 0.33975733451716866,
+      "fraction_Te_leaf3": 0.3092234496448156,
+      "fraction_Te_new_leaf": 0.49751597271164616,
+      "fraction_Tu_new_leaf": 0.8074334832996218,
+      "spatial_leaf_overlap": 0.627516922342407
+    },
+    "Te_first": {
+      "fraction_Te": 0.8106123088718944,
+      "Te": 354,
+      "Tu": 74.5,
+      "fraction_Te_leaf4": 0.3796017525827339,
+      "fraction_Te_leaf3": 0.28675037241498014,
+      "fraction_Te_new_leaf": 0.4951687285766974,
+      "fraction_Tu_new_leaf": 0.6940470224883386,
+      "spatial_leaf_overlap": 0.6618240354802534
+    }
+  },
+  "primary_equal_initial_10_10": {
+    "comparison": "Te_first minus Tu_first",
+    "raw_treatments": [
+      "10Te48h10Tu",
+      "10Te10Tu48h"
+    ],
+    "observed_mean_difference": 0.4002072941233712,
+    "exact_two_sided_p": 0.00006298815822625347,
+    "exact_assignments": 63504,
+    "n_boxes_each_group": 10,
+    "blocks": 2,
+    "bootstrap": {
+      "resample_unit": "whole box within treatment and block",
+      "bootstrap_n": 20000,
+      "bootstrap_seed": 20261123,
+      "difference_percentile95": [
+        0.2990753468747146,
+        0.4921201152170022
+      ]
+    }
+  },
+  "secondary_leaf4_exact_contrasts": [
+    {
+      "comparison": "Tu_first minus simultaneous",
+      "raw_treatments": [
+        "10Te10Tu48h",
+        "10Te10Tu"
+      ],
+      "observed_mean_difference": -0.12162497649964243,
+      "exact_two_sided_p": 0.13227513227513227,
+      "exact_assignments": 63504,
+      "n_boxes_each_group": 10,
+      "blocks": 2,
+      "holm_three_pairwise_p": 0.3968253968253968
+    },
+    {
+      "comparison": "Te_first minus simultaneous",
+      "raw_treatments": [
+        "10Te48h10Tu",
+        "10Te10Tu"
+      ],
+      "observed_mean_difference": -0.08178055843407722,
+      "exact_two_sided_p": 0.304925673973293,
+      "exact_assignments": 63504,
+      "n_boxes_each_group": 10,
+      "blocks": 2,
+      "holm_three_pairwise_p": 0.609851347946586
+    },
+    {
+      "comparison": "Te_first minus Tu_first",
+      "raw_treatments": [
+        "10Te48h10Tu",
+        "10Te10Tu48h"
+      ],
+      "observed_mean_difference": 0.03984441806556521,
+      "exact_two_sided_p": 0.6140085663895187,
+      "exact_assignments": 63504,
+      "n_boxes_each_group": 10,
+      "blocks": 2,
+      "holm_three_pairwise_p": 0.6140085663895187
+    }
+  ],
+  "limitations": [
+    "Published Fragata et al. 2022 already establishes an order effect and predicts coexistence when inferior competitor Tu arrives first.",
+    "Box is unit; leaf/leaflet data are nested subsamples.",
+    "Outcome is final adult-female abundance ratio; this does not itself identify alpha_ij competition parameters.",
+    "Simple leaf-4 fraction contrasts are not statistically resolved; do not substitute for published full-model mechanistic analysis.",
+    "Two-species experiment is mechanism lane, not independent multispecies structural rank effect or new KNK universal law.",
+    "All current KNK v28-v38 and original Ecology Letters manuscript remain untouched."
+  ]
+}

@@ -1,0 +1,41 @@
+name: KNK Jing 2024 soil-history competition data audit
+
+on:
+  push:
+    branches: [analysis/interaction-formation-20261123]
+    paths:
+      - ".github/workflows/knk-jing-soil-history-audit.yml"
+      - "benchmarks/fetch_jing_2024_public_dryad.py"
+      - "benchmarks/probe_jing_2024_source_xlsx.py"
+      - "benchmarks/score_jing_2024_soil_competition.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-authenticated-workbook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Request public Dryad DOI API and download ephemeral original XLSX
+        run: |
+          python -m benchmarks.fetch_jing_2024_public_dryad --output-dir "$RUNNER_TEMP/jing"
+      - name: Audit all original workbook sheets, grain, columns and sample values
+        run: |
+          python -m benchmarks.probe_jing_2024_source_xlsx \
+            --xlsx "$RUNNER_TEMP/jing/Fulldata.xlsx" \
+            --output "$RUNNER_TEMP/jing/source_schema.json"
+      - name: Store source manifest and schema only (never raw source workbook)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jing-2024-original-source-manifest
+          path: |
+            ${{ runner.temp }}/jing/api_source_manifest.json
+            ${{ runner.temp }}/jing/source_schema.json
+          retention-days: 14

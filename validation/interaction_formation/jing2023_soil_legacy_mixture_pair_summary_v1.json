@@ -1,0 +1,851 @@
+{
+  "status": "ORIGINAL_SOURCE_SCORED_DESCRIPTIVE_NOT_META_POOLED",
+  "date": "2026-11-24",
+  "archive_doi": "10.5281/zenodo.7856898",
+  "source_md5": "5afb3a33ad49573aa7e255d2541ab0ed",
+  "source_sha256": "636ad7ebbe1f8c452b40fd8fde0e03cf611d21baf1db959fcce42385bc23b899",
+  "source_actions_run": "https://github.com/zuizui0223/knk/actions/runs/45247443688",
+  "prescore_contract": "docs/JING_ZENODO_MIXTURE_SOIL_HISTORY_PRE_SCORE_20261124.md",
+  "source_missingness_plan": "docs/JING_ZENODO_SOURCE_MISSINGNESS_AMENDMENT_20261124.md",
+  "source_audit": {
+    "status": "SOURCE_AUTHENTICATED_AND_EXPERIMENTAL_GRAIN_VALIDATED",
+    "source_doi": "10.5281/zenodo.7856898",
+    "source_workbook_md5": "5afb3a33ad49573aa7e255d2541ab0ed",
+    "source_workbook_sha256": "636ad7ebbe1f8c452b40fd8fde0e03cf611d21baf1db959fcce42385bc23b899",
+    "n_monoculture_rows": 40,
+    "n_mixture_rows": 40,
+    "n_water": 2,
+    "n_soil": 5,
+    "n_source_plants": 5,
+    "n_mixture_assemblages_described": 6,
+    "n_primary_2_species_assemblages_scored": 3,
+    "n_ignored_trailing_blank_excel_rows": 1,
+    "source_only_missingness": [
+      {
+        "water": "Wet",
+        "soil": "SK",
+        "assembly": "SK-AF-AC-ES",
+        "replicate_order": 3,
+        "missing_species": [
+          "AC"
+        ],
+        "entire_pot_absent": false
+      },
+      {
+        "water": "Wet",
+        "soil": "AF",
+        "assembly": "SK-AF-AC-ES",
+        "replicate_order": 3,
+        "missing_species": [
+          "SK"
+        ],
+        "entire_pot_absent": false
+      },
+      {
+        "water": "Dry",
+        "soil": "S",
+        "assembly": "AF-AC",
+        "replicate_order": 1,
+        "missing_species": [
+          "AF",
+          "AC"
+        ],
+        "entire_pot_absent": true
+      },
+      {
+        "water": "Dry",
+        "soil": "S",
+        "assembly": "SK-AF-AC-ES",
+        "replicate_order": 1,
+        "missing_species": [
+          "ES"
+        ],
+        "entire_pot_absent": false
+      }
+    ],
+    "source_missing_whole_primary_mixture_pots": 1,
+    "source_partially_missing_unscored_4species_cells": 3,
+    "mixture_assemblage_names": [
+      "SK-AF",
+      "AF-AC",
+      "SK-AC",
+      "SK-AF-AC",
+      "SK-AF-AC-PT",
+      "SK-AF-AC-ES"
+    ],
+    "n_monoculture_species_groupings": 50,
+    "n_mixture_pot_groupings": 30,
+    "n_mono_original_pot_units_if_column_specific": 200,
+    "n_scored_primary_pairwise_mixture_pot_units": 119,
+    "n_mixture_species_measurements": 238,
+    "n_observed_zeros": 1,
+    "n_nonfinite": 0,
+    "minimum_biomass": 0,
+    "max_biomass": 3.2511,
+    "assumed_unit_rule": "one pot for each original water×soil×assembly×replicate; replicates ordered within group but physical pot IDs not archived",
+    "potential_duplicate_with_2024_dryad": "UNKNOWN, treat same source cluster pending original study audit"
+  },
+  "n_source_alone_species_pot_units_if_column_independent": 200,
+  "n_scored_two_species_mixture_pots": 119,
+  "n_contexts": 60,
+  "n_live_soil_vs_sterile_comparisons": 48,
+  "n_conditioned_drought_differences": 24,
+  "mixture_winner_by_final_raw_mean_mass": {
+    "SK-AF": {
+      "different_winners_observed": 2,
+      "wins_by_species": {
+        "SK": 9,
+        "AF": 1
+      },
+      "rank_varies_across_water_inoculum": true
+    },
+    "AF-AC": {
+      "different_winners_observed": 1,
+      "wins_by_species": {
+        "AC": 10
+      },
+      "rank_varies_across_water_inoculum": false
+    },
+    "SK-AC": {
+      "different_winners_observed": 1,
+      "wins_by_species": {
+        "AC": 10
+      },
+      "rank_varies_across_water_inoculum": false
+    }
+  },
+  "soil_context_range_of_solo_referenced_mixture_log_biomass": [
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.8432139003054406,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.6499642744181616,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 1.3160956957763768,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 1.3177882637086875,
+      "n_inocula": 5
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.697101816486918,
+      "n_inocula": 5
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.7057508525413989,
+      "n_inocula": 5
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.14138930676996853,
+      "n_inocula": 5
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.6491278302773899,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.3269026215486237,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.9117023596225458,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.2261908105253589,
+      "n_inocula": 5
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "range_across_five_soils_of_solo_referenced_log_mixture_biomass": 0.4086320828053289,
+      "n_inocula": 5
+    }
+  ],
+  "source_live_vs_sterile_solo_referenced_log_response_differences": [
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.27559355533316693,
+      "bootstrap95": [
+        -0.9049495107833988,
+        0.321149133834478
+      ],
+      "positive_fraction": 0.1713
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.3083073266700418,
+      "bootstrap95": [
+        -0.8355529597287998,
+        0.22146544227306206
+      ],
+      "positive_fraction": 0.1231
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.34713055347929683,
+      "bootstrap95": [
+        -0.8617539894824281,
+        0.17909330502409307
+      ],
+      "positive_fraction": 0.0938
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.8432139003054406,
+      "bootstrap95": [
+        -1.5157184559927221,
+        -0.18243164969087544
+      ],
+      "positive_fraction": 0.0061
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.6370620417502171,
+      "bootstrap95": [
+        -0.9950343872144712,
+        -0.3129360410106948
+      ],
+      "positive_fraction": 0
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.19995422442465688,
+      "bootstrap95": [
+        -0.6112354216482544,
+        0.16653604098461725
+      ],
+      "positive_fraction": 0.1511
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.01290223266794456,
+      "bootstrap95": [
+        -0.39085438640556214,
+        0.39411906611061603
+      ],
+      "positive_fraction": 0.518
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.5954434195059229,
+      "bootstrap95": [
+        -0.9665245042375736,
+        -0.2470592094409347
+      ],
+      "positive_fraction": 0.0002
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.20708989143004453,
+      "bootstrap95": [
+        -0.2892257021269827,
+        0.6989439001888961
+      ],
+      "positive_fraction": 0.7927
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.9320779551194571,
+      "bootstrap95": [
+        -1.3514277039587903,
+        -0.43595911725435654
+      ],
+      "positive_fraction": 0
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.2991237013751725,
+      "bootstrap95": [
+        -0.3012103216208826,
+        0.8444859435689532
+      ],
+      "positive_fraction": 0.8373
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.38401774065691974,
+      "bootstrap95": [
+        -0.21653783734489626,
+        1.0430060491256803
+      ],
+      "positive_fraction": 0.8786
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.37484745833026867,
+      "bootstrap95": [
+        -0.12190356860301946,
+        0.8816208105376449
+      ],
+      "positive_fraction": 0.9297
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.8370967213884595,
+      "bootstrap95": [
+        -1.2176676673539935,
+        -0.4210949389549941
+      ],
+      "positive_fraction": 0
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.09855793576450589,
+      "bootstrap95": [
+        -0.646120682076789,
+        0.6449923678180923
+      ],
+      "positive_fraction": 0.6218
+    },
+    {
+      "pair": "SK-AF",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.48069154232022804,
+      "bootstrap95": [
+        0.17689195370084268,
+        0.8677929381737253
+      ],
+      "positive_fraction": 0.9999
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.5725260803296197,
+      "bootstrap95": [
+        -1.5211022009948663,
+        0.22660711276155415
+      ],
+      "positive_fraction": 0.0968
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.5601117302601022,
+      "bootstrap95": [
+        -1.3449678094437176,
+        0.19644545947517192
+      ],
+      "positive_fraction": 0.083
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.12457573615729833,
+      "bootstrap95": [
+        -0.39677560160248265,
+        0.6970911169835889
+      ],
+      "positive_fraction": 0.6802
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.1693486902300747,
+      "bootstrap95": [
+        -0.8257593752803883,
+        0.5278562187837376
+      ],
+      "positive_fraction": 0.3422
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.49584257720363434,
+      "bootstrap95": [
+        -1.2954947548266427,
+        0.566609240688559
+      ],
+      "positive_fraction": 0.1377
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.7057508525413989,
+      "bootstrap95": [
+        -2.121813605177002,
+        0.39227884664853796
+      ],
+      "positive_fraction": 0.0873
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.35116203151141656,
+      "bootstrap95": [
+        -1.219829672022627,
+        0.7460409854991197
+      ],
+      "positive_fraction": 0.2253
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AF",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.09110338444269628,
+      "bootstrap95": [
+        -0.921827455076474,
+        0.9573120550201374
+      ],
+      "positive_fraction": 0.4175
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.07175738179585114,
+      "bootstrap95": [
+        -0.3123121851192342,
+        0.14554667777184463
+      ],
+      "positive_fraction": 0.3077
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.03387939065078713,
+      "bootstrap95": [
+        -0.3913600105831227,
+        0.4217761199544133
+      ],
+      "positive_fraction": 0.5719
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.0678081738846251,
+      "bootstrap95": [
+        -0.32870100277450304,
+        0.18124118495349034
+      ],
+      "positive_fraction": 0.3384
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.06963192497411737,
+      "bootstrap95": [
+        -0.22732687114862996,
+        0.35580419180905554
+      ],
+      "positive_fraction": 0.6895
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.3309289485174936,
+      "bootstrap95": [
+        0.06946429772748643,
+        0.7336049982455874
+      ],
+      "positive_fraction": 0.9974
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.3181988817598963,
+      "bootstrap95": [
+        -0.5988438222295438,
+        0.07442060497552908
+      ],
+      "positive_fraction": 0.0428
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.2763660073204419,
+      "bootstrap95": [
+        -0.00011092165253086699,
+        0.6738887389496453
+      ],
+      "positive_fraction": 0.9749
+    },
+    {
+      "pair": "AF-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.15310850409629445,
+      "bootstrap95": [
+        -0.14218745983748624,
+        0.5505299912558366
+      ],
+      "positive_fraction": 0.81
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.16561187354847728,
+      "bootstrap95": [
+        -0.6894897509488859,
+        0.3518033282783979
+      ],
+      "positive_fraction": 0.2652
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.27118831272707,
+      "bootstrap95": [
+        -0.8057511110067758,
+        0.2549944995659785
+      ],
+      "positive_fraction": 0.1539
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.3269026215486237,
+      "bootstrap95": [
+        -0.8560351866376109,
+        0.21182348703089282
+      ],
+      "positive_fraction": 0.1161
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.2896196613354254,
+      "bootstrap95": [
+        -0.9246768127367156,
+        0.3149579454336799
+      ],
+      "positive_fraction": 0.1699
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.3833855771834167,
+      "bootstrap95": [
+        -1.0109156992835155,
+        0.15948828981754115
+      ],
+      "positive_fraction": 0.0903
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.528316782439129,
+      "bootstrap95": [
+        0.052707506620149974,
+        0.9930137442885052
+      ],
+      "positive_fraction": 0.9854
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.026579323192391646,
+      "bootstrap95": [
+        -0.7780231462821553,
+        0.7176036684122933
+      ],
+      "positive_fraction": 0.4971
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "SK",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.3169927517547979,
+      "bootstrap95": [
+        -0.175170012811106,
+        0.7897856079297626
+      ],
+      "positive_fraction": 0.8979
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.151111876699149,
+      "bootstrap95": [
+        -0.2740668295625555,
+        -0.036809947400495126
+      ],
+      "positive_fraction": 0.0029
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.028390544417901065,
+      "bootstrap95": [
+        -0.23971246381138808,
+        0.20688379991448969
+      ],
+      "positive_fraction": 0.4011
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.0959455128920273,
+      "bootstrap95": [
+        -0.22235484232541206,
+        0.020824137139604515
+      ],
+      "positive_fraction": 0.0595
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Wet",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.07507893382620989,
+      "bootstrap95": [
+        -0.09912877269707956,
+        0.2337641483593345
+      ],
+      "positive_fraction": 0.8117
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "SK",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.08194286175621915,
+      "bootstrap95": [
+        -0.07205629748133228,
+        0.23772924582238864
+      ],
+      "positive_fraction": 0.8479
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "AF",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.32668922104910975,
+      "bootstrap95": [
+        -0.6909424369993464,
+        -0.0426691163444713
+      ],
+      "positive_fraction": 0.0102
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "AC",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": -0.05643373973278165,
+      "bootstrap95": [
+        -0.3036050353588251,
+        0.14075014462379157
+      ],
+      "positive_fraction": 0.3197
+    },
+    {
+      "pair": "SK-AC",
+      "focal": "AC",
+      "water": "Dry",
+      "live_soil": "MIX",
+      "comparison": "C(live soil)-C(sterile S) within same water",
+      "difference_in_solo_referenced_mixture_log_biomass": 0.0509761099888813,
+      "bootstrap95": [
+        -0.1607904381997025,
+        0.25599836787192665
+      ],
+      "positive_fraction": 0.6721
+    }
+  ],
+  "descriptive_counts": {
+    "within_study_signed_differences": {
+      "negative": 29,
+      "positive": 19
+    },
+    "bootstrap_95_percentile_ranges": {
+      "exclude_zero_unadjusted": 10,
+      "negative": 7,
+      "positive": 3
+    },
+    "explanatory": "Each of 48 live-vs-sterile source contexts is correlated with source partners, controls, common soil inocula and water; cannot be pooled or treated as independent biological studies."
+  },
+  "external_publication_overlap": "UNKNOWN potential Jing 2024 Dryad 10.5061/dryad.jq2bvq8jj; no new independent study is claimed.",
+  "limitations": [
+    "Published source already describes soil-microbiome and drought mediated coexistence; this is a new-to-KNK reproducible descriptive analysis, not new biology invented by KNK.",
+    "Single-source 2023 Zenodo workbook publication peer-reviewed linkage and independence from Jing 2024 uncertain.",
+    "Actual planting density per species in mono vs mixtures, inoculum source batch and pot location not verified; log ratio estimates solo-referenced measured output, not per-capita alpha coefficient.",
+    "No direct arrival-time manipulation; is a soil-inoculum history model, not a direct priority experiment.",
+    "There is one missing entire AF-AC Dry S mixture pot, properly excluded, not imputed; 3 other missing multispecies cells not scored.",
+    "Only 3-4 pots per experimental condition; bootstrap intervals are conditional and not multiple-comparison corrected.",
+    "Winner defined by raw biomass within a source pair, not competitive fitness or coexistence."
+  ]
+}

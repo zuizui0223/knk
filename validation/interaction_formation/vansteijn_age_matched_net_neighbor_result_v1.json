@@ -1,0 +1,219 @@
+{
+  "status": "REAL_DATA_SCORED_POSTHOC_AGE_MATCHED_NET_NEIGHBOR_EFFECT",
+  "date": "2026-11-23",
+  "source_article": "van Steijn et al. (2025) Ecology 106:e4528 DOI 10.1002/ecy.4528",
+  "source_dataset": "https://doi.org/10.5281/zenodo.10512662",
+  "source_methods": "Focal age 10 weeks in solo, simultaneous and sequential regimes; early neighbor 13 weeks",
+  "method_correction": "docs/VANSTEIJN_FOCAL_AGE_METHOD_CORRECTION_AND_NET_NEIGHBOR_EFFECT_20261123.md",
+  "source_action": "https://github.com/zuizui0223/knk/actions/runs/45096126914",
+  "sample_units": {
+    "species": 15,
+    "matched_directed_pairs": 202,
+    "solo_control_pots": 74,
+    "n_pots_per_directed_pair": 1
+  },
+  "focal_cluster_delta": {
+    "mean": -0.5289173882846943,
+    "bootstrap_percentile95": [
+      -0.605898028758845,
+      -0.444422813859069
+    ],
+    "n_clusters": 15,
+    "n_boot": 20000,
+    "exact_focal_signflip_p_two_sided": 0.00006103515625,
+    "n_obs_nonindependent": 202,
+    "n_focal_species": 15,
+    "sign_of_focal_means": {
+      "negative": 15,
+      "positive": 0,
+      "zero": 0
+    }
+  },
+  "age_matched_neighbour_impact_stage_means": {
+    "sim": {
+      "mean_over_directed_pairs": -0.25909462822821494,
+      "fraction_negative": 0.8910891089108911,
+      "fraction_positive": 0.10891089108910891
+    },
+    "pre": {
+      "mean_over_directed_pairs": -0.7863589793776793,
+      "fraction_negative": 1,
+      "fraction_positive": 0
+    }
+  },
+  "sign_transition_counts": {
+    "total_directed_pairs": 202,
+    "counts": {
+      "both_negative": 180,
+      "both_positive": 0,
+      "positive_sim_to_negative_pre": 22,
+      "negative_sim_to_positive_pre": 0,
+      "sim_exact_zero": 0,
+      "pre_exact_zero": 0
+    },
+    "warning": "One pot per directed species pair; a sign shift is observed net biomass change, not proof of facilitation or mechanism."
+  },
+  "neighbor_effect_decomposition": {
+    "after_focal_centering": {
+      "R2_neighbor_conditioned_on_focal": 0.30563938794711765,
+      "null_median": 0.07165666058709652,
+      "null_95pct": [
+        0.031327263210589026,
+        0.13383640563989813
+      ],
+      "p_upper_pseudorandomization": 0.0001,
+      "permutations": 9999,
+      "seed": 20261123,
+      "caution": "Not an exact treatment-randomization p; identity-label-shuffling conditional diagnostic."
+    },
+    "after_focal_and_guild_adjustment": {
+      "focal_and_neighbor_guild_residual_identity_R2": 0.2519370283758297,
+      "null_median": 0.06110375741534266,
+      "null_95pct": [
+        0.023925305143131032,
+        0.1280553481395425
+      ],
+      "p_exchangeability_upper": 0.0001,
+      "unit": "directed pair, permute early-neighbor names within focal × guild",
+      "n_pairs": 202,
+      "n_permutations": 9999,
+      "caveat": "This is an identity-label consistency diagnostic, not randomized causal treatment p."
+    },
+    "guild_specificity_random_5_5_5_partition": {
+      "guild_R2_after_focal_centering": 0.07362092084321396,
+      "random_5_5_5_mapping_null_median": 0.03406739243439917,
+      "random_5_5_5_mapping_null_95pct": [
+        0.0014692660328506435,
+        0.1311049776884569
+      ],
+      "all_mapping_upper_fraction_MC": 0.182,
+      "n_random_5_5_5_species_partitions": 9999,
+      "caveat": "Random guild mapping ranks are placebo specificity diagnostics, not experiment-randomized p-values."
+    },
+    "all_neighbor_maxT_mapping": {
+      "max_abs_null_median": 0.11230110154829713,
+      "max_abs_null_95pct": [
+        0.06942530864782667,
+        0.17545224488995206
+      ],
+      "n_permutations": 9999,
+      "seed": 20261129,
+      "caution": "FWER applies to selected extreme neighbor label under within-focal label-exchangeability, not a causal p-value."
+    }
+  },
+  "heldout_pair_prediction": {
+    "focal_only": {
+      "mse": 0.04942247000848077,
+      "rmse": 0.22231165063595018,
+      "r2_against_training_global_mean": 0.2686601570847359
+    },
+    "focal_and_neighbor": {
+      "mse": 0.039868740944058345,
+      "rmse": 0.19967158271536375,
+      "r2_against_training_global_mean": 0.4100335589408295
+    },
+    "gain_in_MSE_of_focal_plus_neighbor": 0.009553729064422423,
+    "heldout_unordered_pairs": 103,
+    "penalty_fixed": 4,
+    "caution": "Source has one pot per ordered dyad; cross validation does not validate competition causality."
+  },
+  "guild_response_matrix": [
+    {
+      "focal_guild": "Grass",
+      "neighbor_guild": "Grass",
+      "n_directed_pair_pots": 17,
+      "mean": -0.5925274542461839,
+      "median": -0.6514107417672373,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Grass",
+      "neighbor_guild": "Forb",
+      "n_directed_pair_pots": 22,
+      "mean": -0.6437553461309657,
+      "median": -0.7214706362745644,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Grass",
+      "neighbor_guild": "Legume",
+      "n_directed_pair_pots": 25,
+      "mean": -0.7028765508920491,
+      "median": -0.7335573130212467,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Forb",
+      "neighbor_guild": "Grass",
+      "n_directed_pair_pots": 23,
+      "mean": -0.5608576624297996,
+      "median": -0.549382749787448,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Forb",
+      "neighbor_guild": "Forb",
+      "n_directed_pair_pots": 20,
+      "mean": -0.4679240180247016,
+      "median": -0.5169968253230917,
+      "proportion_negative": 0.95
+    },
+    {
+      "focal_guild": "Forb",
+      "neighbor_guild": "Legume",
+      "n_directed_pair_pots": 25,
+      "mean": -0.5480671264854646,
+      "median": -0.5987025812102058,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Legume",
+      "neighbor_guild": "Grass",
+      "n_directed_pair_pots": 25,
+      "mean": -0.36058524267452347,
+      "median": -0.36734786036713907,
+      "proportion_negative": 0.96
+    },
+    {
+      "focal_guild": "Legume",
+      "neighbor_guild": "Forb",
+      "n_directed_pair_pots": 25,
+      "mean": -0.3264137399668962,
+      "median": -0.2620290979142807,
+      "proportion_negative": 1
+    },
+    {
+      "focal_guild": "Legume",
+      "neighbor_guild": "Legume",
+      "n_directed_pair_pots": 20,
+      "mean": -0.5782520749136337,
+      "median": -0.6247238509430727,
+      "proportion_negative": 1
+    }
+  ],
+  "extreme_post_selection": {
+    "Antennaria dioica": {
+      "mean_focal_adjusted_Cdelta": 0.30928365584401357,
+      "n_focal_species": 13,
+      "maxT_mapping_p": 0.0001
+    },
+    "Briza media": {
+      "mean_focal_adjusted_Cdelta": 0.13258092366990096,
+      "n_focal_species": 13,
+      "maxT_mapping_p": 0.2351
+    },
+    "Trifolium repens": {
+      "mean_focal_adjusted_Cdelta": -0.07545195378547331,
+      "n_focal_species": 14,
+      "maxT_mapping_p": 0.9479
+    }
+  },
+  "scientific_boundaries": [
+    "Effect is the influence on focal 10-week final biomass from a neighbor pre-established by 3 weeks, relative to solo controls. It is an age-matched total priority effect, not an instant dynamical alpha_ij coefficient.",
+    "One plant pot per directed pair, 15 focal species are the main source clusters for uncertainty. Avoid dyad pseudoreplication.",
+    "Sign switches among pairs require biological replication; net competitive interactions may be noisy in single pots.",
+    "Reanalysis of already-published experiment, not a new experimental discovery.",
+    "Mapping permutation p values are label-specificity diagnostics, not direct randomization treatment p values.",
+    "Current KNK v28-v38, Ecology Letters submission, Dawson-Glass and POEM PRs unchanged."
+  ]
+}
