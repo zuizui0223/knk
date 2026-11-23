@@ -120,6 +120,46 @@ def extreme_neighbor_report(rows, key):
     ]
 
 
+def maxT_neighbor_extremes(rows:list[dict],key:str,n_perm:int=9999,seed:int=20261129):
+    """Post-selection familywise mapping control for all 15 named early neighbors.
+
+    Remains a within-focal label-shuffling diagnostic, not randomized treatment p.
+    """
+    data=[r for r in rows if r.get(key) is not None]
+    residual=centered_by_focal(data,key)
+    taxa=sorted({r["neighbor"] for r in data})
+    ids={n:i for i,n in enumerate(taxa)}
+    labels=np.asarray([ids[r["neighbor"]] for r in data])
+    count=np.bincount(labels,minlength=len(taxa))
+    if np.any(count==0):raise ValueError("A neighbor is unobserved")
+    observed=np.bincount(labels,weights=residual,minlength=len(taxa))/count
+    slots=defaultdict(list)
+    for i,r in enumerate(data):slots[r["focal"]].append(i)
+    rng=np.random.default_rng(seed)
+    max_abs=np.zeros(n_perm)
+    for b in range(n_perm):
+        shifted=labels.copy()
+        for pos in slots.values():
+            shifted[pos]=rng.permutation(shifted[pos])
+        perm_mean=np.bincount(shifted,weights=residual,minlength=len(taxa))/count
+        max_abs[b]=np.max(np.abs(perm_mean))
+    report=[]
+    for j,name in enumerate(taxa):
+        adj=float((1+np.count_nonzero(max_abs>=abs(observed[j])-1e-12))/(n_perm+1))
+        report.append({"neighbor":name,"n_focal_species":int(count[j]),
+                       "observed_focal_adjusted_RII":float(observed[j]),
+                       "maxT_mapping_FWER_p":adj})
+    return {
+        "neighbor_specific_post_selection_results":sorted(
+            report,key=lambda x:x["observed_focal_adjusted_RII"]
+        ),
+        "max_abs_null_median":float(np.median(max_abs)),
+        "max_abs_null_95pct":np.quantile(max_abs,[.025,.975]).tolist(),
+        "n_permutations":n_perm,"seed":seed,
+        "caution":"FWER applies to selected extreme neighbor label under within-focal label-exchangeability, not a causal p-value.",
+    }
+
+
 def audit(folder:Path):
     rows,source,_=prep(folder)
     report={
@@ -129,6 +169,7 @@ def audit(folder:Path):
             "identity_beyond_guild":conditional_species_identity(rows,"RII_late_total"),
             "functional_guild_specificity":guild_mapping_placebo(rows,"RII_late_total"),
             "neighbor_rankings":extreme_neighbor_report(rows,"RII_late_total"),
+            "maxT_all15_neighbor_postselection":maxT_neighbor_extremes(rows,"RII_late_total"),
             "leave_hubs_out":{}
         },
         "simultaneous_neighbor_vs_alone":{
@@ -176,6 +217,7 @@ def main():
         for k in ("identity_beyond_guild","functional_guild_specificity"):
             print(stage,k,json.dumps(x[k],default=json_safe,allow_nan=False))
     print("HUB_DELETION",json.dumps(result["late_vs_simultaneous"]["leave_hubs_out"],default=json_safe,allow_nan=False))
+    print("MAXT_EXTREMES",json.dumps(result["late_vs_simultaneous"]["maxT_all15_neighbor_postselection"],default=json_safe,allow_nan=False))
     print("NEIGHBOR_EXTREMES",json.dumps(
         result["late_vs_simultaneous"]["neighbor_rankings"][:4]+
         result["late_vs_simultaneous"]["neighbor_rankings"][-4:],default=json_safe,allow_nan=False))
