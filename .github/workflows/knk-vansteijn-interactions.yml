@@ -29,14 +29,24 @@ jobs:
           for FILE in alone.csv simultaneous_arrival.csv second_arrival.csv traits.csv R_code.Rmd; do
             curl --fail --location --retry 3 --retry-delay 3 --max-time 90               "https://zenodo.org/records/10512662/files/${FILE}?download=1"               -o "$RUNNER_TEMP/vansteijn/$FILE"
           done
+      - name: Install numerical dependencies
+        run: python -m pip install numpy
       - name: Inspect primary-source columns, grain, and published analysis
         shell: bash
         run: |
           python -m benchmarks.probe_vansteijn_competition             --source-dir "$RUNNER_TEMP/vansteijn"             --out "$RUNNER_TEMP/vansteijn/schema_audit.json"
-      - name: Upload schema only (never raw dataset)
+      - name: Score directed pair competition and late-arrival matrix
+        shell: bash
+        run: |
+          python -m benchmarks.score_vansteijn_partner_effects \
+            --source-dir "$RUNNER_TEMP/vansteijn" \
+            --output "$RUNNER_TEMP/vansteijn/pair_response_results.json"
+      - name: Upload aggregate analysis and schema only (never raw data)
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: vansteijn-source-schema-20261123
-          path: ${{ runner.temp }}/vansteijn/schema_audit.json
+          path: |
+            ${{ runner.temp }}/vansteijn/schema_audit.json
+            ${{ runner.temp }}/vansteijn/pair_response_results.json
           retention-days: 14
