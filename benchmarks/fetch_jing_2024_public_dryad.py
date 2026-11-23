@@ -61,7 +61,16 @@ def fetch_original(output_dir:Path)->dict:
     if not ver:raise ValueError("Dryad dataset versions missing; cannot ground source version")
     target=max(ver,key=lambda x:x.get("versionNumber",x.get("id",0)))
     version_id=target.get("id")
-    if not isinstance(version_id,int):raise ValueError("Missing numerical version id")
+    if not isinstance(version_id,int):
+        # Public Dryad versions often expose their numeric ID only inside a
+        # version self-link, not as a top-level ID field.
+        link=(target.get("_links") or {}).get("self") or {}
+        href=link.get("href","") if isinstance(link,dict) else str(link)
+        match=re.search(r"/api/v2/versions/(\\d+)$",href)
+        if not match:
+            raise ValueError(
+                "Version id not in public version self link; expected /api/v2/versions/N, got "+repr(href))
+        version_id=int(match.group(1))
     files_json=get_json(f"{API}/versions/{version_id}/files?per_page=100")
     files=pick_embedded(files_json,"files")
     if not files and isinstance(files_json.get("files"),list):files=files_json["files"]
