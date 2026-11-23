@@ -1,5 +1,7 @@
 # Van Steijn 2025 pairwise-plant formation-response contract (fixed before scoring)
 
+> **Source-method erratum (2026-11-23, after scoring):** The original article's Methods and Figure 1 explicitly establish that solo, simultaneous and late focal plants **each grew 10 weeks**; only the pre-established neighbor grew 13 weeks. Any statement below implying focal growth duration differs is **superseded** by [the methods correction](VANSTEIJN_FOCAL_AGE_METHOD_CORRECTION_AND_NET_NEIGHBOR_EFFECT_20261123.md). The original statistical protocol and date ordering are preserved for auditability.
+
 ## Source and strict boundary
 
 van Steijn et al. (2025), *Ecology* 106 e4528, DOI https://doi.org/10.1002/ecy.4528. Original public Zenodo **v2** https://doi.org/10.5281/zenodo.10512662 (2024-01-15). Exactly five files are source-verified in Actions https://github.com/zuizui0223/knk/actions/runs/45094845862: `alone.csv` (74 rows), `simultaneous_arrival.csv` (206 rows), `second_arrival.csv` (206 rows), `traits.csv` (15 rows), `R_code.Rmd` (585 lines). Respective MD5s are pinned in `benchmarks/probe_vansteijn_competition.py`. Original data source has 5 Grass, 5 Forb, and 5 Legume species. **Never commit raw data**.
