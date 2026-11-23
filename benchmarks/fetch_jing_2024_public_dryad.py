@@ -66,11 +66,10 @@ def fetch_original(output_dir:Path)->dict:
         # version self-link, not as a top-level ID field.
         link=(target.get("_links") or {}).get("self") or {}
         href=link.get("href","") if isinstance(link,dict) else str(link)
-        match=re.search(r"/api/v2/versions/(\\d+)$",href)
-        if not match:
-            raise ValueError(
-                "Version id not in public version self link; expected /api/v2/versions/N, got "+repr(href))
-        version_id=int(match.group(1))
+        match_id=(href.rsplit("/",1)[-1] if href.startswith("/api/v2/versions/") else "")
+        if not match_id.isdigit():
+            raise ValueError("Invalid Dryad version self href: "+repr(href))
+        version_id=int(match_id)
     files_json=get_json(f"{API}/versions/{version_id}/files?per_page=100")
     files=pick_embedded(files_json,"files")
     if not files and isinstance(files_json.get("files"),list):files=files_json["files"]
