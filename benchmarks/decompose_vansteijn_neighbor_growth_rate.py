@@ -80,10 +80,12 @@ def feat(rows:list[dict],traits:dict,train_species:list[str],mode:str,
 
 
 def score(rows:list[dict],traits:dict,models=MODELS,penalty=10.,
-          neighbor_gr_mapping=None)->dict:
+          neighbor_gr_mapping=None,target:str="Cdelta_total")->dict:
     taxon=sorted(traits)
     if len(taxon)!=15:raise AuditStop("Expected 15 taxa")
-    Y=np.asarray([r["Cdelta_total"] for r in rows],dtype=float)
+    Y=np.asarray([r[target] for r in rows],dtype=float)
+    if not np.isfinite(Y).all():
+        raise AuditStop(f"Non-finite target {target}")
     preds={m:np.full(len(rows),np.nan) for m in models}
     pscore={}
     for withholding in taxon:
@@ -115,7 +117,7 @@ def score(rows:list[dict],traits:dict,models=MODELS,penalty=10.,
             "species_equal_MSE":float(species_mse),
             "species_equal_RMSE":float(np.sqrt(species_mse)),
         }
-    return {"lambda":penalty,"n_species":len(taxon),"n_directed_pairs":len(rows),
+    return {"lambda":penalty,"target":target,"n_species":len(taxon),"n_directed_pairs":len(rows),
             "model_scores":summaries,"per_heldout_neighbor":species_results}
 
 
@@ -149,16 +151,18 @@ def permute_GR_within_guild(traits:dict,rng:np.random.Generator):
     return mapping
 
 
-def gr_mapping_placebo(rows:list[dict],traits:dict,n_perm:int=499,seed:int=20261124):
-    base=score(rows,traits,models=(MAIN,))["model_scores"][MAIN]["species_equal_MSE"]
+def gr_mapping_placebo(rows:list[dict],traits:dict,n_perm:int=499,seed:int=20261124,
+                       target:str="Cdelta_total"):
+    base=score(rows,traits,models=(MAIN,),target=target)["model_scores"][MAIN]["species_equal_MSE"]
     rng=np.random.default_rng(seed)
     null=np.empty(n_perm)
     for i in range(n_perm):
         mapping=permute_GR_within_guild(traits,rng)
-        x=score(rows,traits,models=(MAIN,),neighbor_gr_mapping=mapping)
+        x=score(rows,traits,models=(MAIN,),neighbor_gr_mapping=mapping,target=target)
         null[i]=x["model_scores"][MAIN]["species_equal_MSE"]
     return {
         "observed_MSE":base,
+        "target":target,
         "within_guild_shuffled_neighbor_GR_MSE_median":float(np.median(null)),
         "within_guild_shuffled_neighbor_GR_MSE_95pct":np.quantile(null,[.025,.975]).tolist(),
         "fraction_shuffles_as_good_or_better":float((1+np.sum(null<=base+1e-12))/(n_perm+1)),
@@ -182,6 +186,18 @@ def audit(source:Path,n_perm:int=499):
         sens[str(lam)]={
             "scores":fit["model_scores"],
             "comparison":paired_bootstrap(fit,MAIN,n_boot=20000,seed=20261124)}
+    # Explicit posthoc endpoint triangulation, recorded in a separate
+    # methodological note before executing these outcomes. The matched
+    # RII_late outcome omits the solo-control biomass entirely.
+    endpoints={}
+    for target,seed in (("RII_late_total",20261126),("RII_sim_total",20261127)):
+        fit=score(rows,t,models=(BASELINE,MAIN),penalty=10.,target=target)
+        endpoints[target]={
+            "models":fit["model_scores"],
+            "species_cluster_gain":paired_bootstrap(fit,MAIN,n_boot=20000,seed=20261124),
+            "neighbor_GR_mapping_placebo":gr_mapping_placebo(
+                rows,t,n_perm=199,seed=seed,target=target),
+        }
     return {
         "status":"POSTHOC_PREDICTIVE_DECOMPOSITION_OF_SOURCE_GROWTH_RATE_NOT_CAUSAL",
         "source":"van Steijn et al. 2025 Ecology DOI 10.1002/ecy.4528, Zenodo 10.5281/zenodo.10512662",
@@ -195,6 +211,7 @@ def audit(source:Path,n_perm:int=499):
         "paired_15_species_bootstraps":contrast,
         "neighbor_GR_mapping_null":permutations,
         "alternative_penalty_sensitivities":sens,
+        "original_RII_endpoint_triangulation_posthoc":endpoints,
         "limits":[
             "GR_j from 10-week solo-grown plant, NOT from an ex-ante field trait sample",
             "GR_j does not enter Cdelta_i control denominator for j!=i; focal GR_i could enter mathematically and is separated",
@@ -221,6 +238,7 @@ def main():
     print("MAIN_MSE_PAIR_CONTRAST",json.dumps(report["paired_15_species_bootstraps"][MAIN]))
     print("MAPPING_NULL",json.dumps(report["neighbor_GR_mapping_null"]))
     print("PENALTY_SENSITIVITY",json.dumps(report["alternative_penalty_sensitivities"]))
+    print("ENDPOINT_TRIANGULATION",json.dumps(report["original_RII_endpoint_triangulation_posthoc"]))
     print("NEIGHBOR_GR_DECOMPOSITION_END",args.output)
 
 
