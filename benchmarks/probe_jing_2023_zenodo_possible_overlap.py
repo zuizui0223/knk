@@ -45,6 +45,38 @@ def audit(original_workbook:Path,readme:Path):
             "n_complete_nonblank_rows":sum(all(y is not None and str(y).strip()!="" for y in row)
                                          for row in rows[1:])
         })
+    # Audit absence at the *mixture-pot* grain rather than treating blank
+    # species cells as zeros. Group same-assembly species within each workbook row.
+    sheet= tabs.get("mixture_aboveground biomass",{}).get("rows",[])
+    h=sheet[1] if len(sheet)>1 else []
+    import re
+    by_assembly={}
+    for ci,name in enumerate(h):
+        if isinstance(name,str):
+            mm=re.match(r"^\\(([A-Z-]+)\\)_([A-Z]+)$",name.strip())
+            if mm:
+                by_assembly.setdefault(mm.group(1),[]).append((ci,mm.group(2)))
+    absent=[]
+    n_valid_data_rows=0
+    replicate_counter={}
+    for row in sheet[2:]:
+        water=row[0] if len(row)>0 else None
+        soil=row[1] if len(row)>1 else None
+        if water is None and soil is None:
+            continue
+        if water not in ("Wet","Dry") or soil not in ("SK","AF","AC","MIX","S"):
+            raise ValueError("Unexpected source treatment row in original mixture workbook")
+        n_valid_data_rows+=1
+        tag=(water,soil)
+        replicate_counter[tag]=replicate_counter.get(tag,0)+1
+        for assembly,components in by_assembly.items():
+            missing=[sp for ci,sp in components if ci>=len(row) or row[ci] is None or str(row[ci]).strip()==""]
+            if missing:
+                absent.append({"water":water,"soil":soil,"replicate_order":replicate_counter[tag],
+                               "assembly":assembly,
+                               "missing_species":missing,
+                               "n_total_species_in_assembly":len(components),
+                               "entire_assembly_pot_absent":len(missing)==len(components)})
     return {
         "status":"SCHEMA_ONLY_POT_UNIT_NOT_YET_AUDITED",
         "source_doi":"10.5281/zenodo.7856898",
@@ -53,6 +85,9 @@ def audit(original_workbook:Path,readme:Path):
         "source_readme_md5":MD5_README,
         "source_readme_verbatim":readme_content,
         "n_sheets":len(sheets),
+        "n_valid_mixture_replicate_rows":n_valid_data_rows,
+        "n_mixture_padding_rows":len(sheet)-2-n_valid_data_rows,
+        "missing_mixture_components":absent,
         "sheets":sheets,
         "important_caveats":[
             "May overlap Jing et al 2024 Dryad source from the same research group; do not count as independent.",
