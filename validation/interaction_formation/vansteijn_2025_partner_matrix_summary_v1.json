@@ -111,10 +111,17 @@
   },
   "caveats": [
     "RII_late is later-planted versus simultaneous-planted biomass in the same nominal ordered species pair, not pure competition coefficient alpha_ij.",
-    "Timing treatments change growth duration; no age-matched late-arrival-alone controls.",
+    "Focal growth duration IS age-matched across three conditions (10 weeks); early neighbor has 3 additional establishment weeks, which bundles size, resource and environment effects.",
     "All 202 directed responses reuse 15 focal and 15 neighbor identities, typically one pot per pair; never use 202 as biological replicates for one effect.",
     "MaxT and within-focal label tests are conditional exchangeability diagnostics, not actual randomized-treatment p values.",
     "Source paper already studied pairwise priority effects and competitive traits; current contribution is an independent auditable matrix decomposition and its link to KNK concepts.",
     "No changes to KNK v28-v38 Ecology Letters submission; all work in unmerged post-submission PR."
-  ]
+  ],
+  "method_correction": {
+    "date": "2026-11-23",
+    "type": "source-method correction after primary output",
+    "source": "van Steijn et al 2025 Ecology DOI 10.1002/ecy.4528 Figure 1 and Methods",
+    "corrected_interpretation": "Focal plant grown exactly 10 weeks in solo, simultaneous and sequential treatments; early neighbor grown 13 weeks. Estimates may identify total history-dependent net neighbor impact, not separate resource mechanism.",
+    "followup_script": "benchmarks/score_vansteijn_age_matched_neighbor_effect.py"
+  }
 }
