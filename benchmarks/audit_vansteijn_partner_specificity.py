@@ -156,6 +156,12 @@ def audit(folder:Path):
     return report
 
 
+def json_safe(value):
+    if isinstance(value,np.generic):return value.item()
+    if isinstance(value,np.ndarray):return value.tolist()
+    raise TypeError(f"Unsupported audit value type: {type(value).__name__}")
+
+
 def main():
     a=argparse.ArgumentParser(description=__doc__)
     a.add_argument("--source-dir",type=Path,required=True)
@@ -163,17 +169,17 @@ def main():
     args=a.parse_args()
     result=audit(args.source_dir)
     args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
+    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2,default=json_safe,allow_nan=False)+"\n")
     print("NEIGHBOR_SPECIFICITY_START")
     for stage in ("late_vs_simultaneous","simultaneous_neighbor_vs_alone"):
         x=result[stage]
         for k in ("identity_beyond_guild","functional_guild_specificity"):
-            print(stage,k,json.dumps(x[k]))
-    print("HUB_DELETION",json.dumps(result["late_vs_simultaneous"]["leave_hubs_out"]))
+            print(stage,k,json.dumps(x[k],default=json_safe,allow_nan=False))
+    print("HUB_DELETION",json.dumps(result["late_vs_simultaneous"]["leave_hubs_out"],default=json_safe,allow_nan=False))
     print("NEIGHBOR_EXTREMES",json.dumps(
         result["late_vs_simultaneous"]["neighbor_rankings"][:4]+
-        result["late_vs_simultaneous"]["neighbor_rankings"][-4:]))
-    print("POSITIVE_LATE",json.dumps(result["positive_late_pairs"]))
+        result["late_vs_simultaneous"]["neighbor_rankings"][-4:],default=json_safe,allow_nan=False))
+    print("POSITIVE_LATE",json.dumps(result["positive_late_pairs"],default=json_safe,allow_nan=False))
     print("NEIGHBOR_SPECIFICITY_DONE")
 
 if __name__=="__main__":main()
