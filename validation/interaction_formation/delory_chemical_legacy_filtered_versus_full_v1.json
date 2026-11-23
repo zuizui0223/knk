@@ -1,0 +1,1042 @@
+{
+  "status": "ORIGINAL_AUTHOR_FILTER_REPRODUCTION_AND_POSTHOC_PROCESS_OUTPUT_COMPARISON",
+  "date": "2026-11-24",
+  "article": "Delory et al. (2021), Plant Cell & Environment, DOI 10.1111/pce.13999",
+  "source": "https://github.com/BenjaminDelory/Rhizometabolome_2020/tree/v1.0.0",
+  "source_csv_git_blob": "d11b4b45acb13bd9c240b004332e76b09eb6c3e3",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45240301551",
+  "secondary_run": "https://github.com/zuizui0223/knk/actions/runs/45240737274",
+  "original_R_filter": "data<-data[-c(3,22),], original R/Analysis_PlantData_RhizoMetabolome_2020.Rmd lines 156-165",
+  "original_filter_reason": "Plant3 received 50ml not 25ml at day2, Plant22 original author-designated phenotypic outlier",
+  "original_author_filtered_58": {
+    "source_audit": {
+      "source_git_blob_sha": "d11b4b45acb13bd9c240b004332e76b09eb6c3e3",
+      "source_sha256": "6142577d0c163aa0976ab3dd0a776e44cd5f90fecdf00151318e38030f4d606e",
+      "n_plants_original": 60,
+      "n_plants_analyzed": 58,
+      "original_author_excluded_sample_ids": [
+        3,
+        22
+      ],
+      "n_columns": 44,
+      "n_species": 2,
+      "n_solution_treatments": 3,
+      "counts": {
+        "Dd|Soil": 9,
+        "Dd|Forbs": 9,
+        "Dd|Grasses": 10,
+        "Fr|Soil": 10,
+        "Fr|Forbs": 10,
+        "Fr|Grasses": 10
+      },
+      "primary_missing": 0,
+      "status": "SOURCE_PANEL_PASS",
+      "experimental_unit": "original later-arriving plant (not metabolomic feature or plant-solution source replicate)"
+    },
+    "primary_process_output": [
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "RSD",
+        "control_mean": 0.18189928711111114,
+        "treated_mean": 0.12248629544444443,
+        "absolute_difference": -0.059412991666666706,
+        "absolute_difference_bootstrap95": [
+          -0.08230039131111115,
+          -0.03469479130833334
+        ],
+        "ratio_of_means": 0.6733742467590049,
+        "log_ratio": -0.3954540165875894,
+        "log_ratio_bootstrap95": [
+          -0.566774445020284,
+          -0.2258202175435414
+        ],
+        "percent_change": -32.66257532409951,
+        "n_control": 9,
+        "n_treatment": 9,
+        "conditional_pot_label_permutation_two_sided_p": 0.0007,
+        "holm_p_across_12_primary_exploratory_tests": 0.0084
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "RSD",
+        "control_mean": 0.18189928711111114,
+        "treated_mean": 0.1522463764,
+        "absolute_difference": -0.029652910711111147,
+        "absolute_difference_bootstrap95": [
+          -0.05287098368555559,
+          -0.0049141331586111565
+        ],
+        "ratio_of_means": 0.8369817101427232,
+        "log_ratio": -0.17795306041274753,
+        "log_ratio_bootstrap95": [
+          -0.3226260373923801,
+          -0.0289625888661345
+        ],
+        "percent_change": -16.301828985727685,
+        "n_control": 9,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.0375,
+        "holm_p_across_12_primary_exploratory_tests": 0.4125
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "RSD",
+        "control_mean": 0.3037451371,
+        "treated_mean": 0.2956854826,
+        "absolute_difference": -0.008059654500000013,
+        "absolute_difference_bootstrap95": [
+          -0.07364205452750004,
+          0.07176563514749999
+        ],
+        "ratio_of_means": 0.9734657332230916,
+        "log_ratio": -0.026892654354793183,
+        "log_ratio_bootstrap95": [
+          -0.2668553250007776,
+          0.21953555223212481
+        ],
+        "percent_change": -2.65342667769084,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.8545,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "RSD",
+        "control_mean": 0.3037451371,
+        "treated_mean": 0.3176215465,
+        "absolute_difference": 0.013876409400000012,
+        "absolute_difference_bootstrap95": [
+          -0.043397466079999975,
+          0.06977324080750001
+        ],
+        "ratio_of_means": 1.0456843837319825,
+        "log_ratio": 0.04467158371724799,
+        "log_ratio_bootstrap95": [
+          -0.1463199239423267,
+          0.2161335479812985
+        ],
+        "percent_change": 4.568438373198247,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.6541,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "PDW",
+        "control_mean": 0.4254744444444445,
+        "treated_mean": 0.3913722222222222,
+        "absolute_difference": -0.03410222222222231,
+        "absolute_difference_bootstrap95": [
+          -0.10682075000000002,
+          0.03884458333333328
+        ],
+        "ratio_of_means": 0.9198489529335877,
+        "log_ratio": -0.08354580401225074,
+        "log_ratio_bootstrap95": [
+          -0.2821690445408424,
+          0.08997424406815471
+        ],
+        "percent_change": -8.01510470664123,
+        "n_control": 9,
+        "n_treatment": 9,
+        "conditional_pot_label_permutation_two_sided_p": 0.4058,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "PDW",
+        "control_mean": 0.4254744444444445,
+        "treated_mean": 0.4342829999999999,
+        "absolute_difference": 0.00880855555555543,
+        "absolute_difference_bootstrap95": [
+          -0.03625433888888891,
+          0.05514666388888892
+        ],
+        "ratio_of_means": 1.020702901597432,
+        "log_ratio": 0.02049150917573125,
+        "log_ratio_bootstrap95": [
+          -0.08600305636217727,
+          0.1294187177312369
+        ],
+        "percent_change": 2.0702901597432044,
+        "n_control": 9,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.7299,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "PDW",
+        "control_mean": 0.51583,
+        "treated_mean": 0.543007,
+        "absolute_difference": 0.027177000000000007,
+        "absolute_difference_bootstrap95": [
+          -0.07592750000000002,
+          0.13881989999999977
+        ],
+        "ratio_of_means": 1.0526859624294826,
+        "log_ratio": 0.05134495736100465,
+        "log_ratio_bootstrap95": [
+          -0.14453478224916116,
+          0.2553639021303216
+        ],
+        "percent_change": 5.268596242948265,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.642,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "PDW",
+        "control_mean": 0.51583,
+        "treated_mean": 0.5591130000000001,
+        "absolute_difference": 0.04328300000000007,
+        "absolute_difference_bootstrap95": [
+          -0.058414174999999964,
+          0.14191022499999986
+        ],
+        "ratio_of_means": 1.0839094275245722,
+        "log_ratio": 0.08057434558250764,
+        "log_ratio_bootstrap95": [
+          -0.10957311292461536,
+          0.2640974939687404
+        ],
+        "percent_change": 8.39094275245722,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.4272,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "Nuptake",
+        "control_mean": 0.008975608111111111,
+        "treated_mean": 0.008649696555555557,
+        "absolute_difference": -0.0003259115555555546,
+        "absolute_difference_bootstrap95": [
+          -0.001868846833333333,
+          0.0011564661361111105
+        ],
+        "ratio_of_means": 0.9636891950360331,
+        "log_ratio": -0.03698644814579366,
+        "log_ratio_bootstrap95": [
+          -0.2203737459192552,
+          0.12928120149567354
+        ],
+        "percent_change": -3.631080496396688,
+        "n_control": 9,
+        "n_treatment": 9,
+        "conditional_pot_label_permutation_two_sided_p": 0.6936,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "Nuptake",
+        "control_mean": 0.008975608111111111,
+        "treated_mean": 0.0096522313,
+        "absolute_difference": 0.0006766231888888884,
+        "absolute_difference_bootstrap95": [
+          -0.0005194042783333328,
+          0.0019461106416666662
+        ],
+        "ratio_of_means": 1.0753846625780465,
+        "log_ratio": 0.07267842322929138,
+        "log_ratio_bootstrap95": [
+          -0.0547463762711588,
+          0.21096741365150684
+        ],
+        "percent_change": 7.538466257804655,
+        "n_control": 9,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.3177,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "Nuptake",
+        "control_mean": 0.0082583572,
+        "treated_mean": 0.0076595019,
+        "absolute_difference": -0.0005988553000000002,
+        "absolute_difference_bootstrap95": [
+          -0.0024012624725000013,
+          0.0009094419300000016
+        ],
+        "ratio_of_means": 0.927484936108116,
+        "log_ratio": -0.07527872602530654,
+        "log_ratio_bootstrap95": [
+          -0.28290225975870165,
+          0.1218095991868542
+        ],
+        "percent_change": -7.2515063891884,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.5844,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "Nuptake",
+        "control_mean": 0.0082583572,
+        "treated_mean": 0.0084970155,
+        "absolute_difference": 0.00023865829999999977,
+        "absolute_difference_bootstrap95": [
+          -0.001659722575000001,
+          0.0019107255249999951
+        ],
+        "ratio_of_means": 1.028899004271697,
+        "log_ratio": 0.028489302639121316,
+        "log_ratio_bootstrap95": [
+          -0.1883725360495583,
+          0.2381056132626966
+        ],
+        "percent_change": 2.8899004271697004,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.8204,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      }
+    ],
+    "species_log_response_contrasts": [
+      {
+        "treatment": "Forbs",
+        "outcome": "RSD",
+        "Dd_minus_Fr_log_ratio": -0.36856136223279623,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.6649825724213911,
+          -0.07532567407860853
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "RSD",
+        "Dd_minus_Fr_log_ratio": -0.22262464412999552,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.44970969653661474,
+          0.0177768184259515
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Forbs",
+        "outcome": "PDW",
+        "Dd_minus_Fr_log_ratio": -0.1348907613732554,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.41615410024007043,
+          0.1263806282991841
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "PDW",
+        "Dd_minus_Fr_log_ratio": -0.06008283640677639,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.2722983787631728,
+          0.1572941439610899
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Forbs",
+        "outcome": "Nuptake",
+        "Dd_minus_Fr_log_ratio": 0.03829227787951288,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.2339731638489996,
+          0.30618698981026343
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "Nuptake",
+        "Dd_minus_Fr_log_ratio": 0.044189120590170064,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.20406243409229297,
+          0.299826182054438
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      }
+    ],
+    "posthoc_paired_process_output": [
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 9,
+        "n_control_plants": 9,
+        "RSD_log_treatment_control": -0.39545401658758955,
+        "output_log_treatment_control": -0.08354580401225062,
+        "root_foraging_minus_output_log_response": -0.31190821257533896,
+        "conditional_plant_bootstrap95": [
+          -0.43174313077599585,
+          -0.20377192620177972
+        ],
+        "fraction_bootstrap_above_zero": 0,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 9,
+        "n_control_plants": 9,
+        "RSD_log_treatment_control": -0.39545401658758955,
+        "output_log_treatment_control": -0.03698644814579389,
+        "root_foraging_minus_output_log_response": -0.35846756844179567,
+        "conditional_plant_bootstrap95": [
+          -0.5679182248117277,
+          -0.1599412044900316
+        ],
+        "fraction_bootstrap_above_zero": 0,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 9,
+        "RSD_log_treatment_control": -0.1779530604127478,
+        "output_log_treatment_control": 0.02049150917573125,
+        "root_foraging_minus_output_log_response": -0.19844456958847906,
+        "conditional_plant_bootstrap95": [
+          -0.3132110345288253,
+          -0.0868820471173269
+        ],
+        "fraction_bootstrap_above_zero": 0.0001,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 9,
+        "RSD_log_treatment_control": -0.1779530604127478,
+        "output_log_treatment_control": 0.07267842322929118,
+        "root_foraging_minus_output_log_response": -0.25063148364203897,
+        "conditional_plant_bootstrap95": [
+          -0.4543097699387193,
+          -0.05385748601157339
+        ],
+        "fraction_bootstrap_above_zero": 0.0058,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.026892654354793297,
+        "output_log_treatment_control": 0.05134495736100465,
+        "root_foraging_minus_output_log_response": -0.07823761171579795,
+        "conditional_plant_bootstrap95": [
+          -0.25835062474985704,
+          0.09111972941384378
+        ],
+        "fraction_bootstrap_above_zero": 0.17975,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.026892654354793297,
+        "output_log_treatment_control": -0.07527872602530654,
+        "root_foraging_minus_output_log_response": 0.048386071670513245,
+        "conditional_plant_bootstrap95": [
+          -0.20956911416361187,
+          0.2793216273599958
+        ],
+        "fraction_bootstrap_above_zero": 0.6231,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": 0.04467158371724757,
+        "output_log_treatment_control": 0.08057434558250784,
+        "root_foraging_minus_output_log_response": -0.03590276186526027,
+        "conditional_plant_bootstrap95": [
+          -0.19016518443669542,
+          0.117780287268051
+        ],
+        "fraction_bootstrap_above_zero": 0.31615,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": 0.04467158371724757,
+        "output_log_treatment_control": 0.028489302639121316,
+        "root_foraging_minus_output_log_response": 0.016182281078126252,
+        "conditional_plant_bootstrap95": [
+          -0.20600486947120158,
+          0.2202841339137405
+        ],
+        "fraction_bootstrap_above_zero": 0.5383,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      }
+    ]
+  },
+  "all_measured_60_sensitivity": {
+    "source_audit": {
+      "source_git_blob_sha": "d11b4b45acb13bd9c240b004332e76b09eb6c3e3",
+      "source_sha256": "6142577d0c163aa0976ab3dd0a776e44cd5f90fecdf00151318e38030f4d606e",
+      "n_plants_original": 60,
+      "n_plants_analyzed": 60,
+      "original_author_excluded_sample_ids": [],
+      "n_columns": 44,
+      "n_species": 2,
+      "n_solution_treatments": 3,
+      "counts": {
+        "Dd|Soil": 10,
+        "Dd|Forbs": 10,
+        "Dd|Grasses": 10,
+        "Fr|Soil": 10,
+        "Fr|Forbs": 10,
+        "Fr|Grasses": 10
+      },
+      "primary_missing": 0,
+      "status": "SOURCE_PANEL_PASS",
+      "experimental_unit": "original later-arriving plant (not metabolomic feature or plant-solution source replicate)"
+    },
+    "primary_process_output": [
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "RSD",
+        "control_mean": 0.16698710120000002,
+        "treated_mean": 0.13227456170000002,
+        "absolute_difference": -0.0347125395,
+        "absolute_difference_bootstrap95": [
+          -0.07051848055999999,
+          0.008810228885000004
+        ],
+        "ratio_of_means": 0.7921244260751321,
+        "log_ratio": -0.23303679587697682,
+        "log_ratio_bootstrap95": [
+          -0.48008954086719474,
+          0.061426421974861437
+        ],
+        "percent_change": -20.78755739248679,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.1171,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "RSD",
+        "control_mean": 0.16698710120000002,
+        "treated_mean": 0.1522463764,
+        "absolute_difference": -0.014740724800000021,
+        "absolute_difference_bootstrap95": [
+          -0.04660959983,
+          0.024985756577499997
+        ],
+        "ratio_of_means": 0.9117253686418264,
+        "log_ratio": -0.09241646513200222,
+        "log_ratio_bootstrap95": [
+          -0.2841229667816519,
+          0.1696016837301556
+        ],
+        "percent_change": -8.827463135817359,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.4716,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "RSD",
+        "control_mean": 0.3037451371,
+        "treated_mean": 0.2956854826,
+        "absolute_difference": -0.008059654500000013,
+        "absolute_difference_bootstrap95": [
+          -0.073437155105,
+          0.07187271430750002
+        ],
+        "ratio_of_means": 0.9734657332230916,
+        "log_ratio": -0.026892654354793183,
+        "log_ratio_bootstrap95": [
+          -0.2658389089022512,
+          0.21914270435363511
+        ],
+        "percent_change": -2.65342667769084,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.857,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "RSD",
+        "control_mean": 0.3037451371,
+        "treated_mean": 0.3176215465,
+        "absolute_difference": 0.013876409400000012,
+        "absolute_difference_bootstrap95": [
+          -0.04349745752749999,
+          0.06978201120999972
+        ],
+        "ratio_of_means": 1.0456843837319825,
+        "log_ratio": 0.04467158371724799,
+        "log_ratio_bootstrap95": [
+          -0.14712131374647824,
+          0.21607145517057794
+        ],
+        "percent_change": 4.568438373198247,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.6537,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "PDW",
+        "control_mean": 0.39505,
+        "treated_mean": 0.397477,
+        "absolute_difference": 0.0024270000000000125,
+        "absolute_difference_bootstrap95": [
+          -0.08010940000000007,
+          0.09535245
+        ],
+        "ratio_of_means": 1.0061435261359322,
+        "log_ratio": 0.006124731616375194,
+        "log_ratio_bootstrap95": [
+          -0.20643270696047655,
+          0.24897247082416132
+        ],
+        "percent_change": 0.6143526135932165,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.9593,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "PDW",
+        "control_mean": 0.39505,
+        "treated_mean": 0.4342829999999999,
+        "absolute_difference": 0.03923299999999991,
+        "absolute_difference_bootstrap95": [
+          -0.025563675000000112,
+          0.11718049999999991
+        ],
+        "ratio_of_means": 1.099311479559549,
+        "log_ratio": 0.09468405615668017,
+        "log_ratio_bootstrap95": [
+          -0.05987320849692063,
+          0.3051789440802551
+        ],
+        "percent_change": 9.931147955954911,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.3677,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "PDW",
+        "control_mean": 0.51583,
+        "treated_mean": 0.543007,
+        "absolute_difference": 0.027177000000000007,
+        "absolute_difference_bootstrap95": [
+          -0.07611797499999996,
+          0.1375352499999999
+        ],
+        "ratio_of_means": 1.0526859624294826,
+        "log_ratio": 0.05134495736100465,
+        "log_ratio_bootstrap95": [
+          -0.1451556749501482,
+          0.25340615272049793
+        ],
+        "percent_change": 5.268596242948265,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.6443,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "PDW",
+        "control_mean": 0.51583,
+        "treated_mean": 0.5591130000000001,
+        "absolute_difference": 0.04328300000000007,
+        "absolute_difference_bootstrap95": [
+          -0.05768140000000017,
+          0.14191962499999997
+        ],
+        "ratio_of_means": 1.0839094275245722,
+        "log_ratio": 0.08057434558250764,
+        "log_ratio_bootstrap95": [
+          -0.10814568142882003,
+          0.2642055771243532
+        ],
+        "percent_change": 8.39094275245722,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.431,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "outcome": "Nuptake",
+        "control_mean": 0.008553791000000002,
+        "treated_mean": 0.0086934343,
+        "absolute_difference": 0.00013964329999999886,
+        "absolute_difference_bootstrap95": [
+          -0.0014683956800000005,
+          0.0017314329724999933
+        ],
+        "ratio_of_means": 1.0163253111982744,
+        "log_ratio": 0.016193486094269793,
+        "log_ratio_bootstrap95": [
+          -0.17275690760308304,
+          0.2048236961903188
+        ],
+        "percent_change": 1.6325311198274406,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.8691,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "outcome": "Nuptake",
+        "control_mean": 0.008553791000000002,
+        "treated_mean": 0.0096522313,
+        "absolute_difference": 0.001098440299999998,
+        "absolute_difference_bootstrap95": [
+          -0.0002405593450000016,
+          0.0025596321474999927
+        ],
+        "ratio_of_means": 1.1284156112769177,
+        "log_ratio": 0.12081453492851933,
+        "log_ratio_bootstrap95": [
+          -0.025817623983510292,
+          0.29228871631289605
+        ],
+        "percent_change": 12.841561127691769,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.1684,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "outcome": "Nuptake",
+        "control_mean": 0.0082583572,
+        "treated_mean": 0.0076595019,
+        "absolute_difference": -0.0005988553000000002,
+        "absolute_difference_bootstrap95": [
+          -0.0023905889500000013,
+          0.0009155638900000004
+        ],
+        "ratio_of_means": 0.927484936108116,
+        "log_ratio": -0.07527872602530654,
+        "log_ratio_bootstrap95": [
+          -0.28033309352956715,
+          0.12217527783845354
+        ],
+        "percent_change": -7.2515063891884,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.5778,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "outcome": "Nuptake",
+        "control_mean": 0.0082583572,
+        "treated_mean": 0.0084970155,
+        "absolute_difference": 0.00023865829999999977,
+        "absolute_difference_bootstrap95": [
+          -0.001652880497500002,
+          0.0019107239124999953
+        ],
+        "ratio_of_means": 1.028899004271697,
+        "log_ratio": 0.028489302639121316,
+        "log_ratio_bootstrap95": [
+          -0.18837770236722695,
+          0.23735998828139074
+        ],
+        "percent_change": 2.8899004271697004,
+        "n_control": 10,
+        "n_treatment": 10,
+        "conditional_pot_label_permutation_two_sided_p": 0.822,
+        "holm_p_across_12_primary_exploratory_tests": 1
+      }
+    ],
+    "species_log_response_contrasts": [
+      {
+        "treatment": "Forbs",
+        "outcome": "RSD",
+        "Dd_minus_Fr_log_ratio": -0.20614414152218363,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.5527093270980317,
+          0.17453269277458325
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "RSD",
+        "Dd_minus_Fr_log_ratio": -0.13708804884925022,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.40213077583167744,
+          0.17595125701258899
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Forbs",
+        "outcome": "PDW",
+        "Dd_minus_Fr_log_ratio": -0.04522022574462946,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.3409480125031768,
+          0.26473272904178946
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "PDW",
+        "Dd_minus_Fr_log_ratio": 0.014109710574172526,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.22917943009931455,
+          0.29147019270125435
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Forbs",
+        "outcome": "Nuptake",
+        "Dd_minus_Fr_log_ratio": 0.09147221211957633,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.18928590776805096,
+          0.36412672624276915
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      },
+      {
+        "treatment": "Grasses",
+        "outcome": "Nuptake",
+        "Dd_minus_Fr_log_ratio": 0.09232523228939801,
+        "Dd_minus_Fr_95pct_bootstrap": [
+          -0.1668063941449192,
+          0.36435072611659386
+        ],
+        "interpretation": "Difference between two species-specific log treatment/control ratios, not species interaction."
+      }
+    ],
+    "posthoc_paired_process_output": [
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.23303679587697695,
+        "output_log_treatment_control": 0.006124731616375194,
+        "root_foraging_minus_output_log_response": -0.23916152749335215,
+        "conditional_plant_bootstrap95": [
+          -0.3866967007756755,
+          -0.08593364578986509
+        ],
+        "fraction_bootstrap_above_zero": 0.00145,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Forbs",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.23303679587697695,
+        "output_log_treatment_control": 0.016193486094269793,
+        "root_foraging_minus_output_log_response": -0.24923028197124675,
+        "conditional_plant_bootstrap95": [
+          -0.4848669456713301,
+          -0.009172430526810878
+        ],
+        "fraction_bootstrap_above_zero": 0.02095,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.09241646513200234,
+        "output_log_treatment_control": 0.09468405615668017,
+        "root_foraging_minus_output_log_response": -0.18710052128868251,
+        "conditional_plant_bootstrap95": [
+          -0.3010002537321959,
+          -0.07081536182901405
+        ],
+        "fraction_bootstrap_above_zero": 0.00035,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Dd",
+        "conditioning": "Grasses",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.09241646513200234,
+        "output_log_treatment_control": 0.12081453492851914,
+        "root_foraging_minus_output_log_response": -0.21323100006052148,
+        "conditional_plant_bootstrap95": [
+          -0.42113302358717186,
+          0.004136419747722849
+        ],
+        "fraction_bootstrap_above_zero": 0.0278,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.026892654354793297,
+        "output_log_treatment_control": 0.05134495736100465,
+        "root_foraging_minus_output_log_response": -0.07823761171579795,
+        "conditional_plant_bootstrap95": [
+          -0.25816508711276426,
+          0.08964691078623131
+        ],
+        "fraction_bootstrap_above_zero": 0.17835,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Forbs",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": -0.026892654354793297,
+        "output_log_treatment_control": -0.07527872602530654,
+        "root_foraging_minus_output_log_response": 0.048386071670513245,
+        "conditional_plant_bootstrap95": [
+          -0.20915886836212164,
+          0.27952365301896104
+        ],
+        "fraction_bootstrap_above_zero": 0.6248,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "contrasted_output": "PDW",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": 0.04467158371724757,
+        "output_log_treatment_control": 0.08057434558250784,
+        "root_foraging_minus_output_log_response": -0.03590276186526027,
+        "conditional_plant_bootstrap95": [
+          -0.19017282537488933,
+          0.11790543609748136
+        ],
+        "fraction_bootstrap_above_zero": 0.3173,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      },
+      {
+        "species": "Fr",
+        "conditioning": "Grasses",
+        "contrasted_output": "Nuptake",
+        "n_treatment_plants": 10,
+        "n_control_plants": 10,
+        "RSD_log_treatment_control": 0.04467158371724757,
+        "output_log_treatment_control": 0.028489302639121316,
+        "root_foraging_minus_output_log_response": 0.016182281078126252,
+        "conditional_plant_bootstrap95": [
+          -0.2040482489129922,
+          0.22190567192274524
+        ],
+        "fraction_bootstrap_above_zero": 0.5418,
+        "n_bootstrap": 20000,
+        "unit": "identical individual plant rows resampled jointly for all 3 response columns",
+        "claim_boundary": "Post hoc, tray/batch-level dependence unavailable"
+      }
+    ]
+  },
+  "caveats": [
+    "Delory source original published root foraging reduction and relative N uptake stability; KNK reproduces authors filtering and adds direct paired process/output ratio contrasts.",
+    "Individual plants share solution batch/trays and source lacks tray IDs; all plant-level bootstrap and label permutation inference is conditional and may be anticonservative.",
+    "Significance under filtered 58 vs 60 is sensitive to original author exclusion, notably the separately measured root density effect.",
+    "Posthoc paired process/output log ratio contrasts may be robust to original author exclusion but remain within one study and not causal mediation.",
+    "No resident plants in phase2; experimental legacy illustrates conditioning mechanism, not direct competition interaction alpha coefficients.",
+    "Nuptake is derived final N content not real-time resource uptake flux.",
+    "This is one source study with multiple correlated endpoints and plant species, not 24 independent meta studies.",
+    "Current KNK frozen v28-v38 and Ecology Letters candidate unchanged."
+  ]
+}
