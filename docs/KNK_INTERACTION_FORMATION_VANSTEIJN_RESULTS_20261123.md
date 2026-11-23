@@ -10,6 +10,8 @@
 - **Potential mechanistic quantity**: history-dependent direct neighbor effect on age-/initial-size-matched focal growth, `I_{j→i}(H)=g_i(j present,H)-g_i(j absent,H)`, which **requires additional controls absent from the current raw files**.
 - **Community-storage outcome** (previous KNK): named species composition versus the same species abundances sorted with identities discarded. The direct-pair dataset does not measure multispecies architecture on an experimental unit and **cannot be pooled** with that outcome.
 
+**Source-method correction (2026-11-23):** the original Figure 1 and Methods confirm 10-week focal growth in solo, simultaneous and sequential treatments. Earlier wording about a focal-age confound was incorrect; neighbor pre-establishment is the actual manipulated difference. This strengthens the identification of a *realized age-matched net neighbor effect*, while pre-emption versus environmental conditioning remain unresolved. See [erratum](VANSTEIJN_FOCAL_AGE_METHOD_CORRECTION_AND_NET_NEIGHBOR_EFFECT_20261123.md).
+
 ## Source provenance and reconstruction
 
 van Steijn et al. (2025), *Ecology* 106 e4528, DOI https://doi.org/10.1002/ecy.4528; source Zenodo **v2** https://doi.org/10.5281/zenodo.10512662 (5 files, original MD5s checked). 15 plant species: five grass, five forb, five legume. 74 solo-control pots (~5 per species; one species n=4), 206 focal–neighbor directed simultaneous responses and 206 later-planted responses. **Only 202 directed pair keys match one-to-one**; four keys occur only in each treatment file. Each directed-pair combination normally has one pot, so there are **15 focal clusters, not 202 independent species replicates**.
@@ -21,7 +23,7 @@ RII_sim(i,j)  = (Biomass_sim(i,j) − mean(Biomass_alone(i))) /
 RII_late(i,j) = (Biomass_late(i,j) − Biomass_sim(i,j)) /
                 (Biomass_late(i,j) + Biomass_sim(i,j))
 ```
-Each also computed separately for roots and shoots. Note `RII_late` is **not** an experimentally isolated causal competition coefficient: delayed planting alters duration/age as well as neighbor interactions. The paper already analyzed RII responses and traits; KNK's reanalysis tests the structure of a directed 202-edge schedule-response matrix, subject to one pot per directed combination.
+Each also computed separately for roots and shoots. Note `RII_late` is **not** an experimentally isolated causal competition coefficient: the neighbor has a 3-week establishment advantage while the focal's 10-week age is matched; this is a total pre-establishment effect, not a mechanistic decomposition. The paper already analyzed RII responses and traits; KNK's reanalysis tests the structure of a directed 202-edge schedule-response matrix, subject to one pot per directed combination.
 
 ## Confirmed quantitative results
 
