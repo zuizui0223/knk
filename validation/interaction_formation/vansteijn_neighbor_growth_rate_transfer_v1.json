@@ -1,0 +1,194 @@
+{
+  "status": "POSTHOC_SOLO_GROWTH_RATE_ROLE_DECOMPOSITION_NOT_A_CAUSAL_MECHANISM",
+  "date": "2026-11-24",
+  "source_doi": "10.5281/zenodo.10512662",
+  "original_paper": "10.1002/ecy.4528",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45206403995",
+  "protocol": "docs/VANSTEIJN_NEIGHBOR_GR_POSTHOC_TRANSFER_CONTRACT_20261124.md",
+  "models": {
+    "focal_morph6": {
+      "directed_pair_RMSE": 0.2285226819661967,
+      "species_equal_MSE": 0.05240719569729286,
+      "species_equal_RMSE": 0.22892617958043343
+    },
+    "focal_morph6_plus_focal_GR": {
+      "directed_pair_RMSE": 0.22961204725643056,
+      "species_equal_MSE": 0.052896998920953814,
+      "species_equal_RMSE": 0.22999347582258461
+    },
+    "focal_morph6_plus_neighbor_GR": {
+      "directed_pair_RMSE": 0.21648741430636984,
+      "species_equal_MSE": 0.046884784235996166,
+      "species_equal_RMSE": 0.216528945492274
+    },
+    "focal_morph6_plus_both_GR": {
+      "directed_pair_RMSE": 0.21756104971247867,
+      "species_equal_MSE": 0.04734217243519671,
+      "species_equal_RMSE": 0.21758256463971717
+    },
+    "focal_morph6_plus_neighbor_morph6": {
+      "directed_pair_RMSE": 0.25116783278798066,
+      "species_equal_MSE": 0.06277975869677353,
+      "species_equal_RMSE": 0.25055889267151055
+    },
+    "focal_morph6_plus_neighbor_morph6_plus_neighbor_GR": {
+      "directed_pair_RMSE": 0.22620269618482516,
+      "species_equal_MSE": 0.05108349691913967,
+      "species_equal_RMSE": 0.2260165854957102
+    },
+    "focal_morph6_plus_neighbor_morph6_plus_abs_gap6_plus_neighbor_GR": {
+      "directed_pair_RMSE": 0.2166260331253496,
+      "species_equal_MSE": 0.046742550861053035,
+      "species_equal_RMSE": 0.21620025638526202
+    },
+    "guild_focal_morph6_plus_neighbor_GR": {
+      "directed_pair_RMSE": 0.22094841096775075,
+      "species_equal_MSE": 0.04897530741967463,
+      "species_equal_RMSE": 0.22130365432968935
+    }
+  },
+  "main_MSE_comparison": {
+    "candidate": "focal_morph6_plus_neighbor_GR",
+    "baseline": "focal_morph6",
+    "mean_MSE_gain_positive_is_better": 0.005522411461296685,
+    "bootstrap_95pct": [
+      -0.001221137954868713,
+      0.014260689711304874
+    ],
+    "n_heldout_species_improved": 10,
+    "n_heldout_species_worse": 5,
+    "total_heldout_species": 15,
+    "excluding_Antennaria_species_mean_MSE_gain": 0.0021114495130471014,
+    "species_level_gains": {
+      "Agrostis capillaris": -0.0011362840580176614,
+      "Antennaria dioica": 0.05327587873679086,
+      "Briza media": 0.018774371487996072,
+      "Cardamine pratensis": 0.00579849651631708,
+      "Dianthus deltoides": -0.014517740924556093,
+      "Festuca rubra": 0.0011739314969399506,
+      "Lathyrus sylvestris": 0.000006565898013989602,
+      "Leucanthemum vulgare": 0.00005439081638626553,
+      "Lotus corniculatus": 0.016326582499340152,
+      "Phalaris arundinacea": -0.004028234008329457,
+      "Poa pratensis": 0.0010669449015346388,
+      "Sedum acre": -0.010580990813935189,
+      "Trifolium pratense": 0.011099646155884612,
+      "Trifolium repens": 0.00749165578885834,
+      "Viccia cracca": -0.001969042573773283
+    },
+    "unit": "early-neighbor species, bootstrap is descriptive; 15 source taxa not random flora sample"
+  },
+  "within_guild_GR_mapping": {
+    "observed_MSE": 0.046884784235996166,
+    "within_guild_shuffled_neighbor_GR_MSE_median": 0.051740569358912934,
+    "within_guild_shuffled_neighbor_GR_MSE_95pct": [
+      0.04647243532985859,
+      0.054371139103227994
+    ],
+    "fraction_shuffles_as_good_or_better": 0.04,
+    "n_permutations": 499,
+    "seed": 20261124,
+    "caution": "Posthoc mapping specificity diagnostic, not source randomized trait intervention"
+  },
+  "penalty_sensitivity": {
+    "1.0": {
+      "scores": {
+        "focal_morph6": {
+          "directed_pair_RMSE": 0.22820774142987627,
+          "species_equal_MSE": 0.0522729040056908,
+          "species_equal_RMSE": 0.228632683590275
+        },
+        "focal_morph6_plus_neighbor_GR": {
+          "directed_pair_RMSE": 0.21623281761451119,
+          "species_equal_MSE": 0.04677049198718728,
+          "species_equal_RMSE": 0.21626486535539535
+        }
+      },
+      "comparison": {
+        "candidate": "focal_morph6_plus_neighbor_GR",
+        "baseline": "focal_morph6",
+        "mean_MSE_gain_positive_is_better": 0.005502412018503517,
+        "bootstrap_95pct": [
+          -0.0015808681828513161,
+          0.014652956663956634
+        ],
+        "n_heldout_species_improved": 9,
+        "n_heldout_species_worse": 6,
+        "total_heldout_species": 15,
+        "excluding_Antennaria_species_mean_MSE_gain": 0.0019424014636650407,
+        "species_level_gains": {
+          "Agrostis capillaris": -0.0013144562298106482,
+          "Antennaria dioica": 0.05534255978624218,
+          "Briza media": 0.01934370622217106,
+          "Cardamine pratensis": 0.005937830571520378,
+          "Dianthus deltoides": -0.015599300052886726,
+          "Festuca rubra": 0.0012218182969317426,
+          "Lathyrus sylvestris": -0.000045863443422972106,
+          "Leucanthemum vulgare": 0.000027633886056671608,
+          "Lotus corniculatus": 0.01706787675178594,
+          "Phalaris arundinacea": -0.004178990021736564,
+          "Poa pratensis": 0.0010081078078384952,
+          "Sedum acre": -0.01215550940674033,
+          "Trifolium pratense": 0.011295006074339184,
+          "Trifolium repens": 0.00734055621508551,
+          "Viccia cracca": -0.002754796179821172
+        },
+        "unit": "early-neighbor species, bootstrap is descriptive; 15 source taxa not random flora sample"
+      }
+    },
+    "100.0": {
+      "scores": {
+        "focal_morph6": {
+          "directed_pair_RMSE": 0.2339210479320615,
+          "species_equal_MSE": 0.05483086714878459,
+          "species_equal_RMSE": 0.2341599178954088
+        },
+        "focal_morph6_plus_neighbor_GR": {
+          "directed_pair_RMSE": 0.22338999625186612,
+          "species_equal_MSE": 0.049919132975276774,
+          "species_equal_RMSE": 0.2234259004128142
+        }
+      },
+      "comparison": {
+        "candidate": "focal_morph6_plus_neighbor_GR",
+        "baseline": "focal_morph6",
+        "mean_MSE_gain_positive_is_better": 0.004911734173507807,
+        "bootstrap_95pct": [
+          0.0002565849404708217,
+          0.011096377238095562
+        ],
+        "n_heldout_species_improved": 11,
+        "n_heldout_species_worse": 4,
+        "total_heldout_species": 15,
+        "excluding_Antennaria_species_mean_MSE_gain": 0.002486770277533653,
+        "species_level_gains": {
+          "Agrostis capillaris": -0.00037594353266910685,
+          "Antennaria dioica": 0.038861228717145965,
+          "Briza media": 0.014343732188594215,
+          "Cardamine pratensis": 0.004433599289953863,
+          "Dianthus deltoides": -0.008842179070734597,
+          "Festuca rubra": 0.0008314300853461409,
+          "Lathyrus sylvestris": 0.00036143363879925783,
+          "Leucanthemum vulgare": 0.0000351385629803469,
+          "Lotus corniculatus": 0.011558474859894023,
+          "Phalaris arundinacea": -0.0028954152877032936,
+          "Poa pratensis": 0.0015262369155898611,
+          "Sedum acre": -0.00371356448774815,
+          "Trifolium pratense": 0.00889389918908979,
+          "Trifolium repens": 0.007178487945494416,
+          "Viccia cracca": 0.0014794535885843847
+        },
+        "unit": "early-neighbor species, bootstrap is descriptive; 15 source taxa not random flora sample"
+      }
+    }
+  },
+  "interpretive_boundaries": [
+    "Post hoc following an earlier 7th trait sensitivity; this is not preregistered confirmation.",
+    "Solo growth rate GR_j of the earlier neighbor is not mathematically identical to solo focal biomass A_i denominator for i != j.",
+    "GR_j is measured on source solo-control plants after 10 weeks and may proxy growth size / resources / experiment-specific performance, not isolated biological mechanism.",
+    "A main penalty-10 cluster bootstrap confidence interval crosses zero, so improvement across unseen species is suggestive not decisive.",
+    "Observed within-guild mapping rank is a specificity diagnostic not a randomized experiment p.",
+    "Original Ecology 2025 article already linked traits and priority effects.",
+    "No modification of frozen KNK v28-v38 or other experimental draft PRs."
+  ]
+}
