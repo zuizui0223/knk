@@ -55,6 +55,13 @@ def parse_workbook(path:Path):
         raise SourceStop("Unexpected original workbook sheets")
     mon=sheets["monoculture_aboveground biomass"]["rows"]
     mix=sheets["mixture_aboveground biomass"]["rows"]
+    # Actual source contains one trailing padded Excel row with only blank
+    # cells after the 40 real treatment rows. Source-only audited before scoring.
+    if len(mix)!=43 or not all(
+        v is None or str(v).strip()=="" for v in mix[-1]
+    ):
+        raise SourceStop("Expected source 43 XML rows with one empty tail row")
+    mix=mix[:-1]
     if len(mon)!=41 or len(mix)!=42:
         raise SourceStop("Expected 1+40 mono rows and 2+40 mix rows")
     if tuple(mon[0][:7])!=("Drought treatment","Soil treatment",*MONO_SPECIES):
@@ -96,6 +103,7 @@ def parse_workbook(path:Path):
     mix_rows=group_rows(mix,has_second_header=True)
     mono={}
     mixtures={}
+    source_missing=[]
     for w in WATER:
         for soil in SOIL:
             mr=mono_rows[w,soil]
@@ -106,14 +114,56 @@ def parse_workbook(path:Path):
                      for i,row in mr],float)
             for assembly in ASSEMBLAGES:
                 components=assembly.split("-")
-                values=np.array([
-                    [nonnegative(row[assignments[assembly,sp]],
-                                 f"mixture {assembly}/{w}/{soil}/{sp}/row{i}")
-                     for sp in components]
-                    for i,row in xx],float)
-                if values.shape!=(4,len(components)):
-                    raise SourceStop("Incorrect source mixture pot×species layout")
-                mixtures[w,soil,assembly]=values
+                values=[]
+                for replicate,(i,row) in enumerate(xx,1):
+                    raw_cells=[
+                        row[assignments[assembly,sp]]
+                        if assignments[assembly,sp]<len(row) else None
+                        for sp in components
+                    ]
+                    missing=[sp for sp,v in zip(components,raw_cells)
+                             if v is None or str(v).strip()==""]
+                    if missing:
+                        source_missing.append({
+                            "water":w,"soil":soil,"assembly":assembly,
+                            "replicate_order":replicate,"missing_species":missing,
+                            "entire_pot_absent":len(missing)==len(components)
+                        })
+                        if assembly in PAIRS:
+                            if len(missing)!=len(components):
+                                raise SourceStop("Partial missingness in primary two-species mixture")
+                            # No imputation. A whole source mixture pot is unobserved.
+                            continue
+                        # Three/four species assemblies are not scored; preserve
+                        # missingness audit but never set missing component to zero.
+                        continue
+                    if assembly in PAIRS:
+                        values.append([
+                            nonnegative(v,f"mix {assembly}/{w}/{soil}/{sp}/replicate{replicate}")
+                            for sp,v in zip(components,raw_cells)])
+                if assembly in PAIRS:
+                    if len(values)<3 or len(values)>4:
+                        raise SourceStop("Unexpected missing mixture pot count")
+                    mixtures[w,soil,assembly]=np.asarray(values,float)
+    expected_missing={
+        ("Wet","SK","SK-AF-AC-ES",3,("AC",)),
+        ("Wet","AF","SK-AF-AC-ES",3,("SK",)),
+        ("Dry","S","AF-AC",1,("AF","AC")),
+        ("Dry","S","SK-AF-AC-ES",1,("ES",))
+    }
+    actual_missing={
+        (z["water"],z["soil"],z["assembly"],z["replicate_order"],
+         tuple(z["missing_species"])) for z in source_missing
+    }
+    if actual_missing!=expected_missing:
+        raise SourceStop(f"Source-only audited missingness mismatch: {actual_missing}")
+    if len(mixtures)!=3*2*5 or len(mono)!=5*2*5:
+        raise SourceStop("Incomplete primary factor-cell data")
+    if len(mixtures["Dry","S","AF-AC"])!=3:
+        raise SourceStop("Missing whole-pot design amendment not applied")
+    if any(len(v)!=4 for key,v in mixtures.items()
+           if key!=("Dry","S","AF-AC")):
+        raise SourceStop("Unexpected non-four-replicate source primary cell")
     allvals=np.r_[np.concatenate(list(mono.values())),
                   np.concatenate([v.flatten() for v in mixtures.values()])]
     summary={
@@ -123,12 +173,17 @@ def parse_workbook(path:Path):
         "n_monoculture_rows":len(mon)-1,"n_mixture_rows":len(mix)-2,
         "n_water":len(WATER),"n_soil":len(SOIL),
         "n_source_plants":len(MONO_SPECIES),
-        "n_mixture_assemblages":len(ASSEMBLAGES),
+        "n_mixture_assemblages_described":len(ASSEMBLAGES),
+        "n_primary_2_species_assemblages_scored":len(PAIRS),
+        "n_ignored_trailing_blank_excel_rows":1,
+        "source_only_missingness":source_missing,
+        "source_missing_whole_primary_mixture_pots":1,
+        "source_partially_missing_unscored_4species_cells":3,
         "mixture_assemblage_names":list(ASSEMBLAGES),
         "n_monoculture_species_groupings":len(mono),
         "n_mixture_pot_groupings":len(mixtures),
         "n_mono_original_pot_units_if_column_specific":sum(len(v) for v in mono.values()),
-        "n_mixture_original_pot_units_if_assembly_specific":sum(len(v) for v in mixtures.values()),
+        "n_scored_primary_pairwise_mixture_pot_units":sum(len(v) for v in mixtures.values()),
         "n_mixture_species_measurements":sum(v.size for v in mixtures.values()),
         "n_observed_zeros":int(np.count_nonzero(allvals==0)),
         "n_nonfinite":int(np.count_nonzero(~np.isfinite(allvals))),
@@ -157,7 +212,7 @@ def bootstrap_group_means(mono:dict,mixtures:dict,seed:int=SEED,n_boot:int=B):
                 arr=mono[w,s,sp]
                 which=rng.integers(0,len(arr),size=(n_boot,len(arr)))
                 mb[w,s,sp]=arr[which].mean(axis=1)
-            for name in ASSEMBLAGES:
+            for name in PAIRS:
                 arr=mixtures[w,s,name]
                 which=rng.integers(0,len(arr),size=(n_boot,len(arr)))
                 # Whole mixture pot = one row; keep all species covarying
