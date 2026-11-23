@@ -1,0 +1,382 @@
+{
+  "status": "INDEPENDENT_EXPERIMENT_REANALYSIS_SOURCE_AUTHENTIC_SPECIES_HOLDOUT",
+  "date": "2026-11-24",
+  "dataset": "10.5281/zenodo.10512662",
+  "article": "10.1002/ecy.4528",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45205233811",
+  "protocol": "docs/VANSTEIJN_UNSEEN_NEIGHBOR_TRANSFER_PRE_SCORE_20261124.md",
+  "source": {
+    "n_species": 15,
+    "n_directed_pairs": 202,
+    "source_doi": "10.5281/zenodo.10512662",
+    "main_traits": [
+      "SLA",
+      "LA",
+      "RMF",
+      "Plant height",
+      "Lateral spread",
+      "LDMC"
+    ]
+  },
+  "primary_models": {
+    "intercept": {
+      "overall_rmse": 0.2641820968995203,
+      "pooled_pair_mse": 0.06979218032222755,
+      "species_equal_MSE": 0.06971012465664148,
+      "species_equal_RMSE": 0.26402674988841845,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0
+    },
+    "guild": {
+      "overall_rmse": 0.2482818910590066,
+      "pooled_pair_mse": 0.06164389742783642,
+      "species_equal_MSE": 0.06169253004133664,
+      "species_equal_RMSE": 0.24837981005173637,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0.008148282894391123
+    },
+    "focal_morph": {
+      "overall_rmse": 0.2285226819661967,
+      "pooled_pair_mse": 0.05222261617302349,
+      "species_equal_MSE": 0.05240719569729286,
+      "species_equal_RMSE": 0.22892617958043343,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0.017569564149204055
+    },
+    "both_morph": {
+      "overall_rmse": 0.25116783278798066,
+      "pooled_pair_mse": 0.06308528022741101,
+      "species_equal_MSE": 0.06277975869677353,
+      "species_equal_RMSE": 0.25055889267151055,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0.006706900094816531
+    },
+    "both_morph_abs_gap": {
+      "overall_rmse": 0.24113582412143983,
+      "pooled_pair_mse": 0.05814648567472596,
+      "species_equal_MSE": 0.057689890733433315,
+      "species_equal_RMSE": 0.24018719935382343,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0.011645694647501585
+    },
+    "guild_both_morph_abs_gap": {
+      "overall_rmse": 0.2349256680457888,
+      "pooled_pair_mse": 0.05519006950676015,
+      "species_equal_MSE": 0.05494492039945738,
+      "species_equal_RMSE": 0.23440332847350392,
+      "n_heldout_species": 15,
+      "n_test_pairs": 202,
+      "overall_mse_skill_vs_intercept": 0.014602110815467396
+    }
+  },
+  "species_level_paired_bootstrap": {
+    "both_morph_abs_gap_vs_guild": {
+      "MSE_gain_positive_is_better": 0.00400263930790332,
+      "bootstrap95": [
+        -0.011463702845051403,
+        0.01682412238870172
+      ],
+      "n_species_improved": 11,
+      "n_species_worse": 4,
+      "n_species_tied": 0,
+      "n_species": 15,
+      "species_equal_difference": {
+        "Agrostis capillaris": 0.005319349408753227,
+        "Antennaria dioica": 0.03641832419775497,
+        "Briza media": -0.005651889463219831,
+        "Cardamine pratensis": 0.01057856201601342,
+        "Dianthus deltoides": 0.03246211954712697,
+        "Festuca rubra": 0.032506835949085315,
+        "Lathyrus sylvestris": 0.002300925135562265,
+        "Leucanthemum vulgare": -0.036464008955181475,
+        "Lotus corniculatus": 0.022708782563129783,
+        "Phalaris arundinacea": 0.02400661729429111,
+        "Poa pratensis": 0.0016334512271541646,
+        "Sedum acre": -0.07604300329891943,
+        "Trifolium pratense": 0.01046076780213901,
+        "Trifolium repens": -0.008043210872496445,
+        "Viccia cracca": 0.007845967067356761
+      }
+    },
+    "both_morph_abs_gap_vs_focal_morph": {
+      "MSE_gain_positive_is_better": -0.005282695036140464,
+      "bootstrap95": [
+        -0.02333173330942352,
+        0.010487130378116133
+      ],
+      "n_species_improved": 7,
+      "n_species_worse": 8,
+      "n_species_tied": 0,
+      "n_species": 15,
+      "species_equal_difference": {
+        "Agrostis capillaris": -0.005656888980709311,
+        "Antennaria dioica": 0.05697662690886064,
+        "Briza media": 0.0020314649502774507,
+        "Cardamine pratensis": -0.0009196195687198039,
+        "Dianthus deltoides": 0.0021873600074061306,
+        "Festuca rubra": 0.007897281177067596,
+        "Lathyrus sylvestris": -0.015813770562264268,
+        "Leucanthemum vulgare": -0.0541402534077637,
+        "Lotus corniculatus": 0.027297955291565403,
+        "Phalaris arundinacea": 0.012295571982575651,
+        "Poa pratensis": -0.0024015961095156108,
+        "Sedum acre": -0.09517981375695922,
+        "Trifolium pratense": 0.014667294579095054,
+        "Trifolium repens": -0.017962136440925876,
+        "Viccia cracca": -0.010519901612097104
+      }
+    },
+    "both_morph_vs_focal_morph": {
+      "MSE_gain_positive_is_better": -0.0103725629994807,
+      "bootstrap95": [
+        -0.029210370272337093,
+        0.002451310943664699
+      ],
+      "n_species_improved": 6,
+      "n_species_worse": 9,
+      "n_species_tied": 0,
+      "n_species": 15,
+      "species_equal_difference": {
+        "Agrostis capillaris": -0.0152965912421714,
+        "Antennaria dioica": -0.009614537923325311,
+        "Briza media": 0.006467659702559331,
+        "Cardamine pratensis": 0.005751286035229973,
+        "Dianthus deltoides": -0.007262344198860564,
+        "Festuca rubra": 0.012561544870083246,
+        "Lathyrus sylvestris": -0.02032577432208023,
+        "Leucanthemum vulgare": -0.010107271146497288,
+        "Lotus corniculatus": 0.024658545611044323,
+        "Phalaris arundinacea": 0.0060282239445540835,
+        "Poa pratensis": -0.01695377751354952,
+        "Sedum acre": -0.12050339838762836,
+        "Trifolium pratense": 0.008595026794118797,
+        "Trifolium repens": -0.017019764169789058,
+        "Viccia cracca": -0.002567273045898516
+      }
+    },
+    "both_morph_abs_gap_vs_both_morph": {
+      "MSE_gain_positive_is_better": 0.0050898679633402345,
+      "bootstrap95": [
+        -0.005416853111285303,
+        0.01702466365487383
+      ],
+      "n_species_improved": 9,
+      "n_species_worse": 6,
+      "n_species_tied": 0,
+      "n_species": 15,
+      "species_equal_difference": {
+        "Agrostis capillaris": 0.009639702261462088,
+        "Antennaria dioica": 0.06659116483218595,
+        "Briza media": -0.00443619475228188,
+        "Cardamine pratensis": -0.006670905603949777,
+        "Dianthus deltoides": 0.009449704206266694,
+        "Festuca rubra": -0.00466426369301565,
+        "Lathyrus sylvestris": 0.004512003759815961,
+        "Leucanthemum vulgare": -0.04403298226126641,
+        "Lotus corniculatus": 0.0026394096805210793,
+        "Phalaris arundinacea": 0.0062673480380215675,
+        "Poa pratensis": 0.014552181404033908,
+        "Sedum acre": 0.025323584630669138,
+        "Trifolium pratense": 0.006072267784976257,
+        "Trifolium repens": -0.0009423722711368182,
+        "Viccia cracca": -0.007952628566198588
+      }
+    }
+  },
+  "within_guild_neighbor_trait_mapping": {
+    "observed_species_equal_MSE": 0.057689890733433315,
+    "mapping_null_median": 0.06454626317667275,
+    "mapping_null_95pct": [
+      0.042854856750261607,
+      0.10651319543300491
+    ],
+    "mapping_fraction_at_least_as_predictive": 0.315,
+    "n_shuffled_neighbor_trait_mappings": 199,
+    "seed": 20261125,
+    "within_each_5_species_guild": true,
+    "interpretation": "Trait-label mapping placebo, not species-response randomized causal p value."
+  },
+  "sensitivities": {
+    "RII_late_total": {
+      "intercept": {
+        "overall_rmse": 0.2914518787970427,
+        "pooled_pair_mse": 0.08494419765432608,
+        "species_equal_MSE": 0.08590013231187436,
+        "species_equal_RMSE": 0.29308724351611476,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0
+      },
+      "guild": {
+        "overall_rmse": 0.24903919895849574,
+        "pooled_pair_mse": 0.06202052261788923,
+        "species_equal_MSE": 0.06284066520555402,
+        "species_equal_RMSE": 0.2506804045105122,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.02292367503643685
+      },
+      "focal_morph": {
+        "overall_rmse": 0.25038009528963956,
+        "pooled_pair_mse": 0.06269019211724898,
+        "species_equal_MSE": 0.06337667527105657,
+        "species_equal_RMSE": 0.25174724481323835,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.0222540055370771
+      },
+      "both_morph": {
+        "overall_rmse": 0.2921658636091417,
+        "pooled_pair_mse": 0.08536089185847559,
+        "species_equal_MSE": 0.08567252664881456,
+        "species_equal_RMSE": 0.29269869601488585,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": -0.00041669420414951197
+      },
+      "both_morph_abs_gap": {
+        "overall_rmse": 0.2650890283227454,
+        "pooled_pair_mse": 0.0702721929370973,
+        "species_equal_MSE": 0.07021010596920398,
+        "species_equal_RMSE": 0.2649718965649074,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.014672004717228779
+      },
+      "guild_both_morph_abs_gap": {
+        "overall_rmse": 0.26279115129186326,
+        "pooled_pair_mse": 0.06905918919730297,
+        "species_equal_MSE": 0.0694319973466843,
+        "species_equal_RMSE": 0.2634995205815075,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.015885008457023106
+      }
+    },
+    "RII_sim_total": {
+      "intercept": {
+        "overall_rmse": 0.23857073916261348,
+        "pooled_pair_mse": 0.056915997584595764,
+        "species_equal_MSE": 0.05727724360819235,
+        "species_equal_RMSE": 0.23932664625609984,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0
+      },
+      "guild": {
+        "overall_rmse": 0.232673784476579,
+        "pooled_pair_mse": 0.05413708998265353,
+        "species_equal_MSE": 0.05468918710288116,
+        "species_equal_RMSE": 0.23385719382324155,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.0027789076019422362
+      },
+      "focal_morph": {
+        "overall_rmse": 0.184834177453288,
+        "pooled_pair_mse": 0.03416367315483356,
+        "species_equal_MSE": 0.03459647473536216,
+        "species_equal_RMSE": 0.18600127616595044,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.022752324429762202
+      },
+      "both_morph": {
+        "overall_rmse": 0.1823667157096192,
+        "pooled_pair_mse": 0.03325761899871307,
+        "species_equal_MSE": 0.033578242735396675,
+        "species_equal_RMSE": 0.18324367038289938,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.02365837858588269
+      },
+      "both_morph_abs_gap": {
+        "overall_rmse": 0.17867007179299066,
+        "pooled_pair_mse": 0.03192299455451243,
+        "species_equal_MSE": 0.032184240734171185,
+        "species_equal_RMSE": 0.17939966759771653,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.02499300303008333
+      },
+      "guild_both_morph_abs_gap": {
+        "overall_rmse": 0.18412210276531724,
+        "pooled_pair_mse": 0.03390094872672204,
+        "species_equal_MSE": 0.034263786930146214,
+        "species_equal_RMSE": 0.18510479985712475,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.023015048857873727
+      }
+    },
+    "including_growth_rate_derived_from_solo_control": {
+      "intercept": {
+        "overall_rmse": 0.2641820968995203,
+        "pooled_pair_mse": 0.06979218032222755,
+        "species_equal_MSE": 0.06971012465664148,
+        "species_equal_RMSE": 0.26402674988841845,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0
+      },
+      "guild": {
+        "overall_rmse": 0.2482818910590066,
+        "pooled_pair_mse": 0.06164389742783642,
+        "species_equal_MSE": 0.06169253004133664,
+        "species_equal_RMSE": 0.24837981005173637,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.008148282894391123
+      },
+      "focal_morph": {
+        "overall_rmse": 0.22961204725643056,
+        "pooled_pair_mse": 0.052721692245289296,
+        "species_equal_MSE": 0.052896998920953814,
+        "species_equal_RMSE": 0.22999347582258461,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.01707048807693825
+      },
+      "both_morph": {
+        "overall_rmse": 0.22638204410601834,
+        "pooled_pair_mse": 0.05124882989361924,
+        "species_equal_MSE": 0.05116857028993728,
+        "species_equal_RMSE": 0.22620470881468688,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.01854335042860831
+      },
+      "both_morph_abs_gap": {
+        "overall_rmse": 0.21778919410311506,
+        "pooled_pair_mse": 0.047432133068084324,
+        "species_equal_MSE": 0.047336727818847714,
+        "species_equal_RMSE": 0.21757005267004859,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.02236004725414322
+      },
+      "guild_both_morph_abs_gap": {
+        "overall_rmse": 0.21834558659762085,
+        "pooled_pair_mse": 0.047674795186659145,
+        "species_equal_MSE": 0.04768033883240414,
+        "species_equal_RMSE": 0.2183582808880949,
+        "n_heldout_species": 15,
+        "n_test_pairs": 202,
+        "overall_mse_skill_vs_intercept": 0.0221173851355684
+      }
+    }
+  },
+  "claim_limits": [
+    "Strictly leave one complete plant species out of every training pair in either role, evaluate its earlier-neighbor outcomes.",
+    "Morphology measured on solo-control plants; not available ex-ante in all systems.",
+    "Comparing study-paired 202 directed responses does not provide independent replication of 202 species.",
+    "Trait mapping fraction is a negative-control specificity diagnostic, NOT a randomized causal p value.",
+    "The source authors already demonstrated in-sample trait associations; this tests unseen-neighbor prediction.",
+    "Original frozen v28-v38 KNK and other Draft PRs untouched."
+  ]
+}
