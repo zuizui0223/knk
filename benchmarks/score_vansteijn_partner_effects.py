@@ -6,7 +6,7 @@ Contract committed earlier: docs/VANSTEIJN_PAIR_INTERACTION_PRE_SCORE_20261123.m
 
 IMPORTANT: RII_late compares later-planted and simultaneous-planted focal
 biomass in mixed pairs. It is NOT a mechanistic interspecific alpha coefficient,
-because planting schedules and age also differ.
+because the pre-established neighbor is three weeks older; the focal's own 10-week age is matched.
 """
 from __future__ import annotations
 
