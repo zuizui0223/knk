@@ -104,16 +104,16 @@ def test_orphan_effect_id_refused():
         validate(r)
 
 
-def test_nine_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
+def test_ten_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
     result=build(ROOT,tmp_path)
-    assert result["substantively_verified_prior_art_papers_n"]==9
+    assert result["substantively_verified_prior_art_papers_n"]==10
     assert result["source_audited_studies"]>=9
-    assert result["aggregate_effect_rows"]==141
-    assert result["study_records"]==32
-    assert result["experimental_panels"]==34
-    assert result["source_audited_studies"]==10
-    assert result["panels_with_named_and_unlabeled_rank_measured"]==8
-    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==7
+    assert result["aggregate_effect_rows"]==161
+    assert result["study_records"]==33
+    assert result["experimental_panels"]==35
+    assert result["source_audited_studies"]==11
+    assert result["panels_with_named_and_unlabeled_rank_measured"]==9
+    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==8
     assert result["panels_with_two_species_top1_named_rank_n"]==1
     assert result["methodological_novelty_threats_n"]==5
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
@@ -121,7 +121,7 @@ def test_nine_substantive_prior_art_checks_not_independent_effect_rows(tmp_path)
             "SELECT study_id,source_raw_audited,"
             "causally_independent_interaction_to_rank_validated "
             "FROM prior_art_verified ORDER BY prior_art_id").fetchall()
-        assert len(rows)==9
+        assert len(rows)==10
         assert all(r[2]=="no" for r in rows)
         row=db.execute(
             "SELECT source_raw_audited FROM prior_art_verified WHERE study_id='ST_GENERATIONS2026'"
@@ -134,12 +134,12 @@ def test_nine_substantive_prior_art_checks_not_independent_effect_rows(tmp_path)
 def test_methodological_precedents_are_separate_from_empirical_effects(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["methodological_novelty_threats_n"]==5
-    assert summary["substantively_verified_prior_art_papers_n"]==9
+    assert summary["substantively_verified_prior_art_papers_n"]==10
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         r=db.execute("SELECT record_id,not_independent_effect,doi_or_unverified FROM methodological_prior_art").fetchall()
         assert len(r)==5
         assert all(z[1]=="yes" for z in r)
-        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==141
+        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==161
         assert any(z[2]=="doi_unverified" for z in r)
 
 
@@ -175,7 +175,7 @@ def test_routing_metadata_and_descriptive_cages_separate(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["routing_field_test_rows"]==21
     assert summary["routing_cage_descriptive_contrast_rows"]==12
-    assert summary["panels_with_raw_source_audited_named_rank_n"]==7
+    assert summary["panels_with_raw_source_audited_named_rank_n"]==8
     assert summary["panels_with_derived_matrix_descriptive_named_rank_n"]==1
     assert not summary["routing_cage_meta_eligible"]
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
@@ -192,3 +192,17 @@ def test_descriptive_cage_cannot_be_promoted_to_effect():
     r["effects"][0]["panel_id"]="P_PRASAD_DROPOUT"
     with pytest.raises(ValueError,match="Candidate presented as scored"):
         validate(r)
+
+def test_saine_independent_experiment_preserves_nulls_and_placebo(tmp_path):
+    result=build(ROOT,tmp_path)
+    assert result["saine_test_rows"]==20
+    assert result["saine_ecological_postintroduction_rows"]==18
+    assert result["saine_baseline_placebo_rows"]==2
+    assert result["saine_eligibility_tests_not_effects"]==2
+    assert result["saine_complete_logs"]==446
+    assert result["saine_meta_eligible"] is False
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_SAINE2025'").fetchone()==(20,)
+        assert db.execute("SELECT lane,year,endpoint FROM v_saine_tests WHERE p_holm<=.05").fetchall()==[("any_introduction","2021","named")]
+        assert db.execute("SELECT COUNT(*) FROM v_saine_tests WHERE endpoint='rank' AND p_holm<=.05").fetchone()==(0,)
+        assert db.execute("SELECT COUNT(DISTINCT publication_cluster) FROM v_saine_tests").fetchone()==(1,)

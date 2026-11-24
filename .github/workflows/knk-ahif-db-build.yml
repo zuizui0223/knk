@@ -8,6 +8,8 @@ on:
       - "database/ahif_v1/**"
       - "benchmarks/build_ahif_db.py"
       - "benchmarks/ahif_routing_tables.py"
+      - "benchmarks/ahif_saine_table.py"
+      - "validation/ahif_v1/saine2025_nontarget_succession_v1.json"
       - "validation/ahif_v1/vansteijn2026_nontarget_temporal_results_v1.json"
       - "validation/ahif_v1/prasad2026_nontarget_dropout_cage_descriptive_v1.json"
       - "benchmarks/audit_zou2023_review_source.py"
@@ -91,11 +93,11 @@ jobs:
           from pathlib import Path
           p=Path(os.environ["RUNNER_TEMP"])/"ahif"
           report=json.loads((p/"ahif_v1_validation.json").read_text())
-          assert report["study_records"]==32
-          assert report["experimental_panels"]==34
-          assert report["aggregate_effect_rows"]==141
-          assert report["source_audited_studies"]==10
-          assert report["panels_with_named_and_unlabeled_rank_measured"]==8
+          assert report["study_records"]==33
+          assert report["experimental_panels"]==35
+          assert report["aggregate_effect_rows"]==161
+          assert report["source_audited_studies"]==11
+          assert report["panels_with_named_and_unlabeled_rank_measured"]==9
           assert report["methodological_novelty_threats_n"]==5
           with sqlite3.connect(p/"ahif_v1.sqlite") as db:
               assert db.execute("SELECT COUNT(*) FROM methodological_prior_art WHERE not_independent_effect='yes'").fetchone()[0]==5
@@ -103,7 +105,9 @@ jobs:
               assert db.execute("SELECT COUNT(*) FROM routing_test_metadata").fetchone()==(21,)
               assert db.execute("SELECT COUNT(*) FROM cage_descriptive_contrasts").fetchone()==(12,)
               assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_PRASAD_DROPOUT'").fetchone()==(0,)
-          print("AHIF source-backed v0.4 DB audited")
+              assert db.execute("SELECT COUNT(*) FROM saine_test_metadata").fetchone()==(20,)
+              assert db.execute("SELECT COUNT(*) FROM v_saine_tests WHERE p_holm<=.05").fetchone()==(1,)
+          print("AHIF source-backed v0.5 DB audited")
           PY
       - name: Upload portable user-owned DB artifact, not source author raw data
         uses: actions/upload-artifact@v4
@@ -119,6 +123,7 @@ jobs:
             ${{ runner.temp }}/ahif/hypotheses.csv
             ${{ runner.temp }}/ahif/routing_test_metadata.csv
             ${{ runner.temp }}/ahif/cage_descriptive_contrasts.csv
+            ${{ runner.temp }}/ahif/saine_test_metadata.csv
             ${{ runner.temp }}/ahif/prior_art_verified.csv
             ${{ runner.temp }}/ahif/methodological_prior_art.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
