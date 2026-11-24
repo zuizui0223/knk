@@ -54,9 +54,16 @@ jobs:
           if data.get("id")!=15363824 or len(data.get("files",[]))<1:
               raise SystemExit("Source metadata incomplete, don't infer content")
           PY
+      - name: Original seven source files, year/plot/species grain
+        shell: bash
+        run: |
+          python -m benchmarks.probe_ahif_vansteijn2026_field \
+            --outdir "$RUNNER_TEMP/vansteijn2026"
       - name: Archive original-source manifest only
         uses: actions/upload-artifact@v4
         with:
           name: ahif-2026-plants-field-source-manifest
-          path: ${{ runner.temp }}/vansteijn2026/zenodo_source_manifest.json
+          path: |
+            ${{ runner.temp }}/vansteijn2026/zenodo_source_manifest.json
+            ${{ runner.temp }}/vansteijn2026/original_field_schema.json
           retention-days: 14
