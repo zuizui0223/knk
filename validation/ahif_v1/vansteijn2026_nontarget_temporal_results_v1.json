@@ -1,0 +1,390 @@
+{
+  "status": "SOURCE_REANALYSIS_EXPLORATORY_NOT_CAUSAL_MEDIATION",
+  "n_physical_plots": 40,
+  "n_publication_clusters": 1,
+  "primary": [
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_rank",
+      "period": "2024_minus_2021",
+      "R2": 0.4598654521253961,
+      "null_median": 0.1397538226738182,
+      "null95": [
+        0.033731704990840425,
+        0.3742632390291735
+      ],
+      "E": 0.3201116294515779,
+      "p_upper": 0.0026,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0052
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_rank",
+      "period": "2024_minus_2021",
+      "R2": 0.18980553514076845,
+      "null_median": 0.1583982741728584,
+      "null95": [
+        0.05611832717868033,
+        0.40861569873242154
+      ],
+      "E": 0.03140726096791005,
+      "p_upper": 0.3661,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.3661
+    }
+  ],
+  "secondary": [
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_named",
+      "period": "2024_minus_2021",
+      "R2": 0.3477651054786623,
+      "null_median": 0.12117525779896465,
+      "null95": [
+        0.05962339558705038,
+        0.24394163733298457
+      ],
+      "E": 0.22658984767969764,
+      "p_upper": 0.0001,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0016
+    },
+    {
+      "site": "MAL",
+      "endpoint": "sown_rank",
+      "period": "2024_minus_2021",
+      "R2": 0.39886213096744905,
+      "null_median": 0.1569950490228351,
+      "null95": [
+        0.05982961229908497,
+        0.3299011628877596
+      ],
+      "E": 0.24186708194461395,
+      "p_upper": 0.0011,
+      "n_units": 20,
+      "n_columns": 20,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0143
+    },
+    {
+      "site": "MAL",
+      "endpoint": "sown_named",
+      "period": "2024_minus_2021",
+      "R2": 0.3207904847157729,
+      "null_median": 0.1419751275690235,
+      "null95": [
+        0.06196776572480223,
+        0.2745880849205923
+      ],
+      "E": 0.17881535714674937,
+      "p_upper": 0.003,
+      "n_units": 20,
+      "n_columns": 20,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.027
+    },
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_richness",
+      "period": "2024_minus_2021",
+      "R2": 0.00405953991880917,
+      "null_median": 0.08795669824086604,
+      "null95": [
+        0.006765899864681995,
+        0.2828146143437077
+      ],
+      "E": -0.08389715832205687,
+      "p_upper": 0.9951,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.9951
+    },
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_top1",
+      "period": "2024_minus_2021",
+      "R2": 0.48819467360003327,
+      "null_median": 0.14018382208614447,
+      "null95": [
+        0.014474506350155902,
+        0.4172592266808235
+      ],
+      "E": 0.3480108515138888,
+      "p_upper": 0.0063,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0504
+    },
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_simpson_concentration",
+      "period": "2024_minus_2021",
+      "R2": 0.6484439218229195,
+      "null_median": 0.14728996863008859,
+      "null95": [
+        0.013938640472297228,
+        0.4541721628078657
+      ],
+      "E": 0.501153953192831,
+      "p_upper": 0.0016,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.018000000000000002
+    },
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_total_pin_hits",
+      "period": "2024_minus_2021",
+      "R2": 0.12223959151074128,
+      "null_median": 0.09274972523909325,
+      "null95": [
+        0.009517308230539817,
+        0.2837867172727334
+      ],
+      "E": 0.029489866271648027,
+      "p_upper": 0.3583,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.8982
+    },
+    {
+      "site": "MAL",
+      "endpoint": "nontarget_share_all_hits",
+      "period": "2024_minus_2021",
+      "R2": 0.5900393057069792,
+      "null_median": 0.16849015808232085,
+      "null95": [
+        0.016228419310555676,
+        0.506358645760059
+      ],
+      "E": 0.42154914762465834,
+      "p_upper": 0.0072,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0504
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_named",
+      "period": "2024_minus_2021",
+      "R2": 0.2363205901882328,
+      "null_median": 0.16028182133746063,
+      "null95": [
+        0.0903948028629465,
+        0.2694786458761223
+      ],
+      "E": 0.07603876885077215,
+      "p_upper": 0.0766,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.383
+    },
+    {
+      "site": "UME",
+      "endpoint": "sown_rank",
+      "period": "2024_minus_2021",
+      "R2": 0.7851679317898015,
+      "null_median": 0.1658384284996731,
+      "null95": [
+        0.039733487184766145,
+        0.46218484308590413
+      ],
+      "E": 0.6193295032901284,
+      "p_upper": 0.0001,
+      "n_units": 20,
+      "n_columns": 20,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0016
+    },
+    {
+      "site": "UME",
+      "endpoint": "sown_named",
+      "period": "2024_minus_2021",
+      "R2": 0.8162526206575528,
+      "null_median": 0.17078232894052525,
+      "null95": [
+        0.04654013078746765,
+        0.4721837689603935
+      ],
+      "E": 0.6454702917170275,
+      "p_upper": 0.0001,
+      "n_units": 20,
+      "n_columns": 20,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0016
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_richness",
+      "period": "2024_minus_2021",
+      "R2": 0.6995153473344105,
+      "null_median": 0.1502423263327949,
+      "null95": [
+        0.014539579967689854,
+        0.4701130856219709
+      ],
+      "E": 0.5492730210016156,
+      "p_upper": 0.0015,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.018000000000000002
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_top1",
+      "period": "2024_minus_2021",
+      "R2": 0.2274874568329723,
+      "null_median": 0.15311296124507326,
+      "null95": [
+        0.01755970128469398,
+        0.5111354248411561
+      ],
+      "E": 0.07437449558789905,
+      "p_upper": 0.2994,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.8982
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_simpson_concentration",
+      "period": "2024_minus_2021",
+      "R2": 0.2920286535455119,
+      "null_median": 0.14704116219552926,
+      "null95": [
+        0.013993858320315872,
+        0.46298599940834056
+      ],
+      "E": 0.14498749134998262,
+      "p_upper": 0.1551,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.6204
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_total_pin_hits",
+      "period": "2024_minus_2021",
+      "R2": 0.5184051572361116,
+      "null_median": 0.14065928112895798,
+      "null95": [
+        0.014537230152496035,
+        0.47481242720550343
+      ],
+      "E": 0.3777458761071536,
+      "p_upper": 0.0144,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0864
+    },
+    {
+      "site": "UME",
+      "endpoint": "nontarget_share_all_hits",
+      "period": "2024_minus_2021",
+      "R2": 0.5932364263201623,
+      "null_median": 0.15069793958955965,
+      "null95": [
+        0.014131757676613144,
+        0.43314264370370636
+      ],
+      "E": 0.4425384867306026,
+      "p_upper": 0.0019,
+      "n_units": 20,
+      "n_columns": 1,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.019
+    }
+  ],
+  "order_exchange": [
+    {
+      "period": "2024_minus_2021",
+      "endpoint": "nontarget_rank",
+      "statistic": 0.17923120732355832,
+      "p_exact": 0.08984375,
+      "n_exact_assignments": 1024,
+      "n_pairs_by_site": [
+        5,
+        5
+      ],
+      "site_mean_difference_l2": [
+        0.40395825068403846,
+        0.04602308611552423
+      ],
+      "p_holm_family": 0.08984375
+    },
+    {
+      "period": "2024_minus_2021",
+      "endpoint": "nontarget_named",
+      "statistic": 0.2339693241128793,
+      "p_exact": 0.0078125,
+      "n_exact_assignments": 1024,
+      "n_pairs_by_site": [
+        5,
+        5
+      ],
+      "site_mean_difference_l2": [
+        0.49153999414294525,
+        0.46283571251243555
+      ],
+      "p_holm_family": 0.0234375
+    },
+    {
+      "period": "2023_minus_2021",
+      "endpoint": "nontarget_rank",
+      "statistic": 0.1669159509013053,
+      "p_exact": 0.0234375,
+      "n_exact_assignments": 1024,
+      "n_pairs_by_site": [
+        5,
+        5
+      ],
+      "site_mean_difference_l2": [
+        0.11285273553364811,
+        0.246036487385617
+      ],
+      "p_holm_family": 0.046875
+    }
+  ],
+  "limits": "Same source plot trajectories, not independent years or proof of direct species interactions.",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45376516869",
+  "run_attempt": 2,
+  "source_job_id": 138395321840,
+  "scorer_commit": "53fae7feb0cd99640b180d25db8974f7e5834e0d",
+  "pre_score_contract": "docs/AHIF_NONTARGET_HISTORY_TRANSMISSION_TEMPORAL_20261124.md",
+  "source_doi": "10.5281/zenodo.15363824"
+}
