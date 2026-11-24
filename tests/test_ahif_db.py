@@ -1,0 +1,104 @@
+"""AHIF pilot source, numerical and causal-claim validation guards."""
+from __future__ import annotations
+
+import csv
+from pathlib import Path
+import sqlite3
+
+import pytest
+
+from benchmarks.build_ahif_db import (
+    FIELDS, load, validate, build,
+)
+
+ROOT=Path("database/ahif_v1")
+
+
+def fixtures():
+    return {k:load(ROOT,k) for k in FIELDS}
+
+
+def test_real_pilot_is_source_audited_but_not_pooled(tmp_path):
+    summary=build(ROOT,tmp_path)
+    assert summary["study_records"]>=20
+    assert summary["experimental_panels"]>=20
+    assert summary["aggregate_effect_rows"]>=40
+    assert summary["source_audited_studies"]>=8
+    assert summary["formal_meta_analysis_ready"] is False
+    assert summary["panels_with_identified_causal_interaction_to_storage_path"]==0
+    db=sqlite3.connect(tmp_path/"ahif_v1.sqlite")
+    assert db.execute("PRAGMA foreign_key_check").fetchall()==[]
+    assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==summary["aggregate_effect_rows"]
+    assert db.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]==0
+    db.close()
+
+
+def test_review_268_not_automatically_curated_as_empirical_effect():
+    r=fixtures()
+    assert len(r["studies"])<268
+    assert "Zou_2023_review_268" not in {x["study_id"] for x in r["studies"]}
+    assert not any(e["contrast"].startswith("review_study_")
+                   for e in r["effects"])
+
+
+def test_same_original_jing_family_is_not_double_counted():
+    r=fixtures()
+    x={s["study_id"]:s for s in r["studies"]}
+    assert x["ST_JINGZENODO2023"]["publication_cluster"]==\
+           x["ST_JINGDRYAD2024"]["publication_cluster"]
+    assert x["ST_JINGDRYAD2024"]["raw_source_audited"]=="no"
+    assert x["ST_JINGZENODO2023"]["raw_source_audited"]=="yes"
+
+
+def test_poem_cohorts_same_publication_cluster():
+    r=fixtures()
+    pp=[p for p in r["panels"] if p["study_id"]=="ST_POEM2025"]
+    assert len(pp)==2
+    assert {p["panel_id"] for p in pp}=={"P_POEM2020","P_POEM2021"}
+
+
+def test_invalid_causal_claim_refused():
+    r=fixtures()
+    z=next(p for p in r["panels"] if p["panel_id"]=="P_VANSTEIJN")
+    z["same_panel_causal_interaction_to_structure_identified"]="yes"
+    with pytest.raises(ValueError,match="Unjustified"):
+        validate(r)
+
+
+def test_invalid_p_value_refused():
+    r=fixtures()
+    z=next(e for e in r["effects"] if e["effect_id"]=="E_DG_NAMED")
+    z["p_value"]="1.1"
+    with pytest.raises(ValueError,match="Invalid p"):
+        validate(r)
+
+
+def test_invalid_confidence_interval_refused():
+    r=fixtures()
+    z=next(e for e in r["effects"] if e["effect_id"]=="E_FRA_ORDER")
+    z["ci95_low"]="0.5"  # above observed +.40021
+    with pytest.raises(ValueError,match="Misaligned"):
+        validate(r)
+
+
+def test_uncertain_methods_not_automatically_promoted():
+    r=fixtures()
+    s=next(s for s in r["studies"] if s["study_id"]=="ST_JINGDRYAD2024")
+    s["screen_status"]="scored_draft"
+    with pytest.raises(ValueError,match="Unverified scored"):
+        validate(r)
+
+
+def test_null_and_non_significant_effects_retained():
+    r=fixtures()
+    assert any(e["p_value"] and float(e["p_value"])>.05 for e in r["effects"])
+    assert any(e["estimate"] and float(e["estimate"])<0 for e in r["effects"])
+    assert any(e["p_value"]=="" for e in r["effects"])
+
+
+def test_orphan_effect_id_refused():
+    r=fixtures()
+    z=next(e for e in r["effects"] if e["effect_id"]=="E_LEO_NAMED")
+    z["panel_id"]="P_NEVER_MEASURED"
+    with pytest.raises(ValueError,match="Effect orphan"):
+        validate(r)
