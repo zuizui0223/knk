@@ -1,0 +1,55 @@
+name: AHIF Saine baseline-state held-site response prediction
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-saine-baseline-context.yml"
+      - "benchmarks/export_ahif_saine2025_nontarget.R"
+      - "benchmarks/score_ahif_saine2025_baseline_context.py"
+      - "tests/test_ahif_saine2025_baseline_context.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+      OMP_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: |
+          python -m pip install numpy scipy pytest
+          python -m pytest tests/test_ahif_saine2025_baseline_context.py -q
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+      - name: Get pinned original data and author methods
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"saine"
+          root.mkdir(exist_ok=True)
+          for name,md5 in {"data_meta_otu.Rdata":"4dbc27f81ffdcf1925887c7e0805b031","S2_define_HMSC_models_and_export_to_Hmsc-HPC.R":"a3dfe8ae32340e470a31cfa7bac7f9dd"}.items():
+              req=urllib.request.Request("https://zenodo.org/records/13819389/files/"+name+"?download=1",headers={"User-Agent":"AHIF-DB source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=90) as res:
+                  b=res.read(2_000_001)
+              assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Correct actual RData names and verify exact source joins
+        run: Rscript benchmarks/export_ahif_saine2025_nontarget.R "$RUNNER_TEMP/saine" "$RUNNER_TEMP/saine/ephemeral"
+      - name: Nested baseline-state R-loss with site holdout
+        run: python -m benchmarks.score_ahif_saine2025_baseline_context --source "$RUNNER_TEMP/saine/ephemeral" --out "$RUNNER_TEMP/saine/saine_baseline_context.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-saine-baseline-context-derived-only
+          path: ${{ runner.temp }}/saine/saine_baseline_context.json
+          retention-days: 30
