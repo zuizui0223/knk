@@ -1,0 +1,681 @@
+{
+  "status": "SOURCE_VERIFIED_REAL_DATA_REANALYSIS_EXPLORATORY_NOT_INDEPENDENT_MEDIATION",
+  "article_doi": "10.1002/ecy.70291",
+  "source_doi": "10.5281/zenodo.15363824",
+  "source_zip_metadata": "official original seven file MD5s pinned in benchmarks/probe_ahif_vansteijn2026_field.py",
+  "source_methods": "Source author's abundance analysis filter excludes Site GAL and Type Plot; only Transect from MAL and UME",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45332458601",
+  "pre_score_contract": "docs/AHIF_VANSTEIJN2026_FIELD_PRE_SCORE_CONTRACT_20261124.md",
+  "biological_unit": "40 original physical randomized field plots (2 sites x 5 blocks x 4 history treatments), repeated every year 2021-2024",
+  "original_species": "76 recorded total; original 20 sown, 18 recorded; 58 non-target; 2832 positive source species rows",
+  "stats": {
+    "n_siteyear_states": 8,
+    "n_sitetrajectories": 2,
+    "n_primary_tests": 16,
+    "holm_p_below_0_05": 16,
+    "n_permutations_per_site": 9999,
+    "n_whole_source_block_bootstrap": 2000
+  },
+  "primary_siteyear_76taxa": [
+    {
+      "site": "MAL",
+      "year": "2021",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.2314028436611067,
+        "null_median": 0.10915650837697999,
+        "null95": [
+          0.05863903755138145,
+          0.175928020124511
+        ],
+        "E": 0.1222463352841267,
+        "p_upper": 0.0004,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.21324265347293705,
+        "null_median": 0.11655196774838329,
+        "null95": [
+          0.05759651160716415,
+          0.20216374794928288
+        ],
+        "E": 0.09669068572455376,
+        "p_upper": 0.0139,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0139
+      },
+      "delta_E": 0.025555649559572943,
+      "delta_R2": 0.01816019018816964,
+      "mean_detected_taxa": 20.15
+    },
+    {
+      "site": "MAL",
+      "year": "2022",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.48652334209346404,
+        "null_median": 0.13545799526818675,
+        "null95": [
+          0.062104249190147086,
+          0.27577687173077986
+        ],
+        "E": 0.3510653468252773,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.33702764694098286,
+        "null_median": 0.13858351607271757,
+        "null95": [
+          0.06096550638158733,
+          0.25595175309783164
+        ],
+        "E": 0.1984441308682653,
+        "p_upper": 0.0012,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0036
+      },
+      "delta_E": 0.152621215957012,
+      "delta_R2": 0.14949569515248118,
+      "mean_detected_taxa": 15.85
+    },
+    {
+      "site": "MAL",
+      "year": "2023",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.5725200721132744,
+        "null_median": 0.14920792173762068,
+        "null95": [
+          0.06444378463438125,
+          0.33724034153379473
+        ],
+        "E": 0.42331215037565373,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.5015204129154415,
+        "null_median": 0.15755980012986176,
+        "null95": [
+          0.06377102786152644,
+          0.3469495380444449
+        ],
+        "E": 0.3439606127855797,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "delta_E": 0.07935153759007402,
+      "delta_R2": 0.07099965919783291,
+      "mean_detected_taxa": 14
+    },
+    {
+      "site": "MAL",
+      "year": "2024",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.5316040722576273,
+        "null_median": 0.15740018320763569,
+        "null95": [
+          0.06938289300411694,
+          0.34267898116934514
+        ],
+        "E": 0.3742038890499916,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.3619300819959162,
+        "null_median": 0.17612267105645604,
+        "null95": [
+          0.08374826893440862,
+          0.31697143265414374
+        ],
+        "E": 0.18580741093946015,
+        "p_upper": 0.0064,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0128
+      },
+      "delta_E": 0.18839647811053142,
+      "delta_R2": 0.1696739902617111,
+      "mean_detected_taxa": 15.8
+    },
+    {
+      "site": "UME",
+      "year": "2021",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.6895273586621138,
+        "null_median": 0.1621892904152202,
+        "null95": [
+          0.06477635485150844,
+          0.3698350471643688
+        ],
+        "E": 0.5273380682468936,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.7040151836183315,
+        "null_median": 0.16739096565690875,
+        "null95": [
+          0.05853752767836099,
+          0.4246715187233454
+        ],
+        "E": 0.5366242179614227,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "delta_E": -0.009286149714529124,
+      "delta_R2": -0.014487824956217699,
+      "mean_detected_taxa": 24
+    },
+    {
+      "site": "UME",
+      "year": "2022",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.8588874267450263,
+        "null_median": 0.1701159359638654,
+        "null95": [
+          0.048815154030073644,
+          0.4410916496352201
+        ],
+        "E": 0.6887714907811608,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.7060050532481135,
+        "null_median": 0.15582095322730874,
+        "null95": [
+          0.04625480723298055,
+          0.41269052985418153
+        ],
+        "E": 0.5501841000208048,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "delta_E": 0.1385873907603561,
+      "delta_R2": 0.1528823734969128,
+      "mean_detected_taxa": 22.05
+    },
+    {
+      "site": "UME",
+      "year": "2023",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.8416079231477174,
+        "null_median": 0.16904420439318005,
+        "null95": [
+          0.04456944037651647,
+          0.47656323273485884
+        ],
+        "E": 0.6725637187545374,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.6774864444545232,
+        "null_median": 0.16745096748416916,
+        "null95": [
+          0.05707079643691784,
+          0.39970806946197374
+        ],
+        "E": 0.5100354769703541,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "delta_E": 0.16252824178418324,
+      "delta_R2": 0.16412147869319416,
+      "mean_detected_taxa": 15.25
+    },
+    {
+      "site": "UME",
+      "year": "2024",
+      "independent_field_plot_count": 20,
+      "named": {
+        "R2": 0.851199350731147,
+        "null_median": 0.17144189200236967,
+        "null95": [
+          0.048100222432510144,
+          0.45981700825621363
+        ],
+        "E": 0.6797574587287774,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "rank": {
+        "R2": 0.7199894511284485,
+        "null_median": 0.16754646514610275,
+        "null95": [
+          0.04853351162735309,
+          0.4275493303186345
+        ],
+        "E": 0.5524429859823458,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 76,
+        "n_permutations": 9999,
+        "metric": "bray",
+        "p_holm_16_site_year_primary": 0.0016
+      },
+      "delta_E": 0.1273144727464316,
+      "delta_R2": 0.13120989960269858,
+      "mean_detected_taxa": 14.5
+    }
+  ],
+  "four_year_site_trajectory": [
+    {
+      "site": "MAL",
+      "n_independent_whole_plots": 20,
+      "n_repeated_years": 4,
+      "n_features": 304,
+      "named_4yr": {
+        "R2": 0.42711109320238966,
+        "null_median": 0.13097499526078643,
+        "null95": [
+          0.07289340217430977,
+          0.2485816786416633
+        ],
+        "E": 0.2961360979416032,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 304,
+        "n_permutations": 9999,
+        "metric": "bray"
+      },
+      "sorted_4yr": {
+        "R2": 0.3510252171264354,
+        "null_median": 0.14720443626552482,
+        "null95": [
+          0.09538366658018133,
+          0.2318349108504834
+        ],
+        "E": 0.2038207808609106,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 304,
+        "n_permutations": 9999,
+        "metric": "bray"
+      },
+      "delta_E_named_minus_rank": 0.09231531708069263,
+      "delta_R2_named_minus_rank": 0.07608587607595424,
+      "blocked_source_plot_bootstrap": {
+        "delta_R2_named_minus_rank": 0.07608587607595424,
+        "block_resample_bootstrap95": [
+          -0.02754076125141436,
+          0.12276651545603329
+        ],
+        "n_source_blocks": 5,
+        "n_cluster_bootstraps": 2000,
+        "note": "Five whole source blocks per site only; percentile uncertainty descriptive, not independent weather year CI"
+      }
+    },
+    {
+      "site": "UME",
+      "n_independent_whole_plots": 20,
+      "n_repeated_years": 4,
+      "n_features": 304,
+      "named_4yr": {
+        "R2": 0.8176069850592983,
+        "null_median": 0.17124900682908012,
+        "null95": [
+          0.05726696056998577,
+          0.4157974729283329
+        ],
+        "E": 0.6463579782302182,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 304,
+        "n_permutations": 9999,
+        "metric": "bray"
+      },
+      "sorted_4yr": {
+        "R2": 0.7091197357985284,
+        "null_median": 0.16689615906158198,
+        "null95": [
+          0.07013629886918854,
+          0.39151750678210157
+        ],
+        "E": 0.5422235767369464,
+        "p_upper": 0.0001,
+        "n_units": 20,
+        "n_columns": 304,
+        "n_permutations": 9999,
+        "metric": "bray"
+      },
+      "delta_E_named_minus_rank": 0.1041344014932718,
+      "delta_R2_named_minus_rank": 0.10848724926076991,
+      "blocked_source_plot_bootstrap": {
+        "delta_R2_named_minus_rank": 0.10848724926076991,
+        "block_resample_bootstrap95": [
+          0.03365589199415597,
+          0.11663849133321036
+        ],
+        "n_source_blocks": 5,
+        "n_cluster_bootstraps": 2000,
+        "note": "Five whole source blocks per site only; percentile uncertainty descriptive, not independent weather year CI"
+      }
+    }
+  ],
+  "secondary_source_sown20_nontarget58_and_scalar": [
+    {
+      "site": "MAL",
+      "year": "2021",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.3800607819769918,
+        "named_p": 0.0001,
+        "rank_E": 0.33868878123730994,
+        "rank_p": 0.0004
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.2555636954041936,
+        "named_p": 0.0026,
+        "rank_E": 0.2796989542659535,
+        "rank_p": 0.002
+      },
+      "slow_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.1446231264427041,
+        "named_p": 0.0194,
+        "rank_E": -0.0255556405901098,
+        "rank_p": 0.5965
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": -0.010850191148379013,
+        "named_p": 0.6977,
+        "rank_E": 0.04644686384341845,
+        "rank_p": 0.1902
+      }
+    },
+    {
+      "site": "MAL",
+      "year": "2022",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.43577606962414583,
+        "named_p": 0.0001,
+        "rank_E": 0.2772118851922427,
+        "rank_p": 0.0006
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.18302253475891894,
+        "named_p": 0.0014,
+        "rank_E": 0.18428672964430456,
+        "rank_p": 0.0064
+      },
+      "slow_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.2029590823661775,
+        "named_p": 0.0059,
+        "rank_E": 0.008015185266499053,
+        "rank_p": 0.4612
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.12259786978099968,
+        "named_p": 0.0312,
+        "rank_E": 0.05246345793501864,
+        "rank_p": 0.2473
+      }
+    },
+    {
+      "site": "MAL",
+      "year": "2023",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.4484269648134171,
+        "named_p": 0.0001,
+        "rank_E": 0.37882303230633163,
+        "rank_p": 0.0001
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.1375375187006571,
+        "named_p": 0.0085,
+        "rank_E": 0.1761559679641676,
+        "rank_p": 0.0005
+      },
+      "slow_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.16699226156791128,
+        "named_p": 0.0313,
+        "rank_E": 0.31841196385034376,
+        "rank_p": 0.0036
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.31490680183636444,
+        "named_p": 0.0001,
+        "rank_E": 0.18353850873750627,
+        "rank_p": 0.0131
+      }
+    },
+    {
+      "site": "MAL",
+      "year": "2024",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.34334812067136194,
+        "named_p": 0.0001,
+        "rank_E": 0.16176865349316116,
+        "rank_p": 0.0163
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.11875019613747137,
+        "named_p": 0.05,
+        "rank_E": 0.06370579238521554,
+        "rank_p": 0.1777
+      },
+      "slow_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.14943453446906896,
+        "named_p": 0.0028,
+        "rank_E": 0.1658903332801665,
+        "rank_p": 0.0019
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.3634576804996017,
+        "named_p": 0.0001,
+        "rank_E": 0.4799258667385218,
+        "rank_p": 0.0002
+      }
+    },
+    {
+      "site": "UME",
+      "year": "2021",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.691446061429858,
+        "named_p": 0.0001,
+        "rank_E": 0.6732742122267069,
+        "rank_p": 0.0001
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.12713517111721617,
+        "named_p": 0.0418,
+        "rank_E": 0.24608969051145,
+        "rank_p": 0.0099
+      },
+      "slow_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.6835762185295776,
+        "named_p": 0.0001,
+        "rank_E": 0.6907096588161141,
+        "rank_p": 0.0002
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.008430651643834802,
+        "named_p": 0.4166,
+        "rank_E": 0.007767989498136119,
+        "rank_p": 0.4473
+      }
+    },
+    {
+      "site": "UME",
+      "year": "2022",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.721542131815029,
+        "named_p": 0.0001,
+        "rank_E": 0.5728803124461179,
+        "rank_p": 0.0001
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.299141308015503,
+        "named_p": 0.0002,
+        "rank_E": 0.4846028224865913,
+        "rank_p": 0.0002
+      },
+      "slow_sown10": {
+        "status": "STOP_ZERO_SUBCOMMUNITY_TOTAL",
+        "n_unscorable_whole_plots": 2,
+        "n_species_columns": 10
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.3133522940307218,
+        "named_p": 0.0001,
+        "rank_E": 0.07038837934825376,
+        "rank_p": 0.1534
+      }
+    },
+    {
+      "site": "UME",
+      "year": "2023",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.7172097718400003,
+        "named_p": 0.0001,
+        "rank_E": 0.468705772058692,
+        "rank_p": 0.0001
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.5121772872569637,
+        "named_p": 0.0001,
+        "rank_E": 0.5648795534074076,
+        "rank_p": 0.0001
+      },
+      "slow_sown10": {
+        "status": "STOP_ZERO_SUBCOMMUNITY_TOTAL",
+        "n_unscorable_whole_plots": 5,
+        "n_species_columns": 10
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.2630405038893616,
+        "named_p": 0.001,
+        "rank_E": 0.3541867146521859,
+        "rank_p": 0.0014
+      }
+    },
+    {
+      "site": "UME",
+      "year": "2024",
+      "sown20": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.7309152260522485,
+        "named_p": 0.0001,
+        "rank_E": 0.48362783115673047,
+        "rank_p": 0.0001
+      },
+      "fast_sown10": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.4048444839608638,
+        "named_p": 0.0001,
+        "rank_E": 0.4523395785537463,
+        "rank_p": 0.0001
+      },
+      "slow_sown10": {
+        "status": "STOP_ZERO_SUBCOMMUNITY_TOTAL",
+        "n_unscorable_whole_plots": 5,
+        "n_species_columns": 10
+      },
+      "spontaneous_unsown58": {
+        "status": "SCORED_CONDITIONAL_ON_GUILD_MEMBERSHIP",
+        "named_E": 0.08389730073605872,
+        "named_p": 0.0721,
+        "rank_E": 0.14255451222805726,
+        "rank_p": 0.0813
+      }
+    }
+  ],
+  "caveats": [
+    "Published original study already reports germination speed, sowing order and site effects; not a new original manipulation",
+    "All eight year/site estimates are repeated states of 40 plots, not eight independent publications",
+    "Named/rank E are Bray Curtis Gower R2 over blocked randomization null, not bits of memory or ecosystem function",
+    "Non-target spontaneous taxa are source-defined not in original planted list; source records do not prove exact species arrival timing",
+    "Separate fast/slow sown guild rank STOP in UME 2022-2024 due 2/5/5 all-zero slow-guild plots, not imputed",
+    "Whole site trajectory block bootstraps have only five original blocks per site; conditional uncertainty",
+    "Source sampled vegetation pin hits, not individuals or dry biomass",
+    "No source experiment history-specific pairwise biotic alpha measured. No causal mediation from competition to rank structure demonstrated."
+  ]
+}
