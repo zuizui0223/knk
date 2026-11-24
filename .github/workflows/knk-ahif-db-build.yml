@@ -8,6 +8,8 @@ on:
       - "database/ahif_v1/**"
       - "benchmarks/build_ahif_db.py"
       - "benchmarks/audit_zou2023_review_source.py"
+      - "benchmarks/profile_ahif_review_268.py"
+      - "tests/test_ahif_review_268.py"
       - "tests/test_ahif_db.py"
   workflow_dispatch:
 
@@ -38,8 +40,14 @@ jobs:
             --xlsx "$RUNNER_TEMP/ahif-review/SupportingData.xlsx" \
             --output "$RUNNER_TEMP/ahif-review/review_sheet_manifest.json" \
             --screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv"
-      - name: Test source-lineage and scientific claim gates
-        run: python -m pytest tests/test_ahif_db.py -q
+      - name: Audit review original coding vs numeric manipulated-species bins
+        shell: bash
+        run: |
+          python -m benchmarks.profile_ahif_review_268 \
+            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv" \
+            --output-dir "$RUNNER_TEMP/ahif-review"
+      - name: Test source-lineage, source coding and scientific claim gates
+        run: python -m pytest tests/test_ahif_db.py tests/test_ahif_review_268.py -q
       - name: Build normalized SQLite and explain current causal-gap coverage
         shell: bash
         run: |
@@ -82,4 +90,6 @@ jobs:
             ${{ runner.temp }}/ahif/effects.csv
             ${{ runner.temp }}/ahif/hypotheses.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
+            ${{ runner.temp }}/ahif-review/review268_design_audit.json
+            ${{ runner.temp }}/ahif-review/review268_design_corrected_bins.csv
           retention-days: 30
