@@ -1,0 +1,27 @@
+# Before-source scoring contract — Leopold et al. 2017 wood-decomposer factorial
+
+**Registered as a source methods plan on 2026-11-24 while ORIGINAL CSV BYTES REMAIN UNAVAILABLE in the current execution environment.** Not retrospective ecological scoring. This is a proposed independently reproducible analysis once original Dryad files can be obtained by normal authorized access.
+
+## Source and precisely known biological design
+
+- Leopold et al. (2017), *Ecology Letters* DOI https://doi.org/10.1111/ele.12803; data deposit Dryad DOI https://doi.org/10.5061/dryad.7p2cv.
+- The published experiment has **10 fungal taxa** on wood disks in jar microcosms, treatments **N high/low × fungivorous Collembola present/absent × assembly history 5 levels (4 initial fungi + uninoculated control) × destructive harvest at 6/12 months ×5 jar replicates**, total **200 community/control jars**. Another **400 single-species fungal controls** separate from these community jars.
+- Dryad file metadata identifies `species.prevalence.csv`, `sample.data.csv` and `collembola.csv` in source version ID 13946, file IDs 52326, 52325 and 52327. Original prevalence data include occurrence among **nine subsamples per wood disk** for each of ten fungal taxa; these subsamples are not nine independent jars. See [source access audit](https://github.com/zuizui0223/knk/actions/runs/45316446032).
+- GitHub Actions attempts found **HTTP 401 (API) / HTTP 403 (ordinary file stream) for all three source files**, with **zero binary CSV downloads**. Do not claim any actual source-level AHIF ranks or meta effects were calculated.
+
+## Proposed primary estimands (frozen before original source availability)
+
+1. Verify source original column keys/units; join `species.prevalence.csv` and `sample.data.csv` **one-to-one by independent microcosm jar ID**, and `collembola.csv` for fauna metadata as a separate plant/animal ordinal variable. Check all 200 community/control jars and 400 monos, duplicates, missing values, 0..9 fungal prevalence counts and 2N×2grazer×5histories×2harvest×5 replicates. Actual numeric file schema must be audited BEFORE coding joins; never guess ID column names.
+2. **Exclude uninoculated control** from first-arriver comparisons. Score 4 first-arriver histories within each of the **2 nitrogen ×2 fungivore ×2 harvest = 8** predeclared strata, n=**20 independently assigned wood-disk jars** per stratum (4 groups ×5).
+3. For each jar, form the original **ten named fungal prevalences** and an **identity-free, descending sorted vector of the identical ten prevalences**, preserving both the exact sample-wise counts and their 0..9 scale. Do not call prevalence biomass: the response is **wood-subsample detection prevalence structure**, subject to detection assay sensitivity.
+4. Within each original N×fungivore×harvest stratum, use **one shared 9,999 whole-jar history-label permutation stream** to score Bray–Curtis distance-based pseudo-R² for named and sorted matrices, null median, `E_named=R²_named−median(R²_null_named)` and `E_sorted` analog. Pair the two R² values within each permutation. For rows with all-zero ten-species prevalence, STOP and apply a predeclared empty-community sensitivity rather than assigning arbitrary dissimilarity.
+5. Calculate per-stratum `T=R²_named−R²_sorted` plus whole-jar bootstrap within the four assigned histories (seed 20261124, 20,000 replicates). **Test N and fungivore modification of T by differences of paired T**, not by comparing whether individual p-values cross 0.05. Harvest 6 versus 12 mo groups are independent destructive jars but belong to one publication, do NOT count as two independent studies in meta-analysis.
+6. Distinct response from source paper: **wood disk mass loss** (decomposition), scored with actual source metadata and type-appropriate controls. Compare per-stratum functional history response against named/sorted history response descriptively. This is NOT proof of direct fungal pairwise competition coefficients or mediation without additional sources/assumptions.
+7. Source original 2017 paper already reported N/fungivore/arrival effects on species composition and wood decomposition. The only KNK-specific extension here is a **named-versus-identity-free prevalence rank decomposition** and a controlled N×grazing comparison. Do not retrospectively claim those axes are a previously unknown pathway or "first" phenomenon.
+8. All 8 strata and primary comparisons must be shown, whether significant or not, with multiplicity caveats and source unit uncertainty. Multi-strata effects from the SAME 2017 publication must NOT be pooled as eight independent studies.
+
+## Hard causal boundary
+
+Manipulating fungivore presence changes fungal competitive environment and may alter rank concentration, but grazer treatment does **not** identify historical changes in direct pairwise `alpha_ij` coefficients. A genuine AHIF joint causal bridge additionally requires age/size matched fungal interaction controls and an interaction-mediation identifying intervention. It would be methodologically incorrect to mark the 2017 panel `same_panel_causal_interaction_to_structure_identified=yes` from grazer×arrival effects alone.
+
+**Source acquisition remains open.** There is no source-derived KNK effect estimate until all three bytes are verified and original published design reconstructed. Preserve source hash, original version and negative findings, not just interesting rank outcomes.
