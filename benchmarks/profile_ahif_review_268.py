@@ -18,6 +18,22 @@ PRIOR_R_BINS=("No temporal treatment","1-2","3-10",">10")
 FIXED_BINS=("No temporal treatment","1-2","3-10","11+")
 GENERATIONS=("<=1","2-5",">5","Mixed","Not Applicable")
 
+# High-relevance titles from this exact author-coded review, identified before
+# the 13 source-coded model candidates were merged; review-level triage only.
+AHIF_NEAREST_PRIOR_ART_A={
+    "ZOU2023_R0028":"resource specialization and historical contingency",
+    "ZOU2023_R0032":"assembly history links biodiversity and productivity; 18 species binned incorrectly in review R code",
+    "ZOU2023_R0055":"plant-soil feedback and assembly history",
+    "ZOU2023_R0075":"fungal arrival links composition and decomposition",
+    "ZOU2023_R0127":"environment variation, microbial order and consumer-resource model",
+    "ZOU2023_R0172":"arrival × fungivore × nitrogen factorial with fungal prevalence and wood mass loss",
+    "ZOU2023_R0199":"founder effects and spatial pre-emption",
+    "ZOU2023_R0212":"modern coexistence-theory interaction estimates",
+    "ZOU2023_R0224":"competition model predicts grassland community composition",
+    "ZOU2023_R0249":"warming × fungal arrival and decomposition",
+    "ZOU2023_R0264":"priority effects on microbiome taxonomy and function",
+}
+
 
 def source_rows(path:Path):
     with path.open("r",encoding="utf-8-sig",newline="") as handle:
@@ -157,6 +173,38 @@ def profile(rows):
     return detailed,result
 
 
+def priority_screen_candidates(rows:list[dict])->list[dict]:
+    """Prioritize published-review title or fitted-model codes, not effect data."""
+    observed={r["review_record_id"]:r for r in rows}
+    if not AHIF_NEAREST_PRIOR_ART_A.keys()<=observed.keys():
+        raise ValueError("Original nearest-prior-art bibliography IDs missing")
+    raw_ids=set(AHIF_NEAREST_PRIOR_ART_A)
+    model_ids={r["review_record_id"] for r in rows if r["fitted_competition_model_coded"]}
+    selected=raw_ids|model_ids
+    if len(selected)!=21 or len(model_ids)!=13 or len(raw_ids)!=11:
+        raise ValueError(f"Expected 21 union of original 11+13, got {len(selected)}")
+    ordered=sorted(selected,key=lambda id_:(id_ not in raw_ids,int(id_.split("R")[-1])))
+    priority=[]
+    for id_ in ordered:
+        r=observed[id_]
+        priority.append({
+            "review_record_id":id_,
+            "priority_tier":"A_nearest_prior_art" if id_ in raw_ids else "B_review_fitted_model",
+            "why_prior_art_matters":AHIF_NEAREST_PRIOR_ART_A.get(
+                id_,"Source review codes a fitted competition/ecological process model"),
+            "source_review_model_code":r["fitted_model_original_code"],
+            "author_review_year":r["year"],
+            "author_review_title":r["title"],
+            "study_original_manipulated_species_code":r["n_manipulated_original"],
+            "study_corrected_size_bin":r["numeric_corrected_bin"],
+            "independent_AHIF_methods_screened":"no",
+            "complete_community_data_source_verified":"no",
+            "effect_size_extracted":"no",
+            "source_review_doi":SOURCE_DOI
+        })
+    return priority
+
+
 def write(path:Path, rows, fieldnames):
     with path.open("w",encoding="utf-8",newline="") as handle:
         wr=csv.DictWriter(handle,fieldnames=fieldnames)
@@ -174,12 +222,16 @@ def main():
         json.dumps(info,indent=2,ensure_ascii=False)+"\n")
     write(a.output_dir/"review268_design_corrected_bins.csv",
           rows,list(rows[0].keys()))
+    priority=priority_screen_candidates(rows)
+    write(a.output_dir/"review21_nearest_prior_art_screening.csv",
+          priority,list(priority[0].keys()))
     print("AHIF_REVIEW_PROFILE",json.dumps({
         "n":info["publication_universe_count"],
         "original":info["published_author_R_bin_counts"],
         "corrected":info["corrected_numeric_bin_counts"],
         "bin_errors":len(info["numeric_recode_discrepancies"]),
         "fitted_competition_model_codes":info["review_coded_models_n"],
+        "prioritized_bibliographic_candidates_n":len(priority),
         "uncertainty":"NONE of 268 independently AHIF source-screened"
     },ensure_ascii=False))
 
