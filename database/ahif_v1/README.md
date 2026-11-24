@@ -22,6 +22,21 @@ This is more precise than saying that priority effects exist. Previous reviews a
 
 The SQLite database plus source table CSVs and JSON checks are compiled from the above tracked text inputs, using `benchmarks/build_ahif_db.py`. Any builder failure blocks the artifact. The raw original study datasets (CSV/XLSX from prior researchers) are not copied or redistributed.
 
+## Independent review-data audit and nearest-prior-art screening (2026-11-24)
+
+Original author-reviewed Zou & Rudolf 2023 source `SupportingData.xlsx` (DOI https://doi.org/10.1016/j.tree.2023.08.001, Git blob `be2777d4e4bb1454db393b94a2118ada79118dfa`) contains **268 bibliographic rows, 14 fields**. AHIF audits the original author `LitReview.R` design bin and stores a **numeric-corrected version alongside**, not in place of, the original. One paper by Fukami & Morin (2003) has 18 manipulated species; the original R `case_when` classifies it as "No temporal treatment" because only literal `>10` is allowed. Original bins **46/107/72/43** become numerical **45/107/72/44**. [See audit](../../docs/AHIF_REVIEW268_SOURCE_AUDIT_AND_RICHNESS_GAP_20261124.md).
+
+Exactly **13/268** original review rows have a specific `Fitted Competition Model` entry; **10** of those have manipulated temporal treatments, **none of the 44** numerically recoded 11+ manipulated-species studies has a model code in the review table. The remaining `-` codes **do not mean a lack of actual species interaction measurement** and source paper auditing is incomplete. Thus this is **not** a cross-literature prevalence finding or proof of novelty.
+
+The GitHub Actions reproducible source pipeline now creates:
+- `review_candidates`: **268 unreviewed bibliography records** with original source row provenance.
+- `review_priority`: **21 unreviewed near-prior-art titles**, the union of 11 title-specific risks and 13 original-review model-coded publications (3 overlaps), with foreign keys to original bibliography rows.
+- `review268_design_audit.json`: both original R and corrected numeric categories, raw coded-model counts and all classification discrepancy rows.
+- `review268_design_corrected_bins.csv`: all 268 source-linked revised descriptors with original code retained.
+- `hypotheses.csv` includes H08, a **falsifiable >=11-species interaction-to-structure generalization hypothesis**; not yet confirmed.
+
+Strongest independent raw-data target: Leopold et al. (2017), DOI https://doi.org/10.1111/ele.12803. Source original Dryad DOI https://doi.org/10.5061/dryad.7p2cv lists exact three CSV names, but source acquisition **failed with ordinary HTTP 401/403 access controls** (verified [Actions run](https://github.com/zuizui0223/knk/actions/runs/45316446032)). No new fungal rank E was computed. A fully specified *before-source* analysis protocol is [here](../../docs/AHIF_LEOPOLD2017_PRE_SOURCE_IDENTITY_RANK_CONTRACT_20261124.md).
+
 ## Evidence classes and allowed claims
 
 | Evidence grade | Required source conditions | What can be claimed |
