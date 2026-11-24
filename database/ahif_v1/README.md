@@ -18,7 +18,7 @@ This is more precise than saying that priority effects exist. Previous reviews a
 - `effects.csv` — numeric **aggregate evidence** with its exact source estimand, CI and p-value where reported, experimental unit, status (frozen/published-source-reanalysis/post hoc) and explicit interpretation limits. Both null-like and positive findings are included. Source effects do not become independent observations merely because there are many endpoints or multiple treatments.
 - `hypotheses.csv` — falsifiable hypotheses, necessary intervention/endpoints, what would support/refute, and currently available evidence. A genuine scientific gap has to survive screening, not just be labelled novel.
 - `novelty_queries.sql` — reproducible audit queries for independent publication/source clusters, named-vs-rank structure, mechanism channels and the **strict same-panel causal bridge**.
-- `prior_art_verified.csv` / SQLite `prior_art_verified` — **6 closely related original papers** checked for substantive methodological novelty risks, each linked to its curated study with a strict DOI and source/raw-status integrity gate. Four are paper-level and two have original-source audits. These are **not six independent effect estimates**. 
+- `prior_art_verified.csv` / SQLite `prior_art_verified` — **7 closely related original papers** checked for substantive methodological novelty risks, each linked to its curated study with a strict DOI and source/raw-status integrity gate. Five are paper/metadata-level and two have outcome-source audits. These are **not seven independent effect estimates**. 
 - SQLite `review_candidates` — **268 original Zou & Rudolf 2023 citations and source-coded descriptors**, independently hash-pinned and staged from the public SupportingData.xlsx on GitHub Actions. All have the status `not_independently_screened`; they are **not** included in the curated 30 study/candidate records or the 118 numeric evidence records, and are not counted as completed AHIF evidence. Source staging CSV is in the CI artifact; the original workbook is not redistributed.
 
 The SQLite database plus source table CSVs and JSON checks are compiled from the above tracked text inputs, using `benchmarks/build_ahif_db.py`. Any builder failure blocks the artifact. The raw original study datasets (CSV/XLSX from prior researchers) are not copied or redistributed.
@@ -117,3 +117,8 @@ See [AHIF novelty defense](../../docs/AHIF_NOVELTY_DEFENSE_AND_PRIOR_ART_2026112
 4. Archive eligible effect sizes with design-aware study-level standard errors, laboratory cluster and potential overlap flags. Only then evaluate a multi-level meta-analytic model, keeping each intervention/endpoint lane separate.
 
 **Do not merge without source-method and author review; existing Ecology Letters v28–v38 remain frozen.**
+
+
+## Carlström 2019 metadata-only novelty audit
+
+[Source audit and transmission test](../../docs/AHIF_CARLSTROM2019_METADATA_AND_TRANSMISSION_GATE_20261124.md): seven substantive prior-art checks; unchanged 30 study records, 32 panels, 118 numeric effects, ten outcome-source audits. Original R script plus three metadata blobs checked, 921 filtered sample records (not 921 proven independent units), one R2 treatment-label mismatch identified. No abundance matrices obtained and no new ecological effect promoted. The separate group late-arrival and single-strain dropout assays motivate a resident-community transmission test, conditional on raw-source and overlap checks.

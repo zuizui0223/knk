@@ -104,9 +104,9 @@ def test_orphan_effect_id_refused():
         validate(r)
 
 
-def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
+def test_seven_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
     result=build(ROOT,tmp_path)
-    assert result["substantively_verified_prior_art_papers_n"]==6
+    assert result["substantively_verified_prior_art_papers_n"]==7
     assert result["source_audited_studies"]>=9
     assert result["aggregate_effect_rows"]==118
     assert result["study_records"]==30
@@ -121,7 +121,7 @@ def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
             "SELECT study_id,source_raw_audited,"
             "causally_independent_interaction_to_rank_validated "
             "FROM prior_art_verified ORDER BY prior_art_id").fetchall()
-        assert len(rows)==6
+        assert len(rows)==7
         assert all(r[2]=="no" for r in rows)
         row=db.execute(
             "SELECT source_raw_audited FROM prior_art_verified WHERE study_id='ST_GENERATIONS2026'"
@@ -134,7 +134,7 @@ def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
 def test_methodological_precedents_are_separate_from_empirical_effects(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["methodological_novelty_threats_n"]==5
-    assert summary["substantively_verified_prior_art_papers_n"]==6
+    assert summary["substantively_verified_prior_art_papers_n"]==7
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         r=db.execute("SELECT record_id,not_independent_effect,doi_or_unverified FROM methodological_prior_art").fetchall()
         assert len(r)==5
@@ -162,3 +162,11 @@ def test_new_2026_field_study_has_repeated_40_plot_grain_and_no_mechanism_claim(
     source_years={y for y in ("2021","2022","2023","2024") if
                   any(y in e["contrast"] for e in effect)}
     assert len(source_years)==4
+
+
+def test_carlstrom_metadata_not_promoted_to_effect_source(tmp_path):
+    build(ROOT,tmp_path)
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        assert db.execute("SELECT raw_source_audited FROM studies WHERE study_id=?",("ST_CARLSTROM2019",)).fetchone()==("no",)
+        assert db.execute("SELECT source_raw_audited,identity_free_rank_scored_in_ahif,causally_independent_interaction_to_rank_validated FROM prior_art_verified WHERE study_id=?",("ST_CARLSTROM2019",)).fetchone()==("no","no","no")
+        assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id=?",("P_CARLSTROM",)).fetchone()==(0,)
