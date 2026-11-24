@@ -7,6 +7,7 @@ on:
       - ".github/workflows/knk-ahif-db-build.yml"
       - "database/ahif_v1/**"
       - "benchmarks/build_ahif_db.py"
+      - "benchmarks/audit_zou2023_review_source.py"
       - "tests/test_ahif_db.py"
   workflow_dispatch:
 
@@ -24,6 +25,19 @@ jobs:
           python-version: '3.12'
       - name: Install test runner
         run: python -m pip install pytest
+      - name: Stage 268 original review citations as unreviewed candidates only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ahif-review"
+          curl --fail --location --retry 3 --retry-delay 4 \
+            "https://raw.githubusercontent.com/hengxingzou/Zou2023TrendsEcolEvol/main/SupportingData.xlsx" \
+            -o "$RUNNER_TEMP/ahif-review/SupportingData.xlsx"
+          test "$(git hash-object "$RUNNER_TEMP/ahif-review/SupportingData.xlsx")" = "be2777d4e4bb1454db393b94a2118ada79118dfa"
+          python -m benchmarks.audit_zou2023_review_source \
+            --xlsx "$RUNNER_TEMP/ahif-review/SupportingData.xlsx" \
+            --output "$RUNNER_TEMP/ahif-review/review_sheet_manifest.json" \
+            --screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv"
       - name: Test source-lineage and scientific claim gates
         run: python -m pytest tests/test_ahif_db.py -q
       - name: Build normalized SQLite and explain current causal-gap coverage
@@ -32,7 +46,8 @@ jobs:
           set -euo pipefail
           python -m benchmarks.build_ahif_db \
             --source-root database/ahif_v1 \
-            --output-dir "$RUNNER_TEMP/ahif"
+            --output-dir "$RUNNER_TEMP/ahif" \
+            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv"
           python - <<'PY'
           import json
           import sqlite3
@@ -49,6 +64,8 @@ jobs:
                   raise SystemExit("Database broken foreign keys")
           print("Verified source-audited studies",r["source_audited_studies"])
           print("Verified source-effect rows",r["aggregate_effect_rows"])
+          if r["review_bibliographic_candidates_staged_not_audited"]!=268:
+              raise SystemExit("Original review candidate bibliography not complete")
           print("Verified named/rank panels",r["panels_with_named_and_unlabeled_rank_measured"])
           print("Novelty-claim bound: targeted PILOT only")
           PY
@@ -64,4 +81,5 @@ jobs:
             ${{ runner.temp }}/ahif/panels.csv
             ${{ runner.temp }}/ahif/effects.csv
             ${{ runner.temp }}/ahif/hypotheses.csv
+            ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
           retention-days: 30
