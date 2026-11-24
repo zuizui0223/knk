@@ -26,31 +26,50 @@ stopifnot(identical(rownames(X),ids),identical(as.character(rc$sample),ids),
           identical(colnames(X),rownames(tax)),all(is.finite(X)),all(X>=0),all(X==floor(X)))
 cat("READ_QC",sum(rc$filt_nread>=10000),sum(rc$filt_nread<10000),"\n")
 stopifnot(all(is.finite(rc$filt_nread)),sum(rc$filt_nread>=10000)==1369)
-canon <- function(s) gsub("[[:space:]]+","_",trimws(as.character(s)))
-targets <- sort(setdiff(unique(as.character(meta$InocSpecies)),"control"))
-stopifnot(length(targets)==9)
-sp <- canon(tax$species)
-gen_sp <- paste(canon(tax$genus),sp,sep="_")
-sel <- sp %in% targets | gen_sp %in% targets
-mapped <- ifelse(sp %in% targets,sp,gen_sp)
+# Author S2 lines 25--48, verified by the pinned source digest.
+# These are deposited taxonomy labels, not guessed binomial matches.
+inocs <- c("Antrodia_piceata","Antrodiella_citrinella","Fomitopsis_rosea",
+           "Perenniporia_subacida","Physisporinus_crocatus","Postia_guttulata",
+           "Skeletocutis_odora","Skeletocutis_stellae","Steccherinum_collabens")
+spp <- c("Antrodia_piceata_813073","Flaviporus_citrinellus_106139",
+         "Rhodofomes_roseus_127496","Perenniporia_subacida_335816",
+         "Rigidoporus_crocatus_107233","Postia_guttulata_110917",
+         "Skeletocutis_odora_106476","Skeletocutis_stellae_323595",
+         "Junghuhnia_collabens_315979")
+targets <- setdiff(unique(as.character(meta$InocSpecies)),"control")
+stopifnot(setequal(targets,inocs))
+matches <- lapply(spp,function(s) which(as.character(tax$species)==s))
+cat("EXACT_AUTHOR_TARGET_MATCH_COUNTS",paste(inocs,lengths(matches),sep="=",collapse="|"),"\n")
+stopifnot(all(lengths(matches)>0))
+# S2's scalar assignment assumes one match per code; fail if ambiguity rather
+# than silently picking first. This tests exactly the archived taxonomy.
+stopifnot(all(lengths(matches)==1L))
+ix <- unlist(matches,use.names=FALSE)
+stopifnot(length(unique(ix))==9L)
+mapped <- inocs[match(seq_len(ncol(X)),ix)]
+sel <- seq_len(ncol(X)) %in% ix
 cat("TARGET_OTU_MAP\n")
-print(data.frame(otu=colnames(X)[sel],species=as.character(tax$species[sel]),mapped=mapped[sel]))
-stopifnot(sum(sel)==16,setequal(mapped[sel],targets))
-# All 16 target OTUs excluded from all timepoints and arms.
+print(data.frame(otu=colnames(X)[ix],species=as.character(tax$species[ix]),mapped=inocs))
 Y <- X[,!sel,drop=FALSE]
+# Keep the fixed full roster before sample filtering; distinguish zero-support
+# columns after read-depth QC from deliberately removed target OTUs.
+qc <- rc$filt_nread>=10000
+active <- colSums(Y[qc,,drop=FALSE])>0
+cat("NONTARGET_ROSTER",ncol(Y),"QC_ACTIVE",sum(active),"QC_ZERO_COLUMNS",sum(!active),"\n")
+cat("QC_ZERO_OTUS",paste(colnames(Y)[!active],collapse="|"),"\n")
 m <- data.frame(sample=ids,year=as.character(meta$SamplingYear),site=as.character(meta$SiteNew),
                 log=as.character(meta$RunningLogID),logtype=as.character(meta$LogType),
                 treatment=as.character(meta$InocSpecies),reads=as.numeric(rc$filt_nread),
                 stringsAsFactors=FALSE)
 cat("LOGTYPE",paste(names(table(m$logtype)),as.integer(table(m$logtype)),sep="=",collapse="|"),"\n")
-stopifnot(ncol(Y)==4646,length(unique(m$log))==460,
+stopifnot(ncol(Y)==4653,length(unique(m$log))==460,
           setequal(unique(m$year),c("2019","2020","2021")),
           setequal(unique(m$logtype),c("B","R","U")))
 cat("ZERO_NONTARGET_TOTAL",sum(rowSums(Y)==0),"\n")
 dir.create(out,recursive=TRUE,showWarnings=FALSE)
 write.csv(m,file.path(out,"meta.csv"),row.names=FALSE)
 writeLines(colnames(Y),file.path(out,"otu_names.txt"))
-writeLines(paste(colnames(X)[sel],mapped[sel],sep=":"),file.path(out,"excluded_target_otus.txt"))
+writeLines(paste(colnames(X)[ix],inocs,spp,sep=":"),file.path(out,"excluded_target_otus.txt"))
 con <- file(file.path(out,"counts.bin"),"wb")
 writeBin(as.double(t(Y)),con,size=8,endian="little");close(con)
 cat("GRAIN_EXPORT_OK",nrow(Y),ncol(Y),"\n")

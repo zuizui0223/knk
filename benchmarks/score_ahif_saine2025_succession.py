@@ -18,7 +18,7 @@ def adjust(rows):
     for r,p in zip(rows,holm([x["p"] for x in rows])):r["p_holm_family"]=p
 
 def design(meta,x):
-    if len(meta)!=1380 or x.shape!=(1380,4646) or not np.isfinite(x).all() or (x<0).any():
+    if len(meta)!=1380 or x.shape!=(1380,4653) or not np.isfinite(x).all() or (x<0).any():
         raise ValueError("Unexpected original non-target matrix")
     if len(set(m["sample"] for m in meta))!=1380:
         raise ValueError("Duplicate original sample")
@@ -104,7 +104,8 @@ class BlockPermutation:
 def run(meta,x,nperm=N_PERM):
     ix,t,strata,sites,types,good,groups,reads=design(meta,x)
     z={"status":"SOURCE_LOCKED_CONDITIONAL_COMPLETE_LOG_ANALYSIS_NOT_MEDIATION",
-       "source_physical_logs":460,"source_sample_states":1380,"source_nontarget_otus":4646,
+       "source_physical_logs":460,"source_sample_states":1380,"source_nontarget_otus":4653,
+       "source_qc_active_nontarget_otus":int(np.count_nonzero(x[reads>=10000].sum(axis=0)>0)),
        "complete_triplets":int(good.sum()),"excluded_logs":int((~good).sum()),
        "low_read_states":int((reads<10000).sum()),"zero_nontarget_states":int((x.sum(1)==0).sum()),
        "coverage_by_stratum_treatment":groups,"n_source_publication_families":1,
@@ -137,7 +138,7 @@ def run(meta,x,nperm=N_PERM):
         for year,k in [("2020",1),("2021",2)]:
             for name,v in [("named",prop),("rank",compact_rank)]:
                 row={"year":year,"endpoint":name,**d.score((v[:,k]-v[:,0])[mask])}
-                if name=="rank":row["logical_features"]=4646
+                if name=="rank":row["logical_features"]=4653
                 rows.append(row)
         adjust(rows);results[lane]=rows
         if lane=="ten_group":
@@ -158,9 +159,9 @@ def main():
     with (a.source/"meta.csv").open() as f:meta=list(csv.DictReader(f))
     names=(a.source/"otu_names.txt").read_text().splitlines()
     excluded=(a.source/"excluded_target_otus.txt").read_text().splitlines()
-    if len(names)!=4646 or len(set(names))!=4646 or len(excluded)!=16:
+    if len(names)!=4653 or len(set(names))!=4653 or len(excluded)!=9:
         raise ValueError("Source target exclusion/roster failure")
-    x=np.fromfile(a.source/"counts.bin",dtype="<f8").reshape(1380,4646)
+    x=np.fromfile(a.source/"counts.bin",dtype="<f8").reshape(1380,4653)
     z=run(meta,x,a.permutations);z["excluded_target_otus"]=excluded
     a.out.write_text(json.dumps(z,indent=2,allow_nan=False)+"\n")
     print("SAINE_SUCCESSION_RESULT",json.dumps(z,allow_nan=False))
