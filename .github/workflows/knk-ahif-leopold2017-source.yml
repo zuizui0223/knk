@@ -1,0 +1,34 @@
+name: AHIF nearest prior-art original fungal experiment data probe
+
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-leopold2017-source.yml"
+      - "benchmarks/probe_ahif_leopold2017_dryad.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-dryad-source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit public Dryad files; never substitute inferred source records
+        shell: bash
+        run: |
+          python -m benchmarks.probe_ahif_leopold2017_dryad \
+            --output-dir "$RUNNER_TEMP/ahif2017"
+      - name: Archive metadata and source-schema manifest ONLY
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahif-leopold2017-dryad-data-access-audit
+          path: ${{ runner.temp }}/ahif2017/leopold2017_source_manifest.json
+          retention-days: 14
