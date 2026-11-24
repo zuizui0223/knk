@@ -116,8 +116,6 @@ def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
     assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==6
     assert result["panels_with_two_species_top1_named_rank_n"]==1
     assert result["methodological_novelty_threats_n"]==5
-    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==5
-    assert result["panels_with_two_species_top1_named_rank_n"]==1
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         rows=db.execute(
             "SELECT study_id,source_raw_audited,"
