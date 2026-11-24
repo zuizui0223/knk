@@ -104,16 +104,16 @@ def test_orphan_effect_id_refused():
         validate(r)
 
 
-def test_seven_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
+def test_nine_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
     result=build(ROOT,tmp_path)
-    assert result["substantively_verified_prior_art_papers_n"]==7
+    assert result["substantively_verified_prior_art_papers_n"]==9
     assert result["source_audited_studies"]>=9
-    assert result["aggregate_effect_rows"]==118
-    assert result["study_records"]==30
-    assert result["experimental_panels"]==32
+    assert result["aggregate_effect_rows"]==141
+    assert result["study_records"]==32
+    assert result["experimental_panels"]==34
     assert result["source_audited_studies"]==10
-    assert result["panels_with_named_and_unlabeled_rank_measured"]==7
-    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==6
+    assert result["panels_with_named_and_unlabeled_rank_measured"]==8
+    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==7
     assert result["panels_with_two_species_top1_named_rank_n"]==1
     assert result["methodological_novelty_threats_n"]==5
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
@@ -121,7 +121,7 @@ def test_seven_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
             "SELECT study_id,source_raw_audited,"
             "causally_independent_interaction_to_rank_validated "
             "FROM prior_art_verified ORDER BY prior_art_id").fetchall()
-        assert len(rows)==7
+        assert len(rows)==9
         assert all(r[2]=="no" for r in rows)
         row=db.execute(
             "SELECT source_raw_audited FROM prior_art_verified WHERE study_id='ST_GENERATIONS2026'"
@@ -134,12 +134,12 @@ def test_seven_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
 def test_methodological_precedents_are_separate_from_empirical_effects(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["methodological_novelty_threats_n"]==5
-    assert summary["substantively_verified_prior_art_papers_n"]==7
+    assert summary["substantively_verified_prior_art_papers_n"]==9
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         r=db.execute("SELECT record_id,not_independent_effect,doi_or_unverified FROM methodological_prior_art").fetchall()
         assert len(r)==5
         assert all(z[1]=="yes" for z in r)
-        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==118
+        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==141
         assert any(z[2]=="doi_unverified" for z in r)
 
 
@@ -153,7 +153,7 @@ def test_new_2026_field_study_has_repeated_40_plot_grain_and_no_mechanism_claim(
     assert panel["identity_free_rank_scored"]=="yes"
     assert panel["same_panel_causal_interaction_to_structure_identified"]=="no"
     effect=[e for e in rows["effects"] if e["panel_id"]=="P_VANSTEIJNFIELD2026"]
-    assert len(effect)==54
+    assert len(effect)==75
     assert sum(e["endpoint_class"]=="structure" for e in effect)==16
     assert sum(e["endpoint_class"]=="structure_nontarget_roster" for e in effect)==16
     assert sum(e["endpoint_class"]=="structure_sown_roster" for e in effect)==16
@@ -170,3 +170,25 @@ def test_carlstrom_metadata_not_promoted_to_effect_source(tmp_path):
         assert db.execute("SELECT raw_source_audited FROM studies WHERE study_id=?",("ST_CARLSTROM2019",)).fetchone()==("no",)
         assert db.execute("SELECT source_raw_audited,identity_free_rank_scored_in_ahif,causally_independent_interaction_to_rank_validated FROM prior_art_verified WHERE study_id=?",("ST_CARLSTROM2019",)).fetchone()==("no","no","no")
         assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id=?",("P_CARLSTROM",)).fetchone()==(0,)
+
+def test_routing_metadata_and_descriptive_cages_separate(tmp_path):
+    summary=build(ROOT,tmp_path)
+    assert summary["routing_field_test_rows"]==21
+    assert summary["routing_cage_descriptive_contrast_rows"]==12
+    assert summary["panels_with_raw_source_audited_named_rank_n"]==7
+    assert summary["panels_with_derived_matrix_descriptive_named_rank_n"]==1
+    assert not summary["routing_cage_meta_eligible"]
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_PRASAD_DROPOUT'").fetchone()==(0,)
+        assert db.execute("SELECT COUNT(*) FROM hypotheses").fetchone()==(9,)
+        assert dict(db.execute("SELECT family,COUNT(*) FROM v_routing_tests GROUP BY family"))=={"primary":2,"secondary":16,"order_exchange":3}
+        assert dict(db.execute("SELECT family,COUNT(*) FROM v_routing_tests WHERE p_holm<=.05 GROUP BY family"))=={"primary":1,"secondary":8,"order_exchange":2}
+        assert db.execute("SELECT COUNT(*) FROM effects WHERE effect_id LIKE 'E_POEM_2020_A2_UNSOWN_%'").fetchone()==(2,)
+        assert dict(db.execute("SELECT qc_lane,COUNT(*) FROM cage_descriptive_contrasts GROUP BY qc_lane"))=={"source_qc":6,"all_exported_sensitivity":6}
+
+
+def test_descriptive_cage_cannot_be_promoted_to_effect():
+    r=fixtures()
+    r["effects"][0]["panel_id"]="P_PRASAD_DROPOUT"
+    with pytest.raises(ValueError,match="Candidate presented as scored"):
+        validate(r)

@@ -99,3 +99,8 @@ SELECT p.study_id,p.screening_scope,p.source_raw_audited,
        p.existing_novelty_claim_defeated,p.remaining_testable_gap
 FROM prior_art_verified p
 ORDER BY p.study_id;
+
+-- 13. Field routing tests; different estimands must not be pooled.
+SELECT site_scope,period,endpoint,response_channel,estimate,estimand,p_unadjusted,p_holm,family,publication_cluster FROM v_routing_tests ORDER BY family,site_scope,endpoint;
+-- 14. Descriptive cage perturbations never count as treatment-replicated effects.
+SELECT qc_lane,focal_species,control_cage,dropout_cage,n_control_bees,n_dropout_bees,strain_named_tv,strain_rank_tv,species_named_tv,species_rank_tv,median_nonfocal_copy_ratio,evidence_class FROM cage_descriptive_contrasts ORDER BY qc_lane,focal_species,dropout_cage;

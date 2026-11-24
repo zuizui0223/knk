@@ -1,4 +1,4 @@
-# AHIF-DB v0.1 — Assembly History × Interaction Formation
+# AHIF-DB v0.4 — Assembly History × Interaction Formation
 
 **An original curated ecological evidence database for KNK, not a new systematic review, not an independent new biological experiment, and not a completed meta-analysis.**
 
@@ -122,3 +122,8 @@ See [AHIF novelty defense](../../docs/AHIF_NOVELTY_DEFENSE_AND_PRIOR_ART_2026112
 ## Carlström 2019 metadata-only novelty audit
 
 [Source audit and transmission test](../../docs/AHIF_CARLSTROM2019_METADATA_AND_TRANSMISSION_GATE_20261124.md): seven substantive prior-art checks; unchanged 30 study records, 32 panels, 118 numeric effects, ten outcome-source audits. Original R script plus three metadata blobs checked, 921 filtered sample records (not 921 proven independent units), one R2 treatment-label mismatch identified. No abundance matrices obtained and no new ecological effect promoted. The separate group late-arrival and single-strain dropout assays motivate a resident-community transmission test, conditional on raw-source and overlap checks.
+
+
+## v0.4 — historical routing (current counts supersede historical sections)
+
+32 study/candidate records, 34 panels, 141 aggregate effect records (118 prior + 21 field tests + 2 previously archived POEM non-target sensitivities), 9 hypotheses and 10 raw-source-audited studies. Eight named/rank panels include seven raw-source-audited panels and one derived-matrix descriptive cage panel. Nine substantive prior-art checks. The 21 field tests reuse the original 40 plots; adjusted p-values are linked via routing_test_metadata.csv and SQLite v_routing_tests. Three exact order-exchange statistics are not E. Separate cage_descriptive_contrasts.csv holds 6 QC and 6 sensitivity contrasts; no inferential p or CI, no promotion to effects. Prasad DOI 10.1093/ismejo/wrag056 links to renamed public repo ID 983583082, commit c994bcb7504db27301e43f37c1c39282fb7e6329. Stuble & Young 2020 is an additional paper-only novelty threat. POEM unsown 2020 age2 sensitivity retained with both null results; 2021 zero-roster stop remains documented. H09 is predictive and unvalidated. No pooling or causal-bridge promotion.

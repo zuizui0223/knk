@@ -17,6 +17,7 @@ import shutil
 import sqlite3
 
 from benchmarks.audit_zou2023_review_source import STAGING_COLUMNS, SRC_GIT_BLOB
+from benchmarks.ahif_routing_tables import insert_routing, META_FILE, CAGE_FILE
 
 FILES={"studies":"studies.csv","panels":"panels.csv",
        "effects":"effects.csv","hypotheses":"hypotheses.csv"}
@@ -27,7 +28,7 @@ FIELDS={
 "hypotheses":("hypothesis_id","testable_hypothesis","intervention_family","required_joint_endpoints","required_independence_grain","falsifiable_prediction","current_source_evidence","interpretation_status","relevant_panel_ids_semicolon")
 }
 STUDY_STATES={"scored_frozen","scored_draft","scored_draft_overlap_unresolved",
- "source_binary_blocked","candidate_unscored","paper_only","proxy_only"}
+ "source_binary_blocked","candidate_unscored","paper_only","proxy_only","derived_matrix_descriptive"}
 EFFECT_STATES={"frozen_knk","draft_knk","source_reanalysis",
  "posthoc_exploratory","posthoc_sensitivity","sensitivity"}
 CHANNELS={"live_arrival","live_neighbor","live_competitor","conditioned_environment",
@@ -117,7 +118,7 @@ def validate(tables):
             raise ValueError("False equivalence of null-calibrated R2 and information "+k)
         if not e["evidence_url"].startswith("https://") or not e["limitations"]:
             raise ValueError("Effect missing source or caveat "+k)
-        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked"}:
+        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked","derived_matrix_descriptive"}:
             raise ValueError("Candidate presented as scored "+k)
     hids=set()
     for h in hypotheses:
@@ -399,6 +400,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
     audited=[x for x in s if x["raw_source_audited"]=="yes"]
     architecture=[x for x in p if x["named_structure_scored"]=="yes" and x["identity_free_rank_scored"]=="yes"]
     joint=[x for x in p if x["same_panel_causal_interaction_to_structure_identified"]=="yes"]
+    audited_ids={x["study_id"] for x in audited}
     overlaps=defaultdict(list)
     for x in s:overlaps[x["lab_or_overlap_group"]].append(x["study_id"])
     overlaps={k:v for k,v in overlaps.items() if len(v)>1}
@@ -408,7 +410,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
     ps=[num(x["p_value"],"p") for x in e]
     return {
       "result_status":"CURATED_TARGETED_PILOT_NOT_SYSTEMATIC_OR_META_POOLED",
-      "db_version":"AHIF-DB v0.1",
+      "db_version":"AHIF-DB v0.4",
       "generated_on":date.today().isoformat(),
       "study_records":len(s),"experimental_panels":len(p),
       "aggregate_effect_rows":len(e),"falsifiable_hypotheses":len(h),
@@ -418,6 +420,8 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
       "panels_with_named_and_unlabeled_rank_measured":len(architecture),
       "panels_with_multispecies_or_functional_group_named_rank_n":sum(
           "two_species" not in x["response_grain"] for x in architecture),
+      "panels_with_raw_source_audited_named_rank_n":sum(x["study_id"] in audited_ids for x in architecture),
+      "panels_with_derived_matrix_descriptive_named_rank_n":sum(x["source_status"]=="derived_matrix_descriptive" for x in architecture),
       "panels_with_two_species_top1_named_rank_n":sum(
           "two_species" in x["response_grain"] for x in architecture),
       "panels_with_identified_causal_interaction_to_storage_path":len(joint),
@@ -425,7 +429,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
           x["same_panel_causal_interaction_to_structure_identified"]=="unknown"
           for x in p),
       "audited_panels_with_joint_path_not_identified":sum(
-          x["same_panel_causal_interaction_to_structure_identified"]=="no"
+          x["same_panel_causal_interaction_to_structure_identified"]=="no" and x["study_id"] in audited_ids
           for x in p),
       "possible_publication_or_lab_dependence_flags":overlaps,
       "interventions_by_panel":dict(pstats),
@@ -453,7 +457,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
 
 def gap_report(r):
     return "\n".join([
-      "# AHIF-DB v0.1 — novelty and source-coverage gate",
+      "# AHIF-DB v0.4 — novelty and source-coverage gate",
       "",
       "Targeted preliminary curation only: NOT a systematic survey or a random-effects meta-analysis.",
       "",
@@ -463,6 +467,8 @@ def gap_report(r):
       f"- Closest novelty competitors whose original article methods/abstract were checked: {r['substantively_verified_prior_art_papers_n']}",
       f"- Methodological novelty threats (sPriority/LOVE etc., never effects): {r['methodological_novelty_threats_n']}",
       f"- Aggregate numeric evidence records: {r['aggregate_effect_rows']}",
+      f"- Linked field routing tests: {r['routing_field_test_rows']} (one publication)",
+      f"- Separate one-cage descriptive contrasts: {r['routing_cage_descriptive_contrast_rows']} (6 QC + 6 sensitivity, excluded from effects)",
       f"- Prespecified, falsifiable hypotheses: {r['falsifiable_hypotheses']}",
       f"- Panels with named and identity-free rank scoring: {r['panels_with_named_and_unlabeled_rank_measured']} = {r['panels_with_multispecies_or_functional_group_named_rank_n']} community/functional-group panels + {r['panels_with_two_species_top1_named_rank_n']} 2-species top1-only panel",
       f"- Source-audited panels where the mechanism-to-structure causal path was NOT identified: {r['audited_panels_with_joint_path_not_identified']}",
@@ -524,6 +530,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
             connection,source/"prior_art_verified.csv")
         n_methodological_prior_art=insert_methodological_prior_art(
             connection,source/"methodological_prior_art.csv")
+        routing_summary=insert_routing(connection,source)
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -533,6 +540,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         connection.close()
     result=report(tables,review_staged_n=n_review_candidates,priority_n=n_review_priority,
                   verified_prior_art_n=n_verified_prior_art,methods_n=n_methodological_prior_art)
+    result.update(routing_summary)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:
@@ -543,6 +551,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         shutil.copyfile(source/filename,out/filename)
     shutil.copyfile(source/"prior_art_verified.csv",out/"prior_art_verified.csv")
     shutil.copyfile(source/"methodological_prior_art.csv",out/"methodological_prior_art.csv")
+    for filename in (META_FILE,CAGE_FILE):
+        shutil.copyfile(source/filename,out/filename)
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
         "studies":result["study_records"],"panels":result["experimental_panels"],
         "effects":result["aggregate_effect_rows"],
