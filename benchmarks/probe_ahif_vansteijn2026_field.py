@@ -76,14 +76,28 @@ def tabular(path:Path):
     sn=csv.Sniffer()
     try:delim=sn.sniff(original[:8000],delimiters=",;\t").delimiter
     except csv.Error:delim=","
-    reader=csv.DictReader(io.StringIO(original),delimiter=delim)
-    headers=reader.fieldnames or []
+    # This is only a schema inventory. Some original germination source
+    # worksheets have duplicate CSV header labels. Preserve and report them,
+    # assign DISAMBIGUATED audit-only keys without changing source content.
+    matrix=csv.reader(io.StringIO(original),delimiter=delim)
+    raw_headers=next(matrix,None) or []
+    duplicate_headers={k:n for k,n in Counter(raw_headers).items() if n>1}
+    seen=Counter()
+    headers=[]
+    for i,k in enumerate(raw_headers):
+        seen[k]+=1
+        headers.append(k if seen[k]==1 and k!="" else
+                       f"{k or 'blank_col'}__source_occurrence_{seen[k]}_{i}")
     if len(set(headers))!=len(headers):
-        raise ValueError("Duplicate header in source "+path.name)
-    rows=list(reader)
+        raise ValueError("Audit disambiguation produced repeated field keys")
+    rows=[]
+    for i,values in enumerate(matrix,2):
+        if not any(str(x).strip() for x in values):
+            continue
+        if len(values)>len(headers):
+            raise ValueError("Source has more cells than headers at row "+str(i))
+        rows.append(dict(zip(headers,values+[""]*(len(headers)-len(values)))))
     if not rows:raise ValueError("Empty source "+path.name)
-    for r in rows:
-        if None in r:raise ValueError("Extra CSV column in source "+path.name)
     cardinality={}
     missing={}
     for col in headers:
@@ -101,6 +115,8 @@ def tabular(path:Path):
         "n_columns":len(headers),
         "delim":delim,
         "headers":headers,
+        "original_source_headers":raw_headers,
+        "duplicate_original_headers":duplicate_headers,
         "first_5_source_rows":rows[:5],
         "last_2_source_rows":rows[-2:],
         "categorical_cardinality":cardinality,
