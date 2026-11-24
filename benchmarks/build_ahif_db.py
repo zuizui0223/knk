@@ -175,6 +175,18 @@ competition_model TEXT,original_review_inclusion TEXT,
 ahif_independent_screen_status TEXT NOT NULL
 );
 CREATE INDEX idx_review_candidate_taxa ON review_candidates(focal_taxa,year);
+CREATE TABLE review_priority(
+review_record_id TEXT PRIMARY KEY REFERENCES review_candidates(review_record_id),
+priority_tier TEXT NOT NULL,why_prior_art_matters TEXT NOT NULL,
+source_review_model_code TEXT NOT NULL,author_review_year INTEGER NOT NULL,
+author_review_title TEXT NOT NULL,
+study_original_manipulated_species_code TEXT NOT NULL,
+study_corrected_size_bin TEXT NOT NULL,
+independent_AHIF_methods_screened TEXT NOT NULL,
+complete_community_data_source_verified TEXT NOT NULL,
+effect_size_extracted TEXT NOT NULL,
+source_review_doi TEXT NOT NULL
+);
 CREATE TABLE hypotheses(
 hypothesis_id TEXT PRIMARY KEY,testable_hypothesis TEXT NOT NULL,
 intervention_family TEXT NOT NULL,required_joint_endpoints TEXT NOT NULL,
@@ -243,7 +255,47 @@ def insert_external_review_stage(connection,source_path:Path|None):
     return 268
 
 
-def report(tables,review_staged_n:int=0):
+def insert_review_priority(conn:sqlite3.Connection,path:Path|None):
+    """Link 21 UNREVIEWED title/model priorities to pinned 268 bibliography."""
+    if path is None:return 0
+    from benchmarks.profile_ahif_review_268 import priority_screen_candidates
+    cols=(
+        "review_record_id","priority_tier","why_prior_art_matters",
+        "source_review_model_code","author_review_year","author_review_title",
+        "study_original_manipulated_species_code","study_corrected_size_bin",
+        "independent_AHIF_methods_screened","complete_community_data_source_verified",
+        "effect_size_extracted","source_review_doi"
+    )
+    with path.open(encoding="utf-8-sig",newline="") as f:
+        reader=csv.DictReader(f)
+        if tuple(reader.fieldnames or ())!=cols:
+            raise ValueError("Priority bibliography source schema changed")
+        rows=list(reader)
+    if len(rows)!=21:
+        raise ValueError("Expected union of 11 nearest-title and 13 model-coded candidates to be 21")
+    valid={r[0] for r in conn.execute("SELECT review_record_id FROM review_candidates")}
+    if len(valid)!=268:raise ValueError("Cannot stage priorities without full pinned 268")
+    values=[]
+    used=set()
+    for r in rows:
+        if r["review_record_id"] not in valid or r["review_record_id"] in used:
+            raise ValueError("Priority review id unknown or duplicated")
+        used.add(r["review_record_id"])
+        if (r["independent_AHIF_methods_screened"],
+            r["complete_community_data_source_verified"],
+            r["effect_size_extracted"])!=("no","no","no"):
+            raise ValueError("Unscreened prior-art row falsely promoted")
+        if r["priority_tier"] not in {"A_nearest_prior_art","B_review_fitted_model"}:
+            raise ValueError("Unknown source priority tier")
+        values.append([int(r[c]) if c=="author_review_year" else r[c] for c in cols])
+    questionmarks=",".join("?" for _ in cols)
+    conn.executemany(f"INSERT INTO review_priority VALUES({questionmarks})",values)
+    if conn.execute("SELECT COUNT(*) FROM review_priority").fetchone()[0]!=21:
+        raise ValueError("Priority-row insert incomplete")
+    return len(values)
+
+
+def report(tables,review_staged_n:int=0,priority_n:int=0):
     s,p,e,h=(tables[k] for k in FILES)
     audited=[x for x in s if x["raw_source_audited"]=="yes"]
     architecture=[x for x in p if x["named_structure_scored"]=="yes" and x["identity_free_rank_scored"]=="yes"]
@@ -282,6 +334,7 @@ def report(tables,review_staged_n:int=0):
       },
       "review_bibliographic_candidates_staged_not_audited":review_staged_n,
       "review_candidates_promoted_to_independent_AHIF_evidence":0,
+      "review_high_risk_prior_art_candidates_staged":priority_n,
       "Zou_Rudolf_2023_prior_review_studies_not_ingested_as_effects":268,
       "formal_meta_analysis_ready":False,
       "why_not_pooled":[
@@ -328,7 +381,7 @@ def gap_report(r):
     ])+"\n"
 
 
-def build(source:Path,out:Path,review_screening:Path|None=None):
+def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:Path|None=None):
     tables={t:load(source,t) for t in FILES}
     counts=validate(tables)
     if counts["n_studies"]<20 or counts["n_effects"]<40:
@@ -359,6 +412,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None):
             found=connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
             if found!=len(tables[table]):raise ValueError("Source output row-count mismatch")
         n_review_candidates=insert_external_review_stage(connection,review_screening)
+        n_review_priority=insert_review_priority(connection,review_priority)
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -366,11 +420,13 @@ def build(source:Path,out:Path,review_screening:Path|None=None):
         connection.commit()
     finally:
         connection.close()
-    result=report(tables,review_staged_n=n_review_candidates)
+    result=report(tables,review_staged_n=n_review_candidates,priority_n=n_review_priority)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:
         shutil.copyfile(review_screening,out/"review_candidates_unreviewed_2023.csv")
+    if review_priority is not None:
+        shutil.copyfile(review_priority,out/"review21_nearest_prior_art_screening.csv")
     for t,filename in FILES.items():
         shutil.copyfile(source/filename,out/filename)
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
@@ -378,7 +434,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None):
         "effects":result["aggregate_effect_rows"],
         "joint_mechanism_storage":result["panels_with_identified_causal_interaction_to_storage_path"],
         "source_audited_studies":result["source_audited_studies"],
-        "unreviewed_review_candidates":result["review_bibliographic_candidates_staged_not_audited"]
+        "unreviewed_review_candidates":result["review_bibliographic_candidates_staged_not_audited"],
+        "unreviewed_priority_screen":result["review_high_risk_prior_art_candidates_staged"]
     }))
     return result
 
@@ -389,8 +446,11 @@ def main():
     p.add_argument("--output-dir",type=Path,required=True)
     p.add_argument("--review-screening-csv",type=Path,
                    help="Optional unreviewed bibliography staging; no effect promotion")
+    p.add_argument("--review-priority-csv",type=Path,
+                   help="Optional source-derived list of 21 priority review titles")
     a=p.parse_args()
-    build(a.source_root,a.output_dir,review_screening=a.review_screening_csv)
+    build(a.source_root,a.output_dir,review_screening=a.review_screening_csv,
+          review_priority=a.review_priority_csv)
 
 
 if __name__=="__main__":main()
