@@ -1,0 +1,862 @@
+{
+  "status": "EXPLORATORY_TV_GAP_AND_DEPTH_NOT_CAUSAL_MEDIATION",
+  "source_assigned_logs": 460,
+  "original_complete_logs": 446,
+  "raw_TV": [
+    {
+      "year": "2020",
+      "endpoint": "named_TV",
+      "difference_treated_minus_control": 0.03173623079580673,
+      "ci95_unadjusted_conditional_bootstrap": [
+        0.002794701039367744,
+        0.06168197439960109
+      ],
+      "p": 0.0183,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 0.10980000000000001
+    },
+    {
+      "year": "2020",
+      "endpoint": "rank_TV",
+      "difference_treated_minus_control": -0.007252132877835039,
+      "ci95_unadjusted_conditional_bootstrap": [
+        -0.03854594342013867,
+        0.024581658169925597
+      ],
+      "p": 0.6748,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 1
+    },
+    {
+      "year": "2020",
+      "endpoint": "identity_excess_TV",
+      "difference_treated_minus_control": 0.038988363673641696,
+      "ci95_unadjusted_conditional_bootstrap": [
+        0.00472979311999149,
+        0.07335267684814938
+      ],
+      "p": 0.0326,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 0.16299999999999998
+    },
+    {
+      "year": "2021",
+      "endpoint": "named_TV",
+      "difference_treated_minus_control": 0.022579269816677364,
+      "ci95_unadjusted_conditional_bootstrap": [
+        -0.0008153885975315021,
+        0.04565466621200479
+      ],
+      "p": 0.0363,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 0.16299999999999998
+    },
+    {
+      "year": "2021",
+      "endpoint": "rank_TV",
+      "difference_treated_minus_control": 0.014713694523923296,
+      "ci95_unadjusted_conditional_bootstrap": [
+        -0.016147490499664685,
+        0.046629371989457255
+      ],
+      "p": 0.4103,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 1
+    },
+    {
+      "year": "2021",
+      "endpoint": "identity_excess_TV",
+      "difference_treated_minus_control": 0.007865575292753944,
+      "ci95_unadjusted_conditional_bootstrap": [
+        -0.030235506610569944,
+        0.04471917000120285
+      ],
+      "p": 0.6738,
+      "n_logs": 446,
+      "n_permutations": 9999,
+      "n_bootstrap": 4000,
+      "p_holm_family": 1
+    }
+  ],
+  "depth_sensitivity": [
+    {
+      "depth": 1000,
+      "n_logs": 421,
+      "n_treated": 326,
+      "n_controls": 95,
+      "retention_vs_446": 0.9439461883408071,
+      "coverage_by_stratum_and_binary": [
+        {
+          "stratum": "Kesijarvi|felled",
+          "treated": 22,
+          "control": 10
+        },
+        {
+          "stratum": "Kesijarvi|natural",
+          "treated": 43,
+          "control": 9
+        },
+        {
+          "stratum": "Lapinjarvi|felled",
+          "treated": 26,
+          "control": 10
+        },
+        {
+          "stratum": "Lapinjarvi|natural",
+          "treated": 41,
+          "control": 10
+        },
+        {
+          "stratum": "Luukki|felled",
+          "treated": 25,
+          "control": 10
+        },
+        {
+          "stratum": "Luukki|natural",
+          "treated": 43,
+          "control": 9
+        },
+        {
+          "stratum": "Saajarvi|felled",
+          "treated": 25,
+          "control": 10
+        },
+        {
+          "stratum": "Saajarvi|natural",
+          "treated": 42,
+          "control": 9
+        },
+        {
+          "stratum": "Seitseminen|felled",
+          "treated": 22,
+          "control": 8
+        },
+        {
+          "stratum": "Seitseminen|natural",
+          "treated": 37,
+          "control": 10
+        }
+      ],
+      "eligibility_gate": [
+        {
+          "lane": "ten_group",
+          "R2": 0.026116856989034008,
+          "E": 0.007315017588458424,
+          "null_median": 0.018801839400575584,
+          "p": 0.2235,
+          "n": 460,
+          "features": 1,
+          "permutations": 1999,
+          "status": "SCORED",
+          "p_holm_family": 0.314
+        },
+        {
+          "lane": "binary",
+          "R2": 0.00481342425988371,
+          "E": 0.003866195482188237,
+          "null_median": 0.0009472287776954731,
+          "p": 0.157,
+          "n": 460,
+          "features": 1,
+          "permutations": 1999,
+          "status": "SCORED",
+          "p_holm_family": 0.314
+        }
+      ],
+      "status": "SCORED_CONDITIONAL_DEPTH_COHORT",
+      "matched_original_read_R2": [
+        {
+          "year": "2020",
+          "endpoint": "named",
+          "R2": 0.0032683730464941343,
+          "E": 0.000887562629068867,
+          "p": 0.1075,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.000887562629068867,
+            0.000887562629068867
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.3225
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank",
+          "R2": 0.0001776685422943337,
+          "E": -0.0012532762502227776,
+          "p": 0.954,
+          "n_logs": 421,
+          "draw_E_range": [
+            -0.0012532762502227776,
+            -0.0012532762502227776
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.954
+        },
+        {
+          "year": "2021",
+          "endpoint": "named",
+          "R2": 0.004758953238469284,
+          "E": 0.002397735897730398,
+          "p": 0.003,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.002397735897730398,
+            0.002397735897730398
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.012
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank",
+          "R2": 0.005624545990254205,
+          "E": 0.004162116171761001,
+          "p": 0.108,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.004162116171761001,
+            0.004162116171761001
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.3225
+        }
+      ],
+      "rarefied_R2": [
+        {
+          "year": "2020",
+          "endpoint": "named",
+          "R2": 0.0032479005566697656,
+          "E": 0.0008666690777291452,
+          "p": 0.1125,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.0007659790309620662,
+            0.000941881140626555
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.3195
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank",
+          "R2": 0.00018000617823501417,
+          "E": -0.0012392734351347231,
+          "p": 0.961,
+          "n_logs": 421,
+          "draw_E_range": [
+            -0.0013004745837832596,
+            -0.001179021601590999
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.961
+        },
+        {
+          "year": "2021",
+          "endpoint": "named",
+          "R2": 0.004732105551798184,
+          "E": 0.002371876953853129,
+          "p": 0.003,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.002232068052463128,
+            0.0024573801100683315
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.012
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank",
+          "R2": 0.005753856853849334,
+          "E": 0.0042899198267106285,
+          "p": 0.1065,
+          "n_logs": 421,
+          "draw_E_range": [
+            0.003418551496636552,
+            0.005053388096920412
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.3195
+        }
+      ],
+      "matched_original_read_TV": [
+        {
+          "year": "2020",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.03386856957992362,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.004747954943189428,
+            0.06264466910257105
+          ],
+          "p": 0.0132,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0672
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": -0.01322099994025142,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.04514914028536458,
+            0.01877317092724179
+          ],
+          "p": 0.4391,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2020",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.04708956952017501,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.011256425920211156,
+            0.08206785185545809
+          ],
+          "p": 0.0112,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0672
+        },
+        {
+          "year": "2021",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.025196975370036626,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.002611403280242722,
+            0.048342783737771955
+          ],
+          "p": 0.0227,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0908
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": 0.012857176724111349,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.018641489829820994,
+            0.04578422972341835
+          ],
+          "p": 0.4857,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2021",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.012339798645925246,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.02639908967149746,
+            0.05001216821370726
+          ],
+          "p": 0.5172,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        }
+      ],
+      "rarefied_TV": [
+        {
+          "year": "2020",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.03396789581176757,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.0051181706365358935,
+            0.06257983603505982
+          ],
+          "p": 0.0127,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0635
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": -0.013828642312026069,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.045742686603633606,
+            0.018023642822231473
+          ],
+          "p": 0.4207,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2020",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.04779653812379356,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.011966525970182702,
+            0.08264600760014373
+          ],
+          "p": 0.0104,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0624
+        },
+        {
+          "year": "2021",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.02487950759024211,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.0024239732989881847,
+            0.04790582025350324
+          ],
+          "p": 0.0227,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.0908
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": 0.012515799661752666,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.019062847991687535,
+            0.04543419023573956
+          ],
+          "p": 0.4958,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2021",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.01236370792848946,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.026328065000329498,
+            0.04988159460511066
+          ],
+          "p": 0.5176,
+          "n_logs": 421,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        }
+      ]
+    },
+    {
+      "depth": 5000,
+      "n_logs": 380,
+      "n_treated": 296,
+      "n_controls": 84,
+      "retention_vs_446": 0.852017937219731,
+      "coverage_by_stratum_and_binary": [
+        {
+          "stratum": "Kesijarvi|felled",
+          "treated": 20,
+          "control": 10
+        },
+        {
+          "stratum": "Kesijarvi|natural",
+          "treated": 39,
+          "control": 8
+        },
+        {
+          "stratum": "Lapinjarvi|felled",
+          "treated": 26,
+          "control": 8
+        },
+        {
+          "stratum": "Lapinjarvi|natural",
+          "treated": 39,
+          "control": 10
+        },
+        {
+          "stratum": "Luukki|felled",
+          "treated": 24,
+          "control": 7
+        },
+        {
+          "stratum": "Luukki|natural",
+          "treated": 40,
+          "control": 8
+        },
+        {
+          "stratum": "Saajarvi|felled",
+          "treated": 24,
+          "control": 10
+        },
+        {
+          "stratum": "Saajarvi|natural",
+          "treated": 40,
+          "control": 8
+        },
+        {
+          "stratum": "Seitseminen|felled",
+          "treated": 16,
+          "control": 6
+        },
+        {
+          "stratum": "Seitseminen|natural",
+          "treated": 28,
+          "control": 9
+        }
+      ],
+      "eligibility_gate": [
+        {
+          "lane": "ten_group",
+          "R2": 0.028443496461767224,
+          "E": 0.009724001904063424,
+          "null_median": 0.0187194945577038,
+          "p": 0.1715,
+          "n": 460,
+          "features": 1,
+          "permutations": 1999,
+          "status": "SCORED",
+          "p_holm_family": 0.343
+        },
+        {
+          "lane": "binary",
+          "R2": 0.0005054018057222643,
+          "E": -0.000749822411413851,
+          "null_median": 0.0012552242171361154,
+          "p": 0.6605,
+          "n": 460,
+          "features": 1,
+          "permutations": 1999,
+          "status": "SCORED",
+          "p_holm_family": 0.6605
+        }
+      ],
+      "status": "SCORED_CONDITIONAL_DEPTH_COHORT",
+      "matched_original_read_R2": [
+        {
+          "year": "2020",
+          "endpoint": "named",
+          "R2": 0.0033984415831187324,
+          "E": 0.0007482282930854132,
+          "p": 0.1585,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0007482282930854132,
+            0.0007482282930854132
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.47550000000000003
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank",
+          "R2": 0.00033533512330516634,
+          "E": -0.0012205439206157927,
+          "p": 0.8885,
+          "n_logs": 380,
+          "draw_E_range": [
+            -0.0012205439206157927,
+            -0.0012205439206157927
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.8885
+        },
+        {
+          "year": "2021",
+          "endpoint": "named",
+          "R2": 0.004978105851054898,
+          "E": 0.0023349795317666026,
+          "p": 0.006,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0023349795317666026,
+            0.0023349795317666026
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.024
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank",
+          "R2": 0.004074348726893182,
+          "E": 0.0024739708686032755,
+          "p": 0.2065,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0024739708686032755,
+            0.0024739708686032755
+          ],
+          "n_draws": 1,
+          "p_holm_family": 0.47550000000000003
+        }
+      ],
+      "rarefied_R2": [
+        {
+          "year": "2020",
+          "endpoint": "named",
+          "R2": 0.003390469310269756,
+          "E": 0.0007386394560402504,
+          "p": 0.1605,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0006893489921181413,
+            0.0007713393095724144
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.48150000000000004
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank",
+          "R2": 0.0003254951244165052,
+          "E": -0.0012360778566765675,
+          "p": 0.895,
+          "n_logs": 380,
+          "draw_E_range": [
+            -0.0012584817125747627,
+            -0.001179388462177736
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.895
+        },
+        {
+          "year": "2021",
+          "endpoint": "named",
+          "R2": 0.004974277187315215,
+          "E": 0.0023278181107633496,
+          "p": 0.006,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0022915315440108796,
+            0.002360856254373724
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.024
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank",
+          "R2": 0.00406434856407948,
+          "E": 0.0024677961439734716,
+          "p": 0.205,
+          "n_logs": 380,
+          "draw_E_range": [
+            0.0022953366518117125,
+            0.002624230038235628
+          ],
+          "n_draws": 8,
+          "p_holm_family": 0.48150000000000004
+        }
+      ],
+      "matched_original_read_TV": [
+        {
+          "year": "2020",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.03160548591094645,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.000994128743551735,
+            0.0638981704752821
+          ],
+          "p": 0.0347,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.1388
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": -0.015020398245488063,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.04676252954470067,
+            0.01800377091446757
+          ],
+          "p": 0.414,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2020",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.04662588415643457,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.011627917118341194,
+            0.08253947329745244
+          ],
+          "p": 0.0157,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.093
+        },
+        {
+          "year": "2021",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.02823745653193993,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.003090608400875279,
+            0.05228621859866963
+          ],
+          "p": 0.0155,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.093
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": 0.010882633887686214,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.02149436582642981,
+            0.04463585843092493
+          ],
+          "p": 0.5776,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2021",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.017354822644253767,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.024936300929919303,
+            0.05635671679579594
+          ],
+          "p": 0.3804,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        }
+      ],
+      "rarefied_TV": [
+        {
+          "year": "2020",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.03171444684165467,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.0010975095872858228,
+            0.064057692112245
+          ],
+          "p": 0.0345,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.138
+        },
+        {
+          "year": "2020",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": -0.014978482370135902,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.04675943798891887,
+            0.018004641517069153
+          ],
+          "p": 0.4148,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2020",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.04669292921179059,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.011626447634724816,
+            0.08264633422915592
+          ],
+          "p": 0.0154,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.09240000000000001
+        },
+        {
+          "year": "2021",
+          "endpoint": "named_TV",
+          "difference_treated_minus_control": 0.027961202240769423,
+          "ci95_unadjusted_conditional_bootstrap": [
+            0.002885560438585765,
+            0.05193879736622074
+          ],
+          "p": 0.017,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 0.09240000000000001
+        },
+        {
+          "year": "2021",
+          "endpoint": "rank_TV",
+          "difference_treated_minus_control": 0.010825654396102065,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.021799638087606824,
+            0.044801521300478306
+          ],
+          "p": 0.5779,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        },
+        {
+          "year": "2021",
+          "endpoint": "identity_excess_TV",
+          "difference_treated_minus_control": 0.017135547844667417,
+          "ci95_unadjusted_conditional_bootstrap": [
+            -0.02553580800539665,
+            0.05599881408616105
+          ],
+          "p": 0.3879,
+          "n_logs": 380,
+          "n_permutations": 9999,
+          "n_bootstrap": 4000,
+          "p_holm_family": 1
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "TV gap mathematically nonnegative per log; treatment contrast is the test.",
+    "Conditional complete-case inference after post-treatment QC is not full ITT.",
+    "TV displacement not the centroid R2 estimand; no equivalence or interaction coefficients.",
+    "Depth standardization equalizes non-target sequencing effort, not biomass."
+  ],
+  "original_non_target_read_min_quantiles": [
+    10,
+    95.65,
+    913,
+    12885.5,
+    31541.5,
+    52804,
+    142515
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45387588766",
+  "source_job_id": 138422482690,
+  "source_commit": "ca7b6858fc9c8f44b913b54af98e88752abe5ff1",
+  "source_doi": "10.5281/zenodo.13819389",
+  "source_rdata_md5": "4dbc27f81ffdcf1925887c7e0805b031",
+  "prescore_contract": "docs/AHIF_SAINE2025_BUFFERING_PRESCORE_20261124.md"
+}
