@@ -55,7 +55,8 @@ jobs:
           python -m benchmarks.build_ahif_db \
             --source-root database/ahif_v1 \
             --output-dir "$RUNNER_TEMP/ahif" \
-            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv"
+            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv" \
+            --review-priority-csv "$RUNNER_TEMP/ahif-review/review21_nearest_prior_art_screening.csv"
           python - <<'PY'
           import json
           import sqlite3
@@ -74,6 +75,8 @@ jobs:
           print("Verified source-effect rows",r["aggregate_effect_rows"])
           if r["review_bibliographic_candidates_staged_not_audited"]!=268:
               raise SystemExit("Original review candidate bibliography not complete")
+          if r["review_high_risk_prior_art_candidates_staged"]!=21:
+              raise SystemExit("21 source-priority cases missing")
           print("Verified named/rank panels",r["panels_with_named_and_unlabeled_rank_measured"])
           print("Novelty-claim bound: targeted PILOT only")
           PY
@@ -92,4 +95,5 @@ jobs:
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
             ${{ runner.temp }}/ahif-review/review268_design_audit.json
             ${{ runner.temp }}/ahif-review/review268_design_corrected_bins.csv
+            ${{ runner.temp }}/ahif/review21_nearest_prior_art_screening.csv
           retention-days: 30
