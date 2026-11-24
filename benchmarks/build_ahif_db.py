@@ -187,6 +187,21 @@ complete_community_data_source_verified TEXT NOT NULL,
 effect_size_extracted TEXT NOT NULL,
 source_review_doi TEXT NOT NULL
 );
+CREATE TABLE prior_art_verified(
+prior_art_id TEXT PRIMARY KEY,
+study_id TEXT NOT NULL UNIQUE REFERENCES studies(study_id),
+paper_doi TEXT NOT NULL,
+screening_scope TEXT NOT NULL,
+source_raw_audited TEXT NOT NULL,
+historical_intervention TEXT NOT NULL,
+interaction_estimand_measured TEXT NOT NULL,
+whole_community_assembly_recorded TEXT NOT NULL,
+identity_free_rank_scored_in_ahif TEXT NOT NULL,
+causally_independent_interaction_to_rank_validated TEXT NOT NULL,
+existing_novelty_claim_defeated TEXT NOT NULL,
+primary_source_url TEXT NOT NULL,
+remaining_testable_gap TEXT NOT NULL
+);
 CREATE TABLE hypotheses(
 hypothesis_id TEXT PRIMARY KEY,testable_hypothesis TEXT NOT NULL,
 intervention_family TEXT NOT NULL,required_joint_endpoints TEXT NOT NULL,
@@ -295,7 +310,51 @@ def insert_review_priority(conn:sqlite3.Connection,path:Path|None):
     return len(values)
 
 
-def report(tables,review_staged_n:int=0,priority_n:int=0):
+def insert_verified_prior_art(conn:sqlite3.Connection,path:Path)->int:
+    """Audited PAPER-METHODS novelty challenges, not extra experimental effects."""
+    cols=("prior_art_id","study_id","paper_doi","screening_scope",
+          "source_raw_audited","historical_intervention",
+          "interaction_estimand_measured","whole_community_assembly_recorded",
+          "identity_free_rank_scored_in_ahif",
+          "causally_independent_interaction_to_rank_validated",
+          "existing_novelty_claim_defeated","primary_source_url",
+          "remaining_testable_gap")
+    with path.open(encoding="utf-8-sig",newline="") as fh:
+        rr=csv.DictReader(fh)
+        if tuple(rr.fieldnames or ())!=cols:
+            raise ValueError("Audited nearest prior-art table schema changed")
+        rows=list(rr)
+    if len(rows)<6:
+        raise ValueError("Expected six actively screened prior papers")
+    seen=set()
+    study_map={
+        sid:(doi,original_audit) for sid,doi,original_audit in conn.execute(
+            "SELECT study_id,doi,raw_source_audited FROM studies")
+    }
+    vals=[]
+    for r in rows:
+        sid=r["study_id"]
+        if sid in seen or sid not in study_map:
+            raise ValueError("Unknown/duplicate prior-art study id")
+        seen.add(sid)
+        doi,audit=study_map[sid]
+        if r["paper_doi"]!=doi:
+            raise ValueError("Prior-art paper DOI mismatch")
+        if r["source_raw_audited"]=="yes" and audit!="yes":
+            raise ValueError("Paper source-audit status inflated")
+        if r["causally_independent_interaction_to_rank_validated"]!="no":
+            raise ValueError("Unverified causal prediction promoted")
+        if not r["primary_source_url"].startswith("https://"):
+            raise ValueError("Prior-art primary source missing")
+        if not r["existing_novelty_claim_defeated"] or not r["remaining_testable_gap"]:
+            raise ValueError("Not a substantive novelty challenge")
+        vals.append([r[k] for k in cols])
+    placeholders=",".join("?" for _ in cols)
+    conn.executemany(f"INSERT INTO prior_art_verified VALUES({placeholders})",vals)
+    return len(rows)
+
+
+def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:int=0):
     s,p,e,h=(tables[k] for k in FILES)
     audited=[x for x in s if x["raw_source_audited"]=="yes"]
     architecture=[x for x in p if x["named_structure_scored"]=="yes" and x["identity_free_rank_scored"]=="yes"]
@@ -335,6 +394,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0):
       "review_bibliographic_candidates_staged_not_audited":review_staged_n,
       "review_candidates_promoted_to_independent_AHIF_evidence":0,
       "review_high_risk_prior_art_candidates_staged":priority_n,
+      "substantively_verified_prior_art_papers_n":verified_prior_art_n,
       "Zou_Rudolf_2023_prior_review_studies_not_ingested_as_effects":268,
       "formal_meta_analysis_ready":False,
       "why_not_pooled":[
@@ -355,6 +415,7 @@ def gap_report(r):
       f"- Publication records: {r['study_records']}",
       f"- Experimental panels, including cohorts and within-paper arms: {r['experimental_panels']}",
       f"- Source-audited publication records: {r['source_audited_studies']}",
+      f"- Closest novelty competitors whose original article methods/abstract were checked: {r['substantively_verified_prior_art_papers_n']}",
       f"- Aggregate numeric evidence records: {r['aggregate_effect_rows']}",
       f"- Prespecified, falsifiable hypotheses: {r['falsifiable_hypotheses']}",
       f"- Panels with named and identity-free rank scoring: {r['panels_with_named_and_unlabeled_rank_measured']}",
@@ -413,6 +474,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
             if found!=len(tables[table]):raise ValueError("Source output row-count mismatch")
         n_review_candidates=insert_external_review_stage(connection,review_screening)
         n_review_priority=insert_review_priority(connection,review_priority)
+        n_verified_prior_art=insert_verified_prior_art(
+            connection,source/"prior_art_verified.csv")
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -420,7 +483,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         connection.commit()
     finally:
         connection.close()
-    result=report(tables,review_staged_n=n_review_candidates,priority_n=n_review_priority)
+    result=report(tables,review_staged_n=n_review_candidates,priority_n=n_review_priority,
+                  verified_prior_art_n=n_verified_prior_art)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:
@@ -429,13 +493,15 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         shutil.copyfile(review_priority,out/"review21_nearest_prior_art_screening.csv")
     for t,filename in FILES.items():
         shutil.copyfile(source/filename,out/filename)
+    shutil.copyfile(source/"prior_art_verified.csv",out/"prior_art_verified.csv")
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
         "studies":result["study_records"],"panels":result["experimental_panels"],
         "effects":result["aggregate_effect_rows"],
         "joint_mechanism_storage":result["panels_with_identified_causal_interaction_to_storage_path"],
         "source_audited_studies":result["source_audited_studies"],
         "unreviewed_review_candidates":result["review_bibliographic_candidates_staged_not_audited"],
-        "unreviewed_priority_screen":result["review_high_risk_prior_art_candidates_staged"]
+        "unreviewed_priority_screen":result["review_high_risk_prior_art_candidates_staged"],
+        "substantive_prior_art_checks":result["substantively_verified_prior_art_papers_n"]
     }))
     return result
 
