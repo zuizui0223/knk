@@ -1,0 +1,130 @@
+{
+  "status": "REAL_SOURCE_AGGREGATE_POSTHOC_RECOMPUTATION_NOT_NEW_INDEPENDENT_STUDY",
+  "source_commit": "77b38236220169fb8b6cd5dd26a9d23d54c19d2f",
+  "source_blob": "27c6ee5c3210bcafadf175648e5cb3a240c53efd",
+  "source_path": "validation/ahif_v1/vansteijn2026_field_history_storage_summary_v1.json",
+  "original_source_run": "https://github.com/zuizui0223/knk/actions/runs/45332458601",
+  "independent_physical_plots": 40,
+  "study_clusters": 1,
+  "holm_family": "8 site-year states x 2 nontarget representations; exploratory secondary family",
+  "rows": [
+    {
+      "site": "MAL",
+      "year": "2021",
+      "sown_named_E": 0.3800607819769918,
+      "sown_rank_E": 0.33868878123730994,
+      "nontarget_named_E": -0.010850191148379013,
+      "nontarget_rank_E": 0.04644686384341845,
+      "nontarget_named_p": 0.6977,
+      "nontarget_rank_p": 0.1902,
+      "nontarget_rank_holm16": 0.9510000000000001,
+      "nontarget_named_holm16": 1
+    },
+    {
+      "site": "MAL",
+      "year": "2022",
+      "sown_named_E": 0.43577606962414583,
+      "sown_rank_E": 0.2772118851922427,
+      "nontarget_named_E": 0.12259786978099968,
+      "nontarget_rank_E": 0.05246345793501864,
+      "nontarget_named_p": 0.0312,
+      "nontarget_rank_p": 0.2473,
+      "nontarget_named_holm16": 0.2808,
+      "nontarget_rank_holm16": 0.9892
+    },
+    {
+      "site": "MAL",
+      "year": "2023",
+      "sown_named_E": 0.4484269648134171,
+      "sown_rank_E": 0.37882303230633163,
+      "nontarget_named_E": 0.31490680183636444,
+      "nontarget_rank_E": 0.18353850873750627,
+      "nontarget_named_p": 0.0001,
+      "nontarget_rank_p": 0.0131,
+      "nontarget_named_holm16": 0.0016,
+      "nontarget_rank_holm16": 0.131
+    },
+    {
+      "site": "MAL",
+      "year": "2024",
+      "sown_named_E": 0.34334812067136194,
+      "sown_rank_E": 0.16176865349316116,
+      "nontarget_named_E": 0.3634576804996017,
+      "nontarget_rank_E": 0.4799258667385218,
+      "nontarget_named_p": 0.0001,
+      "nontarget_rank_p": 0.0002,
+      "nontarget_named_holm16": 0.0016,
+      "nontarget_rank_holm16": 0.0026000000000000003
+    },
+    {
+      "site": "UME",
+      "year": "2021",
+      "sown_named_E": 0.691446061429858,
+      "sown_rank_E": 0.6732742122267069,
+      "nontarget_named_E": 0.008430651643834802,
+      "nontarget_rank_E": 0.007767989498136119,
+      "nontarget_named_p": 0.4166,
+      "nontarget_rank_p": 0.4473,
+      "nontarget_named_holm16": 1,
+      "nontarget_rank_holm16": 1
+    },
+    {
+      "site": "UME",
+      "year": "2022",
+      "sown_named_E": 0.721542131815029,
+      "sown_rank_E": 0.5728803124461179,
+      "nontarget_named_E": 0.3133522940307218,
+      "nontarget_rank_E": 0.07038837934825376,
+      "nontarget_named_p": 0.0001,
+      "nontarget_rank_p": 0.1534,
+      "nontarget_named_holm16": 0.0016,
+      "nontarget_rank_holm16": 0.9204000000000001
+    },
+    {
+      "site": "UME",
+      "year": "2023",
+      "sown_named_E": 0.7172097718400003,
+      "sown_rank_E": 0.468705772058692,
+      "nontarget_named_E": 0.2630405038893616,
+      "nontarget_rank_E": 0.3541867146521859,
+      "nontarget_named_p": 0.001,
+      "nontarget_rank_p": 0.0014,
+      "nontarget_named_holm16": 0.012,
+      "nontarget_rank_holm16": 0.0154
+    },
+    {
+      "site": "UME",
+      "year": "2024",
+      "sown_named_E": 0.7309152260522485,
+      "sown_rank_E": 0.48362783115673047,
+      "nontarget_named_E": 0.08389730073605872,
+      "nontarget_rank_E": 0.14255451222805726,
+      "nontarget_named_p": 0.0721,
+      "nontarget_rank_p": 0.0813,
+      "nontarget_named_holm16": 0.5768,
+      "nontarget_rank_holm16": 0.5768
+    }
+  ],
+  "contrasts": [
+    {
+      "site": "MAL",
+      "nontarget_rank_E_change": 0.4334790028951033,
+      "sown_rank_E_change": -0.17692012774414878,
+      "difference_of_changes": 0.6103991306392521,
+      "nontarget_named_E_change": 0.37430787164798074
+    },
+    {
+      "site": "UME",
+      "nontarget_rank_E_change": 0.13478652272992114,
+      "sown_rank_E_change": -0.18964638106997644,
+      "difference_of_changes": 0.3244329037998976,
+      "nontarget_named_E_change": 0.07546664909222392
+    }
+  ],
+  "claim_limits": [
+    "Same original 40 plots and one source study; no newly retrieved raw data.",
+    "Holm adjustment valid under arbitrary dependence within this explicit family; not a global correction across all AHIF analyses.",
+    "Difference of E changes is descriptive; not a test of treatment-by-year or cross-roster difference.",
+    "Four original sowing schedules are omnibus treatments, not pure arrival order; no observed colonization dates or identified interaction mediator."
+  ]
+}
