@@ -187,6 +187,16 @@ complete_community_data_source_verified TEXT NOT NULL,
 effect_size_extracted TEXT NOT NULL,
 source_review_doi TEXT NOT NULL
 );
+CREATE TABLE methodological_prior_art(
+record_id TEXT PRIMARY KEY,
+year_or_status TEXT NOT NULL, type TEXT NOT NULL, title TEXT NOT NULL,
+doi_or_unverified TEXT NOT NULL,source_url TEXT NOT NULL,
+source_verification_level TEXT NOT NULL,
+already_established_or_planned TEXT NOT NULL,
+AHIF_novelty_overlap TEXT NOT NULL,
+need_for_followup TEXT NOT NULL,
+not_independent_effect TEXT NOT NULL
+);
 CREATE TABLE prior_art_verified(
 prior_art_id TEXT PRIMARY KEY,
 study_id TEXT NOT NULL UNIQUE REFERENCES studies(study_id),
@@ -310,6 +320,36 @@ def insert_review_priority(conn:sqlite3.Connection,path:Path|None):
     return len(values)
 
 
+def insert_methodological_prior_art(conn:sqlite3.Connection,path:Path)->int:
+    """Nearest meta-method threats are not data-based ecological effects."""
+    cols=("record_id","year_or_status","type","title","doi_or_unverified",
+          "source_url","source_verification_level",
+          "already_established_or_planned","AHIF_novelty_overlap",
+          "need_for_followup","not_independent_effect")
+    with path.open(encoding="utf-8-sig",newline="") as src:
+        rr=csv.DictReader(src)
+        if tuple(rr.fieldnames or ())!=cols:
+            raise ValueError("Method precedent table schema mismatch")
+        rows=list(rr)
+    if len(rows)!=5:raise ValueError("Expected five independent methods novelty threats")
+    used=set()
+    for r in rows:
+        rid=r["record_id"]
+        if rid in used or not rid.startswith("M_"):
+            raise ValueError("Nonunique method risk ID")
+        used.add(rid)
+        if r["not_independent_effect"]!="yes":
+            raise ValueError("Method reference cannot become an independent effect")
+        if not r["source_url"].startswith("https://") or not r["AHIF_novelty_overlap"]:
+            raise ValueError("Method threat lacks anchored source or novelty bound")
+        if r["doi_or_unverified"] not in ("doi_unavailable","doi_unverified") and not r["doi_or_unverified"].startswith("10."):
+            raise ValueError("Unverified DOI must retain unknown status")
+    marks=",".join("?" for _ in cols)
+    conn.executemany(f"INSERT INTO methodological_prior_art VALUES({marks})",
+                     [[r[c] for c in cols] for r in rows])
+    return len(rows)
+
+
 def insert_verified_prior_art(conn:sqlite3.Connection,path:Path)->int:
     """Audited PAPER-METHODS novelty challenges, not extra experimental effects."""
     cols=("prior_art_id","study_id","paper_doi","screening_scope",
@@ -354,7 +394,7 @@ def insert_verified_prior_art(conn:sqlite3.Connection,path:Path)->int:
     return len(rows)
 
 
-def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:int=0):
+def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:int=0,methods_n:int=0):
     s,p,e,h=(tables[k] for k in FILES)
     audited=[x for x in s if x["raw_source_audited"]=="yes"]
     architecture=[x for x in p if x["named_structure_scored"]=="yes" and x["identity_free_rank_scored"]=="yes"]
@@ -399,6 +439,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
       "review_candidates_promoted_to_independent_AHIF_evidence":0,
       "review_high_risk_prior_art_candidates_staged":priority_n,
       "substantively_verified_prior_art_papers_n":verified_prior_art_n,
+      "methodological_novelty_threats_n":methods_n,
       "Zou_Rudolf_2023_prior_review_studies_not_ingested_as_effects":268,
       "formal_meta_analysis_ready":False,
       "why_not_pooled":[
@@ -420,6 +461,7 @@ def gap_report(r):
       f"- Experimental panels, including cohorts and within-paper arms: {r['experimental_panels']}",
       f"- Source-audited publication records: {r['source_audited_studies']}",
       f"- Closest novelty competitors whose original article methods/abstract were checked: {r['substantively_verified_prior_art_papers_n']}",
+      f"- Methodological novelty threats (sPriority/LOVE etc., never effects): {r['methodological_novelty_threats_n']}",
       f"- Aggregate numeric evidence records: {r['aggregate_effect_rows']}",
       f"- Prespecified, falsifiable hypotheses: {r['falsifiable_hypotheses']}",
       f"- Panels with named and identity-free rank scoring: {r['panels_with_named_and_unlabeled_rank_measured']} = {r['panels_with_multispecies_or_functional_group_named_rank_n']} community/functional-group panels + {r['panels_with_two_species_top1_named_rank_n']} 2-species top1-only panel",
@@ -480,6 +522,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         n_review_priority=insert_review_priority(connection,review_priority)
         n_verified_prior_art=insert_verified_prior_art(
             connection,source/"prior_art_verified.csv")
+        n_methodological_prior_art=insert_methodological_prior_art(
+            connection,source/"methodological_prior_art.csv")
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -488,7 +532,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
     finally:
         connection.close()
     result=report(tables,review_staged_n=n_review_candidates,priority_n=n_review_priority,
-                  verified_prior_art_n=n_verified_prior_art)
+                  verified_prior_art_n=n_verified_prior_art,methods_n=n_methodological_prior_art)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:
@@ -498,6 +542,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
     for t,filename in FILES.items():
         shutil.copyfile(source/filename,out/filename)
     shutil.copyfile(source/"prior_art_verified.csv",out/"prior_art_verified.csv")
+    shutil.copyfile(source/"methodological_prior_art.csv",out/"methodological_prior_art.csv")
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
         "studies":result["study_records"],"panels":result["experimental_panels"],
         "effects":result["aggregate_effect_rows"],
@@ -505,7 +550,8 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         "source_audited_studies":result["source_audited_studies"],
         "unreviewed_review_candidates":result["review_bibliographic_candidates_staged_not_audited"],
         "unreviewed_priority_screen":result["review_high_risk_prior_art_candidates_staged"],
-        "substantive_prior_art_checks":result["substantively_verified_prior_art_papers_n"]
+        "substantive_prior_art_checks":result["substantively_verified_prior_art_papers_n"],
+        "methodological_threats":result["methodological_novelty_threats_n"]
     }))
     return result
 
