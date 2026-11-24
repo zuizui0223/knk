@@ -156,7 +156,20 @@ def score_matrix(x:np.ndarray,labels:np.ndarray,permutations:np.ndarray,
     else:raise ValueError("Wrong metric")
     g=gower(d)
     obs=treatment_r2(g,labels)
-    nul=np.asarray([treatment_r2(g,y) for y in permutations])
+    # A complete randomized block contains 5 replicates of each of the four
+    # original treatment labels. Compute all blocked-randomization R2 with a
+    # vectorized, EXACT equivalent of the 4-group Gower treatment SS formula.
+    trace=float(np.trace(g))
+    if permutations.shape[1]!=20 or len(labels)!=20 or \
+       any(int(np.sum(labels==t))!=5 for t in TREATMENTS):
+        raise SourceStop("Source treatment group design not 4x5 balanced")
+    if any(np.any(np.sum(permutations==t,axis=1)!=5) for t in TREATMENTS):
+        raise SourceStop("Permuted group size drift")
+    if trace<=1e-12:
+        nul=np.zeros(len(permutations))
+    else:
+        eq=(permutations[:,:,None]==permutations[:,None,:])
+        nul=np.einsum("kij,ij->k",eq,g,optimize=True)/(5.*trace)
     if not np.isfinite(nul).all() or not np.isfinite(obs):
         raise SourceStop("Nonfinite treatment R2")
     return {
