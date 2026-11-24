@@ -1,0 +1,283 @@
+{
+  "status": "EXPLORATORY_BASELINE_STATE_R_LOSS_NOT_CAUSAL_MODERATION",
+  "assigned_logs": 460,
+  "complete_logs": 446,
+  "treated_logs": 347,
+  "feature_names": [
+    "log1p_richness",
+    "simpson",
+    "top1",
+    "log1p_non_target_reads"
+  ],
+  "test_year": 2021,
+  "alpha_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "n_permutations": 999,
+  "by_training_year": {
+    "2020": [
+      {
+        "endpoint": "named_TV",
+        "context_gain_over_pooled": -0.002698080826213098,
+        "pooled_gain_over_zero": 0.003721043122560847,
+        "full_context_gain_over_pooled": -0.018039490237164522,
+        "total_loss": {
+          "zero": 3.668372391353346,
+          "pooled": 3.6547222194955085,
+          "nested": 3.6645829554410643,
+          "full": 3.720651545293646
+        },
+        "folds": [
+          {
+            "site": "Kesijarvi",
+            "alpha": 0,
+            "zero": 0.4985775275670336,
+            "pooled": 0.5009271462791122,
+            "nested": 0.5009271462791122,
+            "full": 0.5370619815413188
+          },
+          {
+            "site": "Lapinjarvi",
+            "alpha": 0,
+            "zero": 1.0803651893792925,
+            "pooled": 1.0632020390023933,
+            "nested": 1.0632020390023933,
+            "full": 1.052896083845099
+          },
+          {
+            "site": "Luukki",
+            "alpha": 0,
+            "zero": 0.5298829816055154,
+            "pooled": 0.5333626604709532,
+            "nested": 0.5333626604709532,
+            "full": 0.5302124626815597
+          },
+          {
+            "site": "Saajarvi",
+            "alpha": 0.25,
+            "zero": 0.8032933266749236,
+            "pooled": 0.8157723424883363,
+            "nested": 0.8256330784338923,
+            "full": 0.8763797982971535
+          },
+          {
+            "site": "Seitseminen",
+            "alpha": 0,
+            "zero": 0.7562533661265807,
+            "pooled": 0.7414580312547132,
+            "nested": 0.7414580312547132,
+            "full": 0.7241012189285144
+          }
+        ],
+        "sharp_null_p_upper": 0.772,
+        "sharp_null_p_holm": 0.772,
+        "null_gain_median": -0.000620785370811005,
+        "null_gain_95": [
+          -0.008581265978345796,
+          0.0047895347781540245
+        ]
+      },
+      {
+        "endpoint": "rank_TV",
+        "context_gain_over_pooled": 0.01334848452705438,
+        "pooled_gain_over_zero": -0.0011979141303826459,
+        "full_context_gain_over_pooled": 0.0188138896193708,
+        "total_loss": {
+          "zero": 7.256109150881724,
+          "pooled": 7.264801346565164,
+          "nested": 7.1678272581984155,
+          "full": 7.128122175924231
+        },
+        "folds": [
+          {
+            "site": "Kesijarvi",
+            "alpha": 0.5,
+            "zero": 2.0788347974555594,
+            "pooled": 2.080349421699726,
+            "nested": 2.0114948322588395,
+            "full": 1.958351414469513
+          },
+          {
+            "site": "Lapinjarvi",
+            "alpha": 0.75,
+            "zero": 0.96482779680199,
+            "pooled": 0.9627038250977042,
+            "nested": 0.9489626450063516,
+            "full": 0.9453322748850329
+          },
+          {
+            "site": "Luukki",
+            "alpha": 0.75,
+            "zero": 1.1844626370653564,
+            "pooled": 1.2004568482125362,
+            "nested": 1.1996330622372036,
+            "full": 1.2029583918204882
+          },
+          {
+            "site": "Saajarvi",
+            "alpha": 0.75,
+            "zero": 1.4721220729927946,
+            "pooled": 1.4706206231752297,
+            "nested": 1.4759743446532734,
+            "full": 1.489717720706451
+          },
+          {
+            "site": "Seitseminen",
+            "alpha": 1,
+            "zero": 1.5558618465660237,
+            "pooled": 1.5506706283799674,
+            "nested": 1.5317623740427468,
+            "full": 1.5317623740427468
+          }
+        ],
+        "sharp_null_p_upper": 0.012,
+        "sharp_null_p_holm": 0.024,
+        "null_gain_median": -0.0006211188328659815,
+        "null_gain_95": [
+          -0.009925242241957424,
+          0.008582421116408848
+        ]
+      }
+    ],
+    "2021": [
+      {
+        "endpoint": "named_TV",
+        "context_gain_over_pooled": -0.0016055379946074055,
+        "pooled_gain_over_zero": 0.010203218094733733,
+        "full_context_gain_over_pooled": -0.02599597928234318,
+        "total_loss": {
+          "zero": 3.668372391353346,
+          "pooled": 3.630943187791668,
+          "nested": 3.6367728050359283,
+          "full": 3.725333111676865
+        },
+        "folds": [
+          {
+            "site": "Kesijarvi",
+            "alpha": 0,
+            "zero": 0.4985775275670336,
+            "pooled": 0.4990710056518046,
+            "nested": 0.4990710056518046,
+            "full": 0.5385949334210395
+          },
+          {
+            "site": "Lapinjarvi",
+            "alpha": 0,
+            "zero": 1.0803651893792925,
+            "pooled": 1.062243095386395,
+            "nested": 1.062243095386395,
+            "full": 1.0647176692615377
+          },
+          {
+            "site": "Luukki",
+            "alpha": 0.25,
+            "zero": 0.5298829816055154,
+            "pooled": 0.5215062372462204,
+            "nested": 0.5273358544904805,
+            "full": 0.5581589770311629
+          },
+          {
+            "site": "Saajarvi",
+            "alpha": 0,
+            "zero": 0.8032933266749236,
+            "pooled": 0.8048816924195851,
+            "nested": 0.8048816924195851,
+            "full": 0.8285019643796129
+          },
+          {
+            "site": "Seitseminen",
+            "alpha": 0,
+            "zero": 0.7562533661265807,
+            "pooled": 0.7432411570876629,
+            "nested": 0.7432411570876629,
+            "full": 0.7353595675835123
+          }
+        ],
+        "sharp_null_p_upper": 0.539,
+        "sharp_null_p_holm": 0.539,
+        "null_gain_median": -0.0014202685288148857,
+        "null_gain_95": [
+          -0.012983283913801538,
+          0.005199653307853924
+        ]
+      },
+      {
+        "endpoint": "rank_TV",
+        "context_gain_over_pooled": 0.018455262409155432,
+        "pooled_gain_over_zero": 0.009178725039213628,
+        "full_context_gain_over_pooled": 0.02096673761534584,
+        "total_loss": {
+          "zero": 7.256109150881724,
+          "pooled": 7.189507320131259,
+          "nested": 7.056823075945693,
+          "full": 7.038766806566459
+        },
+        "folds": [
+          {
+            "site": "Kesijarvi",
+            "alpha": 0.5,
+            "zero": 2.0788347974555594,
+            "pooled": 2.05343314793877,
+            "nested": 1.977901446244127,
+            "full": 1.9475114030225353
+          },
+          {
+            "site": "Lapinjarvi",
+            "alpha": 0.75,
+            "zero": 0.96482779680199,
+            "pooled": 0.9554448410705021,
+            "nested": 0.9601657993255137,
+            "full": 0.9680436042567109
+          },
+          {
+            "site": "Luukki",
+            "alpha": 0.75,
+            "zero": 1.1844626370653564,
+            "pooled": 1.159883416113846,
+            "nested": 1.1743777141791918,
+            "full": 1.1920925306565446
+          },
+          {
+            "site": "Saajarvi",
+            "alpha": 0.75,
+            "zero": 1.4721220729927946,
+            "pooled": 1.470880600160642,
+            "nested": 1.4537951947809904,
+            "full": 1.456522700611063
+          },
+          {
+            "site": "Seitseminen",
+            "alpha": 0.75,
+            "zero": 1.5558618465660237,
+            "pooled": 1.5498653148474983,
+            "nested": 1.4905829214158706,
+            "full": 1.474596568019606
+          }
+        ],
+        "sharp_null_p_upper": 0.013,
+        "sharp_null_p_holm": 0.026,
+        "null_gain_median": -0.001810669392123576,
+        "null_gain_95": [
+          -0.016370953771611654,
+          0.011801272104176629
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "Same source experiment; five fixed sites, no independent new study.",
+    "R-loss evaluates predicted treatment response, not individual causal effects.",
+    "Permutation reference is sharp no treatment effect, not null of no effect modification.",
+    "Post-treatment QC conditional, read counts not biomass, no direct interaction coefficients."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45388722290",
+  "source_job_id": 138426416400,
+  "source_commit": "1a7be170c060b03cdcfcc018119895a7e2f43900",
+  "source_doi": "10.5281/zenodo.13819389",
+  "source_rdata_md5": "4dbc27f81ffdcf1925887c7e0805b031",
+  "prescore_contract": "docs/AHIF_SAINE2025_BASELINE_CONTEXT_PRESCORE_20261124.md"
+}
