@@ -102,3 +102,22 @@ def test_orphan_effect_id_refused():
     z["panel_id"]="P_NEVER_MEASURED"
     with pytest.raises(ValueError,match="Effect orphan"):
         validate(r)
+
+
+def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
+    result=build(ROOT,tmp_path)
+    assert result["substantively_verified_prior_art_papers_n"]==6
+    assert result["source_audited_studies"]>=9
+    assert result["aggregate_effect_rows"]>=64
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        rows=db.execute(
+            "SELECT study_id,source_raw_audited,"
+            "causally_independent_interaction_to_rank_validated "
+            "FROM prior_art_verified ORDER BY prior_art_id").fetchall()
+        assert len(rows)==6
+        assert all(r[2]=="no" for r in rows)
+        row=db.execute(
+            "SELECT source_raw_audited FROM prior_art_verified WHERE study_id='ST_GENERATIONS2026'"
+        ).fetchone()
+        assert row==("yes",)
+    assert result["formal_meta_analysis_ready"] is False
