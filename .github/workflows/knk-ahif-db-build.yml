@@ -1,0 +1,67 @@
+name: KNK AHIF-DB evidence and novelty-gate build
+
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-db-build.yml"
+      - "database/ahif_v1/**"
+      - "benchmarks/build_ahif_db.py"
+      - "tests/test_ahif_db.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-audited-db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Test source-lineage and scientific claim gates
+        run: python -m pytest tests/test_ahif_db.py -q
+      - name: Build normalized SQLite and explain current causal-gap coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m benchmarks.build_ahif_db \
+            --source-root database/ahif_v1 \
+            --output-dir "$RUNNER_TEMP/ahif"
+          python - <<'PY'
+          import json
+          import sqlite3
+          import os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"ahif"
+          r=json.loads((root/"ahif_v1_validation.json").read_text())
+          if r["formal_meta_analysis_ready"]:
+              raise SystemExit("Source-validated pilot cannot assert meta-ready status")
+          if r["panels_with_identified_causal_interaction_to_storage_path"] != 0:
+              raise SystemExit("An unverified causal interaction-to-storage claim slipped through")
+          with sqlite3.connect(root/"ahif_v1.sqlite") as db:
+              if db.execute("PRAGMA foreign_key_check").fetchall():
+                  raise SystemExit("Database broken foreign keys")
+          print("Verified source-audited studies",r["source_audited_studies"])
+          print("Verified source-effect rows",r["aggregate_effect_rows"])
+          print("Verified named/rank panels",r["panels_with_named_and_unlabeled_rank_measured"])
+          print("Novelty-claim bound: targeted PILOT only")
+          PY
+      - name: Upload portable user-owned DB artifact, not source author raw data
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahif-database-v0-1-source-linked
+          path: |
+            ${{ runner.temp }}/ahif/ahif_v1.sqlite
+            ${{ runner.temp }}/ahif/ahif_v1_validation.json
+            ${{ runner.temp }}/ahif/ahif_v1_gap_report.md
+            ${{ runner.temp }}/ahif/studies.csv
+            ${{ runner.temp }}/ahif/panels.csv
+            ${{ runner.temp }}/ahif/effects.csv
+            ${{ runner.temp }}/ahif/hypotheses.csv
+          retention-days: 30
