@@ -34,3 +34,39 @@ Use original seven MD5-verified Zenodo files and existing source_panels audit. K
 **Order-exchange family:** FtS versus StF within the same block, keeping simultaneous treatments out of this contrast. For 2024–2021 non-target rank change, exact conditional swaps of the two asynchronous treatment labels, 2^10 across both sites; a two-sided multivariate statistic sums the per-site squared mean difference normalized by fixed site sum of squared paired differences. Secondary same test on non-target named change and 2023–2021 rank change; Holm across three. Each site has five pairs only; do not interpret as 10 independent sites. Order exchange changes both guild-specific planting dates, so cannot isolate a pure order effect at equal dates. The simultaneous SFearly and SFlate groups are preserved in the omnibus analysis; no contrast is a direct interaction-coefficient manipulation.
 
 **STOP:** source-hash, plot linkage, complete roster, zero total, missing observations or exchangeability failure. No silent deletion. All analyses exploratory in the context of the previously observed trajectory. No random-effects pooling, no new publication cluster, no causal pathway promotion. New outcomes must be separately checked after the workflow runs; summary results above are already calculated.
+
+
+## Executed outcome (attempt 2, source-locked)
+
+[Run 45376516869](https://github.com/zuizui0223/knk/actions/runs/45376516869), attempt 2, job 138395321840 succeeded: four unit tests, all seven original MD5s, whole-plot change scoring and artifact. Attempt 1 HTTP403 is resolved by a normal retry. Full result `validation/ahif_v1/vansteijn2026_nontarget_temporal_results_v1.json` (not new independent studies).
+
+| Site | Endpoint | Null-centered E | Holm p (within declared family) |
+|---|---|---:|---:|
+| MAL | nontarget_rank | 0.3201 | 0.0052 |
+| UME | nontarget_rank | 0.0314 | 0.3661 |
+| MAL | nontarget_named | 0.2266 | 0.0016 |
+| MAL | sown_rank | 0.2419 | 0.0143 |
+| MAL | sown_named | 0.1788 | 0.0270 |
+| MAL | nontarget_richness | -0.0839 | 0.9951 |
+| MAL | nontarget_top1 | 0.3480 | 0.0504 |
+| MAL | nontarget_simpson_concentration | 0.5012 | 0.0180 |
+| MAL | nontarget_total_pin_hits | 0.0295 | 0.8982 |
+| MAL | nontarget_share_all_hits | 0.4215 | 0.0504 |
+| UME | nontarget_named | 0.0760 | 0.3830 |
+| UME | sown_rank | 0.6193 | 0.0016 |
+| UME | sown_named | 0.6455 | 0.0016 |
+| UME | nontarget_richness | 0.5493 | 0.0180 |
+| UME | nontarget_top1 | 0.0744 | 0.8982 |
+| UME | nontarget_simpson_concentration | 0.1450 | 0.6204 |
+| UME | nontarget_total_pin_hits | 0.3777 | 0.0864 |
+| UME | nontarget_share_all_hits | 0.4425 | 0.0190 |
+
+Asynchronous label swaps (both sites, 1024 exact assignments):
+
+| Period | Endpoint | Exact p | Holm p |
+|---|---|---:|---:|
+| 2024_minus_2021 | nontarget_rank | 0.089844 | 0.089844 |
+| 2024_minus_2021 | nontarget_named | 0.007813 | 0.023438 |
+| 2023_minus_2021 | nontarget_rank | 0.023438 | 0.046875 |
+
+Interpretation: MAL non-target internal dominance dynamics are treatment-associated; UME full-period rank dynamics not detected but non-target richness and share of all hits respond. Different significance across sites does not establish a site interaction. The order-exchange result supports non-target named change through 2024 and rank change through 2023, not rank change through 2024. The experimental intervention combines order and guild-specific calendar timing; no direct interaction mediator is identified. Relative pin hits are not biomass. No extrapolation to general ecological law, no pooling, no changes to frozen main. All 21 endpoint results preserved separately pending normalized ledger update.
