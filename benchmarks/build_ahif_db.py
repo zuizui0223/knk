@@ -16,6 +16,8 @@ from pathlib import Path
 import shutil
 import sqlite3
 
+from benchmarks.audit_zou2023_review_source import STAGING_COLUMNS, SRC_GIT_BLOB
+
 FILES={"studies":"studies.csv","panels":"panels.csv",
        "effects":"effects.csv","hypotheses":"hypotheses.csv"}
 FIELDS={
@@ -159,6 +161,17 @@ CHECK(ci95_low IS NULL OR ci95_low<=estimate),
 CHECK(ci95_high IS NULL OR estimate<=ci95_high),
 CHECK(p_value IS NULL OR (p_value>=0 AND p_value<=1))
 );
+CREATE TABLE review_candidates(
+review_record_id TEXT PRIMARY KEY,
+source_excel_row INTEGER NOT NULL UNIQUE,
+source_review_doi TEXT NOT NULL,source_git_blob TEXT NOT NULL,
+authors TEXT NOT NULL,year INTEGER NOT NULL,journal TEXT,title TEXT NOT NULL,
+focal_taxa TEXT,secondary_taxa TEXT,manipulated_species TEXT,
+temporal_gradient TEXT,generation_time TEXT,duration_generations TEXT,
+competition_model TEXT,original_review_inclusion TEXT,
+ahif_independent_screen_status TEXT NOT NULL
+);
+CREATE INDEX idx_review_candidate_taxa ON review_candidates(focal_taxa,year);
 CREATE TABLE hypotheses(
 hypothesis_id TEXT PRIMARY KEY,testable_hypothesis TEXT NOT NULL,
 intervention_family TEXT NOT NULL,required_joint_endpoints TEXT NOT NULL,
@@ -185,7 +198,49 @@ FROM panels p JOIN studies s USING(study_id);
 """
 
 
-def report(tables):
+def insert_external_review_stage(connection,source_path:Path|None):
+    """Citation staging ONLY: never promotes 268 review rows into scored effects."""
+    if source_path is None:
+        return 0
+    with source_path.open(encoding="utf-8-sig",newline="") as file:
+        reader=csv.DictReader(file)
+        if tuple(reader.fieldnames or ())!=STAGING_COLUMNS:
+            raise ValueError("External literature staging schema changed")
+        records=list(reader)
+    if len(records)!=268:
+        raise ValueError("Expected 268 original review bibliographic rows")
+    unique_ids=set()
+    row_numbers=set()
+    data=[]
+    for row in records:
+        key=row["review_record_id"]
+        numrow=int(row["source_excel_row"])
+        if key in unique_ids or numrow in row_numbers or numrow<2 or numrow>269:
+            raise ValueError("Repeated or invalid original review row")
+        unique_ids.add(key)
+        row_numbers.add(numrow)
+        if row["source_git_blob"]!=SRC_GIT_BLOB or \
+           row["source_review_doi"]!="10.1016/j.tree.2023.08.001":
+            raise ValueError("Unpinned review source")
+        if row["ahif_independent_screen_status"]!="not_independently_screened":
+            raise ValueError("Unverified review study promoted to curated source")
+        if not row["title"] or not row["authors"]:
+            raise ValueError("Empty review citation title/author")
+        values=[]
+        for col in STAGING_COLUMNS:
+            v=row[col]
+            values.append(int(v) if col in ("source_excel_row","year") else v)
+        data.append(values)
+    placeholders=",".join("?" for _ in STAGING_COLUMNS)
+    connection.executemany(
+        f"INSERT INTO review_candidates VALUES({placeholders})",data
+    )
+    if connection.execute("SELECT COUNT(*) FROM review_candidates").fetchone()[0]!=268:
+        raise ValueError("Staging output lost review references")
+    return 268
+
+
+def report(tables,review_staged_n:int=0):
     s,p,e,h=(tables[k] for k in FILES)
     audited=[x for x in s if x["raw_source_audited"]=="yes"]
     architecture=[x for x in p if x["named_structure_scored"]=="yes" and x["identity_free_rank_scored"]=="yes"]
@@ -216,6 +271,8 @@ def report(tables):
           "p_gt_005":sum(x is not None and x>.05 for x in ps),
           "p_not_reported":sum(x is None for x in ps)
       },
+      "review_bibliographic_candidates_staged_not_audited":review_staged_n,
+      "review_candidates_promoted_to_independent_AHIF_evidence":0,
       "Zou_Rudolf_2023_prior_review_studies_not_ingested_as_effects":268,
       "formal_meta_analysis_ready":False,
       "why_not_pooled":[
@@ -260,7 +317,7 @@ def gap_report(r):
     ])+"\n"
 
 
-def build(source:Path,out:Path):
+def build(source:Path,out:Path,review_screening:Path|None=None):
     tables={t:load(source,t) for t in FILES}
     counts=validate(tables)
     if counts["n_studies"]<20 or counts["n_effects"]<40:
@@ -290,6 +347,7 @@ def build(source:Path,out:Path):
             connection.executemany(f"INSERT INTO {table} VALUES({placeholders})",converted)
             found=connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
             if found!=len(tables[table]):raise ValueError("Source output row-count mismatch")
+        n_review_candidates=insert_external_review_stage(connection,review_screening)
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -297,16 +355,19 @@ def build(source:Path,out:Path):
         connection.commit()
     finally:
         connection.close()
-    result=report(tables)
+    result=report(tables,review_staged_n=n_review_candidates)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
+    if review_screening is not None:
+        shutil.copyfile(review_screening,out/"review_candidates_unreviewed_2023.csv")
     for t,filename in FILES.items():
         shutil.copyfile(source/filename,out/filename)
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
         "studies":result["study_records"],"panels":result["experimental_panels"],
         "effects":result["aggregate_effect_rows"],
         "joint_mechanism_storage":result["panels_with_identified_causal_interaction_to_storage_path"],
-        "source_audited_studies":result["source_audited_studies"]
+        "source_audited_studies":result["source_audited_studies"],
+        "unreviewed_review_candidates":result["review_bibliographic_candidates_staged_not_audited"]
     }))
     return result
 
@@ -315,8 +376,10 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--source-root",type=Path,default=Path("database/ahif_v1"))
     p.add_argument("--output-dir",type=Path,required=True)
+    p.add_argument("--review-screening-csv",type=Path,
+                   help="Optional unreviewed bibliography staging; no effect promotion")
     a=p.parse_args()
-    build(a.source_root,a.output_dir)
+    build(a.source_root,a.output_dir,review_screening=a.review_screening_csv)
 
 
 if __name__=="__main__":main()
