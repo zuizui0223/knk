@@ -18,6 +18,7 @@ This is more precise than saying that priority effects exist. Previous reviews a
 - `effects.csv` — numeric **aggregate evidence** with its exact source estimand, CI and p-value where reported, experimental unit, status (frozen/published-source-reanalysis/post hoc) and explicit interpretation limits. Both null-like and positive findings are included. Source effects do not become independent observations merely because there are many endpoints or multiple treatments.
 - `hypotheses.csv` — falsifiable hypotheses, necessary intervention/endpoints, what would support/refute, and currently available evidence. A genuine scientific gap has to survive screening, not just be labelled novel.
 - `novelty_queries.sql` — reproducible audit queries for the number of independent publication/source clusters, named-vs-rank structural panels, mechanism channels and the **strict same-panel causal bridge**.
+- SQLite `review_candidates` — **268 original Zou & Rudolf 2023 citations and source-coded descriptors**, independently hash-pinned and staged from the public SupportingData.xlsx on GitHub Actions. All have the status `not_independently_screened`; they are **not** included in the curated 26 study records or the 45 scored effects, and are not counted as completed AHIF evidence. Source staging CSV is in the CI artifact; the original workbook is not redistributed.
 
 The SQLite database plus source table CSVs and JSON checks are compiled from the above tracked text inputs, using `benchmarks/build_ahif_db.py`. Any builder failure blocks the artifact. The raw original study datasets (CSV/XLSX from prior researchers) are not copied or redistributed.
 
@@ -42,7 +43,7 @@ Important source-grain constraints:
 - POEM 2020 and POEM 2021 cohorts belong to **one publication** and use repeatedly measured plots; treat neither repeated years nor 2020/2021 cohorts as independent publication replications.
 - Alonso rhizobox, POEM, Delory and van Steijn have potentially related research groups: preserve lab/overlap group.
 - Jing 2023 Zenodo and Jing 2024 Dryad may share source data; they are put under one provisional publication/overlap cluster **CL_JING_UNRESOLVED** until original authors' data lineage is checked.
-- The 268 studies in Zou & Rudolf 2023 are an **external prior review universe**, *not* 268 AHIF-curated effect sizes or independent database studies. Our 21 pilot publication records were purposefully selected and cannot estimate literature-wide prevalence.
+- The 268 studies in Zou & Rudolf 2023 are an **external review-sourced, unreviewed bibliography staging table**, *not* 268 AHIF-curated effect sizes or verified independent database studies. Our targeted curated publication records were purposefully selected and cannot estimate literature-wide prevalence.
 - Negative and null-ish measurements are not proof of equality; percentile intervals may rely on author-selected exclusions, source trays, sample/size matching, or questionable exchangeability.
 
 ## Reproduction and SQL
@@ -58,12 +59,16 @@ sqlite3 /tmp/ahif-db-v1/ahif_v1.sqlite \
 ```
 
 The builder checks exact required columns, unique keys, foreign keys, numeric CIs, p-values, source URLs, publication overlap, source-audit status, response grain and scientifically overstrong causal-path claims. It writes:
-- `ahif_v1.sqlite`
+- `ahif_v1.sqlite` (including the separate unreviewed bibliographic review candidate table when compiled by CI)
 - `ahif_v1_validation.json`
 - `ahif_v1_gap_report.md`
 - CSV copies, suitable for review before importing to other analytical systems.
 
 CIs and p-values are not automatically pooled. No global AHIF effect estimate is computed. No publication's raw data is bundled.
+
+## Nearest-prior-art challenge audit
+
+See [AHIF novelty defense](../../docs/AHIF_NOVELTY_DEFENSE_AND_PRIOR_ART_20261124.md) for explicit **claims that are already known** and close studies that could defeat a novelty claim (e.g. Leopold et al. 2017 arrival×fungivory×nitrogen; Yan et al. 2024 root barriers; 2021 empirical assembly-graph theory; 2026 multi-factor invasion resistance). These are marked **paper-only** until the original pot/plot-level data are source audited. It is not legitimate to advertise a global absence of a joint same-panel study from this selected pilot.
 
 ## Primary prior-art references
 - Zou & Rudolf (2023), *Trends in Ecology & Evolution*, DOI https://doi.org/10.1016/j.tree.2023.08.001 — 268 reviewed empirical studies, frequency-dependent versus trait-dependent PE framing.
