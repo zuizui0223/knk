@@ -91,8 +91,11 @@ def validate(tables):
             raise ValueError("Evidence status "+k)
         if p["identity_free_rank_scored"]=="yes" and p["named_structure_scored"]!="yes":
             raise ValueError("Identity-free rank needs original species vector "+k)
-        if p["same_panel_causal_interaction_to_structure_identified"]!="no":
+        if p["same_panel_causal_interaction_to_structure_identified"] not in {"no","unknown"}:
             raise ValueError("Unjustified same-panel causal mediation "+k)
+        if p["source_status"] in {"candidate","paper_only","binary_source_blocked","proxy_excluded"} and \
+           p["same_panel_causal_interaction_to_structure_identified"]!="unknown":
+            raise ValueError("Unscreened study must retain unknown causal-bridge status "+k)
         n=num(p["n_scored_units_or_unknown"],"number of units")
         if n is not None and (int(n)!=n or n<2):raise ValueError("Unit count "+k)
     eid=set()
