@@ -92,6 +92,7 @@ jobs:
             ${{ runner.temp }}/ahif/panels.csv
             ${{ runner.temp }}/ahif/effects.csv
             ${{ runner.temp }}/ahif/hypotheses.csv
+            ${{ runner.temp }}/ahif/prior_art_verified.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
             ${{ runner.temp }}/ahif-review/review268_design_audit.json
             ${{ runner.temp }}/ahif-review/review268_design_corrected_bins.csv
