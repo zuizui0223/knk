@@ -1,0 +1,234 @@
+{
+  "status": "POSTHOC_SOURCE_VERIFIED_2026_BEETLE_TWO_SPECIES_NOT_INDEPENDENT_PREDICTION",
+  "article_doi": "10.1002/ecy.70454",
+  "archive_doi": "10.6084/m9.figshare.32118556.v2",
+  "author_source_repo": "https://github.com/hengxingzou/Zou2026Ecology/tree/5f28e5da78853bb31de1e1fa86f20f4892d7f2bb",
+  "original_source_actions": "https://github.com/zuizui0223/knk/actions/runs/45320476906",
+  "source_audit": {
+    "study": "Zou and Rudolf 2026, Ecology, 10.1002/ecy.70454",
+    "source_commit": "5f28e5da78853bb31de1e1fa86f20f4892d7f2bb",
+    "count_source_git_blob": "8fef4ec5818319452e1febb4c51042530b39a676",
+    "coeff_source_git_blob": "5071d3d4bfdfb831326e5eb49d3960c0902c29fc",
+    "lambda_source_git_blob": "3380ce79795a8ca2419524480cf6a70e0acdfbd3",
+    "count_source_sha256": "5552f731837df7d27ff4e78a163ed687184686540e88318552b29485516c4849",
+    "coeff_source_sha256": "b0b2f897dfc38233703a83d5c1c92abbf665b1d2be9418f64ceef545be948ffd",
+    "lambda_source_sha256": "6249e23416c317356a4d99cbd63e1ecf6a05ae2fa9c64889f69df8b924ead5d6",
+    "n_original_vials": 414,
+    "n_mixed_vials": 378,
+    "n_single_species_controls": 36,
+    "n_equal_initial_density_mixed_vials": 126,
+    "n_posterior_parameter_summary_rows": 42,
+    "replication_unit": "independent experimental vial, NOT adults and not model posterior samples"
+  },
+  "method": "126 equal initial-frequency (15:15 or 30:30) original whole vials; all 9 pairs of 3, 6/12/18-day reversed arrivals; exact 400 allocations preserving initial density, plus whole-vial 20000 bootstrap.",
+  "posthoc_symmetric_arrival_contrasts": [
+    {
+      "n_generations": 1,
+      "lead_days": 6,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.14173541833924713,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": -0.009503763934417875,
+      "delta_T_share_bootstrap95": [
+        0.04242293006124159,
+        0.23875062041562833
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        -0.10032044583768707,
+        0.07811903582760094
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.07,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.86,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 1,
+      "lead_days": 12,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.45639804639804643,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.13484737484737486,
+      "delta_T_share_bootstrap95": [
+        0.35007936507936505,
+        0.5696581196581196
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.017863247863247833,
+        0.23714896214896214
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.11,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 1,
+      "lead_days": 18,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.7330957689653341,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.254083718214153,
+      "delta_T_share_bootstrap95": [
+        0.6568137176832829,
+        0.8167409884801189
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.1832590115198811,
+        0.3175452566756915
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.005,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 2,
+      "lead_days": 6,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.3560037402876544,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.16998817500379648,
+      "delta_T_share_bootstrap95": [
+        0.25592939267474873,
+        0.4602498074537549
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.09600517199602565,
+        0.23871879759471326
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.01,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 2,
+      "lead_days": 12,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.6742516608086784,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.19244830983866068,
+      "delta_T_share_bootstrap95": [
+        0.5962083496403671,
+        0.7442505005005005
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.12259160789862544,
+        0.2708092585066269
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.02,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 2,
+      "lead_days": 18,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.7682836741226914,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.1874282841699122,
+      "delta_T_share_bootstrap95": [
+        0.6886960103136704,
+        0.8535101729546174
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.10338728707904338,
+        0.2671207688185208
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.005,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 3,
+      "lead_days": 6,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.6490904641473705,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.2651396506203787,
+      "delta_T_share_bootstrap95": [
+        0.5738788985236758,
+        0.7125644757244136
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.2016521541725243,
+        0.3411602885920874
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.005,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 3,
+      "lead_days": 12,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.8513517001657419,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.12941753060348893,
+      "delta_T_share_bootstrap95": [
+        0.816273432449903,
+        0.8902751423149905
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.09149961887153535,
+        0.16379551820728283
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.005,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    },
+    {
+      "n_generations": 3,
+      "lead_days": 18,
+      "n_T_first_vials": 6,
+      "n_F_first_vials": 6,
+      "n_vials_per_initial_density_and_direction": 3,
+      "delta_T_identity_share_Tfirst_minus_Ffirst": 0.7404823264966643,
+      "delta_unlabeled_top1_share_Tfirst_minus_Ffirst": 0.15684842538377153,
+      "delta_T_share_bootstrap95": [
+        0.6176336210679945,
+        0.8321581767905297
+      ],
+      "delta_unlabeled_top1_bootstrap95": [
+        0.07992616368396321,
+        0.25003449443980147
+      ],
+      "exact_400_within_density_permutation_p_two_sided_T_share": 0.005,
+      "exact_400_within_density_permutation_p_two_sided_top1": 0.01,
+      "n_exact_permutations": 400,
+      "note": "Within-source posthoc difference, not multi-species ranked abundance or causal mediation"
+    }
+  ],
+  "fitted_alpha_context_correlation_in_sample": {
+    "n_cells": 21,
+    "source_fitted_coefficient_asymmetry_vs_mean_T_share_pearson_in_sample": 0.8575667636243322,
+    "correlation_by_generation_IN_SAMPLE_no_p": {
+      "1": 0.7536278663342733,
+      "2": 0.9675081683466404,
+      "3": 0.9837523227393922
+    },
+    "no_independent_prediction": "The fitted parameters are derived from the SAME adult population counts; correlation has no independent validation or mediation interpretation."
+  },
+  "scientific_gates": [
+    "Original source study itself demonstrates arrival-dependent interspecific competition model coefficients; not a novel KNK finding.",
+    "Two species only. Sorting abundance vector to top1 is not the same dimension as multi-species rank-abundance structure.",
+    "Model fitted alpha values derived from same experimental adult counts: correlation is in-sample and NOT independent validation.",
+    "Nine tests times two response variables are exploratory unadjusted comparisons, not 18 independent replications or multiplicity-robust studies.",
+    "Source experimental unit is vial; 42 coefficient rows are posterior summaries not independently randomized replicates.",
+    "No inference of direct within-panel causal mediation of alpha to labelled-vs-sorted structure.",
+    "AHIF-DB original Ecology Letters frozen KNK main unaffected."
+  ]
+}
