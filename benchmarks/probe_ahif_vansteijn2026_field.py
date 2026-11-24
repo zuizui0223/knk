@@ -52,11 +52,18 @@ def fetch_original(output:Path):
         prefix=f"https://zenodo.org/api/records/{RECORD}/files/"
         if not isinstance(url,str) or not url.startswith(prefix) or not url.endswith("/content"):
             raise ValueError("Unexpected remote URL, allowlist source files only")
+        # Zenodo's public API content endpoint can return 406 for Accept
+        # application/octet-stream. Prefer its ordinary documented public file
+        # link; never bypass access controls or use untrusted third-party mirrors.
+        download_url=f"https://zenodo.org/records/{RECORD}/files/{quote(name)}?download=1"
         req=urllib.request.Request(
-            url,headers={"Accept":"application/octet-stream",
-                         "User-Agent":"AHIF-DB/0.2 academic source reproducibility"})
-        with urllib.request.urlopen(req,timeout=120) as stream:
-            body=stream.read(1_000_001)
+            download_url,headers={"Accept":"*/*",
+                                  "User-Agent":"Mozilla/5.0 (AHIF academic reproducibility)"})
+        try:
+            with urllib.request.urlopen(req,timeout=120) as stream:
+                body=stream.read(1_000_001)
+        except Exception as exc:
+            raise ValueError(f"Official Zenodo public file {name} unavailable: {exc}") from exc
         if len(body)>1_000_000 or hashlib.md5(body).hexdigest()!=md5:
             raise ValueError("Original file bytes failed source check for "+name)
         (output/name).write_bytes(body)
