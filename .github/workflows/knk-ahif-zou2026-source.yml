@@ -1,0 +1,59 @@
+name: AHIF Zou 2026 original two-species interaction and rank audit
+
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-zou2026-source.yml"
+      - "benchmarks/score_ahif_zou2026_two_species.py"
+      - "tests/test_ahif_zou2026_two_species.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pin-original-study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Source-free synthetic unit tests for identity/rank separation
+        shell: bash
+        run: |
+          python -m pip install pytest
+          python -m pytest tests/test_ahif_zou2026_two_species.py -q
+      - name: Acquire THREE pinned author original research data tables
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/zou26/Coefficients"
+          ROOT="https://raw.githubusercontent.com/hengxingzou/Zou2026Ecology/5f28e5da78853bb31de1e1fa86f20f4892d7f2bb"
+          curl --fail --location --retry 3 --retry-delay 4 "$ROOT/Counts.csv" \
+            -o "$RUNNER_TEMP/zou26/Counts.csv"
+          curl --fail --location --retry 3 --retry-delay 4 "$ROOT/Coefficients/CompCoefficients.csv" \
+            -o "$RUNNER_TEMP/zou26/Coefficients/CompCoefficients.csv"
+          curl --fail --location --retry 3 --retry-delay 4 "$ROOT/Coefficients/Lambdas.csv" \
+            -o "$RUNNER_TEMP/zou26/Coefficients/Lambdas.csv"
+          test "$(git hash-object "$RUNNER_TEMP/zou26/Counts.csv")" = "8fef4ec5818319452e1febb4c51042530b39a676"
+          test "$(git hash-object "$RUNNER_TEMP/zou26/Coefficients/CompCoefficients.csv")" = "5071d3d4bfdfb831326e5eb49d3960c0902c29fc"
+          test "$(git hash-object "$RUNNER_TEMP/zou26/Coefficients/Lambdas.csv")" = "3380ce79795a8ca2419524480cf6a70e0acdfbd3"
+      - name: Compute all nine reversible-arrival contrasts at original vial unit
+        shell: bash
+        run: |
+          python -m benchmarks.score_ahif_zou2026_two_species \
+            --counts "$RUNNER_TEMP/zou26/Counts.csv" \
+            --coefficients "$RUNNER_TEMP/zou26/Coefficients/CompCoefficients.csv" \
+            --lambdas "$RUNNER_TEMP/zou26/Coefficients/Lambdas.csv" \
+            --out "$RUNNER_TEMP/zou26/zou2026_two_species_identity_rank.json" \
+            --bootstrap 20000
+      - name: Archive ONLY derived audit and aggregate result, NEVER original research tables
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahif-zou2026-two-species-original-audit
+          path: ${{ runner.temp }}/zou26/zou2026_two_species_identity_rank.json
+          retention-days: 30
