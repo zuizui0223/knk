@@ -1,0 +1,182 @@
+{
+  "status": "EXPLORATORY_NESTED_SITE_HOLDOUT_NOT_DIRECT_INTERACTION_COEFFICIENT",
+  "source_assigned_logs": 460,
+  "complete_logs": 446,
+  "treated_logs": 347,
+  "control_logs": 99,
+  "site_names": [
+    "Kesijarvi",
+    "Lapinjarvi",
+    "Luukki",
+    "Saajarvi",
+    "Seitseminen"
+  ],
+  "context_order": [
+    "felled",
+    "natural"
+  ],
+  "introduced_species": [
+    "Antrodia_piceata",
+    "Antrodiella_citrinella",
+    "Fomitopsis_rosea",
+    "Perenniporia_subacida",
+    "Physisporinus_crocatus",
+    "Postia_guttulata",
+    "Skeletocutis_odora",
+    "Skeletocutis_stellae",
+    "Steccherinum_collabens"
+  ],
+  "n_permutations": 999,
+  "alpha_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "results": {
+    "named": {
+      "folds": [
+        {
+          "alpha": 0,
+          "zero_sse": 3.311448740967269,
+          "pooled_sse": 3.4832690647590487,
+          "nested_identity_sse": 3.4832690647590487,
+          "full_identity_sse": 3.8432381304110104,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Kesijarvi"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 2.0341725148929473,
+          "pooled_sse": 2.3588588762403924,
+          "nested_identity_sse": 2.3588588762403924,
+          "full_identity_sse": 2.8355987621885834,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Lapinjarvi"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 2.707641122668152,
+          "pooled_sse": 2.6455449867856626,
+          "nested_identity_sse": 2.6455449867856626,
+          "full_identity_sse": 3.0634976890446537,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Luukki"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 1.9638306786231188,
+          "pooled_sse": 2.055103171849235,
+          "nested_identity_sse": 2.055103171849235,
+          "full_identity_sse": 2.4294790929859382,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Saajarvi"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 2.7462402345476864,
+          "pooled_sse": 2.7455323688036697,
+          "nested_identity_sse": 2.7455323688036697,
+          "full_identity_sse": 3.2724329300636605,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Seitseminen"
+        }
+      ],
+      "total_sse": {
+        "zero_sse": 12.763333291699173,
+        "pooled_sse": 13.288308468438009,
+        "nested_identity_sse": 13.288308468438009,
+        "full_identity_sse": 15.444246604693847
+      },
+      "identity_gain_over_pooled": 0,
+      "pooled_gain_over_zero": -0.041131510455835386,
+      "full_identity_gain_over_pooled": -0.1622432336949851,
+      "p_upper": 0.984,
+      "null_gain_median": 0,
+      "null_gain_95": [
+        0,
+        0
+      ],
+      "p_holm_family": 1
+    },
+    "rank": {
+      "folds": [
+        {
+          "alpha": 0,
+          "zero_sse": 0.6459620962516583,
+          "pooled_sse": 0.610543238674598,
+          "nested_identity_sse": 0.610543238674598,
+          "full_identity_sse": 0.687049339808681,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Kesijarvi"
+        },
+        {
+          "alpha": 0.25,
+          "zero_sse": 0.35898412333205626,
+          "pooled_sse": 0.41083656555105474,
+          "nested_identity_sse": 0.43939943066939946,
+          "full_identity_sse": 0.6077416004751556,
+          "identity_gain_over_pooled": -0.069523668323031,
+          "held_site": "Lapinjarvi"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 0.9317354224819424,
+          "pooled_sse": 0.9145255311505621,
+          "nested_identity_sse": 0.9145255311505621,
+          "full_identity_sse": 1.080139386418822,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Luukki"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 0.47782092247036384,
+          "pooled_sse": 0.4330222665785345,
+          "nested_identity_sse": 0.4330222665785345,
+          "full_identity_sse": 0.35250655376303036,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Saajarvi"
+        },
+        {
+          "alpha": 0,
+          "zero_sse": 1.0293144924925568,
+          "pooled_sse": 1.311248867952266,
+          "nested_identity_sse": 1.311248867952266,
+          "full_identity_sse": 1.358064275314645,
+          "identity_gain_over_pooled": 0,
+          "held_site": "Seitseminen"
+        }
+      ],
+      "total_sse": {
+        "zero_sse": 3.4438170570285775,
+        "pooled_sse": 3.6801764699070154,
+        "nested_identity_sse": 3.70873933502536,
+        "full_identity_sse": 4.085501155780334
+      },
+      "identity_gain_over_pooled": -0.00776127594747275,
+      "pooled_gain_over_zero": -0.06863297584174678,
+      "full_identity_gain_over_pooled": -0.11013729618339739,
+      "p_upper": 0.712,
+      "null_gain_median": 0,
+      "null_gain_95": [
+        -0.022116653576445166,
+        0.018368147519338223
+      ],
+      "p_holm_family": 1
+    }
+  },
+  "limits": [
+    "Same source experiment, five fixed sites; no new independent publication.",
+    "Controls shared across species; whole trajectory assignment permutations preserve dependence.",
+    "Conditional on post-treatment QC, not exact full-cohort ITT.",
+    "Training site year-2 outcomes select shrinkage; held-out site excluded from all fitting.",
+    "Response vectors are not independent direct interaction coefficients."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45388257428",
+  "source_job_id": 138424791903,
+  "source_commit": "43a837e9f5d9e02d12f3c410c547e52da6388a01",
+  "source_doi": "10.5281/zenodo.13819389",
+  "source_rdata_md5": "4dbc27f81ffdcf1925887c7e0805b031",
+  "prescore_contract": "docs/AHIF_SAINE2025_TRANSFER_PRESCORE_20261124.md"
+}
