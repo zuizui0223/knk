@@ -52,10 +52,19 @@ def audit_archive(name,data):
 def audit(out):
     out.mkdir(parents=True,exist_ok=True)
     manifest=json.loads(get(f"https://zenodo.org/api/records/{RECORD}",2_000_000,"application/json"))
-    if manifest.get("id")!=RECORD or manifest.get("doi")!=DOI: raise ValueError("record DOI mismatch")
+    identity={k:manifest.get(k) for k in ("id","doi","conceptrecid","conceptdoi")}
+    identity["title"]=manifest.get("metadata",{}).get("title")
+    print("SAINE_RECORD_IDENTITY",json.dumps(identity,ensure_ascii=False))
+    # A cited concept DOI can resolve to a version record. Accept only the
+    # authenticated exact DOI or concept DOI, and record the resolved version.
+    if DOI not in (manifest.get("doi"),manifest.get("conceptdoi")):
+        raise ValueError("record DOI/ concept DOI mismatch")
+    version_id=int(manifest["id"])
+    if manifest.get("doi")!=f"10.5281/zenodo.{version_id}":
+        raise ValueError("resolved version DOI mismatch")
     files=manifest.get("files",[])
     if not files: raise ValueError("no source files")
-    result={"record":RECORD,"doi":DOI,"title":manifest["metadata"]["title"],"license":manifest["metadata"].get("license"),"status":"SOURCE_SCHEMA_ONLY_NO_ECOLOGICAL_SCORES","files":[]}
+    result={"record":version_id,"doi":manifest["doi"],"cited_doi":DOI,"record_identity":identity,"title":manifest["metadata"]["title"],"license":manifest["metadata"].get("license"),"status":"SOURCE_SCHEMA_ONLY_NO_ECOLOGICAL_SCORES","files":[]}
     used=0
     for f in files:
         name=f["key"]; size=int(f["size"]); chk=f["checksum"]
@@ -63,7 +72,7 @@ def audit(out):
         rec={"name":name,"size":size,"public_checksum":chk,"status":"not_acquired_size_gate"}
         if size<=MAX and used+size<=TOTAL:
             try:
-                body=get(f"https://zenodo.org/records/{RECORD}/files/{quote(name)}?download=1",min(MAX,size+1000))
+                body=get(f"https://zenodo.org/records/{version_id}/files/{quote(name)}?download=1",min(MAX,size+1000))
                 if len(body)!=size or chk!="md5:"+hashlib.md5(body).hexdigest():raise ValueError("source byte digest/size mismatch")
                 used+=size
                 (out/name).write_bytes(body)
