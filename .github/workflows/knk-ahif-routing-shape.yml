@@ -1,0 +1,35 @@
+name: AHIF routing shape and fixed-site contrast audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-routing-shape.yml"
+      - "benchmarks/score_ahif_routing_shape.py"
+      - "tests/test_ahif_routing_shape.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-locked-shape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: |
+          python -m pip install numpy scipy pytest
+          python -m pytest tests/test_ahif_routing_shape.py -q
+      - name: Acquire and verify original seven source files
+        run: |
+          python -m benchmarks.probe_ahif_vansteijn2026_field --outdir "$RUNNER_TEMP/original"
+      - name: Score rank residuals and approximate fixed-site contrasts
+        run: |
+          python -m benchmarks.score_ahif_routing_shape --original-dir "$RUNNER_TEMP/original" --output "$RUNNER_TEMP/routing_shape.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-routing-shape-derived-only
+          path: ${{ runner.temp }}/routing_shape.json
+          retention-days: 30
