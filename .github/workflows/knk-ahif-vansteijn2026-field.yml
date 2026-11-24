@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/knk-ahif-vansteijn2026-field.yml"
       - "benchmarks/probe_ahif_vansteijn2026_field.py"
+      - "benchmarks/audit_ahif_vansteijn2026_grain.py"
       - "benchmarks/score_ahif_vansteijn2026_field.py"
   workflow_dispatch:
 
@@ -59,6 +60,12 @@ jobs:
         run: |
           python -m benchmarks.probe_ahif_vansteijn2026_field \
             --outdir "$RUNNER_TEMP/vansteijn2026"
+      - name: Audit original 40 whole-plot treatment and repeated species point-survey grain
+        shell: bash
+        run: |
+          python -m benchmarks.audit_ahif_vansteijn2026_grain \
+            --source-dir "$RUNNER_TEMP/vansteijn2026" \
+            --output "$RUNNER_TEMP/vansteijn2026/plot_grain_audit.json"
       - name: Archive original-source manifest only
         uses: actions/upload-artifact@v4
         with:
@@ -66,4 +73,5 @@ jobs:
           path: |
             ${{ runner.temp }}/vansteijn2026/zenodo_source_manifest.json
             ${{ runner.temp }}/vansteijn2026/original_field_schema.json
+            ${{ runner.temp }}/vansteijn2026/plot_grain_audit.json
           retention-days: 14
