@@ -108,7 +108,14 @@ def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
     result=build(ROOT,tmp_path)
     assert result["substantively_verified_prior_art_papers_n"]==6
     assert result["source_audited_studies"]>=9
-    assert result["aggregate_effect_rows"]>=64
+    assert result["aggregate_effect_rows"]==118
+    assert result["study_records"]==30
+    assert result["experimental_panels"]==32
+    assert result["source_audited_studies"]==10
+    assert result["panels_with_named_and_unlabeled_rank_measured"]==7
+    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==6
+    assert result["panels_with_two_species_top1_named_rank_n"]==1
+    assert result["methodological_novelty_threats_n"]==5
     assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==5
     assert result["panels_with_two_species_top1_named_rank_n"]==1
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
@@ -123,3 +130,37 @@ def test_six_substantive_prior_art_checks_are_not_new_effect_rows(tmp_path):
         ).fetchone()
         assert row==("yes",)
     assert result["formal_meta_analysis_ready"] is False
+    assert result["review_candidates_promoted_to_independent_AHIF_evidence"]==0
+
+
+def test_methodological_precedents_are_separate_from_empirical_effects(tmp_path):
+    summary=build(ROOT,tmp_path)
+    assert summary["methodological_novelty_threats_n"]==5
+    assert summary["substantively_verified_prior_art_papers_n"]==6
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        r=db.execute("SELECT record_id,not_independent_effect,doi_or_unverified FROM methodological_prior_art").fetchall()
+        assert len(r)==5
+        assert all(z[1]=="yes" for z in r)
+        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()[0]==118
+        assert any(z[2]=="doi_unverified" for z in r)
+
+
+def test_new_2026_field_study_has_repeated_40_plot_grain_and_no_mechanism_claim():
+    rows=fixtures()
+    study=next(x for x in rows["studies"] if x["study_id"]=="ST_VANSTEIJNFIELD2026")
+    panel=next(x for x in rows["panels"] if x["panel_id"]=="P_VANSTEIJNFIELD2026")
+    assert study["raw_source_audited"]=="yes"
+    assert panel["n_scored_units_or_unknown"]=="40"
+    assert panel["named_structure_scored"]=="yes"
+    assert panel["identity_free_rank_scored"]=="yes"
+    assert panel["same_panel_causal_interaction_to_structure_identified"]=="no"
+    effect=[e for e in rows["effects"] if e["panel_id"]=="P_VANSTEIJNFIELD2026"]
+    assert len(effect)==54
+    assert sum(e["endpoint_class"]=="structure" for e in effect)==16
+    assert sum(e["endpoint_class"]=="structure_nontarget_roster" for e in effect)==16
+    assert sum(e["endpoint_class"]=="structure_sown_roster" for e in effect)==16
+    assert sum(e["endpoint_class"]=="structure_trajectory" for e in effect)==4
+    assert sum(e["endpoint_class"]=="structure_trajectory_contrast" for e in effect)==2
+    source_years={y for y in ("2021","2022","2023","2024") if
+                  any(y in e["contrast"] for e in effect)}
+    assert len(source_years)==4
