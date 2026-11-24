@@ -1,0 +1,140 @@
+{
+  "record": 13819389,
+  "doi": "10.5281/zenodo.13819389",
+  "cited_doi": "10.5281/zenodo.10959957",
+  "record_identity": {
+    "id": 13819389,
+    "doi": "10.5281/zenodo.13819389",
+    "conceptrecid": "10959957",
+    "conceptdoi": "10.5281/zenodo.10959957",
+    "title": "Species introductions cause phylogenetically structured successional pathways in natural wood-inhabiting fungal communities"
+  },
+  "title": "Species introductions cause phylogenetically structured successional pathways in natural wood-inhabiting fungal communities",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "status": "SOURCE_SCHEMA_ONLY_NO_ECOLOGICAL_SCORES",
+  "files": [
+    {
+      "name": "S4_show_parameter_estimates.R",
+      "size": 14819,
+      "public_checksum": "md5:3698636dd29687df8463921ec6fe65d1",
+      "status": "acquired_checksum_verified",
+      "sha256": "e90bd8e13183de940084f6ccf804f8b9236fa85715c768e374699591540f5bca",
+      "inventory": [
+        {
+          "name": "S4_show_parameter_estimates.R",
+          "size": 14819,
+          "sha256": "e90bd8e13183de940084f6ccf804f8b9236fa85715c768e374699591540f5bca",
+          "source_lines_n": 325
+        }
+      ]
+    },
+    {
+      "name": "S2_define_HMSC_models_and_export_to_Hmsc-HPC.R",
+      "size": 5612,
+      "public_checksum": "md5:a3dfe8ae32340e470a31cfa7bac7f9dd",
+      "status": "acquired_checksum_verified",
+      "sha256": "516d23b973963d19b234304cd211c0cad3f1ab70e819d7a33fd645ba2079a65e",
+      "inventory": [
+        {
+          "name": "S2_define_HMSC_models_and_export_to_Hmsc-HPC.R",
+          "size": 5612,
+          "sha256": "516d23b973963d19b234304cd211c0cad3f1ab70e819d7a33fd645ba2079a65e",
+          "source_lines_n": 166
+        }
+      ]
+    },
+    {
+      "name": "README.docx",
+      "size": 59494,
+      "public_checksum": "md5:e61cec4b7d3c8a76e76eb4e2978a1192",
+      "status": "acquired_checksum_verified",
+      "sha256": "a602370e39433049d258c3fbd5220ea0fdabbb59a714a652c64da865813cd9be",
+      "inventory": [
+        {
+          "name": "README.docx",
+          "size": 59494,
+          "sha256": "a602370e39433049d258c3fbd5220ea0fdabbb59a714a652c64da865813cd9be"
+        }
+      ]
+    },
+    {
+      "name": "S1_NMDS_ordination.R",
+      "size": 3082,
+      "public_checksum": "md5:ceaec7fdb5b836f3fd8294de86c514d7",
+      "status": "acquired_checksum_verified",
+      "sha256": "4da8424cd75ea58001ca8f56f388341c03f19ca2dac433b50be0dbd880b1861d",
+      "inventory": [
+        {
+          "name": "S1_NMDS_ordination.R",
+          "size": 3082,
+          "sha256": "4da8424cd75ea58001ca8f56f388341c03f19ca2dac433b50be0dbd880b1861d",
+          "source_lines_n": 84
+        }
+      ]
+    },
+    {
+      "name": "as.phylo.formula.R",
+      "size": 1771,
+      "public_checksum": "md5:620bb653f8a64ab046ed1b74d7ae7bfa",
+      "status": "acquired_checksum_verified",
+      "sha256": "a597bee6d9aadd5bf230d2ed0d80c22d9d800ad92ebf85464d58ddf69abb2868",
+      "inventory": [
+        {
+          "name": "as.phylo.formula.R",
+          "size": 1771,
+          "sha256": "a597bee6d9aadd5bf230d2ed0d80c22d9d800ad92ebf85464d58ddf69abb2868",
+          "source_lines_n": 50
+        }
+      ]
+    },
+    {
+      "name": "data_meta_otu.Rdata",
+      "size": 1282503,
+      "public_checksum": "md5:4dbc27f81ffdcf1925887c7e0805b031",
+      "status": "acquired_checksum_verified",
+      "sha256": "1cd60329dcad18b872b24b55016d875e847d3849c8200562ec0578dd32424f66",
+      "inventory": [
+        {
+          "name": "data_meta_otu.Rdata",
+          "size": 1282503,
+          "sha256": "1cd60329dcad18b872b24b55016d875e847d3849c8200562ec0578dd32424f66"
+        }
+      ]
+    },
+    {
+      "name": "S3_import_posteriors_from_Hmsc-HPC.R",
+      "size": 981,
+      "public_checksum": "md5:68bc3e2ddf6150c187d230868e2e670b",
+      "status": "acquired_checksum_verified",
+      "sha256": "336968fb50cb04dbb8a0846a93a7343e81d0d82b92756168ad9c2416d4ac404b",
+      "inventory": [
+        {
+          "name": "S3_import_posteriors_from_Hmsc-HPC.R",
+          "size": 981,
+          "sha256": "336968fb50cb04dbb8a0846a93a7343e81d0d82b92756168ad9c2416d4ac404b",
+          "source_lines_n": 28
+        }
+      ]
+    },
+    {
+      "name": "S5_evaluate_convergence.R",
+      "size": 5085,
+      "public_checksum": "md5:2da62c98ffba4513e316dcbffb134744",
+      "status": "acquired_checksum_verified",
+      "sha256": "8c8fb9c05f69fc093b0d812e3739c3c5d557b86f9807e52f89d649c1b444b633",
+      "inventory": [
+        {
+          "name": "S5_evaluate_convergence.R",
+          "size": 5085,
+          "sha256": "8c8fb9c05f69fc093b0d812e3739c3c5d557b86f9807e52f89d649c1b444b633",
+          "source_lines_n": 149
+        }
+      ]
+    }
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45384372397",
+  "source_commit": "c9ac4dae558ca3e00d6f08c7727ea7755b6e4d56",
+  "source_job": 138411357953
+}
