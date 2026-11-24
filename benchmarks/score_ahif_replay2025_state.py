@@ -53,7 +53,15 @@ def read_matrix(path,want):
         f.seek(0)
         rows=list(csv.reader(f,delimiter=sep))
     if not rows or len(rows[0])<2:raise ValueError("empty matrix")
-    if len({len(z) for z in rows})!=1:raise ValueError("nonrectangular matrix")
+    # R write.table(col.names=TRUE,row.names=TRUE) may omit the
+    # empty row-name corner in its header. Accept only that exact form.
+    data_widths=Counter(len(z) for z in rows[1:])
+    print("REPLAY_MATRIX_WIDTHS",json.dumps({"header":len(rows[0]),"data_widths":dict(data_widths),"separator":repr(sep)}))
+    if len(data_widths)!=1:raise ValueError("nonrectangular matrix data rows")
+    width=next(iter(data_widths))
+    implicit_corner=len(rows[0])==width-1
+    if implicit_corner:rows[0]=[""]+rows[0]
+    if len(rows[0])!=width:raise ValueError("unrecognized matrix header width")
     columns=rows[0][1:];rowids=[z[0] for z in rows[1:]]
     if len(set(columns))!=len(columns) or len(set(rowids))!=len(rowids):
         raise ValueError("duplicate source matrix identifiers")
@@ -70,7 +78,7 @@ def read_matrix(path,want):
         names=rowids;orientation="asv_by_samples"
     if not np.isfinite(x).all() or np.any(x<0) or np.any(x!=np.floor(x)) or np.any(x.sum(1)<=0):
         raise ValueError("noninteger/invalid source counts or empty matched state")
-    return x.reshape(275,5,-1),{"orientation":orientation,"original_rows":len(rowids),
+    return x.reshape(len(want)//5,5,-1),{"orientation":orientation,"implicit_R_header_corner":implicit_corner,"original_rows":len(rowids),
       "original_columns":len(columns),"n_asvs":len(names),"separator":repr(sep)}
 
 def features_and_outcomes(x):
