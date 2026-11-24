@@ -64,3 +64,38 @@ ORDER BY candidate_study_rows DESC;
 SELECT hypothesis_id,testable_hypothesis,required_joint_endpoints,
        required_independence_grain,falsifiable_prediction,interpretation_status
 FROM hypotheses ORDER BY hypothesis_id;
+
+-- 9. Independent original 2026 field rank and spontaneous-species sensitivity
+-- Same physical 40 plots repeated in four survey years; values not independent
+-- study effects or independently identified competition coefficients.
+SELECT e.contrast,e.endpoint_class,e.estimate,e.p_value,e.experimental_grain,
+       s.publication_cluster,s.lab_or_overlap_group,e.evidence_url
+FROM effects e
+JOIN panels p USING(panel_id)
+JOIN studies s USING(study_id)
+WHERE p.panel_id='P_VANSTEIJNFIELD2026'
+  AND e.endpoint_class IN ('structure','structure_trajectory',
+      'structure_nontarget_roster','structure_sown_roster')
+ORDER BY e.endpoint_class,e.contrast;
+
+-- 10. Causally incomplete full community panels versus two-species geometry
+SELECT p.panel_id,p.study_id,p.response_grain,
+       p.same_panel_causal_interaction_to_structure_identified,
+       s.raw_source_audited
+FROM panels p JOIN studies s USING(study_id)
+WHERE p.named_structure_scored='yes'
+  AND p.identity_free_rank_scored='yes'
+ORDER BY p.study_id;
+
+-- 11. Methodological novelty threats never count as independently
+-- measured effects (e.g. sPriority meta-analysis and LOVE 2024).
+SELECT record_id,title,doi_or_unverified,source_verification_level,
+       AHIF_novelty_overlap,not_independent_effect,source_url
+FROM methodological_prior_art
+ORDER BY record_id;
+
+-- 12. Paper-level novelty audits, preserving original source-data status.
+SELECT p.study_id,p.screening_scope,p.source_raw_audited,
+       p.existing_novelty_claim_defeated,p.remaining_testable_gap
+FROM prior_art_verified p
+ORDER BY p.study_id;
