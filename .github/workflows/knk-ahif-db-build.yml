@@ -80,6 +80,25 @@ jobs:
           print("Verified named/rank panels",r["panels_with_named_and_unlabeled_rank_measured"])
           print("Novelty-claim bound: targeted PILOT only")
           PY
+      - name: Methodological method-prior separation audit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os,sqlite3
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"ahif"
+          report=json.loads((p/"ahif_v1_validation.json").read_text())
+          assert report["study_records"]==30
+          assert report["experimental_panels"]==32
+          assert report["aggregate_effect_rows"]==118
+          assert report["source_audited_studies"]==10
+          assert report["panels_with_named_and_unlabeled_rank_measured"]==7
+          assert report["methodological_novelty_threats_n"]==5
+          with sqlite3.connect(p/"ahif_v1.sqlite") as db:
+              assert db.execute("SELECT COUNT(*) FROM methodological_prior_art WHERE not_independent_effect='yes'").fetchone()[0]==5
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_VANSTEIJNFIELD2026'").fetchone()[0]==54
+          print("AHIF source-backed v0.3 DB audited")
+          PY
       - name: Upload portable user-owned DB artifact, not source author raw data
         uses: actions/upload-artifact@v4
         with:
@@ -93,6 +112,7 @@ jobs:
             ${{ runner.temp }}/ahif/effects.csv
             ${{ runner.temp }}/ahif/hypotheses.csv
             ${{ runner.temp }}/ahif/prior_art_verified.csv
+            ${{ runner.temp }}/ahif/methodological_prior_art.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
             ${{ runner.temp }}/ahif-review/review268_design_audit.json
             ${{ runner.temp }}/ahif-review/review268_design_corrected_bins.csv
