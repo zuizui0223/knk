@@ -266,6 +266,12 @@ def report(tables,review_staged_n:int=0):
       "source_audited_publication_clusters":len({x["publication_cluster"] for x in audited}),
       "panels_with_named_and_unlabeled_rank_measured":len(architecture),
       "panels_with_identified_causal_interaction_to_storage_path":len(joint),
+      "unscreened_panels_with_joint_path_unknown":sum(
+          x["same_panel_causal_interaction_to_structure_identified"]=="unknown"
+          for x in p),
+      "audited_panels_with_joint_path_not_identified":sum(
+          x["same_panel_causal_interaction_to_structure_identified"]=="no"
+          for x in p),
       "possible_publication_or_lab_dependence_flags":overlaps,
       "interventions_by_panel":dict(pstats),
       "effects_by_analysis_status":dict(estat),
@@ -299,6 +305,8 @@ def gap_report(r):
       f"- Aggregate numeric evidence records: {r['aggregate_effect_rows']}",
       f"- Prespecified, falsifiable hypotheses: {r['falsifiable_hypotheses']}",
       f"- Panels with named and identity-free rank scoring: {r['panels_with_named_and_unlabeled_rank_measured']}",
+      f"- Source-audited panels where the mechanism-to-structure causal path was NOT identified: {r['audited_panels_with_joint_path_not_identified']}",
+      f"- Unscreened panels where the path status remains UNKNOWN: {r['unscreened_panels_with_joint_path_unknown']}",
       f"- Panels with verified causal interaction-formation to identity-vs-rank mediation: {r['panels_with_identified_causal_interaction_to_storage_path']}",
       "",
       "The count of zero applies only to THIS targeted source-audited pilot. It must never be quoted as proof that no prior paper anywhere measured both mechanisms and structure.",
