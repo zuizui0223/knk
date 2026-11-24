@@ -1,0 +1,26 @@
+import numpy as np
+from benchmarks.score_ahif_replay2025_state import features_and_outcomes,maps,score,restricted
+
+def test_rank_average_is_not_rank_of_mean():
+    x=np.array([[[7,3],[7,3],[3,7],[7,3],[3,7]]])
+    f,y=features_and_outcomes(x)
+    assert np.allclose(y["named"],[[.5,.5]])
+    assert np.allclose(y["rank"],[[.7,.3]])
+
+def test_holdout_maps():
+    rng=np.random.default_rng(4);f=rng.normal(size=(30,4));g=np.repeat(np.arange(5),6)
+    for h in maps(f,g):
+        assert np.allclose(h[g[:,None]==g[None,:]],0)
+        assert np.allclose(h.sum(1),1)
+
+def test_predictive_gain_and_wild_reference():
+    rng=np.random.default_rng(2);f=rng.normal(size=(60,4));g=np.repeat(np.arange(6),10)
+    y=np.column_stack((3*f[:,1]+.1*rng.normal(size=60),f[:,2]))
+    result=score(f,g,{"named":y,"rank":y},39)
+    assert all(r["held_location_gain"]>.8 for r in result)
+    assert all(r["p_approx"]==.025 for r in result)
+
+def test_singleton_saturated_residual():
+    rng=np.random.default_rng(3);f=rng.normal(size=(30,4));g=np.array([0]+[1]*14+[2]*15)
+    y=rng.normal(size=(30,2));fit,res,sat=restricted(f,g,y)
+    assert sat==1 and np.allclose(res[0],0)
