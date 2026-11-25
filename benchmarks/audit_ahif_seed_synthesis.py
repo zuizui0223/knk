@@ -35,7 +35,9 @@ def acquire(root):
         declared=int(item["size"]);md5=item.get("computed_md5") or item.get("supplied_md5")
         if not md5 or not re.fullmatch("[a-f0-9]{32}",md5) or not 0<declared<=MAX:
             raise ValueError("missing/inconsistent declared size/checksum")
-        u=item["downloadUrl"]
+        u=item.get("downloadUrl") or item.get("download_url")
+        if not isinstance(u,str):
+            raise ValueError("official file URL absent; fields="+",".join(sorted(item)))
         if urlparse(u).hostname not in ("figshare.com","api.figshare.com","ndownloader.figshare.com","s3-eu-west-1.amazonaws.com","s3.amazonaws.com"):
             raise ValueError("unexpected official manifest file host")
         if item.get("is_link_only"):raise ValueError("external link not an archived file")
