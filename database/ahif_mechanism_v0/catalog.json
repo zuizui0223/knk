@@ -1,0 +1,332 @@
+{
+  "version": "0.1.0",
+  "source_frozen_commit": "0d40b6699897bef770a235f6e827a87aafd05bf7",
+  "status": "DESCRIPTIVE_MECHANISM_REGISTRY_NOT_META",
+  "study_columns": [
+    "source",
+    "study_label",
+    "domain",
+    "ecosystem",
+    "measurement_lane",
+    "taxonomic_resolution",
+    "cluster_unit",
+    "n_clusters",
+    "n_panels",
+    "exposure",
+    "exposure_class",
+    "exposure_schedule",
+    "immigration_context",
+    "time_unit",
+    "observed_times",
+    "publication_overlap_group",
+    "source_status",
+    "source_evidence"
+  ],
+  "studies": [
+    [
+      "pond",
+      "Narwani 2019",
+      "algae",
+      "freshwater_pond",
+      "absolute_biovolume",
+      "morphotype",
+      "pond",
+      20,
+      4,
+      "nutrient/macrophyte/mussel factorial",
+      "ecosystem_manipulation",
+      "not_harmonized",
+      "unknown",
+      "weeks",
+      [
+        1,
+        3,
+        5,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        24,
+        28,
+        32
+      ],
+      "Narwani",
+      "source_verified",
+      "https://github.com/zuizui0223/knk/actions/runs/45557051796"
+    ],
+    [
+      "kansas",
+      "Foster Kansas curated compilation",
+      "plants",
+      "grassland",
+      "absolute_biomass_conditional",
+      "taxon_bin",
+      "block",
+      4,
+      1,
+      "seed addition",
+      "initial_establishment",
+      "initial addition",
+      "unknown",
+      "years",
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "Foster",
+      "original_linkage_conditional",
+      "https://github.com/zuizui0223/knk/actions/runs/45543133793"
+    ],
+    [
+      "poem",
+      "Alonso-Crespo POEM",
+      "plants",
+      "grassland",
+      "absolute_biomass",
+      "taxon_bin",
+      "plot",
+      40,
+      6,
+      "early functional-group sowing vs synchronous",
+      "arrival_order",
+      "initial arrival schedule",
+      "open field; nonsown plants observed",
+      "growing_season",
+      [
+        1,
+        2,
+        3
+      ],
+      "related_grassland",
+      "source_verified",
+      "https://github.com/zuizui0223/knk/pull/4"
+    ],
+    [
+      "field",
+      "van Steijn 2026 field",
+      "plants",
+      "grassland",
+      "unclosed_pin_hits",
+      "taxon_bin",
+      "randomized_block",
+      10,
+      8,
+      "fast/slow sowing vs synchronous references",
+      "arrival_order",
+      "initial arrival schedule",
+      "open field; nonsown plants observed",
+      "calendar_year",
+      [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "related_grassland",
+      "source_verified",
+      "https://doi.org/10.5281/zenodo.15363824"
+    ],
+    [
+      "mancuso",
+      "Mancuso 2021 E1",
+      "bacteria",
+      "soil_derived_lab_culture",
+      "relative_read_composition",
+      "genus_taxonomic_bin",
+      "reactor",
+      44,
+      8,
+      "fluctuating vs constant dilution at same mean rate",
+      "disturbance_frequency",
+      "repeated dilution",
+      "not quantified",
+      "days",
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Mancuso",
+      "source_verified_qc_conditional",
+      "https://doi.org/10.7554/eLife.67175"
+    ],
+    [
+      "saine",
+      "Saine 2025 fungal introduction",
+      "fungi",
+      "forest_wood",
+      "relative_read_composition",
+      "non_target_OTU",
+      "log",
+      446,
+      5,
+      "any fungal inoculation vs sterile control",
+      "species_introduction",
+      "initial introduction",
+      "open forest; recruitment not separately quantified",
+      "calendar_year",
+      [
+        2019,
+        2020,
+        2021
+      ],
+      "Saine",
+      "source_verified_qc_conditional",
+      "https://doi.org/10.1093/ismeco/ycaf166"
+    ]
+  ],
+  "candidate_sources": [
+    {
+      "candidate_id": "ST_HAYASHI2026",
+      "publication_doi": "10.1111/ele.70388",
+      "data_doi": "10.5281/zenodo.19396153",
+      "exposure": "founder_size",
+      "planned_samples": 3072,
+      "planned_conditions": 8,
+      "planned_cultures_per_condition": 96,
+      "planned_times_days": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "status": "SOURCE_GATE_PENDING",
+      "note": "Already registered candidate in AHIF v1; no new source outcome before gate"
+    },
+    {
+      "candidate_id": "JACQUET2020",
+      "publication_doi": "10.1098/rspb.2020.0678",
+      "data_doi": "10.5061/dryad.zkh189378",
+      "status": "INELIGIBLE_FOR_ONE_LAG",
+      "note": "Total biomass time series; species presence/absence endpoint only per deposited usage notes"
+    },
+    {
+      "candidate_id": "ST_FRESHWATER2026",
+      "publication_doi": "10.1002/ece3.73819",
+      "data_doi": "",
+      "status": "RAW_SEQUENCE_ONLY_PROCESSED_MATRIX_UNVERIFIED",
+      "note": "PRJNA985050; day13/day60; physical-unit crosswalk and processed ASV matrix unverified"
+    }
+  ],
+  "variables": [
+    [
+      "exposure_class",
+      "assigned_exposure",
+      "Study contrast class",
+      "known",
+      "Not direct interaction strength"
+    ],
+    [
+      "exposure_schedule",
+      "design_context",
+      "Initial versus repeated exposure",
+      "partially_coded",
+      "Unknown not zero"
+    ],
+    [
+      "observed_times",
+      "design_context",
+      "Original observed times and units",
+      "known",
+      "Use actual gaps; not generation-scaled"
+    ],
+    [
+      "immigration_context",
+      "design_context",
+      "Observation of nonsown/recruitment opportunity",
+      "partially_coded",
+      "Not a quantitative immigration rate; unknown not absence"
+    ],
+    [
+      "measurement_lane",
+      "measurement_context",
+      "Original quantity or relative read composition",
+      "known",
+      "Do not pool across lanes without calibrated estimand"
+    ],
+    [
+      "response_direction_gain",
+      "derived_outcome",
+      "One-lag TV(signblind)-TV(signed)",
+      "known",
+      "Study level, no calibrated sampling SE"
+    ],
+    [
+      "same_direction_gross",
+      "derived_outcome",
+      "Held absolute response fraction matching previous sign",
+      "known",
+      "Not fraction of taxa"
+    ],
+    [
+      "allocation_tv",
+      "derived_outcome",
+      "TV of normalized absolute response allocation",
+      "known",
+      "Not evidence of distinct response identity"
+    ],
+    [
+      "treatment_reliability",
+      "derived_diagnostic",
+      "U=(Q-W)/(Q+W)",
+      "available_five_prior_sources",
+      "Training-only fold diagnostic; not independent mechanism or causal noise"
+    ],
+    [
+      "generation_time",
+      "unmeasured",
+      "Taxon-specific generation time",
+      "missing",
+      "Do not assign broad domain constants"
+    ],
+    [
+      "functional_diversity",
+      "unmeasured",
+      "Harmonized traits and functional distances",
+      "missing",
+      "Do not substitute richness or taxon count"
+    ],
+    [
+      "immigration_rate",
+      "unmeasured",
+      "Quantitative recruitment/immigration rate",
+      "missing",
+      "Open field is not measured rate"
+    ],
+    [
+      "direct_interaction",
+      "unmeasured",
+      "Independent pairwise interaction coefficient linked to response",
+      "missing",
+      "Do not infer from response sign or co-occurrence"
+    ]
+  ],
+  "variable_columns": [
+    "variable",
+    "role",
+    "definition",
+    "status",
+    "caveat"
+  ]
+}
