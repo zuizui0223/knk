@@ -1,0 +1,28 @@
+name: AHIF Goldman abundance versus dose
+on:
+  push:
+    branches: [analysis/ahif-dose-source-prediction-20261126]
+    paths:
+      - 'benchmarks/score_ahif_goldman2025_abundance_dose.py'
+      - '.github/workflows/knk-ahif-goldman-abundance-dose.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy scikit-learn
+      - run: python -m benchmarks.score_ahif_goldman2025_abundance_dose --out "$RUNNER_TEMP/derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: goldman-abundance-dose-derived-only
+          path: ${{ runner.temp }}/derived/result.json
+          retention-days: 30
