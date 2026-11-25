@@ -1,0 +1,22 @@
+name: AHIF Goldman independent source audit
+on:
+  push:
+    branches: [analysis/ahif-source-context-20261126]
+    paths:
+      - 'benchmarks/probe_ahif_goldman2025.py'
+      - '.github/workflows/knk-ahif-goldman-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.probe_ahif_goldman2025 --out "$RUNNER_TEMP/goldman"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: goldman-schema-audit-only
+          path: ${{ runner.temp }}/goldman/audit.json
+          retention-days: 30

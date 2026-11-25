@@ -1,0 +1,488 @@
+{
+  "status": "GOLDMAN_SOURCE_SCHEMA_ONLY",
+  "commit": "b07cf57f837b8b6041031f76625792dce4e0ed64",
+  "publication": "10.1073/pnas.2322440122",
+  "files": [
+    {
+      "path": "sequencing/communityCoalescence/data/intermediates/mixtureDataframe.zip",
+      "git_blob": "eabfd7ff302e19607237649c73eccb7f6a698a25",
+      "bytes": 4780720,
+      "sha256": "ebd804e58de451d37e8e5cdaeaccacb0d5ad7cfe9b89a2b4d82b59860feec309",
+      "members": [
+        {
+          "name": "mixtureDataframe.txt",
+          "schema": {
+            "header": [
+              "combo",
+              "passage",
+              "OTU",
+              "Family",
+              "line",
+              "ratio",
+              "inoculationReplicate",
+              "Phylum",
+              "Class",
+              "Order",
+              "Genus",
+              "rel_abundance",
+              "label",
+              "group",
+              "mixtureType",
+              "parent",
+              "logAbundance",
+              "rel_abundance_old",
+              "logFamilyAbundance",
+              "family_rel_abundance",
+              "pointType",
+              "familyPointType",
+              "filterRelAb3",
+              "parentOriginRep1_relAb3",
+              "parentOriginRep2_relAb3",
+              "ASVcountRelAb3",
+              "leftParent",
+              "rightParent",
+              "highAbundanceParentLeft",
+              "highAbundanceParentRight",
+              "parentDiff",
+              "parentDiffAvg",
+              "OTUnum",
+              "t_rangeAvg",
+              "a_rangeAvg",
+              "t_doseDistance",
+              "t_doseDifference",
+              "t_doseSumDistance",
+              "t_doseSumDifference",
+              "a_doseDistance",
+              "a_doseDifference",
+              "a_doseSumDistance",
+              "a_doseSumDifference",
+              "avgdistance",
+              "avgdifference",
+              "t_familyRangeAvg",
+              "a_familyRangeAvg",
+              "t_familyDoseDistance",
+              "t_familyDoseDifference",
+              "a_familyDoseDistance",
+              "a_familyDoseDifference",
+              "familyAvgDifference",
+              "familyAvgDistance",
+              "actualLogAbundance",
+              "absDoseDifference",
+              "category"
+            ],
+            "rows": 170079,
+            "widths": {
+              "56": 170079
+            },
+            "metadata_values": {
+              "mixtureType": [
+                "actual",
+                "theoretical"
+              ],
+              "passage": [
+                "3",
+                "5"
+              ],
+              "ratio": [
+                "0:1",
+                "1000:1",
+                "100:1",
+                "10:1",
+                "1:0",
+                "1:1",
+                "1:10",
+                "1:100",
+                "1:1000"
+              ],
+              "combo": [
+                "XBA-XBB",
+                "XBA-XCA",
+                "XCA-XCB",
+                "XCA-XDA",
+                "XDA-XDB",
+                "XDA-XFA",
+                "XFA-XBA",
+                "XFA-XFB"
+              ],
+              "line": [
+                "actual-1",
+                "actual-2",
+                "actual-3",
+                "theoretical-1",
+                "theoretical-2"
+              ],
+              "group": [
+                "control",
+                "mixture"
+              ],
+              "inoculationReplicate": [
+                "1",
+                "2",
+                "3"
+              ],
+              "label": {
+                "distinct": 72
+              }
+            },
+            "metadata_unique_combinations": 624,
+            "taxon_id_count": 1362,
+            "taxon_id_character_lengths": {
+              "200": 5,
+              "204": 1,
+              "205": 1,
+              "208": 2,
+              "209": 1,
+              "222": 2,
+              "229": 1,
+              "236": 4,
+              "244": 1,
+              "246": 1,
+              "250": 1,
+              "251": 4,
+              "252": 296,
+              "253": 986,
+              "254": 22,
+              "256": 1,
+              "270": 1,
+              "271": 5,
+              "272": 1,
+              "273": 3,
+              "274": 2,
+              "275": 3,
+              "276": 2,
+              "278": 1,
+              "279": 1,
+              "280": 1,
+              "281": 1,
+              "282": 2,
+              "283": 1,
+              "284": 2,
+              "285": 1,
+              "286": 1,
+              "288": 1,
+              "289": 1,
+              "292": 1,
+              "296": 1,
+              "301": 1
+            },
+            "rows_by_type_passage": {
+              "actual|3": 46305,
+              "theoretical|3": 39690,
+              "actual|5": 45276,
+              "theoretical|5": 38808
+            }
+          }
+        }
+      ],
+      "status": "VERIFIED"
+    },
+    {
+      "path": "sequencing/communityCoalescence/data/210819-e0015-e0020-16S-samplesheet.txt",
+      "git_blob": "bc61d1bcc0ea65d5e68ccbec909744a210ad20a5",
+      "bytes": 225241,
+      "sha256": "da6008a096e03fbe2461999d046114c8fafc5343da777f9d656eaeab20e06d0e",
+      "schema": {
+        "header": [
+          "sample",
+          "filename",
+          "round2plate",
+          "round1index",
+          "well",
+          "experiment",
+          "group",
+          "plate",
+          "biosample1",
+          "biosample2",
+          "passage",
+          "media",
+          "ratio",
+          "inoculationReplicate",
+          "extractionReplicate",
+          "cultureID",
+          "stockID",
+          "bioTyperDate",
+          "bioTyperClassification"
+        ],
+        "rows": 2112,
+        "widths": {
+          "19": 2112
+        },
+        "metadata_values": {
+          "passage": [
+            "0",
+            "1",
+            "1.1",
+            "1.2",
+            "1.3",
+            "1.4",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "NA"
+          ],
+          "ratio": [
+            "1:1",
+            "1:10",
+            "1:100",
+            "1:1000",
+            "NA"
+          ],
+          "group": [
+            "NA",
+            "e0015-e0016-e0020-e0022",
+            "e0017",
+            "e0018",
+            "e0019"
+          ],
+          "biosample1": {
+            "distinct": 199
+          },
+          "biosample2": {
+            "distinct": 64
+          },
+          "media": [
+            "",
+            "BBE",
+            "BHI-blood",
+            "BHI-blood-gent",
+            "LKV",
+            "NA",
+            "mBHI-mucin"
+          ],
+          "inoculationReplicate": [
+            "1",
+            "2",
+            "3",
+            "NA"
+          ],
+          "extractionReplicate": [
+            "1",
+            "2",
+            "NA"
+          ],
+          "sample": {
+            "distinct": 2112
+          },
+          "filename": {
+            "distinct": 2112
+          }
+        },
+        "metadata_unique_combinations": 2112,
+        "taxon_id_count": 0,
+        "taxon_id_character_lengths": {},
+        "rows_by_type_passage": {}
+      },
+      "status": "VERIFIED"
+    },
+    {
+      "path": "sequencing/parentCommunities/data/intermediates/e0012-mixtureDataframe.txt",
+      "git_blob": "d57e4efb9c49b5f2127f14c61011394e005f60a2",
+      "bytes": 6553421,
+      "sha256": "cebccce796866b37b7dc7f8ade15bcd1779a4694a0cc195572a6bf7e0671f3b4",
+      "schema": {
+        "header": [
+          "OTU",
+          "count",
+          "Kingdom",
+          "Phylum",
+          "Class",
+          "Order",
+          "Family",
+          "Genus",
+          "filename",
+          "biosample",
+          "media",
+          "inoculationreplicate",
+          "passage",
+          "PCRreplicate",
+          "sample",
+          "well",
+          "round1plate",
+          "round1index",
+          "round2plate",
+          "rel_abundance",
+          "FamilyRel_abundance"
+        ],
+        "rows": 14668,
+        "widths": {
+          "21": 14668
+        },
+        "metadata_values": {
+          "passage": [
+            "0",
+            "1",
+            "15",
+            "3",
+            "7"
+          ],
+          "biosample": [
+            "XBA-029",
+            "XBB-029",
+            "XCA-029",
+            "XCB-029",
+            "XDA-029",
+            "XDB-029",
+            "XFA-029",
+            "XFB-029"
+          ],
+          "media": [
+            "inoculum",
+            "mBHImucin"
+          ],
+          "inoculationreplicate": [
+            "1",
+            "2",
+            "3"
+          ],
+          "PCRreplicate": [
+            "1"
+          ],
+          "sample": {
+            "distinct": 104
+          },
+          "filename": {
+            "distinct": 104
+          }
+        },
+        "metadata_unique_combinations": 120,
+        "taxon_id_count": 1918,
+        "taxon_id_character_lengths": {
+          "200": 34,
+          "203": 1,
+          "205": 1,
+          "206": 1,
+          "207": 1,
+          "214": 5,
+          "218": 1,
+          "219": 1,
+          "220": 1,
+          "223": 2,
+          "227": 1,
+          "228": 1,
+          "229": 9,
+          "230": 15,
+          "232": 1,
+          "238": 10,
+          "240": 1,
+          "248": 1,
+          "250": 2,
+          "251": 1,
+          "252": 334,
+          "253": 1355,
+          "254": 52,
+          "255": 1,
+          "256": 2,
+          "257": 1,
+          "259": 1,
+          "267": 2,
+          "271": 1,
+          "272": 3,
+          "273": 1,
+          "274": 1,
+          "276": 2,
+          "277": 2,
+          "278": 13,
+          "279": 2,
+          "283": 2,
+          "284": 1,
+          "285": 1,
+          "286": 1,
+          "288": 1,
+          "289": 1,
+          "303": 5,
+          "305": 1,
+          "308": 3,
+          "309": 38,
+          "311": 1
+        },
+        "rows_by_type_passage": {}
+      },
+      "status": "VERIFIED"
+    },
+    {
+      "path": "sequencing/parentCommunities/data/20210201-e0012-samplesheet.txt",
+      "git_blob": "d79a9c29dd65adaed52d2a304d0749dd82fa8369",
+      "bytes": 32873,
+      "sha256": "ab94dd621fa819ab73a6c303931d5dea5ab195f00a9db3b6d7e4051aff9c2fb3",
+      "schema": {
+        "header": [
+          "biosample",
+          "media",
+          "inoculationreplicate",
+          "passage",
+          "PCRreplicate",
+          "sample",
+          "well",
+          "round1plate",
+          "round1index",
+          "round2plate",
+          "filename"
+        ],
+        "rows": 509,
+        "widths": {
+          "11": 509
+        },
+        "metadata_values": {
+          "passage": [
+            "0",
+            "1",
+            "15",
+            "3",
+            "7"
+          ],
+          "biosample": [
+            "XBA-029",
+            "XBB-029",
+            "XCA-029",
+            "XCB-029",
+            "XDA-029",
+            "XDB-029",
+            "XFA-029",
+            "XFB-029",
+            "blank"
+          ],
+          "media": [
+            "BHI",
+            "TYG",
+            "blank",
+            "inoculum",
+            "mBHI",
+            "mBHImucin"
+          ],
+          "inoculationreplicate": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "PCRreplicate": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "sample": {
+            "distinct": 509
+          },
+          "filename": {
+            "distinct": 509
+          }
+        },
+        "metadata_unique_combinations": 509,
+        "taxon_id_count": 0,
+        "taxon_id_character_lengths": {},
+        "rows_by_type_passage": {}
+      },
+      "status": "VERIFIED"
+    }
+  ],
+  "n_verified": 4,
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45717025643",
+  "artifact_id": 15069239662,
+  "artifact_digest": "sha256:463b93a2f69404248b8a3dd7c621d63c29182dc0630765223ae3afc6d2c76fe7",
+  "decision": "STOP_EQUAL_ONE_AND_MATCHED_2PLUS2_ONLY_TWO_POST_DATES_AND_THREE_MIX_REPLICATES"
+}

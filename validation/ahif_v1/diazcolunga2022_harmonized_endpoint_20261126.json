@@ -1,0 +1,921 @@
+{
+  "run": 45717729776,
+  "artifact": 15070536876,
+  "sha256": "8cece15aafb0df11afa9f8ce66d3b7d5d411b5c550db34c52b9e81b06adc096a",
+  "invalid_original_run": 45717293660,
+  "audit_run": 45717528267,
+  "interpretation": "post-audit repair; endpoint only; same study; no independent confirmation, no temporal or causal inference",
+  "output": {
+    "status": "POST_AUDIT_REPAIR_NOT_INDEPENDENT_CONFIRMATION",
+    "source_commit": "c21bfb9bfe8cbe7dbcff52e76c4d85e3ee7e7f6d",
+    "offset_matches": {
+      "Glutamine": {
+        "0": 57
+      },
+      "Citrate": {
+        "0": 43
+      }
+    },
+    "support": {
+      "Glutamine": {
+        "matched_233_endpoint_keys": 57,
+        "endpoint_keys": 69,
+        "mean_mixed_mass_matched": 0.9961068376585127
+      },
+      "Citrate": {
+        "matched_233_endpoint_keys": 43,
+        "endpoint_keys": 52,
+        "mean_mixed_mass_matched": 0.9937496006076592
+      }
+    },
+    "common_segment_eligible": true,
+    "common_offset_zero_based": 0,
+    "modes": {
+      "common233": {
+        "n_aggregated_keys": 4256,
+        "results": {
+          "raw_detected": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 96,
+                "mixed": {
+                  "pool_loss": 0.12087947369892403,
+                  "donor_loss": 0.2013606004884048,
+                  "hybrid_loss": 0.10614806979116351,
+                  "hybrid_gain": 0.014731403907760557,
+                  "donor_gain": -0.08048112678948073
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.09977376481502136,
+                  "donor_loss": 0.2568365285364525,
+                  "hybrid_loss": 0.123333179373236,
+                  "hybrid_gain": -0.02355941455821468,
+                  "donor_gain": -0.15706276372143121
+                },
+                "mixed_minus_control_gain": 0.03829081846597525,
+                "actual_vs_alternative_hybrid_gain": 0.031909015388312686,
+                "mismatch_spearman": -0.03776683087027915,
+                "n_positive_hybrid_pairs": 21,
+                "mean_endpoint_mass_outside_roster": 0.0038931623414872143,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.11196156313197188,
+                      "donor_loss": 0.1521765243153955,
+                      "hybrid_loss": 0.09392649635519505,
+                      "hybrid_gain": 0.018035066776776763,
+                      "donor_gain": -0.040214961183423624
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.25544217687074827,
+                      "donor_loss": 0.7445578231292517,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.005442176870748292,
+                      "donor_gain": -0.4891156462585035
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 73,
+                "mixed": {
+                  "pool_loss": 0.13196257077825896,
+                  "donor_loss": 0.21446403326662053,
+                  "hybrid_loss": 0.11857132869103673,
+                  "hybrid_gain": 0.013391242087222213,
+                  "donor_gain": -0.08250146248836157
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.11918722782476297,
+                  "donor_loss": 0.27530715162877156,
+                  "hybrid_loss": 0.14260521639536422,
+                  "hybrid_gain": -0.02341798857060129,
+                  "donor_gain": -0.15611992380400855
+                },
+                "mixed_minus_control_gain": 0.0368092306578235,
+                "actual_vs_alternative_hybrid_gain": 0.030674358881519575,
+                "mismatch_spearman": -0.42966611932129173,
+                "n_positive_hybrid_pairs": 19,
+                "mean_endpoint_mass_outside_roster": 0.006250399392340928,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.12765802013604757,
+                      "donor_loss": 0.16072248288422405,
+                      "hybrid_loss": 0.10679406576227701,
+                      "hybrid_gain": 0.020863954373770567,
+                      "donor_gain": -0.03306446274817647
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 98,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.1604166666666667,
+                      "donor_loss": 0.8395833333333335,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": -0.08958333333333332,
+                      "donor_gain": -0.6791666666666669
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.1264210222385915,
+              "donor_loss": 0.20791231687751266,
+              "hybrid_loss": 0.11235969924110012,
+              "hybrid_gain": 0.014061322997491386,
+              "donor_gain": -0.08149129463892116
+            },
+            "medium_centered_mismatch_pearson": -0.2567360795223952,
+            "delete_original_id_gain": {
+              "1": 0.016226686298572487,
+              "2": 0.01378064397577282,
+              "3": 0.012376775707682041,
+              "5": 0.010504205962023679,
+              "7": 0.013340229009689699,
+              "8": 0.012477741715551348,
+              "9": 0.017403968615710266,
+              "10": 0.017276038999228145,
+              "11": 0.014747865688585625,
+              "12": 0.012479074002097756
+            },
+            "equal_medium_control_gain": -0.023488701564407986,
+            "equal_medium_mixed_minus_control_gain": 0.037550024561899376,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.03129168713491613,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.07396214204655868,
+                "donor_conditional_loss": 0.06566935896612201,
+                "gain": 0.008292783080436664,
+                "n_positive_pairs": 24,
+                "fallback_cells": 734,
+                "risk_cells": 7574
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.09220116345693544,
+                "donor_conditional_loss": 0.08447515541814185,
+                "gain": 0.007726008038793599,
+                "n_positive_pairs": 21,
+                "fallback_cells": 548,
+                "risk_cells": 5670
+              }
+            }
+          },
+          "relative_0.001": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 62,
+                "mixed": {
+                  "pool_loss": 0.1347450389938615,
+                  "donor_loss": 0.1657130361728131,
+                  "hybrid_loss": 0.09778974031726244,
+                  "hybrid_gain": 0.036955298676599045,
+                  "donor_gain": -0.030967997178951608
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.0965515498148182,
+                  "donor_loss": 0.24637811343217494,
+                  "hybrid_loss": 0.11902553435742172,
+                  "hybrid_gain": -0.022473984542603524,
+                  "donor_gain": -0.14982656361735672
+                },
+                "mixed_minus_control_gain": 0.05942928321920256,
+                "actual_vs_alternative_hybrid_gain": 0.04952440268266879,
+                "mismatch_spearman": -0.04926108374384236,
+                "n_positive_hybrid_pairs": 28,
+                "mean_endpoint_mass_outside_roster": 0.007998633478405385,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.11554953702849442,
+                      "donor_loss": 0.11434642872842367,
+                      "hybrid_loss": 0.08254912490358894,
+                      "hybrid_gain": 0.03300041212490548,
+                      "donor_gain": 0.0012031083000707498
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.3358134920634921,
+                      "donor_loss": 0.664186507936508,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.08581349206349208,
+                      "donor_gain": -0.328373015873016
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 50,
+                "mixed": {
+                  "pool_loss": 0.14734784033752485,
+                  "donor_loss": 0.16637543727994247,
+                  "hybrid_loss": 0.10172265905408188,
+                  "hybrid_gain": 0.045625181283442985,
+                  "donor_gain": -0.01902759694241759
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.10050819135571455,
+                  "donor_loss": 0.25804813351186257,
+                  "hybrid_loss": 0.12413918267913679,
+                  "hybrid_gain": -0.02363099132342222,
+                  "donor_gain": -0.15753994215614803
+                },
+                "mixed_minus_control_gain": 0.0692561726068652,
+                "actual_vs_alternative_hybrid_gain": 0.057713477172387666,
+                "mismatch_spearman": -0.15161466885604818,
+                "n_positive_hybrid_pairs": 26,
+                "mean_endpoint_mass_outside_roster": 0.014285057622309758,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.12449774324304187,
+                      "donor_loss": 0.12276082033411458,
+                      "hybrid_loss": 0.08716861210554348,
+                      "hybrid_gain": 0.03732913113749842,
+                      "donor_gain": 0.0017369229089273259
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.36607142857142866,
+                      "donor_loss": 0.6339285714285714,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.11607142857142858,
+                      "donor_gain": -0.26785714285714285
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.1410464396656932,
+              "donor_loss": 0.1660442367263778,
+              "hybrid_loss": 0.09975619968567216,
+              "hybrid_gain": 0.041290239980021015,
+              "donor_gain": -0.0249977970606846
+            },
+            "medium_centered_mismatch_pearson": -0.1433237021457227,
+            "delete_original_id_gain": {
+              "1": 0.0455761736660668,
+              "2": 0.041100913563703115,
+              "3": 0.0408347668291031,
+              "5": 0.03943279917075071,
+              "7": 0.03879164476477836,
+              "8": 0.03981053579821682,
+              "9": 0.04660031204330581,
+              "10": 0.042260021426268196,
+              "11": 0.0397188306320673,
+              "12": 0.0387764019059499
+            },
+            "equal_medium_control_gain": -0.023052487933012872,
+            "equal_medium_mixed_minus_control_gain": 0.06434272791303389,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.053618939927528225,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.10694370761413108,
+                "donor_conditional_loss": 0.0815689857620435,
+                "gain": 0.025374721852087587,
+                "n_positive_pairs": 27,
+                "fallback_cells": 536,
+                "risk_cells": 4970
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.12918227674019053,
+                "donor_conditional_loss": 0.09110284736149621,
+                "gain": 0.03807942937869428,
+                "n_positive_pairs": 28,
+                "fallback_cells": 384,
+                "risk_cells": 4018
+              }
+            }
+          }
+        }
+      },
+      "family": {
+        "n_aggregated_keys": 1393,
+        "results": {
+          "raw_detected": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 23,
+                "mixed": {
+                  "pool_loss": 0.14569506771887725,
+                  "donor_loss": 0.21307343450200594,
+                  "hybrid_loss": 0.12102885265087648,
+                  "hybrid_gain": 0.02466621506800077,
+                  "donor_gain": -0.06737836678312868
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.12683619841357935,
+                  "donor_loss": 0.2935659082980512,
+                  "hybrid_loss": 0.15184565489625015,
+                  "hybrid_gain": -0.025009456482670778,
+                  "donor_gain": -0.1667297098844718
+                },
+                "mixed_minus_control_gain": 0.049675671550671555,
+                "actual_vs_alternative_hybrid_gain": 0.041396392958892955,
+                "mismatch_spearman": 0.12041598248494799,
+                "n_positive_hybrid_pairs": 23,
+                "mean_endpoint_mass_outside_roster": 0.0013725887868237228,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.12948125920596157,
+                      "donor_loss": 0.190851683039183,
+                      "hybrid_loss": 0.11319930104342305,
+                      "hybrid_gain": 0.01628195816253851,
+                      "donor_gain": -0.06137042383322145
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 56,
+                    "n_defined_pairs": 22,
+                    "metrics": {
+                      "pool_loss": 0.3522727272727273,
+                      "donor_loss": 0.6477272727272727,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.10227272727272728,
+                      "donor_gain": -0.29545454545454547
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 17,
+                "mixed": {
+                  "pool_loss": 0.20209160052910052,
+                  "donor_loss": 0.2554209183673469,
+                  "hybrid_loss": 0.17947343868102797,
+                  "hybrid_gain": 0.022618161848072575,
+                  "donor_gain": -0.05332931783824641
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.14599041005291008,
+                  "donor_loss": 0.2867984693877551,
+                  "hybrid_loss": 0.1671116189531368,
+                  "hybrid_gain": -0.02112120890022675,
+                  "donor_gain": -0.14080805933484503
+                },
+                "mixed_minus_control_gain": 0.04373937074829932,
+                "actual_vs_alternative_hybrid_gain": 0.03644947562358277,
+                "mismatch_spearman": -0.0071154898741105635,
+                "n_positive_hybrid_pairs": 16,
+                "mean_endpoint_mass_outside_roster": 0.000005152118324033747,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.19406749968505924,
+                      "donor_loss": 0.23076105442176864,
+                      "hybrid_loss": 0.18088176532186945,
+                      "hybrid_gain": 0.01318573436318973,
+                      "donor_gain": -0.0366935547367095
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 42,
+                    "n_defined_pairs": 18,
+                    "metrics": {
+                      "pool_loss": 0.3194444444444444,
+                      "donor_loss": 0.6805555555555556,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.06944444444444445,
+                      "donor_gain": -0.3611111111111111
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.17389333412398889,
+              "donor_loss": 0.23424717643467644,
+              "hybrid_loss": 0.1502511456659522,
+              "hybrid_gain": 0.023642188458036673,
+              "donor_gain": -0.06035384231068755
+            },
+            "medium_centered_mismatch_pearson": 0.10078878656523609,
+            "delete_original_id_gain": {
+              "1": 0.030415894869019872,
+              "2": 0.017173550655693516,
+              "3": 0.02053390695503791,
+              "5": 0.024245320032150394,
+              "7": 0.026147595790452935,
+              "8": 0.025669635286450766,
+              "9": 0.02388356104873962,
+              "10": 0.029871345998578144,
+              "11": 0.01943155775001012,
+              "12": 0.019049516194233455
+            },
+            "equal_medium_control_gain": -0.023065332691448764,
+            "equal_medium_mixed_minus_control_gain": 0.04670752114948544,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.03892293429123786,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.09209277487383624,
+                "donor_conditional_loss": 0.0829810150270147,
+                "gain": 0.009111759846821539,
+                "n_positive_pairs": 21,
+                "fallback_cells": 124,
+                "risk_cells": 1190
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.16070053411632862,
+                "donor_conditional_loss": 0.1492973881227859,
+                "gain": 0.011403145993542725,
+                "n_positive_pairs": 19,
+                "fallback_cells": 142,
+                "risk_cells": 756
+              }
+            }
+          },
+          "relative_0.001": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 15,
+                "mixed": {
+                  "pool_loss": 0.2331164178634417,
+                  "donor_loss": 0.20166524943310657,
+                  "hybrid_loss": 0.16386005212270094,
+                  "hybrid_gain": 0.06925636574074075,
+                  "donor_gain": 0.03145116843033511
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.21948263101536916,
+                  "donor_loss": 0.37242772108843536,
+                  "hybrid_loss": 0.24242439452632908,
+                  "hybrid_gain": -0.022941763510959945,
+                  "donor_gain": -0.15294509007306623
+                },
+                "mixed_minus_control_gain": 0.09219812925170066,
+                "actual_vs_alternative_hybrid_gain": 0.07683177437641722,
+                "mismatch_spearman": 0.08707558808502874,
+                "n_positive_hybrid_pairs": 23,
+                "mean_endpoint_mass_outside_roster": 0.0016643669036123844,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.20815873803224988,
+                      "donor_loss": 0.17385912698412698,
+                      "hybrid_loss": 0.15214302445515243,
+                      "hybrid_gain": 0.05601571357709752,
+                      "donor_gain": 0.034299611048122965
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 14,
+                    "n_defined_pairs": 7,
+                    "metrics": {
+                      "pool_loss": 0.5178571428571429,
+                      "donor_loss": 0.48214285714285715,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.26785714285714285,
+                      "donor_gain": 0.03571428571428571
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 14,
+                "mixed": {
+                  "pool_loss": 0.20666414714033765,
+                  "donor_loss": 0.14767573696145123,
+                  "hybrid_loss": 0.11577223481985384,
+                  "hybrid_gain": 0.09089191232048376,
+                  "donor_gain": 0.058988410178886376
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.1657060972537163,
+                  "donor_loss": 0.34112811791383224,
+                  "hybrid_loss": 0.19201940035273365,
+                  "hybrid_gain": -0.02631330309901737,
+                  "donor_gain": -0.17542202066011586
+                },
+                "mixed_minus_control_gain": 0.11720521541950112,
+                "actual_vs_alternative_hybrid_gain": 0.09767101284958428,
+                "mismatch_spearman": 0.003284072249589491,
+                "n_positive_hybrid_pairs": 27,
+                "mean_endpoint_mass_outside_roster": 0.0006983417542744087,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.17909304925673974,
+                      "donor_loss": 0.13610756802721086,
+                      "hybrid_loss": 0.10843657486142604,
+                      "hybrid_gain": 0.07065647439531368,
+                      "donor_gain": 0.04298548122952885
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 28,
+                    "n_defined_pairs": 13,
+                    "metrics": {
+                      "pool_loss": 0.7499999999999999,
+                      "donor_loss": 0.25,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.5,
+                      "donor_gain": 0.5
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.2198902825018897,
+              "donor_loss": 0.1746704931972789,
+              "hybrid_loss": 0.13981614347127738,
+              "hybrid_gain": 0.08007413903061225,
+              "donor_gain": 0.04521978930461074
+            },
+            "medium_centered_mismatch_pearson": 0.18587407817226634,
+            "delete_original_id_gain": {
+              "1": 0.09031468490173848,
+              "2": 0.08427269345238096,
+              "3": 0.07660098182791636,
+              "5": 0.07744708994708996,
+              "7": 0.07359152573066263,
+              "8": 0.0814591403691106,
+              "9": 0.08203070869551524,
+              "10": 0.08207209388384985,
+              "11": 0.06970259747417484,
+              "12": 0.08324987402368356
+            },
+            "equal_medium_control_gain": -0.02462753330498866,
+            "equal_medium_mixed_minus_control_gain": 0.10470167233560089,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.08725139361300074,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.21181677654940856,
+                "donor_conditional_loss": 0.17076617456785148,
+                "gain": 0.04105060198155712,
+                "n_positive_pairs": 25,
+                "fallback_cells": 104,
+                "risk_cells": 714
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.20345276281073138,
+                "donor_conditional_loss": 0.11236553125161274,
+                "gain": 0.09108723155911866,
+                "n_positive_pairs": 28,
+                "fallback_cells": 80,
+                "risk_cells": 798
+              }
+            }
+          }
+        }
+      },
+      "genus": {
+        "n_aggregated_keys": 2586,
+        "results": {
+          "raw_detected": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 56,
+                "mixed": {
+                  "pool_loss": 0.11485853894644309,
+                  "donor_loss": 0.20460116980590135,
+                  "hybrid_loss": 0.10588605982665485,
+                  "hybrid_gain": 0.008972479119788237,
+                  "donor_gain": -0.08974263085945818
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.10441687038293014,
+                  "donor_loss": 0.2582562833815511,
+                  "hybrid_loss": 0.12749278233272332,
+                  "hybrid_gain": -0.023075911949793165,
+                  "donor_gain": -0.15383941299862097
+                },
+                "mixed_minus_control_gain": 0.03204839106958139,
+                "actual_vs_alternative_hybrid_gain": 0.0267069925579845,
+                "mismatch_spearman": 0,
+                "n_positive_hybrid_pairs": 18,
+                "mean_endpoint_mass_outside_roster": 0.016064663297068668,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.10804427652159244,
+                      "donor_loss": 0.15117407742018707,
+                      "hybrid_loss": 0.09328270955038075,
+                      "hybrid_gain": 0.01476156697121172,
+                      "donor_gain": -0.04312980089859464
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.2337797619047619,
+                      "donor_loss": 0.7662202380952381,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": -0.016220238095238093,
+                      "donor_gain": -0.5324404761904762
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 41,
+                "mixed": {
+                  "pool_loss": 0.14498980013707025,
+                  "donor_loss": 0.22410627008687348,
+                  "hybrid_loss": 0.12930551425612488,
+                  "hybrid_gain": 0.015684285880945344,
+                  "donor_gain": -0.07911646994980329
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.1341697557178879,
+                  "donor_loss": 0.2920055295917365,
+                  "hybrid_loss": 0.15784512179896518,
+                  "hybrid_gain": -0.02367536608107731,
+                  "donor_gain": -0.1578357738738486
+                },
+                "mixed_minus_control_gain": 0.03935965196202264,
+                "actual_vs_alternative_hybrid_gain": 0.032799709968352214,
+                "mismatch_spearman": 0.028461959496442254,
+                "n_positive_hybrid_pairs": 21,
+                "mean_endpoint_mass_outside_roster": 0.0001662430359824454,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.14108801885344271,
+                      "donor_loss": 0.18087050247845254,
+                      "hybrid_loss": 0.12047245564604865,
+                      "hybrid_gain": 0.020615563207394043,
+                      "donor_gain": -0.039782483625009836
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 70,
+                    "n_defined_pairs": 25,
+                    "metrics": {
+                      "pool_loss": 0.31249999999999994,
+                      "donor_loss": 0.6875,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.06249999999999999,
+                      "donor_gain": -0.375
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.12992416954175667,
+              "donor_loss": 0.2143537199463874,
+              "hybrid_loss": 0.11759578704138987,
+              "hybrid_gain": 0.01232838250036679,
+              "donor_gain": -0.08442955040463074
+            },
+            "medium_centered_mismatch_pearson": 0.057937505202542566,
+            "delete_original_id_gain": {
+              "1": 0.014910675514828952,
+              "2": 0.011304319929219687,
+              "3": 0.010640949777819222,
+              "5": 0.011797355802963486,
+              "7": 0.012241033312046894,
+              "8": 0.010908088758832939,
+              "9": 0.013853236729214076,
+              "10": 0.016858329216267304,
+              "11": 0.010140719460783591,
+              "12": 0.01062911650169175
+            },
+            "equal_medium_control_gain": -0.02337563901543524,
+            "equal_medium_mixed_minus_control_gain": 0.035704021515802015,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.02975335126316836,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.06336137677216622,
+                "donor_conditional_loss": 0.061028969350688224,
+                "gain": 0.002332407421477989,
+                "n_positive_pairs": 19,
+                "fallback_cells": 458,
+                "risk_cells": 4074
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.1091730670833779,
+                "donor_conditional_loss": 0.0978795610404333,
+                "gain": 0.011293506042944603,
+                "n_positive_pairs": 22,
+                "fallback_cells": 272,
+                "risk_cells": 2912
+              }
+            }
+          },
+          "relative_0.001": {
+            "by_medium": {
+              "Glutamine": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 34,
+                "mixed": {
+                  "pool_loss": 0.15266891702246393,
+                  "donor_loss": 0.19322245212834457,
+                  "hybrid_loss": 0.11886989377263979,
+                  "hybrid_gain": 0.033799023249824145,
+                  "donor_gain": -0.040553535105880646
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.13486576289207866,
+                  "donor_loss": 0.2893680223285486,
+                  "hybrid_loss": 0.1580411018075492,
+                  "hybrid_gain": -0.02317533891547052,
+                  "donor_gain": -0.15450225943646997
+                },
+                "mixed_minus_control_gain": 0.05697436216529467,
+                "actual_vs_alternative_hybrid_gain": 0.04747863513774556,
+                "mismatch_spearman": 0.1023535851122058,
+                "n_positive_hybrid_pairs": 23,
+                "mean_endpoint_mass_outside_roster": 0.017909407734391786,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.13592168528257503,
+                      "donor_loss": 0.15080370412108185,
+                      "hybrid_loss": 0.10697854373051512,
+                      "hybrid_gain": 0.0289431415520599,
+                      "donor_gain": -0.014882018838506834
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 98,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.25,
+                      "donor_loss": 0.75,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": -2.9738116731030977e-18,
+                      "donor_gain": -0.5000000000000001
+                    }
+                  }
+                }
+              },
+              "Citrate": {
+                "pairs": 28,
+                "mixed_wells": 56,
+                "source_roster_taxa": 27,
+                "mixed": {
+                  "pool_loss": 0.17950657103617632,
+                  "donor_loss": 0.16204217931191614,
+                  "hybrid_loss": 0.11491441177913218,
+                  "hybrid_gain": 0.06459215925704412,
+                  "donor_gain": 0.017464391724260148
+                },
+                "unmixed_control": {
+                  "pool_loss": 0.1112740223348776,
+                  "donor_loss": 0.27087391774891767,
+                  "hybrid_loss": 0.13521400664698366,
+                  "hybrid_gain": -0.02393998431210604,
+                  "donor_gain": -0.15959989541404015
+                },
+                "mixed_minus_control_gain": 0.08853214356915017,
+                "actual_vs_alternative_hybrid_gain": 0.07377678630762514,
+                "mismatch_spearman": -0.10782703886152162,
+                "n_positive_hybrid_pairs": 26,
+                "mean_endpoint_mass_outside_roster": 0.008200901265951275,
+                "subgroups": {
+                  "shared_pool": {
+                    "n_defined_pair_orient_wells": 112,
+                    "n_defined_pairs": 28,
+                    "metrics": {
+                      "pool_loss": 0.15373962732593682,
+                      "donor_loss": 0.13483186401937786,
+                      "hybrid_loss": 0.10578263428112662,
+                      "hybrid_gain": 0.04795699304481025,
+                      "donor_gain": 0.018907763306559015
+                    }
+                  },
+                  "partner_only": {
+                    "n_defined_pair_orient_wells": 70,
+                    "n_defined_pairs": 25,
+                    "metrics": {
+                      "pool_loss": 0.40785714285714286,
+                      "donor_loss": 0.5921428571428572,
+                      "hybrid_loss": 0.25,
+                      "hybrid_gain": 0.15785714285714283,
+                      "donor_gain": -0.1842857142857143
+                    }
+                  }
+                }
+              }
+            },
+            "equal_medium_mixed": {
+              "pool_loss": 0.16608774402932014,
+              "donor_loss": 0.17763231572013036,
+              "hybrid_loss": 0.116892152775886,
+              "hybrid_gain": 0.04919559125343413,
+              "donor_gain": -0.01154457169081025
+            },
+            "medium_centered_mismatch_pearson": 0.08225103338418244,
+            "delete_original_id_gain": {
+              "1": 0.054924477223265114,
+              "2": 0.049995029578571465,
+              "3": 0.04708131499044327,
+              "5": 0.04874919346686186,
+              "7": 0.045795702028181985,
+              "8": 0.051034200866062265,
+              "9": 0.0557466887533392,
+              "10": 0.0511189914323853,
+              "11": 0.04076442375426928,
+              "12": 0.04674589044096158
+            },
+            "equal_medium_control_gain": -0.023557661613788278,
+            "equal_medium_mixed_minus_control_gain": 0.07275325286722242,
+            "equal_medium_actual_vs_alternative_hybrid_gain": 0.06062771072268536,
+            "source_disjoint_calibration": {
+              "Glutamine": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.11056130032978062,
+                "donor_conditional_loss": 0.0936691082451242,
+                "gain": 0.0168921920846564,
+                "n_positive_pairs": 27,
+                "fallback_cells": 258,
+                "risk_cells": 2352
+              },
+              "Citrate": {
+                "pairs": 28,
+                "train_pairs_per_held": 15,
+                "base_loss": 0.16878864384937212,
+                "donor_conditional_loss": 0.11136146436508201,
+                "gain": 0.057427179484290054,
+                "n_positive_pairs": 25,
+                "fallback_cells": 176,
+                "risk_cells": 2030
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
