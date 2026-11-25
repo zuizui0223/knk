@@ -1,0 +1,258 @@
+{
+  "status": "PORTAL_FIXED_HISTORICAL_DIRECTION_NOT_CAUSAL",
+  "source_commit": "a4dc266c0068d26370cd88bec5272a02623d5470",
+  "calibration_moons": [
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    497,
+    498,
+    499,
+    500,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    512
+  ],
+  "target_pairs": [
+    [
+      516,
+      517
+    ],
+    [
+      517,
+      518
+    ],
+    [
+      518,
+      519
+    ],
+    [
+      519,
+      520
+    ],
+    [
+      520,
+      521
+    ],
+    [
+      521,
+      522
+    ],
+    [
+      522,
+      523
+    ],
+    [
+      523,
+      524
+    ],
+    [
+      524,
+      525
+    ],
+    [
+      525,
+      526
+    ],
+    [
+      526,
+      527
+    ],
+    [
+      548,
+      549
+    ],
+    [
+      549,
+      550
+    ],
+    [
+      550,
+      551
+    ],
+    [
+      551,
+      552
+    ],
+    [
+      552,
+      553
+    ],
+    [
+      553,
+      554
+    ],
+    [
+      554,
+      555
+    ],
+    [
+      557,
+      558
+    ],
+    [
+      558,
+      559
+    ],
+    [
+      559,
+      560
+    ],
+    [
+      560,
+      561
+    ],
+    [
+      563,
+      564
+    ],
+    [
+      564,
+      565
+    ],
+    [
+      565,
+      566
+    ],
+    [
+      566,
+      567
+    ],
+    [
+      567,
+      568
+    ],
+    [
+      568,
+      569
+    ],
+    [
+      572,
+      573
+    ],
+    [
+      576,
+      577
+    ],
+    [
+      577,
+      578
+    ],
+    [
+      578,
+      579
+    ],
+    [
+      579,
+      580
+    ],
+    [
+      580,
+      581
+    ],
+    [
+      583,
+      584
+    ],
+    [
+      584,
+      585
+    ]
+  ],
+  "n_calibration": 25,
+  "n_target_pairs": 36,
+  "results": {
+    "2": {
+      "n_total": 18432,
+      "common": {
+        "n_defined": 17987,
+        "n_dates": 36,
+        "mean": {
+          "lag_loss": 0.6044325333909111,
+          "fixed_loss": 0.7089476352737223,
+          "cumulative_loss": 0.6349423691518488,
+          "fixed_minus_lag": 0.10451510188281138,
+          "cumulative_minus_lag": 0.030509835760937805,
+          "fixed_sign_only_minus_lag": 0.0030820987428190044,
+          "cumulative_sign_only_minus_lag": -0.009748748925354154,
+          "concurrent_sign_only_minus_lag": 0.004734779463770141,
+          "lag_G": 0.04758212459695522,
+          "fixed_G": 0.0235166904828871,
+          "cumulative_G": 0.06336430799974228
+        }
+      },
+      "all_defined": {
+        "n_defined": 18019,
+        "n_dates": 36,
+        "mean": {
+          "lag_loss": 0.6045946126662414,
+          "fixed_loss": 0.709007396682265,
+          "cumulative_loss": 0.6350018150349671,
+          "fixed_minus_lag": 0.1044127840160238,
+          "cumulative_minus_lag": 0.030407202368725923,
+          "fixed_sign_only_minus_lag": 0.0030916992718675626,
+          "cumulative_sign_only_minus_lag": -0.009765361039020927,
+          "concurrent_sign_only_minus_lag": 0.004797163262110476,
+          "lag_G": 0.04746276868922401,
+          "fixed_G": 0.02346048944022349,
+          "cumulative_G": 0.06331173512019483
+        }
+      }
+    },
+    "4": {
+      "n_total": 18432,
+      "common": {
+        "n_defined": 17987,
+        "n_dates": 36,
+        "mean": {
+          "lag_loss": 0.5147093904707298,
+          "fixed_loss": 0.6523690197991149,
+          "cumulative_loss": 0.5472380251137126,
+          "fixed_minus_lag": 0.1376596293283852,
+          "cumulative_minus_lag": 0.03252863464298266,
+          "fixed_sign_only_minus_lag": -0.013092317972429896,
+          "cumulative_sign_only_minus_lag": -0.011737819542091833,
+          "concurrent_sign_only_minus_lag": 0.009405101158887385,
+          "lag_G": 0.0996100741754861,
+          "fixed_G": 0.04795302890324111,
+          "cumulative_G": 0.10354413101461594
+        }
+      },
+      "all_defined": {
+        "n_defined": 18400,
+        "n_dates": 36,
+        "mean": {
+          "lag_loss": 0.5155188655861918,
+          "fixed_loss": 0.6526219097991337,
+          "cumulative_loss": 0.5475071501404847,
+          "fixed_minus_lag": 0.13710304421294242,
+          "cumulative_minus_lag": 0.03198828455429294,
+          "fixed_sign_only_minus_lag": -0.012976614653218026,
+          "cumulative_sign_only_minus_lag": -0.011710533565059867,
+          "concurrent_sign_only_minus_lag": 0.009151429872527156,
+          "lag_G": 0.09939438252622776,
+          "fixed_G": 0.04801175615540277,
+          "cumulative_G": 0.10360278232648497
+        }
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45591891777",
+  "artifact_id": 15011462661,
+  "artifact_digest": "sha256:a6ee2a12a6e1e1b9579ec7b7e16bc89043a469e0b1087430449aa66522b6181a"
+}
