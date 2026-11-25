@@ -110,3 +110,7 @@ SELECT lane,year,endpoint,estimate,p_value,p_holm,n_logs,publication_cluster FRO
 
 -- 16. Prediction results are NOT ecological treatment effect sizes.
 SELECT prediction_id,panel_id,estimand_lane,training_window,endpoint,gain_fraction,p_holm,n_units,n_held_locations,inference_scope FROM prediction_outcomes ORDER BY panel_id,training_window,endpoint;
+
+-- 17. Finite combinatorial predictions: NEVER count target types or models as independent experiments.
+SELECT model,endpoint,mean_error,n_target_types FROM low_order_model_errors ORDER BY endpoint,mean_error;
+SELECT baseline,enhanced,endpoint,absolute_improvement,relative_gain,improved,worsened,tied FROM low_order_model_contrasts ORDER BY endpoint,baseline,enhanced;

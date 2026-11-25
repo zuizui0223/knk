@@ -106,14 +106,14 @@ def test_orphan_effect_id_refused():
 
 def test_ten_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
     result=build(ROOT,tmp_path)
-    assert result["substantively_verified_prior_art_papers_n"]==11
+    assert result["substantively_verified_prior_art_papers_n"]==12
     assert result["source_audited_studies"]>=9
     assert result["aggregate_effect_rows"]==161
-    assert result["study_records"]==34
-    assert result["experimental_panels"]==36
-    assert result["source_audited_studies"]==12
-    assert result["panels_with_named_and_unlabeled_rank_measured"]==10
-    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==9
+    assert result["study_records"]==35
+    assert result["experimental_panels"]==37
+    assert result["source_audited_studies"]==13
+    assert result["panels_with_named_and_unlabeled_rank_measured"]==11
+    assert result["panels_with_multispecies_or_functional_group_named_rank_n"]==10
     assert result["panels_with_two_species_top1_named_rank_n"]==1
     assert result["methodological_novelty_threats_n"]==5
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
@@ -121,7 +121,7 @@ def test_ten_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
             "SELECT study_id,source_raw_audited,"
             "causally_independent_interaction_to_rank_validated "
             "FROM prior_art_verified ORDER BY prior_art_id").fetchall()
-        assert len(rows)==11
+        assert len(rows)==12
         assert all(r[2]=="no" for r in rows)
         row=db.execute(
             "SELECT source_raw_audited FROM prior_art_verified WHERE study_id='ST_GENERATIONS2026'"
@@ -134,7 +134,7 @@ def test_ten_substantive_prior_art_checks_not_independent_effect_rows(tmp_path):
 def test_methodological_precedents_are_separate_from_empirical_effects(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["methodological_novelty_threats_n"]==5
-    assert summary["substantively_verified_prior_art_papers_n"]==11
+    assert summary["substantively_verified_prior_art_papers_n"]==12
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         r=db.execute("SELECT record_id,not_independent_effect,doi_or_unverified FROM methodological_prior_art").fetchall()
         assert len(r)==5
@@ -175,12 +175,12 @@ def test_routing_metadata_and_descriptive_cages_separate(tmp_path):
     summary=build(ROOT,tmp_path)
     assert summary["routing_field_test_rows"]==21
     assert summary["routing_cage_descriptive_contrast_rows"]==12
-    assert summary["panels_with_raw_source_audited_named_rank_n"]==9
+    assert summary["panels_with_raw_source_audited_named_rank_n"]==10
     assert summary["panels_with_derived_matrix_descriptive_named_rank_n"]==1
     assert not summary["routing_cage_meta_eligible"]
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_PRASAD_DROPOUT'").fetchone()==(0,)
-        assert db.execute("SELECT COUNT(*) FROM hypotheses").fetchone()==(10,)
+        assert db.execute("SELECT COUNT(*) FROM hypotheses").fetchone()==(11,)
         assert dict(db.execute("SELECT family,COUNT(*) FROM v_routing_tests GROUP BY family"))=={"primary":2,"secondary":16,"order_exchange":3}
         assert dict(db.execute("SELECT family,COUNT(*) FROM v_routing_tests WHERE p_holm<=.05 GROUP BY family"))=={"primary":1,"secondary":8,"order_exchange":2}
         assert db.execute("SELECT COUNT(*) FROM effects WHERE effect_id LIKE 'E_POEM_2020_A2_UNSOWN_%'").fetchone()==(2,)
@@ -224,3 +224,15 @@ def test_prediction_only_cannot_be_an_effect():
     r["effects"][0]["panel_id"]="P_REPLAY2025"
     with pytest.raises(ValueError,match="Candidate presented as scored"):
         validate(r)
+
+def test_low_order_equal_information_falsification(tmp_path):
+    result=build(ROOT,tmp_path)
+    assert result["low_order_model_error_rows"]==54
+    assert result["low_order_contrast_rows"]==48
+    assert result["low_order_experiment_families"]==1
+    assert result["low_order_fixed_target_types"]==64
+    assert result["low_order_meta_eligible"] is False
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_ISHIZAWA2024'").fetchone()==(0,)
+        assert db.execute("SELECT model FROM low_order_model_errors WHERE endpoint='rank_TV' ORDER BY mean_error LIMIT 1").fetchone()==("trio_mean",)
+        assert db.execute("SELECT relative_gain FROM low_order_model_contrasts WHERE baseline='trio_mean' AND enhanced='trio' AND endpoint='rank_TV'").fetchone()[0]<0

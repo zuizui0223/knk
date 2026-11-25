@@ -10,6 +10,8 @@ on:
       - "benchmarks/ahif_routing_tables.py"
       - "benchmarks/ahif_saine_table.py"
       - "benchmarks/ahif_prediction_tables.py"
+      - "benchmarks/ahif_low_order_tables.py"
+      - "validation/ahif_v1/ishizawa2024_equal_information_v1.json"
       - "validation/ahif_v1/replay2025_state_v1.json"
       - "validation/ahif_v1/saine2025_depth_biology_v1.json"
       - "validation/ahif_v1/saine2025_nontarget_succession_v1.json"
@@ -96,11 +98,11 @@ jobs:
           from pathlib import Path
           p=Path(os.environ["RUNNER_TEMP"])/"ahif"
           report=json.loads((p/"ahif_v1_validation.json").read_text())
-          assert report["study_records"]==34
-          assert report["experimental_panels"]==36
+          assert report["study_records"]==35
+          assert report["experimental_panels"]==37
           assert report["aggregate_effect_rows"]==161
-          assert report["source_audited_studies"]==12
-          assert report["panels_with_named_and_unlabeled_rank_measured"]==10
+          assert report["source_audited_studies"]==13
+          assert report["panels_with_named_and_unlabeled_rank_measured"]==11
           assert report["methodological_novelty_threats_n"]==5
           with sqlite3.connect(p/"ahif_v1.sqlite") as db:
               assert db.execute("SELECT COUNT(*) FROM methodological_prior_art WHERE not_independent_effect='yes'").fetchone()[0]==5
@@ -113,7 +115,10 @@ jobs:
               assert db.execute("SELECT COUNT(*) FROM prediction_outcomes").fetchone()==(6,)
               assert db.execute("SELECT COUNT(*) FROM prediction_folds").fetchone()==(48,)
               assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_REPLAY2025'").fetchone()==(0,)
-          print("AHIF source-backed v0.6 DB audited")
+              assert db.execute("SELECT COUNT(*) FROM low_order_model_errors").fetchone()==(54,)
+              assert db.execute("SELECT COUNT(*) FROM low_order_model_contrasts").fetchone()==(48,)
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_ISHIZAWA2024'").fetchone()==(0,)
+          print("AHIF source-backed v0.7 DB audited")
           PY
       - name: Upload portable user-owned DB artifact, not source author raw data
         uses: actions/upload-artifact@v4
@@ -132,6 +137,8 @@ jobs:
             ${{ runner.temp }}/ahif/saine_test_metadata.csv
             ${{ runner.temp }}/ahif/prediction_outcomes.csv
             ${{ runner.temp }}/ahif/prediction_folds.csv
+            ${{ runner.temp }}/ahif/low_order_model_errors.csv
+            ${{ runner.temp }}/ahif/low_order_model_contrasts.csv
             ${{ runner.temp }}/ahif/prior_art_verified.csv
             ${{ runner.temp }}/ahif/methodological_prior_art.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
