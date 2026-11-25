@@ -1,0 +1,50 @@
+name: AHIF Mancuso source gate
+on:
+  push:
+    branches: [analysis/ahif-independent-microbial-20261125]
+    paths: ['.github/workflows/knk-ahif-mancuso-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original versioned author supplements
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/mancuso"
+          for n in 1 2; do
+            curl --fail --location --max-time 60 "https://cdn.elifesciences.org/articles/67175/elife-67175-fig3-data${n}-v2.csv" -o "$RUNNER_TEMP/mancuso/data${n}.csv"
+          done
+      - name: Metadata-only schema and hash audit
+        run: |
+          python - <<'PY'
+          import csv,hashlib,json,os,re
+          from pathlib import Path
+          from collections import Counter
+          root=Path(os.environ["RUNNER_TEMP"])/"mancuso"
+          report={}
+          for p in sorted(root.glob("*.csv")):
+              b=p.read_bytes()
+              with p.open(encoding="utf-8-sig",newline="") as f:
+                  rows=list(csv.reader(f))
+              assert rows and len(rows)>1
+              head=rows[0]
+              widths=Counter(map(len,rows[1:]))
+              meta={}
+              for i,c in enumerate(head):
+                  if re.search(r"(^|[ _])(sample|time|day|hour|rep|replicate|vial|culture|experiment|treatment|frequency|freq|dilution|rate|genus|taxon|asv|condition|strain|id)([ _]|$)",c,re.I):
+                      vals=Counter(r[i] for r in rows[1:] if len(r)>i)
+                      meta[c]={"distinct":len(vals),"values":dict(vals) if len(vals)<=80 else None}
+              report[p.name]={"sha256":hashlib.sha256(b).hexdigest(),"bytes":len(b),"rows":len(rows)-1,"header":head,"row_width_counts":dict(widths),"metadata":meta}
+          print("MANCUSO_SOURCE_AUDIT",json.dumps(report))
+          (root/"audit.json").write_text(json.dumps(report,indent=2)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mancuso-metadata-only
+          path: ${{ runner.temp }}/mancuso/audit.json
+          retention-days: 30
