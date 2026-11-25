@@ -1,0 +1,49 @@
+name: AHIF independent field nonsown-response opposition
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-field-opposition.yml"
+      - "benchmarks/score_ahif_field_opposition.py"
+      - "tests/test_ahif_field_opposition.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate role alignment and shared-block contrasts
+        run: |
+          python -m pip install numpy scipy pytest
+          python -m pytest tests/test_ahif_field_opposition.py -q
+      - name: Fetch seven original hash-pinned field files
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          from urllib.parse import quote
+          from benchmarks.probe_ahif_vansteijn2026_field import MD5
+          root=Path(os.environ["RUNNER_TEMP"])/"field"
+          root.mkdir(exist_ok=True)
+          for name,md5 in MD5.items():
+              req=urllib.request.Request("https://zenodo.org/records/15363824/files/"+quote(name)+"?download=1",headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=90) as res:
+                  b=res.read(2_000_001)
+              assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Score matched-date role opposition and cross-fitted taxon responses
+        run: python -m benchmarks.score_ahif_field_opposition --source "$RUNNER_TEMP/field" --out "$RUNNER_TEMP/field/opposition.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-field-opposition-derived-only
+          path: ${{ runner.temp }}/field/opposition.json
+          retention-days: 30
