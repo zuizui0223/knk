@@ -1,0 +1,23 @@
+name: AHIF Villarreal independent dispersal source
+on:
+  push:
+    branches: [analysis/ahif-independent-dispersal-20261126]
+    paths:
+      - 'benchmarks/probe_ahif_villarreal2025.py'
+      - '.github/workflows/knk-ahif-villarreal-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.probe_ahif_villarreal2025 --out "$RUNNER_TEMP/villarreal"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: villarreal-source-audit-only
+          path: ${{ runner.temp }}/villarreal/audit.json
+          retention-days: 30
