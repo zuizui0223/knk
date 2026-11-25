@@ -1,0 +1,51 @@
+name: AHIF ReplayEcology persistence and representation falsification
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-replay-persistence.yml"
+      - "benchmarks/score_ahif_replay2025_persistence.py"
+      - "tests/test_ahif_replay2025_persistence.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+      OMP_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests of parent/replicate grain and holdout loss
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_replay2025_persistence.py -q
+      - name: Download two original hash-pinned author files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,os,urllib.request
+          root=Path(os.environ["RUNNER_TEMP"])/"replay"
+          root.mkdir(exist_ok=True)
+          base="https://raw.githubusercontent.com/apascualgarcia/ReplayEcology/fba177fbae5c51c059cb6075298be9732c6c3aba/"
+          files={
+          "metadata.tsv":("7.1_classes/metadata_Time0D-7D-4M_May2022_Time0D_7D_matched_wJSDpart-all.csv","7394c6545e0a138ba1ba54a259580d8c63c7b505"),
+          "seqtable.csv":("6_finalfiles/seqtable_readyforanalysis.csv","eaa43f867b0df78d124c742ca0b23f971c099ea4")}
+          for name,(path,sha) in files.items():
+              with urllib.request.urlopen(base+path,timeout=90) as response:
+                  data=response.read(12_000_001)
+              assert len(data)<=12_000_000 and hashlib.sha1(b"blob "+str(len(data)).encode()+b"\0"+data).hexdigest()==sha
+              (root/name).write_bytes(data)
+          PY
+      - name: Compare persistence and initial representation in held-origin predictions
+        run: python -m benchmarks.score_ahif_replay2025_persistence --source "$RUNNER_TEMP/replay" --out "$RUNNER_TEMP/replay/persistence.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-replay-persistence-derived-only
+          path: ${{ runner.temp }}/replay/persistence.json
+          retention-days: 30
