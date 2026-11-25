@@ -89,6 +89,10 @@ def load(root):
         assert hashlib.sha1(b"blob "+str(len(data)).encode()+b"\0"+data).hexdigest()==sha,file
         hashes[name]=hashlib.sha256(data).hexdigest()
         d=pd.read_csv(p,low_memory=False);d.columns=d.columns.str.lower()
+        # Literal NA is the valid Neotoma albigula species code, not missing.
+        if name in ("species","captures"):
+            key="speciescode" if name=="species" else "species"
+            d[key]=pd.read_csv(p,usecols=[key],keep_default_na=False,dtype=str)[key]
         ds[name]=d
         print(name,len(d),list(d.columns))
     return ds,hashes
@@ -124,7 +128,7 @@ def main():
     # stop rather than resolving duplicated trap effort records
     assert not tr.duplicated(["plot","period"]).any()
     tr=tr[(tr.sampled==1)&(tr.effort==49)&(tr.qcflag==1)]
-    complete=tr.groupby("period").plot.nunique()
+    complete=tr.groupby("period")["plot"].nunique()
     periods=complete.index[complete==len(roster)]
     tr=tr[tr.period.isin(periods)]
     raw=c[c.period.isin(periods)&c["plot"].isin(roster)].copy()
