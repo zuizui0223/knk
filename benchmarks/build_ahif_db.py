@@ -19,6 +19,7 @@ import sqlite3
 from benchmarks.audit_zou2023_review_source import STAGING_COLUMNS, SRC_GIT_BLOB
 from benchmarks.ahif_routing_tables import insert_routing, META_FILE, CAGE_FILE
 from benchmarks.ahif_saine_table import insert_saine, SAINE_FILE
+from benchmarks.ahif_prediction_tables import insert_predictions, PRED_FILE, FOLD_FILE
 
 FILES={"studies":"studies.csv","panels":"panels.csv",
        "effects":"effects.csv","hypotheses":"hypotheses.csv"}
@@ -119,7 +120,7 @@ def validate(tables):
             raise ValueError("False equivalence of null-calibrated R2 and information "+k)
         if not e["evidence_url"].startswith("https://") or not e["limitations"]:
             raise ValueError("Effect missing source or caveat "+k)
-        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked","derived_matrix_descriptive"}:
+        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked","derived_matrix_descriptive","prediction_only"}:
             raise ValueError("Candidate presented as scored "+k)
     hids=set()
     for h in hypotheses:
@@ -411,7 +412,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
     ps=[num(x["p_value"],"p") for x in e]
     return {
       "result_status":"CURATED_TARGETED_PILOT_NOT_SYSTEMATIC_OR_META_POOLED",
-      "db_version":"AHIF-DB v0.5",
+      "db_version":"AHIF-DB v0.6",
       "generated_on":date.today().isoformat(),
       "study_records":len(s),"experimental_panels":len(p),
       "aggregate_effect_rows":len(e),"falsifiable_hypotheses":len(h),
@@ -458,7 +459,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
 
 def gap_report(r):
     return "\n".join([
-      "# AHIF-DB v0.5 — novelty and source-coverage gate",
+      "# AHIF-DB v0.6 — novelty and source-coverage gate",
       "",
       "Targeted preliminary curation only: NOT a systematic survey or a random-effects meta-analysis.",
       "",
@@ -468,6 +469,7 @@ def gap_report(r):
       f"- Closest novelty competitors whose original article methods/abstract were checked: {r['substantively_verified_prior_art_papers_n']}",
       f"- Methodological novelty threats (sPriority/LOVE etc., never effects): {r['methodological_novelty_threats_n']}",
       f"- Aggregate numeric evidence records: {r['aggregate_effect_rows']}",
+      f"- Separate prediction outcomes: {r['prediction_outcome_rows']} across {r['prediction_source_experiment_families']} source experiments and {r['prediction_distinct_estimand_lanes']} distinct estimands; not pooled effects",
       f"- Linked field routing tests: {r['routing_field_test_rows']} (one publication)",
       f"- Separate one-cage descriptive contrasts: {r['routing_cage_descriptive_contrast_rows']} (6 QC + 6 sensitivity, excluded from effects)",
       f"- Prespecified, falsifiable hypotheses: {r['falsifiable_hypotheses']}",
@@ -533,6 +535,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
             connection,source/"methodological_prior_art.csv")
         routing_summary=insert_routing(connection,source)
         saine_summary=insert_saine(connection,source)
+        prediction_summary=insert_predictions(connection,source)
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -544,6 +547,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
                   verified_prior_art_n=n_verified_prior_art,methods_n=n_methodological_prior_art)
     result.update(routing_summary)
     result.update(saine_summary)
+    result.update(prediction_summary)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:
@@ -554,7 +558,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         shutil.copyfile(source/filename,out/filename)
     shutil.copyfile(source/"prior_art_verified.csv",out/"prior_art_verified.csv")
     shutil.copyfile(source/"methodological_prior_art.csv",out/"methodological_prior_art.csv")
-    for filename in (META_FILE,CAGE_FILE,SAINE_FILE):
+    for filename in (META_FILE,CAGE_FILE,SAINE_FILE,PRED_FILE,FOLD_FILE):
         shutil.copyfile(source/filename,out/filename)
     print("AHIF_DB_BUILD_SUCCESS",json.dumps({
         "studies":result["study_records"],"panels":result["experimental_panels"],

@@ -107,3 +107,6 @@ SELECT qc_lane,focal_species,control_cage,dropout_cage,n_control_bees,n_dropout_
 
 -- 15. Fungal succession: source-specific contrasts and separate Holm families.
 SELECT lane,year,endpoint,estimate,p_value,p_holm,n_logs,publication_cluster FROM v_saine_tests ORDER BY lane,year,endpoint;
+
+-- 16. Prediction results are NOT ecological treatment effect sizes.
+SELECT prediction_id,panel_id,estimand_lane,training_window,endpoint,gain_fraction,p_holm,n_units,n_held_locations,inference_scope FROM prediction_outcomes ORDER BY panel_id,training_window,endpoint;
