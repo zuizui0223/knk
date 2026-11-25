@@ -1,0 +1,49 @@
+name: AHIF Lear resident count cancellation
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-lear-cancellation.yml"
+      - "benchmarks/score_ahif_lear2024_cancellation.py"
+      - "tests/test_ahif_lear2024_cancellation.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic cancellation and uncertainty tests
+        run: |
+          python -m pip install numpy scipy pytest
+          python -m pytest tests/test_ahif_lear2024_cancellation.py -q
+      - name: Acquire exact original public endpoint and documentation files
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          from urllib.parse import quote
+          from benchmarks.score_ahif_lear2024_cancellation import FILES
+          root=Path(os.environ["RUNNER_TEMP"])/"lear"
+          root.mkdir(exist_ok=True)
+          for name,md5 in FILES.items():
+              req=urllib.request.Request("https://zenodo.org/records/12528023/files/"+quote(name)+"?download=1",headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=90) as response:
+                  b=response.read(1_000_001)
+              assert len(b)<=1_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Score resident-only unclosed count responses
+        run: python -m benchmarks.score_ahif_lear2024_cancellation --source "$RUNNER_TEMP/lear" --out "$RUNNER_TEMP/lear/cancellation.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-lear-resident-cancellation-derived-only
+          path: ${{ runner.temp }}/lear/cancellation.json
+          retention-days: 30
