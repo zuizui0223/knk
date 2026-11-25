@@ -1,0 +1,144 @@
+{
+  "status": "STOP_NO_AUTHORIZED_SOURCE_MATRIX",
+  "publication_doi": "10.1111/ele.70006",
+  "zenodo": {
+    "run": 45590891813,
+    "artifact_id": 15010138888,
+    "digest": "sha256:0804fb36e597e69ee8714b94d6a67a01933d80492da3a567554a0f8e909a717e",
+    "record": 10964334,
+    "file": "CommunityAssemblyExperiment.R",
+    "bytes": 69526,
+    "reason": "No count/biomass files"
+  },
+  "dryad": {
+    "run": 45591053578,
+    "artifact_id": 15011400798,
+    "digest": "sha256:e89af347895ed7cc32f3ab7c86e952ac7273b2b0a60c616e1ea6b2ae11124b17",
+    "audit": {
+      "status": "STOP_PUBLIC_SOURCE_ACCESS_OR_SCHEMA",
+      "doi": "10.5061/dryad.x95x69pss",
+      "files": [
+        {
+          "name": "AlgaeXL.csv",
+          "size": 33660,
+          "checksum": "dfeb70c59b212ced181ac5202aeba6fc1f83e4da825611c2424cf8f71a410fb1",
+          "digest_type": "sha-256",
+          "status": "metadata_only",
+          "links": {
+            "self": {
+              "href": "/api/v2/files/3577341"
+            },
+            "stash:dataset": {
+              "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss"
+            },
+            "stash:version": {
+              "href": "/api/v2/versions/324855"
+            },
+            "stash:files": {
+              "href": "/api/v2/versions/324855/files"
+            },
+            "stash:download": {
+              "href": "/api/v2/files/3577341/download"
+            },
+            "curies": [
+              {
+                "name": "stash",
+                "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+                "templated": "true"
+              }
+            ]
+          }
+        },
+        {
+          "name": "AllBiomass.csv",
+          "size": 23257,
+          "checksum": "1baf5ec138fec3b816fb3249ab45ea81b3aa174cad9157931d4abe804391886a",
+          "digest_type": "sha-256",
+          "status": "metadata_only",
+          "links": {
+            "self": {
+              "href": "/api/v2/files/3577342"
+            },
+            "stash:dataset": {
+              "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss"
+            },
+            "stash:version": {
+              "href": "/api/v2/versions/324855"
+            },
+            "stash:files": {
+              "href": "/api/v2/versions/324855/files"
+            },
+            "stash:download": {
+              "href": "/api/v2/files/3577342/download"
+            },
+            "curies": [
+              {
+                "name": "stash",
+                "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+                "templated": "true"
+              }
+            ]
+          }
+        }
+      ],
+      "dataset": {
+        "identifier": "doi:10.5061/dryad.x95x69pss",
+        "title": "Data for: Eco-evolutionary interactions with multiple evolving species reveal both antagonistic and additive effects",
+        "versionNumber": 4,
+        "id": 130600,
+        "_links": {
+          "self": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss"
+          },
+          "stash:versions": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss/versions"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/324855"
+          },
+          "stash:download": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        }
+      },
+      "version": {
+        "versionNumber": 4,
+        "id": null,
+        "_links": {
+          "self": {
+            "href": "/api/v2/versions/324855"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.x95x69pss"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/324855/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/versions/324855/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        }
+      },
+      "error": "HTTPError: HTTP Error 401: Unauthorized"
+    }
+  },
+  "required_user_files": [
+    "CC-B.csv",
+    "AllBiomass.csv"
+  ],
+  "scored": false
+}
