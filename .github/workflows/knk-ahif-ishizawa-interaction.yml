@@ -1,0 +1,48 @@
+name: AHIF Ishizawa independent low-order interaction benchmark
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-ishizawa-interaction.yml"
+      - "benchmarks/score_ahif_ishizawa2024_interaction.py"
+      - "tests/test_ahif_ishizawa2024_interaction.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic source-grain and decomposition tests
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_ishizawa2024_interaction.py -q
+      - name: Acquire exact seven source files from original public record
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          from benchmarks.score_ahif_ishizawa2024_interaction import FILES
+          root=Path(os.environ["RUNNER_TEMP"])/"ishizawa"
+          root.mkdir(exist_ok=True)
+          for name,md5 in FILES.items():
+              req=urllib.request.Request("https://zenodo.org/records/8433832/files/"+name+"?download=1",headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=60) as res:
+                  b=res.read(1_000_001)
+              assert len(b)<=1_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Reproduce authors' point predictions and score held-out architecture
+        run: python -m benchmarks.score_ahif_ishizawa2024_interaction --source "$RUNNER_TEMP/ishizawa" --out "$RUNNER_TEMP/ishizawa/interaction.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-ishizawa-interaction-derived-only
+          path: ${{ runner.temp }}/ishizawa/interaction.json
+          retention-days: 30
