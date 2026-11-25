@@ -1,0 +1,24 @@
+name: AHIF Diaz-Colunga common-marker endpoint repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [analysis/ahif-source-context-20261126]
+    paths:
+      - '.github/workflows/knk-ahif-diaz-harmonized.yml'
+      - 'benchmarks/score_ahif_diazcolunga2022_harmonized.py'
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scipy pandas requests
+      - run: python -m benchmarks.score_ahif_diazcolunga2022_harmonized --out "$RUNNER_TEMP/derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: diaz-harmonized-derived
+          path: ${{ runner.temp }}/derived
+          retention-days: 30
