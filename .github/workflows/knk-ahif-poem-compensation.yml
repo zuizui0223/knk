@@ -1,0 +1,38 @@
+name: AHIF POEM absolute biomass compensation
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-poem-compensation.yml"
+      - "benchmarks/score_ahif_poem_compensation.py"
+      - "tests/test_ahif_poem_compensation.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic shared-control and sign validation tests
+        run: |
+          python -m pip install numpy scipy openpyxl pytest
+          python -m pytest tests/test_ahif_poem_compensation.py -q
+      - name: Acquire original hash-pinned ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/poem"
+          curl --fail --location --retry 3 --retry-delay 4 --max-time 240 "https://zenodo.org/records/10119982/files/POEMexperiment/Data_POEM_Paper1_Alonso-Crespo_et_al_2024-v1.0.zip?download=1" -o "$RUNNER_TEMP/poem/source.zip"
+          echo "3faa5f7d1619a3beae5941ba763b7a26  $RUNNER_TEMP/poem/source.zip" | md5sum -c -
+      - name: Score absolute biomass role contrasts and cross-fitted species compensation
+        run: python -m benchmarks.score_ahif_poem_compensation --zip "$RUNNER_TEMP/poem/source.zip" --out "$RUNNER_TEMP/poem/compensation.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-poem-compensation-derived-only
+          path: ${{ runner.temp }}/poem/compensation.json
+          retention-days: 30
