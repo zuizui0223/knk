@@ -1,0 +1,65 @@
+{
+  "status": "VALIDATED_DESCRIPTIVE_REGISTRY_NOT_META",
+  "version": "0.3.0",
+  "counts": {
+    "studies": 7,
+    "panels": 38,
+    "study_effects": 7,
+    "variable_dictionary": 13,
+    "candidates": 3,
+    "replication_scale_effects": 53
+  },
+  "effect_directions": {
+    "positive": 4,
+    "negative": 3
+  },
+  "meta_eligible": 0,
+  "by_measurement_lane": [
+    [
+      "absolute_biomass",
+      1
+    ],
+    [
+      "absolute_biomass_conditional",
+      1
+    ],
+    [
+      "absolute_biovolume",
+      1
+    ],
+    [
+      "relative_read_composition",
+      3
+    ],
+    [
+      "unclosed_pin_hits",
+      1
+    ]
+  ],
+  "mechanism_unmeasured": [
+    [
+      "direct_interaction"
+    ],
+    [
+      "functional_diversity"
+    ],
+    [
+      "generation_time"
+    ],
+    [
+      "immigration_rate"
+    ]
+  ],
+  "matched_2plus2": {
+    "sources": 7,
+    "G_positive": 4,
+    "H_positive": 7,
+    "dependent_cells": 72192,
+    "source_run": 45589332743,
+    "meta_eligible": 0,
+    "note": "Descriptive dependent source-size effects; Saine strata not prior site panels"
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45590472432",
+  "artifact_id": 15011076425,
+  "artifact_digest": "sha256:ed36bda78fe25abb637dfecc4f7b896591ef3b63448c109fc8adafde9d9065c8"
+}
