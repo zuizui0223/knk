@@ -103,11 +103,16 @@ def main():
     for d,cols in required: assert set(cols)<=set(d.columns),str(set(cols)-set(d.columns))
     pl=pl[pl.year.between(2016,2024)].copy()
     assert not pl.duplicated(["year","month","plot"]).any()
-    cond=(pl.treatment.str.lower()=="control")&(pl.resourcetreatment.str.lower()=="none")&(pl.anttreatment.str.lower()=="none")
+    # Portal_plots.csv uses literal NA for the two inactive treatment columns in
+    # 2016-2024. The separate author treatment-history table confirms precisely
+    # these ten plots have "Unmanipulated control" throughout Apr2015-present.
+    # Do not generalize missing=none to other years/studies.
+    authors_unmanipulated=[4,5,6,7,11,13,14,17,18,24]
+    cond=(pl.treatment.str.lower()=="control")&pl.plot.isin(authors_unmanipulated)&pl.resourcetreatment.isna()&pl.anttreatment.isna()
     pl["eligible"]=cond
     pc=pl.groupby("plot").agg(n=("month","size"),ok=("eligible","all"))
     roster=sorted(pc.index[(pc.n==108)&pc.ok].astype(int).tolist())
-    assert len(roster)>=4, f"too few constant controls {roster}; labels {pl.treatment.unique()}"
+    assert roster==authors_unmanipulated, f"source treatment crosswalk mismatch {roster}"
     roster=roster[:len(roster)//2*2]; print("Fixed control plots",roster)
     spp=sorted(sp.loc[(sp.rodent==1)&(sp.censustarget==1)&(sp.unidentified==0),"speciescode"].unique())
     mo=mo.copy();mo["date"]=pd.to_datetime(mo.newmoondate)
