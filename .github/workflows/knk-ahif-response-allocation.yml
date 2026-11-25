@@ -1,0 +1,51 @@
+name: AHIF matched response allocation
+on:
+  push:
+    branches: [analysis/ahif-response-allocation-20261125]
+    paths:
+      - ".github/workflows/knk-ahif-response-allocation.yml"
+      - "benchmarks/score_ahif_response_allocation.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic tests
+        run: |
+          python -m pip install numpy scipy openpyxl pytest
+          python -m pytest tests/test_ahif_cross_source_concentration.py -q
+      - name: Acquire original source files
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/poem" "$RUNNER_TEMP/field"
+          curl --fail --location --retry 2 --retry-delay 4 --max-time 180 "https://zenodo.org/records/10119982/files/POEMexperiment/Data_POEM_Paper1_Alonso-Crespo_et_al_2024-v1.0.zip?download=1" -o "$RUNNER_TEMP/poem/source.zip"
+          echo "3faa5f7d1619a3beae5941ba763b7a26  $RUNNER_TEMP/poem/source.zip" | md5sum -c -
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          from urllib.parse import quote
+          from benchmarks.probe_ahif_vansteijn2026_field import MD5
+          root=Path(os.environ["RUNNER_TEMP"])/"field"
+          for name,md5 in MD5.items():
+              req=urllib.request.Request("https://zenodo.org/records/15363824/files/"+quote(name)+"?download=1",headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=90) as res:
+                  b=res.read(2_000_001)
+              assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Forecast concentration at independent held sources
+        run: python -m benchmarks.score_ahif_response_allocation --root "$RUNNER_TEMP/kansas" --poem "$RUNNER_TEMP/poem/source.zip" --field "$RUNNER_TEMP/field" --out "$RUNNER_TEMP/concentration/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-response-allocation-derived-only
+          path: ${{ runner.temp }}/concentration/result.json
+          retention-days: 30
