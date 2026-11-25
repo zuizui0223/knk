@@ -1,0 +1,156 @@
+{
+  "status": "EXPLORATORY_FIXED_POOL_BRIER_NOT_CAUSAL",
+  "n_pairs": 20,
+  "seed": 2026112616,
+  "n_permutations": 999,
+  "results": {
+    "Aa": {
+      "intervals": {
+        "T1-T2": {
+          "pool_loss": 0.07700542208600972,
+          "binary_loss": 0.12565353345841151,
+          "hybrid_loss": 0.08533618467276291,
+          "binary_gain": -0.04864811137240177,
+          "hybrid_gain": -0.008330762586753176,
+          "random_hard_loss": 0.12692713647784254
+        },
+        "T2-T3": {
+          "pool_loss": 0.06411763613965246,
+          "binary_loss": 0.11324987170137482,
+          "hybrid_loss": 0.07029225215245469,
+          "binary_gain": -0.049132235561722325,
+          "hybrid_gain": -0.006174616012802182,
+          "random_hard_loss": 0.12483999435786161
+        },
+        "T3-T4": {
+          "pool_loss": 0.0688876128497145,
+          "binary_loss": 0.09827242524916943,
+          "hybrid_loss": 0.07117744236176624,
+          "binary_gain": -0.02938481239945494,
+          "hybrid_gain": -0.0022898295120517323,
+          "random_hard_loss": 0.11047783109798612
+        },
+        "T4-T5": {
+          "pool_loss": 0.045001758696849144,
+          "binary_loss": 0.05091362126245848,
+          "hybrid_loss": 0.036335383799854085,
+          "binary_gain": -0.0059118625656093314,
+          "hybrid_gain": 0.008666374896995056,
+          "random_hard_loss": 0.09277660324171952
+        }
+      },
+      "post": {
+        "pool_loss": 0.059335669228738695,
+        "binary_loss": 0.08747863940433424,
+        "hybrid_loss": 0.059268359438025,
+        "binary_gain": -0.02814297017559553,
+        "hybrid_gain": 0.00006730979071371361,
+        "random_hard_loss": 0.10936480956585574
+      },
+      "post_minus_placebo": {
+        "pool_loss": -0.017669752857271022,
+        "binary_loss": -0.03817489405407727,
+        "hybrid_loss": -0.026067825234737912,
+        "binary_gain": 0.02050514119680624,
+        "hybrid_gain": 0.008398072377466889,
+        "random_hard_loss": -0.017562326911986795
+      },
+      "hybrid_trajectory_reference": {
+        "post": {
+          "observed": 0.00006730979071371361,
+          "reference_median": -0.009460975873997657,
+          "reference_range": [
+            -0.014925474744827277,
+            -0.003101877424675265
+          ],
+          "upper_reference_tail": 0.002
+        },
+        "post_minus_placebo": {
+          "observed": 0.008398072377466889,
+          "reference_median": 0.00033375566343692674,
+          "reference_range": [
+            -0.012172130849771546,
+            0.012138428519540185
+          ],
+          "upper_reference_tail": 0.097
+        }
+      }
+    },
+    "Ab": {
+      "intervals": {
+        "T1-T2": {
+          "pool_loss": 0.3837452732743605,
+          "binary_loss": 0.5185616906850152,
+          "hybrid_loss": 0.4094160457278485,
+          "binary_gain": -0.1348164174106547,
+          "hybrid_gain": -0.025670772453488054,
+          "random_hard_loss": 0.5178543238740421
+        },
+        "T2-T3": {
+          "pool_loss": 0.21239126769142125,
+          "binary_loss": 0.2503324046473693,
+          "hybrid_loss": 0.20072163290296552,
+          "binary_gain": -0.037941136955948015,
+          "hybrid_gain": 0.011669634788455728,
+          "random_hard_loss": 0.3133100476898926
+        },
+        "T3-T4": {
+          "pool_loss": 0.1734160426153739,
+          "binary_loss": 0.20156977591673236,
+          "hybrid_loss": 0.161812418333674,
+          "binary_gain": -0.028153733301358452,
+          "hybrid_gain": 0.011603624281699938,
+          "random_hard_loss": 0.2544729389685655
+        },
+        "T4-T5": {
+          "pool_loss": 0.08308514459031255,
+          "binary_loss": 0.12794829201805943,
+          "hybrid_loss": 0.08756140171676347,
+          "binary_gain": -0.044863147427746906,
+          "hybrid_gain": -0.004476257126450922,
+          "random_hard_loss": 0.1450700182676927
+        }
+      },
+      "post": {
+        "pool_loss": 0.1562974849657026,
+        "binary_loss": 0.19328349086072036,
+        "hybrid_loss": 0.15003181765113432,
+        "binary_gain": -0.03698600589501779,
+        "hybrid_gain": 0.006265667314568246,
+        "random_hard_loss": 0.23761766830871692
+      },
+      "post_minus_placebo": {
+        "pool_loss": -0.2274477883086579,
+        "binary_loss": -0.32527819982429484,
+        "hybrid_loss": -0.2593842280767142,
+        "binary_gain": 0.0978304115156369,
+        "hybrid_gain": 0.0319364397680563,
+        "random_hard_loss": -0.2802366555653252
+      },
+      "hybrid_trajectory_reference": {
+        "post": {
+          "observed": 0.006265667314568246,
+          "reference_median": -0.015296709810328676,
+          "reference_range": [
+            -0.022999979255749654,
+            -0.006832034912694192
+          ],
+          "upper_reference_tail": 0.001
+        },
+        "post_minus_placebo": {
+          "observed": 0.0319364397680563,
+          "reference_median": 0.010313236441567307,
+          "reference_range": [
+            -0.0004968828359309282,
+            0.020336807894472588
+          ],
+          "upper_reference_tail": 0.001
+        }
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45716249512",
+  "source_commit": "cb94723f1ac7af5d059644b6ce832562667864a1",
+  "artifact_id": 15070441157,
+  "artifact_digest": "sha256:493ba0195e092d9184fa642fc6c7e54c2bcb46c59133398560c4b6241c735a88"
+}

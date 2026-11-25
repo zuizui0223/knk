@@ -1,0 +1,29 @@
+name: AHIF donor mismatch and recruitment diagnostics
+on:
+  push:
+    branches: [analysis/ahif-donor-mismatch-20261126]
+    paths:
+      - 'benchmarks/score_ahif_donor_mismatch.py'
+      - '.github/workflows/knk-ahif-donor-mismatch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl
+      - name: Verify exact source and replay prior outcomes, score donor mismatch
+        run: python -m benchmarks.score_ahif_donor_mismatch --root "$RUNNER_TEMP/villarreal" --out "$RUNNER_TEMP/derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: villarreal-donor-mismatch-derived-only
+          path: ${{ runner.temp }}/derived/result.json
+          retention-days: 30
