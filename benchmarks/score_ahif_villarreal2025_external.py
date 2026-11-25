@@ -1,5 +1,5 @@
 """Source-locked independent zooplankton mass/sign validation, linked donor clusters."""
-import argparse,csv,hashlib,json,re
+import argparse,csv,hashlib,io,json,re
 from pathlib import Path
 import numpy as np
 from benchmarks import score_ahif_mass_direction_transfer as md
@@ -51,8 +51,13 @@ def load(root,refs):
     assert set(a)==set(zip(EXPECTED["A0"],EXPECTED["Aa"])),a
     assert set(b)==set(zip(EXPECTED["B0"],EXPECTED["Ab"])),b
     assert len(a)==len(b)==10
-    with (root/RAW).open(encoding="utf-8-sig",newline="") as f:
-        r=csv.reader(f,delimiter="\t");header=next(r);rows=list(r)
+    raw=(root/RAW).read_bytes()
+    # The original file has a non-UTF8 Portuguese header. Use lossless decoding; all numeric columns remain unchanged.
+    try:
+        decoded=raw.decode("utf-8-sig");encoding="utf-8-sig"
+    except UnicodeDecodeError:
+        decoded=raw.decode("latin-1");encoding="latin-1";assert decoded.encode(encoding)==raw
+    r=csv.reader(io.StringIO(decoded,newline=""),delimiter="\t");header=next(r);rows=list(r)
     assert len(header)==len(set(header))==70 and header[:3]==["Tanques","Data","Tratamento"]
     assert len(rows)==200 and all(len(x)==70 for x in rows)
     removed={27,28,57,58}
@@ -73,7 +78,7 @@ def load(root,refs):
     mats={arm:np.array([[dat[t,d] for t in ids] for d in DATES]) for arm,ids in EXPECTED.items()}
     audit={"source_doi":DOI,"source_files":{k:{"md5":refs[k]["md5"],"sha256":refs[k]["sha256"]} for k in (RAW,CODE)},
        "tank_pairs":pairs,"n_tanks":40,"n_linked_pairs":20,"n_profiles":200,"n_post_profiles":120,
-       "n_taxa":len(taxa),"taxon_codes":taxa,"excluded_columns":[header[i] for i in sorted(removed)],
+       "n_taxa":len(taxa),"source_encoding":encoding,"taxon_codes":taxa,"excluded_columns":[header[i] for i in sorted(removed)],
        "individuals":int(allx.sum()),"sample_total_range":[int(allx.sum(1).min()),int(allx.sum(1).max())],
        "post_dates_days":[65,86,101],"arm_sample_counts":{k:int(v.shape[0]*v.shape[1]) for k,v in mats.items()}}
     return mats,audit
