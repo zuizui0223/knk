@@ -1,0 +1,571 @@
+{
+  "status": "RAW_ESV_RESULT_INVALID_FOR_BIOLOGICAL_INFERENCE",
+  "reason": "R0 238nt versus R1/R2 predominantly 233nt; no shared raw keys; 100% endpoint mass outside raw roster in both media",
+  "raw": {
+    "run": 45717293660,
+    "artifact": 15069723588,
+    "sha256": "ea7a83cfc0e9ab7412cc809e62a4bcc2fa0b551e4af61f01a8bfe0f27023cc63",
+    "output": {
+      "status": "INDEPENDENT_ENDPOINT_POOL_DIAGNOSTIC_NOT_TEMPORAL_META",
+      "source_commit": "c21bfb9bfe8cbe7dbcff52e76c4d85e3ee7e7f6d",
+      "publication": "10.1073/pnas.2111261119",
+      "audit": {
+        "n_taxa": 4328,
+        "n_profiles": 144,
+        "n_parent_profiles": 16,
+        "n_control_profiles": 16,
+        "n_mixed_profiles": 112,
+        "min_reads": 5467,
+        "max_reads": 59676,
+        "below_1000": {},
+        "source_files": {
+          "data/metaData.csv": {
+            "blob": "4039c5ed6f1aa87519d846b1ddc952eb07fb5327",
+            "bytes": 302560,
+            "sha256": "68b31d743c341ba977fff3d741dd14a7127b93d4b950f5b3d20fb2797d87a03f"
+          },
+          "data/OTU_table.csv": {
+            "blob": "00e527c890bc324c2e1b3d3f8a842ef484b22b0b",
+            "bytes": 14480507,
+            "sha256": "9d5eaa36bc794a4fecaf0a2188dd10be7dc6c1310aa7e7d94cd901baa50e7b74"
+          },
+          "data/analyzeData.R": {
+            "blob": "88f31dc57777f0c249840d67f6cd1fc9e8f4ef2f",
+            "bytes": 90568,
+            "sha256": "f8ec99d6b27bae664fc4ba2e3bcbf50ed91a11871c65ad889695db1bdb95910d"
+          }
+        },
+        "parent_mapping": {
+          "Glutamine": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            10,
+            11,
+            12
+          ],
+          "Citrate": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      },
+      "results": {
+        "raw_detected": {
+          "by_medium": {
+            "Glutamine": {
+              "pairs": 28,
+              "mixed_wells": 56,
+              "source_roster_taxa": 96,
+              "mixed": {
+                "pool_loss": 0.09901923765204347,
+                "donor_loss": 0.25608200137347464,
+                "hybrid_loss": 0.12257865221025814,
+                "hybrid_gain": -0.02355941455821468,
+                "donor_gain": -0.15706276372143121
+              },
+              "unmixed_control": {
+                "pool_loss": 0.09901923765204347,
+                "donor_loss": 0.25608200137347464,
+                "hybrid_loss": 0.12257865221025814,
+                "hybrid_gain": -0.02355941455821468,
+                "donor_gain": -0.15706276372143121
+              },
+              "mixed_minus_control_gain": 0,
+              "actual_vs_alternative_hybrid_gain": 3.469446951953614e-18,
+              "mismatch_spearman": -0.18007662835249041,
+              "n_positive_hybrid_pairs": 7,
+              "mean_endpoint_mass_outside_roster": 1,
+              "subgroups": {
+                "shared_pool": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0.10752771181201289,
+                    "donor_loss": 0.19221014056796595,
+                    "hybrid_loss": 0.11172637882150083,
+                    "hybrid_gain": -0.004198667009487961,
+                    "donor_gain": -0.08468242875595304
+                  }
+                },
+                "partner_only": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0,
+                    "donor_loss": 1,
+                    "hybrid_loss": 0.25,
+                    "hybrid_gain": -0.25,
+                    "donor_gain": -1
+                  }
+                }
+              }
+            },
+            "Citrate": {
+              "pairs": 28,
+              "mixed_wells": 56,
+              "source_roster_taxa": 73,
+              "mixed": {
+                "pool_loss": 0.10736995882132637,
+                "donor_loss": 0.26348988262533496,
+                "hybrid_loss": 0.1307879473919277,
+                "hybrid_gain": -0.0234179885706013,
+                "donor_gain": -0.15611992380400858
+              },
+              "unmixed_control": {
+                "pool_loss": 0.10736995882132637,
+                "donor_loss": 0.26348988262533496,
+                "hybrid_loss": 0.1307879473919277,
+                "hybrid_gain": -0.0234179885706013,
+                "donor_gain": -0.15611992380400858
+              },
+              "mixed_minus_control_gain": 0,
+              "actual_vs_alternative_hybrid_gain": 1.734723475976807e-18,
+              "mismatch_spearman": -0.2698412698412698,
+              "n_positive_hybrid_pairs": 8,
+              "mean_endpoint_mass_outside_roster": 1,
+              "subgroups": {
+                "shared_pool": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0.1170579736073851,
+                    "donor_loss": 0.1988861767476338,
+                    "hybrid_loss": 0.12057588942965067,
+                    "hybrid_gain": -0.0035179158222655954,
+                    "donor_gain": -0.08182820314024877
+                  }
+                },
+                "partner_only": {
+                  "n_defined_pair_orient_wells": 98,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0,
+                    "donor_loss": 1,
+                    "hybrid_loss": 0.25,
+                    "hybrid_gain": -0.25,
+                    "donor_gain": -1
+                  }
+                }
+              }
+            }
+          },
+          "equal_medium_mixed": {
+            "pool_loss": 0.10319459823668492,
+            "donor_loss": 0.2597859419994048,
+            "hybrid_loss": 0.1266832998010929,
+            "hybrid_gain": -0.02348870156440799,
+            "donor_gain": -0.15659134376271988
+          },
+          "medium_centered_mismatch_pearson": -0.2686661683475446,
+          "delete_original_id_gain": {
+            "1": -0.023472676616575143,
+            "2": -0.023008776298344996,
+            "3": -0.027152717677911897,
+            "5": -0.026961084561900824,
+            "7": -0.02372277574629713,
+            "8": -0.02146736091335897,
+            "9": -0.02424587904986291,
+            "10": -0.022280939136134305,
+            "11": -0.0180735994138694,
+            "12": -0.024501206229824324
+          },
+          "equal_medium_control_gain": -0.02348870156440799,
+          "equal_medium_mixed_minus_control_gain": 0,
+          "equal_medium_actual_vs_alternative_hybrid_gain": 2.6020852139652106e-18,
+          "source_disjoint_calibration": {
+            "Glutamine": {
+              "pairs": 28,
+              "train_pairs_per_held": 15,
+              "base_loss": 0.006458333761028695,
+              "donor_conditional_loss": 0.015509672464466228,
+              "gain": -0.009051338703437533,
+              "n_positive_pairs": 0,
+              "fallback_cells": 734,
+              "risk_cells": 7574
+            },
+            "Citrate": {
+              "pairs": 28,
+              "train_pairs_per_held": 15,
+              "base_loss": 0.006055040143741311,
+              "donor_conditional_loss": 0.01544491121676059,
+              "gain": -0.00938987107301928,
+              "n_positive_pairs": 0,
+              "fallback_cells": 548,
+              "risk_cells": 5670
+            }
+          }
+        },
+        "relative_0.001": {
+          "by_medium": {
+            "Glutamine": {
+              "pairs": 28,
+              "mixed_wells": 56,
+              "source_roster_taxa": 62,
+              "mixed": {
+                "pool_loss": 0.09476583552910393,
+                "donor_loss": 0.24459239914646064,
+                "hybrid_loss": 0.11723982007170744,
+                "hybrid_gain": -0.02247398454260352,
+                "donor_gain": -0.14982656361735674
+              },
+              "unmixed_control": {
+                "pool_loss": 0.09476583552910393,
+                "donor_loss": 0.24459239914646064,
+                "hybrid_loss": 0.11723982007170744,
+                "hybrid_gain": -0.02247398454260352,
+                "donor_gain": -0.14982656361735674
+              },
+              "mixed_minus_control_gain": 0,
+              "actual_vs_alternative_hybrid_gain": 2.4781763942525816e-18,
+              "mismatch_spearman": -0.36672140120415986,
+              "n_positive_hybrid_pairs": 5,
+              "mean_endpoint_mass_outside_roster": 1,
+              "subgroups": {
+                "shared_pool": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0.10454941145916183,
+                    "donor_loss": 0.16831080942411844,
+                    "hybrid_loss": 0.10403125246677004,
+                    "hybrid_gain": 0.0005181589923917652,
+                    "donor_gain": -0.06376139796495668
+                  }
+                },
+                "partner_only": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0,
+                    "donor_loss": 1,
+                    "hybrid_loss": 0.25,
+                    "hybrid_gain": -0.25,
+                    "donor_gain": -1
+                  }
+                }
+              }
+            },
+            "Citrate": {
+              "pairs": 28,
+              "mixed_wells": 56,
+              "source_roster_taxa": 50,
+              "mixed": {
+                "pool_loss": 0.09297403734323238,
+                "donor_loss": 0.2505139794993804,
+                "hybrid_loss": 0.11660502866665459,
+                "hybrid_gain": -0.023630991323422224,
+                "donor_gain": -0.15753994215614803
+              },
+              "unmixed_control": {
+                "pool_loss": 0.09297403734323238,
+                "donor_loss": 0.2505139794993804,
+                "hybrid_loss": 0.11660502866665459,
+                "hybrid_gain": -0.023630991323422224,
+                "donor_gain": -0.15753994215614803
+              },
+              "mixed_minus_control_gain": 0,
+              "actual_vs_alternative_hybrid_gain": 2.4781763942525814e-19,
+              "mismatch_spearman": -0.27257799671592775,
+              "n_positive_hybrid_pairs": 6,
+              "mean_endpoint_mass_outside_roster": 1,
+              "subgroups": {
+                "shared_pool": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0.10205028817441028,
+                    "donor_loss": 0.17943607450851376,
+                    "hybrid_loss": 0.10428251165842731,
+                    "hybrid_gain": -0.002232223484017022,
+                    "donor_gain": -0.07738578633410355
+                  }
+                },
+                "partner_only": {
+                  "n_defined_pair_orient_wells": 112,
+                  "n_defined_pairs": 28,
+                  "metrics": {
+                    "pool_loss": 0,
+                    "donor_loss": 1,
+                    "hybrid_loss": 0.25,
+                    "hybrid_gain": -0.25,
+                    "donor_gain": -1
+                  }
+                }
+              }
+            }
+          },
+          "equal_medium_mixed": {
+            "pool_loss": 0.09386993643616816,
+            "donor_loss": 0.24755318932292053,
+            "hybrid_loss": 0.11692242436918102,
+            "hybrid_gain": -0.023052487933012872,
+            "donor_gain": -0.1536832528867524
+          },
+          "medium_centered_mismatch_pearson": -0.2865385721683213,
+          "delete_original_id_gain": {
+            "1": -0.023080231404111685,
+            "2": -0.023153313298202718,
+            "3": -0.024644526703268964,
+            "5": -0.025250643659717978,
+            "7": -0.022282584647695943,
+            "8": -0.020611545449246267,
+            "9": -0.023280285200673045,
+            "10": -0.026028624783383934,
+            "11": -0.016068993388142057,
+            "12": -0.02612413079568615
+          },
+          "equal_medium_control_gain": -0.023052487933012872,
+          "equal_medium_mixed_minus_control_gain": 0,
+          "equal_medium_actual_vs_alternative_hybrid_gain": 1.3629970168389198e-18,
+          "source_disjoint_calibration": {
+            "Glutamine": {
+              "pairs": 28,
+              "train_pairs_per_held": 15,
+              "base_loss": 0.005604855712651401,
+              "donor_conditional_loss": 0.014014952399100956,
+              "gain": -0.008410096686449554,
+              "n_positive_pairs": 0,
+              "fallback_cells": 536,
+              "risk_cells": 4970
+            },
+            "Citrate": {
+              "pairs": 28,
+              "train_pairs_per_held": 15,
+              "base_loss": 0.005462212647185105,
+              "donor_conditional_loss": 0.014932015514613817,
+              "gain": -0.00946980286742871,
+              "n_positive_pairs": 0,
+              "fallback_cells": 384,
+              "risk_cells": 4018
+            }
+          }
+        }
+      }
+    }
+  },
+  "audit": {
+    "run": 45717528267,
+    "artifact": 15069444667,
+    "sha256": "d3e6fad52ef037c94615d27c51298005f122a068cfa5652d932886e95dd02e7b",
+    "output": {
+      "status": "AUDIT_ONLY",
+      "taxonomy_header": [
+        "",
+        "Kingdom",
+        "Phylum",
+        "Class",
+        "Order",
+        "Family",
+        "Genus"
+      ],
+      "sequence_id_lengths": {
+        "230": 3,
+        "231": 2,
+        "232": 51,
+        "233": 3693,
+        "234": 302,
+        "235": 9,
+        "236": 7,
+        "237": 3,
+        "238": 255,
+        "240": 2,
+        "241": 1
+      },
+      "sequence_keys_acgt_fraction": 1,
+      "taxonomy_first_record": [
+        "Bacteria",
+        "Proteobacteria",
+        "Gammaproteobacteria",
+        "Pseudomonadales",
+        "Pseudomonadaceae",
+        "Pseudomonas"
+      ],
+      "medium": {
+        "Glutamine": {
+          "parent_taxa": 96,
+          "endpoint_taxa": 69,
+          "shared_raw_keys": 0,
+          "parent_length": {
+            "238": 96
+          },
+          "endpoint_length": {
+            "232": 1,
+            "233": 68
+          },
+          "run_metadata": {
+            "pre": {
+              "Sequencing_Run": {
+                "R0": 8
+              },
+              "LinkerPrimerSequence": {
+                "TATGGTAATTGTGTGCCAGCMGCCGCGGTAA ": 8
+              },
+              "ReversePrimer": {
+                "AGTCAGTCAGCCGGACTACHVGGGTWTCTAAT": 8
+              }
+            },
+            "endpoint": {
+              "Sequencing_Run": {
+                "R1": 72
+              },
+              "LinkerPrimerSequence": {
+                "TATGGTAATTGTGTGCCAGCMGCCGCGGTAA ": 72
+              },
+              "ReversePrimer": {
+                "AGTCAGTCAGCCGGACTACHVGGGTWTCTAAT": 72
+              }
+            }
+          },
+          "endpoint_exact_substring_matches": 57,
+          "endpoint_mass_substring_supported": 0.9961068376585127,
+          "taxonomic_rank_support": {
+            "Kingdom": {
+              "parent_keys": 1,
+              "endpoint_keys": 1,
+              "shared_keys": 1,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 0.9999999999999999
+            },
+            "Phylum": {
+              "parent_keys": 4,
+              "endpoint_keys": 4,
+              "shared_keys": 4,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 0.9999999999999999
+            },
+            "Class": {
+              "parent_keys": 8,
+              "endpoint_keys": 8,
+              "shared_keys": 8,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 0.9999999999999999
+            },
+            "Order": {
+              "parent_keys": 15,
+              "endpoint_keys": 15,
+              "shared_keys": 13,
+              "endpoint_mass_supported": 0.9986274112131762,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 0.9999999999999999
+            },
+            "Family": {
+              "parent_keys": 23,
+              "endpoint_keys": 19,
+              "shared_keys": 17,
+              "endpoint_mass_supported": 0.9986274112131762,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 0.9999999999999999
+            },
+            "Genus": {
+              "parent_keys": 47,
+              "endpoint_keys": 36,
+              "shared_keys": 32,
+              "endpoint_mass_supported": 0.9839353367029313,
+              "endpoint_mass_classified": 0.9853973598486131,
+              "parent_mass_classified": 0.9913731145372913
+            }
+          }
+        },
+        "Citrate": {
+          "parent_taxa": 73,
+          "endpoint_taxa": 52,
+          "shared_raw_keys": 0,
+          "parent_length": {
+            "238": 73
+          },
+          "endpoint_length": {
+            "233": 52
+          },
+          "run_metadata": {
+            "pre": {
+              "Sequencing_Run": {
+                "R0": 8
+              },
+              "LinkerPrimerSequence": {
+                "TATGGTAATTGTGTGCCAGCMGCCGCGGTAA ": 8
+              },
+              "ReversePrimer": {
+                "AGTCAGTCAGCCGGACTACHVGGGTWTCTAAT": 8
+              }
+            },
+            "endpoint": {
+              "Sequencing_Run": {
+                "R2": 72
+              },
+              "LinkerPrimerSequence": {
+                "TATGGTAATTGTGTGCCAGCMGCCGCGGTAA ": 72
+              },
+              "ReversePrimer": {
+                "AGTCAGTCAGCCGGACTACHVGGGTWTCTAAT": 72
+              }
+            }
+          },
+          "endpoint_exact_substring_matches": 43,
+          "endpoint_mass_substring_supported": 0.9937496006076592,
+          "taxonomic_rank_support": {
+            "Kingdom": {
+              "parent_keys": 1,
+              "endpoint_keys": 1,
+              "shared_keys": 1,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 1
+            },
+            "Phylum": {
+              "parent_keys": 4,
+              "endpoint_keys": 3,
+              "shared_keys": 3,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 1
+            },
+            "Class": {
+              "parent_keys": 8,
+              "endpoint_keys": 7,
+              "shared_keys": 7,
+              "endpoint_mass_supported": 1,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 1
+            },
+            "Order": {
+              "parent_keys": 13,
+              "endpoint_keys": 13,
+              "shared_keys": 11,
+              "endpoint_mass_supported": 0.9999948478816759,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 1
+            },
+            "Family": {
+              "parent_keys": 17,
+              "endpoint_keys": 15,
+              "shared_keys": 13,
+              "endpoint_mass_supported": 0.9999948478816759,
+              "endpoint_mass_classified": 1,
+              "parent_mass_classified": 1
+            },
+            "Genus": {
+              "parent_keys": 35,
+              "endpoint_keys": 27,
+              "shared_keys": 24,
+              "endpoint_mass_supported": 0.9998337569640176,
+              "endpoint_mass_classified": 0.9998411236297541,
+              "parent_mass_classified": 0.8285461242656508
+            }
+          }
+        }
+      }
+    }
+  }
+}
