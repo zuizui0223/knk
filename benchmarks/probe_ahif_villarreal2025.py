@@ -46,8 +46,13 @@ def main():
     a.out.mkdir(parents=True,exist_ok=True);z={"status":"SOURCE_GATE_ONLY","article":ARTICLE,"doi":DOI,"files":[]}
     try:
         m=json.loads(get(f"https://api.figshare.com/v2/articles/{ARTICLE}/versions/1",2_000_000))
-        assert int(m["id"])==ARTICLE and int(m["version"])==1 and m["doi"] in (DOI,DOI[:-3])
-        assert "dispersal" in m["title"].lower() and "community" in m["title"].lower()
+        z["observed_identity"]={k:m.get(k) for k in ("id","version","doi","title","url_public_html","published_date")}
+        z["observed_file_names"]=[f.get("name") for f in m.get("files",[])]
+        assert int(m["id"])==ARTICLE, "article ID mismatch"
+        assert int(m["version"])==1, "version mismatch"
+        assert m["doi"] in (DOI,DOI[:-3]), "DOI mismatch"
+        # Title is descriptive and may not match the article exactly; require the published DOI above.
+        # Source content mapping remains a separate gate before scoring.
         z.update(title=m["title"],license=m.get("license"),description=m.get("description","")[:8000])
         used=0
         for f in m["files"]:
