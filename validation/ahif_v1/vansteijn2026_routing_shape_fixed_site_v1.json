@@ -1,0 +1,339 @@
+{
+  "status": "EXPLORATORY_FIXED_SITE_AND_SHAPE_DIAGNOSTICS_NOT_MEDIATION",
+  "n_physical_plots": 40,
+  "n_publications": 1,
+  "raw_rank_change_reference": [
+    {
+      "site": "MAL",
+      "R2": 0.45986545212539603,
+      "null_median": 0.13747031061495468,
+      "null95": [
+        0.03279905251652061,
+        0.37895399662702184
+      ],
+      "E": 0.32239514151044135,
+      "p_upper": 0.0018,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean"
+    },
+    {
+      "site": "UME",
+      "R2": 0.18980553514076842,
+      "null_median": 0.15745539869553407,
+      "null95": [
+        0.056120726059622726,
+        0.40682522196237536
+      ],
+      "E": 0.03235013644523435,
+      "p_upper": 0.3717,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean"
+    }
+  ],
+  "primary_geometric_residual": [
+    {
+      "site": "MAL",
+      "curve": "geometric",
+      "R2": 0.35138425216271413,
+      "null_median": 0.14296986780155566,
+      "null95": [
+        0.049518425800121835,
+        0.33532595228394607
+      ],
+      "E": 0.20841438436115847,
+      "p_upper": 0.0178,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0356
+    },
+    {
+      "site": "UME",
+      "curve": "geometric",
+      "R2": 0.1213239879030921,
+      "null_median": 0.16417962649056164,
+      "null95": [
+        0.06424788088440235,
+        0.34658774696990935
+      ],
+      "E": -0.04285563858746955,
+      "p_upper": 0.7545,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.7545
+    }
+  ],
+  "secondary_one_dominant_residual": [
+    {
+      "site": "MAL",
+      "curve": "one_dominant",
+      "R2": 0.24880803183939618,
+      "null_median": 0.13767994107954248,
+      "null95": [
+        0.06788858157715799,
+        0.25902777421758316
+      ],
+      "E": 0.11112809075985369,
+      "p_upper": 0.0354,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0708
+    },
+    {
+      "site": "UME",
+      "curve": "one_dominant",
+      "R2": 0.28832051840926837,
+      "null_median": 0.1679724021920859,
+      "null95": [
+        0.08005415735402005,
+        0.3252905441961234
+      ],
+      "E": 0.12034811621718247,
+      "p_upper": 0.0626,
+      "n_units": 20,
+      "n_columns": 58,
+      "n_permutations": 9999,
+      "metric": "euclidean",
+      "p_holm_family": 0.0708
+    }
+  ],
+  "curve_fit_descriptives": [
+    {
+      "site": "MAL",
+      "year": "2021",
+      "curve": "geometric",
+      "mean_squared_residual_l2": 0.005477127160427194,
+      "richness_range": [
+        10,
+        19
+      ],
+      "simpson_range": [
+        0.11534041941970699,
+        0.2396823840799922
+      ]
+    },
+    {
+      "site": "MAL",
+      "year": "2024",
+      "curve": "geometric",
+      "mean_squared_residual_l2": 0.006644718163346522,
+      "richness_range": [
+        4,
+        8
+      ],
+      "simpson_range": [
+        0.24414210128495836,
+        0.7963636363636363
+      ]
+    },
+    {
+      "site": "MAL",
+      "year": "2021",
+      "curve": "one_dominant",
+      "mean_squared_residual_l2": 0.046515018367425685,
+      "richness_range": [
+        10,
+        19
+      ],
+      "simpson_range": [
+        0.11534041941970699,
+        0.2396823840799922
+      ]
+    },
+    {
+      "site": "MAL",
+      "year": "2024",
+      "curve": "one_dominant",
+      "mean_squared_residual_l2": 0.024635047666141933,
+      "richness_range": [
+        4,
+        8
+      ],
+      "simpson_range": [
+        0.24414210128495836,
+        0.7963636363636363
+      ]
+    },
+    {
+      "site": "UME",
+      "year": "2021",
+      "curve": "geometric",
+      "mean_squared_residual_l2": 0.005353806450129844,
+      "richness_range": [
+        11,
+        15
+      ],
+      "simpson_range": [
+        0.13124349635796048,
+        0.24310438074634935
+      ]
+    },
+    {
+      "site": "UME",
+      "year": "2024",
+      "curve": "geometric",
+      "mean_squared_residual_l2": 0.00854006693383544,
+      "richness_range": [
+        3,
+        11
+      ],
+      "simpson_range": [
+        0.15834710743801653,
+        0.4958677685950413
+      ]
+    },
+    {
+      "site": "UME",
+      "year": "2021",
+      "curve": "one_dominant",
+      "mean_squared_residual_l2": 0.05438498526378244,
+      "richness_range": [
+        11,
+        15
+      ],
+      "simpson_range": [
+        0.13124349635796048,
+        0.24310438074634935
+      ]
+    },
+    {
+      "site": "UME",
+      "year": "2024",
+      "curve": "one_dominant",
+      "mean_squared_residual_l2": 0.03076487535186733,
+      "richness_range": [
+        3,
+        11
+      ],
+      "simpson_range": [
+        0.15834710743801653,
+        0.4958677685950413
+      ]
+    }
+  ],
+  "approximate_fixed_site_contrasts": [
+    {
+      "endpoint": "nontarget_rank",
+      "difference_l2": 0.31964430685295603,
+      "difference_squared_noise_corrected": 0.06490326259633236,
+      "variance_trace": 0.03726922030717434,
+      "n_blocks_per_site": 5,
+      "status": "APPROXIMATE_WILD_BOOTSTRAP_NOT_EXACT",
+      "statistic": 2.7414708990796477,
+      "n_sign_patterns": 1024,
+      "p_approx": 0.04,
+      "p_holm_approx_family": 0.04097560975609756
+    },
+    {
+      "endpoint": "nontarget_richness",
+      "difference_l2": 4.498888751680798,
+      "difference_squared_noise_corrected": 15.350000000000001,
+      "variance_trace": 4.890000000000001,
+      "n_blocks_per_site": 5,
+      "status": "APPROXIMATE_WILD_BOOTSTRAP_NOT_EXACT",
+      "statistic": 4.139059304703476,
+      "n_sign_patterns": 1024,
+      "p_approx": 0.010731707317073172,
+      "scalar_contrast_means": {
+        "MAL": [
+          0.2,
+          0.2,
+          -0.2
+        ],
+        "UME": [
+          -3,
+          -2.4,
+          1.6
+        ],
+        "contrast_order": [
+          "fast_early",
+          "slow_early",
+          "same_vs_staggered"
+        ]
+      },
+      "p_holm_approx_family": 0.03219512195121951
+    },
+    {
+      "endpoint": "nontarget_simpson_concentration",
+      "difference_l2": 0.22886532212268582,
+      "difference_squared_noise_corrected": 0.04112414502033795,
+      "variance_trace": 0.011255190649982797,
+      "n_blocks_per_site": 5,
+      "status": "APPROXIMATE_WILD_BOOTSTRAP_NOT_EXACT",
+      "statistic": 4.653793729420372,
+      "n_sign_patterns": 1024,
+      "p_approx": 0.02048780487804878,
+      "scalar_contrast_means": {
+        "MAL": [
+          -0.1506546756715329,
+          0.17470988022671513,
+          -0.083842330181677
+        ],
+        "UME": [
+          0.03938145394848745,
+          0.04790168914260736,
+          -0.09745437570540257
+        ],
+        "contrast_order": [
+          "fast_early",
+          "slow_early",
+          "same_vs_staggered"
+        ]
+      },
+      "p_holm_approx_family": 0.04097560975609756
+    }
+  ],
+  "approximate_welch_order_sensitivity": [
+    {
+      "endpoint": "nontarget_richness",
+      "contrast": "FtS_minus_StF",
+      "status": "WELCH_APPROXIMATE_FIXED_SITE_CONTRAST",
+      "difference_MAL_minus_UME": 0.6,
+      "MAL_mean": 0,
+      "UME_mean": -0.6,
+      "se": 1.2884098726725126,
+      "df": 6.90799699172725,
+      "ci95_unadjusted": [
+        -2.4548499866946845,
+        3.6548499866946846
+      ],
+      "p_approx": 0.6557625294824335,
+      "p_holm_approx_family": 0.6557625294824335
+    },
+    {
+      "endpoint": "nontarget_simpson_concentration",
+      "contrast": "FtS_minus_StF",
+      "status": "WELCH_APPROXIMATE_FIXED_SITE_CONTRAST",
+      "difference_MAL_minus_UME": -0.3168443207041281,
+      "MAL_mean": -0.32536455589824803,
+      "UME_mean": -0.008520235194119919,
+      "se": 0.10452886223608782,
+      "df": 6.734874091951562,
+      "ci95_unadjusted": [
+        -0.5660020333655282,
+        -0.06768660804272794
+      ],
+      "p_approx": 0.01999924956917056,
+      "p_holm_approx_family": 0.03999849913834112
+    }
+  ],
+  "limits": [
+    "Same source plots; prior outcome motivated endpoints.",
+    "Shape residual is derived post-treatment endpoint, not controlled direct effect.",
+    "Wild bootstrap and Welch with five blocks/site are approximate, not exact randomization or site causation."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45382068138",
+  "source_job": 138403349241,
+  "source_commit": "f7a32f29f9645755c0df7625a88737078eb161ba",
+  "source_doi": "10.5281/zenodo.15363824",
+  "prescore_contract": "docs/AHIF_ROUTING_SHAPE_PRESCORE_20261124.md"
+}

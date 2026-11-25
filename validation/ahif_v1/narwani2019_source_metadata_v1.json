@@ -1,0 +1,3026 @@
+{
+  "status": "NARWANI_METADATA_AND_COVERAGE_ONLY",
+  "source_md5": "c5f52c568a1119429093d3db1603e59c",
+  "source_sha256": "6242f9c3a92cde7f451066ceebf6ae6c9cc6f924d5ed9bc0a7f11de7b9beb3c3",
+  "n_states": 660,
+  "n_columns": 170,
+  "design_columns": [
+    "Block",
+    "Rep",
+    "Dreisse",
+    "Macrophytes",
+    "Nutrients",
+    "TreatNR",
+    "Treatment"
+  ],
+  "designs": {
+    "1A": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      2,
+      "D"
+    ],
+    "1B": [
+      1,
+      1,
+      0,
+      0,
+      1,
+      4,
+      "C"
+    ],
+    "1C": [
+      1,
+      2,
+      0,
+      0,
+      1,
+      4,
+      "C"
+    ],
+    "1D": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      5,
+      "O"
+    ],
+    "2A": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      3,
+      "MD"
+    ],
+    "2B": [
+      2,
+      3,
+      0,
+      0,
+      1,
+      4,
+      "C"
+    ],
+    "2C": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      3,
+      "MD"
+    ],
+    "2D": [
+      2,
+      1,
+      0,
+      1,
+      1,
+      1,
+      "M"
+    ],
+    "3A": [
+      3,
+      4,
+      0,
+      0,
+      1,
+      4,
+      "C"
+    ],
+    "3B": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      5,
+      "O"
+    ],
+    "3C": [
+      3,
+      3,
+      0,
+      0,
+      0,
+      5,
+      "O"
+    ],
+    "3D": [
+      3,
+      2,
+      0,
+      1,
+      1,
+      1,
+      "M"
+    ],
+    "4A": [
+      4,
+      2,
+      1,
+      0,
+      1,
+      2,
+      "D"
+    ],
+    "4B": [
+      4,
+      3,
+      1,
+      1,
+      1,
+      3,
+      "MD"
+    ],
+    "4C": [
+      4,
+      3,
+      1,
+      0,
+      1,
+      2,
+      "D"
+    ],
+    "4D": [
+      4,
+      4,
+      1,
+      1,
+      1,
+      3,
+      "MD"
+    ],
+    "5A": [
+      5,
+      3,
+      0,
+      1,
+      1,
+      1,
+      "M"
+    ],
+    "5B": [
+      5,
+      4,
+      0,
+      1,
+      1,
+      1,
+      "M"
+    ],
+    "5C": [
+      5,
+      4,
+      1,
+      0,
+      1,
+      2,
+      "D"
+    ],
+    "5D": [
+      5,
+      4,
+      0,
+      0,
+      0,
+      5,
+      "O"
+    ]
+  },
+  "week_numeric_coverage": {
+    "0": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "1": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "2": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "3": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "4": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "5": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "6": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "7": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 19,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "8": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "9": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "10": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 19,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "11": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "12": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "13": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "14": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "15": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "16": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "17": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "19": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "20": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "21": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "24": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "28": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "32": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "34": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "35": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "36": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "37": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "38": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "39": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "40": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    },
+    "41": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 20,
+        "any_numeric_rows": 20
+      }
+    },
+    "42": {
+      "c": {
+        "n_cols": 74,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "v": {
+        "n_cols": 72,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Daphnia": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      },
+      "Copepod": {
+        "n_cols": 1,
+        "complete_numeric_rows": 0,
+        "any_numeric_rows": 0
+      }
+    }
+  },
+  "columns": [
+    {
+      "name": "Pond",
+      "metadata": {
+        "Column": "Pond",
+        "Description": "1A to 5D",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 0,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 660
+    },
+    {
+      "name": "Date",
+      "metadata": {
+        "Column": "Date",
+        "Description": "mm/dd/yyyy",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 0,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 660
+    },
+    {
+      "name": "Week",
+      "metadata": {
+        "Column": "Week",
+        "Description": "NA",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Block",
+      "metadata": {
+        "Column": "Block",
+        "Description": "1 to 5",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Rep",
+      "metadata": {
+        "Column": "Rep",
+        "Description": "1 to 4",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Dreisse",
+      "metadata": null,
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Macrophytes",
+      "metadata": {
+        "Column": "Macrophytes",
+        "Description": "0 (absent) or 1 (present)",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Nutrients",
+      "metadata": {
+        "Column": "Nutrients",
+        "Description": "0 (added) or 1 (not added)",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "TreatNR",
+      "metadata": {
+        "Column": "TreatNR",
+        "Description": "1 to 5",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 660,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Treatment",
+      "metadata": {
+        "Column": "Treatment",
+        "Description": "O, C, M, D, MD",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 0,
+      "n_blank": 0,
+      "n_non_numeric_nonblank": 660
+    },
+    {
+      "name": "pH",
+      "metadata": {
+        "Column": "pH",
+        "Description": "pH measured with handheld pH meter in the laboratorium",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 640,
+      "n_blank": 20,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "TN",
+      "metadata": {
+        "Column": "TN",
+        "Description": "Total nitrogen detection limit is 0.5 mg N/L. All the values below the detection limit are replaced with an value of 0.25",
+        "Units ": "mg/L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 640,
+      "n_blank": 20,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "orthoP",
+      "metadata": {
+        "Column": "orthoP",
+        "Description": "Orthophosphate-P detection limit is 1 µg/L. All the values below the detection limit are replaced with an value of 0.5",
+        "Units ": "µg/L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 640,
+      "n_blank": 20,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "TP",
+      "metadata": {
+        "Column": "TP",
+        "Description": "Total phosphorus detection limit is 3 µg/L. All the values below the detection limit are replaced with an value of 1.5",
+        "Units ": "µg/L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 640,
+      "n_blank": 19,
+      "n_non_numeric_nonblank": 1
+    },
+    {
+      "name": "Nitrate",
+      "metadata": {
+        "Column": "Nitrate",
+        "Description": "Nitrate-N detection limit is 0.5 mg N/L. All the values below the detection limit are replaced with an value of 0.25",
+        "Units ": "mg/L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 640,
+      "n_blank": 20,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Temperature",
+      "metadata": {
+        "Column": "Temperature",
+        "Description": "Measured with a handheld dipping sonde straight from the pond, about 1m depth",
+        "Units ": "°C",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 600,
+      "n_blank": 60,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "O2",
+      "metadata": {
+        "Column": "O2",
+        "Description": "Oxygen. Measured with a handheld dipping sonde straight from the pond, about 1m depth",
+        "Units ": " %",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 560,
+      "n_blank": 100,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Turbidity",
+      "metadata": {
+        "Column": "Turbidity",
+        "Description": "Measured with a handheld dipping sonde straight from the pond, about 1m depth",
+        "Units ": "FNU",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 600,
+      "n_blank": 60,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "CHL",
+      "metadata": {
+        "Column": "CHL",
+        "Description": "Chlorophyll a. Measured with spectophotometry ",
+        "Units ": "µg/L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 638,
+      "n_blank": 22,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "TED",
+      "metadata": {
+        "Column": "TED",
+        "Description": "multivariate trait evenness index from cytobuoy data",
+        "Units ": null,
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 458,
+      "n_blank": 202,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "CtoN",
+      "metadata": {
+        "Column": "CtoN",
+        "Description": "molar carbon to nitrogen ratio",
+        "Units ": "NA",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 238,
+      "n_blank": 422,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "CtoP",
+      "metadata": {
+        "Column": "CtoP",
+        "Description": "molar carbon to phosphorus ratio",
+        "Units ": "NA",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 238,
+      "n_blank": 422,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cyanobacteria",
+      "metadata": {
+        "Column": "c_Cyanobacteria",
+        "Description": "cyanobacteria microscope counts ",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Golden_algae",
+      "metadata": {
+        "Column": "c_Golden_algae",
+        "Description": "golden algae microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Diatoms",
+      "metadata": {
+        "Column": "c_Diatoms",
+        "Description": "diatom microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Dinoflagellates",
+      "metadata": {
+        "Column": "c_Dinoflagellates",
+        "Description": "dinoflagellate microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cryptophytes",
+      "metadata": {
+        "Column": "c_Cryptophytes",
+        "Description": "cryptophyte microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Green_algae",
+      "metadata": {
+        "Column": "c_Green_algae",
+        "Description": "green algae microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Achnthaceae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Aphanocapsa",
+      "metadata": {
+        "Column": "c_Aphanocapsa",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Aphanocapsa sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Asterionella",
+      "metadata": {
+        "Column": "c_Asterionella",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Asterionella formosa",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Bicosoeca",
+      "metadata": {
+        "Column": "c_Bicosoeca",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Bicosoeca sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Carteria",
+      "metadata": {
+        "Column": "c_Carteria",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Carteria tetraselmis",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Chlamydomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Chroococus",
+      "metadata": {
+        "Column": "c_Chroococus",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Chroococus sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Coelastrum_1",
+      "metadata": {
+        "Column": "c_Coelastrum_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Coelastrum microporum",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Coelastrum_2",
+      "metadata": {
+        "Column": "c_Coelastrum_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Coelastrum reticulatum ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Coelastrum_3",
+      "metadata": {
+        "Column": "c_Coelastrum_3",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Coelastrum sp. single cell",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cosmarium_1",
+      "metadata": {
+        "Column": "c_Cosmarium_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Cosmarium sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cosmarium_2",
+      "metadata": {
+        "Column": "c_Cosmarium_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Cosmarium sp. mini ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cryptomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cyclotella_1",
+      "metadata": {
+        "Column": "c_Cyclotella_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Cyclotella sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Cyclotella_2",
+      "metadata": {
+        "Column": "c_Cyclotella_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Cyclotella sp. small",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Diatoma",
+      "metadata": {
+        "Column": "c_Diatoma",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Diatoma sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Elakatothrix",
+      "metadata": {
+        "Column": "c_Elakatothrix",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Elakatothrix sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Erkenia",
+      "metadata": {
+        "Column": "c_Erkenia",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Erkenia sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Gomphosphaeria",
+      "metadata": {
+        "Column": "c_Gomphosphaeria",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Gomphosphaeria aponina",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Gymnodinium",
+      "metadata": {
+        "Column": "c_Gymnodinium",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Gymnodinium sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Haematococcaceae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Katablepharis",
+      "metadata": {
+        "Column": "c_Katablepharis",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Katablepharis sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Kirchneriella",
+      "metadata": {
+        "Column": "c_Kirchneriella",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Kirchneriella sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Lagerheimia_1",
+      "metadata": {
+        "Column": "c_Lagerheimia_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Lagerheimia sp. single cell ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Lagerheimia_2",
+      "metadata": {
+        "Column": "c_Lagerheimia_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Lagerheimia sp. dividing",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Leptothrix",
+      "metadata": {
+        "Column": "c_Leptothrix",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Leptothrix echinata",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Mallomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Monoraphidium",
+      "metadata": {
+        "Column": "c_Monoraphidium",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Monoraphidium sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Nephrocitium",
+      "metadata": {
+        "Column": "c_Nephrocitium",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Nephrocitium sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Nitzschia",
+      "metadata": {
+        "Column": "c_Nitzschia",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Nitzschia sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Oocystis_1",
+      "metadata": {
+        "Column": "c_Oocystis_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Oocystis sp. single cell",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Oocystis_2",
+      "metadata": {
+        "Column": "c_Oocystis_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Oocystis sp. dividing",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Pediastrum",
+      "metadata": {
+        "Column": "c_Pediastrum",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Pediastrum duplex sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Peridinium",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Phacotus",
+      "metadata": {
+        "Column": "c_Phacotus",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Phacotus sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Phormidium",
+      "metadata": {
+        "Column": "c_Phormidium",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Phormidium sp. fine filament",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Pseudoabae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Rayssiella",
+      "metadata": {
+        "Column": "c_Rayssiella",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Raysiella.sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Rhodomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Scenedesmus_1",
+      "metadata": {
+        "Column": "c_Scenedesmus_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Scenedesmus armatus",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Scenedesmus_2",
+      "metadata": {
+        "Column": "c_Scenedesmus_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Scenedesmus linearis",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Scenedesmus_3",
+      "metadata": {
+        "Column": "c_Scenedesmus_3",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Scenedesmus sp",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Scenedesmus_4",
+      "metadata": {
+        "Column": "c_Scenedesmus_4",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Scenedesmus alternating",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Spiruli",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Stephanodiscus_1",
+      "metadata": {
+        "Column": "c_Stephanodiscus_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Stephanodiscus_2",
+      "metadata": {
+        "Column": "c_Stephanodiscus_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. small, < 7 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Stephanodiscus_3",
+      "metadata": {
+        "Column": "c_Stephanodiscus_3",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. big spines",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Synechococcales",
+      "metadata": {
+        "Column": "c_Synechococcales",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Synechococcales",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Synedra_1",
+      "metadata": {
+        "Column": "c_Synedra_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Synedra acus",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Synedra_2",
+      "metadata": {
+        "Column": "c_Synedra_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Synedra cyclopum",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Synedra_3",
+      "metadata": {
+        "Column": "c_Synedra_3",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Synedra sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Tetraedron",
+      "metadata": {
+        "Column": "c_Tetraedron",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Tetraedron sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Willea",
+      "metadata": {
+        "Column": "c_Willea",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Willea",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_1",
+      "metadata": {
+        "Column": "c_Unknown_1",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Diverse cyanobacteria",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_2",
+      "metadata": {
+        "Column": "c_Unknown_2",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Blue dotted, with sheath",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_3",
+      "metadata": {
+        "Column": "c_Unknown_3",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Oscilatoria sp. filamentous ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_4",
+      "metadata": {
+        "Column": "c_Unknown_4",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Microcystis-like, small",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_5",
+      "metadata": {
+        "Column": "c_Unknown_5",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Pennate diatom",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_6",
+      "metadata": {
+        "Column": "c_Unknown_6",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Dinoflagelates",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_7",
+      "metadata": {
+        "Column": "c_Unknown_7",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Cryptophytes",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_8",
+      "metadata": {
+        "Column": "c_Unknown_8",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Chlorophytes, ~ 15 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_9",
+      "metadata": {
+        "Column": "c_Unknown_9",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Chlorophytes, ~ 7 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_10",
+      "metadata": {
+        "Column": "c_Unknown_10",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Chlorophytes, oval",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unkonwn_11",
+      "metadata": {
+        "Column": "c_Unkonwn_11",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Chrysophytes",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_12",
+      "metadata": {
+        "Column": "c_Unknown_12",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Rough chlorophyte direction Tetraedron",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Unknown_13",
+      "metadata": {
+        "Column": "c_Unknown_13",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Probably chlorophyte with undefined membrane around",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Keratella",
+      "metadata": {
+        "Column": "c_Keratella",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Keratella cochlearis",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "c_Others",
+      "metadata": {
+        "Column": "c_Others",
+        "Description": "microscope counts",
+        "Units ": "cells or colony per mL",
+        "Proposed_name_or_species": "Zooflagellated ciliates",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cyanobacteria",
+      "metadata": {
+        "Column": "v_Cyanobacteria",
+        "Description": "cyanobacteria biovolume ",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Golden_algae",
+      "metadata": {
+        "Column": "v_Golden_algae",
+        "Description": "golden algae biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Diatoms",
+      "metadata": {
+        "Column": "v_Diatoms",
+        "Description": "diatom biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Dinoflagellates",
+      "metadata": {
+        "Column": "v_Dinoflagellates",
+        "Description": "dinoflagellate biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cryptophytes",
+      "metadata": {
+        "Column": "v_Cryptophytes",
+        "Description": "cryptophyte biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Green_algae",
+      "metadata": {
+        "Column": "v_Green_algae",
+        "Description": "green algae biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": null,
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Achnthaceae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Aphanocapsa",
+      "metadata": {
+        "Column": "v_Aphanocapsa",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Aphanocapsa sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Asterionella",
+      "metadata": {
+        "Column": "v_Asterionella",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Asterionella formosa",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Bicosoeca",
+      "metadata": {
+        "Column": "v_Bicosoeca",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Bicosoeca sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Carteria",
+      "metadata": {
+        "Column": "v_Carteria",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Carteria tetraselmis",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Chlamydomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Chroococus",
+      "metadata": {
+        "Column": "v_Chroococus",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Chroococus sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Coelastrum_1",
+      "metadata": {
+        "Column": "v_Coelastrum_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Coelastrum microporum",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Coelastrum_2",
+      "metadata": {
+        "Column": "v_Coelastrum_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Coelastrum reticulatum ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Coelastrum_3",
+      "metadata": {
+        "Column": "v_Coelastrum_3",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Coelastrum sp. single cell",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cosmarium_1",
+      "metadata": {
+        "Column": "v_Cosmarium_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Cosmarium sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cosmarium_2",
+      "metadata": {
+        "Column": "v_Cosmarium_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Cosmarium sp. mini ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cryptomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cyclotella_1",
+      "metadata": {
+        "Column": "v_Cyclotella_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Cyclotella sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Cyclotella_2",
+      "metadata": {
+        "Column": "v_Cyclotella_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Cyclotella sp. small",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Diatoma",
+      "metadata": {
+        "Column": "v_Diatoma",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Diatoma sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Elakatothrix",
+      "metadata": {
+        "Column": "v_Elakatothrix",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Elakatothrix sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Erkenia",
+      "metadata": {
+        "Column": "v_Erkenia",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Erkenia sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Gomphosphaeria",
+      "metadata": {
+        "Column": "v_Gomphosphaeria",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Gomphosphaeria aponina",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Gymnodinium",
+      "metadata": {
+        "Column": "v_Gymnodinium",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Gymnodinium sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Haematococcaceae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Katablepharis",
+      "metadata": {
+        "Column": "v_Katablepharis",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Katablepharis sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Kirchneriella",
+      "metadata": {
+        "Column": "v_Kirchneriella",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Kirchneriella sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Lagerheimia_1",
+      "metadata": {
+        "Column": "v_Lagerheimia_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Lagerheimia sp. single cell ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Lagerheimia_2",
+      "metadata": {
+        "Column": "v_Lagerheimia_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Lagerheimia sp. dividing",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Leptothrix",
+      "metadata": {
+        "Column": "v_Leptothrix",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Leptothrix echinata",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Mallomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Monoraphidium",
+      "metadata": {
+        "Column": "v_Monoraphidium",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Monoraphidium sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Nephrocitium",
+      "metadata": {
+        "Column": "v_Nephrocitium",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Nephrocitium sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Nitzschia",
+      "metadata": {
+        "Column": "v_Nitzschia",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Nitzschia sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Oocystis_1",
+      "metadata": {
+        "Column": "v_Oocystis_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Oocystis sp. single cell",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Oocystis_2",
+      "metadata": {
+        "Column": "v_Oocystis_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Oocystis sp. dividing",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Pediastrum",
+      "metadata": {
+        "Column": "v_Pediastrum",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Pediastrum duplex sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Peridinium",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Phacotus",
+      "metadata": {
+        "Column": "v_Phacotus",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Phacotus sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Phormidium",
+      "metadata": {
+        "Column": "v_Phormidium",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Phormidium sp. fine filament",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Pseudoabae",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Rayssiella",
+      "metadata": {
+        "Column": "v_Rayssiella",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Raysiella.sp.",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Rhodomos",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Scenedesmus_1",
+      "metadata": {
+        "Column": "v_Scenedesmus_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Scenedesmus armatus",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Scenedesmus_2",
+      "metadata": {
+        "Column": "v_Scenedesmus_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Scenedesmus linearis",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Scenedesmus_3",
+      "metadata": {
+        "Column": "v_Scenedesmus_3",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Scenedesmus sp",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Scenedesmus_4",
+      "metadata": {
+        "Column": "v_Scenedesmus_4",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Scenedesmus alternating",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Spiruli",
+      "metadata": null,
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Stephanodiscus_1",
+      "metadata": {
+        "Column": "v_Stephanodiscus_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. big",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Stephanodiscus_2",
+      "metadata": {
+        "Column": "v_Stephanodiscus_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. small, < 7 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Stephanodiscus_3",
+      "metadata": {
+        "Column": "v_Stephanodiscus_3",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Stephanodiscus sp. big spines",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Synechococcales",
+      "metadata": {
+        "Column": "v_Synechococcales",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Synechococcales",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 339,
+      "n_blank": 321,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Synedra_1",
+      "metadata": {
+        "Column": "v_Synedra_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Synedra acus",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Synedra_2",
+      "metadata": {
+        "Column": "v_Synedra_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Synedra cyclopum",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Synedra_3",
+      "metadata": {
+        "Column": "v_Synedra_3",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Synedra sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Tetraedron",
+      "metadata": {
+        "Column": "v_Tetraedron",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Tetraedron sp. ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Willea",
+      "metadata": {
+        "Column": "v_Willea",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Willea",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_1",
+      "metadata": {
+        "Column": "v_Unknown_1",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Diverse cyanobacteria",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_2",
+      "metadata": {
+        "Column": "v_Unknown_2",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Blue dotted, with sheath",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_3",
+      "metadata": {
+        "Column": "v_Unknown_3",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Oscilatoria sp. filamentous ",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_4",
+      "metadata": {
+        "Column": "v_Unknown_4",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Microcystis-like, small",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_5",
+      "metadata": {
+        "Column": "v_Unknown_5",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Pennate diatom",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_6",
+      "metadata": {
+        "Column": "v_Unknown_6",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Dinoflagelates",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_7",
+      "metadata": {
+        "Column": "v_Unknown_7",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Cryptophytes",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 339,
+      "n_blank": 321,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_8",
+      "metadata": {
+        "Column": "v_Unknown_8",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Chlorophytes, ~ 15 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_9",
+      "metadata": {
+        "Column": "v_Unknown_9",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Chlorophytes, ~ 7 um diameter",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_10",
+      "metadata": {
+        "Column": "v_Unknown_10",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Chlorophytes, oval",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unkonwn_11",
+      "metadata": {
+        "Column": "v_Unkonwn_11",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Chrysophytes",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_12",
+      "metadata": {
+        "Column": "v_Unknown_12",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Rough chlorophyte direction Tetraedron",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "v_Unknown_13",
+      "metadata": {
+        "Column": "v_Unknown_13",
+        "Description": "biovolume",
+        "Units ": "um3 per mL",
+        "Proposed_name_or_species": "Probably chlorophyte with undefined membrane around",
+        "Comments": "in 40 fields of view"
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Daphnia_adult",
+      "metadata": {
+        "Column": "Daphnia_adult",
+        "Description": "Density of adult daphnids",
+        "Units ": "Count/10L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    },
+    {
+      "name": "Copepod_adult",
+      "metadata": {
+        "Column": "Copepod_adult",
+        "Description": "Density of adult copepods",
+        "Units ": "Count/10L",
+        "Proposed_name_or_species": null,
+        "Comments": null
+      },
+      "n_numeric": 340,
+      "n_blank": 320,
+      "n_non_numeric_nonblank": 0
+    }
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45556699625",
+  "source_commit": "d5b9eedd5f5b43c9c580fde4c70933fef9cad9a6"
+}

@@ -1,0 +1,166 @@
+name: KNK AHIF-DB evidence and novelty-gate build
+
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-db-build.yml"
+      - "database/ahif_v1/**"
+      - "benchmarks/build_ahif_db.py"
+      - "benchmarks/ahif_routing_tables.py"
+      - "benchmarks/ahif_saine_table.py"
+      - "benchmarks/ahif_prediction_tables.py"
+      - "benchmarks/ahif_low_order_tables.py"
+      - "benchmarks/ahif_cancellation_tables.py"
+      - "benchmarks/ahif_curated_seed_tables.py"
+      - "validation/ahif_v1/ladouceur2020_synthesis_source_audit_v1.json"
+      - "validation/ahif_v1/ladouceur2020_two_direction_validation_v1.json"
+      - "validation/ahif_v1/kansas2020_time_block_forecast_v1.json"
+      - "validation/ahif_v1/poem_field_absolute_compensation_v1.json"
+      - "validation/ahif_v1/lear2024_resident_cancellation_v1.json"
+      - "validation/ahif_v1/vansteijn2026_field_opposition_v1.json"
+      - "validation/ahif_v1/ishizawa2024_equal_information_v1.json"
+      - "validation/ahif_v1/replay2025_state_v1.json"
+      - "validation/ahif_v1/saine2025_depth_biology_v1.json"
+      - "validation/ahif_v1/saine2025_nontarget_succession_v1.json"
+      - "validation/ahif_v1/vansteijn2026_nontarget_temporal_results_v1.json"
+      - "validation/ahif_v1/prasad2026_nontarget_dropout_cage_descriptive_v1.json"
+      - "benchmarks/audit_zou2023_review_source.py"
+      - "benchmarks/profile_ahif_review_268.py"
+      - "tests/test_ahif_review_268.py"
+      - "tests/test_ahif_db.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-audited-db:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Stage 268 original review citations as unreviewed candidates only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ahif-review"
+          curl --fail --location --retry 3 --retry-delay 4 \
+            "https://raw.githubusercontent.com/hengxingzou/Zou2023TrendsEcolEvol/main/SupportingData.xlsx" \
+            -o "$RUNNER_TEMP/ahif-review/SupportingData.xlsx"
+          test "$(git hash-object "$RUNNER_TEMP/ahif-review/SupportingData.xlsx")" = "be2777d4e4bb1454db393b94a2118ada79118dfa"
+          python -m benchmarks.audit_zou2023_review_source \
+            --xlsx "$RUNNER_TEMP/ahif-review/SupportingData.xlsx" \
+            --output "$RUNNER_TEMP/ahif-review/review_sheet_manifest.json" \
+            --screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv"
+      - name: Audit review original coding vs numeric manipulated-species bins
+        shell: bash
+        run: |
+          python -m benchmarks.profile_ahif_review_268 \
+            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv" \
+            --output-dir "$RUNNER_TEMP/ahif-review"
+      - name: Test source-lineage, source coding and scientific claim gates
+        run: python -m pytest tests/test_ahif_db.py tests/test_ahif_review_268.py -q
+      - name: Build normalized SQLite and explain current causal-gap coverage
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m benchmarks.build_ahif_db \
+            --source-root database/ahif_v1 \
+            --output-dir "$RUNNER_TEMP/ahif" \
+            --review-screening-csv "$RUNNER_TEMP/ahif-review/review_candidates.csv" \
+            --review-priority-csv "$RUNNER_TEMP/ahif-review/review21_nearest_prior_art_screening.csv"
+          python - <<'PY'
+          import json
+          import sqlite3
+          import os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"ahif"
+          r=json.loads((root/"ahif_v1_validation.json").read_text())
+          if r["formal_meta_analysis_ready"]:
+              raise SystemExit("Source-validated pilot cannot assert meta-ready status")
+          if r["panels_with_identified_causal_interaction_to_storage_path"] != 0:
+              raise SystemExit("An unverified causal interaction-to-storage claim slipped through")
+          with sqlite3.connect(root/"ahif_v1.sqlite") as db:
+              if db.execute("PRAGMA foreign_key_check").fetchall():
+                  raise SystemExit("Database broken foreign keys")
+          print("Verified source-audited studies",r["source_audited_studies"])
+          print("Verified source-effect rows",r["aggregate_effect_rows"])
+          if r["review_bibliographic_candidates_staged_not_audited"]!=268:
+              raise SystemExit("Original review candidate bibliography not complete")
+          if r["review_high_risk_prior_art_candidates_staged"]!=21:
+              raise SystemExit("21 source-priority cases missing")
+          print("Verified named/rank panels",r["panels_with_named_and_unlabeled_rank_measured"])
+          print("Novelty-claim bound: targeted PILOT only")
+          PY
+      - name: Methodological method-prior separation audit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os,sqlite3
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"ahif"
+          report=json.loads((p/"ahif_v1_validation.json").read_text())
+          assert report["study_records"]==36
+          assert report["experimental_panels"]==38
+          assert report["aggregate_effect_rows"]==161
+          assert report["source_audited_studies"]==14
+          assert report["panels_with_named_and_unlabeled_rank_measured"]==11
+          assert report["methodological_novelty_threats_n"]==5
+          with sqlite3.connect(p/"ahif_v1.sqlite") as db:
+              assert db.execute("SELECT COUNT(*) FROM methodological_prior_art WHERE not_independent_effect='yes'").fetchone()[0]==5
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_VANSTEIJNFIELD2026'").fetchone()[0]==75
+              assert db.execute("SELECT COUNT(*) FROM routing_test_metadata").fetchone()==(21,)
+              assert db.execute("SELECT COUNT(*) FROM cage_descriptive_contrasts").fetchone()==(12,)
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_PRASAD_DROPOUT'").fetchone()==(0,)
+              assert db.execute("SELECT COUNT(*) FROM saine_test_metadata").fetchone()==(20,)
+              assert db.execute("SELECT COUNT(*) FROM v_saine_tests WHERE p_holm<=.05").fetchone()==(1,)
+              assert db.execute("SELECT COUNT(*) FROM prediction_outcomes").fetchone()==(6,)
+              assert db.execute("SELECT COUNT(*) FROM prediction_folds").fetchone()==(48,)
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_REPLAY2025'").fetchone()==(0,)
+              assert db.execute("SELECT COUNT(*) FROM low_order_model_errors").fetchone()==(54,)
+              assert db.execute("SELECT COUNT(*) FROM low_order_model_contrasts").fetchone()==(48,)
+              assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_ISHIZAWA2024'").fetchone()==(0,)
+              assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts").fetchone()==(92,)
+              assert db.execute("SELECT COUNT(*) FROM cancellation_intervals").fetchone()==(59,)
+              assert db.execute("SELECT COUNT(*) FROM curated_seed_experiments").fetchone()==(12,)
+              assert db.execute("SELECT COUNT(*) FROM curated_seed_comparisons").fetchone()==(59,)
+              assert db.execute("SELECT COUNT(*) FROM curated_kansas_forecast").fetchone()==(81,)
+          print("AHIF source-backed v1.0 DB audited")
+          PY
+      - name: Upload portable user-owned DB artifact, not source author raw data
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahif-database-v0-1-source-linked
+          path: |
+            ${{ runner.temp }}/ahif/ahif_v1.sqlite
+            ${{ runner.temp }}/ahif/ahif_v1_validation.json
+            ${{ runner.temp }}/ahif/ahif_v1_gap_report.md
+            ${{ runner.temp }}/ahif/studies.csv
+            ${{ runner.temp }}/ahif/panels.csv
+            ${{ runner.temp }}/ahif/effects.csv
+            ${{ runner.temp }}/ahif/hypotheses.csv
+            ${{ runner.temp }}/ahif/routing_test_metadata.csv
+            ${{ runner.temp }}/ahif/cage_descriptive_contrasts.csv
+            ${{ runner.temp }}/ahif/saine_test_metadata.csv
+            ${{ runner.temp }}/ahif/prediction_outcomes.csv
+            ${{ runner.temp }}/ahif/prediction_folds.csv
+            ${{ runner.temp }}/ahif/low_order_model_errors.csv
+            ${{ runner.temp }}/ahif/low_order_model_contrasts.csv
+            ${{ runner.temp }}/ahif/cancellation_contrasts.csv
+            ${{ runner.temp }}/ahif/cancellation_intervals.csv
+            ${{ runner.temp }}/ahif/curated_seed_experiments.csv
+            ${{ runner.temp }}/ahif/curated_seed_comparisons.csv
+            ${{ runner.temp }}/ahif/curated_kansas_forecast.csv
+            ${{ runner.temp }}/ahif/prior_art_verified.csv
+            ${{ runner.temp }}/ahif/methodological_prior_art.csv
+            ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv
+            ${{ runner.temp }}/ahif-review/review268_design_audit.json
+            ${{ runner.temp }}/ahif-review/review268_design_corrected_bins.csv
+            ${{ runner.temp }}/ahif/review21_nearest_prior_art_screening.csv
+          retention-days: 30

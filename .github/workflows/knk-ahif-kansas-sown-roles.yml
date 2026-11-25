@@ -1,0 +1,31 @@
+name: AHIF Kansas published sown-list role responses
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-kansas-sown-roles.yml"
+      - "benchmarks/score_ahif_kansas_sown_roles.py"
+      - "tests/test_ahif_kansas_sown_roles.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check role arithmetic and unresolved bounds
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_kansas_sown_roles.py -q
+      - name: Verify curated source and score frozen published membership mapping
+        run: python -m benchmarks.score_ahif_kansas_sown_roles --root "$RUNNER_TEMP/kansas" --mapping database/ahif_v1/foster2009_curated_name_bridge.csv --out "$RUNNER_TEMP/kansas/roles.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-kansas-sown-role-derived-only
+          path: ${{ runner.temp }}/kansas/roles.json
+          retention-days: 30

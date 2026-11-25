@@ -1,0 +1,3713 @@
+{
+  "status": "CURATED_SYNTHESIS_TWO_DIRECTION_DIAGNOSTIC_NOT_CAUSAL",
+  "source_manifest": {
+    "article_id": 12319682,
+    "version": 1,
+    "doi": "10.6084/m9.figshare.12319682.v1",
+    "title": "Reducing dispersal limitation via seed addition increases species richness but not aboveground biomass",
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "source_description": " We searched for seed addition studies where the experiment included: 1)  an unmanipulated control and a treatment of diverse seed mixtures selected from the regional species pool, (2) the number and identity of every species added as seed, and (3) measured species richness and the relative contribution of each species to community biomass (that were not weeded or otherwise altered). Because these criteria were relatively stringent, we did not restrict ourselves to formally standardized literature searches, but rather attempted to find as many datasets as possible that met our search criteria.     We began by consulting published meta-analyses , and other experimental data sources (e.g., U.S. Long Term Ecological Research [LTER] websites). We then used different combinations of standardized search strings including terms related to biodiversity (‘richness’, ‘diversity’), biomass (‘ecosystem function’, ‘above-ground biomass’) and seed addition (‘propagule arrival’, ‘BEF experiment’, ‘seeding’). For each experiment identified, we scanned the paper to determine whether it met our inclusion criteria. For some studies, we were able to download or extract data directly. For the rest, we contacted authors to request species-level data and other needed information (i.e. seeded richness).     We found a total of 12 studies that tested the effect of seed addition on species richness and biomass in grassland habitats, where the identity and number of seeds per species added was known ( see Table 1, Table S1, Figure S1 in paper). In all studies, species added via the seed addition treatments were part of the broader regional species pool, and were added to each community through a high density of seed mixes added to treatment (but not control) plots .     Several experiments included treatments other than the primary focus of this study (e.g., disturbance, nutrient addition), which we omitted from all analyses. We also removed treatments with unknown richness of added seeds (e.g., hay). This led to some experiments having an unbalanced design between controls and treatments. Community level biomass was sometimes measured directly within plots, and other times estimated from percent cover or coarser samples (e.g., biomass strip) (Table S1). Where biomass was measured indirectly (sampled on smaller subplots), the percent cover of each species was divided by the plot percent cover and multiplied by the community biomass (g/m2) sample from a neighboring plot or biomass strip with the same treatment, and per species biomass estimates were then summed to the plot level .  We standardized data for each experiment in a hierarchical experimental design: plots nested in blocks, nested in sites. The experiments varied in the number of species added (hereafter seeded richness), the density of seeds added, and length of experiment . Combined, the study-level treatments resulted in a ‘seeded richness gradient’ ranging from one to sixty species .     These data were derived from existing studies cited in the paper in Table 1, but as methods indicate these data posted here contain only control and treated plots. Please contact original authors for use of these data, or for entire datasets relating to these studies. Cite original papers when using these data. ",
+    "files": {
+      "species": {
+        "source_name": "SeedAdd_Sp_level.csv",
+        "file_id": 22714958,
+        "size": 23301361,
+        "md5": "420281357484766c25df281a4cd2ed45",
+        "sha256": "d9f09ea90b3bac6e9913000d93acf24e1c8b0293bebac563477c9e90a9fd590e"
+      },
+      "plot": {
+        "source_name": "SeedAdd_Plot_Level.csv",
+        "file_id": 22714961,
+        "size": 962570,
+        "md5": "715c3ed27e6c11d41185a02a2ab07b90",
+        "sha256": "0455c64afd914af5c7f85273ae950104ece31bf94fe9737f1a172aa6d9f437a3"
+      }
+    }
+  },
+  "n_experiment_labels": 12,
+  "n_plot_states": 3393,
+  "experiments": [
+    {
+      "experiment": "ASGA_Michigan",
+      "n_states": 48,
+      "n_taxa": 48,
+      "measurement_mode_counts": {
+        "direct": 48
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            43
+          ],
+          "pooled_species_metrics": {
+            "gross": 46.2425,
+            "net": 2.880000000000008,
+            "cancellation": 43.36249999999999,
+            "fraction": 0.9377196302103041,
+            "signed_total": 2.880000000000008
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 90.825,
+            "net": 42.2775,
+            "cancellation": 48.5475,
+            "fraction": 0.5345169281585467
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 46.2425,
+            "net": 2.880000000000008,
+            "cancellation": 43.36249999999999,
+            "fraction": 0.9377196302103041,
+            "signed_total": 2.880000000000008
+          },
+          "reported_total_delta": 2.883750000000001,
+          "reported_richness_delta": 3,
+          "species_sum_minus_reported_total_delta": -0.0037499999999930367,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": 8.611025390625,
+            "signed_net": -13.04640625,
+            "gap": 21.657431640625
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 5.8254687500000015,
+            "mean_held_decrease": 2.785556640624999,
+            "mean_held_min_signed_component": -2.8099853515625,
+            "fraction_orientations_both_positive": 0.451171875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 14.8125,
+            "mean_n_learned_decreasing_taxa": 12.62890625,
+            "mean_held_signed_gross": 8.611025390625,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 2,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            43
+          ],
+          "pooled_species_metrics": {
+            "gross": 40.80624999999999,
+            "net": 5.588749999999996,
+            "cancellation": 35.217499999999994,
+            "fraction": 0.8630418134476949,
+            "signed_total": 5.588749999999996
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 94.03625,
+            "net": 39.15875,
+            "cancellation": 54.8775,
+            "fraction": 0.5835781414082335
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 40.80624999999999,
+            "net": 5.588749999999996,
+            "cancellation": 35.217499999999994,
+            "fraction": 0.8630418134476949,
+            "signed_total": 5.588749999999996
+          },
+          "reported_total_delta": 5.585000000000005,
+          "reported_richness_delta": 2.5,
+          "species_sum_minus_reported_total_delta": 0.003749999999990372,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": -7.522499999999999,
+            "signed_net": -13.054667968750003,
+            "gap": 5.532167968750004
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -0.8856250000000004,
+            "mean_held_decrease": -6.636874999999999,
+            "mean_held_min_signed_component": -11.6746435546875,
+            "fraction_orientations_both_positive": 0.19140625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 12.779296875,
+            "mean_n_learned_decreasing_taxa": 7.98046875,
+            "mean_held_signed_gross": -7.5225,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            43
+          ],
+          "pooled_species_metrics": {
+            "gross": 48.28,
+            "net": 8.482499999999998,
+            "cancellation": 39.7975,
+            "fraction": 0.8243061309030654,
+            "signed_total": -8.482499999999998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 134.47750000000002,
+            "net": 71.16499999999999,
+            "cancellation": 63.3125,
+            "fraction": 0.47080366604078744
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 48.28,
+            "net": 8.482499999999998,
+            "cancellation": 39.7975,
+            "fraction": 0.8243061309030654,
+            "signed_total": -8.482499999999998
+          },
+          "reported_total_delta": -8.487499999999997,
+          "reported_richness_delta": 2.625,
+          "species_sum_minus_reported_total_delta": 0.004999999999999005,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": -15.958979492187499,
+            "signed_net": -17.51908203125,
+            "gap": 1.5601025390625018
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -13.0619482421875,
+            "mean_held_decrease": -2.89703125,
+            "mean_held_min_signed_component": -20.128486328125,
+            "fraction_orientations_both_positive": 0.126953125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 15.080078125,
+            "mean_n_learned_decreasing_taxa": 10.796875,
+            "mean_held_signed_gross": -15.958979492187499,
+            "strong_direction_descriptive_gate": false
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "CCR_04",
+      "n_states": 28,
+      "n_taxa": 36,
+      "measurement_mode_counts": {
+        "indirect": 14,
+        "direct": 14
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 1,
+          "n_total_strata": 1,
+          "n_control_states": 7,
+          "n_seeded_states": 7,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            10
+          ],
+          "pooled_species_metrics": {
+            "gross": 4.461428571428568,
+            "net": 0.7499999999999971,
+            "cancellation": 3.711428571428571,
+            "fraction": 0.8318924111431321,
+            "signed_total": -0.7499999999999971
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 4.461428571428568,
+            "net": 0.7499999999999971,
+            "cancellation": 3.711428571428571,
+            "fraction": 0.8318924111431321
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 4.461428571428568,
+            "net": 0.7499999999999971,
+            "cancellation": 3.711428571428571,
+            "fraction": 0.8318924111431321,
+            "signed_total": -0.7499999999999971
+          },
+          "reported_total_delta": -0.75,
+          "reported_richness_delta": 0.14285714285714235,
+          "species_sum_minus_reported_total_delta": 2.886579864025407e-15,
+          "crossfit": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS",
+            "n_blocks": 1
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS"
+          }
+        },
+        {
+          "age": 2,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 1,
+          "n_total_strata": 1,
+          "n_control_states": 7,
+          "n_seeded_states": 7,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            10
+          ],
+          "pooled_species_metrics": {
+            "gross": 8.315714285714284,
+            "net": 0.7500000000000027,
+            "cancellation": 7.565714285714281,
+            "fraction": 0.9098093111149284,
+            "signed_total": -0.7500000000000027
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 8.315714285714284,
+            "net": 0.7500000000000027,
+            "cancellation": 7.565714285714281,
+            "fraction": 0.9098093111149284
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 8.315714285714284,
+            "net": 0.7500000000000027,
+            "cancellation": 7.565714285714281,
+            "fraction": 0.9098093111149284,
+            "signed_total": -0.7500000000000027
+          },
+          "reported_total_delta": -1.6671428571428706,
+          "reported_richness_delta": 1.1428571428571432,
+          "species_sum_minus_reported_total_delta": 0.9171428571428679,
+          "crossfit": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS",
+            "n_blocks": 1
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS"
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "CCR_093",
+      "n_states": 960,
+      "n_taxa": 169,
+      "measurement_mode_counts": {
+        "indirect": 960
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 0,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 52.173928576238886,
+            "net": 3.074722236227779,
+            "cancellation": 49.09920634001111,
+            "fraction": 0.9410678413504006,
+            "signed_total": 3.074722236227779
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 143.10751713260555,
+            "net": 52.39638888072779,
+            "cancellation": 90.7111282518778,
+            "fraction": 0.6338669698798807
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 52.173928576238886,
+            "net": 3.074722236227779,
+            "cancellation": 49.09920634001111,
+            "fraction": 0.9410678413504006,
+            "signed_total": 3.074722236227779
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": -0.2,
+          "species_sum_minus_reported_total_delta": 1.400555005304227e-8,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": -3.871004461791927,
+            "signed_net": -8.284459631931771,
+            "gap": 4.413455170139844
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -0.8210964321621746,
+            "mean_held_decrease": -3.0499080296297527,
+            "mean_held_min_signed_component": -6.780665024927909,
+            "fraction_orientations_both_positive": 0.1796875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 38.390625,
+            "mean_n_learned_decreasing_taxa": 38.28515625,
+            "mean_held_signed_gross": -3.8710044617919275,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 141.33671485119999,
+            "net": 6.672298837399992,
+            "cancellation": 134.6644160138,
+            "fraction": 0.952791467918123,
+            "signed_total": -6.672298837399992
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 259.88351063333334,
+            "net": 53.25494397867779,
+            "cancellation": 206.62856665465554,
+            "fraction": 0.7950814815110968
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 141.33671485119999,
+            "net": 6.672298837399992,
+            "cancellation": 134.6644160138,
+            "fraction": 0.952791467918123,
+            "signed_total": -6.672298837399992
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": 4.622222222222223,
+          "species_sum_minus_reported_total_delta": -9.74702105962222,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 72.97154340034987,
+            "signed_net": -5.265716410619099,
+            "gap": 78.23725981096896
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 35.368447843475955,
+            "mean_held_decrease": 37.60309555687391,
+            "mean_held_min_signed_component": 31.025114088312414,
+            "fraction_orientations_both_positive": 0.98046875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 34.916015625,
+            "mean_n_learned_decreasing_taxa": 40.591796875,
+            "mean_held_signed_gross": 72.97154340034987,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 2,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 151.77730934758335,
+            "net": 2.1617698939944425,
+            "cancellation": 149.61553945358892,
+            "fraction": 0.9857569625968017,
+            "signed_total": 2.1617698939944425
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 269.03488395830556,
+            "net": 51.96496326648334,
+            "cancellation": 217.06992069182223,
+            "fraction": 0.8068467460355931
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 151.77730934758335,
+            "net": 2.1617698939944425,
+            "cancellation": 149.61553945358892,
+            "fraction": 0.9857569625968017,
+            "signed_total": 2.1617698939944425
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": 7.76111111111111,
+          "species_sum_minus_reported_total_delta": -0.9129523282277865,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 73.23370417203174,
+            "signed_net": -8.684687365074089,
+            "gap": 81.91839153710582
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 40.00013008602385,
+            "mean_held_decrease": 33.23357408600788,
+            "mean_held_min_signed_component": 30.656558231872094,
+            "fraction_orientations_both_positive": 0.990234375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 43.59375,
+            "mean_n_learned_decreasing_taxa": 47.548828125,
+            "mean_held_signed_gross": 73.23370417203174,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 182.52771420192778,
+            "net": 3.074722230883342,
+            "cancellation": 179.45299197104444,
+            "fraction": 0.9831547650485459,
+            "signed_total": 3.074722230883342
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 287.81896547126115,
+            "net": 52.396388897405565,
+            "cancellation": 235.4225765738556,
+            "fraction": 0.8179536612133457
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 182.52771420192778,
+            "net": 3.074722230883342,
+            "cancellation": 179.45299197104444,
+            "fraction": 0.9831547650485459,
+            "signed_total": 3.074722230883342
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": 6.1944444444444455,
+          "species_sum_minus_reported_total_delta": 8.661113160002287e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 119.27851445981531,
+            "signed_net": -8.28445963410165,
+            "gap": 127.56297409391696
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 63.07617597146215,
+            "mean_held_decrease": 56.20233848835317,
+            "mean_held_min_signed_component": 53.72557578265531,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 51.76953125,
+            "mean_n_learned_decreasing_taxa": 47.2890625,
+            "mean_held_signed_gross": 119.27851445981531,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 6,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 154.98645854109444,
+            "net": 3.074722226238892,
+            "cancellation": 151.91173631485555,
+            "fraction": 0.9801613492224959,
+            "signed_total": 3.074722226238892
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 244.6881059228278,
+            "net": 52.396388889894446,
+            "cancellation": 192.29171703293338,
+            "fraction": 0.7858645858886998
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 154.98645854109444,
+            "net": 3.074722226238892,
+            "cancellation": 151.91173631485555,
+            "fraction": 0.9801613492224959,
+            "signed_total": 3.074722226238892
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": 1.0333333333333334,
+          "species_sum_minus_reported_total_delta": 4.016663002204268e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 108.13817397954284,
+            "signed_net": -8.284459634545051,
+            "gap": 116.42263361408789
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 56.46441879541176,
+            "mean_held_decrease": 51.67375518413108,
+            "mean_held_min_signed_component": 48.67699126080243,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 39.630859375,
+            "mean_n_learned_decreasing_taxa": 51.919921875,
+            "mean_held_signed_gross": 108.13817397954284,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 7,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 30,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 48,
+          "seeded_richness_levels": [
+            10,
+            15,
+            20,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 277.7454690581667,
+            "net": 27.70000000149998,
+            "cancellation": 250.04546905666672,
+            "fraction": 0.9002684000735259,
+            "signed_total": 27.70000000149998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 429.2273183088333,
+            "net": 78.99999998416666,
+            "cancellation": 350.22731832466667,
+            "fraction": 0.8159483410901509
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 277.7454690581667,
+            "net": 27.70000000149998,
+            "cancellation": 250.04546905666672,
+            "fraction": 0.9002684000735259,
+            "signed_total": 27.70000000149998
+          },
+          "reported_total_delta": 27.699999999999992,
+          "reported_richness_delta": 2.6666666666666665,
+          "species_sum_minus_reported_total_delta": 1.4999876896126807e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": -16.186668275164067,
+            "signed_net": -7.50104166240495,
+            "gap": -8.685626612759116
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 19.180340179132806,
+            "mean_held_decrease": -35.367008454296865,
+            "mean_held_min_signed_component": -36.98554008955338,
+            "fraction_orientations_both_positive": 0.142578125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 25.5546875,
+            "mean_n_learned_decreasing_taxa": 21.26171875,
+            "mean_held_signed_gross": -16.186668275164067,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 13,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 30,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 48,
+          "seeded_richness_levels": [
+            10,
+            15,
+            20,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 369.79281109699997,
+            "net": 26.80594114966668,
+            "cancellation": 342.9868699473333,
+            "fraction": 0.92751091869486,
+            "signed_total": 26.80594114966668
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 451.580928781,
+            "net": 79.894058862,
+            "cancellation": 371.686869919,
+            "fraction": 0.8230792007145509
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 369.79281109699997,
+            "net": 26.80594114966668,
+            "cancellation": 342.9868699473333,
+            "fraction": 0.92751091869486,
+            "signed_total": 26.80594114966668
+          },
+          "reported_total_delta": 27.699999999999992,
+          "reported_richness_delta": 1.5,
+          "species_sum_minus_reported_total_delta": -0.8940588503333124,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 124.65493304711133,
+            "signed_net": -7.948071086363272,
+            "gap": 132.6030041334746
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 65.35240663507489,
+            "mean_held_decrease": 59.30252641203646,
+            "mean_held_min_signed_component": 44.3206489707194,
+            "fraction_orientations_both_positive": 0.859375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 20.41015625,
+            "mean_n_learned_decreasing_taxa": 24.828125,
+            "mean_held_signed_gross": 124.65493304711133,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 17,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 144.40263432009445,
+            "net": 3.0747222200388773,
+            "cancellation": 141.32791210005558,
+            "fraction": 0.9787072982808389,
+            "signed_total": 3.0747222200388773
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 247.54702075563884,
+            "net": 52.39638888478333,
+            "cancellation": 195.15063187085556,
+            "fraction": 0.7883376308676915
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 144.40263432009445,
+            "net": 3.0747222200388773,
+            "cancellation": 141.32791210005558,
+            "fraction": 0.9787072982808389,
+            "signed_total": 3.0747222200388773
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": -0.2333333333333334,
+          "species_sum_minus_reported_total_delta": -2.183351721640747e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 88.27577937151631,
+            "signed_net": -8.284459635763675,
+            "gap": 96.56023900727999
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 45.688248470535235,
+            "mean_held_decrease": 42.58753090098106,
+            "mean_held_min_signed_component": 39.1073279058357,
+            "fraction_orientations_both_positive": 0.990234375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 42.021484375,
+            "mean_n_learned_decreasing_taxa": 47.87890625,
+            "mean_held_signed_gross": 88.27577937151631,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 21,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 30,
+          "n_total_strata": 30,
+          "n_control_states": 66,
+          "n_seeded_states": 54,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            54
+          ],
+          "pooled_species_metrics": {
+            "gross": 134.66943193762222,
+            "net": 4.008456670699999,
+            "cancellation": 130.6609752669222,
+            "fraction": 0.9702348438466964,
+            "signed_total": 4.008456670699999
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 223.9558144381445,
+            "net": 52.42943056219999,
+            "cancellation": 171.52638387594442,
+            "fraction": 0.7658938630652037
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 134.66943193762222,
+            "net": 4.008456670699999,
+            "cancellation": 130.6609752669222,
+            "fraction": 0.9702348438466964,
+            "signed_total": 4.008456670699999
+          },
+          "reported_total_delta": 3.074722222222229,
+          "reported_richness_delta": -0.6833333333333333,
+          "species_sum_minus_reported_total_delta": 0.9337344484777703,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 30,
+            "n_splits": 256,
+            "signed_gross": 82.7748377317155,
+            "signed_net": -7.665375936075739,
+            "gap": 90.44021366779123
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 30,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 42.64044916775621,
+            "mean_held_decrease": 40.13438856395929,
+            "mean_held_min_signed_component": 36.421097033847204,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 46.501953125,
+            "mean_n_learned_decreasing_taxa": 49.5546875,
+            "mean_held_signed_gross": 82.7748377317155,
+            "strong_direction_descriptive_gate": true
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "California_Invade",
+      "n_states": 80,
+      "n_taxa": 39,
+      "measurement_mode_counts": {
+        "direct": 80
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5
+          ],
+          "pooled_species_metrics": {
+            "gross": 264.11249999999995,
+            "net": 42.625,
+            "cancellation": 221.48749999999995,
+            "fraction": 0.8386104406266269,
+            "signed_total": -42.625
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 419.735,
+            "net": 99.225,
+            "cancellation": 320.51,
+            "fraction": 0.7636008433892812
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 264.11249999999995,
+            "net": 42.625,
+            "cancellation": 221.48749999999995,
+            "fraction": 0.8386104406266269,
+            "signed_total": -42.625
+          },
+          "reported_total_delta": -42.626249999999985,
+          "reported_richness_delta": -0.25,
+          "species_sum_minus_reported_total_delta": 0.0012499999999846523,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": -10.522797851562494,
+            "signed_net": -15.064267578124998,
+            "gap": 4.541469726562504
+          },
+          "n_matched_sites": 2,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -18.1487890625,
+            "mean_held_decrease": 7.625991210937502,
+            "mean_held_min_signed_component": -29.147890624999995,
+            "fraction_orientations_both_positive": 0.24609375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 10.017578125,
+            "mean_n_learned_decreasing_taxa": 11.91796875,
+            "mean_held_signed_gross": -10.522797851562498,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 2,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5
+          ],
+          "pooled_species_metrics": {
+            "gross": 53.98,
+            "net": 16.680000000000003,
+            "cancellation": 37.3,
+            "fraction": 0.6909966654316413,
+            "signed_total": -16.680000000000003
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 109.48,
+            "net": 62.330000000000005,
+            "cancellation": 47.14999999999999,
+            "fraction": 0.43067226890756294
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 53.98,
+            "net": 16.680000000000003,
+            "cancellation": 37.3,
+            "fraction": 0.6909966654316413,
+            "signed_total": -16.680000000000003
+          },
+          "reported_total_delta": -16.680000000000007,
+          "reported_richness_delta": 0.875,
+          "species_sum_minus_reported_total_delta": 3.552713678800501e-15,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": -16.070830078125,
+            "signed_net": -11.132646484374998,
+            "gap": -4.938183593750001
+          },
+          "n_matched_sites": 2,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -16.378173828124996,
+            "mean_held_decrease": 0.3073437500000009,
+            "mean_held_min_signed_component": -21.145761718750002,
+            "fraction_orientations_both_positive": 0.087890625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 7.2109375,
+            "mean_n_learned_decreasing_taxa": 5.490234375,
+            "mean_held_signed_gross": -16.070830078125,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5
+          ],
+          "pooled_species_metrics": {
+            "gross": 218.1625,
+            "net": 77.44999999999999,
+            "cancellation": 140.7125,
+            "fraction": 0.6449894001031342,
+            "signed_total": -77.44999999999999
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 481.425,
+            "net": 224.875,
+            "cancellation": 256.55,
+            "fraction": 0.5328971283169757
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 218.1625,
+            "net": 77.44999999999999,
+            "cancellation": 140.7125,
+            "fraction": 0.6449894001031342,
+            "signed_total": -77.44999999999999
+          },
+          "reported_total_delta": -77.45124999999999,
+          "reported_richness_delta": 1.25,
+          "species_sum_minus_reported_total_delta": 0.0012499999999988631,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": -77.77797851562501,
+            "signed_net": -40.35791015625,
+            "gap": -37.42006835937501
+          },
+          "n_matched_sites": 2,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -75.2795166015625,
+            "mean_held_decrease": -2.498461914062498,
+            "mean_held_min_signed_component": -94.3477783203125,
+            "fraction_orientations_both_positive": 0.236328125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 10.212890625,
+            "mean_n_learned_decreasing_taxa": 9.62890625,
+            "mean_held_signed_gross": -77.777978515625,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 4,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5
+          ],
+          "pooled_species_metrics": {
+            "gross": 82.5675,
+            "net": 11.125,
+            "cancellation": 71.4425,
+            "fraction": 0.8652617555333515,
+            "signed_total": -11.125
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 131.93,
+            "net": 52.512499999999996,
+            "cancellation": 79.41749999999999,
+            "fraction": 0.601966952171606
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 82.5675,
+            "net": 11.125,
+            "cancellation": 71.4425,
+            "fraction": 0.8652617555333515,
+            "signed_total": -11.125
+          },
+          "reported_total_delta": -11.127500000000003,
+          "reported_richness_delta": 0.5,
+          "species_sum_minus_reported_total_delta": 0.0025000000000030553,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": 47.441923828125,
+            "signed_net": -10.454374999999999,
+            "gap": 57.896298828125
+          },
+          "n_matched_sites": 2,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 18.195180664062498,
+            "mean_held_decrease": 29.246743164062494,
+            "mean_held_min_signed_component": 13.81498046875,
+            "fraction_orientations_both_positive": 0.7734375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 7.130859375,
+            "mean_n_learned_decreasing_taxa": 8.775390625,
+            "mean_held_signed_gross": 47.441923828125,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 5,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 8,
+          "n_total_strata": 8,
+          "n_control_states": 8,
+          "n_seeded_states": 8,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            5
+          ],
+          "pooled_species_metrics": {
+            "gross": 149.03875,
+            "net": 63.77875000000002,
+            "cancellation": 85.25999999999998,
+            "fraction": 0.5720659895496976,
+            "signed_total": 63.77875000000002
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 306.42375,
+            "net": 136.37625000000003,
+            "cancellation": 170.04749999999996,
+            "fraction": 0.5549422980431509
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 149.03875,
+            "net": 63.77875000000001,
+            "cancellation": 85.25999999999999,
+            "fraction": 0.5720659895496976,
+            "signed_total": 63.77875000000001
+          },
+          "reported_total_delta": 63.7775,
+          "reported_richness_delta": 0.875,
+          "species_sum_minus_reported_total_delta": 0.001250000000013074,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 8,
+            "n_splits": 256,
+            "signed_gross": 20.108681640625008,
+            "signed_net": 28.84739257812501,
+            "gap": -8.738710937500002
+          },
+          "n_matched_sites": 2,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 8,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 46.47667968750001,
+            "mean_held_decrease": -26.36799804687501,
+            "mean_held_min_signed_component": -26.586943359375006,
+            "fraction_orientations_both_positive": 0.1953125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 10.7734375,
+            "mean_n_learned_decreasing_taxa": 9.248046875,
+            "mean_held_signed_gross": 20.108681640625008,
+            "strong_direction_descriptive_gate": false
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "California_Prop_Limi",
+      "n_states": 531,
+      "n_taxa": 131,
+      "measurement_mode_counts": {
+        "indirect": 531
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 9,
+          "n_total_strata": 9,
+          "n_control_states": 9,
+          "n_seeded_states": 121,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            1,
+            3
+          ],
+          "pooled_species_metrics": {
+            "gross": 9.725823193106228,
+            "net": 6.561754686525031,
+            "cancellation": 3.164068506581197,
+            "fraction": 0.3253265501293427,
+            "signed_total": 6.561754686525031
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 23.87785361040069,
+            "net": 11.199749939540904,
+            "cancellation": 12.678103670859791,
+            "fraction": 0.5309565875442621
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 9.725823193106228,
+            "net": 6.561754686525031,
+            "cancellation": 3.164068506581197,
+            "fraction": 0.3253265501293427,
+            "signed_total": 6.561754686525031
+          },
+          "reported_total_delta": 6.561754685185185,
+          "reported_richness_delta": 0.18518518518518517,
+          "species_sum_minus_reported_total_delta": 1.339846456005489e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 9,
+            "n_splits": 256,
+            "signed_gross": -5.911043561067392,
+            "signed_net": 1.2318446582795755,
+            "gap": -7.142888219346967
+          },
+          "n_matched_sites": 3,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 9,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 0.22272729891602724,
+            "mean_held_decrease": -6.13377085998342,
+            "mean_held_min_signed_component": -6.47175088695307,
+            "fraction_orientations_both_positive": 0,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 35.5546875,
+            "mean_n_learned_decreasing_taxa": 9.392578125,
+            "mean_held_signed_gross": -5.911043561067392,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 2,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 9,
+          "n_total_strata": 9,
+          "n_control_states": 9,
+          "n_seeded_states": 123,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            1,
+            3
+          ],
+          "pooled_species_metrics": {
+            "gross": 30.995588863987184,
+            "net": 7.7675436748614155,
+            "cancellation": 23.22804518912577,
+            "fraction": 0.7493984157246877,
+            "signed_total": -7.7675436748614155
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 48.004513224840665,
+            "net": 19.989582244044566,
+            "cancellation": 28.014930980796095,
+            "fraction": 0.5835895231263244
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 30.995588863987184,
+            "net": 7.767543674861416,
+            "cancellation": 23.228045189125766,
+            "fraction": 0.7493984157246876,
+            "signed_total": -7.767543674861416
+          },
+          "reported_total_delta": -7.767543677045176,
+          "reported_richness_delta": 1.278998778998779,
+          "species_sum_minus_reported_total_delta": 2.183760727803019e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 9,
+            "n_splits": 256,
+            "signed_gross": 3.525179259129123,
+            "signed_net": -0.3529832328553692,
+            "gap": 3.8781624919844924
+          },
+          "n_matched_sites": 3,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 9,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -2.6290506788059176,
+            "mean_held_decrease": 6.154229937935041,
+            "mean_held_min_signed_component": -3.4421518161655786,
+            "fraction_orientations_both_positive": 0.349609375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 52.5078125,
+            "mean_n_learned_decreasing_taxa": 19.1953125,
+            "mean_held_signed_gross": 3.5251792591291236,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 9,
+          "n_total_strata": 9,
+          "n_control_states": 9,
+          "n_seeded_states": 126,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            1,
+            3
+          ],
+          "pooled_species_metrics": {
+            "gross": 37.96173654696031,
+            "net": 36.57514843707143,
+            "cancellation": 1.3865881098888835,
+            "fraction": 0.03652593995992818,
+            "signed_total": 36.57514843707143
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 46.76066561016666,
+            "net": 36.575148437071434,
+            "cancellation": 10.185517173095235,
+            "fraction": 0.21782233080276575
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 37.961736546960324,
+            "net": 36.575148437071434,
+            "cancellation": 1.3865881098888906,
+            "fraction": 0.03652593995992835,
+            "signed_total": 36.575148437071434
+          },
+          "reported_total_delta": 36.57514843650793,
+          "reported_richness_delta": 2.246031746031746,
+          "species_sum_minus_reported_total_delta": 5.634959165945475e-10,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 9,
+            "n_splits": 256,
+            "signed_gross": 24.608093286297713,
+            "signed_net": 36.568879035873664,
+            "gap": -11.960785749575951
+          },
+          "n_matched_sites": 3,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 9,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 28.1143047443388,
+            "mean_held_decrease": -3.5062114580410855,
+            "mean_held_min_signed_component": -3.5062114580410855,
+            "fraction_orientations_both_positive": 0.12890625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 64.6875,
+            "mean_n_learned_decreasing_taxa": 4.986328125,
+            "mean_held_signed_gross": 24.608093286297713,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 4,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 9,
+          "n_total_strata": 9,
+          "n_control_states": 9,
+          "n_seeded_states": 125,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            1,
+            3
+          ],
+          "pooled_species_metrics": {
+            "gross": 37.89843036196703,
+            "net": 9.068376469561656,
+            "cancellation": 28.830053892405374,
+            "fraction": 0.7607189431607113,
+            "signed_total": 9.068376469561656
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 55.771394038700855,
+            "net": 23.079964126307694,
+            "cancellation": 32.69142991239317,
+            "fraction": 0.5861684197764171
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 37.89843036196703,
+            "net": 9.068376469561654,
+            "cancellation": 28.830053892405374,
+            "fraction": 0.7607189431607113,
+            "signed_total": 9.068376469561654
+          },
+          "reported_total_delta": 9.504090767399266,
+          "reported_richness_delta": 0.9896214896214899,
+          "species_sum_minus_reported_total_delta": -0.4357142978376096,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 9,
+            "n_splits": 256,
+            "signed_gross": 12.017492933426839,
+            "signed_net": 0.6702162059250503,
+            "gap": 11.34727672750179
+          },
+          "n_matched_sites": 3,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 9,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 9.698883206730425,
+            "mean_held_decrease": 2.3186097266964145,
+            "mean_held_min_signed_component": 1.0422142550024778,
+            "fraction_orientations_both_positive": 0.599609375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 47.556640625,
+            "mean_n_learned_decreasing_taxa": 12.544921875,
+            "mean_held_signed_gross": 12.017492933426839,
+            "strong_direction_descriptive_gate": true
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Germany_Montane",
+      "n_states": 232,
+      "n_taxa": 119,
+      "measurement_mode_counts": {
+        "indirect": 232
+      },
+      "duplicate_physical_key_age_rows": 116,
+      "physical_keys_with_treatment_or_dose_drift": 40,
+      "status": "STOP_AMBIGUOUS_PHYSICAL_KEY_AGE",
+      "comparisons": []
+    },
+    {
+      "experiment": "Halle",
+      "n_states": 120,
+      "n_taxa": 138,
+      "measurement_mode_counts": {
+        "indirect": 120
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "STOP_NO_MATCHED_ARM_STRATUM",
+          "states": 20,
+          "excluded_unmatched_states": 20
+        },
+        {
+          "age": 2,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 10,
+          "n_total_strata": 10,
+          "n_control_states": 20,
+          "n_seeded_states": 20,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            20
+          ],
+          "pooled_species_metrics": {
+            "gross": 41.39041601,
+            "net": 5.242500002700005,
+            "cancellation": 36.1479160073,
+            "fraction": 0.8733402437551387,
+            "signed_total": 5.242500002700005
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 69.6190626278,
+            "net": 24.714500000600005,
+            "cancellation": 44.9045626272,
+            "fraction": 0.6450038384927764
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 41.39041601,
+            "net": 5.242500002700005,
+            "cancellation": 36.1479160073,
+            "fraction": 0.8733402437551387,
+            "signed_total": 5.242500002700005
+          },
+          "reported_total_delta": 5.242499999999997,
+          "reported_richness_delta": 6.1,
+          "species_sum_minus_reported_total_delta": 2.700008217004779e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 10,
+            "n_splits": 256,
+            "signed_gross": -7.751844289179882,
+            "signed_net": -6.993597654958203,
+            "gap": -0.7582466342216794
+          },
+          "n_matched_sites": 10,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 10,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -0.32854374825234267,
+            "mean_held_decrease": -7.42330054092754,
+            "mean_held_min_signed_component": -8.945840154606252,
+            "fraction_orientations_both_positive": 0.103515625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 43.8671875,
+            "mean_n_learned_decreasing_taxa": 31.44921875,
+            "mean_held_signed_gross": -7.751844289179882,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 10,
+          "n_total_strata": 10,
+          "n_control_states": 20,
+          "n_seeded_states": 40,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            20
+          ],
+          "pooled_species_metrics": {
+            "gross": 46.86451170919999,
+            "net": 8.62500000075,
+            "cancellation": 38.23951170844999,
+            "fraction": 0.8159588207326436,
+            "signed_total": 8.62500000075
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 67.94798814,
+            "net": 17.8519999978,
+            "cancellation": 50.0959881422,
+            "fraction": 0.7372696309857217
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 46.86451170919999,
+            "net": 8.62500000075,
+            "cancellation": 38.23951170844999,
+            "fraction": 0.8159588207326436,
+            "signed_total": 8.62500000075
+          },
+          "reported_total_delta": 8.625,
+          "reported_richness_delta": 3.9,
+          "species_sum_minus_reported_total_delta": 7.499991738768585e-10,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 10,
+            "n_splits": 256,
+            "signed_gross": 3.556788246835157,
+            "signed_net": 1.1919863294332036,
+            "gap": 2.3648019174019534
+          },
+          "n_matched_sites": 10,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 10,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 8.969935451440136,
+            "mean_held_decrease": -5.4131472046049804,
+            "mean_held_min_signed_component": -5.539124570284375,
+            "fraction_orientations_both_positive": 0.072265625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 52.919921875,
+            "mean_n_learned_decreasing_taxa": 30.248046875,
+            "mean_held_signed_gross": 3.556788246835157,
+            "strong_direction_descriptive_gate": false
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Jena",
+      "n_states": 1020,
+      "n_taxa": 190,
+      "measurement_mode_counts": {
+        "indirect": 1020
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 2,
+          "n_total_strata": 4,
+          "n_control_states": 12,
+          "n_seeded_states": 160,
+          "excluded_unmatched_states": 168,
+          "seeded_richness_levels": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            60
+          ],
+          "pooled_species_metrics": {
+            "gross": 137.2375,
+            "net": 37.781458333333326,
+            "cancellation": 99.45604166666669,
+            "fraction": 0.7247001852020525,
+            "signed_total": 37.781458333333326
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 146.7469583333333,
+            "net": 37.78145833333333,
+            "cancellation": 108.96549999999998,
+            "fraction": 0.7425400923982808
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 137.2375,
+            "net": 37.781458333333326,
+            "cancellation": 99.45604166666669,
+            "fraction": 0.7247001852020525,
+            "signed_total": 37.781458333333326
+          },
+          "reported_total_delta": 37.78145833333333,
+          "reported_richness_delta": -2.114583333333334,
+          "species_sum_minus_reported_total_delta": -7.105427357601002e-15,
+          "crossfit": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS",
+            "n_blocks": 2
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS"
+          }
+        },
+        {
+          "age": 2,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 2,
+          "n_total_strata": 4,
+          "n_control_states": 12,
+          "n_seeded_states": 160,
+          "excluded_unmatched_states": 168,
+          "seeded_richness_levels": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            60
+          ],
+          "pooled_species_metrics": {
+            "gross": 119.77552083333332,
+            "net": 78.8674375,
+            "cancellation": 40.90808333333332,
+            "fraction": 0.3415395988154925,
+            "signed_total": 78.8674375
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 127.25372916666666,
+            "net": 78.8674375,
+            "cancellation": 48.386291666666665,
+            "fraction": 0.3802347639124525
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 119.77552083333332,
+            "net": 78.8674375,
+            "cancellation": 40.90808333333332,
+            "fraction": 0.3415395988154925,
+            "signed_total": 78.8674375
+          },
+          "reported_total_delta": 78.86743750000001,
+          "reported_richness_delta": -1.8166666666666682,
+          "species_sum_minus_reported_total_delta": -1.4210854715202004e-14,
+          "crossfit": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS",
+            "n_blocks": 2
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS"
+          }
+        },
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 2,
+          "n_total_strata": 4,
+          "n_control_states": 12,
+          "n_seeded_states": 160,
+          "excluded_unmatched_states": 168,
+          "seeded_richness_levels": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            60
+          ],
+          "pooled_species_metrics": {
+            "gross": 188.10802083333334,
+            "net": 90.13385416666665,
+            "cancellation": 97.97416666666669,
+            "fraction": 0.5208399207680429,
+            "signed_total": 90.13385416666665
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 209.85647916666665,
+            "net": 90.13385416666665,
+            "cancellation": 119.722625,
+            "fraction": 0.5704976347426332
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 188.10802083333334,
+            "net": 90.13385416666665,
+            "cancellation": 97.97416666666669,
+            "fraction": 0.5208399207680429,
+            "signed_total": 90.13385416666665
+          },
+          "reported_total_delta": 90.13385416666667,
+          "reported_richness_delta": -2.122916666666667,
+          "species_sum_minus_reported_total_delta": -1.4210854715202004e-14,
+          "crossfit": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS",
+            "n_blocks": 2
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "STOP_FEWER_THAN_FOUR_BLOCK_GROUPS"
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Jena2",
+      "n_states": 36,
+      "n_taxa": 61,
+      "measurement_mode_counts": {
+        "indirect": 36
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 18,
+          "n_seeded_states": 18,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            30
+          ],
+          "pooled_species_metrics": {
+            "gross": 116.41752333499998,
+            "net": 16.54198333188889,
+            "cancellation": 99.8755400031111,
+            "fraction": 0.8579081322294745,
+            "signed_total": 16.54198333188889
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 166.50992836877776,
+            "net": 41.5597722141111,
+            "cancellation": 124.95015615466667,
+            "fraction": 0.7504066416864548
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 116.41752333499998,
+            "net": 16.54198333188889,
+            "cancellation": 99.8755400031111,
+            "fraction": 0.8579081322294745,
+            "signed_total": 16.54198333188889
+          },
+          "reported_total_delta": 16.541983333333345,
+          "reported_richness_delta": 0.6666666666666664,
+          "species_sum_minus_reported_total_delta": -1.44445522209935e-9,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 38.29894088524696,
+            "signed_net": -2.0394082896992183,
+            "gap": 40.338349174946174
+          },
+          "n_matched_sites": 6,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 23.967763525639533,
+            "mean_held_decrease": 14.331177359607423,
+            "mean_held_min_signed_component": 9.42975931366949,
+            "fraction_orientations_both_positive": 0.857421875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 28.158203125,
+            "mean_n_learned_decreasing_taxa": 22.587890625,
+            "mean_held_signed_gross": 38.29894088524696,
+            "strong_direction_descriptive_gate": true
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Kansas_KUFS_LTER_Hay_Meadow_Exp_2",
+      "n_states": 120,
+      "n_taxa": 100,
+      "measurement_mode_counts": {
+        "direct": 120
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 87.06,
+            "net": 61.63499999999999,
+            "cancellation": 25.42500000000001,
+            "fraction": 0.2920399724328051,
+            "signed_total": 61.63499999999999
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 99.525,
+            "net": 64.72,
+            "cancellation": 34.80500000000001,
+            "fraction": 0.34971112785732233
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 87.06,
+            "net": 61.63499999999999,
+            "cancellation": 25.42500000000001,
+            "fraction": 0.2920399724328051,
+            "signed_total": 61.63499999999999
+          },
+          "reported_total_delta": 61.6275,
+          "reported_richness_delta": -2.75,
+          "species_sum_minus_reported_total_delta": 0.007499999999993179,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 55.665439453124996,
+            "signed_net": 14.745449218749997,
+            "gap": 40.919990234375
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 64.050048828125,
+            "mean_held_decrease": -8.384609375,
+            "mean_held_min_signed_component": -8.384609375,
+            "fraction_orientations_both_positive": 0.505859375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 3.314453125,
+            "mean_n_learned_decreasing_taxa": 6.376953125,
+            "mean_held_signed_gross": 55.665439453124996,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 2,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 40.7175,
+            "net": 0.532500000000001,
+            "cancellation": 40.185,
+            "fraction": 0.9869220850985448,
+            "signed_total": -0.532500000000001
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 57.412499999999994,
+            "net": 22.137500000000003,
+            "cancellation": 35.27499999999999,
+            "fraction": 0.6144132375353798
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 40.7175,
+            "net": 0.532500000000001,
+            "cancellation": 40.185,
+            "fraction": 0.9869220850985448,
+            "signed_total": -0.532500000000001
+          },
+          "reported_total_delta": -0.5375000000000014,
+          "reported_richness_delta": -2.5,
+          "species_sum_minus_reported_total_delta": 0.0050000000000004485,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 2.565468749999999,
+            "signed_net": -7.070312500000001,
+            "gap": 9.63578125
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 2.13130859375,
+            "mean_held_decrease": 0.43416015625000137,
+            "mean_held_min_signed_component": -3.0058886718749998,
+            "fraction_orientations_both_positive": 0.53125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 4.6484375,
+            "mean_n_learned_decreasing_taxa": 10.068359375,
+            "mean_held_signed_gross": 2.5654687500000013,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 47.16,
+            "net": 21.154999999999998,
+            "cancellation": 26.005,
+            "fraction": 0.551420695504665,
+            "signed_total": -21.154999999999998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 110.72,
+            "net": 67.1,
+            "cancellation": 43.620000000000005,
+            "fraction": 0.3939667630057804
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 47.16,
+            "net": 21.154999999999998,
+            "cancellation": 26.005,
+            "fraction": 0.551420695504665,
+            "signed_total": -21.154999999999998
+          },
+          "reported_total_delta": -21.1575,
+          "reported_richness_delta": -4.25,
+          "species_sum_minus_reported_total_delta": 0.002500000000001279,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": -17.495957031250004,
+            "signed_net": -37.2705078125,
+            "gap": 19.774550781249996
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -17.30302734375,
+            "mean_held_decrease": -0.19292968750000147,
+            "mean_held_min_signed_component": -28.593779296875006,
+            "fraction_orientations_both_positive": 0,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 3.83984375,
+            "mean_n_learned_decreasing_taxa": 11.69140625,
+            "mean_held_signed_gross": -17.49595703125,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 4,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 37.4875,
+            "net": 6.737500000000001,
+            "cancellation": 30.749999999999996,
+            "fraction": 0.8202734244748249,
+            "signed_total": -6.737500000000001
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 135.52749999999997,
+            "net": 28.402500000000003,
+            "cancellation": 107.125,
+            "fraction": 0.7904299865340983
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 37.4875,
+            "net": 6.737500000000001,
+            "cancellation": 30.749999999999996,
+            "fraction": 0.8202734244748249,
+            "signed_total": -6.737500000000001
+          },
+          "reported_total_delta": -6.732500000000002,
+          "reported_richness_delta": 0.75,
+          "species_sum_minus_reported_total_delta": -0.004999999999999005,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": -50.974082031250006,
+            "signed_net": -12.225898437500005,
+            "gap": -38.74818359375
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -28.531279296875,
+            "mean_held_decrease": -22.442802734375,
+            "mean_held_min_signed_component": -33.528359375,
+            "fraction_orientations_both_positive": 0,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 12.1171875,
+            "mean_n_learned_decreasing_taxa": 12.8515625,
+            "mean_held_signed_gross": -50.974082031250006,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 5,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 58.24500000000001,
+            "net": 19.370000000000005,
+            "cancellation": 38.87500000000001,
+            "fraction": 0.6674392651729762,
+            "signed_total": 19.370000000000005
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 103.28999999999999,
+            "net": 32.154999999999994,
+            "cancellation": 71.135,
+            "fraction": 0.6886920321425115
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 58.24500000000001,
+            "net": 19.370000000000005,
+            "cancellation": 38.87500000000001,
+            "fraction": 0.6674392651729762,
+            "signed_total": 19.370000000000005
+          },
+          "reported_total_delta": 19.3775,
+          "reported_richness_delta": 5.75,
+          "species_sum_minus_reported_total_delta": -0.0074999999999967315,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 0.07171875000000125,
+            "signed_net": 3.4697070312499987,
+            "gap": -3.3979882812499973
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 9.773759765625002,
+            "mean_held_decrease": -9.702041015624998,
+            "mean_held_min_signed_component": -12.169248046875,
+            "fraction_orientations_both_positive": 0.345703125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 17.087890625,
+            "mean_n_learned_decreasing_taxa": 11.654296875,
+            "mean_held_signed_gross": 0.07171875000000025,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 6,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 127.37,
+            "net": 95.43,
+            "cancellation": 31.939999999999998,
+            "fraction": 0.250765486378268,
+            "signed_total": 95.43
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 216.79500000000002,
+            "net": 95.43,
+            "cancellation": 121.36500000000001,
+            "fraction": 0.5598145713692659
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 127.37,
+            "net": 95.43,
+            "cancellation": 31.939999999999998,
+            "fraction": 0.250765486378268,
+            "signed_total": 95.43
+          },
+          "reported_total_delta": 95.435,
+          "reported_richness_delta": 9.75,
+          "species_sum_minus_reported_total_delta": -0.0049999999999954525,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 9.656455078125,
+            "signed_net": 95.42999999999999,
+            "gap": -85.77354492187499
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 45.393564453125,
+            "mean_held_decrease": -35.737109375,
+            "mean_held_min_signed_component": -35.737109375,
+            "fraction_orientations_both_positive": 0,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 22.77734375,
+            "mean_n_learned_decreasing_taxa": 11.37109375,
+            "mean_held_signed_gross": 9.656455078125003,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 7,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 196.58749999999998,
+            "net": 133.08249999999998,
+            "cancellation": 63.504999999999995,
+            "fraction": 0.32303681566732373,
+            "signed_total": 133.08249999999998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 270.1025,
+            "net": 137.2975,
+            "cancellation": 132.805,
+            "fraction": 0.49168371266463656
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 196.58749999999998,
+            "net": 133.08249999999998,
+            "cancellation": 63.504999999999995,
+            "fraction": 0.32303681566732373,
+            "signed_total": 133.08249999999998
+          },
+          "reported_total_delta": 133.09249999999997,
+          "reported_richness_delta": 10.75,
+          "species_sum_minus_reported_total_delta": -0.009999999999990905,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 90.353056640625,
+            "signed_net": 133.08249999999998,
+            "gap": -42.72944335937498
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 114.97604492187503,
+            "mean_held_decrease": -24.622988281250002,
+            "mean_held_min_signed_component": -24.622988281250002,
+            "fraction_orientations_both_positive": 0.154296875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 24.154296875,
+            "mean_n_learned_decreasing_taxa": 8.69140625,
+            "mean_held_signed_gross": 90.353056640625,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 8,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 106.68250000000002,
+            "net": 14.332500000000003,
+            "cancellation": 92.35000000000002,
+            "fraction": 0.8656527546692289,
+            "signed_total": -14.332500000000003
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 192.88250000000002,
+            "net": 98.0575,
+            "cancellation": 94.82500000000002,
+            "fraction": 0.4916205461874458
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 106.68250000000002,
+            "net": 14.332500000000003,
+            "cancellation": 92.35000000000002,
+            "fraction": 0.8656527546692289,
+            "signed_total": -14.332500000000003
+          },
+          "reported_total_delta": -14.334999999999994,
+          "reported_richness_delta": 6.25,
+          "species_sum_minus_reported_total_delta": 0.002499999999990621,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 19.433310546875006,
+            "signed_net": -62.76529296875,
+            "gap": 82.19860351562501
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -1.1282812499999952,
+            "mean_held_decrease": 20.561591796875007,
+            "mean_held_min_signed_component": -22.436992187499996,
+            "fraction_orientations_both_positive": 0.16015625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 18.74609375,
+            "mean_n_learned_decreasing_taxa": 12.01171875,
+            "mean_held_signed_gross": 19.433310546875006,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 9,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 99.86,
+            "net": 25.564999999999998,
+            "cancellation": 74.295,
+            "fraction": 0.743991588223513,
+            "signed_total": -25.564999999999998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 114.565,
+            "net": 25.564999999999998,
+            "cancellation": 89,
+            "fraction": 0.7768515689783093
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 99.86,
+            "net": 25.564999999999998,
+            "cancellation": 74.295,
+            "fraction": 0.743991588223513,
+            "signed_total": -25.564999999999998
+          },
+          "reported_total_delta": -25.564999999999998,
+          "reported_richness_delta": 3.25,
+          "species_sum_minus_reported_total_delta": 0,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 64.03544921874999,
+            "signed_net": 25.564999999999994,
+            "gap": 38.47044921874999
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 15.676337890625001,
+            "mean_held_decrease": 48.359111328124996,
+            "mean_held_min_signed_component": 15.676337890625001,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 14.962890625,
+            "mean_n_learned_decreasing_taxa": 14.10546875,
+            "mean_held_signed_gross": 64.03544921875,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 10,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 110.10249999999998,
+            "net": 9.8525,
+            "cancellation": 100.24999999999997,
+            "fraction": 0.9105152017438295,
+            "signed_total": -9.8525
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 132.8525,
+            "net": 17.302499999999995,
+            "cancellation": 115.55000000000001,
+            "fraction": 0.8697615776895431
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 110.10249999999998,
+            "net": 9.8525,
+            "cancellation": 100.24999999999997,
+            "fraction": 0.9105152017438295,
+            "signed_total": -9.8525
+          },
+          "reported_total_delta": -9.849999999999998,
+          "reported_richness_delta": 4.5,
+          "species_sum_minus_reported_total_delta": -0.002500000000001279,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 65.817470703125,
+            "signed_net": 1.4726367187500002,
+            "gap": 64.344833984375
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 26.588437499999998,
+            "mean_held_decrease": 39.229033203125,
+            "mean_held_min_signed_component": 25.533818359375,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 21.06640625,
+            "mean_n_learned_decreasing_taxa": 15.2421875,
+            "mean_held_signed_gross": 65.817470703125,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 11,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 52.6375,
+            "net": 7.6825,
+            "cancellation": 44.955000000000005,
+            "fraction": 0.8540489194965567,
+            "signed_total": -7.6825
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 84.4625,
+            "net": 35.1725,
+            "cancellation": 49.290000000000006,
+            "fraction": 0.5835725913867101
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 52.6375,
+            "net": 7.6825,
+            "cancellation": 44.955000000000005,
+            "fraction": 0.8540489194965567,
+            "signed_total": -7.6825
+          },
+          "reported_total_delta": -7.682499999999997,
+          "reported_richness_delta": 2.25,
+          "species_sum_minus_reported_total_delta": -2.6645352591003757e-15,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 1.8960546875000013,
+            "signed_net": -24.219707031250003,
+            "gap": 26.115761718750004
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -2.7377441406250007,
+            "mean_held_decrease": 4.633798828125001,
+            "mean_held_min_signed_component": -12.348994140625,
+            "fraction_orientations_both_positive": 0,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 14.802734375,
+            "mean_n_learned_decreasing_taxa": 13.251953125,
+            "mean_held_signed_gross": 1.8960546874999993,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 12,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 161.32999999999998,
+            "net": 32.305,
+            "cancellation": 129.02499999999998,
+            "fraction": 0.7997582594681708,
+            "signed_total": 32.305
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 221.485,
+            "net": 33.27000000000001,
+            "cancellation": 188.21499999999997,
+            "fraction": 0.8497866672686636
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 161.32999999999998,
+            "net": 32.305,
+            "cancellation": 129.02499999999998,
+            "fraction": 0.7997582594681708,
+            "signed_total": 32.305
+          },
+          "reported_total_delta": 32.309999999999995,
+          "reported_richness_delta": 1.75,
+          "species_sum_minus_reported_total_delta": -0.0049999999999954525,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 60.720869140625,
+            "signed_net": 32.30499999999999,
+            "gap": 28.415869140625006
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 45.00899414062499,
+            "mean_held_decrease": 15.711875,
+            "mean_held_min_signed_component": 15.711875,
+            "fraction_orientations_both_positive": 0.814453125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 14.62890625,
+            "mean_n_learned_decreasing_taxa": 14.2890625,
+            "mean_held_signed_gross": 60.720869140625,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 13,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 59.88249999999999,
+            "net": 4.317499999999996,
+            "cancellation": 55.565,
+            "fraction": 0.9279004717571913,
+            "signed_total": -4.317499999999996
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 84.6575,
+            "net": 15.697500000000005,
+            "cancellation": 68.96000000000001,
+            "fraction": 0.8145763813011252
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 59.88249999999999,
+            "net": 4.317499999999996,
+            "cancellation": 55.565,
+            "fraction": 0.9279004717571913,
+            "signed_total": -4.317499999999996
+          },
+          "reported_total_delta": -4.3075000000000045,
+          "reported_richness_delta": 3.25,
+          "species_sum_minus_reported_total_delta": -0.009999999999991793,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 11.397792968749997,
+            "signed_net": -6.686542968750002,
+            "gap": 18.0843359375
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 2.2001074218749994,
+            "mean_held_decrease": 9.197685546874997,
+            "mean_held_min_signed_component": -0.07289062500000268,
+            "fraction_orientations_both_positive": 0.494140625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 15.328125,
+            "mean_n_learned_decreasing_taxa": 13.326171875,
+            "mean_held_signed_gross": 11.397792968749995,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 14,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 105.255,
+            "net": 3.2100000000000004,
+            "cancellation": 102.045,
+            "fraction": 0.9695026364543252,
+            "signed_total": 3.2100000000000004
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 148.975,
+            "net": 42.125,
+            "cancellation": 106.85,
+            "fraction": 0.7172344353079375
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 105.255,
+            "net": 3.2100000000000004,
+            "cancellation": 102.045,
+            "fraction": 0.9695026364543252,
+            "signed_total": 3.2100000000000004
+          },
+          "reported_total_delta": 3.2124999999999986,
+          "reported_richness_delta": 0.75,
+          "species_sum_minus_reported_total_delta": -0.0024999999999981704,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 52.224619140624995,
+            "signed_net": -26.82693359374999,
+            "gap": 79.05155273437498
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 28.358505859375,
+            "mean_held_decrease": 23.86611328125,
+            "mean_held_min_signed_component": 11.692949218750002,
+            "fraction_orientations_both_positive": 0.814453125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 13.994140625,
+            "mean_n_learned_decreasing_taxa": 13.8203125,
+            "mean_held_signed_gross": 52.224619140624995,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 15,
+          "mode": "direct",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 4,
+          "n_total_strata": 4,
+          "n_control_states": 4,
+          "n_seeded_states": 4,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            41
+          ],
+          "pooled_species_metrics": {
+            "gross": 76.415,
+            "net": 21.45000000000001,
+            "cancellation": 54.964999999999996,
+            "fraction": 0.719295949748086,
+            "signed_total": -21.45000000000001
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 117.065,
+            "net": 80.775,
+            "cancellation": 36.29,
+            "fraction": 0.30999871866057316
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 76.415,
+            "net": 21.45000000000001,
+            "cancellation": 54.964999999999996,
+            "fraction": 0.719295949748086,
+            "signed_total": -21.45000000000001
+          },
+          "reported_total_delta": -21.4525,
+          "reported_richness_delta": 0,
+          "species_sum_minus_reported_total_delta": 0.002499999999990621,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 4,
+            "n_splits": 256,
+            "signed_gross": 2.885341796874999,
+            "signed_net": -47.723242187500006,
+            "gap": 50.608583984375
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 4,
+            "n_twofold_splits": 256,
+            "mean_held_increase": -9.505283203125,
+            "mean_held_decrease": 12.390625,
+            "mean_held_min_signed_component": -21.019140625000002,
+            "fraction_orientations_both_positive": 0.16015625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 14.16015625,
+            "mean_n_learned_decreasing_taxa": 15.166015625,
+            "mean_held_signed_gross": 2.885341796874999,
+            "strong_direction_descriptive_gate": false
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Kansas_KUFS_LTER_Old_Field_Exp_1",
+      "n_states": 168,
+      "n_taxa": 128,
+      "measurement_mode_counts": {
+        "indirect": 168
+      },
+      "duplicate_physical_key_age_rows": 0,
+      "physical_keys_with_treatment_or_dose_drift": 0,
+      "status": "AUDITED_DESCRIPTIVE",
+      "comparisons": [
+        {
+          "age": 1,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 174.21833333333336,
+            "net": 82.75166666666667,
+            "cancellation": 91.4666666666667,
+            "fraction": 0.5250117190115852,
+            "signed_total": 82.75166666666667
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 262.075,
+            "net": 168.54166666666666,
+            "cancellation": 93.5333333333333,
+            "fraction": 0.35689529078826027
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 174.21833333333336,
+            "net": 82.75166666666667,
+            "cancellation": 91.4666666666667,
+            "fraction": 0.5250117190115852,
+            "signed_total": 82.75166666666667
+          },
+          "reported_total_delta": 82.74833333333332,
+          "reported_richness_delta": 8,
+          "species_sum_minus_reported_total_delta": 0.0033333333333445125,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": -66.00718098958335,
+            "signed_net": -56.308216145833335,
+            "gap": -9.698964843750012
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 5.0820572916666675,
+            "mean_held_decrease": -71.08923828125,
+            "mean_held_min_signed_component": -88.52427083333333,
+            "fraction_orientations_both_positive": 0.12109375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 30.59375,
+            "mean_n_learned_decreasing_taxa": 19.583984375,
+            "mean_held_signed_gross": -66.00718098958333,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 2,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 243.30833333333334,
+            "net": 77.53166666666664,
+            "cancellation": 165.7766666666667,
+            "fraction": 0.6813439736959278,
+            "signed_total": 77.53166666666664
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 488.74500000000006,
+            "net": 339.6216666666667,
+            "cancellation": 149.1233333333333,
+            "fraction": 0.305114800833427
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 243.30833333333334,
+            "net": 77.53166666666664,
+            "cancellation": 165.7766666666667,
+            "fraction": 0.6813439736959278,
+            "signed_total": 77.53166666666664
+          },
+          "reported_total_delta": 77.52333333333334,
+          "reported_richness_delta": 23.5,
+          "species_sum_minus_reported_total_delta": 0.008333333333297333,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": -47.260013020833334,
+            "signed_net": -94.352578125,
+            "gap": 47.09256510416666
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 12.622408854166668,
+            "mean_held_decrease": -59.88242187499999,
+            "mean_held_min_signed_component": -96.34255859375,
+            "fraction_orientations_both_positive": 0.255859375,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 51.9609375,
+            "mean_n_learned_decreasing_taxa": 22.462890625,
+            "mean_held_signed_gross": -47.26001302083331,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 3,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 474.99833333333333,
+            "net": 323.16166666666663,
+            "cancellation": 151.8366666666667,
+            "fraction": 0.3196572619553052,
+            "signed_total": 323.16166666666663
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 617.2049999999999,
+            "net": 399.96166666666664,
+            "cancellation": 217.24333333333334,
+            "fraction": 0.3519792181420004
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 474.99833333333333,
+            "net": 323.16166666666663,
+            "cancellation": 151.8366666666667,
+            "fraction": 0.3196572619553052,
+            "signed_total": 323.16166666666663
+          },
+          "reported_total_delta": 323.16,
+          "reported_richness_delta": 27.166666666666668,
+          "species_sum_minus_reported_total_delta": 0.0016666666666083074,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 136.95843098958335,
+            "signed_net": 323.16166666666663,
+            "gap": -186.20323567708328
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 228.50033854166668,
+            "mean_held_decrease": -91.54190755208333,
+            "mean_held_min_signed_component": -91.54190755208333,
+            "fraction_orientations_both_positive": 0.16015625,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 58.701171875,
+            "mean_n_learned_decreasing_taxa": 18.576171875,
+            "mean_held_signed_gross": 136.95843098958332,
+            "strong_direction_descriptive_gate": false
+          }
+        },
+        {
+          "age": 4,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 352.175,
+            "net": 165.95499999999998,
+            "cancellation": 186.22000000000003,
+            "fraction": 0.5287712074962733,
+            "signed_total": 165.95499999999998
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 460.1083333333333,
+            "net": 177.55499999999998,
+            "cancellation": 282.55333333333334,
+            "fraction": 0.614101751399127
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 352.175,
+            "net": 165.95499999999998,
+            "cancellation": 186.22000000000003,
+            "fraction": 0.5287712074962733,
+            "signed_total": 165.95499999999998
+          },
+          "reported_total_delta": 165.95833333333334,
+          "reported_richness_delta": 22.333333333333332,
+          "species_sum_minus_reported_total_delta": -0.0033333333333587234,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 210.95652994791666,
+            "signed_net": 165.95499999999998,
+            "gap": 45.00152994791668
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 205.5363671875,
+            "mean_held_decrease": 5.420162760416673,
+            "mean_held_min_signed_component": 5.420162760416673,
+            "fraction_orientations_both_positive": 0.578125,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 47.876953125,
+            "mean_n_learned_decreasing_taxa": 18.41015625,
+            "mean_held_signed_gross": 210.95652994791666,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 5,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 764.0266666666666,
+            "net": 61.426666666666705,
+            "cancellation": 702.5999999999999,
+            "fraction": 0.9196014100729467,
+            "signed_total": 61.426666666666705
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 802.8033333333333,
+            "net": 127.73666666666668,
+            "cancellation": 675.0666666666667,
+            "fraction": 0.8408867260973009
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 764.0266666666666,
+            "net": 61.426666666666705,
+            "cancellation": 702.5999999999999,
+            "fraction": 0.9196014100729467,
+            "signed_total": 61.426666666666705
+          },
+          "reported_total_delta": 61.40833333333334,
+          "reported_richness_delta": 17.666666666666668,
+          "species_sum_minus_reported_total_delta": 0.018333333333366397,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 631.9578450520833,
+            "signed_net": 32.73997395833334,
+            "gap": 599.2178710937499
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 369.2091015625,
+            "mean_held_decrease": 262.7487434895833,
+            "mean_held_min_signed_component": 262.40907552083337,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 39.0859375,
+            "mean_n_learned_decreasing_taxa": 22.283203125,
+            "mean_held_signed_gross": 631.9578450520833,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 6,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 732.1866666666667,
+            "net": 7.969999999999999,
+            "cancellation": 724.2166666666667,
+            "fraction": 0.9891147976836507,
+            "signed_total": -7.969999999999999
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 787.4200000000001,
+            "net": 242.40333333333334,
+            "cancellation": 545.0166666666665,
+            "fraction": 0.6921549702403628
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 732.1866666666667,
+            "net": 7.969999999999999,
+            "cancellation": 724.2166666666667,
+            "fraction": 0.9891147976836507,
+            "signed_total": -7.969999999999999
+          },
+          "reported_total_delta": -7.978333333333343,
+          "reported_richness_delta": 14.5,
+          "species_sum_minus_reported_total_delta": 0.008333333333344406,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 597.2247005208333,
+            "signed_net": -100.32325520833334,
+            "gap": 697.5479557291666
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 321.14396484375004,
+            "mean_held_decrease": 276.08073567708334,
+            "mean_held_min_signed_component": 235.77093750000003,
+            "fraction_orientations_both_positive": 0.951171875,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 32.94140625,
+            "mean_n_learned_decreasing_taxa": 20.25,
+            "mean_held_signed_gross": 597.2247005208334,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 7,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 689.5133333333333,
+            "net": 146.91333333333336,
+            "cancellation": 542.5999999999999,
+            "fraction": 0.7869318456495885,
+            "signed_total": 146.91333333333336
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 738.7466666666668,
+            "net": 213.49333333333334,
+            "cancellation": 525.2533333333334,
+            "fraction": 0.7110060282279898
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 689.5133333333333,
+            "net": 146.91333333333336,
+            "cancellation": 542.5999999999999,
+            "fraction": 0.7869318456495885,
+            "signed_total": 146.91333333333336
+          },
+          "reported_total_delta": 146.92333333333332,
+          "reported_richness_delta": 12.5,
+          "species_sum_minus_reported_total_delta": -0.009999999999962483,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 530.2133984375,
+            "signed_net": 79.156484375,
+            "gap": 451.0569140625
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 358.84966145833334,
+            "mean_held_decrease": 171.36373697916667,
+            "mean_held_min_signed_component": 169.65402343749997,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 32.681640625,
+            "mean_n_learned_decreasing_taxa": 20.533203125,
+            "mean_held_signed_gross": 530.2133984375,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 8,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 615.0666666666667,
+            "net": 241.14333333333332,
+            "cancellation": 373.9233333333334,
+            "fraction": 0.6079395187513549,
+            "signed_total": 241.14333333333332
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 635.72,
+            "net": 241.14333333333335,
+            "cancellation": 394.57666666666665,
+            "fraction": 0.6206768178862812
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 615.0666666666667,
+            "net": 241.14333333333332,
+            "cancellation": 373.9233333333334,
+            "fraction": 0.6079395187513549,
+            "signed_total": 241.14333333333332
+          },
+          "reported_total_delta": 241.13333333333333,
+          "reported_richness_delta": 9.5,
+          "species_sum_minus_reported_total_delta": 0.009999999999990905,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 533.1933072916668,
+            "signed_net": 241.14333333333332,
+            "gap": 292.04997395833345
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 400.30058593749993,
+            "mean_held_decrease": 132.89272135416667,
+            "mean_held_min_signed_component": 132.89272135416667,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 35.134765625,
+            "mean_n_learned_decreasing_taxa": 24.47265625,
+            "mean_held_signed_gross": 533.1933072916668,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 9,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 722.7966666666666,
+            "net": 233.42666666666668,
+            "cancellation": 489.36999999999995,
+            "fraction": 0.6770507150466475,
+            "signed_total": 233.42666666666668
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 786.4466666666667,
+            "net": 233.63666666666668,
+            "cancellation": 552.8100000000001,
+            "fraction": 0.7029211559164852
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 722.7966666666666,
+            "net": 233.42666666666668,
+            "cancellation": 489.36999999999995,
+            "fraction": 0.6770507150466475,
+            "signed_total": 233.42666666666668
+          },
+          "reported_total_delta": 233.42499999999995,
+          "reported_richness_delta": 15.666666666666666,
+          "species_sum_minus_reported_total_delta": 0.0016666666667219943,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 595.5443098958333,
+            "signed_net": 233.42666666666668,
+            "gap": 362.1176432291666
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 436.07443359375,
+            "mean_held_decrease": 159.46987630208335,
+            "mean_held_min_signed_component": 159.46987630208335,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 37.796875,
+            "mean_n_learned_decreasing_taxa": 20.25,
+            "mean_held_signed_gross": 595.5443098958333,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 10,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 700.7516666666668,
+            "net": 202.58500000000004,
+            "cancellation": 498.16666666666674,
+            "fraction": 0.7109032919412726,
+            "signed_total": 202.58500000000004
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 733.5083333333332,
+            "net": 202.585,
+            "cancellation": 530.9233333333333,
+            "fraction": 0.7238136353824656
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 700.7516666666668,
+            "net": 202.58500000000004,
+            "cancellation": 498.16666666666674,
+            "fraction": 0.7109032919412726,
+            "signed_total": 202.58500000000004
+          },
+          "reported_total_delta": 202.58166666666668,
+          "reported_richness_delta": 7.833333333333333,
+          "species_sum_minus_reported_total_delta": 0.0033333333333587234,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 603.886875,
+            "signed_net": 202.58500000000004,
+            "gap": 401.301875
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 413.9072526041666,
+            "mean_held_decrease": 189.97962239583333,
+            "mean_held_min_signed_component": 189.97962239583333,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 29.40234375,
+            "mean_n_learned_decreasing_taxa": 21.078125,
+            "mean_held_signed_gross": 603.8868750000001,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 11,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 522.5583333333334,
+            "net": 244.50166666666667,
+            "cancellation": 278.05666666666673,
+            "fraction": 0.5321064633932416,
+            "signed_total": 244.50166666666667
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 548.025,
+            "net": 244.5016666666667,
+            "cancellation": 303.52333333333337,
+            "fraction": 0.5538494290102338
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 522.5583333333334,
+            "net": 244.50166666666667,
+            "cancellation": 278.05666666666673,
+            "fraction": 0.5321064633932416,
+            "signed_total": 244.50166666666667
+          },
+          "reported_total_delta": 244.51333333333332,
+          "reported_richness_delta": 3.3333333333333335,
+          "species_sum_minus_reported_total_delta": -0.011666666666656056,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 439.69416015625,
+            "signed_net": 244.50166666666667,
+            "gap": 195.19249348958334
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 346.51783854166666,
+            "mean_held_decrease": 93.17632161458333,
+            "mean_held_min_signed_component": 93.17632161458333,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 23.41015625,
+            "mean_n_learned_decreasing_taxa": 21.451171875,
+            "mean_held_signed_gross": 439.69416015625,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 12,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 687.1616666666666,
+            "net": 68.21833333333336,
+            "cancellation": 618.9433333333333,
+            "fraction": 0.9007244777429863,
+            "signed_total": 68.21833333333336
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 718.8983333333332,
+            "net": 155.62500000000003,
+            "cancellation": 563.2733333333333,
+            "fraction": 0.7835229367156692
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 687.1616666666666,
+            "net": 68.21833333333336,
+            "cancellation": 618.9433333333333,
+            "fraction": 0.9007244777429863,
+            "signed_total": 68.21833333333336
+          },
+          "reported_total_delta": 68.22166666666665,
+          "reported_richness_delta": 8.166666666666666,
+          "species_sum_minus_reported_total_delta": -0.003333333333287669,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 522.8606901041667,
+            "signed_net": -2.089661458333325,
+            "gap": 524.9503515625
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 335.5356705729167,
+            "mean_held_decrease": 187.32501953124998,
+            "mean_held_min_signed_component": 187.11520182291667,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 23.91796875,
+            "mean_n_learned_decreasing_taxa": 19.046875,
+            "mean_held_signed_gross": 522.8606901041667,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 13,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 868.5249999999999,
+            "net": 446.59166666666664,
+            "cancellation": 421.9333333333332,
+            "fraction": 0.4858044769388714,
+            "signed_total": 446.59166666666664
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 910.3449999999999,
+            "net": 473.6483333333333,
+            "cancellation": 436.69666666666666,
+            "fraction": 0.47970458086403145
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 868.5249999999999,
+            "net": 446.59166666666664,
+            "cancellation": 421.9333333333332,
+            "fraction": 0.4858044769388714,
+            "signed_total": 446.59166666666664
+          },
+          "reported_total_delta": 446.58666666666676,
+          "reported_richness_delta": 4.5,
+          "species_sum_minus_reported_total_delta": 0.004999999999881766,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 782.3526822916667,
+            "signed_net": 446.5916666666667,
+            "gap": 335.761015625
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": false,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 616.3955338541666,
+            "mean_held_decrease": 165.9571484375,
+            "mean_held_min_signed_component": 165.9571484375,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 24.779296875,
+            "mean_n_learned_decreasing_taxa": 24.74609375,
+            "mean_held_signed_gross": 782.3526822916666,
+            "strong_direction_descriptive_gate": true
+          }
+        },
+        {
+          "age": 14,
+          "mode": "indirect",
+          "status": "SCORED_DESCRIPTIVE",
+          "n_matched_strata": 6,
+          "n_total_strata": 6,
+          "n_control_states": 6,
+          "n_seeded_states": 6,
+          "excluded_unmatched_states": 0,
+          "seeded_richness_levels": [
+            50
+          ],
+          "pooled_species_metrics": {
+            "gross": 976.5533333333333,
+            "net": 609.4633333333334,
+            "cancellation": 367.0899999999999,
+            "fraction": 0.3759036884826225,
+            "signed_total": 609.4633333333334
+          },
+          "mean_within_stratum_metrics": {
+            "gross": 1033.2466666666667,
+            "net": 609.4633333333334,
+            "cancellation": 423.7833333333333,
+            "fraction": 0.41014730267699867
+          },
+          "equal_site_weighted_species_metrics": {
+            "gross": 976.5533333333333,
+            "net": 609.4633333333334,
+            "cancellation": 367.0899999999999,
+            "fraction": 0.3759036884826225,
+            "signed_total": 609.4633333333334
+          },
+          "reported_total_delta": 609.4683333333334,
+          "reported_richness_delta": 0.16666666666666666,
+          "species_sum_minus_reported_total_delta": -0.0049999999999954525,
+          "crossfit": {
+            "status": "DESCRIPTIVE_HELD_BLOCK_SIGN_SCORE",
+            "n_blocks": 6,
+            "n_splits": 256,
+            "signed_gross": 873.6928515625,
+            "signed_net": 609.4633333333334,
+            "gap": 264.2295182291666
+          },
+          "n_matched_sites": 1,
+          "final_matched_age": true,
+          "directional_validation": {
+            "status": "DESCRIPTIVE_TWO_DIRECTION_HELD_BLOCKS",
+            "n_blocks": 6,
+            "n_twofold_splits": 256,
+            "mean_held_increase": 734.9975846354166,
+            "mean_held_decrease": 138.69526692708334,
+            "mean_held_min_signed_component": 138.69526692708334,
+            "fraction_orientations_both_positive": 1,
+            "fraction_train_both_sets_nonempty": 1,
+            "mean_n_learned_increasing_taxa": 21.35546875,
+            "mean_n_learned_decreasing_taxa": 20.537109375,
+            "mean_held_signed_gross": 873.6928515625001,
+            "strong_direction_descriptive_gate": true
+          }
+        }
+      ]
+    },
+    {
+      "experiment": "Texas_Temple_Prarie",
+      "n_states": 50,
+      "n_taxa": 49,
+      "measurement_mode_counts": {
+        "direct": 50
+      },
+      "duplicate_physical_key_age_rows": 25,
+      "physical_keys_with_treatment_or_dose_drift": 25,
+      "status": "STOP_AMBIGUOUS_PHYSICAL_KEY_AGE",
+      "comparisons": []
+    }
+  ],
+  "limits": [
+    "Same curated source; not additional independent evidence.",
+    "Repeated split means and fractions descriptive, not p-values.",
+    "Direct and allocated modes distinct; no seed identity or causal recruitment compensation."
+  ],
+  "provenance": {
+    "code_commit": "0b0aeed347a2dff52249496dda9b8269674b1ef1",
+    "run_id": 45539576248,
+    "job_id": 138954498034,
+    "article_doi": "10.1111/ele.13566",
+    "data_doi": "10.6084/m9.figshare.12319682.v1"
+  },
+  "diagnostic_summary": {
+    "direct": {
+      "scored": 24,
+      "eligible": 23,
+      "both_positive_mean": 8,
+      "strong": 5,
+      "final_eligible": 3,
+      "final_strong": 0
+    },
+    "indirect": {
+      "scored": 34,
+      "eligible": 30,
+      "both_positive_mean": 20,
+      "strong": 20,
+      "final_eligible": 5,
+      "final_strong": 4
+    }
+  }
+}

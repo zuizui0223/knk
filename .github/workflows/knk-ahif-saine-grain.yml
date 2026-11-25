@@ -1,0 +1,45 @@
+name: AHIF Saine 460-log RData grain audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-saine-grain.yml"
+      - "benchmarks/audit_ahif_saine2025_grain.R"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-grain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+      - name: Get pinned version data and original R code
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"saine"
+          root.mkdir(exist_ok=True)
+          files={"data_meta_otu.Rdata":"4dbc27f81ffdcf1925887c7e0805b031","S2_define_HMSC_models_and_export_to_Hmsc-HPC.R":"a3dfe8ae32340e470a31cfa7bac7f9dd"}
+          for name,md5 in files.items():
+              req=urllib.request.Request("https://zenodo.org/records/13819389/files/"+name+"?download=1",headers={"User-Agent":"AHIF-DB source audit","Accept":"*/*"})
+              with urllib.request.urlopen(req,timeout=90) as res:
+                  b=res.read(2_000_001)
+              assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5
+              (root/name).write_bytes(b)
+          PY
+      - name: Audit original RData object grain
+        run: Rscript benchmarks/audit_ahif_saine2025_grain.R "$RUNNER_TEMP/saine" "$RUNNER_TEMP/saine/grain.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-saine-rdata-grain-audit
+          path: ${{ runner.temp }}/saine/grain.txt
+          retention-days: 30

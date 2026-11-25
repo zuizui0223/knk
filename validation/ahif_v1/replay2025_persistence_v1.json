@@ -1,0 +1,1494 @@
+{
+  "status": "EXPLORATORY_PERSISTENCE_AND_REPRESENTATION_PREDICTION_NOT_CAUSAL",
+  "n_parents": 275,
+  "n_locations": 14,
+  "n_final_replicates": 1100,
+  "source_matrix": {
+    "orientation": "samples_by_asv",
+    "implicit_R_header_corner": true,
+    "original_rows": 2210,
+    "original_columns": 1454,
+    "n_asvs": 1454,
+    "separator": "'\\t'"
+  },
+  "source_blobs": {
+    "metadata.tsv": "7394c6545e0a138ba1ba54a259580d8c63c7b505",
+    "seqtable.csv": "eaa43f867b0df78d124c742ca0b23f971c099ea4"
+  },
+  "results": {
+    "named": {
+      "persistence_folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "losses": {
+            "mean": 2.420542352274677,
+            "unchanged_initial": 3.8260803047573813,
+            "depth": 2.46781240561424,
+            "summary": 2.4832991191358182,
+            "persistence_depth": 2.630811973430634,
+            "persistence_summary": 2.5895293487332403
+          },
+          "gamma_depth": 0.3689923848680036,
+          "gamma_summary": 0.3674383338168689,
+          "summary_gain_over_depth_persistence": 0.015691970811414633
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "losses": {
+            "mean": 0.2235712545714127,
+            "unchanged_initial": 0.7725027242922431,
+            "depth": 0.22141355993428627,
+            "summary": 0.2209355638453703,
+            "persistence_depth": 0.13080726989682823,
+            "persistence_summary": 0.13836400648333871
+          },
+          "gamma_depth": 0.36346572845231995,
+          "gamma_summary": 0.3633641534550007,
+          "summary_gain_over_depth_persistence": -0.05777000462184343
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "losses": {
+            "mean": 7.184294286576476,
+            "unchanged_initial": 10.682257006362814,
+            "depth": 7.128520746672812,
+            "summary": 7.258127352484949,
+            "persistence_depth": 5.87184182691794,
+            "persistence_summary": 5.857330720841283
+          },
+          "gamma_depth": 0.36650514127227807,
+          "gamma_summary": 0.3642907245973439,
+          "summary_gain_over_depth_persistence": 0.0024713039799769444
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "losses": {
+            "mean": 3.5922599211102173,
+            "unchanged_initial": 7.132683984642221,
+            "depth": 3.5460095002416856,
+            "summary": 3.368551530292358,
+            "persistence_depth": 2.8391721298934565,
+            "persistence_summary": 2.8247255226656596
+          },
+          "gamma_depth": 0.3695590332773232,
+          "gamma_summary": 0.37006846642618924,
+          "summary_gain_over_depth_persistence": 0.0050883167933671635
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "losses": {
+            "mean": 5.058603313011993,
+            "unchanged_initial": 6.05599745461955,
+            "depth": 5.112071266607211,
+            "summary": 5.163060084529451,
+            "persistence_depth": 2.6176685912646707,
+            "persistence_summary": 2.6656131628367494
+          },
+          "gamma_depth": 0.3400420434095578,
+          "gamma_summary": 0.33893316951501135,
+          "summary_gain_over_depth_persistence": -0.01831575308351596
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "losses": {
+            "mean": 1.4066852177416065,
+            "unchanged_initial": 0.9054944484759477,
+            "depth": 1.397128413881945,
+            "summary": 1.391771501439036,
+            "persistence_depth": 0.8457668124107243,
+            "persistence_summary": 0.8446636957028686
+          },
+          "gamma_depth": 0.3546491809380106,
+          "gamma_summary": 0.35389876658435054,
+          "summary_gain_over_depth_persistence": 0.0013042799642509248
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "losses": {
+            "mean": 0.6660972054640476,
+            "unchanged_initial": 2.095802740227813,
+            "depth": 0.6977158967809818,
+            "summary": 0.720803131243233,
+            "persistence_depth": 0.5433547783037838,
+            "persistence_summary": 0.5450307771718532
+          },
+          "gamma_depth": 0.36689930793076736,
+          "gamma_summary": 0.36673993794723464,
+          "summary_gain_over_depth_persistence": -0.003084538748884304
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "losses": {
+            "mean": 3.8946563435296304,
+            "unchanged_initial": 3.4698716853063543,
+            "depth": 3.9103781592897637,
+            "summary": 3.7792993013861804,
+            "persistence_depth": 1.8468989767627613,
+            "persistence_summary": 1.8046802508046729
+          },
+          "gamma_depth": 0.337813035389269,
+          "gamma_summary": 0.33985680927472867,
+          "summary_gain_over_depth_persistence": 0.022859250283461224
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "losses": {
+            "mean": 0.02325103498288376,
+            "unchanged_initial": 0.20849205700104725,
+            "depth": 0.020129422437067248,
+            "summary": 0.02297542729143468,
+            "persistence_depth": 0.033442508766402895,
+            "persistence_summary": 0.03588758301992784
+          },
+          "gamma_depth": 0.3626875066594078,
+          "gamma_summary": 0.3623724957780591,
+          "summary_gain_over_depth_persistence": -0.07311276407532319
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "losses": {
+            "mean": 1.3769613174678532,
+            "unchanged_initial": 3.2647388837523605,
+            "depth": 1.3202902691120615,
+            "summary": 1.2830876529811217,
+            "persistence_depth": 0.5348604536816302,
+            "persistence_summary": 0.546293096087809
+          },
+          "gamma_depth": 0.3606764056342152,
+          "gamma_summary": 0.36086407898158496,
+          "summary_gain_over_depth_persistence": -0.02137500039025873
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "losses": {
+            "mean": 1.070260400831459,
+            "unchanged_initial": 3.098315135517165,
+            "depth": 1.0823158649327773,
+            "summary": 1.0923194073316893,
+            "persistence_depth": 0.8876951035425523,
+            "persistence_summary": 0.8618683750173359
+          },
+          "gamma_depth": 0.36873513580165107,
+          "gamma_summary": 0.3674422649286479,
+          "summary_gain_over_depth_persistence": 0.02909414327300992
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "losses": {
+            "mean": 0.13400554517511887,
+            "unchanged_initial": 0.36830562972053127,
+            "depth": 0.13368068258553753,
+            "summary": 0.11454060648207155,
+            "persistence_depth": 0.09076395310015842,
+            "persistence_summary": 0.09753027094957196
+          },
+          "gamma_depth": 0.36255196481605945,
+          "gamma_summary": 0.36265235471212676,
+          "summary_gain_over_depth_persistence": -0.07454851423171141
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "losses": {
+            "mean": 0.046665714334361556,
+            "unchanged_initial": 0.22341600320542687,
+            "depth": 0.04242257687979882,
+            "summary": 0.04088646688777007,
+            "persistence_depth": 0.046122073017895046,
+            "persistence_summary": 0.048049988334652245
+          },
+          "gamma_depth": 0.36284309632145445,
+          "gamma_summary": 0.36265584850452226,
+          "summary_gain_over_depth_persistence": -0.041800274588897623
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "losses": {
+            "mean": 5.79984899064112,
+            "unchanged_initial": 10.612195361619268,
+            "depth": 5.720806377402495,
+            "summary": 5.5441901157773135,
+            "persistence_depth": 4.706015393383056,
+            "persistence_summary": 4.612066840580191
+          },
+          "gamma_depth": 0.37836153805562694,
+          "gamma_summary": 0.3780238728289595,
+          "summary_gain_over_depth_persistence": 0.019963503080538653
+        }
+      ],
+      "kernel_folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 2.484768524573138,
+            "summary_rank": 2.846312610108243,
+            "summary_named": 2.8957266437622993,
+            "summary_rank_named": 3.059880145556831
+          }
+        },
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 1,
+          "losses": {
+            "summary": 2.4718403807510394,
+            "summary_rank": 2.6382620195890665,
+            "summary_named": 2.590411332801021,
+            "summary_rank_named": 2.6630722409743273
+          }
+        },
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 10,
+          "losses": {
+            "summary": 2.4313153017853737,
+            "summary_rank": 2.4829088723116968,
+            "summary_named": 2.4564699626365742,
+            "summary_rank_named": 2.4849559861425976
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.2209692530693962,
+            "summary_rank": 0.23575274936157892,
+            "summary_named": 0.3010654065316676,
+            "summary_rank_named": 0.31542967709843606
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.2212187643389243,
+            "summary_rank": 0.23055517657655214,
+            "summary_named": 0.16958618454183622,
+            "summary_rank_named": 0.1787982767025234
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.22219877229284007,
+            "summary_rank": 0.22438755925966009,
+            "summary_named": 0.14390455504581212,
+            "summary_rank_named": 0.14791000948681743
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 7.262300478554932,
+            "summary_rank": 7.599033477277658,
+            "summary_named": 7.069917078826444,
+            "summary_rank_named": 7.3448061796259
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 1,
+          "losses": {
+            "summary": 7.231061777568829,
+            "summary_rank": 7.3473983496783,
+            "summary_named": 6.600217542785384,
+            "summary_rank_named": 6.715869320490389
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 10,
+          "losses": {
+            "summary": 7.172411974308716,
+            "summary_rank": 7.221341411267914,
+            "summary_named": 6.78104285665265,
+            "summary_rank_named": 6.825813058453299
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 3.3696751659967337,
+            "summary_rank": 3.440951012006286,
+            "summary_named": 2.9850944698153197,
+            "summary_rank_named": 3.158671301583621
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 1,
+          "losses": {
+            "summary": 3.3631936650835996,
+            "summary_rank": 3.3454546112735795,
+            "summary_named": 2.7217977808644287,
+            "summary_rank_named": 2.78705655038292
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 10,
+          "losses": {
+            "summary": 3.373419716520565,
+            "summary_rank": 3.3299629607469905,
+            "summary_named": 2.860599321654128,
+            "summary_rank_named": 2.867260242909165
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 5.165423139837331,
+            "summary_rank": 5.553228382050898,
+            "summary_named": 4.505722233851461,
+            "summary_rank_named": 4.705585964530323
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 1,
+          "losses": {
+            "summary": 5.150133188836853,
+            "summary_rank": 5.284080593442294,
+            "summary_named": 3.7404331232066177,
+            "summary_rank_named": 3.815842408262902
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 10,
+          "losses": {
+            "summary": 5.117694023590087,
+            "summary_rank": 5.143943227636206,
+            "summary_named": 4.234906987327967,
+            "summary_rank_named": 4.285577690591273
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 1.3919641192307697,
+            "summary_rank": 1.4126476797217844,
+            "summary_named": 1.1315144940432833,
+            "summary_rank_named": 1.1632402867280245
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 1,
+          "losses": {
+            "summary": 1.390559437603384,
+            "summary_rank": 1.3804432119715861,
+            "summary_named": 0.9962192579899918,
+            "summary_rank_named": 1.0069555790645681
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 10,
+          "losses": {
+            "summary": 1.3881715392873448,
+            "summary_rank": 1.3815168143290946,
+            "summary_named": 1.1575248855252709,
+            "summary_rank_named": 1.1577930913618701
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.7227251044093225,
+            "summary_rank": 0.8037502340566616,
+            "summary_named": 0.8258088681482131,
+            "summary_rank_named": 0.8659578951595523
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.7091283489973632,
+            "summary_rank": 0.7269293705403987,
+            "summary_named": 0.5775648566035252,
+            "summary_rank_named": 0.6029114910102826
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.6897037069379325,
+            "summary_rank": 0.6785741637702011,
+            "summary_named": 0.533453387155433,
+            "summary_rank_named": 0.5402323759064482
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 3.782479723524802,
+            "summary_rank": 3.820211636635987,
+            "summary_named": 3.532909042330333,
+            "summary_rank_named": 3.5604654402336484
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 1,
+          "losses": {
+            "summary": 3.760444277046643,
+            "summary_rank": 3.749712263401682,
+            "summary_named": 2.9975300115067185,
+            "summary_rank_named": 3.0156516859202274
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 10,
+          "losses": {
+            "summary": 3.7433088906109626,
+            "summary_rank": 3.7107982292869544,
+            "summary_named": 3.198693744898252,
+            "summary_rank_named": 3.2078785127655927
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.02302215445517348,
+            "summary_rank": 0.022034419408852007,
+            "summary_named": 0.03143547492945274,
+            "summary_rank_named": 0.037053310354487015
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.02270666777302965,
+            "summary_rank": 0.01837561186861544,
+            "summary_named": 0.018873901530454595,
+            "summary_rank_named": 0.020729579933355145
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.022593244202869716,
+            "summary_rank": 0.01821955079911337,
+            "summary_named": 0.016202963147736116,
+            "summary_rank_named": 0.015355395219782563
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 1.2846529258061126,
+            "summary_rank": 1.2539054226351718,
+            "summary_named": 1.0722514207378455,
+            "summary_rank_named": 1.0838915538437217
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 1.2730252180048676,
+            "summary_rank": 1.2116477747437675,
+            "summary_named": 0.821130534650462,
+            "summary_rank_named": 0.819251867880034
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 1.2593888348327993,
+            "summary_rank": 1.2170936258663452,
+            "summary_named": 0.9318714974051288,
+            "summary_rank_named": 0.9224828368687692
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 1.0925791707498034,
+            "summary_rank": 1.1603577990139113,
+            "summary_named": 0.9849531339825399,
+            "summary_rank_named": 1.022123843106227
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 1.0907275517050041,
+            "summary_rank": 1.1033936620721527,
+            "summary_named": 0.7707400981605634,
+            "summary_rank_named": 0.7993105249524339
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 1.0783266910704132,
+            "summary_rank": 1.0795041013534272,
+            "summary_named": 0.8588828167525459,
+            "summary_rank_named": 0.8697448622128767
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.11451637745594663,
+            "summary_rank": 0.13663382949621722,
+            "summary_named": 0.21157918767103612,
+            "summary_rank_named": 0.24103307519304928
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.1148408468819736,
+            "summary_rank": 0.11819085444232245,
+            "summary_named": 0.10265920401645375,
+            "summary_rank_named": 0.11181637617275487
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.11613799367516832,
+            "summary_rank": 0.11541371075879377,
+            "summary_named": 0.08428558198641693,
+            "summary_rank_named": 0.08353692593796505
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.04097894048330058,
+            "summary_rank": 0.04373426458278984,
+            "summary_named": 0.05864705641096385,
+            "summary_rank_named": 0.054993740465600335
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.04036995349296614,
+            "summary_rank": 0.041721309569980096,
+            "summary_named": 0.039779662885900374,
+            "summary_rank_named": 0.03845793242646289
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.0402478115631362,
+            "summary_rank": 0.040403212612711153,
+            "summary_named": 0.03377578344144619,
+            "summary_rank_named": 0.03410440347723347
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 5.552775986333206,
+            "summary_rank": 6.166590202932126,
+            "summary_named": 5.934117344751147,
+            "summary_rank_named": 6.263240037372796
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 1,
+          "losses": {
+            "summary": 5.50366999158296,
+            "summary_rank": 5.705129671833342,
+            "summary_named": 4.551916203266098,
+            "summary_rank_named": 4.650488777541931
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 10,
+          "losses": {
+            "summary": 5.463123815752633,
+            "summary_rank": 5.4633262967964855,
+            "summary_named": 4.61247001050786,
+            "summary_rank_named": 4.647037313018574
+          }
+        }
+      ],
+      "persistence_total_losses": {
+        "mean": 32.897702897712854,
+        "unchanged_initial": 52.716153419500124,
+        "depth": 32.80069514237266,
+        "summary": 32.4838472611078,
+        "persistence_depth": 23.625221844372494,
+        "persistence_summary": 23.471633639229154
+      },
+      "summary_gain_over_depth": 0.009659791656535714,
+      "summary_gain_over_depth_persistence": 0.006501027002204607,
+      "persistence_gain_over_depth": 0.2797341110660514,
+      "summary_persistence_gain_over_mean": 0.2865266698952111,
+      "kernel_totals": [
+        {
+          "lambda": 0.1,
+          "losses": {
+            "summary": 32.50883106447997,
+            "summary_rank": 34.495143719288166,
+            "summary_named": 31.540741855792007,
+            "summary_rank_named": 32.876372450852216
+          },
+          "rank_gain_over_summary": -0.06110070986152726,
+          "named_gain_over_summary": 0.029779268493776274,
+          "named_increment_over_summary_rank": 0.046927511930637475,
+          "rank_increment_over_summary_named": -0.04234620102364332
+        },
+        {
+          "lambda": 1,
+          "losses": {
+            "summary": 32.342920069667436,
+            "summary_rank": 32.90129448100364,
+            "summary_named": 26.698859694809457,
+            "summary_rank_named": 27.226212611715113
+          },
+          "rank_gain_over_summary": -0.01726419290940493,
+          "named_gain_over_summary": 0.1745068275437263,
+          "named_increment_over_summary_rank": 0.17248810293969352,
+          "rank_increment_over_summary_named": -0.019751889141848965
+        },
+        {
+          "lambda": 10,
+          "losses": {
+            "summary": 32.11804231643084,
+            "summary_rank": 32.10739373679559,
+            "summary_named": 27.904084354137222,
+            "summary_rank_named": 28.089682704352263
+          },
+          "rank_gain_over_summary": 0.0003315451026041178,
+          "named_gain_over_summary": 0.13120220469159335,
+          "named_increment_over_summary_rank": 0.12513351489625793,
+          "rank_increment_over_summary_named": -0.006651296916235263
+        }
+      ]
+    },
+    "rank": {
+      "persistence_folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "losses": {
+            "mean": 0.4183657439406039,
+            "unchanged_initial": 1.200256196334101,
+            "depth": 0.4142842276912399,
+            "summary": 0.40137572645818015,
+            "persistence_depth": 0.5927497072290289,
+            "persistence_summary": 0.40678226737239864
+          },
+          "gamma_depth": 0.21842156127150963,
+          "gamma_summary": 0.14893616168419854,
+          "summary_gain_over_depth_persistence": 0.31373687340308615
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "losses": {
+            "mean": 0.05939242880784795,
+            "unchanged_initial": 0.25580953351183766,
+            "depth": 0.05478127496211123,
+            "summary": 0.04447473464204707,
+            "persistence_depth": 0.05554955434635765,
+            "persistence_summary": 0.04441265666683039
+          },
+          "gamma_depth": 0.18707795510442563,
+          "gamma_summary": 0.13882533460989346,
+          "summary_gain_over_depth_persistence": 0.200485815063204
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "losses": {
+            "mean": 1.209456207935852,
+            "unchanged_initial": 3.192667685145572,
+            "depth": 1.1976020681469983,
+            "summary": 1.259205059238143,
+            "persistence_depth": 1.1964119800834463,
+            "persistence_summary": 1.2374023012961661
+          },
+          "gamma_depth": 0.20510256724634868,
+          "gamma_summary": 0.11123407508858232,
+          "summary_gain_over_depth_persistence": -0.034261042095099115
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "losses": {
+            "mean": 1.2204447726824554,
+            "unchanged_initial": 2.9971674868779923,
+            "depth": 1.2263359218978973,
+            "summary": 1.105650235669874,
+            "persistence_depth": 1.156806916245535,
+            "persistence_summary": 1.102501436271535
+          },
+          "gamma_depth": 0.1841290088955843,
+          "gamma_summary": 0.1404785810001677,
+          "summary_gain_over_depth_persistence": 0.046944290539211696
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "losses": {
+            "mean": 0.8936621771289401,
+            "unchanged_initial": 1.796782031597014,
+            "depth": 0.8739031318977675,
+            "summary": 0.7543856609450756,
+            "persistence_depth": 0.7046976908132906,
+            "persistence_summary": 0.7417676498328835
+          },
+          "gamma_depth": 0.1630271749505548,
+          "gamma_summary": 0.13009268868871912,
+          "summary_gain_over_depth_persistence": -0.05260405916302987
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "losses": {
+            "mean": 0.19942159487265332,
+            "unchanged_initial": 0.14503978317175284,
+            "depth": 0.19958351533533258,
+            "summary": 0.15526558049980774,
+            "persistence_depth": 0.14786382279797738,
+            "persistence_summary": 0.1467734561512279
+          },
+          "gamma_depth": 0.17864452143084097,
+          "gamma_summary": 0.12608061322547562,
+          "summary_gain_over_depth_persistence": 0.007374127261941801
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "losses": {
+            "mean": 0.16353544331929934,
+            "unchanged_initial": 0.5695367081216959,
+            "depth": 0.16198464266934653,
+            "summary": 0.10215915469320788,
+            "persistence_depth": 0.1278826356967245,
+            "persistence_summary": 0.10208289510497451
+          },
+          "gamma_depth": 0.18417097997261472,
+          "gamma_summary": 0.14207454696909722,
+          "summary_gain_over_depth_persistence": 0.2017454555201259
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "losses": {
+            "mean": 1.012744949349466,
+            "unchanged_initial": 2.342646569545767,
+            "depth": 1.0475051341623889,
+            "summary": 0.9281887222212906,
+            "persistence_depth": 0.896483759378186,
+            "persistence_summary": 0.9341188391932885
+          },
+          "gamma_depth": 0.16504158115928294,
+          "gamma_summary": 0.1542562421995918,
+          "summary_gain_over_depth_persistence": -0.04198077145447312
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "losses": {
+            "mean": 0.04740081028741411,
+            "unchanged_initial": 0.06841643488590575,
+            "depth": 0.05316059074389839,
+            "summary": 0.04708636591274069,
+            "persistence_depth": 0.043640508184012314,
+            "persistence_summary": 0.048803811693563945
+          },
+          "gamma_depth": 0.18469800436671102,
+          "gamma_summary": 0.14244972845233111,
+          "summary_gain_over_depth_persistence": -0.11831446801169941
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "losses": {
+            "mean": 0.2869757735320137,
+            "unchanged_initial": 1.7486107937418867,
+            "depth": 0.3118998107240524,
+            "summary": 0.30494152570129457,
+            "persistence_depth": 0.26730411508222196,
+            "persistence_summary": 0.29638593744474
+          },
+          "gamma_depth": 0.18653789163765602,
+          "gamma_summary": 0.1282904230216172,
+          "summary_gain_over_depth_persistence": -0.1087967626445727
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "losses": {
+            "mean": 0.28210246479609846,
+            "unchanged_initial": 0.7475597347598448,
+            "depth": 0.29083341022540765,
+            "summary": 0.2001477839228064,
+            "persistence_depth": 0.23003982575902326,
+            "persistence_summary": 0.19166655400396856
+          },
+          "gamma_depth": 0.17979165772814126,
+          "gamma_summary": 0.12709168414220298,
+          "summary_gain_over_depth_persistence": 0.1668114276666701
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "losses": {
+            "mean": 0.13253736422584383,
+            "unchanged_initial": 0.07103340141590211,
+            "depth": 0.12663975650323567,
+            "summary": 0.07531384305526587,
+            "persistence_depth": 0.08085351278131647,
+            "persistence_summary": 0.07277047887812266
+          },
+          "gamma_depth": 0.17909265089271628,
+          "gamma_summary": 0.13638828304202874,
+          "summary_gain_over_depth_persistence": 0.09997133859917626
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "losses": {
+            "mean": 0.01957441980247119,
+            "unchanged_initial": 0.07755937435237253,
+            "depth": 0.02788573895003149,
+            "summary": 0.014058976741972064,
+            "persistence_depth": 0.029627105820613814,
+            "persistence_summary": 0.014768619126369101
+          },
+          "gamma_depth": 0.18653755553220844,
+          "gamma_summary": 0.14024136919361482,
+          "summary_gain_over_depth_persistence": 0.5015166443934778
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "losses": {
+            "mean": 1.0172685953331801,
+            "unchanged_initial": 2.8649678808509393,
+            "depth": 1.0846287855825802,
+            "summary": 0.8621153779180359,
+            "persistence_depth": 1.0326571283353945,
+            "persistence_summary": 0.8688083097004198
+          },
+          "gamma_depth": 0.20350274493548018,
+          "gamma_summary": 0.16792770203108373,
+          "summary_gain_over_depth_persistence": 0.15866720341057733
+        }
+      ],
+      "kernel_folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.3996460473630542,
+            "summary_rank": 0.33486453295372126,
+            "summary_named": 0.28990620849690224,
+            "summary_rank_named": 0.25752247721513766
+          }
+        },
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.4156712154650855,
+            "summary_rank": 0.35820956432700324,
+            "summary_named": 0.32051921784699305,
+            "summary_rank_named": 0.3024410736546404
+          }
+        },
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.46493708302967024,
+            "summary_rank": 0.40858574499166544,
+            "summary_named": 0.3968757671158779,
+            "summary_rank_named": 0.37298624787148416
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.04393042364240085,
+            "summary_rank": 0.042581164828324816,
+            "summary_named": 0.0627489882476981,
+            "summary_rank_named": 0.07198389290700458
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.048327962993235066,
+            "summary_rank": 0.04387382249756623,
+            "summary_named": 0.056210078156784526,
+            "summary_rank_named": 0.05738653852099108
+          }
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.05368887335779253,
+            "summary_rank": 0.04602992421503167,
+            "summary_named": 0.05219011515135334,
+            "summary_rank_named": 0.04852481717128039
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 1.2584569996411794,
+            "summary_rank": 1.206103895426157,
+            "summary_named": 1.3955621461801002,
+            "summary_rank_named": 1.391400276075534
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 1,
+          "losses": {
+            "summary": 1.2633834831996902,
+            "summary_rank": 1.1474850751698802,
+            "summary_named": 1.1551091119245152,
+            "summary_rank_named": 1.139535887591152
+          }
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "lambda": 10,
+          "losses": {
+            "summary": 1.2430920509628391,
+            "summary_rank": 1.1602366113567213,
+            "summary_named": 1.1325360215199405,
+            "summary_rank_named": 1.1020527514053862
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 1.1074136370874155,
+            "summary_rank": 0.9799726704785828,
+            "summary_named": 1.165219916771437,
+            "summary_rank_named": 1.099558462405102
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 1,
+          "losses": {
+            "summary": 1.0964326721123294,
+            "summary_rank": 0.9973909910562668,
+            "summary_named": 0.959035557753618,
+            "summary_rank_named": 0.9234742559073675
+          }
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "lambda": 10,
+          "losses": {
+            "summary": 1.1121748949247836,
+            "summary_rank": 1.0648516259546374,
+            "summary_named": 1.041560835751828,
+            "summary_rank_named": 0.9963954363864516
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.7563883884301428,
+            "summary_rank": 0.7872185822199396,
+            "summary_named": 1.023122841188479,
+            "summary_rank_named": 1.106014684109644
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.7437970792832129,
+            "summary_rank": 0.70565846437461,
+            "summary_named": 0.6603951191588886,
+            "summary_rank_named": 0.6810752176153019
+          }
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.7425707269015798,
+            "summary_rank": 0.7015102460909012,
+            "summary_named": 0.6868758403741735,
+            "summary_rank_named": 0.6542795011099143
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.15563316584946296,
+            "summary_rank": 0.1669871829416584,
+            "summary_named": 0.28962048510128113,
+            "summary_rank_named": 0.3088722166432654
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.15317587041046032,
+            "summary_rank": 0.16400212104431136,
+            "summary_named": 0.19415545387037636,
+            "summary_rank_named": 0.20998684156418335
+          }
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.15518971263472509,
+            "summary_rank": 0.15207213517375928,
+            "summary_named": 0.1581578751171724,
+            "summary_rank_named": 0.15830810752971736
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.10210611834918179,
+            "summary_rank": 0.16342374298713416,
+            "summary_named": 0.28347201979944986,
+            "summary_rank_named": 0.2769815758655624
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.1035030456506911,
+            "summary_rank": 0.13495010716446468,
+            "summary_named": 0.1764562316155767,
+            "summary_rank_named": 0.18671788709645532
+          }
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.11220629636028427,
+            "summary_rank": 0.10725077899180196,
+            "summary_named": 0.1340802253192822,
+            "summary_rank_named": 0.13122466692609325
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.9272745940253049,
+            "summary_rank": 0.8333229075721285,
+            "summary_named": 0.9960788551224106,
+            "summary_rank_named": 1.0197683873387096
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.9331959282487851,
+            "summary_rank": 0.8861676703302217,
+            "summary_named": 0.8435185750326544,
+            "summary_rank_named": 0.8620548179854115
+          }
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.9204142377761304,
+            "summary_rank": 0.9366520847328468,
+            "summary_named": 0.835865755138304,
+            "summary_rank_named": 0.8565666383118407
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.04739441988130034,
+            "summary_rank": 0.03713086275394517,
+            "summary_named": 0.031013009228909275,
+            "summary_rank_named": 0.037082568109053644
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.04497050195858935,
+            "summary_rank": 0.03378522353744906,
+            "summary_named": 0.035444419085579215,
+            "summary_rank_named": 0.03606118158729801
+          }
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.04219336077868792,
+            "summary_rank": 0.037519491171483864,
+            "summary_named": 0.038290687186095816,
+            "summary_rank_named": 0.0359573650652776
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.3059502394153332,
+            "summary_rank": 0.19152643336344535,
+            "summary_named": 0.26768916007943105,
+            "summary_rank_named": 0.26385432263130715
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.2972034666956054,
+            "summary_rank": 0.18860969207289577,
+            "summary_named": 0.22159537879325963,
+            "summary_rank_named": 0.19105457711213386
+          }
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.2708461152470537,
+            "summary_rank": 0.22118796809630742,
+            "summary_named": 0.24870571097006222,
+            "summary_rank_named": 0.21786407773366417
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.19995556718097995,
+            "summary_rank": 0.20234901393465532,
+            "summary_named": 0.4684593666896181,
+            "summary_rank_named": 0.47658806195287073
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.20232580915051113,
+            "summary_rank": 0.20093864786866497,
+            "summary_named": 0.28894183453055317,
+            "summary_rank_named": 0.3032422782968835
+          }
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.21458668139961634,
+            "summary_rank": 0.20923625623415074,
+            "summary_named": 0.2265623029826962,
+            "summary_rank_named": 0.2272812942836099
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.07534730564424111,
+            "summary_rank": 0.03245976696581246,
+            "summary_named": 0.09856397108990975,
+            "summary_rank_named": 0.09381903657546126
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.07546721205589274,
+            "summary_rank": 0.03155671493925038,
+            "summary_named": 0.0500227553310353,
+            "summary_rank_named": 0.03591059065828835
+          }
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.08185224171247055,
+            "summary_rank": 0.04997597245750064,
+            "summary_named": 0.06877360341690973,
+            "summary_rank_named": 0.049271612744393005
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.013822037667294828,
+            "summary_rank": 0.016452815264778535,
+            "summary_named": 0.0034910364783514694,
+            "summary_rank_named": 0.009938391706596508
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.015831457448146867,
+            "summary_rank": 0.017069097173679066,
+            "summary_named": 0.00909259294856859,
+            "summary_rank_named": 0.012842710426835012
+          }
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.01960515955001927,
+            "summary_rank": 0.016948380790401202,
+            "summary_named": 0.016708646865280185,
+            "summary_rank_named": 0.016132993265340748
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 0.1,
+          "losses": {
+            "summary": 0.8635515645421933,
+            "summary_rank": 1.021763053935746,
+            "summary_named": 1.0039444225463092,
+            "summary_rank_named": 1.253177406462673
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 1,
+          "losses": {
+            "summary": 0.8620320338673384,
+            "summary_rank": 0.9226707842380832,
+            "summary_named": 0.779398818145425,
+            "summary_rank_named": 0.8776811484252193
+          }
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "lambda": 10,
+          "losses": {
+            "summary": 0.9028237725722115,
+            "summary_rank": 0.8635986812990611,
+            "summary_named": 0.8194642272339616,
+            "summary_rank_named": 0.8059998698122139
+          }
+        }
+      ],
+      "persistence_total_losses": {
+        "mean": 6.96288274601414,
+        "unchanged_initial": 18.078053614312584,
+        "depth": 7.071028009492288,
+        "summary": 6.254368747619742,
+        "persistence_depth": 6.562568262553128,
+        "persistence_summary": 6.209045212736489
+      },
+      "summary_gain_over_depth": 0.11549371050096914,
+      "summary_gain_over_depth_persistence": 0.05386961867259933,
+      "persistence_gain_over_depth": 0.07190747176458546,
+      "summary_persistence_gain_over_mean": 0.10826514832655784,
+      "kernel_totals": [
+        {
+          "lambda": 0.1,
+          "losses": {
+            "summary": 6.256870508719485,
+            "summary_rank": 6.01615662562603,
+            "summary_named": 7.378892427020287,
+            "summary_rank_named": 7.666561759997922
+          },
+          "rank_gain_over_summary": 0.038471929818269406,
+          "named_gain_over_summary": -0.17932637677848184,
+          "named_increment_over_summary_rank": -0.2743288177275728,
+          "rank_increment_over_summary_named": -0.03898543525641292
+        },
+        {
+          "lambda": 1,
+          "losses": {
+            "summary": 6.255317738539573,
+            "summary_rank": 5.832367975794346,
+            "summary_named": 5.749895144193828,
+            "summary_rank_named": 5.819465006442162
+          },
+          "rank_gain_over_summary": 0.06761443309896084,
+          "named_gain_over_summary": 0.08079886833434398,
+          "named_increment_over_summary_rank": 0.002212303717072546,
+          "rank_increment_over_summary_named": -0.012099327118788313
+        },
+        {
+          "lambda": 10,
+          "losses": {
+            "summary": 6.336181207207864,
+            "summary_rank": 5.97565590155627,
+            "summary_named": 5.856647614142938,
+            "summary_rank_named": 5.672845379616668
+          },
+          "rank_gain_over_summary": 0.05689946260398459,
+          "named_gain_over_summary": 0.07568179908103354,
+          "named_increment_over_summary_rank": 0.050674022555539086,
+          "rank_increment_over_summary_named": 0.031383522901807376
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Same source experiment as initial-state result; no independent new study.",
+    "All models trained on other locations; no heldout outcome tuning.",
+    "Descriptive follow-up losses, no p-values or inference of causal mechanism.",
+    "Kernel comparisons model-specific; predictions unconstrained; read profiles not biomass."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45525145757",
+  "source_job_id": 138906509794,
+  "source_commit": "af6090908d3e3b94cf8eb3841498b74d210a02bb",
+  "original_repo": "https://github.com/apascualgarcia/ReplayEcology",
+  "original_commit": "fba177fbae5c51c059cb6075298be9732c6c3aba",
+  "prescore_contract": "docs/AHIF_REPLAY2025_PERSISTENCE_PRESCORE_20261125.md"
+}

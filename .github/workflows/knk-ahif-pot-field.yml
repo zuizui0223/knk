@@ -1,0 +1,51 @@
+name: AHIF independent pot-to-field plant history transfer
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-pot-field.yml"
+      - "benchmarks/score_ahif_vansteijn_pot_field.py"
+      - "tests/test_ahif_vansteijn_pot_field.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic no leakage and contrast tests
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_vansteijn_pot_field.py -q
+      - name: Fetch both original version-pinned source sets
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          from urllib.parse import quote
+          from benchmarks.score_ahif_vansteijn_pot_field import POT_MD5,FIELD_MD5
+          root=Path(os.environ["RUNNER_TEMP"])/"potfield"
+          for folder,record,files in (("pot",10512662,POT_MD5),("field",15363824,FIELD_MD5)):
+              dest=root/folder
+              dest.mkdir(parents=True,exist_ok=True)
+              for name,md5 in files.items():
+                  req=urllib.request.Request(f"https://zenodo.org/records/{record}/files/{quote(name)}?download=1",headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+                  with urllib.request.urlopen(req,timeout=90) as res:
+                      b=res.read(2_000_001)
+                  assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5
+                  (dest/name).write_bytes(b)
+          PY
+      - name: Transfer age-matched pair responses to held-site held-focal field contrasts
+        run: python -m benchmarks.score_ahif_vansteijn_pot_field --pot "$RUNNER_TEMP/potfield/pot" --field "$RUNNER_TEMP/potfield/field" --output "$RUNNER_TEMP/potfield/transfer.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-pot-field-transfer-derived-only
+          path: ${{ runner.temp }}/potfield/transfer.json
+          retention-days: 30

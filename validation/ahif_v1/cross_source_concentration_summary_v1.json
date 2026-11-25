@@ -1,0 +1,1131 @@
+{
+  "status": "SOURCE_LOCKED_CROSS_SOURCE_RESPONSE_CONCENTRATION_DESCRIPTIVE",
+  "n_source_experiments": 4,
+  "n_contrast_panels": 19,
+  "n_all_cells": 25680,
+  "n_undefined_support": 2957,
+  "cells_by_source": {
+    "pond": 8064,
+    "kansas": 336,
+    "poem": 14400,
+    "field": 2880
+  },
+  "descriptive": [
+    {
+      "source": "kansas",
+      "role": "other_named",
+      "direction": -1,
+      "n_cells": 84,
+      "n_defined": 84,
+      "mean_roster": 62,
+      "mean_top1": 0.5563584762705245,
+      "mean_support_count": 10.702380952380953,
+      "mean_effective_support": 2.784036311323609,
+      "mean_normalized_excess": 0.509234542048454,
+      "n_single_contributor": 0,
+      "by_support_count": {
+        "1": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "2": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "3": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "4": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "5+": {
+          "n": 84,
+          "mean_top1": 0.5563584762705245
+        }
+      },
+      "n_positive_net": 60,
+      "n_retained_10pct_roster": 57,
+      "mean_removed_taxa": 6.966666666666667
+    },
+    {
+      "source": "kansas",
+      "role": "other_named",
+      "direction": 1,
+      "n_cells": 84,
+      "n_defined": 84,
+      "mean_roster": 62,
+      "mean_top1": 0.6686676580957647,
+      "mean_support_count": 5.630952380952381,
+      "mean_effective_support": 1.999584795682023,
+      "mean_normalized_excess": 0.5553285659845844,
+      "n_single_contributor": 5,
+      "by_support_count": {
+        "1": {
+          "n": 5,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 6,
+          "mean_top1": 0.7050549803262864
+        },
+        "3": {
+          "n": 8,
+          "mean_top1": 0.7786734855532165
+        },
+        "4": {
+          "n": 12,
+          "mean_top1": 0.7316530758637384
+        },
+        "5+": {
+          "n": 53,
+          "mean_top1": 0.6024250679867154
+        }
+      },
+      "n_positive_net": 24,
+      "n_retained_10pct_roster": 17,
+      "mean_removed_taxa": 4.791666666666667
+    },
+    {
+      "source": "kansas",
+      "role": "sown_list",
+      "direction": -1,
+      "n_cells": 84,
+      "n_defined": 39,
+      "mean_roster": 27,
+      "mean_top1": 0.9223667936893296,
+      "mean_support_count": 1.4871794871794872,
+      "mean_effective_support": 1.205080177861073,
+      "mean_normalized_excess": 0.6247232774663416,
+      "n_single_contributor": 25,
+      "by_support_count": {
+        "1": {
+          "n": 25,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 11,
+          "mean_top1": 0.8437472054861072
+        },
+        "3": {
+          "n": 2,
+          "mean_top1": 0.6396604938271605
+        },
+        "4": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "5+": {
+          "n": 1,
+          "mean_top1": 0.4117647058823529
+        }
+      },
+      "n_positive_net": 1,
+      "n_retained_10pct_roster": 1,
+      "mean_removed_taxa": 0
+    },
+    {
+      "source": "kansas",
+      "role": "sown_list",
+      "direction": 1,
+      "n_cells": 84,
+      "n_defined": 75,
+      "mean_roster": 27,
+      "mean_top1": 0.4746015169773681,
+      "mean_support_count": 9.146666666666667,
+      "mean_effective_support": 3.5313406788717066,
+      "mean_normalized_excess": 0.38144165758568144,
+      "n_single_contributor": 3,
+      "by_support_count": {
+        "1": {
+          "n": 3,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 1,
+          "mean_top1": 0.9249999999999999
+        },
+        "3": {
+          "n": 2,
+          "mean_top1": 0.6640926640926641
+        },
+        "4": {
+          "n": 2,
+          "mean_top1": 0.7240188383045525
+        },
+        "5+": {
+          "n": 67,
+          "mean_top1": 0.4312521010225101
+        }
+      },
+      "n_positive_net": 74,
+      "n_retained_10pct_roster": 73,
+      "mean_removed_taxa": 2.7027027027027026
+    },
+    {
+      "source": "pond",
+      "role": "cyanobacteria",
+      "direction": -1,
+      "n_cells": 2016,
+      "n_defined": 1080,
+      "mean_roster": 8,
+      "mean_top1": 0.9430133523365991,
+      "mean_support_count": 1.512037037037037,
+      "mean_effective_support": 1.1287235584055688,
+      "mean_normalized_excess": 0.6913334080663369,
+      "n_single_contributor": 711,
+      "by_support_count": {
+        "1": {
+          "n": 711,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 195,
+          "mean_top1": 0.7762909479541903
+        },
+        "3": {
+          "n": 164,
+          "mean_top1": 0.8992064747950348
+        },
+        "4": {
+          "n": 10,
+          "mean_top1": 0.8607823806074186
+        },
+        "5+": {
+          "n": 0,
+          "mean_top1": null
+        }
+      },
+      "n_positive_net": 780,
+      "n_retained_10pct_roster": 446,
+      "mean_removed_taxa": 0.7282051282051282
+    },
+    {
+      "source": "pond",
+      "role": "cyanobacteria",
+      "direction": 1,
+      "n_cells": 2016,
+      "n_defined": 1505,
+      "mean_roster": 8,
+      "mean_top1": 0.964516297729026,
+      "mean_support_count": 1.3833887043189368,
+      "mean_effective_support": 1.0851905747749566,
+      "mean_normalized_excess": 0.7796871789585739,
+      "n_single_contributor": 1057,
+      "by_support_count": {
+        "1": {
+          "n": 1057,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 321,
+          "mean_top1": 0.8835924994207703
+        },
+        "3": {
+          "n": 125,
+          "mean_top1": 0.8759211450152306
+        },
+        "4": {
+          "n": 2,
+          "mean_top1": 0.7368463206065303
+        },
+        "5+": {
+          "n": 0,
+          "mean_top1": null
+        }
+      },
+      "n_positive_net": 1235,
+      "n_retained_10pct_roster": 577,
+      "mean_removed_taxa": 0.7951417004048583
+    },
+    {
+      "source": "pond",
+      "role": "other_named_algae",
+      "direction": -1,
+      "n_cells": 2016,
+      "n_defined": 1946,
+      "mean_roster": 43,
+      "mean_top1": 0.7224117220371931,
+      "mean_support_count": 4.955806783144912,
+      "mean_effective_support": 1.9334375505947858,
+      "mean_normalized_excess": 0.6021882222560357,
+      "n_single_contributor": 192,
+      "by_support_count": {
+        "1": {
+          "n": 192,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 178,
+          "mean_top1": 0.7924817556741637
+        },
+        "3": {
+          "n": 202,
+          "mean_top1": 0.735099563023151
+        },
+        "4": {
+          "n": 245,
+          "mean_top1": 0.7037875832374467
+        },
+        "5+": {
+          "n": 1129,
+          "mean_top1": 0.6659285996018824
+        }
+      },
+      "n_positive_net": 1264,
+      "n_retained_10pct_roster": 908,
+      "mean_removed_taxa": 4.424841772151899
+    },
+    {
+      "source": "pond",
+      "role": "other_named_algae",
+      "direction": 1,
+      "n_cells": 2016,
+      "n_defined": 2005,
+      "mean_roster": 43,
+      "mean_top1": 0.6510436536955392,
+      "mean_support_count": 5.607481296758105,
+      "mean_effective_support": 2.2204989470648684,
+      "mean_normalized_excess": 0.5380291004553621,
+      "n_single_contributor": 82,
+      "by_support_count": {
+        "1": {
+          "n": 82,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 183,
+          "mean_top1": 0.7847823047576759
+        },
+        "3": {
+          "n": 226,
+          "mean_top1": 0.7204126220148548
+        },
+        "4": {
+          "n": 235,
+          "mean_top1": 0.6388401479698231
+        },
+        "5+": {
+          "n": 1279,
+          "mean_top1": 0.5995204664117559
+        }
+      },
+      "n_positive_net": 752,
+      "n_retained_10pct_roster": 655,
+      "mean_removed_taxa": 4.496010638297872
+    },
+    {
+      "source": "poem",
+      "role": "early_sown",
+      "direction": -1,
+      "n_cells": 2400,
+      "n_defined": 1704,
+      "mean_roster": 4.666666666666667,
+      "mean_top1": 0.8852827191006283,
+      "mean_support_count": 1.8485915492957747,
+      "mean_effective_support": 1.2842663650526012,
+      "mean_normalized_excess": 0.6557282766326229,
+      "n_single_contributor": 730,
+      "by_support_count": {
+        "1": {
+          "n": 730,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 603,
+          "mean_top1": 0.843843316833969
+        },
+        "3": {
+          "n": 270,
+          "mean_top1": 0.7353775616953646
+        },
+        "4": {
+          "n": 101,
+          "mean_top1": 0.70428011523603
+        },
+        "5+": {
+          "n": 0,
+          "mean_top1": null
+        }
+      },
+      "n_positive_net": 550,
+      "n_retained_10pct_roster": 437,
+      "mean_removed_taxa": 0.6363636363636364
+    },
+    {
+      "source": "poem",
+      "role": "early_sown",
+      "direction": 1,
+      "n_cells": 2400,
+      "n_defined": 2275,
+      "mean_roster": 4.666666666666667,
+      "mean_top1": 0.7560754057450412,
+      "mean_support_count": 3.0567032967032968,
+      "mean_effective_support": 1.7090648943259916,
+      "mean_normalized_excess": 0.5795551380940434,
+      "n_single_contributor": 321,
+      "by_support_count": {
+        "1": {
+          "n": 321,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 474,
+          "mean_top1": 0.8039006449760053
+        },
+        "3": {
+          "n": 667,
+          "mean_top1": 0.7252667858542817
+        },
+        "4": {
+          "n": 483,
+          "mean_top1": 0.653347757233191
+        },
+        "5+": {
+          "n": 330,
+          "mean_top1": 0.6627355437663777
+        }
+      },
+      "n_positive_net": 1847,
+      "n_retained_10pct_roster": 1672,
+      "mean_removed_taxa": 0.8890092041147807
+    },
+    {
+      "source": "poem",
+      "role": "nonsown",
+      "direction": -1,
+      "n_cells": 2400,
+      "n_defined": 2297,
+      "mean_roster": 35,
+      "mean_top1": 0.8452570081989705,
+      "mean_support_count": 2.5202437962559863,
+      "mean_effective_support": 1.415106982410417,
+      "mean_normalized_excess": 0.6875974670804614,
+      "n_single_contributor": 493,
+      "by_support_count": {
+        "1": {
+          "n": 493,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 735,
+          "mean_top1": 0.8449520884744972
+        },
+        "3": {
+          "n": 621,
+          "mean_top1": 0.8188002449168693
+        },
+        "4": {
+          "n": 326,
+          "mean_top1": 0.752154486968497
+        },
+        "5+": {
+          "n": 122,
+          "mean_top1": 0.6052315406489679
+        }
+      },
+      "n_positive_net": 419,
+      "n_retained_10pct_roster": 249,
+      "mean_removed_taxa": 2.615751789976134
+    },
+    {
+      "source": "poem",
+      "role": "nonsown",
+      "direction": 1,
+      "n_cells": 2400,
+      "n_defined": 2398,
+      "mean_roster": 35,
+      "mean_top1": 0.6343501014563842,
+      "mean_support_count": 6.191826522101752,
+      "mean_effective_support": 2.396279342370135,
+      "mean_normalized_excess": 0.5545039566390134,
+      "n_single_contributor": 30,
+      "by_support_count": {
+        "1": {
+          "n": 30,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 95,
+          "mean_top1": 0.9264080282167364
+        },
+        "3": {
+          "n": 183,
+          "mean_top1": 0.8185260907933298
+        },
+        "4": {
+          "n": 316,
+          "mean_top1": 0.7219942705479144
+        },
+        "5+": {
+          "n": 1774,
+          "mean_top1": 0.577915623733652
+        }
+      },
+      "n_positive_net": 1981,
+      "n_retained_10pct_roster": 1859,
+      "mean_removed_taxa": 3.823321554770318
+    },
+    {
+      "source": "poem",
+      "role": "other_sown",
+      "direction": -1,
+      "n_cells": 2400,
+      "n_defined": 2400,
+      "mean_roster": 9.333333333333334,
+      "mean_top1": 0.64635263874587,
+      "mean_support_count": 5.46875,
+      "mean_effective_support": 2.2704764199101017,
+      "mean_normalized_excess": 0.5603716307431887,
+      "n_single_contributor": 2,
+      "by_support_count": {
+        "1": {
+          "n": 2,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 78,
+          "mean_top1": 0.8117395143763214
+        },
+        "3": {
+          "n": 185,
+          "mean_top1": 0.7576966484694037
+        },
+        "4": {
+          "n": 438,
+          "mean_top1": 0.7151483804691142
+        },
+        "5+": {
+          "n": 1697,
+          "mean_top1": 0.6084394698034314
+        }
+      },
+      "n_positive_net": 1853,
+      "n_retained_10pct_roster": 1715,
+      "mean_removed_taxa": 1
+    },
+    {
+      "source": "poem",
+      "role": "other_sown",
+      "direction": 1,
+      "n_cells": 2400,
+      "n_defined": 2315,
+      "mean_roster": 9.333333333333334,
+      "mean_top1": 0.757215575233153,
+      "mean_support_count": 2.961123110151188,
+      "mean_effective_support": 1.6688468873553346,
+      "mean_normalized_excess": 0.5663545160267368,
+      "n_single_contributor": 411,
+      "by_support_count": {
+        "1": {
+          "n": 411,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 467,
+          "mean_top1": 0.8187071601811733
+        },
+        "3": {
+          "n": 611,
+          "mean_top1": 0.6964169303513031
+        },
+        "4": {
+          "n": 515,
+          "mean_top1": 0.6594543244409876
+        },
+        "5+": {
+          "n": 311,
+          "mean_top1": 0.6253636377118527
+        }
+      },
+      "n_positive_net": 547,
+      "n_retained_10pct_roster": 488,
+      "mean_removed_taxa": 0.8775137111517367
+    },
+    {
+      "source": "field",
+      "role": "early_sown",
+      "direction": -1,
+      "n_cells": 480,
+      "n_defined": 315,
+      "mean_roster": 10,
+      "mean_top1": 0.7907894874324014,
+      "mean_support_count": 2.022222222222222,
+      "mean_effective_support": 1.6310848191244225,
+      "mean_normalized_excess": 0.3961555379147624,
+      "n_single_contributor": 138,
+      "by_support_count": {
+        "1": {
+          "n": 138,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 88,
+          "mean_top1": 0.7201427471199686
+        },
+        "3": {
+          "n": 51,
+          "mean_top1": 0.5927275727180948
+        },
+        "4": {
+          "n": 24,
+          "mean_top1": 0.5106395493255474
+        },
+        "5+": {
+          "n": 14,
+          "mean_top1": 0.3744051001580856
+        }
+      },
+      "n_positive_net": 17,
+      "n_retained_10pct_roster": 10,
+      "mean_removed_taxa": 0.6470588235294118
+    },
+    {
+      "source": "field",
+      "role": "early_sown",
+      "direction": 1,
+      "n_cells": 480,
+      "n_defined": 480,
+      "mean_roster": 10,
+      "mean_top1": 0.47922607488810604,
+      "mean_support_count": 5.075,
+      "mean_effective_support": 3.0674007799375222,
+      "mean_normalized_excess": 0.34358845916829206,
+      "n_single_contributor": 0,
+      "by_support_count": {
+        "1": {
+          "n": 0,
+          "mean_top1": null
+        },
+        "2": {
+          "n": 7,
+          "mean_top1": 0.7242400456686171
+        },
+        "3": {
+          "n": 52,
+          "mean_top1": 0.6206232367881467
+        },
+        "4": {
+          "n": 82,
+          "mean_top1": 0.5377242980326161
+        },
+        "5+": {
+          "n": 339,
+          "mean_top1": 0.4383275365042845
+        }
+      },
+      "n_positive_net": 462,
+      "n_retained_10pct_roster": 445,
+      "mean_removed_taxa": 0.9696969696969697
+    },
+    {
+      "source": "field",
+      "role": "nonsown",
+      "direction": -1,
+      "n_cells": 480,
+      "n_defined": 480,
+      "mean_roster": 58,
+      "mean_top1": 0.48027952994131695,
+      "mean_support_count": 5.810416666666667,
+      "mean_effective_support": 3.4102282414281566,
+      "mean_normalized_excess": 0.31958188321833986,
+      "n_single_contributor": 15,
+      "by_support_count": {
+        "1": {
+          "n": 15,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 46,
+          "mean_top1": 0.7293482879300285
+        },
+        "3": {
+          "n": 65,
+          "mean_top1": 0.6109726327568317
+        },
+        "4": {
+          "n": 80,
+          "mean_top1": 0.5303506005124318
+        },
+        "5+": {
+          "n": 274,
+          "mean_top1": 0.36439008743380374
+        }
+      },
+      "n_positive_net": 269,
+      "n_retained_10pct_roster": 203,
+      "mean_removed_taxa": 5.104089219330855
+    },
+    {
+      "source": "field",
+      "role": "nonsown",
+      "direction": 1,
+      "n_cells": 480,
+      "n_defined": 464,
+      "mean_roster": 58,
+      "mean_top1": 0.6439074553613031,
+      "mean_support_count": 4.286637931034483,
+      "mean_effective_support": 2.43348116515875,
+      "mean_normalized_excess": 0.43295720356310907,
+      "n_single_contributor": 73,
+      "by_support_count": {
+        "1": {
+          "n": 73,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 82,
+          "mean_top1": 0.7922724828556813
+        },
+        "3": {
+          "n": 91,
+          "mean_top1": 0.6519579989416632
+        },
+        "4": {
+          "n": 45,
+          "mean_top1": 0.5548311231772571
+        },
+        "5+": {
+          "n": 173,
+          "mean_top1": 0.44226090894110315
+        }
+      },
+      "n_positive_net": 204,
+      "n_retained_10pct_roster": 105,
+      "mean_removed_taxa": 5.098039215686274
+    },
+    {
+      "source": "field",
+      "role": "other_sown",
+      "direction": -1,
+      "n_cells": 480,
+      "n_defined": 480,
+      "mean_roster": 10,
+      "mean_top1": 0.5267496018226004,
+      "mean_support_count": 4.74375,
+      "mean_effective_support": 3.0045720045418496,
+      "mean_normalized_excess": 0.3800049043890438,
+      "n_single_contributor": 9,
+      "by_support_count": {
+        "1": {
+          "n": 9,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 36,
+          "mean_top1": 0.749951342989761
+        },
+        "3": {
+          "n": 74,
+          "mean_top1": 0.6946689428599936
+        },
+        "4": {
+          "n": 112,
+          "mean_top1": 0.5952882345978482
+        },
+        "5+": {
+          "n": 249,
+          "mean_top1": 0.39664167261292477
+        }
+      },
+      "n_positive_net": 472,
+      "n_retained_10pct_roster": 440,
+      "mean_removed_taxa": 0.9703389830508474
+    },
+    {
+      "source": "field",
+      "role": "other_sown",
+      "direction": 1,
+      "n_cells": 480,
+      "n_defined": 297,
+      "mean_roster": 10,
+      "mean_top1": 0.8166207285349825,
+      "mean_support_count": 1.7205387205387206,
+      "mean_effective_support": 1.472231549271304,
+      "mean_normalized_excess": 0.3340646412151092,
+      "n_single_contributor": 153,
+      "by_support_count": {
+        "1": {
+          "n": 153,
+          "mean_top1": 1
+        },
+        "2": {
+          "n": 88,
+          "mean_top1": 0.6523535865715889
+        },
+        "3": {
+          "n": 43,
+          "mean_top1": 0.5919366808901692
+        },
+        "4": {
+          "n": 12,
+          "mean_top1": 0.5162068330692687
+        },
+        "5+": {
+          "n": 1,
+          "mean_top1": 0.48148148148148157
+        }
+      },
+      "n_positive_net": 7,
+      "n_retained_10pct_roster": 3,
+      "mean_removed_taxa": 1
+    }
+  ],
+  "forecast": {
+    "control_source_all": {
+      "n_eligible": 22723,
+      "n_by_source": {
+        "kansas": 282,
+        "pond": 6536,
+        "poem": 13389,
+        "field": 2516
+      },
+      "mse": {
+        "intercept": 0.06412762640992341,
+        "richness": 0.05914535843108124,
+        "dominance": 0.05926965826074304,
+        "history": 0.04781961029613254,
+        "history_dominance": 0.04862918951436671
+      },
+      "gains": {
+        "dominance_over_richness": -0.002101599059656456,
+        "dominance_over_history": -0.016929858131856212,
+        "richness_over_intercept": 0.07769300468091533,
+        "history_over_richness": 0.19149005831363686
+      },
+      "by_source": {
+        "kansas": {
+          "mse": {
+            "intercept": 0.06497022019263562,
+            "richness": 0.07142913365534642,
+            "dominance": 0.07343073530888586,
+            "history": 0.04747549144811871,
+            "history_dominance": 0.04938180254944667
+          },
+          "gains": {
+            "dominance_over_richness": -0.028022202581895916,
+            "dominance_over_history": -0.04015358331595542,
+            "richness_over_intercept": -0.09941344578424127,
+            "history_over_richness": 0.3353483513156791
+          }
+        },
+        "pond": {
+          "mse": {
+            "intercept": 0.06464522153056919,
+            "richness": 0.04677966756843906,
+            "dominance": 0.04471817197294602,
+            "history": 0.03981561356807392,
+            "history_dominance": 0.03921101996696281
+          },
+          "gains": {
+            "dominance_over_richness": 0.044068196775384205,
+            "dominance_over_history": 0.015184836975510208,
+            "richness_over_intercept": 0.2763631021618812,
+            "history_over_richness": 0.1488692494485273
+          }
+        },
+        "poem": {
+          "mse": {
+            "intercept": 0.049757123232443884,
+            "richness": 0.04282754819609562,
+            "dominance": 0.04394442945701691,
+            "history": 0.044243688067379106,
+            "history_dominance": 0.0447828993957573
+          },
+          "gains": {
+            "dominance_over_richness": -0.02607857110585443,
+            "dominance_over_history": -0.012187305171237783,
+            "richness_over_intercept": 0.13926799996005135,
+            "history_over_richness": -0.03306609719518305
+          }
+        },
+        "field": {
+          "mse": {
+            "intercept": 0.07713794068404516,
+            "richness": 0.07554508430444394,
+            "dominance": 0.07498529630412334,
+            "history": 0.05974364810095826,
+            "history_dominance": 0.061141036145300046
+          },
+          "gains": {
+            "dominance_over_richness": 0.007409985778355499,
+            "dominance_over_history": -0.023389734118351768,
+            "richness_over_intercept": 0.02064945428249776,
+            "history_over_richness": 0.20916564391941728
+          }
+        }
+      }
+    },
+    "both_source_all": {
+      "n_eligible": 22723,
+      "n_by_source": {
+        "kansas": 282,
+        "pond": 6536,
+        "poem": 13389,
+        "field": 2516
+      },
+      "mse": {
+        "intercept": 0.06412762640992341,
+        "richness": 0.05343997167571074,
+        "dominance": 0.05193599735384187,
+        "history": 0.046577020104124595,
+        "history_dominance": 0.04592338360301028
+      },
+      "gains": {
+        "dominance_over_richness": 0.02814324698739401,
+        "dominance_over_history": 0.014033454687592428,
+        "richness_over_intercept": 0.16666225357997677,
+        "history_over_richness": 0.12842356304439173
+      },
+      "by_source": {
+        "kansas": {
+          "mse": {
+            "intercept": 0.06497022019263562,
+            "richness": 0.05454106450620509,
+            "dominance": 0.05490746039080372,
+            "history": 0.04014844891989799,
+            "history_dominance": 0.0407650778401017
+          },
+          "gains": {
+            "dominance_over_richness": -0.006717798559962906,
+            "dominance_over_history": -0.015358723357756121,
+            "richness_over_intercept": 0.16052209236028847,
+            "history_over_richness": 0.2638858576856282
+          }
+        },
+        "pond": {
+          "mse": {
+            "intercept": 0.06464522153056919,
+            "richness": 0.04097297829458534,
+            "dominance": 0.03576958372886585,
+            "history": 0.04178897467392318,
+            "history_dominance": 0.03878263906125148
+          },
+          "gains": {
+            "dominance_over_richness": 0.12699576116503908,
+            "dominance_over_history": 0.07194088000794363,
+            "richness_over_intercept": 0.3661870541319099,
+            "history_over_richness": -0.019915476328594695
+          }
+        },
+        "poem": {
+          "mse": {
+            "intercept": 0.049757123232443884,
+            "richness": 0.043371381633245096,
+            "dominance": 0.04674506698131822,
+            "history": 0.04393320997609916,
+            "history_dominance": 0.04589129751761848
+          },
+          "gains": {
+            "dominance_over_richness": -0.07778597824255451,
+            "dominance_over_history": -0.044569644298346756,
+            "richness_over_intercept": 0.12833823951934176,
+            "history_over_richness": -0.012953895442044505
+          }
+        },
+        "field": {
+          "mse": {
+            "intercept": 0.07713794068404516,
+            "richness": 0.07487446226880741,
+            "dominance": 0.07032187831437958,
+            "history": 0.06043744684657802,
+            "history_dominance": 0.05825451999306952
+          },
+          "gains": {
+            "dominance_over_richness": 0.06080289348968626,
+            "dominance_over_history": 0.03611878011739833,
+            "richness_over_intercept": 0.029343256964933673,
+            "history_over_richness": 0.1928162818772433
+          }
+        }
+      }
+    },
+    "control_cluster_all": {
+      "n_eligible": 22723,
+      "n_by_source": {
+        "kansas": 282,
+        "pond": 6536,
+        "poem": 13389,
+        "field": 2516
+      },
+      "mse": {
+        "intercept": 0.06276542135298868,
+        "richness": 0.07234979870593702,
+        "dominance": 0.07346960896643737,
+        "history": 0.05437582205140709,
+        "history_dominance": 0.05632901073897287
+      },
+      "gains": {
+        "dominance_over_richness": -0.01547772461747643,
+        "dominance_over_history": -0.03592016844764623,
+        "richness_over_intercept": -0.1527015535998144,
+        "history_over_richness": 0.24843160556098398
+      },
+      "by_source": {
+        "kansas": {
+          "mse": {
+            "intercept": 0.06497022019263562,
+            "richness": 0.07142913365534642,
+            "dominance": 0.07343073530888586,
+            "history": 0.04747549144811871,
+            "history_dominance": 0.04938180254944667
+          },
+          "gains": {
+            "dominance_over_richness": -0.028022202581895916,
+            "dominance_over_history": -0.04015358331595542,
+            "richness_over_intercept": -0.09941344578424127,
+            "history_over_richness": 0.3353483513156791
+          }
+        },
+        "pond": {
+          "mse": {
+            "intercept": 0.06464522153056919,
+            "richness": 0.04677966756843906,
+            "dominance": 0.04471817197294602,
+            "history": 0.03981561356807392,
+            "history_dominance": 0.03921101996696281
+          },
+          "gains": {
+            "dominance_over_richness": 0.044068196775384205,
+            "dominance_over_history": 0.015184836975510208,
+            "richness_over_intercept": 0.2763631021618812,
+            "history_over_richness": 0.1488692494485273
+          }
+        },
+        "poem": {
+          "mse": {
+            "intercept": 0.04643202992743779,
+            "richness": 0.06497875851825263,
+            "dominance": 0.06544792598939386,
+            "history": 0.05445792995326172,
+            "history_dominance": 0.05524850879549294
+          },
+          "gains": {
+            "dominance_over_richness": -0.007220320637696398,
+            "dominance_over_history": -0.014517240058697256,
+            "richness_over_intercept": -0.39943824596510136,
+            "history_over_richness": 0.1619118124892398
+          }
+        },
+        "field": {
+          "mse": {
+            "intercept": 0.07501421376131236,
+            "richness": 0.10621163508171005,
+            "dominance": 0.11028160259452381,
+            "history": 0.07575425323617391,
+            "history_dominance": 0.08147471164398903
+          },
+          "gains": {
+            "dominance_over_richness": -0.038319413025537985,
+            "dominance_over_history": -0.07551336279404453,
+            "richness_over_intercept": -0.4158868000625153,
+            "history_over_richness": 0.28676125569580835
+          }
+        }
+      }
+    },
+    "control_source_multi": {
+      "n_eligible": 18273,
+      "n_by_source": {
+        "kansas": 249,
+        "pond": 4494,
+        "poem": 11402,
+        "field": 2128
+      },
+      "mse": {
+        "intercept": 0.050949351595038175,
+        "richness": 0.05226825143126256,
+        "dominance": 0.05144557572241375,
+        "history": 0.04484796232308852,
+        "history_dominance": 0.04514224673796579
+      },
+      "gains": {
+        "dominance_over_richness": 0.0157394916860899,
+        "dominance_over_history": -0.006561823539656508,
+        "richness_over_intercept": -0.025886489129585577,
+        "history_over_richness": 0.14196551261969015
+      },
+      "by_source": {
+        "kansas": {
+          "mse": {
+            "intercept": 0.04849458958094599,
+            "richness": 0.05798132786114963,
+            "dominance": 0.059933235345449885,
+            "history": 0.043796309998965985,
+            "history_dominance": 0.04590980935594455
+          },
+          "gains": {
+            "dominance_over_richness": -0.033664415016064764,
+            "dominance_over_history": -0.04825747550486481,
+            "richness_over_intercept": -0.1956246740550016,
+            "history_over_richness": 0.24464803386623213
+          }
+        },
+        "pond": {
+          "mse": {
+            "intercept": 0.049804920820012984,
+            "richness": 0.0439573559833867,
+            "dominance": 0.0420164425167029,
+            "history": 0.040678972934695704,
+            "history_dominance": 0.03990608056406942
+          },
+          "gains": {
+            "dominance_over_richness": 0.044154463417166334,
+            "dominance_over_history": 0.018999800507919717,
+            "richness_over_intercept": 0.11740937924102812,
+            "history_over_richness": 0.07458098821799097
+          }
+        },
+        "poem": {
+          "mse": {
+            "intercept": 0.05195156148827229,
+            "richness": 0.04819556650731238,
+            "dominance": 0.04568133322118094,
+            "history": 0.04513225248804724,
+            "history_dominance": 0.044049949436166594
+          },
+          "gains": {
+            "dominance_over_richness": 0.05216731472074254,
+            "dominance_over_history": 0.023980700989104875,
+            "richness_over_intercept": 0.07229801902696997,
+            "history_over_richness": 0.06356007909566463
+          }
+        },
+        "field": {
+          "mse": {
+            "intercept": 0.05354633449092146,
+            "richness": 0.05893875537320151,
+            "dominance": 0.05815129180632128,
+            "history": 0.04978431387064513,
+            "history_dominance": 0.05070314759568259
+          },
+          "gains": {
+            "dominance_over_richness": 0.013360709127533954,
+            "dominance_over_history": -0.01845628981499825,
+            "richness_over_intercept": -0.10070569598362167,
+            "history_over_richness": 0.15532125584583945
+          }
+        }
+      }
+    }
+  },
+  "lambda": 0.1,
+  "limits": [
+    "Conditional support concentration; not support occurrence prediction.",
+    "Lag control not necessarily pretreatment.",
+    "Only four source experiments, overlapping repeated units; descriptive, not formal meta-analysis.",
+    "Kansas original source subset not verified. No harmonized functional traits or causal claims."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45560465895",
+  "source_job_id": 139022660041,
+  "source_commit": "e59dc577ebb21de50a03979caf61f6d48e42a534",
+  "prescore_contract": "docs/AHIF_CROSS_SOURCE_CONCENTRATION_PRESCORE_20261125.md",
+  "artifact": {
+    "id": 14996984477,
+    "digest": "sha256:edacd903473b22dd60810f5a5fec48c659e00de8549e15fd0ccd9476bee23a15",
+    "size_bytes": 4295173,
+    "url": "https://github.com/zuizui0223/knk/actions/runs/45560465895/artifacts/14996984477"
+  },
+  "archive_scope": "Full checked aggregate/descriptive summary from job output. Features and prediction cells in derived artifact, retention limited. Fold coefficients are calculated by fit but not persisted in this scorer; reproduce deterministically from pinned code and sources. This is an archival deviation from prescore, not a changed fit."
+}

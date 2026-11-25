@@ -1,0 +1,33 @@
+name: AHIF fixed-role contributor persistence
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-role-contributors.yml"
+      - "benchmarks/score_ahif_role_contributors.py"
+      - "tests/test_ahif_role_contributors.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test response identity, exclusion and holdout
+        run: |
+          python -m pip install numpy openpyxl pytest
+          python -m pytest tests/test_ahif_role_contributors.py -q
+      - name: Verify prior sources and score contributor persistence
+        run: python -m benchmarks.score_ahif_role_contributors --root "$RUNNER_TEMP/role_contributors" --mapping database/ahif_v1/foster2009_curated_name_bridge.csv --prior-pond validation/ahif_v1/narwani2019_forecast_summary_v1.json --prior-kansas validation/ahif_v1/kansas2020_published_sown_role_v1.json --out "$RUNNER_TEMP/role_contributors/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-role-contributors-derived-only
+          path: ${{ runner.temp }}/role_contributors/result.json
+          retention-days: 30

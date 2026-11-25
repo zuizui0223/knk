@@ -1,0 +1,26 @@
+name: AHIF Saine 2025 fungal source schema audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-saine-source.yml"
+      - "benchmarks/probe_ahif_saine2025.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official Zenodo manifest and hash-verified schema inventory
+        run: python -m benchmarks.probe_ahif_saine2025 --out "$RUNNER_TEMP/saine"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-saine-source-manifest-only
+          path: ${{ runner.temp }}/saine/saine_manifest.json
+          retention-days: 30

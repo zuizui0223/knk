@@ -1,0 +1,35 @@
+name: AHIF non-target temporal response and order-exchange audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-nontarget-temporal.yml"
+      - "benchmarks/score_ahif_nontarget_temporal.py"
+      - "tests/test_ahif_nontarget_temporal.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-locked-temporal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_nontarget_temporal.py -q
+      - name: Acquire and verify original seven source files
+        run: |
+          python -m benchmarks.probe_ahif_vansteijn2026_field --outdir "$RUNNER_TEMP/original"
+      - name: Score within-plot change and conditional order exchange
+        run: |
+          python -m benchmarks.score_ahif_nontarget_temporal --original-dir "$RUNNER_TEMP/original" --output "$RUNNER_TEMP/nontarget_temporal.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-field-nontarget-temporal-derived-only
+          path: ${{ runner.temp }}/nontarget_temporal.json
+          retention-days: 30

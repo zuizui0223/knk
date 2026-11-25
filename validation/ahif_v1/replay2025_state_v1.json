@@ -1,0 +1,317 @@
+{
+  "status": "SOURCE_LOCKED_SPONTANEOUS_SUCCESSION_PREDICTION_NOT_INTERVENTION",
+  "n_parents": 275,
+  "n_final_replicates": 1100,
+  "n_matched_states": 1375,
+  "n_locations": 14,
+  "source_asv_matrix": {
+    "orientation": "samples_by_asv",
+    "implicit_R_header_corner": true,
+    "original_rows": 2210,
+    "original_columns": 1454,
+    "n_asvs": 1454,
+    "separator": "'\\t'"
+  },
+  "n_bootstrap": 999,
+  "source_blob_sha": {
+    "metadata.tsv": "7394c6545e0a138ba1ba54a259580d8c63c7b505",
+    "seqtable.csv": "eaa43f867b0df78d124c742ca0b23f971c099ea4"
+  },
+  "original_location_counts": {
+    "AshridgeEstate": 11,
+    "BurhamBeeches": 32,
+    "BeechWood": 6,
+    "LongWood": 11,
+    "OldWindsorWood": 14,
+    "PullingshillWood": 21,
+    "SilwoodPark": 1,
+    "StAlbansCity": 14,
+    "CombeHill": 21,
+    "WindsorForest": 6,
+    "WaterersPark": 14,
+    "WythamWoods": 73,
+    "GreenbroomCovert": 50,
+    "WindsorGreatPark": 1
+  },
+  "baseline_read_quantiles": [
+    11133,
+    29349,
+    41301,
+    53548.5,
+    123542
+  ],
+  "results": [
+    {
+      "endpoint": "named",
+      "n_features": 1454,
+      "depth_sse": 32.80069514237266,
+      "biology_sse": 32.4838472611078,
+      "held_location_gain": 0.009659791656535714,
+      "p_approx": 0.007,
+      "null_gain_95": [
+        -0.013209286255954805,
+        0.005984454557258088
+      ],
+      "n_saturated_restricted_parents": 2,
+      "gain_excluding_singletons_from_scoring": 0.009718259668453022,
+      "folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "depth_sse": 2.4678124056142394,
+          "biology_sse": 2.4832991191358174,
+          "gain": -0.006275482482520094,
+          "gain_without_location": 0.010956248295639483
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "depth_sse": 0.22141355993428632,
+          "biology_sse": 0.22093556384537036,
+          "gain": 0.0021588383704134084,
+          "gain_without_location": 0.009710769231525623
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "depth_sse": 7.128520746672813,
+          "biology_sse": 7.2581273524849514,
+          "gain": -0.01818141665262475,
+          "gain_without_location": 0.017390598871585422
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "depth_sse": 3.546009500241686,
+          "biology_sse": 3.3685515302923594,
+          "gain": 0.05004441469692385,
+          "gain_without_location": 0.004764703781837642
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "depth_sse": 5.112071266607211,
+          "biology_sse": 5.163060084529452,
+          "gain": -0.009974199353461041,
+          "gain_without_location": 0.0132847591428715
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "depth_sse": 1.3971284138819446,
+          "biology_sse": 1.3917715014390362,
+          "gain": 0.0038342305472295196,
+          "gain_without_location": 0.009918967852124736
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "depth_sse": 0.6977158967809819,
+          "biology_sse": 0.720803131243233,
+          "gain": -0.0330897354765279,
+          "gain_without_location": 0.010588896224445938
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "depth_sse": 3.9103781592897633,
+          "biology_sse": 3.779299301386181,
+          "gain": 0.033520762587163716,
+          "gain_without_location": 0.006430148325131251
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "depth_sse": 0.02012942243706724,
+          "biology_sse": 0.022975427291434685,
+          "gain": -0.14138532107740362,
+          "gain_without_location": 0.00975254328587775
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "depth_sse": 1.3202902691120615,
+          "biology_sse": 1.283087652981122,
+          "gain": 0.028177603820377727,
+          "gain_without_location": 0.008883153385725862
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "depth_sse": 1.0823158649327769,
+          "biology_sse": 1.0923194073316898,
+          "gain": -0.009242719914795118,
+          "gain_without_location": 0.01030479586629614
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "depth_sse": 0.13368068258553756,
+          "biology_sse": 0.11454060648207158,
+          "gain": 0.14317757609607445,
+          "gain_without_location": 0.009113407211665387
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "depth_sse": 0.042422576879798814,
+          "biology_sse": 0.04088646688777008,
+          "gain": 0.036209728522177784,
+          "gain_without_location": 0.009625408990734666
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "depth_sse": 5.720806377402496,
+          "biology_sse": 5.544190115777313,
+          "gain": 0.03087261654630157,
+          "gain_without_location": 0.005178441494230884
+        }
+      ],
+      "p_holm2_approx": 0.007
+    },
+    {
+      "endpoint": "rank",
+      "n_features": 275,
+      "depth_sse": 7.07102800949229,
+      "biology_sse": 6.2543687476197425,
+      "held_location_gain": 0.11549371050096924,
+      "p_approx": 0.001,
+      "null_gain_95": [
+        -0.05097958776434546,
+        0.02382719552914043
+      ],
+      "n_saturated_restricted_parents": 2,
+      "gain_excluding_singletons_from_scoring": 0.11398574579044018,
+      "folds": [
+        {
+          "location": "AshridgeEstate",
+          "n_parents": 11,
+          "depth_sse": 0.4142842276912412,
+          "biology_sse": 0.4013757264581809,
+          "gain": 0.031158563059467317,
+          "gain_without_location": 0.12074233093316139
+        },
+        {
+          "location": "BeechWood",
+          "n_parents": 6,
+          "depth_sse": 0.054781274962111305,
+          "biology_sse": 0.044474734642046904,
+          "gain": 0.18813984025002659,
+          "gain_without_location": 0.11492650587443715
+        },
+        {
+          "location": "BurhamBeeches",
+          "n_parents": 32,
+          "depth_sse": 1.197602068147,
+          "biology_sse": 1.2592050592381423,
+          "gain": -0.051438614486077124,
+          "gain_without_location": 0.14953151052459276
+        },
+        {
+          "location": "CombeHill",
+          "n_parents": 21,
+          "depth_sse": 1.2263359218978975,
+          "biology_sse": 1.1056502356698759,
+          "gain": 0.09841160490613904,
+          "gain_without_location": 0.11907788557788351
+        },
+        {
+          "location": "GreenbroomCovert",
+          "n_parents": 50,
+          "depth_sse": 0.8739031318977675,
+          "biology_sse": 0.7543856609450752,
+          "gain": 0.1367628362804333,
+          "gain_without_location": 0.11249439130076996
+        },
+        {
+          "location": "LongWood",
+          "n_parents": 11,
+          "depth_sse": 0.19958351533533264,
+          "biology_sse": 0.1552655804998076,
+          "gain": 0.22205208060928144,
+          "gain_without_location": 0.11239868526825365
+        },
+        {
+          "location": "OldWindsorWood",
+          "n_parents": 14,
+          "depth_sse": 0.16198464266934634,
+          "biology_sse": 0.10215915469320791,
+          "gain": 0.36932814734948755,
+          "gain_without_location": 0.1095424842071054
+        },
+        {
+          "location": "PullingshillWood",
+          "n_parents": 21,
+          "depth_sse": 1.047505134162389,
+          "biology_sse": 0.9281887222212905,
+          "gain": 0.11390532423166307,
+          "gain_without_location": 0.11576993469843112
+        },
+        {
+          "location": "SilwoodPark",
+          "n_parents": 1,
+          "depth_sse": 0.05316059074389841,
+          "biology_sse": 0.0470863659127409,
+          "gain": 0.11426180082196859,
+          "gain_without_location": 0.115503042259803
+        },
+        {
+          "location": "StAlbansCity",
+          "n_parents": 14,
+          "depth_sse": 0.3118998107240517,
+          "biology_sse": 0.30494152570129496,
+          "gain": 0.022309359555568883,
+          "gain_without_location": 0.11979370016940173
+        },
+        {
+          "location": "WaterersPark",
+          "n_parents": 14,
+          "depth_sse": 0.2908334102254076,
+          "biology_sse": 0.20014778392280624,
+          "gain": 0.31181295928936203,
+          "gain_without_location": 0.10707268426313939
+        },
+        {
+          "location": "WindsorForest",
+          "n_parents": 6,
+          "depth_sse": 0.12663975650323578,
+          "biology_sse": 0.07531384305526602,
+          "gain": 0.40529068331443235,
+          "gain_without_location": 0.11020889393607233
+        },
+        {
+          "location": "WindsorGreatPark",
+          "n_parents": 1,
+          "depth_sse": 0.027885738950031488,
+          "biology_sse": 0.014058976741972012,
+          "gain": 0.49583632095372043,
+          "gain_without_location": 0.11398782941277674
+        },
+        {
+          "location": "WythamWoods",
+          "n_parents": 73,
+          "depth_sse": 1.0846287855825791,
+          "biology_sse": 0.8621153779180362,
+          "gain": 0.2051516708963481,
+          "gain_without_location": 0.09924928692276037
+        }
+      ],
+      "p_holm2_approx": 0.002
+    }
+  ],
+  "limits": [
+    "No introduced-species intervention. Not replication of Saine treatment moderation.",
+    "Original authors already show initial-state dependence.",
+    "Fixed linear predictive model, processed read profiles not biomass.",
+    "Approximate restricted-model wild reference; parent errors assumed independent conditional on locations.",
+    "All four final replicates averaged within original parent; no independent replication inflation."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45427172207",
+  "source_job_id": 138562218359,
+  "source_commit": "5bcf87d82327dda6ed94007506c0f7d422c0b206",
+  "original_repo": "https://github.com/apascualgarcia/ReplayEcology",
+  "original_commit": "fba177fbae5c51c059cb6075298be9732c6c3aba",
+  "article_doi": "10.1038/s41467-025-57591-2",
+  "prescore_contract": "docs/AHIF_REPLAY2025_STATE_PRESCORE_20261125.md"
+}

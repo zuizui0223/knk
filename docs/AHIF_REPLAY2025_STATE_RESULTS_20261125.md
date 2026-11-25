@@ -1,0 +1,13 @@
+# ReplayEcology — independent spontaneous-succession source prediction
+
+2026-11-25 JST. Original article https://doi.org/10.1038/s41467-025-57591-2; author repository https://github.com/apascualgarcia/ReplayEcology commit fba177fbae5c51c059cb6075298be9732c6c3aba. Exact metadata and ASV count Git blobs verified, source run https://github.com/zuizui0223/knk/actions/runs/45427172207, job 138562218359, scoring commit 5bcf87d82327dda6ed94007506c0f7d422c0b206. Five unit tests passed. Original matrix 2210 samples x1454 ASVs; R-style missing header corner corrected before scoring, all 1375 matched IDs found uniquely, positive integer count rows. 275 parent communities, each baseline plus four day-7 revivals, 14 origins. Parent is unit, not 1100 replicate endpoints. Source processed counts, not raw read reconstruction or absolute abundance.
+
+| Endpoint | Depth baseline SSE | Biology-added SSE | Gain | Approx p | Holm | improved sites |
+|---|---:|---:|---:|---:|---:|---:|
+| named | 32.800695 | 32.483847 | 0.966% | 0.007 | 0.007 | 8/14 |
+| rank | 7.071028 | 6.254369 | 11.549% | 0.001 | 0.002 | 13/14 |
+
+Restricted wild reference, 999 draws, location intercepts and depth quadratic, independent parent errors assumed. Rank gain remains +9.925–14.953% when any one location's held-out loss removed from aggregate, and +11.399% excluding singleton sites from scoring. This is a descriptive score sensitivity; not a refit-based CI. Named gain also positive overall. No formal direct comparison of gains across responses; different loss scales. Initial summaries improve held-origin prediction over read-depth baseline only. Need compare against exact initial profile persistence and full initial labeled/rank geometry; apparent gain may reflect ordinary autocorrelation or predictable community transition. Four revivals averaged; sorted endpoints averaged after sorting. Original paper already established initial-composition-dependent trajectories and function; novelty narrower than initial state dependence. No inoculation intervention, so not replication of Saine's intervention-R-loss, no causal species interactions, no new mechanism-to-rank bridge. 
+
+## DB v0.6
+Register one independent prediction-only source and 2 prediction endpoints; jointly register four archived Saine restricted-wild prediction endpoints (same existing experiment). 6 endpoint records /48 held-origin folds in separate tables, no addition to 161 intervention/diagnostic effects. Current counts: 34 study records,36 panels,12 outcome-source audited,11 paper checks,10 hypotheses. No pooling, no main/manuscript changes. Source aggregate validation/ahif_v1/replay2025_state_v1.json.

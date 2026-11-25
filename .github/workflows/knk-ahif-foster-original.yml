@@ -1,0 +1,31 @@
+name: AHIF Foster original EDI source audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-foster-original.yml"
+      - "benchmarks/audit_ahif_foster_original.py"
+      - "tests/test_ahif_foster_original.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test version and schema gates
+        run: |
+          python -m pip install pytest
+          python -m pytest tests/test_ahif_foster_original.py -q
+      - name: Resolve cited DOI and audit official public source
+        run: python -m benchmarks.audit_ahif_foster_original --root "$RUNNER_TEMP/foster" --out "$RUNNER_TEMP/foster/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-foster-original-metadata-audit-only
+          path: ${{ runner.temp }}/foster/audit.json
+          retention-days: 30

@@ -1,0 +1,944 @@
+{
+  "status": "SOURCE_LOCKED_CONDITIONAL_COMPLETE_LOG_ANALYSIS_NOT_MEDIATION",
+  "source_physical_logs": 460,
+  "source_sample_states": 1380,
+  "source_nontarget_otus": 4653,
+  "source_qc_active_nontarget_otus": 4646,
+  "complete_triplets": 446,
+  "excluded_logs": 14,
+  "low_read_states": 11,
+  "zero_nontarget_states": 5,
+  "coverage_by_stratum_treatment": [
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Antrodia_piceata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Postia_guttulata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Antrodia_piceata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Postia_guttulata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Antrodia_piceata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Postia_guttulata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Antrodia_piceata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Postia_guttulata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Antrodia_piceata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 3,
+      "complete": 1
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Postia_guttulata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Antrodia_piceata",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Postia_guttulata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Luukki|natural",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 9
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Antrodia_piceata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Postia_guttulata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Antrodia_piceata",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Postia_guttulata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 5,
+      "complete": 4
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Antrodia_piceata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Postia_guttulata",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 3,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 3,
+      "complete": 2
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 3,
+      "complete": 1
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Antrodia_piceata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Antrodiella_citrinella",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Fomitopsis_rosea",
+      "assigned": 5,
+      "complete": 3
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Perenniporia_subacida",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Physisporinus_crocatus",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Postia_guttulata",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Skeletocutis_odora",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Skeletocutis_stellae",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "Steccherinum_collabens",
+      "assigned": 5,
+      "complete": 5
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "treatment": "control",
+      "assigned": 10,
+      "complete": 10
+    }
+  ],
+  "n_source_publication_families": 1,
+  "limits": [
+    "Conditioning on post-treatment QC/completeness may bias randomization; missingness test does not prove exchangeability.",
+    "Read composition not absolute biomass or direct interaction coefficients.",
+    "Randomized inoculum identity, not randomized arrival order or environment."
+  ],
+  "eligibility_gate": [
+    {
+      "lane": "ten_group",
+      "endpoint": "complete_triplet",
+      "R2": 0.026732904611045015,
+      "E": 0.007817778994011221,
+      "null_median": 0.018915125617033793,
+      "p": 0.216,
+      "n": 460,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 0.432
+    },
+    {
+      "lane": "any_introduction",
+      "endpoint": "complete_triplet",
+      "R2": 0.0038269311506620974,
+      "E": 0.0028343911055912956,
+      "null_median": 0.000992540045070802,
+      "p": 0.3325,
+      "n": 460,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 0.432
+    }
+  ],
+  "primary_and_distinct_assignment_lanes": {
+    "ten_group": [
+      {
+        "year": "2020",
+        "endpoint": "named",
+        "R2": 0.021471173206299075,
+        "E": 0.0009834014662493014,
+        "null_median": 0.020487771740049773,
+        "p": 0.2575,
+        "n": 446,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 1
+      },
+      {
+        "year": "2020",
+        "endpoint": "rank",
+        "R2": 0.010140416936607268,
+        "E": -0.008842243894115023,
+        "null_median": 0.01898266083072229,
+        "p": 0.9375,
+        "n": 446,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 1
+      },
+      {
+        "year": "2021",
+        "endpoint": "named",
+        "R2": 0.021334845791194393,
+        "E": 0.0008412981066485727,
+        "null_median": 0.02049354768454582,
+        "p": 0.301,
+        "n": 446,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 1
+      },
+      {
+        "year": "2021",
+        "endpoint": "rank",
+        "R2": 0.023384562446982633,
+        "E": 0.004229711302806208,
+        "null_median": 0.019154851144176425,
+        "p": 0.3145,
+        "n": 446,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 1
+      }
+    ],
+    "any_introduction": [
+      {
+        "year": "2020",
+        "endpoint": "named",
+        "R2": 0.0033720437117710387,
+        "E": 0.001132844593906163,
+        "null_median": 0.0022391991178648757,
+        "p": 0.0345,
+        "n": 446,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 0.10350000000000001
+      },
+      {
+        "year": "2020",
+        "endpoint": "rank",
+        "R2": 0.0011848961015132895,
+        "E": -0.00013315094764111126,
+        "null_median": 0.0013180470491544007,
+        "p": 0.5385,
+        "n": 446,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 0.5385
+      },
+      {
+        "year": "2021",
+        "endpoint": "named",
+        "R2": 0.00460315402982957,
+        "E": 0.0023681613854495847,
+        "null_median": 0.0022349926443799854,
+        "p": 0.0035,
+        "n": 446,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 0.014
+      },
+      {
+        "year": "2021",
+        "endpoint": "rank",
+        "R2": 0.004222996292333723,
+        "E": 0.00283743465455412,
+        "null_median": 0.001385561637779603,
+        "p": 0.16,
+        "n": 446,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 0.32
+      }
+    ],
+    "identity_among_introduced": [
+      {
+        "year": "2020",
+        "endpoint": "named",
+        "R2": 0.023070814361374703,
+        "E": -0.0007133790311543743,
+        "null_median": 0.023784193392529077,
+        "p": 0.6545,
+        "n": 347,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 1
+      },
+      {
+        "year": "2020",
+        "endpoint": "rank",
+        "R2": 0.011615562020091069,
+        "E": -0.0106290833186356,
+        "null_median": 0.02224464533872667,
+        "p": 0.9285,
+        "n": 347,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 1
+      },
+      {
+        "year": "2021",
+        "endpoint": "named",
+        "R2": 0.022264105323089835,
+        "E": -0.001440965518115036,
+        "null_median": 0.02370507084120487,
+        "p": 0.7765,
+        "n": 347,
+        "features": 4653,
+        "permutations": 1999,
+        "status": "SCORED",
+        "p_holm_family": 1
+      },
+      {
+        "year": "2021",
+        "endpoint": "rank",
+        "R2": 0.024836074822802225,
+        "E": 0.0022880986304922198,
+        "null_median": 0.022547976192310006,
+        "p": 0.407,
+        "n": 347,
+        "features": 353,
+        "permutations": 1999,
+        "status": "SCORED",
+        "logical_features": 4653,
+        "p_holm_family": 1
+      }
+    ]
+  },
+  "ten_group_scalar_secondary": [
+    {
+      "year": "2020",
+      "endpoint": "richness",
+      "R2": 0.018425666920252753,
+      "E": -0.001092027205882997,
+      "null_median": 0.01951769412613575,
+      "p": 0.544,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    },
+    {
+      "year": "2020",
+      "endpoint": "simpson",
+      "R2": 0.013080769257440691,
+      "E": -0.005773860805232319,
+      "null_median": 0.01885463006267301,
+      "p": 0.7695,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    },
+    {
+      "year": "2020",
+      "endpoint": "top1",
+      "R2": 0.00753596776850685,
+      "E": -0.011182320652335397,
+      "null_median": 0.018718288420842246,
+      "p": 0.953,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    },
+    {
+      "year": "2021",
+      "endpoint": "richness",
+      "R2": 0.013024387145873834,
+      "E": -0.0064882830196553495,
+      "null_median": 0.019512670165529183,
+      "p": 0.7865,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    },
+    {
+      "year": "2021",
+      "endpoint": "simpson",
+      "R2": 0.018020573847201734,
+      "E": -0.0009053760634149671,
+      "null_median": 0.0189259499106167,
+      "p": 0.5375,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    },
+    {
+      "year": "2021",
+      "endpoint": "top1",
+      "R2": 0.02321333100031321,
+      "E": 0.004215060500166273,
+      "null_median": 0.01899827050014694,
+      "p": 0.336,
+      "n": 446,
+      "features": 1,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 1
+    }
+  ],
+  "baseline_placebo": [
+    {
+      "year": "2019",
+      "endpoint": "named",
+      "R2": 0.01740205672921872,
+      "E": -0.0032219919005750143,
+      "null_median": 0.020624048629793734,
+      "p": 0.9725,
+      "n": 446,
+      "features": 4653,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 0.9725
+    },
+    {
+      "year": "2019",
+      "endpoint": "rank",
+      "R2": 0.025484118291440743,
+      "E": 0.0063024485727175596,
+      "null_median": 0.019181669718723184,
+      "p": 0.2325,
+      "n": 446,
+      "features": 353,
+      "permutations": 1999,
+      "status": "SCORED",
+      "p_holm_family": 0.465
+    }
+  ],
+  "n_rank_nonzero_width": 353,
+  "excluded_target_otus": [
+    "OTU0958:Antrodia_piceata:Antrodia_piceata_813073",
+    "OTU0574:Antrodiella_citrinella:Flaviporus_citrinellus_106139",
+    "OTU0477:Fomitopsis_rosea:Rhodofomes_roseus_127496",
+    "OTU0557:Perenniporia_subacida:Perenniporia_subacida_335816",
+    "OTU1421:Physisporinus_crocatus:Rigidoporus_crocatus_107233",
+    "OTU0583:Postia_guttulata:Postia_guttulata_110917",
+    "OTU0448:Skeletocutis_odora:Skeletocutis_odora_106476",
+    "OTU1635:Skeletocutis_stellae:Skeletocutis_stellae_323595",
+    "OTU0471:Steccherinum_collabens:Junghuhnia_collabens_315979"
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45385872568",
+  "source_job_id": 138416492000,
+  "source_commit": "eb3f43a3f3b242705b192b2bd876940f34f90a50",
+  "source_doi": "10.5281/zenodo.13819389",
+  "article_doi": "10.1093/ismeco/ycaf166",
+  "source_rdata_md5": "4dbc27f81ffdcf1925887c7e0805b031",
+  "prescore_contract": "docs/AHIF_SAINE2025_SUCCESSION_PRESCORE_20261124.md"
+}

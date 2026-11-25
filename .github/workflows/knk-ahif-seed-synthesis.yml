@@ -1,0 +1,26 @@
+name: AHIF seed-addition synthesis official source audit
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-seed-synthesis.yml"
+      - "benchmarks/audit_ahif_seed_synthesis.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Official public Figshare source and grain audit
+        run: python -m benchmarks.audit_ahif_seed_synthesis --root "$RUNNER_TEMP/seed-synthesis" --out "$RUNNER_TEMP/seed-synthesis/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-seed-synthesis-audit-derived-only
+          path: ${{ runner.temp }}/seed-synthesis/audit.json
+          retention-days: 30

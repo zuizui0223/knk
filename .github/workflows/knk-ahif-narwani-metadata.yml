@@ -1,0 +1,27 @@
+name: AHIF Narwani source metadata and coverage
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-narwani-metadata.yml"
+      - "benchmarks/audit_ahif_narwani_metadata.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl
+      - name: Verify exact source and inspect metadata and coverage
+        run: python -m benchmarks.audit_ahif_narwani_metadata --out "$RUNNER_TEMP/narwani.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-narwani-metadata-only
+          path: ${{ runner.temp }}/narwani.json
+          retention-days: 30

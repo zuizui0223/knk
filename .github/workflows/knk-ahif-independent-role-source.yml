@@ -1,0 +1,27 @@
+name: AHIF independent non-grassland role source screen
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-independent-role-source.yml"
+      - "benchmarks/audit_ahif_independent_role_sources.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl
+      - name: Check official source manifests and original workbook grain
+        run: python -m benchmarks.audit_ahif_independent_role_sources --out "$RUNNER_TEMP/role_sources.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-independent-role-source-audit-only
+          path: ${{ runner.temp }}/role_sources.json
+          retention-days: 30

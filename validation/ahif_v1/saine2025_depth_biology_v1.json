@@ -1,0 +1,333 @@
+{
+  "status": "EXPLORATORY_RESTRICTED_WILD_NOT_EXACT_CAUSAL_MODERATION",
+  "assigned_logs": 460,
+  "complete_logs": 446,
+  "treated_logs": 347,
+  "n_sites": 5,
+  "nested_prediction": [
+    {
+      "train_year": 2020,
+      "test_year": 2021,
+      "endpoint": "named_TV",
+      "biology_gain_over_depth": 0.0002252689498679117,
+      "depth_gain_over_zero": -0.003277332725591711,
+      "full_biology_gain_over_depth": -0.017477127186584385,
+      "p_approx": 0.118,
+      "null_gain_median": -0.0008653320052915475,
+      "null_gain_95": [
+        -0.014986538953348035,
+        0.005233792532209766
+      ],
+      "losses": {
+        "zero": 3.668372391353338,
+        "depth": 3.6803948682411773,
+        "nested_biology": 3.6795657895541094,
+        "full_biology": 3.744717597450281
+      },
+      "folds": [
+        {
+          "site": "Kesijarvi",
+          "alpha": 0,
+          "zero": 0.49857752756703777,
+          "depth": 0.49500772396619497,
+          "nested_biology": 0.49500772396619497,
+          "full_biology": 0.5345777403715904
+        },
+        {
+          "site": "Lapinjarvi",
+          "alpha": 0,
+          "zero": 1.0803651893792978,
+          "depth": 1.061640044356281,
+          "nested_biology": 1.061640044356281,
+          "full_biology": 1.0541711294403857
+        },
+        {
+          "site": "Luukki",
+          "alpha": 0,
+          "zero": 0.5298829816055127,
+          "depth": 0.5478746615734084,
+          "nested_biology": 0.5478746615734084,
+          "full_biology": 0.5418668177941777
+        },
+        {
+          "site": "Saajarvi",
+          "alpha": 0,
+          "zero": 0.8032933266749088,
+          "depth": 0.8439713051345948,
+          "nested_biology": 0.8439713051345948,
+          "full_biology": 0.8847308436830086
+        },
+        {
+          "site": "Seitseminen",
+          "alpha": 0.25,
+          "zero": 0.7562533661265805,
+          "depth": 0.7319011332106983,
+          "nested_biology": 0.73107205452363,
+          "full_biology": 0.7293710661611184
+        }
+      ],
+      "p_holm4_approx": 0.236
+    },
+    {
+      "train_year": 2020,
+      "test_year": 2021,
+      "endpoint": "rank_TV",
+      "biology_gain_over_depth": 0.019792459035439386,
+      "depth_gain_over_zero": -0.008155376182278282,
+      "full_biology_gain_over_depth": 0.02319732621528026,
+      "p_approx": 0.01,
+      "null_gain_median": -0.00087210906806819,
+      "null_gain_95": [
+        -0.012688035607203446,
+        0.010347049572662028
+      ],
+      "losses": {
+        "zero": 7.256109150881709,
+        "depth": 7.3152854506268215,
+        "nested_biology": 7.170497963012744,
+        "full_biology": 7.145590387670738
+      },
+      "folds": [
+        {
+          "site": "Kesijarvi",
+          "alpha": 0.75,
+          "zero": 2.0788347974555608,
+          "depth": 2.0804834397480803,
+          "nested_biology": 1.9820378298824386,
+          "full_biology": 1.9571302545404317
+        },
+        {
+          "site": "Lapinjarvi",
+          "alpha": 1,
+          "zero": 0.9648277968019895,
+          "depth": 0.956262731796824,
+          "nested_biology": 0.9464049820667811,
+          "full_biology": 0.9464049820667811
+        },
+        {
+          "site": "Luukki",
+          "alpha": 1,
+          "zero": 1.1844626370653544,
+          "depth": 1.225891571132545,
+          "nested_biology": 1.2121376731432854,
+          "full_biology": 1.2121376731432854
+        },
+        {
+          "site": "Saajarvi",
+          "alpha": 1,
+          "zero": 1.4721220729927882,
+          "depth": 1.5080899590061545,
+          "nested_biology": 1.498365878099712,
+          "full_biology": 1.498365878099712
+        },
+        {
+          "site": "Seitseminen",
+          "alpha": 1,
+          "zero": 1.5558618465660166,
+          "depth": 1.5445577489432172,
+          "nested_biology": 1.531551599820528,
+          "full_biology": 1.531551599820528
+        }
+      ],
+      "p_holm4_approx": 0.036
+    },
+    {
+      "train_year": 2021,
+      "test_year": 2021,
+      "endpoint": "named_TV",
+      "biology_gain_over_depth": -0.0006583001561103185,
+      "depth_gain_over_zero": 0.0006503957833598169,
+      "full_biology_gain_over_depth": -0.011183938895181945,
+      "p_approx": 0.371,
+      "null_gain_median": -0.0017576139576826399,
+      "null_gain_95": [
+        -0.02131871727867537,
+        0.00795422949666206
+      ],
+      "losses": {
+        "zero": 3.668372391353338,
+        "depth": 3.665986497418208,
+        "nested_biology": 3.668399816901757,
+        "full_biology": 3.7069866663958955
+      },
+      "folds": [
+        {
+          "site": "Kesijarvi",
+          "alpha": 0,
+          "zero": 0.49857752756703777,
+          "depth": 0.4932590350159273,
+          "nested_biology": 0.4932590350159273,
+          "full_biology": 0.5272164112868453
+        },
+        {
+          "site": "Lapinjarvi",
+          "alpha": 0.25,
+          "zero": 1.0803651893792978,
+          "depth": 1.0659502024463718,
+          "nested_biology": 1.0669192842354278,
+          "full_biology": 1.0724029434324425
+        },
+        {
+          "site": "Luukki",
+          "alpha": 0.25,
+          "zero": 0.5298829816055127,
+          "depth": 0.5612827699927408,
+          "nested_biology": 0.5627270076872333,
+          "full_biology": 0.569126822674992
+        },
+        {
+          "site": "Saajarvi",
+          "alpha": 0,
+          "zero": 0.8032933266749088,
+          "depth": 0.815490173450369,
+          "nested_biology": 0.815490173450369,
+          "full_biology": 0.8148141268028553
+        },
+        {
+          "site": "Seitseminen",
+          "alpha": 0,
+          "zero": 0.7562533661265805,
+          "depth": 0.730004316512799,
+          "nested_biology": 0.730004316512799,
+          "full_biology": 0.7234263621987609
+        }
+      ],
+      "p_holm4_approx": 0.371
+    },
+    {
+      "train_year": 2021,
+      "test_year": 2021,
+      "endpoint": "rank_TV",
+      "biology_gain_over_depth": 0.023684939435106658,
+      "depth_gain_over_zero": 0.005169586137706505,
+      "full_biology_gain_over_depth": 0.022411512431165872,
+      "p_approx": 0.009,
+      "null_gain_median": -0.002107999064900039,
+      "null_gain_95": [
+        -0.02318965602014671,
+        0.014308180995113601
+      ],
+      "losses": {
+        "zero": 7.256109150881709,
+        "depth": 7.218598069601626,
+        "nested_biology": 7.0476260115167335,
+        "full_biology": 7.056818369229159
+      },
+      "folds": [
+        {
+          "site": "Kesijarvi",
+          "alpha": 0.75,
+          "zero": 2.0788347974555608,
+          "depth": 2.0593355213109823,
+          "nested_biology": 1.959100277482273,
+          "full_biology": 1.9474749543923677
+        },
+        {
+          "site": "Lapinjarvi",
+          "alpha": 0.75,
+          "zero": 0.9648277968019895,
+          "depth": 0.9564780556961996,
+          "nested_biology": 0.9603472647867964,
+          "full_biology": 0.9676568357392739
+        },
+        {
+          "site": "Luukki",
+          "alpha": 0.75,
+          "zero": 1.1844626370653544,
+          "depth": 1.187482506573543,
+          "nested_biology": 1.191991575555738,
+          "full_biology": 1.2054996854055926
+        },
+        {
+          "site": "Saajarvi",
+          "alpha": 1,
+          "zero": 1.4721220729927882,
+          "depth": 1.4637860409527415,
+          "nested_biology": 1.4559095358589003,
+          "full_biology": 1.4559095358589003
+        },
+        {
+          "site": "Seitseminen",
+          "alpha": 1,
+          "zero": 1.5558618465660166,
+          "depth": 1.5515159450681595,
+          "nested_biology": 1.480277357833025,
+          "full_biology": 1.480277357833025
+        }
+      ],
+      "p_holm4_approx": 0.036
+    }
+  ],
+  "direct_linear_diagnostic": [
+    {
+      "year": 2020,
+      "endpoint": "named_TV",
+      "wald_HC3": 1.5214036152037569,
+      "p_approx": 0.653,
+      "bio_standardized_slopes": [
+        -0.019666968913487647,
+        -0.03829414319874677,
+        0.041762393288367616
+      ],
+      "p_holm4_approx": 0.9630000000000001
+    },
+    {
+      "year": 2020,
+      "endpoint": "rank_TV",
+      "wald_HC3": 3.1527866237284736,
+      "p_approx": 0.321,
+      "bio_standardized_slopes": [
+        -0.04057503693593859,
+        -0.08839476603814622,
+        0.077617285361153
+      ],
+      "p_holm4_approx": 0.9630000000000001
+    },
+    {
+      "year": 2021,
+      "endpoint": "named_TV",
+      "wald_HC3": 2.410746897888145,
+      "p_approx": 0.446,
+      "bio_standardized_slopes": [
+        -0.006099505762675135,
+        0.05202173624049411,
+        -0.0453684690936966
+      ],
+      "p_holm4_approx": 0.9630000000000001
+    },
+    {
+      "year": 2021,
+      "endpoint": "rank_TV",
+      "wald_HC3": 8.65283795056414,
+      "p_approx": 0.017,
+      "bio_standardized_slopes": [
+        -0.03198016115749765,
+        -0.049462319638045045,
+        0.0812215080709462
+      ],
+      "p_holm4_approx": 0.068
+    }
+  ],
+  "n_wild_bootstrap": 999,
+  "restricted_design_columns": 22,
+  "full_design_columns": 25,
+  "bio_slope_order": [
+    "log1p_richness",
+    "simpson",
+    "top1"
+  ],
+  "max_restricted_leverage": 0.39265828300802263,
+  "max_full_leverage": 0.42103064464193357,
+  "limits": [
+    "Same experiment, post-treatment complete-case QC.",
+    "Restricted conditional linear model, independent log errors; not exact randomization.",
+    "Initial read totals proxy detection effort; richness/dominance still detection-sensitive.",
+    "No directly measured competition coefficients or independent study replication."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45389204461",
+  "source_job_id": 138428134687,
+  "source_commit": "c4acdf4a9f596f09366503f0b2a3ee67e616cbfc",
+  "source_doi": "10.5281/zenodo.13819389",
+  "source_rdata_md5": "4dbc27f81ffdcf1925887c7e0805b031",
+  "prescore_contract": "docs/AHIF_SAINE2025_DEPTH_BIOLOGY_PRESCORE_20261124.md"
+}

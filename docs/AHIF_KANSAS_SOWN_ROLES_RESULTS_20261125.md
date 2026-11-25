@@ -1,0 +1,27 @@
+# Kansas: published seed-list membership resolves persistent role opposition despite taxon-level forecast failure
+
+2026-11-25 JST. Successful frozen source run https://github.com/zuizui0223/knk/actions/runs/45543133793, job 138966209626, scorer commit 16e83ffd4fc7e17d4e97707f5bff4744a52faa0e. Two unit tests, pinned Figshare source bytes, original curated grid and mapping roster checks, score and artifact upload passed. Sources: Foster et al. 2009 Ecological Applications 10.1890/08-0849.1, Table 1 (p.1887), methods (p.1886); Ladouceur et al. 2020 Ecology Letters 10.1111/ele.13566 and Figshare 10.6084/m9.figshare.12319682.v1. Ladouceur identifies Foster 2016a 10.6073/pasta/5703e8819c81da0beed4660f467c288e. The original EDI package could not be acquired: official current hostname DNS failure (45542739008), legacy endpoint HTTP403 (45542905762). No access bypass. The same site, experiment type, 41-sown-species list and factorial structure support a probable source-paper link, not verified original plot/date subset. The original paper already discusses sown/nonsown biomass and fertilization interactions; no novelty claim for grouping alone. This is a conditional bridge to the same already analyzed curated source, not new original source evidence.
+
+Published list 41 species, 27 matched to archived 100 labels (23 punctuation-only, four explicit synonym or spelling matches with evidence URLs in map), 62 other identified labels provisionally outside matched list, 11 genus/unknown labels unresolved. Three matched sown taxa reported at original experiment start, remaining 24 not reported there at start; no individual recruitment provenance. All 15 source age codes, four block labels, 120 direct mass states, same prior grid; no closure, no original split-plot or harvest subset verified. All g/m² as curated. Equal source-block means within age. No p-values, CIs, inference treating ages or six overlapping held halves as independent.
+
+| Age code | Sown-list delta | Other named delta | Unresolved delta | Total species sum delta | Worst-case unresolved allocation retains opposition | Exact23 sensitivity retains opposition | Held halves both positive | Strong descriptive gate |
+|---:|---:|---:|---:|---:|---|---|---:|---|
+| 1 | -0.5000 | 64.3550 | -2.2200 | 61.6350 | false | false | 0/6 | false |
+| 2 | 0.0000 | 1.2150 | -1.7475 | -0.5325 | false | false | 0/6 | false |
+| 3 | 0.7275 | -23.2125 | 1.3300 | -21.1550 | true | true | 2/6 | false |
+| 4 | 0.1375 | -5.1875 | -1.6875 | -6.7375 | false | false | 3/6 | false |
+| 5 | 3.6675 | 16.7875 | -1.0850 | 19.3700 | false | false | 1/6 | false |
+| 6 | 85.8425 | 13.2575 | -3.6700 | 95.4300 | false | false | 3/6 | false |
+| 7 | 134.5425 | -3.2550 | 1.7950 | 133.0825 | true | false | 4/6 | true |
+| 8 | 34.9625 | -45.1225 | -4.1725 | -14.3325 | true | true | 4/6 | true |
+| 9 | 33.5775 | -58.5750 | -0.5675 | -25.5650 | true | true | 6/6 | true |
+| 10 | 44.4550 | -56.3500 | 2.0425 | -9.8525 | true | true | 6/6 | true |
+| 11 | 15.4325 | -22.9200 | -0.1950 | -7.6825 | true | true | 5/6 | true |
+| 12 | 93.5200 | -59.4200 | -1.7950 | 32.3050 | true | true | 6/6 | true |
+| 13 | 21.3950 | -25.2050 | -0.5075 | -4.3175 | true | true | 6/6 | true |
+| 14 | 46.7825 | -47.5500 | 3.9775 | 3.2100 | true | true | 6/6 | true |
+| 15 | 20.7400 | -43.5275 | 1.3375 | -21.4500 | true | true | 5/6 | true |
+
+Pooled opposite signs: ages 3,4,7,8,9,10,11,12,13,14,15. Robust to unresolved assignment: 3,7,8,9,10,11,12,13,14,15. Strong descriptive held-half gate: 7,8,9,10,11,12,13,14,15. All ages 7–15 pass these three conditions; exact23-only unresolved bounds also pass ages 8–15 (age7 fails that extra sensitivity). All six overlapping halves have robust opposition at ages 9,10,12,13,14. Final age 15 has +20.7400 sown, −43.5275 other, +1.3375 unresolved and −21.4500 total; five of six halves have opposite signs even under unresolved membership bounds. This differs from the previous learned species-sign diagnostic, which did not pass at final age. Different estimands: fixed externally defined role vs learned taxon signs. It is NOT prospective prediction of time of opposition; no held-time claim. 
+
+All-age mean: sown 35.6855, other -19.6473, unresolved -0.4777, total 15.5605. Three sown species reported present initially account for 11.2653 of sown change; other matched sown 24.4202. Unknown-assignment intervals are deterministic worst-case name-allocation bounds, NOT sampling uncertainty. All-age sown range [34.7228,36.1705], other [-20.6100,-19.1623]. Exact23-only sensitivity retains all-age opposition. Four original block labels and time observations have unverified physical linkage beyond curated source. No randomized inference, causal compensation, total equivalence, independently observed immigration or realized interaction coefficients. No causality or evidence that individual species switched roles. The descriptive result motivates source-linked fixed functional/experimental-role response conservation compared with less stable individual species responses. Original raw EDI archive and treatment subplot identities remain required for stronger design inference. Archive all role sums, all six half scores, all per-age block contrasts, bounds, sensitivities in validation/ahif_v1/kansas2020_published_sown_role_v1.json. Main, frozen manuscript and existing 161-effect ledger unchanged.

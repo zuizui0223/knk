@@ -1,0 +1,44 @@
+name: AHIF review-source expansion audit (not empirical scoring)
+
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-zou-review.yml"
+      - "benchmarks/audit_zou2023_review_source.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-manifest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch original public review supplement to ephemeral runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ahif-review"
+          curl --fail --location --retry 3 --retry-delay 4 \
+            "https://raw.githubusercontent.com/hengxingzou/Zou2023TrendsEcolEvol/main/SupportingData.xlsx" \
+            -o "$RUNNER_TEMP/ahif-review/SupportingData.xlsx"
+          echo "be2777d4e4bb1454db393b94a2118ada79118dfa  $RUNNER_TEMP/ahif-review/SupportingData.xlsx" | git hash-object --stdin >/dev/null
+          test "$(git hash-object "$RUNNER_TEMP/ahif-review/SupportingData.xlsx")" = "be2777d4e4bb1454db393b94a2118ada79118dfa"
+      - name: Extract only review table structure, not author raw workbook
+        run: |
+          python -m benchmarks.audit_zou2023_review_source \
+            --xlsx "$RUNNER_TEMP/ahif-review/SupportingData.xlsx" \
+            --output "$RUNNER_TEMP/ahif-review/review_sheet_manifest.json"
+      - name: Upload source manifest only
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahif-zou-review-schema-unvalidated
+          path: ${{ runner.temp }}/ahif-review/review_sheet_manifest.json
+          retention-days: 14
