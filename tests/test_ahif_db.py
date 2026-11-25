@@ -239,9 +239,9 @@ def test_low_order_equal_information_falsification(tmp_path):
 
 def test_absolute_cancellation_source_grain(tmp_path):
     result=build(ROOT,tmp_path)
-    assert result["cancellation_contrast_rows"]==44
-    assert result["cancellation_interval_rows"]==27
-    assert result["cancellation_source_families"]==2
+    assert result["cancellation_contrast_rows"]==92
+    assert result["cancellation_interval_rows"]==59
+    assert result["cancellation_source_families"]==3
     assert result["cancellation_meta_eligible"] is False
     with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
         assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_LEAR2024'").fetchone()==(0,)
@@ -249,3 +249,14 @@ def test_absolute_cancellation_source_grain(tmp_path):
         assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts WHERE study_id='ST_POEM2025' AND scope='within_cohort_taxon' AND comparison_id LIKE '%age2%' AND crossfit_gap>0").fetchone()==(6,)
         d=dict(db.execute("SELECT endpoint,ci95_low FROM cancellation_intervals WHERE study_id='ST_POEM2025' AND comparison_id='pooled_age2'"))
         assert d["early_sown_group"]<0 and d["nonsown"]>0
+
+def test_field_reference_sensitive_opposition(tmp_path):
+    result=build(ROOT,tmp_path)
+    assert result["cancellation_source_families"]==3
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        rows=db.execute("SELECT comparison_id,estimate,ci95_low,ci95_high,interval_family_size FROM cancellation_intervals WHERE study_id='ST_VANSTEIJNFIELD2026' AND endpoint='nonsown' AND comparison_id IN ('pooled_2022_vs_SFlate','pooled_2022_vs_SFearly')").fetchall()
+        z={r[0]:r[1:] for r in rows}
+        assert z["pooled_2022_vs_SFlate"][2]<0 and z["pooled_2022_vs_SFlate"][3]==4
+        assert z["pooled_2022_vs_SFearly"][1]>0 and z["pooled_2022_vs_SFearly"][3]==1
+        assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts WHERE study_id='ST_VANSTEIJNFIELD2026'").fetchone()==(48,)
+        assert db.execute("SELECT COUNT(*) FROM cancellation_intervals WHERE study_id='ST_VANSTEIJNFIELD2026'").fetchone()==(32,)

@@ -84,7 +84,48 @@ def insert_cancellation(conn,source,out):
             for v,d in zip(ints["rows"],m["delta"]):
                 if not close(v["delta"],d):raise ValueError("resident delta")
                 iv(ls,id,v["resident"],lu,v["delta"],v["simultaneous_ci95"],ints["n_family"],"approx_simultaneous_exploratory",LEAR,LRUN)
-    if len(rows)!=44 or len(intervals)!=27:raise ValueError("ledger coverage")
+    # Distinct already-registered field source; never pool hits with biomass/counts.
+    fp="validation/ahif_v1/vansteijn2026_field_opposition_v1.json"
+    fr="https://github.com/zuizui0223/knk/actions/runs/45537486831"
+    d=json.loads((root/fp).read_text())
+    if (d["source_run"],d["source_commit"],d["source_doi"],d["status"])!=(fr,"5143c3e29c60caa2fe738acfcaf8da670246a23e","10.5281/zenodo.15363824","SOURCE_LOCKED_FIELD_HIT_OPPOSITION_NOT_BIOMASS_OR_MEDIATION"):
+        raise ValueError("field opposition lineage")
+    if d["n_physical_plots"]!=40 or d["n_blocks"]!=10 or d["n_sown"]!=20 or d["n_nonsown"]!=58 or len(d["taxon_names"])!=78 or d["n_splits"]!=256 or d["audit"]["filter_rows"]!=2832:
+        raise ValueError("field opposition grain")
+    if len(d["taxon_contrasts"])!=32 or {(x["site"],x["year"],x["reference"],x["history"]) for x in d["taxon_contrasts"]}!={(s,y,r,h) for s in ("MAL","UME") for y in ("2021","2022","2023","2024") for r in ("SFearly","SFlate") for h in ("FtS","StF")}:
+        raise ValueError("field opposition contrast coverage")
+    if len(d["comparisons"])!=8 or {(x["year"],x["reference"]) for x in d["comparisons"]}!={(y,r) for y in ("2021","2022","2023","2024") for r in ("SFearly","SFlate")}:
+        raise ValueError("field opposition comparison coverage")
+    st="ST_VANSTEIJNFIELD2026";unit="vegetation_pin_hits"
+    for x in d["taxon_contrasts"]:
+        v=x["species_delta"];m=x["taxon_metrics"]
+        if len(v)!=78 or not close(sum(v),m["signed_total"]) or len(x["role_delta"])!=4 or not close(sum(x["role_delta"][:3]),x["role_delta"][3]) or not close(x["role_delta"][3],sum(v)):
+            raise ValueError("field taxon/role grain")
+        add(st,f'{x["site"]}_{x["year"]}_{x["history"]}_vs_{x["reference"]}',"within_site_taxon",unit,m,m["signed_total"],x["crossfit_taxon_signed_gap"],"descriptive_reused_block_control",fp,fr,v)
+    for x in d["comparisons"]:
+        y=x["year"];ref=x["reference"];key=f"pooled_{y}_vs_{ref}"
+        primary=y=="2022" and ref=="SFlate"
+        if x["primary"]!=primary or x["interval_family_size"]!=(4 if primary else 1):
+            raise ValueError("field primary gate")
+        rr=x["role_estimates"]
+        if [a["role"] for a in rr]!=d["role_names"] or len(rr)!=4:
+            raise ValueError("field role roster")
+        v=[a["estimate"] for a in rr]
+        sel=[a for a in d["taxon_contrasts"] if a["year"]==y and a["reference"]==ref]
+        if len(sel)!=4 or not close(sum(v[:3]),v[3]) or any(not close(v[j],statistics.mean(a["role_delta"][j] for a in sel)) for j in range(4)):
+            raise ValueError("field role aggregation")
+        m=x["role_metrics"]
+        add(st,key,"pooled_roles",unit,m,m["signed_total"],x["pooled_role_crossfit_gap"],"descriptive_role_aligned",fp,fr,v[:3])
+        mm=x["mean_within_contrast_taxon_metrics"]
+        if any(not close(mm[k],statistics.mean(a["taxon_metrics"][k] for a in sel)) for k in ("gross","net","cancellation")) or not close(mm["mean_crossfit_taxon_signed_gap"],statistics.mean(a["crossfit_taxon_signed_gap"] for a in sel)):
+            raise ValueError("field aggregate")
+        add(st,key,"mean_within_contrast_taxon",unit,mm,None,mm["mean_crossfit_taxon_signed_gap"],"descriptive_ratio_of_means",fp,fr)
+        for a in rr:
+            iv(st,key,a["role"],unit,a["estimate"],a["ci95"],x["interval_family_size"],"approx_simultaneous_exploratory" if primary else "unadjusted_descriptive",fp,fr)
+        if primary:
+            if x["primary_directional_gate"]!={"other_sown_negative_nonsown_positive":False,"strict_early_positive_other_or_nonsown_negative":True}:
+                raise ValueError("field directional gate changed")
+    if len(rows)!=92 or len(intervals)!=59:raise ValueError("ledger coverage")
     if conn.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_LEAR2024'").fetchone()[0]!=0:
         raise ValueError("cancellation-only rows promoted to effects")
     conn.execute("""CREATE TABLE cancellation_contrasts(
@@ -100,6 +141,6 @@ def insert_cancellation(conn,source,out):
       PRIMARY KEY(study_id,comparison_id,endpoint))""")
     conn.executemany("INSERT INTO cancellation_intervals VALUES("+",".join("?" for _ in I)+")",intervals)
     export(out/"cancellation_contrasts.csv",C,rows);export(out/"cancellation_intervals.csv",I,intervals)
-    return {"cancellation_contrast_rows":44,"cancellation_interval_rows":27,
-            "cancellation_source_families":2,"cancellation_meta_eligible":False,
+    return {"cancellation_contrast_rows":92,"cancellation_interval_rows":59,
+            "cancellation_source_families":3,"cancellation_meta_eligible":False,
             "poem_strict_early_role_primary_supported":False}

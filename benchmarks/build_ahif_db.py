@@ -414,7 +414,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
     ps=[num(x["p_value"],"p") for x in e]
     return {
       "result_status":"CURATED_TARGETED_PILOT_NOT_SYSTEMATIC_OR_META_POOLED",
-      "db_version":"AHIF-DB v0.8",
+      "db_version":"AHIF-DB v0.9",
       "generated_on":date.today().isoformat(),
       "study_records":len(s),"experimental_panels":len(p),
       "aggregate_effect_rows":len(e),"falsifiable_hypotheses":len(h),
@@ -461,7 +461,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
 
 def gap_report(r):
     return "\n".join([
-      "# AHIF-DB v0.8 — novelty and source-coverage gate",
+      "# AHIF-DB v0.9 — novelty and source-coverage gate",
       "",
       "Targeted preliminary curation only: NOT a systematic survey or a random-effects meta-analysis.",
       "",

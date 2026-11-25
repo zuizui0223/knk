@@ -14,6 +14,7 @@ on:
       - "benchmarks/ahif_cancellation_tables.py"
       - "validation/ahif_v1/poem_field_absolute_compensation_v1.json"
       - "validation/ahif_v1/lear2024_resident_cancellation_v1.json"
+      - "validation/ahif_v1/vansteijn2026_field_opposition_v1.json"
       - "validation/ahif_v1/ishizawa2024_equal_information_v1.json"
       - "validation/ahif_v1/replay2025_state_v1.json"
       - "validation/ahif_v1/saine2025_depth_biology_v1.json"
@@ -121,9 +122,9 @@ jobs:
               assert db.execute("SELECT COUNT(*) FROM low_order_model_errors").fetchone()==(54,)
               assert db.execute("SELECT COUNT(*) FROM low_order_model_contrasts").fetchone()==(48,)
               assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_ISHIZAWA2024'").fetchone()==(0,)
-              assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts").fetchone()==(44,)
-              assert db.execute("SELECT COUNT(*) FROM cancellation_intervals").fetchone()==(27,)
-          print("AHIF source-backed v0.8 DB audited")
+              assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts").fetchone()==(92,)
+              assert db.execute("SELECT COUNT(*) FROM cancellation_intervals").fetchone()==(59,)
+          print("AHIF source-backed v0.9 DB audited")
           PY
       - name: Upload portable user-owned DB artifact, not source author raw data
         uses: actions/upload-artifact@v4
