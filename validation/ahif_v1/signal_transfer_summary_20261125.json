@@ -1,0 +1,577 @@
+{
+  "status": "RETROSPECTIVE_CROSS_SOURCE_PREDICTION_NOT_META",
+  "panels": [
+    [
+      "pond",
+      "MD-C",
+      15
+    ],
+    [
+      "pond",
+      "M-C",
+      15
+    ],
+    [
+      "pond",
+      "D-C",
+      15
+    ],
+    [
+      "pond",
+      "C-O",
+      15
+    ],
+    [
+      "kansas",
+      "seeded-control",
+      15
+    ],
+    [
+      "poem",
+      "2020_F_S",
+      3
+    ],
+    [
+      "poem",
+      "2020_G_S",
+      3
+    ],
+    [
+      "poem",
+      "2020_L_S",
+      3
+    ],
+    [
+      "poem",
+      "2021_F_S",
+      3
+    ],
+    [
+      "poem",
+      "2021_G_S",
+      3
+    ],
+    [
+      "poem",
+      "2021_L_S",
+      3
+    ],
+    [
+      "field",
+      "MAL_FtS_SFlate",
+      4
+    ],
+    [
+      "field",
+      "MAL_FtS_SFearly",
+      4
+    ],
+    [
+      "field",
+      "MAL_StF_SFlate",
+      4
+    ],
+    [
+      "field",
+      "MAL_StF_SFearly",
+      4
+    ],
+    [
+      "field",
+      "UME_FtS_SFlate",
+      4
+    ],
+    [
+      "field",
+      "UME_FtS_SFearly",
+      4
+    ],
+    [
+      "field",
+      "UME_StF_SFlate",
+      4
+    ],
+    [
+      "field",
+      "UME_StF_SFearly",
+      4
+    ],
+    [
+      "mancuso",
+      "0.2:4",
+      6
+    ],
+    [
+      "mancuso",
+      "0.2:16",
+      6
+    ],
+    [
+      "mancuso",
+      "0.3:1",
+      6
+    ],
+    [
+      "mancuso",
+      "0.3:4",
+      6
+    ],
+    [
+      "mancuso",
+      "0.3:16",
+      6
+    ],
+    [
+      "mancuso",
+      "0.4:1",
+      6
+    ],
+    [
+      "mancuso",
+      "0.4:4",
+      6
+    ],
+    [
+      "mancuso",
+      "0.4:16",
+      6
+    ]
+  ],
+  "total_cells": {
+    "pond": 1872,
+    "kansas": 78,
+    "poem": 1200,
+    "field": 320,
+    "mancuso": 1152
+  },
+  "eligible": {
+    "pond": 1872,
+    "kansas": 78,
+    "poem": 1200,
+    "field": 320,
+    "mancuso": 1152
+  },
+  "results": {
+    "sign_gain": {
+      "loo": {
+        "mse": {
+          "intercept": 0.026202322530094108,
+          "structure": 0.08239222086831506,
+          "strength": 0.09286925944757404,
+          "reliability": 0.08571121884805155,
+          "noise": 0.08742540930820256
+        },
+        "gains": {
+          "strength_over_structure": -0.12716053128370097,
+          "reliability_over_strength": 0.07707653363558153,
+          "noise_over_strength": 0.05861842951859231,
+          "reliability_over_intercept": -2.271130593465896
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.023981764115891122,
+            "structure": 0.055161403235144915,
+            "strength": 0.07940274430991398,
+            "reliability": 0.08302940099318282,
+            "noise": 0.08520487704171993
+          },
+          "kansas": {
+            "intercept": 0.01919904667671932,
+            "structure": 0.11284890590591035,
+            "strength": 0.1128287972620345,
+            "reliability": 0.09332550207324007,
+            "noise": 0.09193634824777017
+          },
+          "poem": {
+            "intercept": 0.02457316876442147,
+            "structure": 0.1099970016085052,
+            "strength": 0.12099036269983887,
+            "reliability": 0.08225253471202194,
+            "noise": 0.08751988069637756
+          },
+          "field": {
+            "intercept": 0.037055310563344525,
+            "structure": 0.0515615727236998,
+            "strength": 0.05825513351850882,
+            "reliability": 0.0842374376137614,
+            "noise": 0.08504053124694255
+          }
+        }
+      },
+      "grouped": {
+        "mse": {
+          "intercept": 0.02095141520080809,
+          "structure": 0.06046309943800135,
+          "strength": 0.06759674440597457,
+          "reliability": 0.0656351042224948,
+          "noise": 0.06627997742501877
+        },
+        "gains": {
+          "strength_over_structure": -0.11798344832269203,
+          "reliability_over_strength": 0.029019743490877214,
+          "noise_over_strength": 0.019479739631357407,
+          "reliability_over_intercept": -2.132728915608683
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.023981764115891122,
+            "structure": 0.055161403235144915,
+            "strength": 0.07940274430991398,
+            "reliability": 0.08302940099318282,
+            "noise": 0.08520487704171993
+          },
+          "kansas": {
+            "intercept": 0.01919904667671932,
+            "structure": 0.11284890590591035,
+            "strength": 0.1128287972620345,
+            "reliability": 0.09332550207324007,
+            "noise": 0.09193634824777017
+          },
+          "poem": {
+            "intercept": 0.013263830719898437,
+            "structure": 0.0341120285766052,
+            "strength": 0.024601301960028507,
+            "reliability": 0.022157545535284554,
+            "noise": 0.021589077535848166
+          },
+          "field": {
+            "intercept": 0.027361019290723477,
+            "structure": 0.03973006003434497,
+            "strength": 0.05355413409192126,
+            "reliability": 0.06402796828827181,
+            "noise": 0.06638960687473681
+          }
+        }
+      },
+      "exclude_kansas": {
+        "mse": {
+          "intercept": 0.0322696708237386,
+          "structure": 0.021640795546628403,
+          "strength": 0.03253048303271375,
+          "reliability": 0.03116883444689268,
+          "noise": 0.03322619600882662
+        },
+        "gains": {
+          "strength_over_structure": -0.5032018098697826,
+          "reliability_over_strength": 0.04185761965021395,
+          "noise_over_strength": -0.021386493874475887,
+          "reliability_over_intercept": 0.03411365374189401
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.022500049492924917,
+            "structure": 0.02614611711456948,
+            "strength": 0.026539227754914095,
+            "reliability": 0.030926494161472657,
+            "noise": 0.03469494649364736
+          },
+          "poem": {
+            "intercept": 0.0402302931186892,
+            "structure": 0.017526677344105665,
+            "strength": 0.048813987680726645,
+            "reliability": 0.025440557281098924,
+            "noise": 0.031314333496042415
+          },
+          "field": {
+            "intercept": 0.034078669859601673,
+            "structure": 0.021249592181210072,
+            "strength": 0.022238233662500488,
+            "reliability": 0.03713945189810646,
+            "noise": 0.03366930803679009
+          }
+        }
+      },
+      "microbial_transfer": {
+        "mse": {
+          "intercept": 0.0385989678044649,
+          "structure": 0.03502884525799171,
+          "strength": 0.03974792234621613,
+          "reliability": 0.03161713741294089,
+          "noise": 0.0317968625814089
+        },
+        "gains": {
+          "strength_over_structure": -0.13471974464096226,
+          "reliability_over_strength": 0.2045587405161382,
+          "noise_over_strength": 0.2000371162938065,
+          "reliability_over_intercept": 0.18088127192656156
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.0385989678044649,
+            "structure": 0.03502884525799171,
+            "strength": 0.03974792234621613,
+            "reliability": 0.03161713741294089,
+            "noise": 0.0317968625814089
+          }
+        }
+      },
+      "microbial_depth_panel_transfer": {
+        "mse": {
+          "intercept": 0.045095557690262016,
+          "structure": 0.03634375571332959,
+          "strength": 0.0411243665573902,
+          "reliability": 0.026016448133545415,
+          "noise": 0.02383236866831103
+        },
+        "gains": {
+          "strength_over_structure": -0.13153871277830698,
+          "reliability_over_strength": 0.36737145611133637,
+          "noise_over_strength": 0.4204805894079293,
+          "reliability_over_intercept": 0.4230817963880412
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.045095557690262016,
+            "structure": 0.03634375571332959,
+            "strength": 0.0411243665573902,
+            "reliability": 0.026016448133545415,
+            "noise": 0.02383236866831103
+          }
+        }
+      },
+      "microbial_transfer_excl_kansas": {
+        "mse": {
+          "intercept": 0.034634642862798076,
+          "structure": 0.037805755364292454,
+          "strength": 0.03781703658223448,
+          "reliability": 0.03347351137220265,
+          "noise": 0.034727536892345895
+        },
+        "gains": {
+          "strength_over_structure": -0.00029839948529852833,
+          "reliability_over_strength": 0.11485630822993453,
+          "noise_over_strength": 0.08169597538850937,
+          "reliability_over_intercept": 0.03352514692284092
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.034634642862798076,
+            "structure": 0.037805755364292454,
+            "strength": 0.03781703658223448,
+            "reliability": 0.03347351137220265,
+            "noise": 0.034727536892345895
+          }
+        }
+      },
+      "descriptive_U_correlation": {
+        "pond": 0.2594382954882833,
+        "kansas": -0.04950548147366595,
+        "poem": -0.2545407413043614,
+        "field": 0.4909887518878814,
+        "mancuso": 0.534217770932298
+      }
+    },
+    "same": {
+      "loo": {
+        "mse": {
+          "intercept": 0.07653066447540408,
+          "structure": 0.19420032044245727,
+          "strength": 0.211923697027051,
+          "reliability": 0.191472197498827,
+          "noise": 0.20190375644759057
+        },
+        "gains": {
+          "strength_over_structure": -0.09126337456196554,
+          "reliability_over_strength": 0.09650407111203552,
+          "noise_over_strength": 0.04728088798008012,
+          "reliability_over_intercept": -1.5019016731569548
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.0830146324431148,
+            "structure": 0.14117968769640554,
+            "strength": 0.17354648272011447,
+            "reliability": 0.1843908800660016,
+            "noise": 0.19028409305625346
+          },
+          "kansas": {
+            "intercept": 0.058471835491162985,
+            "structure": 0.2306626714916755,
+            "strength": 0.2291976753319396,
+            "reliability": 0.1955070689024454,
+            "noise": 0.20767173438230718
+          },
+          "poem": {
+            "intercept": 0.08399760722261998,
+            "structure": 0.28157775805974444,
+            "strength": 0.2856763887697828,
+            "reliability": 0.20904972309322084,
+            "noise": 0.22610564308543757
+          },
+          "field": {
+            "intercept": 0.08063858274471854,
+            "structure": 0.12338116452200354,
+            "strength": 0.15927424128636702,
+            "reliability": 0.17694111793364026,
+            "noise": 0.18355355526636408
+          }
+        }
+      },
+      "grouped": {
+        "mse": {
+          "intercept": 0.06655124272295503,
+          "structure": 0.14112350329730627,
+          "strength": 0.15171051177712885,
+          "reliability": 0.14875707936193241,
+          "noise": 0.15382403906726788
+        },
+        "gains": {
+          "strength_over_structure": -0.07501945623840434,
+          "reliability_over_strength": 0.01946755291113378,
+          "noise_over_strength": -0.013931317384545672,
+          "reliability_over_intercept": -1.2352261697229396
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.0830146324431148,
+            "structure": 0.14117968769640554,
+            "strength": 0.17354648272011447,
+            "reliability": 0.1843908800660016,
+            "noise": 0.19028409305625346
+          },
+          "kansas": {
+            "intercept": 0.058471835491162985,
+            "structure": 0.2306626714916755,
+            "strength": 0.2291976753319396,
+            "reliability": 0.1955070689024454,
+            "noise": 0.20767173438230718
+          },
+          "poem": {
+            "intercept": 0.0618807130751905,
+            "structure": 0.11217831412234441,
+            "strength": 0.07491307001650105,
+            "reliability": 0.07253291210751715,
+            "noise": 0.07171663470860548
+          },
+          "field": {
+            "intercept": 0.06283778988235184,
+            "structure": 0.08047333987879966,
+            "strength": 0.1291848190399602,
+            "reliability": 0.1425974563717655,
+            "noise": 0.14562369412190546
+          }
+        }
+      },
+      "exclude_kansas": {
+        "mse": {
+          "intercept": 0.08970731223549133,
+          "structure": 0.06299247904997182,
+          "strength": 0.09786609375602255,
+          "reliability": 0.07987628202855551,
+          "noise": 0.08923626589279716
+        },
+        "gains": {
+          "strength_over_structure": -0.5536155304887358,
+          "reliability_over_strength": 0.18382067820460002,
+          "noise_over_strength": 0.08817995622405561,
+          "reliability_over_intercept": 0.10959006531294024
+        },
+        "by_source": {
+          "pond": {
+            "intercept": 0.0809562758970293,
+            "structure": 0.0770878815677636,
+            "strength": 0.0762802057077349,
+            "reliability": 0.08416811828456523,
+            "noise": 0.08725219411829646
+          },
+          "poem": {
+            "intercept": 0.11435091111564746,
+            "structure": 0.056563894874547126,
+            "strength": 0.12113843011785405,
+            "reliability": 0.07058813103393022,
+            "noise": 0.08823141869691146
+          },
+          "field": {
+            "intercept": 0.07381474969379725,
+            "structure": 0.055325660707604744,
+            "strength": 0.09617964544247869,
+            "reliability": 0.08487259676717107,
+            "noise": 0.0922251848631836
+          }
+        }
+      },
+      "microbial_transfer": {
+        "mse": {
+          "intercept": 0.09490785989322088,
+          "structure": 0.1074504678830614,
+          "strength": 0.10595075951502574,
+          "reliability": 0.08329906113875009,
+          "noise": 0.08166925174665263
+        },
+        "gains": {
+          "strength_over_structure": 0.013957206493207641,
+          "reliability_over_strength": 0.2137945823131473,
+          "noise_over_strength": 0.2291772883886647,
+          "reliability_over_intercept": 0.12231651590849946
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.09490785989322088,
+            "structure": 0.1074504678830614,
+            "strength": 0.10595075951502574,
+            "reliability": 0.08329906113875009,
+            "noise": 0.08166925174665263
+          }
+        }
+      },
+      "microbial_depth_panel_transfer": {
+        "mse": {
+          "intercept": 0.08309768144270524,
+          "structure": 0.10899803078123504,
+          "strength": 0.10732452022528871,
+          "reliability": 0.058981526280407245,
+          "noise": 0.05322882357095151
+        },
+        "gains": {
+          "strength_over_structure": 0.015353585234077816,
+          "reliability_over_strength": 0.45043754999699015,
+          "noise_over_strength": 0.5040385602542923,
+          "reliability_over_intercept": 0.2902145372001236
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.08309768144270524,
+            "structure": 0.10899803078123504,
+            "strength": 0.10732452022528871,
+            "reliability": 0.058981526280407245,
+            "noise": 0.05322882357095151
+          }
+        }
+      },
+      "microbial_transfer_excl_kansas": {
+        "mse": {
+          "intercept": 0.08630169667871906,
+          "structure": 0.07364998077407818,
+          "strength": 0.06860271673075988,
+          "reliability": 0.05653705657364748,
+          "noise": 0.061737893593120916
+        },
+        "gains": {
+          "strength_over_structure": 0.0685304190207574,
+          "reliability_over_strength": 0.17587729367140992,
+          "noise_over_strength": 0.10006634525248959,
+          "reliability_over_intercept": 0.34489055546472447
+        },
+        "by_source": {
+          "mancuso": {
+            "intercept": 0.08630169667871906,
+            "structure": 0.07364998077407818,
+            "strength": 0.06860271673075988,
+            "reliability": 0.05653705657364748,
+            "noise": 0.061737893593120916
+          }
+        }
+      },
+      "descriptive_U_correlation": {
+        "pond": 0.2250470441115737,
+        "kansas": 0.03164380376781226,
+        "poem": 0.2258998467843317,
+        "field": 0.42939345346798774,
+        "mancuso": 0.45571589760010106
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45584955172",
+  "artifact_id": 15008132164,
+  "artifact_digest": "sha256:d88e3c70a98de71a9aa4b5a4e0e4efbd982082f9524fa657e5577786afa39059"
+}
