@@ -1,0 +1,3439 @@
+{
+  "status": "SOURCE_VERIFIED_NARWANI_POND_TIME_FORECAST_DESCRIPTIVE",
+  "source_md5": "c5f52c568a1119429093d3db1603e59c",
+  "source_sha256": "6242f9c3a92cde7f451066ceebf6ae6c9cc6f924d5ed9bc0a7f11de7b9beb3c3",
+  "unit": "mm^3/L",
+  "n_ponds": 20,
+  "n_morphotypes": 66,
+  "n_complete_pond_weeks": 300,
+  "weeks": [
+    1,
+    3,
+    5,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    24,
+    28,
+    32
+  ],
+  "excluded_missing_weeks": [
+    7,
+    10
+  ],
+  "warmup_observations": 5,
+  "n_cells_per_contrast": 360,
+  "arm_ponds": {
+    "O": [
+      "1D",
+      "3B",
+      "3C",
+      "5D"
+    ],
+    "C": [
+      "1B",
+      "1C",
+      "2B",
+      "3A"
+    ],
+    "D": [
+      "1A",
+      "4A",
+      "4C",
+      "5C"
+    ],
+    "M": [
+      "2D",
+      "3D",
+      "5A",
+      "5B"
+    ],
+    "MD": [
+      "2A",
+      "2C",
+      "4B",
+      "4D"
+    ]
+  },
+  "mapping": {
+    "Achnthaceae": "unresolved_other",
+    "Aphanocapsa": "cyanobacteria",
+    "Asterionella": "other_named_algae",
+    "Bicosoeca": "unresolved_other",
+    "Carteria": "other_named_algae",
+    "Chlamydomos": "unresolved_other",
+    "Chroococus": "cyanobacteria",
+    "Coelastrum_1": "other_named_algae",
+    "Coelastrum_2": "other_named_algae",
+    "Coelastrum_3": "other_named_algae",
+    "Cosmarium_1": "other_named_algae",
+    "Cosmarium_2": "other_named_algae",
+    "Cryptomos": "unresolved_other",
+    "Cyclotella_1": "other_named_algae",
+    "Cyclotella_2": "other_named_algae",
+    "Diatoma": "other_named_algae",
+    "Elakatothrix": "other_named_algae",
+    "Erkenia": "unresolved_other",
+    "Gomphosphaeria": "cyanobacteria",
+    "Gymnodinium": "other_named_algae",
+    "Haematococcaceae": "unresolved_other",
+    "Katablepharis": "unresolved_other",
+    "Kirchneriella": "other_named_algae",
+    "Lagerheimia_1": "other_named_algae",
+    "Lagerheimia_2": "other_named_algae",
+    "Leptothrix": "unresolved_other",
+    "Mallomos": "unresolved_other",
+    "Monoraphidium": "other_named_algae",
+    "Nephrocitium": "other_named_algae",
+    "Nitzschia": "other_named_algae",
+    "Oocystis_1": "other_named_algae",
+    "Oocystis_2": "other_named_algae",
+    "Pediastrum": "other_named_algae",
+    "Peridinium": "unresolved_other",
+    "Phacotus": "other_named_algae",
+    "Phormidium": "cyanobacteria",
+    "Pseudoabae": "unresolved_other",
+    "Rayssiella": "other_named_algae",
+    "Rhodomos": "unresolved_other",
+    "Scenedesmus_1": "other_named_algae",
+    "Scenedesmus_2": "other_named_algae",
+    "Scenedesmus_3": "other_named_algae",
+    "Scenedesmus_4": "other_named_algae",
+    "Spiruli": "unresolved_other",
+    "Stephanodiscus_1": "other_named_algae",
+    "Stephanodiscus_2": "other_named_algae",
+    "Stephanodiscus_3": "other_named_algae",
+    "Synechococcales": "cyanobacteria",
+    "Synedra_1": "other_named_algae",
+    "Synedra_2": "other_named_algae",
+    "Synedra_3": "other_named_algae",
+    "Tetraedron": "other_named_algae",
+    "Willea": "other_named_algae",
+    "Unknown_1": "cyanobacteria",
+    "Unknown_2": "unresolved_other",
+    "Unknown_3": "cyanobacteria",
+    "Unknown_4": "cyanobacteria",
+    "Unknown_5": "other_named_algae",
+    "Unknown_6": "other_named_algae",
+    "Unknown_7": "other_named_algae",
+    "Unknown_8": "other_named_algae",
+    "Unknown_9": "other_named_algae",
+    "Unknown_10": "other_named_algae",
+    "Unkonwn_11": "other_named_algae",
+    "Unknown_12": "other_named_algae",
+    "Unknown_13": "unresolved_other"
+  },
+  "source_group_reconciliation": {
+    "cyan_abs_error_mean": 0.009368865200715486,
+    "cyan_abs_error_max": 0.16393599469474995,
+    "total_abs_error_mean": 0.004541629170241662,
+    "total_abs_error_max": 1.2865227124322516,
+    "cyan_exact_rows": 228,
+    "total_exact_rows": 294
+  },
+  "primary": "MD-C",
+  "contrasts": {
+    "MD-C": {
+      "conservative3": {
+        "labels": [
+          "cyanobacteria",
+          "other_named_algae",
+          "unresolved_other"
+        ],
+        "group_sizes": [
+          8,
+          43,
+          15
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 133431.82568044285,
+              "sse_by_group": {
+                "cyanobacteria": 11581.292418397079,
+                "other_named_algae": 120651.35979542829,
+                "unresolved_other": 1199.1734666175164
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.596541865113477,
+                "other_named_algae": 12.423590030034713,
+                "unresolved_other": 1.2731567017316177
+              },
+              "total_sse": 88513.74526024249,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 80,
+                "fn": 280,
+                "accuracy": 0.2222222222222222,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 147435.03514326765,
+              "sse_by_group": {
+                "cyanobacteria": 8502.423911414038,
+                "other_named_algae": 136686.8984272201,
+                "unresolved_other": 2245.7128046336047
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.562342931438598,
+                "other_named_algae": 13.54921770331416,
+                "unresolved_other": 1.788953935377659
+              },
+              "total_sse": 156014.62235967506,
+              "opposition_forecast": {
+                "tp": 204,
+                "fp": 51,
+                "tn": 29,
+                "fn": 76,
+                "accuracy": 0.6472222222222223,
+                "balanced_accuracy": 0.5455357142857142,
+                "sown_sign_accuracy": 0.8944444444444445,
+                "other_sign_accuracy": 0.625
+              }
+            },
+            "cumulative": {
+              "sse": 119865.86568072572,
+              "sse_by_group": {
+                "cyanobacteria": 8395.696080636362,
+                "other_named_algae": 110273.26962315821,
+                "unresolved_other": 1196.899976931187
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.4855126572217228,
+                "other_named_algae": 13.433320780313856,
+                "unresolved_other": 1.3780192110193894
+              },
+              "total_sse": 105907.30650159906,
+              "opposition_forecast": {
+                "tp": 234,
+                "fp": 54,
+                "tn": 26,
+                "fn": 46,
+                "accuracy": 0.7222222222222222,
+                "balanced_accuracy": 0.5803571428571429,
+                "sown_sign_accuracy": 0.8472222222222222,
+                "other_sign_accuracy": 0.7611111111111111
+              }
+            },
+            "bottom_history": {
+              "sse": 239517.72179190395,
+              "sse_by_group": {
+                "cyanobacteria": 8711.961354050425,
+                "other_named_algae": 228528.4058478365,
+                "unresolved_other": 2277.3545900170066
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.6283286482707866,
+                "other_named_algae": 17.22443219747433,
+                "unresolved_other": 1.7580637523457325
+              },
+              "total_sse": 234226.1691181304,
+              "opposition_forecast": {
+                "tp": 169,
+                "fp": 40,
+                "tn": 40,
+                "fn": 111,
+                "accuracy": 0.5805555555555556,
+                "balanced_accuracy": 0.5517857142857143,
+                "sown_sign_accuracy": 0.875,
+                "other_sign_accuracy": 0.5722222222222222
+              }
+            },
+            "bottom_state": {
+              "sse": 383220.45079273777,
+              "sse_by_group": {
+                "cyanobacteria": 9970.06385642713,
+                "other_named_algae": 367590.4043807437,
+                "unresolved_other": 5659.98255556736
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.9114141858801967,
+                "other_named_algae": 21.3783154539817,
+                "unresolved_other": 2.625407082578568
+              },
+              "total_sse": 419458.9465612152,
+              "opposition_forecast": {
+                "tp": 156,
+                "fp": 38,
+                "tn": 42,
+                "fn": 124,
+                "accuracy": 0.55,
+                "balanced_accuracy": 0.5410714285714286,
+                "sown_sign_accuracy": 0.8527777777777777,
+                "other_sign_accuracy": 0.5416666666666666
+              }
+            },
+            "direct_history": {
+              "sse": 203189.23396758593,
+              "sse_by_group": {
+                "cyanobacteria": 9836.6643525064,
+                "other_named_algae": 191131.07260109566,
+                "unresolved_other": 2221.497013983935
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.9315010526816114,
+                "other_named_algae": 16.11482731107565,
+                "unresolved_other": 1.8562479889462846
+              },
+              "total_sse": 216639.39844398055,
+              "opposition_forecast": {
+                "tp": 186,
+                "fp": 43,
+                "tn": 37,
+                "fn": 94,
+                "accuracy": 0.6194444444444445,
+                "balanced_accuracy": 0.5633928571428571,
+                "sown_sign_accuracy": 0.7861111111111111,
+                "other_sign_accuracy": 0.6888888888888889
+              }
+            },
+            "direct_state": {
+              "sse": 233004.5373049162,
+              "sse_by_group": {
+                "cyanobacteria": 9065.883717072298,
+                "other_named_algae": 219600.4301405065,
+                "unresolved_other": 4338.223447337436
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.5648974881812605,
+                "other_named_algae": 17.04157837553216,
+                "unresolved_other": 2.597326687835219
+              },
+              "total_sse": 257377.6075817662,
+              "opposition_forecast": {
+                "tp": 178,
+                "fp": 42,
+                "tn": 38,
+                "fn": 102,
+                "accuracy": 0.6,
+                "balanced_accuracy": 0.5553571428571429,
+                "sown_sign_accuracy": 0.8277777777777777,
+                "other_sign_accuracy": 0.6166666666666667
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 255383.6308391409,
+              "sse_by_group": {
+                "cyanobacteria": 10200.714609679457,
+                "other_named_algae": 242449.43406129352,
+                "unresolved_other": 2733.482168167943
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.9458237447974507,
+                "other_named_algae": 17.934894467403605,
+                "unresolved_other": 2.002092183320495
+              },
+              "total_sse": 253381.59470545076,
+              "opposition_forecast": {
+                "tp": 161,
+                "fp": 35,
+                "tn": 45,
+                "fn": 119,
+                "accuracy": 0.5722222222222222,
+                "balanced_accuracy": 0.56875,
+                "sown_sign_accuracy": 0.8166666666666667,
+                "other_sign_accuracy": 0.5888888888888889
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 375890.2062005503,
+              "sse_by_group": {
+                "cyanobacteria": 12005.774825679464,
+                "other_named_algae": 355067.3570242089,
+                "unresolved_other": 8817.074350662102
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.213785532501413,
+                "other_named_algae": 21.34160207572739,
+                "unresolved_other": 3.6376086828089966
+              },
+              "total_sse": 420741.52604583895,
+              "opposition_forecast": {
+                "tp": 144,
+                "fp": 38,
+                "tn": 42,
+                "fn": 136,
+                "accuracy": 0.5166666666666667,
+                "balanced_accuracy": 0.5196428571428571,
+                "sown_sign_accuracy": 0.7916666666666666,
+                "other_sign_accuracy": 0.5472222222222223
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.15167348600568556,
+            "direct_state_over_bottom_state": 0.39198303007337376,
+            "direct_history_scaled_over_bottom_history": -0.06624106528961335,
+            "direct_state_scaled_over_bottom_state": 0.01912800994055501,
+            "direct_history_over_zero": -0.5227943778136241,
+            "direct_state_over_zero": -0.7462440921923752,
+            "direct_state_over_direct_history": -0.146736629471651
+          }
+        }
+      },
+      "cyan_other2": {
+        "labels": [
+          "cyanobacteria",
+          "all_other_morphotypes"
+        ],
+        "group_sizes": [
+          8,
+          58
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 125486.42541096784,
+              "sse_by_group": {
+                "cyanobacteria": 11581.292418397079,
+                "all_other_morphotypes": 113905.13299257071
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.596541865113477,
+                "all_other_morphotypes": 12.111558453467902
+              },
+              "total_sse": 88513.74526024249,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 94,
+                "fn": 266,
+                "accuracy": 0.2611111111111111,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 157047.64336840605,
+              "sse_by_group": {
+                "cyanobacteria": 8502.423911414038,
+                "all_other_morphotypes": 148545.219456992
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.562342931438598,
+                "all_other_morphotypes": 14.219749521076599
+              },
+              "total_sse": 156014.62235967506,
+              "opposition_forecast": {
+                "tp": 190,
+                "fp": 65,
+                "tn": 29,
+                "fn": 76,
+                "accuracy": 0.6083333333333333,
+                "balanced_accuracy": 0.5113981762917933,
+                "sown_sign_accuracy": 0.8944444444444445,
+                "other_sign_accuracy": 0.5916666666666667
+              }
+            },
+            "cumulative": {
+              "sse": 119233.58785046391,
+              "sse_by_group": {
+                "cyanobacteria": 8395.696080636362,
+                "all_other_morphotypes": 110837.89176982755
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.4855126572217228,
+                "all_other_morphotypes": 13.372946719105698
+              },
+              "total_sse": 105907.30650159906,
+              "opposition_forecast": {
+                "tp": 205,
+                "fp": 65,
+                "tn": 29,
+                "fn": 61,
+                "accuracy": 0.65,
+                "balanced_accuracy": 0.5395936650135978,
+                "sown_sign_accuracy": 0.8472222222222222,
+                "other_sign_accuracy": 0.6777777777777778
+              }
+            },
+            "bottom_history": {
+              "sse": 247989.5670435903,
+              "sse_by_group": {
+                "cyanobacteria": 8711.961354050425,
+                "all_other_morphotypes": 239277.60568953995
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.6283286482707866,
+                "all_other_morphotypes": 17.507235111078735
+              },
+              "total_sse": 234226.1691181304,
+              "opposition_forecast": {
+                "tp": 162,
+                "fp": 50,
+                "tn": 44,
+                "fn": 104,
+                "accuracy": 0.5722222222222222,
+                "balanced_accuracy": 0.5385538313869781,
+                "sown_sign_accuracy": 0.875,
+                "other_sign_accuracy": 0.5638888888888889
+              }
+            },
+            "bottom_state": {
+              "sse": 417367.0553019489,
+              "sse_by_group": {
+                "cyanobacteria": 9970.06385642713,
+                "all_other_morphotypes": 407396.9914455218
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.9114141858801967,
+                "all_other_morphotypes": 21.98451482598749
+              },
+              "total_sse": 419458.94656121527,
+              "opposition_forecast": {
+                "tp": 149,
+                "fp": 47,
+                "tn": 47,
+                "fn": 117,
+                "accuracy": 0.5444444444444444,
+                "balanced_accuracy": 0.5300751879699248,
+                "sown_sign_accuracy": 0.8527777777777777,
+                "other_sign_accuracy": 0.5277777777777778
+              }
+            },
+            "direct_history": {
+              "sse": 214405.29191132175,
+              "sse_by_group": {
+                "cyanobacteria": 11980.501910973882,
+                "all_other_morphotypes": 202424.790000348
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.409675541694015,
+                "all_other_morphotypes": 16.645653304971958
+              },
+              "total_sse": 219019.19512733349,
+              "opposition_forecast": {
+                "tp": 125,
+                "fp": 46,
+                "tn": 48,
+                "fn": 141,
+                "accuracy": 0.48055555555555557,
+                "balanced_accuracy": 0.4902815549512078,
+                "sown_sign_accuracy": 0.6666666666666666,
+                "other_sign_accuracy": 0.6305555555555555
+              }
+            },
+            "direct_state": {
+              "sse": 271936.3926805068,
+              "sse_by_group": {
+                "cyanobacteria": 11188.867855635668,
+                "all_other_morphotypes": 260747.52482487116
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.021797095408982,
+                "all_other_morphotypes": 18.11869839305612
+              },
+              "total_sse": 285360.9994031988,
+              "opposition_forecast": {
+                "tp": 149,
+                "fp": 51,
+                "tn": 43,
+                "fn": 117,
+                "accuracy": 0.5333333333333333,
+                "balanced_accuracy": 0.5087985922252439,
+                "sown_sign_accuracy": 0.7694444444444445,
+                "other_sign_accuracy": 0.5944444444444444
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 321189.2163022437,
+              "sse_by_group": {
+                "cyanobacteria": 11810.539397635028,
+                "all_other_morphotypes": 309378.6769046085
+              },
+              "mae_by_group": {
+                "cyanobacteria": 4.363097990846126,
+                "all_other_morphotypes": 19.935251778355426
+              },
+              "total_sse": 300788.8103541057,
+              "opposition_forecast": {
+                "tp": 116,
+                "fp": 45,
+                "tn": 49,
+                "fn": 150,
+                "accuracy": 0.4583333333333333,
+                "balanced_accuracy": 0.4786834106542953,
+                "sown_sign_accuracy": 0.7444444444444445,
+                "other_sign_accuracy": 0.5027777777777778
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 532586.5691307524,
+              "sse_by_group": {
+                "cyanobacteria": 18217.063119144117,
+                "all_other_morphotypes": 514369.5060116082
+              },
+              "mae_by_group": {
+                "cyanobacteria": 5.217797138288196,
+                "all_other_morphotypes": 24.33850517015841
+              },
+              "total_sse": 537867.7722285272,
+              "opposition_forecast": {
+                "tp": 106,
+                "fp": 40,
+                "tn": 54,
+                "fn": 160,
+                "accuracy": 0.4444444444444444,
+                "balanced_accuracy": 0.4864821628539434,
+                "sown_sign_accuracy": 0.6777777777777778,
+                "other_sign_accuracy": 0.5166666666666667
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.13542616140123864,
+            "direct_state_over_bottom_state": 0.3484478728591279,
+            "direct_history_scaled_over_bottom_history": -0.2951722934609856,
+            "direct_state_scaled_over_bottom_state": -0.27606279021099683,
+            "direct_history_over_zero": -0.7085935088926532,
+            "direct_state_over_zero": -1.1670582438691322,
+            "direct_state_over_direct_history": -0.26832873506209903
+          }
+        }
+      },
+      "morphotype_sse": {
+        "zero": 116242.98113271853,
+        "previous": 141384.39526723977,
+        "cumulative": 114298.16928994359,
+        "history_ridge": 220326.67645156852,
+        "state_ridge": 340973.8134195353
+      },
+      "source_group_totals": {
+        "aggregate": {
+          "zero": {
+            "sse": 125479.23142932281,
+            "total_sse": 88510.01474277212
+          },
+          "previous": {
+            "sse": 157045.48203789972,
+            "total_sse": 156043.9023544597
+          },
+          "cumulative": {
+            "sse": 119125.88871082291,
+            "total_sse": 105910.4528210279
+          }
+        },
+        "by_week": [
+          {
+            "week": 1,
+            "contrast": [
+              -0.056143854035999974,
+              -0.049087167767937895
+            ],
+            "opposite": false
+          },
+          {
+            "week": 3,
+            "contrast": [
+              -0.118644936531625,
+              -0.04295594850773132
+            ],
+            "opposite": false
+          },
+          {
+            "week": 5,
+            "contrast": [
+              0.06339408268925001,
+              -0.613745044067481
+            ],
+            "opposite": true
+          },
+          {
+            "week": 8,
+            "contrast": [
+              -0.5094625757818749,
+              -1.4016526959662503
+            ],
+            "opposite": false
+          },
+          {
+            "week": 9,
+            "contrast": [
+              -0.008702167149062578,
+              0.1646904238156246
+            ],
+            "opposite": false
+          },
+          {
+            "week": 11,
+            "contrast": [
+              -0.11107161524325004,
+              -4.025544485869954
+            ],
+            "opposite": false
+          },
+          {
+            "week": 12,
+            "contrast": [
+              2.2310524305556245,
+              -15.562989378941126
+            ],
+            "opposite": true
+          },
+          {
+            "week": 13,
+            "contrast": [
+              5.117562404275624,
+              -24.401164244240306
+            ],
+            "opposite": true
+          },
+          {
+            "week": 14,
+            "contrast": [
+              5.749150202047276,
+              -26.078829654041773
+            ],
+            "opposite": true
+          },
+          {
+            "week": 15,
+            "contrast": [
+              2.7299518626485124,
+              -14.589699855354251
+            ],
+            "opposite": true
+          },
+          {
+            "week": 16,
+            "contrast": [
+              5.521377793210807,
+              -16.582768909851747
+            ],
+            "opposite": true
+          },
+          {
+            "week": 19,
+            "contrast": [
+              10.997963593803194,
+              -7.939981580973875
+            ],
+            "opposite": true
+          },
+          {
+            "week": 24,
+            "contrast": [
+              4.513305247871275,
+              -0.1937277376004375
+            ],
+            "opposite": true
+          },
+          {
+            "week": 28,
+            "contrast": [
+              4.09131496285465,
+              -0.6992169322824564
+            ],
+            "opposite": true
+          },
+          {
+            "week": 32,
+            "contrast": [
+              4.442642055849907,
+              0.2557675487982313
+            ],
+            "opposite": false
+          }
+        ]
+      },
+      "persistence": [
+        {
+          "week": 1,
+          "contrast": [
+            -0.056143854038874924,
+            -0.11926666141256255,
+            0.07017949364606257
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.16666666666666666,
+          "held_half_signed_min": -0.31864574618825
+        },
+        {
+          "week": 3,
+          "contrast": [
+            -0.12350058226762503,
+            -0.2766936253206625,
+            0.23859332240920617
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3055555555555556,
+          "held_half_signed_min": -0.12415607776574232
+        },
+        {
+          "week": 5,
+          "contrast": [
+            0.0540074962458125,
+            -1.3425732076408996,
+            0.7382147496002687
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5833333333333334,
+          "held_half_signed_min": 0.037719357749038195
+        },
+        {
+          "week": 8,
+          "contrast": [
+            -0.5255980083096881,
+            -2.540508613856374,
+            1.154991349576999
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3611111111111111,
+          "held_half_signed_min": -0.554950492525236
+        },
+        {
+          "week": 9,
+          "contrast": [
+            -0.010015130345687514,
+            0.9917198528227942,
+            -0.825716464821687
+          ],
+          "opposite": false,
+          "reverse": true,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.1388888888888889,
+          "held_half_signed_min": -1.8605048819280414
+        },
+        {
+          "week": 11,
+          "contrast": [
+            -0.1321649651216249,
+            -5.649630844088001,
+            1.6451797068831686
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3055555555555556,
+          "held_half_signed_min": -1.2815106431206111
+        },
+        {
+          "week": 12,
+          "contrast": [
+            2.2500136844618748,
+            -16.35402224069839,
+            0.7720716083542871
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 0.8055555555555556,
+          "held_half_signed_min": 1.528880490343658
+        },
+        {
+          "week": 13,
+          "contrast": [
+            5.1018061314872485,
+            -26.836687264602904,
+            2.4397182188996505
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 0.8333333333333334,
+          "held_half_signed_min": 3.5765447981865908
+        },
+        {
+          "week": 14,
+          "contrast": [
+            5.770125526752901,
+            -27.24359599232836,
+            1.1437910072546686
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 1,
+          "held_half_signed_min": 5.6190385437594035
+        },
+        {
+          "week": 15,
+          "contrast": [
+            2.7299518626398873,
+            -15.663998107641774,
+            1.0742982515029373
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 1,
+          "held_half_signed_min": 2.7299518626398873
+        },
+        {
+          "week": 16,
+          "contrast": [
+            5.516859872146432,
+            -18.231320235449925,
+            1.6530692466918748
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 0.9722222222222222,
+          "held_half_signed_min": 5.183520656094773
+        },
+        {
+          "week": 19,
+          "contrast": [
+            10.980048285332444,
+            -7.953051435893549,
+            0.030985163252999968
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 0.75,
+          "held_half_signed_min": 5.335846968601347
+        },
+        {
+          "week": 24,
+          "contrast": [
+            4.503958130096275,
+            -0.036660776628562604,
+            -0.14771984334062502
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5,
+          "held_half_signed_min": 0.03666077662856258
+        },
+        {
+          "week": 28,
+          "contrast": [
+            4.07573643322965,
+            -0.4316111121911499,
+            -0.2520272904789563
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.7777777777777778,
+          "held_half_signed_min": 0.4316111121911499
+        },
+        {
+          "week": 32,
+          "contrast": [
+            4.442642055901656,
+            -0.21969510905949374,
+            0.47546265775235613
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.8333333333333334,
+          "held_half_signed_min": 0.21969510905949374
+        }
+      ]
+    },
+    "M-C": {
+      "conservative3": {
+        "labels": [
+          "cyanobacteria",
+          "other_named_algae",
+          "unresolved_other"
+        ],
+        "group_sizes": [
+          8,
+          43,
+          15
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 171143.10610748737,
+              "sse_by_group": {
+                "cyanobacteria": 278.8367008820417,
+                "other_named_algae": 166530.22361075875,
+                "unresolved_other": 4334.045795846563
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6395247508691456,
+                "other_named_algae": 14.98893382453947,
+                "unresolved_other": 2.220685052690553
+              },
+              "total_sse": 151623.99669170217,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 177,
+                "fn": 183,
+                "accuracy": 0.49166666666666664,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 168222.9926754378,
+              "sse_by_group": {
+                "cyanobacteria": 785.9047174020933,
+                "other_named_algae": 158588.17476981741,
+                "unresolved_other": 8848.91318821826
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.1670224045024808,
+                "other_named_algae": 14.765019980592001,
+                "unresolved_other": 3.7698697620607424
+              },
+              "total_sse": 155729.4956003885,
+              "opposition_forecast": {
+                "tp": 43,
+                "fp": 110,
+                "tn": 67,
+                "fn": 140,
+                "accuracy": 0.3055555555555556,
+                "balanced_accuracy": 0.30675187552097805,
+                "sown_sign_accuracy": 0.3111111111111111,
+                "other_sign_accuracy": 0.8555555555555555
+              }
+            },
+            "cumulative": {
+              "sse": 143232.47299465095,
+              "sse_by_group": {
+                "cyanobacteria": 530.2863996044008,
+                "other_named_algae": 137260.16688249452,
+                "unresolved_other": 5442.019712552043
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.9057345151010767,
+                "other_named_algae": 15.057098598891093,
+                "unresolved_other": 2.695030054067974
+              },
+              "total_sse": 125598.5484651372,
+              "opposition_forecast": {
+                "tp": 30,
+                "fp": 35,
+                "tn": 142,
+                "fn": 153,
+                "accuracy": 0.4777777777777778,
+                "balanced_accuracy": 0.48309715661757896,
+                "sown_sign_accuracy": 0.4527777777777778,
+                "other_sign_accuracy": 0.8944444444444445
+              }
+            },
+            "bottom_history": {
+              "sse": 261424.6751036793,
+              "sse_by_group": {
+                "cyanobacteria": 873.3441174743915,
+                "other_named_algae": 251001.20724702612,
+                "unresolved_other": 9550.123739178798
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.2336466128717294,
+                "other_named_algae": 18.563394940604738,
+                "unresolved_other": 3.926847038756714
+              },
+              "total_sse": 265522.5806099558,
+              "opposition_forecast": {
+                "tp": 15,
+                "fp": 80,
+                "tn": 97,
+                "fn": 168,
+                "accuracy": 0.3111111111111111,
+                "balanced_accuracy": 0.31499490599240526,
+                "sown_sign_accuracy": 0.25,
+                "other_sign_accuracy": 0.75
+              }
+            },
+            "bottom_state": {
+              "sse": 420975.98576353287,
+              "sse_by_group": {
+                "cyanobacteria": 1141.9770355644637,
+                "other_named_algae": 405513.33551487577,
+                "unresolved_other": 14320.673213092832
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.3566192931068493,
+                "other_named_algae": 22.61653268107288,
+                "unresolved_other": 4.574681186466615
+              },
+              "total_sse": 458624.19182683073,
+              "opposition_forecast": {
+                "tp": 42,
+                "fp": 68,
+                "tn": 109,
+                "fn": 141,
+                "accuracy": 0.41944444444444445,
+                "balanced_accuracy": 0.42266370288042976,
+                "sown_sign_accuracy": 0.4888888888888889,
+                "other_sign_accuracy": 0.7194444444444444
+              }
+            },
+            "direct_history": {
+              "sse": 223609.60267729434,
+              "sse_by_group": {
+                "cyanobacteria": 1762.7253229456949,
+                "other_named_algae": 212172.23351276675,
+                "unresolved_other": 9674.643841581881
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.8256252225305272,
+                "other_named_algae": 17.36483453113248,
+                "unresolved_other": 3.930194518535661
+              },
+              "total_sse": 242093.88050290247,
+              "opposition_forecast": {
+                "tp": 2,
+                "fp": 4,
+                "tn": 173,
+                "fn": 181,
+                "accuracy": 0.4861111111111111,
+                "balanced_accuracy": 0.49416504584606835,
+                "sown_sign_accuracy": 0.45,
+                "other_sign_accuracy": 0.8861111111111111
+              }
+            },
+            "direct_state": {
+              "sse": 265069.9907515728,
+              "sse_by_group": {
+                "cyanobacteria": 2560.2702476987683,
+                "other_named_algae": 252984.63096231298,
+                "unresolved_other": 9525.089541561081
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.156233619579005,
+                "other_named_algae": 18.345617454587636,
+                "unresolved_other": 3.8454114717884136
+              },
+              "total_sse": 277712.0133797191,
+              "opposition_forecast": {
+                "tp": 79,
+                "fp": 77,
+                "tn": 100,
+                "fn": 104,
+                "accuracy": 0.49722222222222223,
+                "balanced_accuracy": 0.4983328702417338,
+                "sown_sign_accuracy": 0.5916666666666667,
+                "other_sign_accuracy": 0.7888888888888889
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 319914.1827320517,
+              "sse_by_group": {
+                "cyanobacteria": 1331.2573968068389,
+                "other_named_algae": 307799.19256237696,
+                "unresolved_other": 10783.732772867968
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.5588517421103814,
+                "other_named_algae": 20.15131724302294,
+                "unresolved_other": 4.262235356939745
+              },
+              "total_sse": 316019.64654472144,
+              "opposition_forecast": {
+                "tp": 4,
+                "fp": 32,
+                "tn": 145,
+                "fn": 179,
+                "accuracy": 0.41388888888888886,
+                "balanced_accuracy": 0.4205334815226452,
+                "sown_sign_accuracy": 0.37222222222222223,
+                "other_sign_accuracy": 0.725
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 502357.0033038069,
+              "sse_by_group": {
+                "cyanobacteria": 7024.687010259445,
+                "other_named_algae": 477174.5264515294,
+                "unresolved_other": 18157.78984201797
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.459093115489557,
+                "other_named_algae": 24.896854816458482,
+                "unresolved_other": 5.322528716924258
+              },
+              "total_sse": 532290.9501328504,
+              "opposition_forecast": {
+                "tp": 41,
+                "fp": 65,
+                "tn": 112,
+                "fn": 142,
+                "accuracy": 0.425,
+                "balanced_accuracy": 0.42840603871445776,
+                "sown_sign_accuracy": 0.5444444444444444,
+                "other_sign_accuracy": 0.6388888888888888
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.14464997388401743,
+            "direct_state_over_bottom_state": 0.3703441533112396,
+            "direct_history_scaled_over_bottom_history": -0.22373369156976422,
+            "direct_state_scaled_over_bottom_state": -0.19331510654383663,
+            "direct_history_over_zero": -0.30656505986782256,
+            "direct_state_over_zero": -0.5488207312603883,
+            "direct_state_over_direct_history": -0.18541416637689162
+          }
+        }
+      },
+      "cyan_other2": {
+        "labels": [
+          "cyanobacteria",
+          "all_other_morphotypes"
+        ],
+        "group_sizes": [
+          8,
+          58
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 152777.656223106,
+              "sse_by_group": {
+                "cyanobacteria": 278.8367008820417,
+                "all_other_morphotypes": 152498.81952222402
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6395247508691456,
+                "all_other_morphotypes": 14.436711643106149
+              },
+              "total_sse": 151623.99669170217,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 200,
+                "fn": 160,
+                "accuracy": 0.5555555555555556,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 159262.96024098748,
+              "sse_by_group": {
+                "cyanobacteria": 785.9047174020933,
+                "all_other_morphotypes": 158477.05552358538
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.1670224045024808,
+                "all_other_morphotypes": 14.883539166515877
+              },
+              "total_sse": 155729.4956003885,
+              "opposition_forecast": {
+                "tp": 22,
+                "fp": 132,
+                "tn": 68,
+                "fn": 138,
+                "accuracy": 0.25,
+                "balanced_accuracy": 0.23875000000000002,
+                "sown_sign_accuracy": 0.3111111111111111,
+                "other_sign_accuracy": 0.7888888888888889
+              }
+            },
+            "cumulative": {
+              "sse": 129278.36173523837,
+              "sse_by_group": {
+                "cyanobacteria": 530.2863996044008,
+                "all_other_morphotypes": 128748.07533563393
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.9057345151010767,
+                "all_other_morphotypes": 14.584273486210016
+              },
+              "total_sse": 125598.5484651372,
+              "opposition_forecast": {
+                "tp": 16,
+                "fp": 49,
+                "tn": 151,
+                "fn": 144,
+                "accuracy": 0.4638888888888889,
+                "balanced_accuracy": 0.4275,
+                "sown_sign_accuracy": 0.4527777777777778,
+                "other_sign_accuracy": 0.8305555555555556
+              }
+            },
+            "bottom_history": {
+              "sse": 263474.4063655472,
+              "sse_by_group": {
+                "cyanobacteria": 873.3441174743915,
+                "all_other_morphotypes": 262601.062248073
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.2336466128717294,
+                "all_other_morphotypes": 18.849056718328374
+              },
+              "total_sse": 265522.5806099558,
+              "opposition_forecast": {
+                "tp": 10,
+                "fp": 85,
+                "tn": 115,
+                "fn": 150,
+                "accuracy": 0.3472222222222222,
+                "balanced_accuracy": 0.31875,
+                "sown_sign_accuracy": 0.25,
+                "other_sign_accuracy": 0.7361111111111112
+              }
+            },
+            "bottom_state": {
+              "sse": 448360.16084079456,
+              "sse_by_group": {
+                "cyanobacteria": 1141.9770355644637,
+                "all_other_morphotypes": 447218.1838052302
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.3566192931068493,
+                "all_other_morphotypes": 23.24632705176046
+              },
+              "total_sse": 458624.19182683073,
+              "opposition_forecast": {
+                "tp": 39,
+                "fp": 87,
+                "tn": 113,
+                "fn": 121,
+                "accuracy": 0.4222222222222222,
+                "balanced_accuracy": 0.404375,
+                "sown_sign_accuracy": 0.4888888888888889,
+                "other_sign_accuracy": 0.7111111111111111
+              }
+            },
+            "direct_history": {
+              "sse": 197737.11154461926,
+              "sse_by_group": {
+                "cyanobacteria": 3784.3756896168643,
+                "all_other_morphotypes": 193952.73585500265
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.870085570712988,
+                "all_other_morphotypes": 17.037624900783317
+              },
+              "total_sse": 213843.1828986932,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 200,
+                "fn": 160,
+                "accuracy": 0.5555555555555556,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0.45,
+                "other_sign_accuracy": 0.8055555555555556
+              }
+            },
+            "direct_state": {
+              "sse": 236678.73449470967,
+              "sse_by_group": {
+                "cyanobacteria": 3717.500604925575,
+                "all_other_morphotypes": 232961.23388978408
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.5173334441037833,
+                "all_other_morphotypes": 17.724932083148083
+              },
+              "total_sse": 253650.12109744415,
+              "opposition_forecast": {
+                "tp": 37,
+                "fp": 67,
+                "tn": 133,
+                "fn": 123,
+                "accuracy": 0.4722222222222222,
+                "balanced_accuracy": 0.448125,
+                "sown_sign_accuracy": 0.5472222222222223,
+                "other_sign_accuracy": 0.7694444444444445
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 320959.0037130577,
+              "sse_by_group": {
+                "cyanobacteria": 2473.3589289076863,
+                "all_other_morphotypes": 318485.64478414995
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.1771916646951044,
+                "all_other_morphotypes": 20.73362045435113
+              },
+              "total_sse": 330297.34819817287,
+              "opposition_forecast": {
+                "tp": 1,
+                "fp": 18,
+                "tn": 182,
+                "fn": 159,
+                "accuracy": 0.5083333333333333,
+                "balanced_accuracy": 0.458125,
+                "sown_sign_accuracy": 0.39166666666666666,
+                "other_sign_accuracy": 0.675
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 494965.4837629136,
+              "sse_by_group": {
+                "cyanobacteria": 8845.453010979363,
+                "all_other_morphotypes": 486120.0307519345
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.6910053818278987,
+                "all_other_morphotypes": 24.414339348299755
+              },
+              "total_sse": 537259.4571358943,
+              "opposition_forecast": {
+                "tp": 32,
+                "fp": 59,
+                "tn": 141,
+                "fn": 128,
+                "accuracy": 0.48055555555555557,
+                "balanced_accuracy": 0.4525,
+                "sown_sign_accuracy": 0.5111111111111111,
+                "other_sign_accuracy": 0.6555555555555556
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.24950163367945247,
+            "direct_state_over_bottom_state": 0.47212362924735757,
+            "direct_history_scaled_over_bottom_history": -0.21817905632836218,
+            "direct_state_scaled_over_bottom_state": -0.10394617317185738,
+            "direct_history_over_zero": -0.29428030533376925,
+            "direct_state_over_zero": -0.5491711310787508,
+            "direct_state_over_direct_history": -0.1969363395970476
+          }
+        }
+      },
+      "morphotype_sse": {
+        "zero": 134731.9529059622,
+        "previous": 134878.65351357407,
+        "cumulative": 120657.40395517669,
+        "history_ridge": 224573.1980077283,
+        "state_ridge": 354017.85352071456
+      },
+      "source_group_totals": {
+        "aggregate": {
+          "zero": {
+            "sse": 151995.79131063446,
+            "total_sse": 150834.77076879545
+          },
+          "previous": {
+            "sse": 158919.71265379916,
+            "total_sse": 155256.81474533005
+          },
+          "cumulative": {
+            "sse": 128664.04043804064,
+            "total_sse": 124980.52447068362
+          }
+        },
+        "by_week": [
+          {
+            "week": 1,
+            "contrast": [
+              -0.25799997851,
+              -0.16087100211073138
+            ],
+            "opposite": false
+          },
+          {
+            "week": 3,
+            "contrast": [
+              -0.3408200773073937,
+              0.38806484113258133
+            ],
+            "opposite": false
+          },
+          {
+            "week": 5,
+            "contrast": [
+              0.02234197613481881,
+              -1.1190255908799998
+            ],
+            "opposite": true
+          },
+          {
+            "week": 8,
+            "contrast": [
+              -2.28684264907775,
+              -4.62340825393875
+            ],
+            "opposite": false
+          },
+          {
+            "week": 9,
+            "contrast": [
+              -1.038607880167875,
+              -5.2031287212241875
+            ],
+            "opposite": false
+          },
+          {
+            "week": 11,
+            "contrast": [
+              -0.6403079239424312,
+              -12.409664570998954
+            ],
+            "opposite": false
+          },
+          {
+            "week": 12,
+            "contrast": [
+              -0.31812426950262496,
+              -10.490025623986876
+            ],
+            "opposite": false
+          },
+          {
+            "week": 13,
+            "contrast": [
+              -0.18407847190930582,
+              -34.061492068507306
+            ],
+            "opposite": false
+          },
+          {
+            "week": 14,
+            "contrast": [
+              0.018626961654143792,
+              -34.405627642445765
+            ],
+            "opposite": true
+          },
+          {
+            "week": 15,
+            "contrast": [
+              0.3562384380636999,
+              -15.27680658323856
+            ],
+            "opposite": true
+          },
+          {
+            "week": 16,
+            "contrast": [
+              0.3130735309465502,
+              -18.931116996311125
+            ],
+            "opposite": true
+          },
+          {
+            "week": 19,
+            "contrast": [
+              0.8215289921418938,
+              -7.596170852098188
+            ],
+            "opposite": true
+          },
+          {
+            "week": 24,
+            "contrast": [
+              0.07075369311927499,
+              -1.1245090084096876
+            ],
+            "opposite": true
+          },
+          {
+            "week": 28,
+            "contrast": [
+              0.20050903504721246,
+              -1.1896661087578937
+            ],
+            "opposite": true
+          },
+          {
+            "week": 32,
+            "contrast": [
+              0.3136490550042812,
+              0.86436527488975
+            ],
+            "opposite": false
+          }
+        ]
+      },
+      "persistence": [
+        {
+          "week": 1,
+          "contrast": [
+            -0.257999978512875,
+            0.2383162415502249,
+            -0.3991872437282311
+          ],
+          "opposite": false,
+          "reverse": true,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.08333333333333333,
+          "held_half_signed_min": -0.5741160679343894
+        },
+        {
+          "week": 3,
+          "contrast": [
+            -0.3408200773073937,
+            0.06384259388593745,
+            0.3242222473170813
+          ],
+          "opposite": false,
+          "reverse": true,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.4567485782584989
+        },
+        {
+          "week": 5,
+          "contrast": [
+            0.024278228044193773,
+            -1.3966925212900312,
+            0.27573067818225
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.4166666666666667,
+          "held_half_signed_min": -0.017274574895099985
+        },
+        {
+          "week": 8,
+          "contrast": [
+            -2.300719121057706,
+            -3.1532420832231813,
+            -1.4562896998473749
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -2.300719121057706
+        },
+        {
+          "week": 9,
+          "contrast": [
+            -0.9963330468357563,
+            -2.3320832799623936,
+            -2.913320273604625
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -1.0882544088662738
+        },
+        {
+          "week": 11,
+          "contrast": [
+            -0.6445031364386188,
+            -9.02363174274198,
+            -3.381837614587937
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.16666666666666666,
+          "held_half_signed_min": -0.7567573285831563
+        },
+        {
+          "week": 12,
+          "contrast": [
+            -0.3142296371233998,
+            -10.83305357272297,
+            0.3391333161225624
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.2777777777777778,
+          "held_half_signed_min": -2.4542207214583898
+        },
+        {
+          "week": 13,
+          "contrast": [
+            -0.18536930640242455,
+            -35.384400499334035,
+            1.0025685745215247
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5,
+          "held_half_signed_min": -0.18536930640242483
+        },
+        {
+          "week": 14,
+          "contrast": [
+            0.030243735461581298,
+            -36.889199350298654,
+            2.471954928328669
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5277777777777778,
+          "held_half_signed_min": 0.030243735461581267
+        },
+        {
+          "week": 15,
+          "contrast": [
+            0.35381061526843743,
+            -14.95437452239915,
+            -0.32000423759162505
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5,
+          "held_half_signed_min": 0.35381061526843754
+        },
+        {
+          "week": 16,
+          "contrast": [
+            0.3130735309465502,
+            -24.668742365488686,
+            5.737625368753501
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.5,
+          "held_half_signed_min": 0.3130735309465501
+        },
+        {
+          "week": 19,
+          "contrast": [
+            0.8215289921418938,
+            -10.939795003723345,
+            3.3436241510815
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": true,
+          "held_half_opposition_fraction": 0.5833333333333334,
+          "held_half_signed_min": 0.7729171994915892
+        },
+        {
+          "week": 24,
+          "contrast": [
+            0.07075369311927499,
+            -1.1582646401937629,
+            0.03375563180362496
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3611111111111111,
+          "held_half_signed_min": 0.0212215345124007
+        },
+        {
+          "week": 28,
+          "contrast": [
+            0.19857278313683122,
+            -0.7444020025903498,
+            -0.44332785424695625
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.8333333333333334,
+          "held_half_signed_min": 0.129862480002651
+        },
+        {
+          "week": 32,
+          "contrast": [
+            0.28015521615959377,
+            -0.4008363478151875,
+            1.2986954613785624
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.8333333333333334,
+          "held_half_signed_min": 0.1847151985285521
+        }
+      ]
+    },
+    "D-C": {
+      "conservative3": {
+        "labels": [
+          "cyanobacteria",
+          "other_named_algae",
+          "unresolved_other"
+        ],
+        "group_sizes": [
+          8,
+          43,
+          15
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 156762.6453913637,
+              "sse_by_group": {
+                "cyanobacteria": 178.2161299158906,
+                "other_named_algae": 155002.8361271883,
+                "unresolved_other": 1581.5931342595247
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.4988065978460969,
+                "other_named_algae": 14.635233397513899,
+                "unresolved_other": 1.1525127268225948
+              },
+              "total_sse": 157630.3767509607,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 308,
+                "fn": 52,
+                "accuracy": 0.8555555555555555,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 157831.2322366585,
+              "sse_by_group": {
+                "cyanobacteria": 245.05201441271393,
+                "other_named_algae": 153951.72608185132,
+                "unresolved_other": 3634.4541403946027
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6585455700480561,
+                "other_named_algae": 15.402922588079342,
+                "unresolved_other": 1.9533418076618987
+              },
+              "total_sse": 165893.1654644011,
+              "opposition_forecast": {
+                "tp": 5,
+                "fp": 47,
+                "tn": 261,
+                "fn": 47,
+                "accuracy": 0.7388888888888889,
+                "balanced_accuracy": 0.47177822177822176,
+                "sown_sign_accuracy": 0.5666666666666667,
+                "other_sign_accuracy": 0.5972222222222222
+              }
+            },
+            "cumulative": {
+              "sse": 140116.20682772706,
+              "sse_by_group": {
+                "cyanobacteria": 201.7546051233335,
+                "other_named_algae": 137801.61125455282,
+                "unresolved_other": 2112.8409680510886
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6176829896289816,
+                "other_named_algae": 15.06675136347727,
+                "unresolved_other": 1.5137625172397435
+              },
+              "total_sse": 139274.23148761445,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 308,
+                "fn": 52,
+                "accuracy": 0.8555555555555555,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0.6916666666666667,
+                "other_sign_accuracy": 0.7194444444444444
+              }
+            },
+            "bottom_history": {
+              "sse": 234100.5524010909,
+              "sse_by_group": {
+                "cyanobacteria": 424.99519673633256,
+                "other_named_algae": 227631.44759095664,
+                "unresolved_other": 6044.109613397871
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.8779782415711946,
+                "other_named_algae": 18.000701522296506,
+                "unresolved_other": 2.3504093438960765
+              },
+              "total_sse": 248544.16294195494,
+              "opposition_forecast": {
+                "tp": 10,
+                "fp": 31,
+                "tn": 277,
+                "fn": 42,
+                "accuracy": 0.7972222222222223,
+                "balanced_accuracy": 0.5458291708291708,
+                "sown_sign_accuracy": 0.5083333333333333,
+                "other_sign_accuracy": 0.6583333333333333
+              }
+            },
+            "bottom_state": {
+              "sse": 363517.64635612705,
+              "sse_by_group": {
+                "cyanobacteria": 1151.1495401376997,
+                "other_named_algae": 347317.66385512735,
+                "unresolved_other": 15048.832960861755
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.341506649569334,
+                "other_named_algae": 21.272004248834783,
+                "unresolved_other": 3.5467067932392657
+              },
+              "total_sse": 390385.2587704108,
+              "opposition_forecast": {
+                "tp": 11,
+                "fp": 73,
+                "tn": 235,
+                "fn": 41,
+                "accuracy": 0.6833333333333333,
+                "balanced_accuracy": 0.4872627372627373,
+                "sown_sign_accuracy": 0.525,
+                "other_sign_accuracy": 0.6777777777777778
+              }
+            },
+            "direct_history": {
+              "sse": 225697.48270994355,
+              "sse_by_group": {
+                "cyanobacteria": 1662.329330894485,
+                "other_named_algae": 219302.41425847655,
+                "unresolved_other": 4732.739120572428
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.8465237456401555,
+                "other_named_algae": 17.80684853362906,
+                "unresolved_other": 2.7233439526617267
+              },
+              "total_sse": 258269.47969835298,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 4,
+                "tn": 304,
+                "fn": 52,
+                "accuracy": 0.8444444444444444,
+                "balanced_accuracy": 0.4935064935064935,
+                "sown_sign_accuracy": 0.6527777777777778,
+                "other_sign_accuracy": 0.6083333333333333
+              }
+            },
+            "direct_state": {
+              "sse": 275408.706371619,
+              "sse_by_group": {
+                "cyanobacteria": 1686.9339181622636,
+                "other_named_algae": 267318.3954730374,
+                "unresolved_other": 6403.3769804194535
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.7550184668441338,
+                "other_named_algae": 18.90510190113791,
+                "unresolved_other": 2.8655500848470967
+              },
+              "total_sse": 298480.5622737318,
+              "opposition_forecast": {
+                "tp": 9,
+                "fp": 107,
+                "tn": 201,
+                "fn": 43,
+                "accuracy": 0.5833333333333334,
+                "balanced_accuracy": 0.4128371628371629,
+                "sown_sign_accuracy": 0.55,
+                "other_sign_accuracy": 0.6194444444444445
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 314236.6682881683,
+              "sse_by_group": {
+                "cyanobacteria": 1058.8282348805808,
+                "other_named_algae": 306845.38832445117,
+                "unresolved_other": 6332.4517288364605
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.4497849805775422,
+                "other_named_algae": 20.278533718822924,
+                "unresolved_other": 2.899952970714657
+              },
+              "total_sse": 326510.13060382253,
+              "opposition_forecast": {
+                "tp": 3,
+                "fp": 7,
+                "tn": 301,
+                "fn": 49,
+                "accuracy": 0.8444444444444444,
+                "balanced_accuracy": 0.5174825174825175,
+                "sown_sign_accuracy": 0.6305555555555555,
+                "other_sign_accuracy": 0.6166666666666667
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 524604.5747484157,
+              "sse_by_group": {
+                "cyanobacteria": 5250.231370229325,
+                "other_named_algae": 501016.53882456,
+                "unresolved_other": 18337.804553626174
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.8257982462126106,
+                "other_named_algae": 25.15181521440121,
+                "unresolved_other": 4.672854798025076
+              },
+              "total_sse": 534812.1796689278,
+              "opposition_forecast": {
+                "tp": 20,
+                "fp": 96,
+                "tn": 212,
+                "fn": 32,
+                "accuracy": 0.6444444444444445,
+                "balanced_accuracy": 0.5364635364635365,
+                "sown_sign_accuracy": 0.5472222222222223,
+                "other_sign_accuracy": 0.6194444444444445
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.03589512969943853,
+            "direct_state_over_bottom_state": 0.24237871494741803,
+            "direct_history_scaled_over_bottom_history": -0.34231493717186107,
+            "direct_state_scaled_over_bottom_state": -0.44313372406267393,
+            "direct_history_over_zero": -0.4397402017966811,
+            "direct_state_over_zero": -0.7568516127298761,
+            "direct_state_over_direct_history": -0.22025599517014613
+          }
+        }
+      },
+      "cyan_other2": {
+        "labels": [
+          "cyanobacteria",
+          "all_other_morphotypes"
+        ],
+        "group_sizes": [
+          8,
+          58
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 152396.00883938366,
+              "sse_by_group": {
+                "cyanobacteria": 178.2161299158906,
+                "all_other_morphotypes": 152217.79270946782
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.4988065978460969,
+                "all_other_morphotypes": 14.445626960055963
+              },
+              "total_sse": 157630.37675096068,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 307,
+                "fn": 53,
+                "accuracy": 0.8527777777777777,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 162903.3161840464,
+              "sse_by_group": {
+                "cyanobacteria": 245.05201441271393,
+                "all_other_morphotypes": 162658.26416963362
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6585455700480561,
+                "all_other_morphotypes": 15.706172308065012
+              },
+              "total_sse": 165893.16546440107,
+              "opposition_forecast": {
+                "tp": 6,
+                "fp": 46,
+                "tn": 261,
+                "fn": 47,
+                "accuracy": 0.7416666666666667,
+                "balanced_accuracy": 0.48168520680966137,
+                "sown_sign_accuracy": 0.5666666666666667,
+                "other_sign_accuracy": 0.6305555555555555
+              }
+            },
+            "cumulative": {
+              "sse": 136967.7433648757,
+              "sse_by_group": {
+                "cyanobacteria": 201.7546051233335,
+                "all_other_morphotypes": 136765.98875975242
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.6176829896289816,
+                "all_other_morphotypes": 15.033914956026923
+              },
+              "total_sse": 139274.23148761445,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 307,
+                "fn": 53,
+                "accuracy": 0.8527777777777777,
+                "balanced_accuracy": 0.5,
+                "sown_sign_accuracy": 0.6916666666666667,
+                "other_sign_accuracy": 0.7166666666666667
+              }
+            },
+            "bottom_history": {
+              "sse": 237600.5518269686,
+              "sse_by_group": {
+                "cyanobacteria": 424.99519673633256,
+                "all_other_morphotypes": 237175.55663023217
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.8779782415711946,
+                "all_other_morphotypes": 18.516740414389087
+              },
+              "total_sse": 248544.1629419549,
+              "opposition_forecast": {
+                "tp": 10,
+                "fp": 30,
+                "tn": 277,
+                "fn": 43,
+                "accuracy": 0.7972222222222223,
+                "balanced_accuracy": 0.5454796877880892,
+                "sown_sign_accuracy": 0.5083333333333333,
+                "other_sign_accuracy": 0.6527777777777778
+              }
+            },
+            "bottom_state": {
+              "sse": 365199.0233487964,
+              "sse_by_group": {
+                "cyanobacteria": 1151.1495401376997,
+                "all_other_morphotypes": 364047.87380865886
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.341506649569334,
+                "all_other_morphotypes": 21.772186617603854
+              },
+              "total_sse": 390385.2587704107,
+              "opposition_forecast": {
+                "tp": 11,
+                "fp": 88,
+                "tn": 219,
+                "fn": 42,
+                "accuracy": 0.6388888888888888,
+                "balanced_accuracy": 0.46045110933562783,
+                "sown_sign_accuracy": 0.525,
+                "other_sign_accuracy": 0.6805555555555556
+              }
+            },
+            "direct_history": {
+              "sse": 217720.6670949029,
+              "sse_by_group": {
+                "cyanobacteria": 3827.690374909381,
+                "all_other_morphotypes": 213892.97671999334
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.87157793057683,
+                "all_other_morphotypes": 18.053607409298536
+              },
+              "total_sse": 243864.30608847516,
+              "opposition_forecast": {
+                "tp": 3,
+                "fp": 5,
+                "tn": 302,
+                "fn": 50,
+                "accuracy": 0.8472222222222222,
+                "balanced_accuracy": 0.5201585643168828,
+                "sown_sign_accuracy": 0.6694444444444444,
+                "other_sign_accuracy": 0.6361111111111111
+              }
+            },
+            "direct_state": {
+              "sse": 275878.74517228175,
+              "sse_by_group": {
+                "cyanobacteria": 3081.5499942849374,
+                "all_other_morphotypes": 272797.19517799676
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.1906524766053153,
+                "all_other_morphotypes": 19.309490074306403
+              },
+              "total_sse": 301264.51044036355,
+              "opposition_forecast": {
+                "tp": 7,
+                "fp": 64,
+                "tn": 243,
+                "fn": 46,
+                "accuracy": 0.6944444444444444,
+                "balanced_accuracy": 0.4618032081617602,
+                "sown_sign_accuracy": 0.6527777777777778,
+                "other_sign_accuracy": 0.6027777777777777
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 372269.87112182984,
+              "sse_by_group": {
+                "cyanobacteria": 2299.0452610977663,
+                "all_other_morphotypes": 369970.82586073194
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.194327813279205,
+                "all_other_morphotypes": 22.562295732418328
+              },
+              "total_sse": 396777.7872285854,
+              "opposition_forecast": {
+                "tp": 4,
+                "fp": 6,
+                "tn": 301,
+                "fn": 49,
+                "accuracy": 0.8472222222222222,
+                "balanced_accuracy": 0.5279638620859197,
+                "sown_sign_accuracy": 0.6472222222222223,
+                "other_sign_accuracy": 0.5916666666666667
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 784939.283289521,
+              "sse_by_group": {
+                "cyanobacteria": 9038.064780466651,
+                "all_other_morphotypes": 775901.2185090545
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.3836501260790937,
+                "all_other_morphotypes": 28.34846219531139
+              },
+              "total_sse": 844798.592055853,
+              "opposition_forecast": {
+                "tp": 11,
+                "fp": 80,
+                "tn": 227,
+                "fn": 42,
+                "accuracy": 0.6611111111111111,
+                "balanced_accuracy": 0.4734804252965399,
+                "sown_sign_accuracy": 0.5333333333333333,
+                "other_sign_accuracy": 0.5666666666666667
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.08366935421321389,
+            "direct_state_over_bottom_state": 0.24457972904052958,
+            "direct_history_scaled_over_bottom_history": -0.5667887480031337,
+            "direct_state_scaled_over_bottom_state": -1.1493466113129132,
+            "direct_history_over_zero": -0.4286507156783058,
+            "direct_state_over_zero": -0.8102753954865154,
+            "direct_state_over_direct_history": -0.26712245030935977
+          }
+        }
+      },
+      "morphotype_sse": {
+        "zero": 152781.91338388115,
+        "previous": 137253.95458982617,
+        "cumulative": 135226.58756215175,
+        "history_ridge": 209712.92223490388,
+        "state_ridge": 373298.0895858591
+      },
+      "source_group_totals": {
+        "aggregate": {
+          "zero": {
+            "sse": 152402.1169061751,
+            "total_sse": 157643.8032427995
+          },
+          "previous": {
+            "sse": 162976.9480331706,
+            "total_sse": 165909.0195544031
+          },
+          "cumulative": {
+            "sse": 136987.16830222265,
+            "total_sse": 139287.1876045282
+          }
+        },
+        "by_week": [
+          {
+            "week": 1,
+            "contrast": [
+              -0.11579892850312506,
+              1.011279765690687
+            ],
+            "opposite": false
+          },
+          {
+            "week": 3,
+            "contrast": [
+              -0.3926136304335625,
+              -0.36297574030662505
+            ],
+            "opposite": false
+          },
+          {
+            "week": 5,
+            "contrast": [
+              -0.17234629054689996,
+              -2.527989186554062
+            ],
+            "opposite": false
+          },
+          {
+            "week": 8,
+            "contrast": [
+              -1.845885576734375,
+              -3.85203853113375
+            ],
+            "opposite": false
+          },
+          {
+            "week": 9,
+            "contrast": [
+              -1.0026109813989939,
+              -4.738123272003188
+            ],
+            "opposite": false
+          },
+          {
+            "week": 11,
+            "contrast": [
+              -0.8552643186561375,
+              -6.738424219680578
+            ],
+            "opposite": false
+          },
+          {
+            "week": 12,
+            "contrast": [
+              -0.8340351698699999,
+              -10.530942440252815
+            ],
+            "opposite": false
+          },
+          {
+            "week": 13,
+            "contrast": [
+              -0.8060915662819375,
+              -37.78045206944218
+            ],
+            "opposite": false
+          },
+          {
+            "week": 14,
+            "contrast": [
+              -0.22791331067042492,
+              -31.69711740026327
+            ],
+            "opposite": false
+          },
+          {
+            "week": 15,
+            "contrast": [
+              -0.041562164663506235,
+              -14.801416147985876
+            ],
+            "opposite": false
+          },
+          {
+            "week": 16,
+            "contrast": [
+              -0.6486969113160685,
+              -20.535430373920875
+            ],
+            "opposite": false
+          },
+          {
+            "week": 19,
+            "contrast": [
+              -0.017384493833568743,
+              -8.62206387121525
+            ],
+            "opposite": false
+          },
+          {
+            "week": 24,
+            "contrast": [
+              0.5276468225052687,
+              2.847895329611437
+            ],
+            "opposite": false
+          },
+          {
+            "week": 28,
+            "contrast": [
+              0.4405631306702562,
+              0.7077492912189811
+            ],
+            "opposite": false
+          },
+          {
+            "week": 32,
+            "contrast": [
+              0.07269468686389999,
+              0.10358395509435625
+            ],
+            "opposite": false
+          }
+        ]
+      },
+      "persistence": [
+        {
+          "week": 1,
+          "contrast": [
+            -0.11579892850600002,
+            -0.29827629280655,
+            1.3095560585394996
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.08333333333333333,
+          "held_half_signed_min": -0.23320261744965837
+        },
+        {
+          "week": 3,
+          "contrast": [
+            -0.3926136304335625,
+            -0.3986762964446187,
+            0.03570055614762491
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.39261363043356245
+        },
+        {
+          "week": 5,
+          "contrast": [
+            -0.170410038637525,
+            -1.7179867216474625,
+            -0.8119387171836875
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.027777777777777776,
+          "held_half_signed_min": -0.17041003863752496
+        },
+        {
+          "week": 8,
+          "contrast": [
+            -1.8207143018147502,
+            -2.3003591729176867,
+            -1.5768506337178751
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -1.8207143018147498
+        },
+        {
+          "week": 9,
+          "contrast": [
+            -0.9680811557062436,
+            -2.030844112985687,
+            -2.7418089836134376
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -1.1149349812834781
+        },
+        {
+          "week": 11,
+          "contrast": [
+            -0.8772085069422625,
+            -4.122904887847748,
+            -2.593575143249143
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -2.6232445488291734
+        },
+        {
+          "week": 12,
+          "contrast": [
+            -0.8449401406698873,
+            -14.251206876470185,
+            3.731169407111562
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.027777777777777776,
+          "held_half_signed_min": -1.7305470083491497
+        },
+        {
+          "week": 13,
+          "contrast": [
+            -0.8054841588465187,
+            -38.66565993603426,
+            0.889080357523775
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.027777777777777776,
+          "held_half_signed_min": -0.8054841588465188
+        },
+        {
+          "week": 14,
+          "contrast": [
+            -0.20532444269979994,
+            -31.141600330691794,
+            -0.5781059431668936
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.2222222222222222,
+          "held_half_signed_min": -0.20532444269979994
+        },
+        {
+          "week": 15,
+          "contrast": [
+            -0.042852999278381244,
+            -15.089018734258552,
+            0.2888934213944125
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.4444444444444444,
+          "held_half_signed_min": -0.04285299927838127
+        },
+        {
+          "week": 16,
+          "contrast": [
+            -0.6518126172468186,
+            -21.101015729689752,
+            0.5687010610455627
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.25,
+          "held_half_signed_min": -0.6518126172468187
+        },
+        {
+          "week": 19,
+          "contrast": [
+            -0.01738449383227501,
+            -8.838988598885491,
+            0.21692472762956247
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3611111111111111,
+          "held_half_signed_min": -0.5700104270274291
+        },
+        {
+          "week": 24,
+          "contrast": [
+            0.5276468225052687,
+            2.8402980619298432,
+            0.007597267524187469
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -3.3878765297779845
+        },
+        {
+          "week": 28,
+          "contrast": [
+            0.4249846010165062,
+            0.7963380120293374,
+            -0.07301019123451882
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.1111111111111111,
+          "held_half_signed_min": -1.2237072298258183
+        },
+        {
+          "week": 32,
+          "contrast": [
+            0.072694686855275,
+            -0.0731336431004375,
+            0.17671759819048127
+          ],
+          "opposite": true,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.2444092340364573
+        }
+      ]
+    },
+    "C-O": {
+      "conservative3": {
+        "labels": [
+          "cyanobacteria",
+          "other_named_algae",
+          "unresolved_other"
+        ],
+        "group_sizes": [
+          8,
+          43,
+          15
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 249753.13673682627,
+              "sse_by_group": {
+                "cyanobacteria": 214.13363928187553,
+                "other_named_algae": 248809.55743927188,
+                "unresolved_other": 729.4456582724446
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.5103747403773521,
+                "other_named_algae": 19.739747617305813,
+                "unresolved_other": 0.8751016229269993
+              },
+              "total_sse": 273539.888256631,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 133581.10762419977,
+              "sse_by_group": {
+                "cyanobacteria": 183.86065321614353,
+                "other_named_algae": 132294.84125134413,
+                "unresolved_other": 1102.4057196394424
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.47629287114144025,
+                "other_named_algae": 14.101165116735046,
+                "unresolved_other": 1.241456899799584
+              },
+              "total_sse": 141752.2467201153,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "cumulative": {
+              "sse": 172458.9470347024,
+              "sse_by_group": {
+                "cyanobacteria": 135.60694766612457,
+                "other_named_algae": 171495.01315748264,
+                "unresolved_other": 828.3269295537896
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.5548224415919044,
+                "other_named_algae": 18.01983595057868,
+                "unresolved_other": 1.1651977239252973
+              },
+              "total_sse": 177575.87020742887,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "bottom_history": {
+              "sse": 259780.93369493185,
+              "sse_by_group": {
+                "cyanobacteria": 359.9822549892661,
+                "other_named_algae": 257144.17077087774,
+                "unresolved_other": 2276.780669064771
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.7456077620035099,
+                "other_named_algae": 19.153317194642582,
+                "unresolved_other": 1.7128475249265223
+              },
+              "total_sse": 290642.3174869103,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 61,
+                "tn": 299,
+                "fn": 0,
+                "accuracy": 0.8305555555555556,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.9361111111111111,
+                "other_sign_accuracy": 0.8027777777777778
+              }
+            },
+            "bottom_state": {
+              "sse": 309469.87168092025,
+              "sse_by_group": {
+                "cyanobacteria": 590.1513737022505,
+                "other_named_algae": 305541.90044654923,
+                "unresolved_other": 3337.819860669307
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.9218391870396392,
+                "other_named_algae": 20.65777139589249,
+                "unresolved_other": 1.998498896416277
+              },
+              "total_sse": 344359.9899389304,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 4,
+                "tn": 356,
+                "fn": 0,
+                "accuracy": 0.9888888888888889,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.6833333333333333,
+                "other_sign_accuracy": 0.8055555555555556
+              }
+            },
+            "direct_history": {
+              "sse": 190549.3762170447,
+              "sse_by_group": {
+                "cyanobacteria": 2550.5500573682957,
+                "other_named_algae": 183213.5672822581,
+                "unresolved_other": 4785.258877418467
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.4641854196347697,
+                "other_named_algae": 17.215801451919923,
+                "unresolved_other": 3.1053150963312177
+              },
+              "total_sse": 241451.1282199185,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "direct_state": {
+              "sse": 246720.550066987,
+              "sse_by_group": {
+                "cyanobacteria": 1435.0096571399135,
+                "other_named_algae": 241055.36778415655,
+                "unresolved_other": 4230.17262569048
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.5636760397271239,
+                "other_named_algae": 17.856365703215126,
+                "unresolved_other": 2.663150185213886
+              },
+              "total_sse": 290223.295407907,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 358,
+                "fn": 0,
+                "accuracy": 0.9944444444444445,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.8472222222222222,
+                "other_sign_accuracy": 0.9444444444444444
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 261228.91738969565,
+              "sse_by_group": {
+                "cyanobacteria": 1436.3411637197075,
+                "other_named_algae": 256228.56138200324,
+                "unresolved_other": 3564.0148439726713
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.7547974759297573,
+                "other_named_algae": 19.17807268491938,
+                "unresolved_other": 2.453962970184602
+              },
+              "total_sse": 292683.2050936143,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 74,
+                "tn": 286,
+                "fn": 0,
+                "accuracy": 0.7944444444444444,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 0.7944444444444444
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 337072.36471159384,
+              "sse_by_group": {
+                "cyanobacteria": 5340.92842759502,
+                "other_named_algae": 323239.1244348549,
+                "unresolved_other": 8492.311849144016
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.2094856596895798,
+                "other_named_algae": 21.037236120385355,
+                "unresolved_other": 3.1461399441741404
+              },
+              "total_sse": 366300.36190344143,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 37,
+                "tn": 323,
+                "fn": 0,
+                "accuracy": 0.8972222222222223,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.7277777777777777,
+                "other_sign_accuracy": 0.8055555555555556
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.26649976383250573,
+            "direct_state_over_bottom_state": 0.20276391130775764,
+            "direct_history_scaled_over_bottom_history": -0.005573864387077015,
+            "direct_state_scaled_over_bottom_state": -0.08919282798272918,
+            "direct_history_over_zero": 0.23704911695330053,
+            "direct_state_over_zero": 0.01214233666676556,
+            "direct_state_over_direct_history": -0.2947853987512439
+          }
+        }
+      },
+      "cyan_other2": {
+        "labels": [
+          "cyanobacteria",
+          "all_other_morphotypes"
+        ],
+        "group_sizes": [
+          8,
+          58
+        ],
+        "aggregate": {
+          "n_cells": 360,
+          "models": {
+            "zero": {
+              "sse": 261961.1426977124,
+              "sse_by_group": {
+                "cyanobacteria": 214.13363928187553,
+                "all_other_morphotypes": 261747.00905843065
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.5103747403773521,
+                "all_other_morphotypes": 20.477307694610516
+              },
+              "total_sse": 273539.888256631,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0,
+                "other_sign_accuracy": 0
+              }
+            },
+            "previous": {
+              "sse": 139385.5656047737,
+              "sse_by_group": {
+                "cyanobacteria": 183.86065321614353,
+                "all_other_morphotypes": 139201.70495155768
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.47629287114144025,
+                "all_other_morphotypes": 14.486082896200555
+              },
+              "total_sse": 141752.2467201153,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "cumulative": {
+              "sse": 174170.48962915014,
+              "sse_by_group": {
+                "cyanobacteria": 135.60694766612457,
+                "all_other_morphotypes": 174034.8826814841
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.5548224415919044,
+                "all_other_morphotypes": 18.264653665630618
+              },
+              "total_sse": 177575.87020742887,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "bottom_history": {
+              "sse": 278613.82603645464,
+              "sse_by_group": {
+                "cyanobacteria": 359.9822549892661,
+                "all_other_morphotypes": 278253.8437814654
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.7456077620035099,
+                "all_other_morphotypes": 19.824320960111702
+              },
+              "total_sse": 290642.3174869103,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 52,
+                "tn": 308,
+                "fn": 0,
+                "accuracy": 0.8555555555555555,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.9361111111111111,
+                "other_sign_accuracy": 0.8305555555555556
+              }
+            },
+            "bottom_state": {
+              "sse": 329246.3404030717,
+              "sse_by_group": {
+                "cyanobacteria": 590.1513737022505,
+                "all_other_morphotypes": 328656.18902936915
+              },
+              "mae_by_group": {
+                "cyanobacteria": 0.9218391870396392,
+                "all_other_morphotypes": 21.47104646166022
+              },
+              "total_sse": 344359.98993893043,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 357,
+                "fn": 0,
+                "accuracy": 0.9916666666666667,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.6833333333333333,
+                "other_sign_accuracy": 0.8166666666666667
+              }
+            },
+            "direct_history": {
+              "sse": 177016.9113456534,
+              "sse_by_group": {
+                "cyanobacteria": 6393.937084553902,
+                "all_other_morphotypes": 170622.9742610994
+              },
+              "mae_by_group": {
+                "cyanobacteria": 3.9748616612998937,
+                "all_other_morphotypes": 17.33826819619224
+              },
+              "total_sse": 204051.96036343102,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 1
+              }
+            },
+            "direct_state": {
+              "sse": 192206.17609427316,
+              "sse_by_group": {
+                "cyanobacteria": 1758.948805622399,
+                "all_other_morphotypes": 190447.22728865064
+              },
+              "mae_by_group": {
+                "cyanobacteria": 1.6876607021384114,
+                "all_other_morphotypes": 17.151598756758666
+              },
+              "total_sse": 199244.7565355305,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 0,
+                "tn": 360,
+                "fn": 0,
+                "accuracy": 1,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.7027777777777777,
+                "other_sign_accuracy": 0.9861111111111112
+              }
+            },
+            "direct_history_scaled": {
+              "sse": 268513.5448937602,
+              "sse_by_group": {
+                "cyanobacteria": 3035.9956430095594,
+                "all_other_morphotypes": 265477.5492507508
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.6730510349832746,
+                "all_other_morphotypes": 19.631063901942966
+              },
+              "total_sse": 291956.0060206541,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 61,
+                "tn": 299,
+                "fn": 0,
+                "accuracy": 0.8305555555555556,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 1,
+                "other_sign_accuracy": 0.8305555555555556
+              }
+            },
+            "direct_state_scaled": {
+              "sse": 281636.7895689923,
+              "sse_by_group": {
+                "cyanobacteria": 7271.996378296696,
+                "all_other_morphotypes": 274364.7931906957
+              },
+              "mae_by_group": {
+                "cyanobacteria": 2.538380091757498,
+                "all_other_morphotypes": 20.16130840499481
+              },
+              "total_sse": 295315.3791111123,
+              "opposition_forecast": {
+                "tp": 0,
+                "fp": 11,
+                "tn": 349,
+                "fn": 0,
+                "accuracy": 0.9694444444444444,
+                "balanced_accuracy": null,
+                "sown_sign_accuracy": 0.625,
+                "other_sign_accuracy": 0.8666666666666667
+              }
+            }
+          },
+          "gains": {
+            "direct_history_over_bottom_history": 0.36465137475807824,
+            "direct_state_over_bottom_state": 0.41622380416143884,
+            "direct_history_scaled_over_bottom_history": 0.03625190209107899,
+            "direct_state_scaled_over_bottom_state": 0.1446016097727757,
+            "direct_history_over_zero": 0.32426271498624354,
+            "direct_state_over_zero": 0.2662798225915984,
+            "direct_state_over_direct_history": -0.08580685671867995
+          }
+        }
+      },
+      "morphotype_sse": {
+        "zero": 159279.90915484313,
+        "previous": 112568.87165961963,
+        "cumulative": 128471.561285598,
+        "history_ridge": 202302.73281766896,
+        "state_ridge": 245108.83126875074
+      },
+      "source_group_totals": {
+        "aggregate": {
+          "zero": {
+            "sse": 261957.13735325262,
+            "total_sse": 273539.88818452717
+          },
+          "previous": {
+            "sse": 139474.3414449722,
+            "total_sse": 141752.24665377854
+          },
+          "cumulative": {
+            "sse": 174197.59228825098,
+            "total_sse": 177578.7261285292
+          }
+        },
+        "by_week": [
+          {
+            "week": 1,
+            "contrast": [
+              -0.41416010603312503,
+              -1.687784874979437
+            ],
+            "opposite": false
+          },
+          {
+            "week": 3,
+            "contrast": [
+              0.4018624792049375,
+              0.6343207034585625
+            ],
+            "opposite": false
+          },
+          {
+            "week": 5,
+            "contrast": [
+              0.18321368784902498,
+              2.768509039185062
+            ],
+            "opposite": false
+          },
+          {
+            "week": 8,
+            "contrast": [
+              2.326727880385125,
+              7.78897060153125
+            ],
+            "opposite": false
+          },
+          {
+            "week": 9,
+            "contrast": [
+              1.0183635516699376,
+              6.874649666742499
+            ],
+            "opposite": false
+          },
+          {
+            "week": 11,
+            "contrast": [
+              0.84974090135725,
+              19.47953248386308
+            ],
+            "opposite": false
+          },
+          {
+            "week": 12,
+            "contrast": [
+              1.0737160976969313,
+              28.917856507807873
+            ],
+            "opposite": false
+          },
+          {
+            "week": 13,
+            "contrast": [
+              1.2706211150860123,
+              46.013692986067035
+            ],
+            "opposite": false
+          },
+          {
+            "week": 14,
+            "contrast": [
+              0.43719825979630617,
+              40.31628231650271
+            ],
+            "opposite": false
+          },
+          {
+            "week": 15,
+            "contrast": [
+              0.25719506960954996,
+              21.135717725105373
+            ],
+            "opposite": false
+          },
+          {
+            "week": 16,
+            "contrast": [
+              0.9857925506204499,
+              31.683388074309214
+            ],
+            "opposite": false
+          },
+          {
+            "week": 19,
+            "contrast": [
+              0.1521435623082375,
+              12.843121484536313
+            ],
+            "opposite": false
+          },
+          {
+            "week": 24,
+            "contrast": [
+              0.0388451648383375,
+              1.9189590379972938
+            ],
+            "opposite": false
+          },
+          {
+            "week": 28,
+            "contrast": [
+              0.01317960950043125,
+              1.7480891303746686
+            ],
+            "opposite": false
+          },
+          {
+            "week": 32,
+            "contrast": [
+              0.0239006871228125,
+              0.7178515672956436
+            ],
+            "opposite": false
+          }
+        ]
+      },
+      "persistence": [
+        {
+          "week": 1,
+          "contrast": [
+            -0.41416010603025005,
+            0.07880930751156248,
+            -1.7636437037518122
+          ],
+          "opposite": false,
+          "reverse": true,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.3055555555555556,
+          "held_half_signed_min": -0.6582378659917675
+        },
+        {
+          "week": 3,
+          "contrast": [
+            0.4018624792049375,
+            0.36423651460201245,
+            0.27008418885712504
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.36423651460201245
+        },
+        {
+          "week": 5,
+          "contrast": [
+            0.18127743593965,
+            1.955056299703025,
+            0.815388991799375
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -1.955056299703025
+        },
+        {
+          "week": 8,
+          "contrast": [
+            2.3251143370860565,
+            4.370594631910042,
+            3.4199895135674376
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0.05555555555555555,
+          "held_half_signed_min": -4.370594631910044
+        },
+        {
+          "week": 9,
+          "contrast": [
+            0.9922241509334812,
+            3.6304087860633754,
+            3.2703802803847495
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -3.630408786063375
+        },
+        {
+          "week": 11,
+          "contrast": [
+            0.8665217512146374,
+            16.280606256389998,
+            3.1821453765410186
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -16.280606256389998
+        },
+        {
+          "week": 12,
+          "contrast": [
+            1.0686755729945125,
+            28.43663792754747,
+            0.48625910490906243
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -28.43663792754747
+        },
+        {
+          "week": 13,
+          "contrast": [
+            1.2754617447435872,
+            45.97905181856426,
+            0.029800550915393624
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -45.97905181856426
+        },
+        {
+          "week": 14,
+          "contrast": [
+            0.42074085619889995,
+            39.784448394013666,
+            0.5482913315725186
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -39.784448394013666
+        },
+        {
+          "week": 15,
+          "contrast": [
+            0.25719506961817495,
+            20.749141971318085,
+            0.38657575418087503
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -20.749141971318085
+        },
+        {
+          "week": 16,
+          "contrast": [
+            0.9870833852266998,
+            30.515634731262313,
+            1.1664625081269875
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -30.51563473126231
+        },
+        {
+          "week": 19,
+          "contrast": [
+            0.1521435623082375,
+            12.260013549469173,
+            0.5831079354316875
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -12.260013549469175
+        },
+        {
+          "week": 24,
+          "contrast": [
+            0.0388451648383375,
+            1.7046422408070123,
+            0.21431679732310624
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -1.7046422408070123
+        },
+        {
+          "week": 28,
+          "contrast": [
+            0.01317960950043125,
+            0.96859421397485,
+            0.7794949164302938
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.96859421397485
+        },
+        {
+          "week": 32,
+          "contrast": [
+            0.023900687129999997,
+            0.7187050697113125,
+            -0.000853502384043755
+          ],
+          "opposite": false,
+          "reverse": false,
+          "robust_unresolved": false,
+          "held_half_opposition_fraction": 0,
+          "held_half_signed_min": -0.7187050697113124
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Independent ponds; overlapping train/test splits and repeated weeks dependent.",
+    "Not a history manipulation or mechanism test.",
+    "Morphotype biovolumes estimated; sums may include non-algae.",
+    "No p-values, model tuning or held-out pond/week leakage."
+  ],
+  "source_commit": "d26cbbe3d802c18696dfbd39f547d69d32feb4f0",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45557051796",
+  "artifact": {
+    "id": 14995009548,
+    "sha256": "sha256:f36c1bb71c430cb64200b0b665cdbaf64fdcbd59cf736fe7bc5ed394d719f023",
+    "size_in_bytes": 1099164,
+    "expires_at": "2026-12-25T05:57:12Z"
+  },
+  "cross_contrast_summary": [
+    {
+      "contrast": "MD-C",
+      "opposition": 10,
+      "robust": 6,
+      "source_opposition": 9,
+      "group_best": "cumulative",
+      "group_gain_vs_zero": 0.10166959741828296,
+      "source_best": "cumulative",
+      "source_gain_vs_zero": 0.05063262379064282,
+      "morph_best": "cumulative",
+      "morph_gain_vs_zero": 0.01673057438671921
+    },
+    {
+      "contrast": "M-C",
+      "opposition": 8,
+      "robust": 1,
+      "source_opposition": 7,
+      "group_best": "cumulative",
+      "group_gain_vs_zero": 0.16308359563900288,
+      "source_best": "cumulative",
+      "source_gain_vs_zero": 0.15350261129869458,
+      "morph_best": "cumulative",
+      "morph_gain_vs_zero": 0.10446333365782201
+    },
+    {
+      "contrast": "D-C",
+      "opposition": 1,
+      "robust": 0,
+      "source_opposition": 0,
+      "group_best": "cumulative",
+      "group_gain_vs_zero": 0.10618880870553193,
+      "source_best": "cumulative",
+      "source_gain_vs_zero": 0.10114655174666976,
+      "morph_best": "cumulative",
+      "morph_gain_vs_zero": 0.11490447679902882
+    },
+    {
+      "contrast": "C-O",
+      "opposition": 0,
+      "robust": 0,
+      "source_opposition": 0,
+      "group_best": "previous",
+      "group_gain_vs_zero": 0.4651474276979396,
+      "source_best": "previous",
+      "source_gain_vs_zero": 0.4675680805868281,
+      "morph_best": "previous",
+      "morph_gain_vs_zero": 0.2932638381267132
+    }
+  ]
+}
