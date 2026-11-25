@@ -1,0 +1,177 @@
+{
+  "status": "CONDITIONAL_SHARP_NULL_NOT_MEMORY_TEST",
+  "n_logs": 446,
+  "n_sites": 5,
+  "n_permutations": 999,
+  "split_seed": 2026112505,
+  "permutation_seed": 2026112506,
+  "coverage": [
+    {
+      "stratum": "Kesijarvi|felled",
+      "half": 0,
+      "treated": 14,
+      "control": 5
+    },
+    {
+      "stratum": "Kesijarvi|felled",
+      "half": 1,
+      "treated": 13,
+      "control": 5
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "half": 0,
+      "treated": 23,
+      "control": 4
+    },
+    {
+      "stratum": "Kesijarvi|natural",
+      "half": 1,
+      "treated": 21,
+      "control": 6
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "half": 0,
+      "treated": 12,
+      "control": 7
+    },
+    {
+      "stratum": "Lapinjarvi|felled",
+      "half": 1,
+      "treated": 15,
+      "control": 3
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "half": 0,
+      "treated": 22,
+      "control": 5
+    },
+    {
+      "stratum": "Lapinjarvi|natural",
+      "half": 1,
+      "treated": 21,
+      "control": 5
+    },
+    {
+      "stratum": "Luukki|felled",
+      "half": 0,
+      "treated": 15,
+      "control": 3
+    },
+    {
+      "stratum": "Luukki|felled",
+      "half": 1,
+      "treated": 10,
+      "control": 7
+    },
+    {
+      "stratum": "Luukki|natural",
+      "half": 0,
+      "treated": 21,
+      "control": 6
+    },
+    {
+      "stratum": "Luukki|natural",
+      "half": 1,
+      "treated": 23,
+      "control": 3
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "half": 0,
+      "treated": 14,
+      "control": 5
+    },
+    {
+      "stratum": "Saajarvi|felled",
+      "half": 1,
+      "treated": 13,
+      "control": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "half": 0,
+      "treated": 22,
+      "control": 5
+    },
+    {
+      "stratum": "Saajarvi|natural",
+      "half": 1,
+      "treated": 21,
+      "control": 5
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "half": 0,
+      "treated": 13,
+      "control": 4
+    },
+    {
+      "stratum": "Seitseminen|felled",
+      "half": 1,
+      "treated": 11,
+      "control": 6
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "half": 0,
+      "treated": 21,
+      "control": 6
+    },
+    {
+      "stratum": "Seitseminen|natural",
+      "half": 1,
+      "treated": 22,
+      "control": 4
+    }
+  ],
+  "by_site_observed": {
+    "Kesijarvi": [
+      -0.04723495987130749,
+      0.016425735579469358
+    ],
+    "Lapinjarvi": [
+      -0.03933222421665611,
+      -0.001032910974862633
+    ],
+    "Luukki": [
+      -0.06697514033415014,
+      0.00698198161700736
+    ],
+    "Saajarvi": [
+      -0.003514551908903818,
+      0.0018821838384766032
+    ],
+    "Seitseminen": [
+      -0.01592074867429416,
+      0.020287278676804243
+    ]
+  },
+  "metrics": {
+    "one_lag_gain": {
+      "observed": -0.03459552500106234,
+      "null_median": -0.04895888668234688,
+      "null_percentiles": [
+        -0.06808450792490012,
+        -0.028933750824889408
+      ],
+      "conditional_p": 0.086,
+      "holm_p": 0.172
+    },
+    "lag_vs_pre_sign_fixed_mass": {
+      "observed": 0.008908853747378986,
+      "null_median": -0.006144370690262524,
+      "null_percentiles": [
+        -0.02973269616792451,
+        0.01624274136177293
+      ],
+      "conditional_p": 0.1,
+      "holm_p": 0.172
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45587192721",
+  "artifact_id": 15008573588,
+  "artifact_digest": "sha256:a49067c1501c25fdf2a35f0a52958aff8cb79e3338769658ab4c3f353d35b3b7"
+}
