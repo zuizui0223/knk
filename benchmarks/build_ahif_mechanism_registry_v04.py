@@ -34,7 +34,7 @@ def main():
     con.execute("PRAGMA foreign_keys=ON")
     con.execute("""CREATE TABLE mass_direction_transfer_effects(
       source TEXT REFERENCES studies(source), comparison TEXT, panels INTEGER, n_common INTEGER,n_total INTEGER,
-      """+",".join(k+" REAL NOT NULL" for k in KEYS)+""",
+      """+",".join('"'+k+'" REAL NOT NULL' for k in KEYS)+""",
       meta_eligible TEXT CHECK(meta_eligible='no'),source_run INTEGER,
       PRIMARY KEY(source,comparison))""")
     con.executemany("INSERT INTO mass_direction_transfer_effects VALUES ("+",".join("?" for _ in COLS)+")",records)
