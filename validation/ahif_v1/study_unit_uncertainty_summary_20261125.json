@@ -1,0 +1,719 @@
+{
+  "status": "CONDITIONAL_UNIT_WEIGHT_PERTURBATION_NOT_META_SE",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45586032532",
+  "artifact_id": 15009155441,
+  "artifact_digest": "sha256:ccc7ac50f40f00be0c71f112504e8147d6700bce63685278feff42c493cfdb84",
+  "seed": 2026112503,
+  "n_draws": 999,
+  "results": {
+    "pond": {
+      "n_clusters": 20,
+      "cluster_groups": {
+        "pond/C": 4,
+        "pond/D": 4,
+        "pond/M": 4,
+        "pond/MD": 4,
+        "pond/O": 4
+      },
+      "n_panels": 4,
+      "n_cells": 1872,
+      "n_draws": 999,
+      "n_valid_draws": 999,
+      "n_invalid_draws": 0,
+      "metric_order": [
+        "sign_gain",
+        "same",
+        "recent_sign_gain"
+      ],
+      "metrics": {
+        "sign_gain": {
+          "estimate": 0.08647972956753038,
+          "perturbation_mean": 0.0691986410849325,
+          "perturbation_sd": 0.029133376845717346,
+          "perturbation_percentiles": [
+            0.006455721675761831,
+            0.11284753749912647
+          ],
+          "fraction_positive": 0.986986986986987,
+          "leave_one_min": 0.03577445236841462,
+          "leave_one_max": 0.10565246102936221,
+          "leave_one_positive": 20,
+          "leave_one_valid": 20
+        },
+        "same": {
+          "estimate": 0.6788448153659308,
+          "perturbation_mean": 0.6594593716745668,
+          "perturbation_sd": 0.03322449977977387,
+          "perturbation_percentiles": [
+            0.5796585992197922,
+            0.7107365344545359
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.5773834281100845,
+          "leave_one_max": 0.7117970509515279,
+          "leave_one_positive": 20,
+          "leave_one_valid": 20
+        },
+        "recent_sign_gain": {
+          "estimate": 0.0838114505765529,
+          "perturbation_mean": 0.07344012265506956,
+          "perturbation_sd": 0.01564485438093003,
+          "perturbation_percentiles": [
+            0.03956775904153553,
+            0.09590189582817102
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.057668381462184976,
+          "leave_one_max": 0.09574829479140287,
+          "leave_one_positive": 20,
+          "leave_one_valid": 20
+        }
+      },
+      "perturbation_covariance": [
+        [
+          0.0008487536464345797,
+          0.00091064593739258,
+          0.00040716759361338897
+        ],
+        [
+          0.00091064593739258,
+          0.0011038673856161934,
+          0.00041418335089438407
+        ],
+        [
+          0.00040716759361338897,
+          0.00041418335089438407,
+          0.00024476146860050554
+        ]
+      ]
+    },
+    "kansas": {
+      "n_clusters": 4,
+      "cluster_groups": {
+        "kansas/BLOCK": 4
+      },
+      "n_panels": 1,
+      "n_cells": 78,
+      "n_draws": 999,
+      "n_valid_draws": 999,
+      "n_invalid_draws": 0,
+      "metric_order": [
+        "sign_gain",
+        "same",
+        "recent_sign_gain"
+      ],
+      "metrics": {
+        "sign_gain": {
+          "estimate": -0.006578062006602581,
+          "perturbation_mean": -0.012324562282184632,
+          "perturbation_sd": 0.03327348999408438,
+          "perturbation_percentiles": [
+            -0.07232237793810432,
+            0.04490865006666781
+          ],
+          "fraction_positive": 0.3973973973973974,
+          "leave_one_min": -0.0626765496929106,
+          "leave_one_max": 0.05080316529218002,
+          "leave_one_positive": 1,
+          "leave_one_valid": 4
+        },
+        "same": {
+          "estimate": 0.5523619418983504,
+          "perturbation_mean": 0.5634163208361236,
+          "perturbation_sd": 0.047978078665418096,
+          "perturbation_percentiles": [
+            0.4850854011197169,
+            0.6507282089671459
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.46679049742276785,
+          "leave_one_max": 0.620882330126523,
+          "leave_one_positive": 4,
+          "leave_one_valid": 4
+        },
+        "recent_sign_gain": {
+          "estimate": 0.011814651442104453,
+          "perturbation_mean": 0.01227667992962983,
+          "perturbation_sd": 0.0060657426930692945,
+          "perturbation_percentiles": [
+            -0.0003098520449444487,
+            0.022079889178838543
+          ],
+          "fraction_positive": 0.972972972972973,
+          "leave_one_min": 0.00033996641142852794,
+          "leave_one_max": 0.020715237683578545,
+          "leave_one_positive": 4,
+          "leave_one_valid": 4
+        }
+      },
+      "perturbation_covariance": [
+        [
+          0.001107125136386433,
+          0.0014755142534921381,
+          0.0000041347479464898015
+        ],
+        [
+          0.0014755142534921381,
+          0.0023018960324250473,
+          0.00008420730042374319
+        ],
+        [
+          0.0000041347479464898015,
+          0.00008420730042374319,
+          0.000036793234418523504
+        ]
+      ]
+    },
+    "poem": {
+      "n_clusters": 40,
+      "cluster_groups": {
+        "poem/2020/F": 5,
+        "poem/2020/G": 5,
+        "poem/2020/L": 5,
+        "poem/2020/S": 5,
+        "poem/2021/F": 5,
+        "poem/2021/G": 5,
+        "poem/2021/L": 5,
+        "poem/2021/S": 5
+      },
+      "n_panels": 6,
+      "n_cells": 1200,
+      "n_draws": 999,
+      "n_valid_draws": 999,
+      "n_invalid_draws": 0,
+      "metric_order": [
+        "sign_gain",
+        "same",
+        "recent_sign_gain"
+      ],
+      "metrics": {
+        "sign_gain": {
+          "estimate": -0.0485498426543323,
+          "perturbation_mean": -0.04880256988859187,
+          "perturbation_sd": 0.01250267642365596,
+          "perturbation_percentiles": [
+            -0.07305078327240322,
+            -0.02373956060768204
+          ],
+          "fraction_positive": 0,
+          "leave_one_min": -0.061551587851105705,
+          "leave_one_max": -0.03797106393351755,
+          "leave_one_positive": 0,
+          "leave_one_valid": 40
+        },
+        "same": {
+          "estimate": 0.5060582369400175,
+          "perturbation_mean": 0.5031346678485734,
+          "perturbation_sd": 0.033991429336875156,
+          "perturbation_percentiles": [
+            0.43866208264330375,
+            0.5721134188034024
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.4567913247277559,
+          "leave_one_max": 0.5290158245701734,
+          "leave_one_positive": 40,
+          "leave_one_valid": 40
+        },
+        "recent_sign_gain": {
+          "estimate": 0.09455156879713295,
+          "perturbation_mean": 0.09351147224518491,
+          "perturbation_sd": 0.011124057407333694,
+          "perturbation_percentiles": [
+            0.07318379903003315,
+            0.11692546127357487
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.08485187442841817,
+          "leave_one_max": 0.1079011709508636,
+          "leave_one_positive": 40,
+          "leave_one_valid": 40
+        }
+      },
+      "perturbation_covariance": [
+        [
+          0.00015631691775464253,
+          0.0002781739269850265,
+          0.00011822052550221698
+        ],
+        [
+          0.0002781739269850265,
+          0.0011554172683637771,
+          0.00025908085040734553
+        ],
+        [
+          0.00011822052550221698,
+          0.00025908085040734553,
+          0.00012374465320165562
+        ]
+      ]
+    },
+    "field": {
+      "n_clusters": 10,
+      "cluster_groups": {
+        "field/MAL/BLOCK": 5,
+        "field/UME/BLOCK": 5
+      },
+      "n_panels": 8,
+      "n_cells": 320,
+      "n_draws": 999,
+      "n_valid_draws": 999,
+      "n_invalid_draws": 0,
+      "metric_order": [
+        "sign_gain",
+        "same",
+        "recent_sign_gain"
+      ],
+      "metrics": {
+        "sign_gain": {
+          "estimate": 0.18950948674489212,
+          "perturbation_mean": 0.1729319948795246,
+          "perturbation_sd": 0.0060887264876153405,
+          "perturbation_percentiles": [
+            0.16075636046881617,
+            0.1837512787221509
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.1795877675800012,
+          "leave_one_max": 0.18550984377445015,
+          "leave_one_positive": 10,
+          "leave_one_valid": 10
+        },
+        "same": {
+          "estimate": 0.8410918475921075,
+          "perturbation_mean": 0.8224970112757009,
+          "perturbation_sd": 0.011357845282083449,
+          "perturbation_percentiles": [
+            0.7990717664902751,
+            0.8426386229980746
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.821726463071911,
+          "leave_one_max": 0.8348137773466995,
+          "leave_one_positive": 10,
+          "leave_one_valid": 10
+        },
+        "recent_sign_gain": {
+          "estimate": 0.14981934717558748,
+          "perturbation_mean": 0.14569352680974187,
+          "perturbation_sd": 0.005150777106062971,
+          "perturbation_percentiles": [
+            0.13525666561599947,
+            0.1555592046574904
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.14353497628064393,
+          "leave_one_max": 0.15220154809148087,
+          "leave_one_positive": 10,
+          "leave_one_valid": 10
+        }
+      },
+      "perturbation_covariance": [
+        [
+          0.00003707259024098863,
+          0.00005708532983303753,
+          0.00001134791462550732
+        ],
+        [
+          0.00005708532983303753,
+          0.00012900064945174522,
+          0.000022846437569457137
+        ],
+        [
+          0.00001134791462550732,
+          0.000022846437569457137,
+          0.00002653050479634243
+        ]
+      ]
+    },
+    "mancuso": {
+      "n_clusters": 44,
+      "cluster_groups": {
+        "mancuso/0.2:16": 4,
+        "mancuso/0.2:4": 4,
+        "mancuso/0.2:600": 4,
+        "mancuso/0.3:1": 4,
+        "mancuso/0.3:16": 4,
+        "mancuso/0.3:4": 4,
+        "mancuso/0.3:600": 4,
+        "mancuso/0.4:1": 4,
+        "mancuso/0.4:16": 4,
+        "mancuso/0.4:4": 4,
+        "mancuso/0.4:600": 4
+      },
+      "n_panels": 8,
+      "n_cells": 1152,
+      "n_draws": 999,
+      "n_valid_draws": 999,
+      "n_invalid_draws": 0,
+      "metric_order": [
+        "sign_gain",
+        "same",
+        "recent_sign_gain"
+      ],
+      "metrics": {
+        "sign_gain": {
+          "estimate": 0.16174599827586705,
+          "perturbation_mean": 0.15148113876058764,
+          "perturbation_sd": 0.010216287059058976,
+          "perturbation_percentiles": [
+            0.13294446573172278,
+            0.17386211977904148
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.15351258980678018,
+          "leave_one_max": 0.18136127312203137,
+          "leave_one_positive": 44,
+          "leave_one_valid": 44
+        },
+        "same": {
+          "estimate": 0.7999325258366096,
+          "perturbation_mean": 0.7808790834270722,
+          "perturbation_sd": 0.01504315658623632,
+          "perturbation_percentiles": [
+            0.7514626012268678,
+            0.8103153662424211
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.7740823754848862,
+          "leave_one_max": 0.828539393092576,
+          "leave_one_positive": 44,
+          "leave_one_valid": 44
+        },
+        "recent_sign_gain": {
+          "estimate": 0.11252140695824671,
+          "perturbation_mean": 0.10691350418701444,
+          "perturbation_sd": 0.006654194795988398,
+          "perturbation_percentiles": [
+            0.09422155774132983,
+            0.1197008017675013
+          ],
+          "fraction_positive": 1,
+          "leave_one_min": 0.10403235213757828,
+          "leave_one_max": 0.12701799700592992,
+          "leave_one_positive": 44,
+          "leave_one_valid": 44
+        }
+      },
+      "perturbation_covariance": [
+        [
+          0.00010437252127309589,
+          0.00011247517835372077,
+          0.000036601939570109456
+        ],
+        [
+          0.00011247517835372077,
+          0.00022629656007802513,
+          0.00008118264441687457
+        ],
+        [
+          0.000036601939570109456,
+          0.00008118264441687457,
+          0.000044278308382959094
+        ]
+      ]
+    }
+  },
+  "study_effects": [
+    {
+      "source": "pond",
+      "study_label": "Narwani et al. 2019",
+      "measurement_lane": "absolute_biovolume",
+      "lab_group": "Narwani",
+      "dependence_note": "Narwani publication",
+      "n_clusters": 20,
+      "n_panels": 4,
+      "n_dependent_cells": 1872,
+      "n_valid_draws": 999,
+      "endpoint": "sign_gain",
+      "estimate": 0.08647972956753038,
+      "perturbation_sd": 0.029133376845717346,
+      "sensitivity_low": 0.006455721675761831,
+      "sensitivity_high": 0.11284753749912647,
+      "leave_one_min": 0.03577445236841462,
+      "leave_one_max": 0.10565246102936221,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "pond",
+      "study_label": "Narwani et al. 2019",
+      "measurement_lane": "absolute_biovolume",
+      "lab_group": "Narwani",
+      "dependence_note": "Narwani publication",
+      "n_clusters": 20,
+      "n_panels": 4,
+      "n_dependent_cells": 1872,
+      "n_valid_draws": 999,
+      "endpoint": "same",
+      "estimate": 0.6788448153659308,
+      "perturbation_sd": 0.03322449977977387,
+      "sensitivity_low": 0.5796585992197922,
+      "sensitivity_high": 0.7107365344545359,
+      "leave_one_min": 0.5773834281100845,
+      "leave_one_max": 0.7117970509515279,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "pond",
+      "study_label": "Narwani et al. 2019",
+      "measurement_lane": "absolute_biovolume",
+      "lab_group": "Narwani",
+      "dependence_note": "Narwani publication",
+      "n_clusters": 20,
+      "n_panels": 4,
+      "n_dependent_cells": 1872,
+      "n_valid_draws": 999,
+      "endpoint": "recent_sign_gain",
+      "estimate": 0.0838114505765529,
+      "perturbation_sd": 0.01564485438093003,
+      "sensitivity_low": 0.03956775904153553,
+      "sensitivity_high": 0.09590189582817102,
+      "leave_one_min": 0.057668381462184976,
+      "leave_one_max": 0.09574829479140287,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "kansas",
+      "study_label": "Foster Kansas hay meadow, Ladouceur compilation",
+      "measurement_lane": "absolute_biomass_conditional",
+      "lab_group": "Foster",
+      "dependence_note": "Original linkage unresolved",
+      "n_clusters": 4,
+      "n_panels": 1,
+      "n_dependent_cells": 78,
+      "n_valid_draws": 999,
+      "endpoint": "sign_gain",
+      "estimate": -0.006578062006602581,
+      "perturbation_sd": 0.03327348999408438,
+      "sensitivity_low": -0.07232237793810432,
+      "sensitivity_high": 0.04490865006666781,
+      "leave_one_min": -0.0626765496929106,
+      "leave_one_max": 0.05080316529218002,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "kansas",
+      "study_label": "Foster Kansas hay meadow, Ladouceur compilation",
+      "measurement_lane": "absolute_biomass_conditional",
+      "lab_group": "Foster",
+      "dependence_note": "Original linkage unresolved",
+      "n_clusters": 4,
+      "n_panels": 1,
+      "n_dependent_cells": 78,
+      "n_valid_draws": 999,
+      "endpoint": "same",
+      "estimate": 0.5523619418983504,
+      "perturbation_sd": 0.047978078665418096,
+      "sensitivity_low": 0.4850854011197169,
+      "sensitivity_high": 0.6507282089671459,
+      "leave_one_min": 0.46679049742276785,
+      "leave_one_max": 0.620882330126523,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "kansas",
+      "study_label": "Foster Kansas hay meadow, Ladouceur compilation",
+      "measurement_lane": "absolute_biomass_conditional",
+      "lab_group": "Foster",
+      "dependence_note": "Original linkage unresolved",
+      "n_clusters": 4,
+      "n_panels": 1,
+      "n_dependent_cells": 78,
+      "n_valid_draws": 999,
+      "endpoint": "recent_sign_gain",
+      "estimate": 0.011814651442104453,
+      "perturbation_sd": 0.0060657426930692945,
+      "sensitivity_low": -0.0003098520449444487,
+      "sensitivity_high": 0.022079889178838543,
+      "leave_one_min": 0.00033996641142852794,
+      "leave_one_max": 0.020715237683578545,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "poem",
+      "study_label": "Alonso-Crespo et al. POEM",
+      "measurement_lane": "absolute_biomass",
+      "lab_group": "Delory_Temperton",
+      "dependence_note": "Two cohorts, one publication",
+      "n_clusters": 40,
+      "n_panels": 6,
+      "n_dependent_cells": 1200,
+      "n_valid_draws": 999,
+      "endpoint": "sign_gain",
+      "estimate": -0.0485498426543323,
+      "perturbation_sd": 0.01250267642365596,
+      "sensitivity_low": -0.07305078327240322,
+      "sensitivity_high": -0.02373956060768204,
+      "leave_one_min": -0.061551587851105705,
+      "leave_one_max": -0.03797106393351755,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "poem",
+      "study_label": "Alonso-Crespo et al. POEM",
+      "measurement_lane": "absolute_biomass",
+      "lab_group": "Delory_Temperton",
+      "dependence_note": "Two cohorts, one publication",
+      "n_clusters": 40,
+      "n_panels": 6,
+      "n_dependent_cells": 1200,
+      "n_valid_draws": 999,
+      "endpoint": "same",
+      "estimate": 0.5060582369400175,
+      "perturbation_sd": 0.033991429336875156,
+      "sensitivity_low": 0.43866208264330375,
+      "sensitivity_high": 0.5721134188034024,
+      "leave_one_min": 0.4567913247277559,
+      "leave_one_max": 0.5290158245701734,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "poem",
+      "study_label": "Alonso-Crespo et al. POEM",
+      "measurement_lane": "absolute_biomass",
+      "lab_group": "Delory_Temperton",
+      "dependence_note": "Two cohorts, one publication",
+      "n_clusters": 40,
+      "n_panels": 6,
+      "n_dependent_cells": 1200,
+      "n_valid_draws": 999,
+      "endpoint": "recent_sign_gain",
+      "estimate": 0.09455156879713295,
+      "perturbation_sd": 0.011124057407333694,
+      "sensitivity_low": 0.07318379903003315,
+      "sensitivity_high": 0.11692546127357487,
+      "leave_one_min": 0.08485187442841817,
+      "leave_one_max": 0.1079011709508636,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "field",
+      "study_label": "van Steijn et al. 2026",
+      "measurement_lane": "unclosed_pin_hits",
+      "lab_group": "Related_grassland",
+      "dependence_note": "Two sites, one publication",
+      "n_clusters": 10,
+      "n_panels": 8,
+      "n_dependent_cells": 320,
+      "n_valid_draws": 999,
+      "endpoint": "sign_gain",
+      "estimate": 0.18950948674489212,
+      "perturbation_sd": 0.0060887264876153405,
+      "sensitivity_low": 0.16075636046881617,
+      "sensitivity_high": 0.1837512787221509,
+      "leave_one_min": 0.1795877675800012,
+      "leave_one_max": 0.18550984377445015,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "field",
+      "study_label": "van Steijn et al. 2026",
+      "measurement_lane": "unclosed_pin_hits",
+      "lab_group": "Related_grassland",
+      "dependence_note": "Two sites, one publication",
+      "n_clusters": 10,
+      "n_panels": 8,
+      "n_dependent_cells": 320,
+      "n_valid_draws": 999,
+      "endpoint": "same",
+      "estimate": 0.8410918475921075,
+      "perturbation_sd": 0.011357845282083449,
+      "sensitivity_low": 0.7990717664902751,
+      "sensitivity_high": 0.8426386229980746,
+      "leave_one_min": 0.821726463071911,
+      "leave_one_max": 0.8348137773466995,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "field",
+      "study_label": "van Steijn et al. 2026",
+      "measurement_lane": "unclosed_pin_hits",
+      "lab_group": "Related_grassland",
+      "dependence_note": "Two sites, one publication",
+      "n_clusters": 10,
+      "n_panels": 8,
+      "n_dependent_cells": 320,
+      "n_valid_draws": 999,
+      "endpoint": "recent_sign_gain",
+      "estimate": 0.14981934717558748,
+      "perturbation_sd": 0.005150777106062971,
+      "sensitivity_low": 0.13525666561599947,
+      "sensitivity_high": 0.1555592046574904,
+      "leave_one_min": 0.14353497628064393,
+      "leave_one_max": 0.15220154809148087,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "mancuso",
+      "study_label": "Mancuso et al. 2021 experiment 1",
+      "measurement_lane": "relative_read_composition",
+      "lab_group": "Mancuso",
+      "dependence_note": "One publication; Exp2 excluded",
+      "n_clusters": 44,
+      "n_panels": 8,
+      "n_dependent_cells": 1152,
+      "n_valid_draws": 999,
+      "endpoint": "sign_gain",
+      "estimate": 0.16174599827586705,
+      "perturbation_sd": 0.010216287059058976,
+      "sensitivity_low": 0.13294446573172278,
+      "sensitivity_high": 0.17386211977904148,
+      "leave_one_min": 0.15351258980678018,
+      "leave_one_max": 0.18136127312203137,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "mancuso",
+      "study_label": "Mancuso et al. 2021 experiment 1",
+      "measurement_lane": "relative_read_composition",
+      "lab_group": "Mancuso",
+      "dependence_note": "One publication; Exp2 excluded",
+      "n_clusters": 44,
+      "n_panels": 8,
+      "n_dependent_cells": 1152,
+      "n_valid_draws": 999,
+      "endpoint": "same",
+      "estimate": 0.7999325258366096,
+      "perturbation_sd": 0.01504315658623632,
+      "sensitivity_low": 0.7514626012268678,
+      "sensitivity_high": 0.8103153662424211,
+      "leave_one_min": 0.7740823754848862,
+      "leave_one_max": 0.828539393092576,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    },
+    {
+      "source": "mancuso",
+      "study_label": "Mancuso et al. 2021 experiment 1",
+      "measurement_lane": "relative_read_composition",
+      "lab_group": "Mancuso",
+      "dependence_note": "One publication; Exp2 excluded",
+      "n_clusters": 44,
+      "n_panels": 8,
+      "n_dependent_cells": 1152,
+      "n_valid_draws": 999,
+      "endpoint": "recent_sign_gain",
+      "estimate": 0.11252140695824671,
+      "perturbation_sd": 0.006654194795988398,
+      "sensitivity_low": 0.09422155774132983,
+      "sensitivity_high": 0.1197008017675013,
+      "leave_one_min": 0.10403235213757828,
+      "leave_one_max": 0.12701799700592992,
+      "inverse_variance_meta_eligible": "no",
+      "reason": "conditional perturbation SD is not calibrated sampling SE; limited source independence and measurement comparability"
+    }
+  ]
+}
