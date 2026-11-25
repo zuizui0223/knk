@@ -1,0 +1,1280 @@
+{
+  "status": "MANIFEST_AND_SOURCE_AUDITED_NO_ECOLOGICAL_SCORES",
+  "article": 28651985,
+  "doi": "10.6084/m9.figshare.28651985.v1",
+  "files": [
+    {
+      "name": "1. Analyses-v7-06Oct2025.R",
+      "file_id": 58520035,
+      "size": 23184,
+      "md5": "2558c595613346c75a8b591282b41162",
+      "status": "checksum_verified",
+      "sha256": "464d6cfa645e36b95c813a732d57c82157b2e7f4f16a1d966540f4e2751f7e2e",
+      "inventory": [
+        {
+          "name": "1. Analyses-v7-06Oct2025.R",
+          "size": 23184,
+          "sha256": "464d6cfa645e36b95c813a732d57c82157b2e7f4f16a1d966540f4e2751f7e2e",
+          "mapping_lines": [
+            {
+              "line": 1,
+              "text": "# An experimental test on the effects of dispersal from different habitat "
+            },
+            {
+              "line": 7,
+              "text": "#   João C. Nabout, Fabricio B. Teresa, Maisa C. Vieira, "
+            },
+            {
+              "line": 20,
+              "text": "# Tanks A0 (UFG -              did not receive dispersers): 1,  5, 6, 7, 8,18,20,28,30,38"
+            },
+            {
+              "line": 21,
+              "text": "# Tanks AA (UFG and dispersers from paired A0 tank):        16,15, 4,26,22, 2,23,25,21,13"
+            },
+            {
+              "line": 23,
+              "text": "# Tanks B0 (SantaBranca (SB) - did not receive dispersers):  3,11,12,17,19,24,29,32,36,40"
+            },
+            {
+              "line": 24,
+              "text": "# Tanks AB (UFG and dispersers from paired B0 tank):        31,35,14,34, 9,27,33,39,10,37"
+            },
+            {
+              "line": 26,
+              "text": "# Donor and recipient tanks (column 1 in comm.data below)"
+            },
+            {
+              "line": 29,
+              "text": "pairs <- cbind(donor, recipient)"
+            },
+            {
+              "line": 37,
+              "text": "# Samples obtained on days 20, 50, 65, 86 and 101 after filling of tanks."
+            },
+            {
+              "line": 38,
+              "text": "# Dispersal events immediately after sampling on days 50, 65 and 86."
+            },
+            {
+              "line": 40,
+              "text": "comm.data <- read.table('Dadosbrutosfinais1.1.txt' , sep = \"\\t\" , "
+            },
+            {
+              "line": 43,
+              "text": "# 1st column: Tank number (40 tanks)"
+            },
+            {
+              "line": 45,
+              "text": "# 3rd column: Treatment (4 levels)"
+            },
+            {
+              "line": 46,
+              "text": "# Remaining columns: Raw abundance data."
+            },
+            {
+              "line": 47,
+              "text": "comm.data[comm.data$Tratamento==\"AA\",\"Tratamento\"] <- \"Aa\" # To be consistent with text."
+            },
+            {
+              "line": 48,
+              "text": "comm.data[comm.data$Tratamento==\"AB\",\"Tratamento\"] <- \"Ab\""
+            },
+            {
+              "line": 50,
+              "text": "comm.data[1:5, c(1:3, 28, 29, 58, 59)] # Labels and columns to remove."
+            },
+            {
+              "line": 51,
+              "text": "comm <- comm.data[,-c(1:3, 28, 29, 58, 59)] # Remove labels and young copepod."
+            },
+            {
+              "line": 52,
+              "text": "dim(comm)# 200 63.  200 = 40 tanks * 5 sampling events"
+            },
+            {
+              "line": 54,
+              "text": "Tanks     <- comm.data[, \"Tanques\"]"
+            },
+            {
+              "line": 56,
+              "text": "Treatment <- comm.data[, \"Tratamento\"]"
+            },
+            {
+              "line": 58,
+              "text": "# Create composite labels and use as rownames."
+            },
+            {
+              "line": 63,
+              "text": "# Species groups"
+            },
+            {
+              "line": 100,
+              "text": "dim(comm) # 200 sample units and 63 species."
+            },
+            {
+              "line": 101,
+              "text": "sum(colSums(comm)>0) # 63 species"
+            },
+            {
+              "line": 102,
+              "text": "sum(comm) # Total abundance in the study: 88774 individuals"
+            },
+            {
+              "line": 103,
+              "text": "mean(rowSums(comm)) # Mean abundance per sample: 443.87"
+            },
+            {
+              "line": 104,
+              "text": "range(rowSums(comm))# Range abundances per sample: 126 1225"
+            },
+            {
+              "line": 105,
+              "text": "table(groups$group) # Cladocera  Copepoda  Rotifera  Testacea "
+            },
+            {
+              "line": 115,
+              "text": "range(colSums(comm))# Abundances of rarest and commonest species: 38 4792."
+            },
+            {
+              "line": 121,
+              "text": "# Sobs in tanks filled with water of lakes A and B before dispersal events."
+            },
+            {
+              "line": 123,
+              "text": "AB.T1T2 <- comm[                                    Date %in% c(\"T1\",\"T2\"),]"
+            },
+            {
+              "line": 124,
+              "text": "dim(AB.T1T2) # 80 63.  80 = 2 sampling events * 4 treatments * 10 tanks."
+            },
+            {
+              "line": 125,
+              "text": "AB.T1T2 <- AB.T1T2[, colSums(AB.T1T2)>0] # In case of species missing in T1-T2."
+            },
+            {
+              "line": 126,
+              "text": "dim(AB.T1T2) # 80 63"
+            },
+            {
+              "line": 128,
+              "text": "# Sobs in tanks filled with water of lake A before dispersal events."
+            },
+            {
+              "line": 129,
+              "text": "A.T1T2 <- comm[Treatment %in% c(\"A0\", \"Aa\", \"Ab\") & Date %in% c(\"T1\",\"T2\"),]"
+            },
+            {
+              "line": 130,
+              "text": "dim(A.T1T2) # 60 63.  60 = 2 dates * 3 treatments * 10 replicate tanks."
+            },
+            {
+              "line": 131,
+              "text": "A.T1T2 <- A.T1T2[, colSums(A.T1T2)>0] # Remove missing species"
+            },
+            {
+              "line": 134,
+              "text": "# Sobs in tanks filled with water of lake B before dispersal events."
+            },
+            {
+              "line": 135,
+              "text": "B.T1T2 <- comm[Treatment %in%   \"B0\"              & Date %in% c(\"T1\",\"T2\"),]"
+            },
+            {
+              "line": 136,
+              "text": "dim(B.T1T2) # 20 63.  20 = 2 dates * 1 treatment * 10 repliacte tanks."
+            },
+            {
+              "line": 137,
+              "text": "B.T1T2 <- B.T1T2[, colSums(B.T1T2)>0] # Remove missing species"
+            },
+            {
+              "line": 140,
+              "text": "sum(colnames(A.T1T2) %in% colnames(B.T1T2))# 12 species in common."
+            },
+            {
+              "line": 142,
+              "text": "38-12 # 26 species exclusive to tanks filled with water of lake A."
+            },
+            {
+              "line": 143,
+              "text": "37-12 # 25 species exclusive to tanks filled with water of lake B."
+            },
+            {
+              "line": 144,
+              "text": "rm(AB.T1T2, A.T1T2, B.T1T2)"
+            },
+            {
+              "line": 148,
+              "text": "#                      rm-Anova on observed species richness "
+            },
+            {
+              "line": 151,
+              "text": "dat.aov <- data.frame(S.obs, Treatment, Date, Tanks)"
+            },
+            {
+              "line": 153,
+              "text": "                  dv = S.obs,          # Dependent variable"
+            },
+            {
+              "line": 154,
+              "text": "                  wid = Tanks,         # Subject"
+            },
+            {
+              "line": 155,
+              "text": "                  within = Date,       # Time (Within-subject factor)"
+            },
+            {
+              "line": 156,
+              "text": "                  between = Treatment, # Between-subject factor"
+            },
+            {
+              "line": 163,
+              "text": "#2      Treatment   3  36   945.295 123.18    92.08914 5.967926e-17     * 0.7003249"
+            },
+            {
+              "line": 165,
+              "text": "#4 Treatment:Date  12 144   814.630 281.32    34.74890 1.378607e-36     * 0.6682060"
+            },
+            {
+              "line": 170,
+              "text": "#4 Treatment:Date 0.4416111 0.0009197903     *"
+            },
+            {
+              "line": 175,
+              "text": "#4 Treatment:Date 0.7649626 1.629076e-28         * 0.8440646 3.115330e-31         *"
+            },
+            {
+              "line": 197,
+              "text": "#     ******  Presence-Absence - Sorensen  ******"
+            },
+            {
+              "line": 198,
+              "text": "# T1 and T2: pool tanks labeled Aa and Ab; they did not receive dispersers yet."
+            },
+            {
+              "line": 200,
+              "text": "T1.tr <- Treatment[Date %in% \"T1\" ]"
+            },
+            {
+              "line": 201,
+              "text": "T1.tr[T1.tr==\"A0\"] <- \"A*\""
+            },
+            {
+              "line": 202,
+              "text": "T1.tr[T1.tr==\"Aa\"] <- \"A*\""
+            },
+            {
+              "line": 203,
+              "text": "T1.tr[T1.tr==\"Ab\"] <- \"A*\""
+            },
+            {
+              "line": 212,
+              "text": "T2.tr <- Treatment[Date %in% \"T2\" ]"
+            },
+            {
+              "line": 213,
+              "text": "T2.tr[T2.tr==\"A0\"] <- \"A*\""
+            },
+            {
+              "line": 214,
+              "text": "T2.tr[T2.tr==\"Aa\"] <- \"A*\""
+            },
+            {
+              "line": 215,
+              "text": "T2.tr[T2.tr==\"Ab\"] <- \"A*\""
+            },
+            {
+              "line": 224,
+              "text": "adonis2(comm.pa[Date==\"T3\", ] ~ Treatment[Date==\"T3\"], "
+            },
+            {
+              "line": 230,
+              "text": "adonis2(comm.pa[Date==\"T4\", ] ~ Treatment[Date==\"T4\"], "
+            },
+            {
+              "line": 236,
+              "text": "adonis2(comm.pa[Date==\"T5\", ] ~ Treatment[Date==\"T5\"], "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Fig2-Sobs-v5-06Oct2025.R",
+      "file_id": 58520023,
+      "size": 5130,
+      "md5": "ffe7166bd90aa3ca7886237fcb148202",
+      "status": "checksum_verified",
+      "sha256": "c867468c709ee81e80778976a48fb2245441dac233a6701ccb3769fdc248d74c",
+      "inventory": [
+        {
+          "name": "2. Fig2-Sobs-v5-06Oct2025.R",
+          "size": 5130,
+          "sha256": "c867468c709ee81e80778976a48fb2245441dac233a6701ccb3769fdc248d74c",
+          "mapping_lines": [
+            {
+              "line": 1,
+              "text": "# An experimental test on the effects of dispersal from different habitat "
+            },
+            {
+              "line": 7,
+              "text": "#   João C. Nabout, Fabricio B. Teresa, Maisa C. Vieira, "
+            },
+            {
+              "line": 18,
+              "text": "cells <- tapply(S.obs, data.frame(Date, Treatment), FUN=mean)"
+            },
+            {
+              "line": 20,
+              "text": "cells.se <- tapply(S.obs, data.frame(Date, Treatment), FUN=f.se)"
+            },
+            {
+              "line": 27,
+              "text": "     xlab = \"\", ylab = \"\") # axis title, axis labels and axis line. default (3, 1, 0)."
+            },
+            {
+              "line": 30,
+              "text": "     at=seq(1,5,1), labels=c(\"T1\",\"T2\",\"T3\",\"T4\",\"T5\"))"
+            },
+            {
+              "line": 31,
+              "text": "title(xlab=\"Time\", line=1.9, cex.lab=1.7) # line = distance from axis."
+            },
+            {
+              "line": 34,
+              "text": "title(ylab=\"Species richness\", line=1.5, cex.lab=1.6) # line = distance from axis."
+            },
+            {
+              "line": 37,
+              "text": "# A0"
+            },
+            {
+              "line": 39,
+              "text": "segments(x,     cells[,\"A0\"]+cells.se[,\"A0\"], x,     cells[,\"A0\"]-cells.se[,\"A0\"], col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 40,
+              "text": "segments(x+cap, cells[,\"A0\"]+cells.se[,\"A0\"], x-cap, cells[,\"A0\"]+cells.se[,\"A0\"], col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 41,
+              "text": "segments(x+cap, cells[,\"A0\"]-cells.se[,\"A0\"], x-cap, cells[,\"A0\"]-cells.se[,\"A0\"], col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 42,
+              "text": "lines(x, cells[, \"A0\"], col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), type=\"b\", lty=2, lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 45,
+              "text": "# B0"
+            },
+            {
+              "line": 47,
+              "text": "segments(x,     cells[,\"B0\"]+cells.se[,\"B0\"], x,     cells[,\"B0\"]-cells.se[,\"B0\"], col=rgb(red=0,green=0,  blue=1,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 48,
+              "text": "segments(x+cap, cells[,\"B0\"]+cells.se[,\"B0\"], x-cap, cells[,\"B0\"]+cells.se[,\"B0\"], col=rgb(red=0,green=0,  blue=1,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 49,
+              "text": "segments(x+cap, cells[,\"B0\"]-cells.se[,\"B0\"], x-cap, cells[,\"B0\"]-cells.se[,\"B0\"], col=rgb(red=0,green=0,  blue=1,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 50,
+              "text": "lines((1:5)-0.025, cells[,\"B0\"], col=rgb(red=0,green=0,    blue=1,  maxColorValue=1), type=\"b\", lty=2, lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 52,
+              "text": "# Aa"
+            },
+            {
+              "line": 54,
+              "text": "segments(x,     cells[,\"Aa\"]+cells.se[,\"Aa\"], x,     cells[,\"Aa\"]-cells.se[,\"Aa\"], col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 55,
+              "text": "segments(x+cap, cells[,\"Aa\"]+cells.se[,\"Aa\"], x-cap, cells[,\"Aa\"]+cells.se[,\"Aa\"], col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 56,
+              "text": "segments(x+cap, cells[,\"Aa\"]-cells.se[,\"Aa\"], x-cap, cells[,\"Aa\"]-cells.se[,\"Aa\"], col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 58,
+              "text": "lines(x1, cells[1:2,\"Aa\"], col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), type=\"b\", lty=2, lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 59,
+              "text": "lines(x2, cells[2:5,\"Aa\"], col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), type=\"b\", lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 62,
+              "text": "# Ab"
+            },
+            {
+              "line": 64,
+              "text": "segments(x,     cells[,\"Ab\"]+cells.se[,\"Ab\"], x,     cells[,\"Ab\"]-cells.se[,\"Ab\"], col=rgb(red=0,green=0.8,  blue=0.8,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 65,
+              "text": "segments(x+cap, cells[,\"Ab\"]+cells.se[,\"Ab\"], x-cap, cells[,\"Ab\"]+cells.se[,\"Ab\"], col=rgb(red=0,green=0.8,  blue=0.8,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 66,
+              "text": "segments(x+cap, cells[,\"Ab\"]-cells.se[,\"Ab\"], x-cap, cells[,\"Ab\"]-cells.se[,\"Ab\"], col=rgb(red=0,green=0.8,  blue=0.8,  maxColorValue=1), lwd=1)"
+            },
+            {
+              "line": 68,
+              "text": "lines(x1, cells[1:2,\"Ab\"], col=rgb(red=0,green=0.8,  blue=0.8,maxColorValue=1), type=\"b\", lty=2, lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 69,
+              "text": "lines(x2, cells[2:5,\"Ab\"], col=rgb(red=0,green=0.8,  blue=0.8,maxColorValue=1), type=\"b\", lwd=1.5, pch=21, bg=\"white\")"
+            },
+            {
+              "line": 72,
+              "text": "text(4.7, 12.6, \"A0\", col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), cex=1.5)"
+            },
+            {
+              "line": 73,
+              "text": "text(4.7, 14.5, \"B0\", col=rgb(red=0,green=0,    blue=1,  maxColorValue=1), cex=1.5)"
+            },
+            {
+              "line": 74,
+              "text": "text(4.7, 20.4, \"Aa\", col=rgb(red=0,green=0.8,blue=0,  maxColorValue=1), cex=1.5)"
+            },
+            {
+              "line": 75,
+              "text": "text(4.7, 25.6, \"Ab\", col=rgb(red=0,green=0.8,blue=0.8,maxColorValue=1), cex=1.5)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Fig3-Nmds-v5-06Oct2025.R",
+      "file_id": 58520026,
+      "size": 9418,
+      "md5": "bc77904417336f9f412dcbc9e0082be6",
+      "status": "checksum_verified",
+      "sha256": "931f6370b1bc20a56f178238e10d57164ea77248572c59220827ee5ae40fd14d",
+      "inventory": [
+        {
+          "name": "3. Fig3-Nmds-v5-06Oct2025.R",
+          "size": 9418,
+          "sha256": "931f6370b1bc20a56f178238e10d57164ea77248572c59220827ee5ae40fd14d",
+          "mapping_lines": [
+            {
+              "line": 1,
+              "text": "# An experimental test on the effects of dispersal from different habitat "
+            },
+            {
+              "line": 7,
+              "text": "#   João C. Nabout, Fabricio B. Teresa, Maisa C. Vieira, "
+            },
+            {
+              "line": 23,
+              "text": "A0.cor <- rgb(red=0,green=0.4,  blue=0)"
+            },
+            {
+              "line": 24,
+              "text": "B0.cor <- rgb(red=0,green=0,    blue=1)"
+            },
+            {
+              "line": 25,
+              "text": "Aa.cor <- rgb(red=0,green=0.8,  blue=0)"
+            },
+            {
+              "line": 26,
+              "text": "Ab.cor <- rgb(red=0,green=0.8,  blue=0.8)"
+            },
+            {
+              "line": 30,
+              "text": "b.cor[b.cor==\"A0\"] <- A0.cor "
+            },
+            {
+              "line": 31,
+              "text": "b.cor[b.cor==\"B0\"] <- B0.cor"
+            },
+            {
+              "line": 32,
+              "text": "b.cor[b.cor==\"Aa\"] <- Aa.cor "
+            },
+            {
+              "line": 33,
+              "text": "b.cor[b.cor==\"Ab\"] <- Ab.cor"
+            },
+            {
+              "line": 44,
+              "text": "        xlab = \"\", ylab = \"\") # axis title, axis labels and axis line. default (3, 1, 0)."
+            },
+            {
+              "line": 46,
+              "text": "        at=seq(-0.5,0.75,0.25), labels=c(\"-0.5\",\"\",\"0\",\"\",\"0.5\",\"\"))"
+            },
+            {
+              "line": 47,
+              "text": "   title(ylab=\"NMDS 2\", line=0.8, cex.lab=1.3)"
+            },
+            {
+              "line": 62,
+              "text": "            if(names(c1)[n]==\"A0\"){trat.cor <- A0.cor}"
+            },
+            {
+              "line": 63,
+              "text": "            if(names(c1)[n]==\"B0\"){trat.cor <- B0.cor}"
+            },
+            {
+              "line": 64,
+              "text": "            if(names(c1)[n]==\"Aa\"){trat.cor <- Aa.cor}"
+            },
+            {
+              "line": 65,
+              "text": "            if(names(c1)[n]==\"Ab\"){trat.cor <- Ab.cor}"
+            },
+            {
+              "line": 69,
+              "text": "            } # for n (tanks)"
+            },
+            {
+              "line": 70,
+              "text": "         } # for p treatments."
+            },
+            {
+              "line": 77,
+              "text": "            if(names(c1)[n]==\"A0\"){trat.cor <- rgb(red=0,green=0.4, blue=0, alpha=0.3)}"
+            },
+            {
+              "line": 78,
+              "text": "            if(names(c1)[n]==\"B0\"){trat.cor <- rgb(red=0,green=0,   blue=1, alpha=0.3)}"
+            },
+            {
+              "line": 79,
+              "text": "            if(names(c1)[n]==\"Aa\"){trat.cor <- rgb(red=0,green=0.8, blue=0, alpha=0.3)}"
+            },
+            {
+              "line": 80,
+              "text": "            if(names(c1)[n]==\"Ab\"){trat.cor <- rgb(red=0,green=0.8, blue=0.8,alpha=0.3)}"
+            },
+            {
+              "line": 93,
+              "text": "      text( 1.0 ,  0.4, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 94,
+              "text": "      text(0.30,  0.57, \"A*      |      B0\", cex=1.2)}"
+            },
+            {
+              "line": 97,
+              "text": "      text( 1.0 , 0.25, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 98,
+              "text": "      text(0.30,  0.58, \"A*      |      B0\", cex=1.2)}"
+            },
+            {
+              "line": 101,
+              "text": "      text(-0.62,  0.35,\"A0\", col=A0.cor, cex=1.2)"
+            },
+            {
+              "line": 102,
+              "text": "      text( 1.0 ,  0.3, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 103,
+              "text": "      text(-0.3, -0.15, \"Aa\", col=Aa.cor, cex=1.2)"
+            },
+            {
+              "line": 104,
+              "text": "      text( 0.25,  0,   \"Ab\", col=Ab.cor, cex=1.2)"
+            },
+            {
+              "line": 105,
+              "text": "      text(0.30,  0.58, \"A0 | Aa | Ab | B0\", cex=1.2)"
+            },
+            {
+              "line": 109,
+              "text": "      text(-0.62,  0.45,\"A0\", col=A0.cor, cex=1.2)"
+            },
+            {
+              "line": 110,
+              "text": "      text( 1.0 ,  0.5, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 111,
+              "text": "      text(-0.35, -0.2, \"Aa\", col=Aa.cor, cex=1.2)"
+            },
+            {
+              "line": 112,
+              "text": "      text( 0.25, -0.1, \"Ab\", col=Ab.cor, cex=1.2)"
+            },
+            {
+              "line": 113,
+              "text": "      text(0.30,  0.58, \"A0---Aa | Ab | B0\", cex=1.2)}"
+            },
+            {
+              "line": 116,
+              "text": "      text(-0.18,  0.30,\"A0\", col=A0.cor, cex=1.2)"
+            },
+            {
+              "line": 117,
+              "text": "      text( 0.75 ,  0.30, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 118,
+              "text": "      text(-0.35, -0.2, \"Aa\", col=Aa.cor, cex=1.2)"
+            },
+            {
+              "line": 119,
+              "text": "      text( 0.25, -0.15,   \"Ab\", col=Ab.cor, cex=1.2)"
+            },
+            {
+              "line": 120,
+              "text": "      text(0.30,  0.58, \"A0 | Aa | Ab | B0\", cex=1.2)}"
+            },
+            {
+              "line": 123,
+              "text": "      axis(side=1, at=seq(-0.75,1.25,0.25), labels=F, tck=0.04)"
+            },
+            {
+              "line": 125,
+              "text": "      axis(side=1, at=seq(-0.75,1.25,0.25), labels=c(\"\",\"-0.5\",\"\",\"0\",\"\",\"0.5\",\"\",\"1.0\",\"\"),"
+            },
+            {
+              "line": 126,
+              "text": "           tck=0.03, mgp=c(1,0,0),cex.axis=0.9, xlab=\"NMDS 1\")"
+            },
+            {
+              "line": 127,
+              "text": "      title(xlab=\"NMDS 1\", line=0.95, cex.lab=1.3)"
+            },
+            {
+              "line": 134,
+              "text": "        xlab = \"\", ylab = \"\") # axis title, axis labels and axis line. default (3, 1, 0)."
+            },
+            {
+              "line": 136,
+              "text": "        at=seq(-0.5,0.75,0.25),labels=c(\"-0.5\",\"\",\"0\",\"\",\"0.5\",\"\"))"
+            },
+            {
+              "line": 151,
+              "text": "            if(names(c1)[n]==\"A0\"){trat.cor <- A0.cor}"
+            },
+            {
+              "line": 152,
+              "text": "            if(names(c1)[n]==\"B0\"){trat.cor <- B0.cor}"
+            },
+            {
+              "line": 153,
+              "text": "            if(names(c1)[n]==\"Aa\"){trat.cor <- Aa.cor}"
+            },
+            {
+              "line": 154,
+              "text": "            if(names(c1)[n]==\"Ab\"){trat.cor <- Ab.cor}"
+            },
+            {
+              "line": 166,
+              "text": "            if(names(c1)[n]==\"A0\"){poly.cor <- rgb(red=0,green=0.4, blue=0, alpha=0.3)}"
+            },
+            {
+              "line": 167,
+              "text": "            if(names(c1)[n]==\"B0\"){poly.cor <- rgb(red=0,green=0,   blue=1, alpha=0.3)}"
+            },
+            {
+              "line": 168,
+              "text": "            if(names(c1)[n]==\"Aa\"){poly.cor <- rgb(red=0,green=0.8, blue=0, alpha=0.3)}"
+            },
+            {
+              "line": 169,
+              "text": "            if(names(c1)[n]==\"Ab\"){poly.cor <- rgb(red=0,green=0.8, blue=0.8,alpha=0.3)}"
+            },
+            {
+              "line": 183,
+              "text": "      text( 1.0 ,-0.1, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 184,
+              "text": "      text(0.30, 0.57, \"A*      |      B0\", cex=1.2)}"
+            },
+            {
+              "line": 187,
+              "text": "      text( 1.0,  0.25, \"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 188,
+              "text": "      text(0.30, 0.58, \"A*      |      B0\", cex=1.2)}"
+            },
+            {
+              "line": 192,
+              "text": "      text(-0.6,  0.4, \"A0\", col=A0.cor, cex=1.2)"
+            },
+            {
+              "line": 193,
+              "text": "      text( 1.0,  0.3,\"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 194,
+              "text": "      text(-0.3, -0.2, \"Aa\", col=Aa.cor, cex=1.2)"
+            },
+            {
+              "line": 195,
+              "text": "      text( 0.25,-0.12, \"Ab\", col=Ab.cor, cex=1.2)"
+            },
+            {
+              "line": 196,
+              "text": "      text(0.30, 0.58, \"A0 | Aa | Ab | B0\", cex=1.2)}"
+            },
+            {
+              "line": 199,
+              "text": "      text(-0.6,  0.5, \"A0\", col=A0.cor, cex=1.2)"
+            },
+            {
+              "line": 200,
+              "text": "      text( 1.05,  0.5,\"B0\", col=B0.cor, cex=1.2)"
+            },
+            {
+              "line": 201,
+              "text": "      text(-0.3, -0.2, \"Aa\", col=Aa.cor, cex=1.2)"
+            },
+            {
+              "line": 202,
+              "text": "      text( 0.3, 0, \"Ab\", col=Ab.cor, cex=1.2)"
+            },
+            {
+              "line": 203,
+              "text": "      text(0.30,  0.58, \"A0---Aa | Ab | B0\", cex=1.2)}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. Fig4-Dissimi-v4-06Oct2025.R",
+      "file_id": 58520029,
+      "size": 7843,
+      "md5": "64d922eb82c082f5d67f216f7583ab25",
+      "status": "checksum_verified",
+      "sha256": "0b4d0dbc3d910befafb3cd6a1b224489110144b8819f799bf40fb759ddd39a88",
+      "inventory": [
+        {
+          "name": "4. Fig4-Dissimi-v4-06Oct2025.R",
+          "size": 7843,
+          "sha256": "0b4d0dbc3d910befafb3cd6a1b224489110144b8819f799bf40fb759ddd39a88",
+          "mapping_lines": [
+            {
+              "line": 1,
+              "text": "# An experimental test on the effects of dispersal from different habitat "
+            },
+            {
+              "line": 7,
+              "text": "#   João C. Nabout, Fabricio B. Teresa, Maisa C. Vieira, "
+            },
+            {
+              "line": 19,
+              "text": "treat.names <- c(\"A0\", \"B0\", \"Aa\", \"Ab\")"
+            },
+            {
+              "line": 20,
+              "text": "colnames(resu.bray) <- treat.names"
+            },
+            {
+              "line": 27,
+              "text": "# Pair-wise: basically the same result as average distances to medoid."
+            },
+            {
+              "line": 28,
+              "text": "#for(i in treat.names){"
+            },
+            {
+              "line": 30,
+              "text": "#      treat.dat <- comm[Treatment==i & Date==j, ]"
+            },
+            {
+              "line": 31,
+              "text": "#      resu.sor[j, i]  <- mean(vegdist(    treat.dat,    \"bray\", binary=T))"
+            },
+            {
+              "line": 32,
+              "text": "#      resu.bray[j, i] <- mean(vegdist(log(treat.dat+1), \"bray\", binary=F))"
+            },
+            {
+              "line": 36,
+              "text": "resu.sor[,1] <- aggregate(beta.sor.within.A0$distances, "
+            },
+            {
+              "line": 37,
+              "text": "                          by=list(beta.sor.within.A0$group), FUN=mean)$x"
+            },
+            {
+              "line": 38,
+              "text": "resu.sor[,2] <- aggregate(beta.sor.within.B0$distances, "
+            },
+            {
+              "line": 39,
+              "text": "                          by=list(beta.sor.within.B0$group), FUN=mean)$x"
+            },
+            {
+              "line": 40,
+              "text": "resu.sor[,3] <- aggregate(beta.sor.within.Aa$distances, "
+            },
+            {
+              "line": 41,
+              "text": "                          by=list(beta.sor.within.Aa$group), FUN=mean)$x"
+            },
+            {
+              "line": 42,
+              "text": "resu.sor[,4] <- aggregate(beta.sor.within.Ab$distances, "
+            },
+            {
+              "line": 43,
+              "text": "                          by=list(beta.sor.within.Ab$group), FUN=mean)$x"
+            },
+            {
+              "line": 45,
+              "text": "resu.sor.se[,1] <- aggregate(beta.sor.within.A0$distances, "
+            },
+            {
+              "line": 46,
+              "text": "                          by=list(beta.sor.within.A0$group), FUN=f.se)$x"
+            },
+            {
+              "line": 47,
+              "text": "resu.sor.se[,2] <- aggregate(beta.sor.within.B0$distances, "
+            },
+            {
+              "line": 48,
+              "text": "                          by=list(beta.sor.within.B0$group), FUN=f.se)$x"
+            },
+            {
+              "line": 49,
+              "text": "resu.sor.se[,3] <- aggregate(beta.sor.within.Aa$distances, "
+            },
+            {
+              "line": 50,
+              "text": "                          by=list(beta.sor.within.Aa$group), FUN=f.se)$x"
+            },
+            {
+              "line": 51,
+              "text": "resu.sor.se[,4] <- aggregate(beta.sor.within.Ab$distances, "
+            },
+            {
+              "line": 52,
+              "text": "                          by=list(beta.sor.within.Ab$group), FUN=f.se)$x"
+            },
+            {
+              "line": 54,
+              "text": "resu.bray[,1] <- aggregate(beta.bc.within.A0$distances, "
+            },
+            {
+              "line": 55,
+              "text": "                          by=list(beta.bc.within.A0$group), FUN=mean)$x"
+            },
+            {
+              "line": 56,
+              "text": "resu.bray[,2] <- aggregate(beta.bc.within.B0$distances, "
+            },
+            {
+              "line": 57,
+              "text": "                          by=list(beta.bc.within.B0$group), FUN=mean)$x"
+            },
+            {
+              "line": 58,
+              "text": "resu.bray[,3] <- aggregate(beta.bc.within.Aa$distances, "
+            },
+            {
+              "line": 59,
+              "text": "                          by=list(beta.bc.within.Aa$group), FUN=mean)$x"
+            },
+            {
+              "line": 60,
+              "text": "resu.bray[,4] <- aggregate(beta.bc.within.Ab$distances, "
+            },
+            {
+              "line": 61,
+              "text": "                          by=list(beta.bc.within.Ab$group), FUN=mean)$x"
+            },
+            {
+              "line": 63,
+              "text": "resu.bray.se[,1] <- aggregate(beta.bc.within.A0$distances, "
+            },
+            {
+              "line": 64,
+              "text": "                           by=list(beta.bc.within.A0$group), FUN=f.se)$x"
+            },
+            {
+              "line": 65,
+              "text": "resu.bray.se[,2] <- aggregate(beta.bc.within.B0$distances, "
+            },
+            {
+              "line": 66,
+              "text": "                           by=list(beta.bc.within.B0$group), FUN=f.se)$x"
+            },
+            {
+              "line": 67,
+              "text": "resu.bray.se[,3] <- aggregate(beta.bc.within.Aa$distances, "
+            },
+            {
+              "line": 68,
+              "text": "                           by=list(beta.bc.within.Aa$group), FUN=f.se)$x"
+            },
+            {
+              "line": 69,
+              "text": "resu.bray.se[,4] <- aggregate(beta.bc.within.Ab$distances, "
+            },
+            {
+              "line": 70,
+              "text": "                           by=list(beta.bc.within.Ab$group), FUN=f.se)$x"
+            },
+            {
+              "line": 83,
+              "text": "     xlab = \"\", ylab = \"\") # axis title, axis labels and axis line. default (3, 1, 0)."
+            },
+            {
+              "line": 86,
+              "text": "     at=seq(1,5,1), labels=c(\"\",\"\",\"\",\"\",\"\"), line=0.3)"
+            },
+            {
+              "line": 89,
+              "text": "title(ylab=\"Distance\", line=1.5, cex.lab=1.6) # line = distance from axis."
+            },
+            {
+              "line": 110,
+              "text": "text(3.5,  0.222, \"A0-A0\", col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1), cex=1.2)"
+            },
+            {
+              "line": 111,
+              "text": "text(3.5,  0.255, \"B0-B0\", col=rgb(red=0,green=0,    blue=1,  maxColorValue=1), cex=1.2)"
+            },
+            {
+              "line": 112,
+              "text": "text(3.5,  0.197, \"Aa-Aa\", col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1), cex=1.2)"
+            },
+            {
+              "line": 113,
+              "text": "text(3.55,  0.285, \"Ab-Ab\", col=rgb(red=0,green=0.8,  blue=0.8,maxColorValue=1), cex=1.2)"
+            },
+            {
+              "line": 128,
+              "text": "     xlab = \"\", ylab = \"\") # axis title, axis labels and axis line. default (3, 1, 0)."
+            },
+            {
+              "line": 131,
+              "text": "     at=seq(1,5,1), labels=c(\"T1\",\"T2\",\"T3\",\"T4\",\"T5\"), line=0.3)"
+            },
+            {
+              "line": 132,
+              "text": "title(xlab=\"Time\", line=1.9, cex.lab=1.7) # line = distance from axis."
+            },
+            {
+              "line": 135,
+              "text": "title(ylab=\"Distance\", line=1.5, cex.lab=1.6) # line = distance from axis."
+            },
+            {
+              "line": 157,
+              "text": "rm(resu.bray, resu.sor, treat.names, date.names, cap, x, x1, x2, colors)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "5. Fig5-DissimiPair-v2-06Oct2025.R",
+      "file_id": 58520032,
+      "size": 6781,
+      "md5": "b232471c8331b0ce82aabe1213b156f5",
+      "status": "checksum_verified",
+      "sha256": "069942b1fed116d855ff4873f953d964daee15da17a30374a8afab8b7721ca0e",
+      "inventory": [
+        {
+          "name": "5. Fig5-DissimiPair-v2-06Oct2025.R",
+          "size": 6781,
+          "sha256": "069942b1fed116d855ff4873f953d964daee15da17a30374a8afab8b7721ca0e",
+          "mapping_lines": [
+            {
+              "line": 1,
+              "text": "# An experimental test on the effects of dispersal from different habitat "
+            },
+            {
+              "line": 7,
+              "text": "#   João C. Nabout, Fabricio B. Teresa, Maisa C. Vieira, "
+            },
+            {
+              "line": 18,
+              "text": "pdf(\"Fig5-Dissimilarity-pair.pdf\",  width=6, height=9)"
+            },
+            {
+              "line": 24,
+              "text": "#   if(i == 1){ dat <- resu.sor.pair}"
+            },
+            {
+              "line": 25,
+              "text": "#   if(i == 2){ dat <- resu.sim.pair}"
+            },
+            {
+              "line": 26,
+              "text": "#   if(i == 3){ dat <- resu.sne.pair}"
+            },
+            {
+              "line": 30,
+              "text": "     xlab = \"\", ylab = \"\") "
+            },
+            {
+              "line": 33,
+              "text": "   title(ylab=\"Dissimilarity\", line=1.1, cex.lab=1.6) "
+            },
+            {
+              "line": 35,
+              "text": "      axis(side=1, at=seq(1,5,1), labels=c(\"T1\",\"T2\",\"T3\",\"T4\",\"T5\"), tck=0.02,"
+            },
+            {
+              "line": 37,
+              "text": "      title(xlab=\"Time\", line=1.3, cex.lab=1.6)"
+            },
+            {
+              "line": 39,
+              "text": "        axis(side=1, labels=F, tck=0.02)"
+            },
+            {
+              "line": 42,
+              "text": "            text(3.7,  1, \"A0\", cex=1.7, adj=0, col=rgb(red=0,green=0.4,  blue=0,  maxColorValue=1))"
+            },
+            {
+              "line": 44,
+              "text": "            text(3.7,  1, \"        Aa\", cex=1.7, adj=0, col=rgb(red=0,green=0.8,  blue=0,  maxColorValue=1))"
+            },
+            {
+              "line": 45,
+              "text": "            text(4,0.9, \"(within-pair)\", cex=1.5, adj=0.5)}"
+            },
+            {
+              "line": 50,
+              "text": "      if(i==1){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sor\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 51,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sor\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 52,
+              "text": "      if(i==2){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sim\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 53,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sim\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 54,
+              "text": "      if(i==3){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sne\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 55,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sne\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 58,
+              "text": "   if(i==1) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 1:10,c(\"time\", \"sor\")]"
+            },
+            {
+              "line": 59,
+              "text": "              temp <- aggregate(temp$sor, FUN=mean, by=list(temp$time))"
+            },
+            {
+              "line": 62,
+              "text": "   if(i==2) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 1:10,c(\"time\", \"sim\")]"
+            },
+            {
+              "line": 63,
+              "text": "              temp <- aggregate(temp$sim, FUN=mean, by=list(temp$time))"
+            },
+            {
+              "line": 66,
+              "text": "   if(i==3) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 1:10,c(\"time\", \"sne\")]"
+            },
+            {
+              "line": 67,
+              "text": "              temp <- aggregate(temp$sne, FUN=mean, by=list(temp$time))"
+            },
+            {
+              "line": 78,
+              "text": "# coluna direita B0-Ab"
+            },
+            {
+              "line": 81,
+              "text": "     xlab = \"\", ylab = \"\")"
+            },
+            {
+              "line": 83,
+              "text": "     at=seq(0,1,0.2), labels=T)"
+            },
+            {
+              "line": 85,
+              "text": "      axis(side=1, at=seq(1,5,1), labels=c(\"T1\",\"T2\",\"T3\",\"T4\",\"T5\"), tck=0.02,"
+            },
+            {
+              "line": 87,
+              "text": "      title(xlab=\"Time\", line=1.3, cex.lab=1.6)"
+            },
+            {
+              "line": 89,
+              "text": "      axis(side=1, labels=F, tck=0.02)"
+            },
+            {
+              "line": 92,
+              "text": "            text(3.7,  1, \"B0\", cex=1.7, adj=0, col=rgb(red=0,green=0,    blue=1,  maxColorValue=1))"
+            },
+            {
+              "line": 94,
+              "text": "            text(3.7,  1, \"        Ab\", cex=1.7,adj=0, col=rgb(red=0,green=0.8,  blue=0.8,maxColorValue=1))"
+            },
+            {
+              "line": 95,
+              "text": "            text(4,0.9, \"(within-pair)\", cex=1.5, adj=0.5)}"
+            },
+            {
+              "line": 99,
+              "text": "      if(i==1){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sor\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 100,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sor\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 101,
+              "text": "      if(i==2){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sim\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 102,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sim\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 103,
+              "text": "      if(i==3){ points(1:2, resu.sor.pair.df[((k*5)-4):((k*5)-3),\"sne\"], col=\"#00000033\", type=\"b\", lty=2)"
+            },
+            {
+              "line": 104,
+              "text": "                points(2:5, resu.sor.pair.df[((k*5)-3):( k*5),   \"sne\"], col=\"#00000033\", type=\"b\")}"
+            },
+            {
+              "line": 107,
+              "text": "   if(i==1) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 11:20,c(\"time\", \"sor\")]"
+            },
+            {
+              "line": 108,
+              "text": "              temp <- aggregate(temp$sor, FUN=mean, by=list(temp$time))"
+            },
+            {
+              "line": 111,
+              "text": "   if(i==2) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 11:20,c(\"time\", \"sim\")]"
+            },
+            {
+              "line": 112,
+              "text": "              temp <- aggregate(temp$sim, FUN=mean, by=list(temp$time))"
+            },
+            {
+              "line": 115,
+              "text": "   if(i==3) { temp <- resu.sor.pair.df[resu.sor.pair.df[,\"pair\"] %in% 11:20,c(\"time\", \"sne\")]"
+            },
+            {
+              "line": 116,
+              "text": "              temp <- aggregate(temp$sne, FUN=mean, by=list(temp$time))"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dadosbrutosfinais1.1.txt",
+      "file_id": 53186624,
+      "size": 34401,
+      "md5": "e608f24dffd5f28b4f8d6bf125b19668",
+      "status": "checksum_verified",
+      "sha256": "acd9c98361e526b409679cf48f69b2fdb38a132bac560f43715a6c0e4b216bf7",
+      "inventory": [
+        {
+          "name": "Dadosbrutosfinais1.1.txt",
+          "size": 34401,
+          "sha256": "acd9c98361e526b409679cf48f69b2fdb38a132bac560f43715a6c0e4b216bf7",
+          "header_n": 70,
+          "header_first": [
+            "Tanques",
+            "Data",
+            "Tratamento",
+            "Alonelladadayi",
+            "Arcellacostata",
+            "Arcellacrenulata",
+            "Arcellagibbosa",
+            "Arcellamitrata",
+            "Arcellarotundataalta",
+            "Arcellavulgaris",
+            "Arcellavulgarisundulata",
+            "Bosminahagmanni",
+            "Bosminalongirostris",
+            "Bosminatubicen",
+            "Bosminopsisbrandorffi",
+            "Brachionusdolabratusdolabratus",
+            "Brachionusfalcatusfalcatus",
+            "Brachionuspatuluspatulus",
+            "Centropyxisaculeata",
+            "Centropyxisaculeataoblonga",
+            "Centropyxisdiscoides",
+            "Centropyxisecornis",
+            "Centropyxismarsupiformis",
+            "Centropyxisminuta",
+            "Ceriodaphniacornuta"
+          ],
+          "header_last": [
+            "Polyarthravulgaris",
+            "Thermocyclopsminutus",
+            "Trichorcercabidens",
+            "trichorcercaD.tigris",
+            "Lesquereusiaglobulosa",
+            "Daphniagessneri"
+          ],
+          "rows": 200,
+          "row_widths": {
+            "70": 200
+          },
+          "delimiter": "\t"
+        }
+      ]
+    }
+  ],
+  "observed_identity": {
+    "id": 28651985,
+    "version": 1,
+    "doi": "10.6084/m9.figshare.28651985.v1",
+    "title": "Raw data and R Scripts to analyse data and make four figures.",
+    "url_public_html": "https://figshare.com/articles/software/Raw_data_and_R_Scripts_to_analyse_data_and_make_four_figures_/28651985/1",
+    "published_date": "2025-10-06T15:34:13Z"
+  },
+  "observed_file_names": [
+    "1. Analyses-v7-06Oct2025.R",
+    "2. Fig2-Sobs-v5-06Oct2025.R",
+    "3. Fig3-Nmds-v5-06Oct2025.R",
+    "4. Fig4-Dissimi-v4-06Oct2025.R",
+    "5. Fig5-DissimiPair-v2-06Oct2025.R",
+    "Dadosbrutosfinais1.1.txt"
+  ],
+  "title": "Raw data and R Scripts to analyse data and make four figures.",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "description": "<p dir=\"ltr\">The first R script compute all analyses used in the manuscript. The remaining four scripts draw four figures. The raw biological data is also available.</p>",
+  "n_checksum_verified": 6,
+  "run": 45714204812,
+  "job_id": 139555979767,
+  "artifact_id": 15069435976,
+  "artifact_digest": "sha256:0fd735ee4b9874e406af142624f3ef19e53f36b9ac1f89f894fb82a78d8bb022",
+  "prior_gate_runs": [
+    45714063371,
+    45714132999
+  ],
+  "prior_gate_failures": [
+    "Title heuristic mismatched generic dataset title; exact DOI valid",
+    "API snake_case download_url not camelCase; no bytes acquired"
+  ]
+}
