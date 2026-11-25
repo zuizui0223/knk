@@ -1,0 +1,41 @@
+name: AHIF Mancuso join audit
+on:
+  push:
+    branches: [analysis/ahif-independent-microbial-20261125]
+    paths: ['.github/workflows/knk-ahif-mancuso-join.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p "$RUNNER_TEMP/mancuso"
+          for n in 1 2; do
+            curl -fL --max-time 60 "https://cdn.elifesciences.org/articles/67175/elife-67175-fig3-data${n}-v2.csv" -o "$RUNNER_TEMP/mancuso/data${n}.csv"
+          done
+          cd "$RUNNER_TEMP/mancuso"
+          echo 'a3f9989e3f3ef7d090b65d3e78d9e89fd208e4dcc40daaeb484d9b0ae80500e6  data1.csv' | sha256sum -c -
+          echo '6347ea67083f25634d00c08da599fe89e3c67d73f656908ebde54d2087c7198b  data2.csv' | sha256sum -c -
+      - run: |
+          python - <<'PY'
+          import csv,os,json
+          from pathlib import Path
+          from collections import Counter,defaultdict
+          root=Path(os.environ["RUNNER_TEMP"])/"mancuso"
+          a,b=[list(csv.DictReader((root/f"data{i}.csv").open(encoding="utf-8-sig",newline=""))) for i in [1,2]]
+          akey=Counter(r["SampleID"] for r in a);bkey=Counter(r["index"] for r in b)
+          print("KEYS",json.dumps(dict(a_unique=len(akey),b_unique=len(bkey),a_in_b=len(akey.keys()&bkey.keys()),a_missing=len(akey.keys()-bkey.keys()),b_missing=len(bkey.keys()-akey.keys()),a_dups=sum(v-1 for v in akey.values()),b_dups=sum(v-1 for v in bkey.values()))))
+          for name,rows in [("a",a),("b",b)]:
+              for col in ["Experiment","Type","Technical Issues","SequencingType","PrepPlate"]:
+                  print("LABEL",name,col,json.dumps(Counter(r[col] for r in rows)))
+              gr=defaultdict(lambda:defaultdict(set))
+              for r in rows:
+                  if float(r["Day"]) not in range(1,7):continue
+                  gr[(r["Experiment"],r["Dilution"],r["Frequency"],r["Type"])][r["Vial"]].add(int(float(r["Day"])))
+              print("ROSTER",name,json.dumps([{"group":k,"n_vials":len(v),"complete_days_1_6":sum(t==set(range(1,7)) for t in v.values())} for k,v in sorted(gr.items())]))
+          print("JOIN_METADATA_MISMATCH",json.dumps({col:sum(r[col]!=d[col] for r in a for d in b if r["SampleID"]==d["index"]) for col in ["Vial","Dilution","Frequency","Replicate","Experiment","Type","Technical Issues","SequencingType"]}))
+          PY
