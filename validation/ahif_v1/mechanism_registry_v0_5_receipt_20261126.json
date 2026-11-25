@@ -1,0 +1,90 @@
+{
+  "status": "VALIDATED_DESCRIPTIVE_REGISTRY_NOT_META",
+  "version": "0.5.0",
+  "counts": {
+    "studies": 7,
+    "panels": 38,
+    "study_effects": 7,
+    "variable_dictionary": 13,
+    "candidates": 3,
+    "replication_scale_effects": 53,
+    "mass_direction_transfer_effects": 25,
+    "external_validation_sources": 1,
+    "external_factorial_effects": 6
+  },
+  "effect_directions": {
+    "positive": 4,
+    "negative": 3
+  },
+  "meta_eligible": 0,
+  "by_measurement_lane": [
+    [
+      "absolute_biomass",
+      1
+    ],
+    [
+      "absolute_biomass_conditional",
+      1
+    ],
+    [
+      "absolute_biovolume",
+      1
+    ],
+    [
+      "relative_read_composition",
+      3
+    ],
+    [
+      "unclosed_pin_hits",
+      1
+    ]
+  ],
+  "mechanism_unmeasured": [
+    [
+      "direct_interaction"
+    ],
+    [
+      "functional_diversity"
+    ],
+    [
+      "generation_time"
+    ],
+    [
+      "immigration_rate"
+    ]
+  ],
+  "matched_2plus2": {
+    "sources": 7,
+    "G_positive": 4,
+    "H_positive": 7,
+    "dependent_cells": 72192,
+    "source_run": 45589332743,
+    "meta_eligible": 0,
+    "note": "Descriptive dependent source-size effects; Saine strata not prior site panels"
+  },
+  "equal_one_mass_direction": {
+    "sources": 6,
+    "panels": 33,
+    "dependent_cells": 67072,
+    "mass_positive": 6,
+    "mass_exceeds_sign": 6,
+    "total_positive": 6,
+    "hybrid_beats_both": 0,
+    "meta_eligible": 0,
+    "source_run": 45659798054,
+    "saine": "STOP_ONLY_TWO_POST_INTRODUCTION_DATES"
+  },
+  "external_villarreal": {
+    "source_run": 45714536073,
+    "primary_panels": 2,
+    "primary_2plus2_cells": 1024,
+    "mass_positive": true,
+    "mass_exceeds_sign": true,
+    "hybrid_beats_both": false,
+    "negative_same_source_mass_both_sizes": true,
+    "meta_eligible": 0
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45714741848",
+  "artifact_id": 15068503264,
+  "artifact_digest": "sha256:e8361acb282a5ea46ff46ed62871281a645c4d12cccf05ef64733d7dd45c87f3"
+}
