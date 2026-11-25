@@ -1,0 +1,33 @@
+name: AHIF Portal stable history direction
+on:
+  push:
+    branches: [analysis/ahif-portal-exclosure-20261125]
+    paths:
+      - 'benchmarks/score_ahif_portal_static_direction.py'
+      - '.github/workflows/knk-ahif-portal-static-direction.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl pandas
+      - name: Acquire original public Portal files at fixed commit
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/portal/Rodents" "$RUNNER_TEMP/portal/SiteandMethods"
+          for f in Rodents/Portal_rodent.csv Rodents/Portal_rodent_trapping.csv Rodents/Portal_rodent_species.csv Rodents/moon_dates.csv Rodents/Portal_rodent_datanotes.csv SiteandMethods/Portal_plots.csv SiteandMethods/Portal_plot_treatments.csv SiteandMethods/Methods.md; do
+            curl --fail --location --max-time 90 -o "$RUNNER_TEMP/portal/$f" "https://raw.githubusercontent.com/weecology/PortalData/a4dc266c0068d26370cd88bec5272a02623d5470/$f"
+          done
+      - run: python -m benchmarks.score_ahif_portal_static_direction --root "$RUNNER_TEMP/portal" --out "$RUNNER_TEMP/portal-derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portal-static-direction-derived-only
+          path: ${{ runner.temp }}/portal-derived/result.json
+          retention-days: 30
