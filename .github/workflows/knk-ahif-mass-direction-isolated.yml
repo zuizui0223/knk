@@ -1,0 +1,95 @@
+name: AHIF isolated mass-direction sources
+on:
+  push:
+    branches: [analysis/ahif-mass-direction-transfer-20261125]
+    paths:
+      - 'benchmarks/run_ahif_mass_direction_source.py'
+      - '.github/workflows/knk-ahif-mass-direction-isolated.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [pond, kansas, poem, field, mancuso, hayashi]
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+      SOURCE: ${{ matrix.source }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl
+      - name: Acquire POEM archive
+        if: matrix.source == 'poem'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/poem"
+          curl --fail --location --retry 2 --retry-delay 5 --max-time 180 "https://zenodo.org/records/10119982/files/POEMexperiment/Data_POEM_Paper1_Alonso-Crespo_et_al_2024-v1.0.zip?download=1" -o "$RUNNER_TEMP/poem/source.zip"
+          echo "3faa5f7d1619a3beae5941ba763b7a26  $RUNNER_TEMP/poem/source.zip" | md5sum -c -
+      - name: Acquire field source files, one transient retry only
+        if: matrix.source == 'field'
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request,urllib.error,time
+          from pathlib import Path
+          from urllib.parse import quote
+          from benchmarks.probe_ahif_vansteijn2026_field import MD5
+          root=Path(os.environ["RUNNER_TEMP"])/"field"
+          root.mkdir(exist_ok=True)
+          for name,md5 in MD5.items():
+              url="https://zenodo.org/records/15363824/files/"+quote(name)+"?download=1"
+              for attempt in range(2):
+                  try:
+                      req=urllib.request.Request(url,headers={"User-Agent":"AHIF source audit","Accept":"*/*"})
+                      with urllib.request.urlopen(req,timeout=90) as res:
+                          b=res.read(2_000_001)
+                      break
+                  except urllib.error.HTTPError as e:
+                      if attempt==1 or e.code not in (502,503,504):raise
+                      print(name,"transient",e.code,flush=True);time.sleep(5)
+              assert len(b)<=2_000_000 and hashlib.md5(b).hexdigest()==md5,name
+              (root/name).write_bytes(b)
+              print(name,"verified",flush=True)
+          PY
+      - name: Acquire versioned microbial source
+        if: matrix.source == 'mancuso'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/mancuso"
+          for n in 1 2; do
+            curl --fail --location --max-time 90 "https://cdn.elifesciences.org/articles/67175/elife-67175-fig3-data${n}-v2.csv" -o "$RUNNER_TEMP/mancuso/data${n}.csv"
+          done
+      - uses: r-lib/actions/setup-r@v2
+        if: matrix.source == 'hayashi'
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+      - name: Acquire pinned author Hayashi tables
+        if: matrix.source == 'hayashi'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/hayashi"
+          cd "$RUNNER_TEMP/hayashi"
+          base=https://raw.githubusercontent.com/Ibuki-Hayashi/Founding-Community-Size-Governs-Divergent-Ecological-Trajectories/a37af8c186a9438edccf5f729a0fdd48eed4469f
+          curl -fL --max-time 60 "$base/Data/expdata_rep.csv" -o expdata_rep.csv
+          curl -fL --max-time 60 "$base/Output/List_seqtab_3000.rds" -o List_seqtab_3000.rds
+          curl -fL --max-time 60 "$base/Output/List_data_rep.rds" -o List_data_rep.rds
+          test "$(git hash-object expdata_rep.csv)" = 7e2ea1e28b48e6c52f87521090cd17fc34423e01
+          test "$(git hash-object List_seqtab_3000.rds)" = d9d48453cdab64ec7833aba63e303552bf21534a
+          test "$(git hash-object List_data_rep.rds)" = 2bee26705f666b0cffb124fb3dcd315ba22d31a4
+      - name: Export author-verified complete wells
+        if: matrix.source == 'hayashi'
+        run: Rscript benchmarks/export_ahif_hayashi2026.R "$RUNNER_TEMP/hayashi" "$RUNNER_TEMP/hayashi/ephemeral"
+      - name: Score frozen source and replay archive
+        run: python -m benchmarks.run_ahif_mass_direction_source --source "$SOURCE" --hayashi "$RUNNER_TEMP/hayashi/ephemeral" --mancuso "$RUNNER_TEMP/mancuso" --root "$RUNNER_TEMP/kansas" --poem "$RUNNER_TEMP/poem/source.zip" --field "$RUNNER_TEMP/field" --out "$RUNNER_TEMP/derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-mass-direction-${{ matrix.source }}-derived
+          path: ${{ runner.temp }}/derived/result.json
+          retention-days: 30
