@@ -1,0 +1,12 @@
+# Goldman source abundance versus nominal dose — verified diagnostic
+
+Registered after primary outcome, before new diagnostic, 3587fd3c74c4a4b072ac3b11562bbf89fc37818f. Successful run https://github.com/zuizui0223/knk/actions/runs/45718804466, job 139571593953, commit 5249b62acaaa0566f08c73d91aad5f087a223dfa, artifact 15071242389 sha256:d183c7781cbe23112f8b8dcbbbb194f4e114d406d67ccc842ff5ec1b86a18d57. Exact prior source audit, risk rows, weights, first four predictors and all per-pair prior losses reproduced. All eight held-parent pairs retained in each condition.
+
+| Lane/threshold | Identity loss | + unweighted partner abundance loss | + nominal dose loss | Abundance gain pp | Dose after abundance pp | Dose-weighted instead of unweighted abundance at same dimension pp |
+|---|---:|---:|---:|---:|---:|---:|
+| p15 >=.001 | .096420 | .094059 | .093882 | .236068 | .017714 | -.012803 |
+| p15 >0 | .075184 | .072086 | .071994 | .309767 | .009251 | -.019572 |
+| p3 >=.001 | .088718 | .086865 | .086379 | .185241 | .048584 | .037901 |
+| p3 >0 | .080321 | .076500 | .076194 | .382128 | .030604 | .012408 |
+
+Positive gain means reduced Brier loss. Unweighted abundance addition positive in all 8 held pairs in all 4 configurations; nominal dose after abundance positive in 7/8 p15 and 6/8 p3 pairs but much smaller mean gain. At equal model dimension, abundance multiplied by dose is not consistently better than abundance alone. Including nominal dose separately, unweighted abundance has lower mean loss than weighted abundance in all four configurations (.01854/.01325/.01164/.00634 pp gains in the respective order). This is a fixed post-score model comparison, not causal effect separation or an independent prospective test. No claim that dose is biologically irrelevant: original paper demonstrates dose dependence under different endpoints, the source proxy is not actual transferred stock, nominal volume is not actual taxon cell dose, and the dose model has fixed form. Source identity and abundance predictive increments are conditional on risk sets, candidate pool, marker detection, and this design. Household/source folds coincide. p15 and p3 are distinct proxy lanes, not independent studies. No formal pooling, independent taxon/ratio inference, clinical conclusion, or temporal response result. Summary validation/ahif_v1/goldman2025_abundance_dose_summary_20261126.json, four dependent diagnostic rows in database/ahif_mechanism_v0/goldman_abundance_dose_diagnostic_20261126.csv.
