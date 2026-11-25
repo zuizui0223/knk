@@ -1,0 +1,33 @@
+name: AHIF Mancuso fixed read depth
+on:
+  push:
+    branches: [analysis/ahif-independent-microbial-20261125]
+    paths:
+      - '.github/workflows/knk-ahif-mancuso-depth.yml'
+      - 'benchmarks/score_ahif_mancuso_depth.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl
+      - name: Fetch exact published source supplements
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/mancuso"
+          for n in 1 2; do
+            curl --fail --location --max-time 60 "https://cdn.elifesciences.org/articles/67175/elife-67175-fig3-data${n}-v2.csv" -o "$RUNNER_TEMP/mancuso/data${n}.csv"
+          done
+      - run: python -m benchmarks.score_ahif_mancuso_depth --root "$RUNNER_TEMP/mancuso" --out "$RUNNER_TEMP/mancuso-derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mancuso-fixed-depth-derived-only
+          path: ${{ runner.temp }}/mancuso-derived/result.json
+          retention-days: 30
