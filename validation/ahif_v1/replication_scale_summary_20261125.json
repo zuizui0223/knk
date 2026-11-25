@@ -1,0 +1,1889 @@
+{
+  "status": "MATCHED_REPLICATION_DESCRIPTIVE_NOT_META",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45589332743",
+  "source_commit": "86a75c6a71f13cea51cd34e8a7f6cbf689130998",
+  "artifact_id": 15009539604,
+  "artifact_digest": "sha256:ad47b487ae798b0b98d189fd7329574228824acae199bf4d9f629ceb4b541bc6",
+  "seed": 2026112508,
+  "n_splits": 256,
+  "results": {
+    "pond": {
+      "capacity": 4,
+      "n_panels": 4,
+      "n_group_units": 20,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": 0.03524857132844926,
+            "H": 0.0942956619242593,
+            "same": 0.5494571161591564,
+            "allocation_tv": 0.5568031580785404,
+            "concurrent_G": 0.047393949611396216,
+            "concurrent_H": 0.10676206225760362,
+            "concurrent_minus_lag_G": 0.012145378282946925,
+            "fixed_mass_concurrent_advantage": 0.0011098468649193586,
+            "lag_signed_tv": 0.6841059171150109,
+            "concurrent_signed_tv": 0.65714805955767
+          },
+          "all_defined": {
+            "G": 0.03524857132844926,
+            "H": 0.0942956619242593,
+            "same": 0.5494571161591564,
+            "allocation_tv": 0.5568031580785404,
+            "concurrent_G": 0.047393949611396216,
+            "concurrent_H": 0.10676206225760362,
+            "concurrent_minus_lag_G": 0.012145378282946925,
+            "fixed_mass_concurrent_advantage": 0.0011098468649193586,
+            "lag_signed_tv": 0.6841059171150109,
+            "concurrent_signed_tv": 0.65714805955767
+          },
+          "n_common": 26624,
+          "n_total": 26624,
+          "n_defined": 26624
+        },
+        "1+2": {
+          "common": {
+            "G": 0.04999891699254778,
+            "H": 0.12548697815731227,
+            "same": 0.5788551155744841,
+            "allocation_tv": 0.5068705351106066,
+            "concurrent_G": 0.06017567528746639,
+            "concurrent_H": 0.1381247449141171,
+            "concurrent_minus_lag_G": 0.010176758294918587,
+            "fixed_mass_concurrent_advantage": -0.00018736433292883812,
+            "lag_signed_tv": 0.627948289397991,
+            "concurrent_signed_tv": 0.6001461617796797
+          },
+          "all_defined": {
+            "G": 0.04999891699254778,
+            "H": 0.12548697815731227,
+            "same": 0.5788551155744841,
+            "allocation_tv": 0.5068705351106066,
+            "concurrent_G": 0.06017567528746639,
+            "concurrent_H": 0.1381247449141171,
+            "concurrent_minus_lag_G": 0.010176758294918587,
+            "fixed_mass_concurrent_advantage": -0.00018736433292883812,
+            "lag_signed_tv": 0.627948289397991,
+            "concurrent_signed_tv": 0.6001461617796797
+          },
+          "n_common": 26624,
+          "n_total": 26624,
+          "n_defined": 26624
+        },
+        "2+1": {
+          "common": {
+            "G": 0.06923102042073673,
+            "H": 0.12511215846606616,
+            "same": 0.641913936329315,
+            "allocation_tv": 0.502042200812491,
+            "concurrent_G": 0.08269503680455384,
+            "concurrent_H": 0.1381247449141171,
+            "concurrent_minus_lag_G": 0.013464016383817107,
+            "fixed_mass_concurrent_advantage": 0.0041858627679062415,
+            "lag_signed_tv": 0.6259089419401793,
+            "concurrent_signed_tv": 0.6001461617796797
+          },
+          "all_defined": {
+            "G": 0.06923102042073673,
+            "H": 0.12511215846606616,
+            "same": 0.641913936329315,
+            "allocation_tv": 0.502042200812491,
+            "concurrent_G": 0.08269503680455384,
+            "concurrent_H": 0.1381247449141171,
+            "concurrent_minus_lag_G": 0.013464016383817107,
+            "fixed_mass_concurrent_advantage": 0.0041858627679062415,
+            "lag_signed_tv": 0.6259089419401793,
+            "concurrent_signed_tv": 0.6001461617796797
+          },
+          "n_common": 26624,
+          "n_total": 26624,
+          "n_defined": 26624
+        },
+        "2+2": {
+          "common": {
+            "G": 0.08540793011577075,
+            "H": 0.16055302959581974,
+            "same": 0.6784378795237145,
+            "allocation_tv": 0.44396544676142163,
+            "concurrent_G": 0.09496477323640537,
+            "concurrent_H": 0.1728862593151435,
+            "concurrent_minus_lag_G": 0.00955684312063461,
+            "fixed_mass_concurrent_advantage": 0.004201488793590797,
+            "lag_signed_tv": 0.561429693784891,
+            "concurrent_signed_tv": 0.5375598544811975
+          },
+          "all_defined": {
+            "G": 0.08540793011577075,
+            "H": 0.16055302959581974,
+            "same": 0.6784378795237145,
+            "allocation_tv": 0.44396544676142163,
+            "concurrent_G": 0.09496477323640537,
+            "concurrent_H": 0.1728862593151435,
+            "concurrent_minus_lag_G": 0.00955684312063461,
+            "fixed_mass_concurrent_advantage": 0.004201488793590797,
+            "lag_signed_tv": 0.561429693784891,
+            "concurrent_signed_tv": 0.5375598544811975
+          },
+          "n_common": 26624,
+          "n_total": 26624,
+          "n_defined": 26624
+        }
+      }
+    },
+    "kansas": {
+      "capacity": 4,
+      "n_panels": 1,
+      "n_group_units": 4,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": -0.03288014707377991,
+            "H": 0.0422837277730195,
+            "same": 0.5090782148471431,
+            "allocation_tv": 0.5680827265939512,
+            "concurrent_G": -0.033334150687960855,
+            "concurrent_H": 0.04407359198351975,
+            "concurrent_minus_lag_G": -0.0004540036141810061,
+            "fixed_mass_concurrent_advantage": -0.00564245999201056,
+            "lag_signed_tv": 0.7417576355239562,
+            "concurrent_signed_tv": 0.7133489050489672
+          },
+          "all_defined": {
+            "G": -0.03288014707377991,
+            "H": 0.0422837277730195,
+            "same": 0.5090782148471431,
+            "allocation_tv": 0.5680827265939512,
+            "concurrent_G": -0.033334150687960855,
+            "concurrent_H": 0.04407359198351975,
+            "concurrent_minus_lag_G": -0.0004540036141810061,
+            "fixed_mass_concurrent_advantage": -0.00564245999201056,
+            "lag_signed_tv": 0.7417576355239562,
+            "concurrent_signed_tv": 0.7133489050489672
+          },
+          "n_common": 6656,
+          "n_total": 6656,
+          "n_defined": 6656
+        },
+        "1+2": {
+          "common": {
+            "G": -0.045706593977682695,
+            "H": 0.03821327673491101,
+            "same": 0.5017188419810871,
+            "allocation_tv": 0.5404534574718961,
+            "concurrent_G": -0.03832308842559279,
+            "concurrent_H": 0.048421107266145194,
+            "concurrent_minus_lag_G": 0.007383505552089984,
+            "fixed_mass_concurrent_advantage": 0.000028673298337810278,
+            "lag_signed_tv": 0.7320134520010367,
+            "concurrent_signed_tv": 0.6998056769776007
+          },
+          "all_defined": {
+            "G": -0.045706593977682695,
+            "H": 0.03821327673491101,
+            "same": 0.5017188419810871,
+            "allocation_tv": 0.5404534574718961,
+            "concurrent_G": -0.03832308842559279,
+            "concurrent_H": 0.048421107266145194,
+            "concurrent_minus_lag_G": 0.007383505552089984,
+            "fixed_mass_concurrent_advantage": 0.000028673298337810278,
+            "lag_signed_tv": 0.7320134520010367,
+            "concurrent_signed_tv": 0.6998056769776007
+          },
+          "n_common": 6656,
+          "n_total": 6656,
+          "n_defined": 6656
+        },
+        "2+1": {
+          "common": {
+            "G": -0.02328603477195416,
+            "H": 0.04645840142320014,
+            "same": 0.5574013671032753,
+            "allocation_tv": 0.5363038871527951,
+            "concurrent_G": -0.020902527663960207,
+            "concurrent_H": 0.048421107266145194,
+            "concurrent_minus_lag_G": 0.0023835071079940113,
+            "fixed_mass_concurrent_advantage": -0.013293697918208234,
+            "lag_signed_tv": 0.7216935421531967,
+            "concurrent_signed_tv": 0.6998056769776007
+          },
+          "all_defined": {
+            "G": -0.02328603477195416,
+            "H": 0.04645840142320014,
+            "same": 0.5574013671032753,
+            "allocation_tv": 0.5363038871527951,
+            "concurrent_G": -0.020902527663960207,
+            "concurrent_H": 0.048421107266145194,
+            "concurrent_minus_lag_G": 0.0023835071079940113,
+            "fixed_mass_concurrent_advantage": -0.013293697918208234,
+            "lag_signed_tv": 0.7216935421531967,
+            "concurrent_signed_tv": 0.6998056769776007
+          },
+          "n_common": 6656,
+          "n_total": 6656,
+          "n_defined": 6656
+        },
+        "2+2": {
+          "common": {
+            "G": -0.030313971040964914,
+            "H": 0.04106572090303847,
+            "same": 0.5507084844870646,
+            "allocation_tv": 0.5040532386864085,
+            "concurrent_G": -0.030844398509890084,
+            "concurrent_H": 0.045262627801099194,
+            "concurrent_minus_lag_G": -0.0005304274689250417,
+            "fixed_mass_concurrent_advantage": -0.012319976230091421,
+            "lag_signed_tv": 0.7109608984401654,
+            "concurrent_signed_tv": 0.6844281221134512
+          },
+          "all_defined": {
+            "G": -0.030313971040964914,
+            "H": 0.04106572090303847,
+            "same": 0.5507084844870646,
+            "allocation_tv": 0.5040532386864085,
+            "concurrent_G": -0.030844398509890084,
+            "concurrent_H": 0.045262627801099194,
+            "concurrent_minus_lag_G": -0.0005304274689250417,
+            "fixed_mass_concurrent_advantage": -0.012319976230091421,
+            "lag_signed_tv": 0.7109608984401654,
+            "concurrent_signed_tv": 0.6844281221134512
+          },
+          "n_common": 6656,
+          "n_total": 6656,
+          "n_defined": 6656
+        }
+      }
+    },
+    "poem": {
+      "capacity": 5,
+      "n_panels": 6,
+      "n_group_units": 40,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": -0.06791468641195024,
+            "H": -0.0033025482541120172,
+            "same": 0.4252694068188793,
+            "allocation_tv": 0.6764353501029675,
+            "concurrent_G": -0.04459578418137045,
+            "concurrent_H": 0.03380791049394568,
+            "concurrent_minus_lag_G": 0.023318902230579776,
+            "fixed_mass_concurrent_advantage": 0.03831155276002465,
+            "lag_signed_tv": 0.8415202233055958,
+            "concurrent_signed_tv": 0.7311792083750351
+          },
+          "all_defined": {
+            "G": -0.06791468641195024,
+            "H": -0.0033025482541120172,
+            "same": 0.4252694068188793,
+            "allocation_tv": 0.6764353501029675,
+            "concurrent_G": -0.04459578418137045,
+            "concurrent_H": 0.03380791049394568,
+            "concurrent_minus_lag_G": 0.023318902230579776,
+            "fixed_mass_concurrent_advantage": 0.03831155276002465,
+            "lag_signed_tv": 0.8415202233055958,
+            "concurrent_signed_tv": 0.7311792083750351
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        },
+        "1+2": {
+          "common": {
+            "G": -0.06839849789788198,
+            "H": 0.0019254906891054307,
+            "same": 0.42313753476092714,
+            "allocation_tv": 0.6660109059332237,
+            "concurrent_G": -0.042637629602433336,
+            "concurrent_H": 0.04148427174754908,
+            "concurrent_minus_lag_G": 0.025760868295448606,
+            "fixed_mass_concurrent_advantage": 0.0425893420311677,
+            "lag_signed_tv": 0.8310799622775061,
+            "concurrent_signed_tv": 0.7139330071386092
+          },
+          "all_defined": {
+            "G": -0.06839849789788198,
+            "H": 0.0019254906891054307,
+            "same": 0.42313753476092714,
+            "allocation_tv": 0.6660109059332237,
+            "concurrent_G": -0.042637629602433336,
+            "concurrent_H": 0.04148427174754908,
+            "concurrent_minus_lag_G": 0.025760868295448606,
+            "fixed_mass_concurrent_advantage": 0.0425893420311677,
+            "lag_signed_tv": 0.8310799622775061,
+            "concurrent_signed_tv": 0.7139330071386092
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        },
+        "2+1": {
+          "common": {
+            "G": -0.0679034816472608,
+            "H": -0.005179860494731506,
+            "same": 0.494590174545219,
+            "allocation_tv": 0.6719864720066692,
+            "concurrent_G": -0.037187655963168774,
+            "concurrent_H": 0.04148427174754909,
+            "concurrent_minus_lag_G": 0.030715825684092018,
+            "fixed_mass_concurrent_advantage": 0.037075438453142845,
+            "lag_signed_tv": 0.8411730964980658,
+            "concurrent_signed_tv": 0.7139330071386092
+          },
+          "all_defined": {
+            "G": -0.0679034816472608,
+            "H": -0.005179860494731506,
+            "same": 0.494590174545219,
+            "allocation_tv": 0.6719864720066692,
+            "concurrent_G": -0.037187655963168774,
+            "concurrent_H": 0.04148427174754909,
+            "concurrent_minus_lag_G": 0.030715825684092018,
+            "fixed_mass_concurrent_advantage": 0.037075438453142845,
+            "lag_signed_tv": 0.8411730964980658,
+            "concurrent_signed_tv": 0.7139330071386092
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        },
+        "2+2": {
+          "common": {
+            "G": -0.06443599174025344,
+            "H": 0.0035514770986595687,
+            "same": 0.5031605955468835,
+            "allocation_tv": 0.6605005696477154,
+            "concurrent_G": -0.034936891669843075,
+            "concurrent_H": 0.0505542507453103,
+            "concurrent_minus_lag_G": 0.02949910007041036,
+            "fixed_mass_concurrent_advantage": 0.038259407251609305,
+            "lag_signed_tv": 0.8266988077251974,
+            "concurrent_signed_tv": 0.695353394335564
+          },
+          "all_defined": {
+            "G": -0.06443599174025344,
+            "H": 0.0035514770986595687,
+            "same": 0.5031605955468835,
+            "allocation_tv": 0.6605005696477154,
+            "concurrent_G": -0.034936891669843075,
+            "concurrent_H": 0.0505542507453103,
+            "concurrent_minus_lag_G": 0.02949910007041036,
+            "fixed_mass_concurrent_advantage": 0.038259407251609305,
+            "lag_signed_tv": 0.8266988077251974,
+            "concurrent_signed_tv": 0.695353394335564
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        },
+        "2+3": {
+          "common": {
+            "G": -0.06846012717629406,
+            "H": 0.004044725241291785,
+            "same": 0.5013891557127131,
+            "allocation_tv": 0.6578372135219193,
+            "concurrent_G": -0.02985576683921964,
+            "concurrent_H": 0.05543334816311744,
+            "concurrent_minus_lag_G": 0.038604360337074435,
+            "fixed_mass_concurrent_advantage": 0.04125445314317599,
+            "lag_signed_tv": 0.8248738815196671,
+            "concurrent_signed_tv": 0.6878152111556829
+          },
+          "all_defined": {
+            "G": -0.06846012717629406,
+            "H": 0.004044725241291785,
+            "same": 0.5013891557127131,
+            "allocation_tv": 0.6578372135219193,
+            "concurrent_G": -0.02985576683921964,
+            "concurrent_H": 0.05543334816311744,
+            "concurrent_minus_lag_G": 0.038604360337074435,
+            "fixed_mass_concurrent_advantage": 0.04125445314317599,
+            "lag_signed_tv": 0.8248738815196671,
+            "concurrent_signed_tv": 0.6878152111556829
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        },
+        "3+2": {
+          "common": {
+            "G": -0.06873732065083991,
+            "H": -0.0019167733508478682,
+            "same": 0.5210419340978935,
+            "allocation_tv": 0.6636950514766782,
+            "concurrent_G": -0.030355670956899422,
+            "concurrent_H": 0.05543334816311744,
+            "concurrent_minus_lag_G": 0.038381649693940485,
+            "fixed_mass_concurrent_advantage": 0.04389409333219358,
+            "lag_signed_tv": 0.8337642990891875,
+            "concurrent_signed_tv": 0.6878152111556829
+          },
+          "all_defined": {
+            "G": -0.06873732065083991,
+            "H": -0.0019167733508478682,
+            "same": 0.5210419340978935,
+            "allocation_tv": 0.6636950514766782,
+            "concurrent_G": -0.030355670956899422,
+            "concurrent_H": 0.05543334816311744,
+            "concurrent_minus_lag_G": 0.038381649693940485,
+            "fixed_mass_concurrent_advantage": 0.04389409333219358,
+            "lag_signed_tv": 0.8337642990891875,
+            "concurrent_signed_tv": 0.6878152111556829
+          },
+          "n_common": 3072,
+          "n_total": 3072,
+          "n_defined": 3072
+        }
+      }
+    },
+    "field": {
+      "capacity": 5,
+      "n_panels": 8,
+      "n_group_units": 10,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": 0.14940881982150628,
+            "H": 0.217852822200143,
+            "same": 0.7381647992124304,
+            "allocation_tv": 0.398933165587261,
+            "concurrent_G": 0.1667067218008611,
+            "concurrent_H": 0.24492298976276594,
+            "concurrent_minus_lag_G": 0.017297901979354838,
+            "fixed_mass_concurrent_advantage": -0.004186160902425193,
+            "lag_signed_tv": 0.48161376059348754,
+            "concurrent_signed_tv": 0.41946312697257226
+          },
+          "all_defined": {
+            "G": 0.14940881982150628,
+            "H": 0.217852822200143,
+            "same": 0.7381647992124304,
+            "allocation_tv": 0.398933165587261,
+            "concurrent_G": 0.1667067218008611,
+            "concurrent_H": 0.24492298976276594,
+            "concurrent_minus_lag_G": 0.017297901979354838,
+            "fixed_mass_concurrent_advantage": -0.004186160902425193,
+            "lag_signed_tv": 0.48161376059348754,
+            "concurrent_signed_tv": 0.41946312697257226
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        },
+        "1+2": {
+          "common": {
+            "G": 0.17228417482696967,
+            "H": 0.23989193030777936,
+            "same": 0.7683697084272031,
+            "allocation_tv": 0.3826253654658386,
+            "concurrent_G": 0.19115741763997157,
+            "concurrent_H": 0.26888312541022763,
+            "concurrent_minus_lag_G": 0.018873242813002032,
+            "fixed_mass_concurrent_advantage": -0.006458327064685207,
+            "lag_signed_tv": 0.4514207524251398,
+            "concurrent_signed_tv": 0.38427257107391777
+          },
+          "all_defined": {
+            "G": 0.17228417482696967,
+            "H": 0.23989193030777936,
+            "same": 0.7683697084272031,
+            "allocation_tv": 0.3826253654658386,
+            "concurrent_G": 0.19115741763997157,
+            "concurrent_H": 0.26888312541022763,
+            "concurrent_minus_lag_G": 0.018873242813002032,
+            "fixed_mass_concurrent_advantage": -0.006458327064685207,
+            "lag_signed_tv": 0.4514207524251398,
+            "concurrent_signed_tv": 0.38427257107391777
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        },
+        "2+1": {
+          "common": {
+            "G": 0.17153367491233462,
+            "H": 0.23890647412229363,
+            "same": 0.788596154416112,
+            "allocation_tv": 0.37901463717309136,
+            "concurrent_G": 0.19155880951836685,
+            "concurrent_H": 0.2688831254102276,
+            "concurrent_minus_lag_G": 0.020025134606032155,
+            "fixed_mass_concurrent_advantage": -0.004500814789312933,
+            "lag_signed_tv": 0.4506008444642521,
+            "concurrent_signed_tv": 0.38427257107391777
+          },
+          "all_defined": {
+            "G": 0.17153367491233462,
+            "H": 0.23890647412229363,
+            "same": 0.788596154416112,
+            "allocation_tv": 0.37901463717309136,
+            "concurrent_G": 0.19155880951836685,
+            "concurrent_H": 0.2688831254102276,
+            "concurrent_minus_lag_G": 0.020025134606032155,
+            "fixed_mass_concurrent_advantage": -0.004500814789312933,
+            "lag_signed_tv": 0.4506008444642521,
+            "concurrent_signed_tv": 0.38427257107391777
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        },
+        "2+2": {
+          "common": {
+            "G": 0.19856271718038576,
+            "H": 0.26497345914611165,
+            "same": 0.8213338348893129,
+            "allocation_tv": 0.355423491063664,
+            "concurrent_G": 0.22511847503143975,
+            "concurrent_H": 0.298231054950071,
+            "concurrent_minus_lag_G": 0.026555757851053727,
+            "fixed_mass_concurrent_advantage": -0.006829011414628192,
+            "lag_signed_tv": 0.4127382863857204,
+            "concurrent_signed_tv": 0.3364941666740498
+          },
+          "all_defined": {
+            "G": 0.19856271718038576,
+            "H": 0.26497345914611165,
+            "same": 0.8213338348893129,
+            "allocation_tv": 0.355423491063664,
+            "concurrent_G": 0.22511847503143975,
+            "concurrent_H": 0.298231054950071,
+            "concurrent_minus_lag_G": 0.026555757851053727,
+            "fixed_mass_concurrent_advantage": -0.006829011414628192,
+            "lag_signed_tv": 0.4127382863857204,
+            "concurrent_signed_tv": 0.3364941666740498
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        },
+        "2+3": {
+          "common": {
+            "G": 0.21192082031788892,
+            "H": 0.27655962640209825,
+            "same": 0.8378471416166371,
+            "allocation_tv": 0.3454479753914468,
+            "concurrent_G": 0.23915040068792892,
+            "concurrent_H": 0.31049594389000423,
+            "concurrent_minus_lag_G": 0.02722958037004002,
+            "fixed_mass_concurrent_advantage": -0.008878526906590002,
+            "lag_signed_tv": 0.3961643612936252,
+            "concurrent_signed_tv": 0.31616362015133004
+          },
+          "all_defined": {
+            "G": 0.21192082031788892,
+            "H": 0.27655962640209825,
+            "same": 0.8378471416166371,
+            "allocation_tv": 0.3454479753914468,
+            "concurrent_G": 0.23915040068792892,
+            "concurrent_H": 0.31049594389000423,
+            "concurrent_minus_lag_G": 0.02722958037004002,
+            "fixed_mass_concurrent_advantage": -0.008878526906590002,
+            "lag_signed_tv": 0.3961643612936252,
+            "concurrent_signed_tv": 0.31616362015133004
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        },
+        "3+2": {
+          "common": {
+            "G": 0.21040901442598298,
+            "H": 0.27663210648032,
+            "same": 0.8435175919280884,
+            "allocation_tv": 0.34451461536324324,
+            "concurrent_G": 0.23892710171069892,
+            "concurrent_H": 0.31049594389000423,
+            "concurrent_minus_lag_G": 0.028518087284716012,
+            "fixed_mass_concurrent_advantage": -0.008472319998469627,
+            "lag_signed_tv": 0.3956252012013019,
+            "concurrent_signed_tv": 0.31616362015133004
+          },
+          "all_defined": {
+            "G": 0.21040901442598298,
+            "H": 0.27663210648032,
+            "same": 0.8435175919280884,
+            "allocation_tv": 0.34451461536324324,
+            "concurrent_G": 0.23892710171069892,
+            "concurrent_H": 0.31049594389000423,
+            "concurrent_minus_lag_G": 0.028518087284716012,
+            "fixed_mass_concurrent_advantage": -0.008472319998469627,
+            "lag_signed_tv": 0.3956252012013019,
+            "concurrent_signed_tv": 0.31616362015133004
+          },
+          "n_common": 8192,
+          "n_total": 8192,
+          "n_defined": 8192
+        }
+      }
+    },
+    "mancuso": {
+      "capacity": 4,
+      "n_panels": 8,
+      "n_group_units": 44,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": 0.15324023719159285,
+            "H": 0.21116153152737285,
+            "same": 0.7497024421015376,
+            "allocation_tv": 0.36243592080860193,
+            "concurrent_G": 0.17337059001651295,
+            "concurrent_H": 0.23029196155085827,
+            "concurrent_minus_lag_G": 0.020130352824920074,
+            "fixed_mass_concurrent_advantage": 0.0015719172359594307,
+            "lag_signed_tv": 0.47005642887692833,
+            "concurrent_signed_tv": 0.43507445286905555
+          },
+          "all_defined": {
+            "G": 0.15324023719159285,
+            "H": 0.21116153152737285,
+            "same": 0.7497024421015376,
+            "allocation_tv": 0.36243592080860193,
+            "concurrent_G": 0.17337059001651295,
+            "concurrent_H": 0.23029196155085827,
+            "concurrent_minus_lag_G": 0.020130352824920074,
+            "fixed_mass_concurrent_advantage": 0.0015719172359594307,
+            "lag_signed_tv": 0.47005642887692833,
+            "concurrent_signed_tv": 0.43507445286905555
+          },
+          "n_common": 16384,
+          "n_total": 16384,
+          "n_defined": 16384
+        },
+        "1+2": {
+          "common": {
+            "G": 0.1624158412432294,
+            "H": 0.2233307230981087,
+            "same": 0.7603225872632474,
+            "allocation_tv": 0.34476555545652887,
+            "concurrent_G": 0.18843567555730817,
+            "concurrent_H": 0.24800927397636777,
+            "concurrent_minus_lag_G": 0.02601983431407872,
+            "fixed_mass_concurrent_advantage": 0.005830027323348967,
+            "lag_signed_tv": 0.44905205463015574,
+            "concurrent_signed_tv": 0.40696653839142816
+          },
+          "all_defined": {
+            "G": 0.1624158412432294,
+            "H": 0.2233307230981087,
+            "same": 0.7603225872632474,
+            "allocation_tv": 0.34476555545652887,
+            "concurrent_G": 0.18843567555730817,
+            "concurrent_H": 0.24800927397636777,
+            "concurrent_minus_lag_G": 0.02601983431407872,
+            "fixed_mass_concurrent_advantage": 0.005830027323348967,
+            "lag_signed_tv": 0.44905205463015574,
+            "concurrent_signed_tv": 0.40696653839142816
+          },
+          "n_common": 16384,
+          "n_total": 16384,
+          "n_defined": 16384
+        },
+        "2+1": {
+          "common": {
+            "G": 0.16527273157085098,
+            "H": 0.2216930227051988,
+            "same": 0.781326785706883,
+            "allocation_tv": 0.34842094082465075,
+            "concurrent_G": 0.19412248214371003,
+            "concurrent_H": 0.24800927397636777,
+            "concurrent_minus_lag_G": 0.028849750572859108,
+            "fixed_mass_concurrent_advantage": 0.00473068772892041,
+            "lag_signed_tv": 0.4525174477071267,
+            "concurrent_signed_tv": 0.40696653839142816
+          },
+          "all_defined": {
+            "G": 0.16527273157085098,
+            "H": 0.2216930227051988,
+            "same": 0.781326785706883,
+            "allocation_tv": 0.34842094082465075,
+            "concurrent_G": 0.19412248214371003,
+            "concurrent_H": 0.24800927397636777,
+            "concurrent_minus_lag_G": 0.028849750572859108,
+            "fixed_mass_concurrent_advantage": 0.00473068772892041,
+            "lag_signed_tv": 0.4525174477071267,
+            "concurrent_signed_tv": 0.40696653839142816
+          },
+          "n_common": 16384,
+          "n_total": 16384,
+          "n_defined": 16384
+        },
+        "2+2": {
+          "common": {
+            "G": 0.17648545364044177,
+            "H": 0.23620507870301416,
+            "same": 0.7964172568437675,
+            "allocation_tv": 0.3304166384146202,
+            "concurrent_G": 0.2195900618379881,
+            "concurrent_H": 0.2731341467536552,
+            "concurrent_minus_lag_G": 0.043104608197546315,
+            "fixed_mass_concurrent_advantage": 0.010152380836256981,
+            "lag_signed_tv": 0.42900324050429606,
+            "concurrent_signed_tv": 0.3662339912400784
+          },
+          "all_defined": {
+            "G": 0.17648545364044177,
+            "H": 0.23620507870301416,
+            "same": 0.7964172568437675,
+            "allocation_tv": 0.3304166384146202,
+            "concurrent_G": 0.2195900618379881,
+            "concurrent_H": 0.2731341467536552,
+            "concurrent_minus_lag_G": 0.043104608197546315,
+            "fixed_mass_concurrent_advantage": 0.010152380836256981,
+            "lag_signed_tv": 0.42900324050429606,
+            "concurrent_signed_tv": 0.3662339912400784
+          },
+          "n_common": 16384,
+          "n_total": 16384,
+          "n_defined": 16384
+        }
+      }
+    },
+    "saine": {
+      "capacity": 9,
+      "n_panels": 10,
+      "n_group_units": 446,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": -0.02518525876420454,
+            "H": 0.004023275348166694,
+            "same": 0.23503843312028833,
+            "allocation_tv": 0.8419915667469038,
+            "concurrent_G": -0.026671125129849226,
+            "concurrent_H": 0.005374337941949062,
+            "concurrent_minus_lag_G": -0.0014858663656446942,
+            "fixed_mass_concurrent_advantage": 0.0047036181230873265,
+            "lag_signed_tv": 0.9169725080252847,
+            "concurrent_signed_tv": 0.9041494687128532
+          },
+          "all_defined": {
+            "G": -0.02518525876420454,
+            "H": 0.004023275348166694,
+            "same": 0.23503843312028833,
+            "allocation_tv": 0.8419915667469038,
+            "concurrent_G": -0.026671125129849226,
+            "concurrent_H": 0.005374337941949062,
+            "concurrent_minus_lag_G": -0.0014858663656446942,
+            "fixed_mass_concurrent_advantage": 0.0047036181230873265,
+            "lag_signed_tv": 0.9169725080252847,
+            "concurrent_signed_tv": 0.9041494687128532
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "1+2": {
+          "common": {
+            "G": -0.032267313089915664,
+            "H": 0.004674906240357043,
+            "same": 0.22656533306314267,
+            "allocation_tv": 0.8241002289547434,
+            "concurrent_G": -0.03496596311794255,
+            "concurrent_H": 0.005923562266345884,
+            "concurrent_minus_lag_G": -0.002698650028026879,
+            "fixed_mass_concurrent_advantage": 0.00669261461402319,
+            "lag_signed_tv": 0.9073752082370149,
+            "concurrent_signed_tv": 0.8926799903011275
+          },
+          "all_defined": {
+            "G": -0.032267313089915664,
+            "H": 0.004674906240357043,
+            "same": 0.22656533306314267,
+            "allocation_tv": 0.8241002289547434,
+            "concurrent_G": -0.03496596311794255,
+            "concurrent_H": 0.005923562266345884,
+            "concurrent_minus_lag_G": -0.002698650028026879,
+            "fixed_mass_concurrent_advantage": 0.00669261461402319,
+            "lag_signed_tv": 0.9073752082370149,
+            "concurrent_signed_tv": 0.8926799903011275
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "2+1": {
+          "common": {
+            "G": -0.023333335875112042,
+            "H": 0.0051031434918978776,
+            "same": 0.3071986807086391,
+            "allocation_tv": 0.8223217875245542,
+            "concurrent_G": -0.025607397584240306,
+            "concurrent_H": 0.005923562266345884,
+            "concurrent_minus_lag_G": -0.002274061709128256,
+            "fixed_mass_concurrent_advantage": 0.0033252004343511075,
+            "lag_signed_tv": 0.906057750270379,
+            "concurrent_signed_tv": 0.8926799903011275
+          },
+          "all_defined": {
+            "G": -0.023333335875112042,
+            "H": 0.0051031434918978776,
+            "same": 0.3071986807086391,
+            "allocation_tv": 0.8223217875245542,
+            "concurrent_G": -0.025607397584240306,
+            "concurrent_H": 0.005923562266345884,
+            "concurrent_minus_lag_G": -0.002274061709128256,
+            "fixed_mass_concurrent_advantage": 0.0033252004343511075,
+            "lag_signed_tv": 0.906057750270379,
+            "concurrent_signed_tv": 0.8926799903011275
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "2+2": {
+          "common": {
+            "G": -0.030115730853876855,
+            "H": 0.006796562100513046,
+            "same": 0.29945959865891414,
+            "allocation_tv": 0.7958622560157416,
+            "concurrent_G": -0.034028773628979235,
+            "concurrent_H": 0.007386361172643363,
+            "concurrent_minus_lag_G": -0.003913042775102394,
+            "fixed_mass_concurrent_advantage": 0.004051721023835149,
+            "lag_signed_tv": 0.8911345659073578,
+            "concurrent_signed_tv": 0.8746207558534621
+          },
+          "all_defined": {
+            "G": -0.030115730853876855,
+            "H": 0.006796562100513046,
+            "same": 0.29945959865891414,
+            "allocation_tv": 0.7958622560157416,
+            "concurrent_G": -0.034028773628979235,
+            "concurrent_H": 0.007386361172643363,
+            "concurrent_minus_lag_G": -0.003913042775102394,
+            "fixed_mass_concurrent_advantage": 0.004051721023835149,
+            "lag_signed_tv": 0.8911345659073578,
+            "concurrent_signed_tv": 0.8746207558534621
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "2+3": {
+          "common": {
+            "G": -0.03371234039923282,
+            "H": 0.008100077255222247,
+            "same": 0.29432229216354633,
+            "allocation_tv": 0.7846174293214322,
+            "concurrent_G": -0.0385875141291242,
+            "concurrent_H": 0.008822934299361668,
+            "concurrent_minus_lag_G": -0.004875173729891384,
+            "fixed_mass_concurrent_advantage": 0.004577469766245248,
+            "lag_signed_tv": 0.884208637405494,
+            "concurrent_signed_tv": 0.8657465184181747
+          },
+          "all_defined": {
+            "G": -0.03371234039923282,
+            "H": 0.008100077255222247,
+            "same": 0.29432229216354633,
+            "allocation_tv": 0.7846174293214322,
+            "concurrent_G": -0.0385875141291242,
+            "concurrent_H": 0.008822934299361668,
+            "concurrent_minus_lag_G": -0.004875173729891384,
+            "fixed_mass_concurrent_advantage": 0.004577469766245248,
+            "lag_signed_tv": 0.884208637405494,
+            "concurrent_signed_tv": 0.8657465184181747
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "2+4": {
+          "common": {
+            "G": -0.03591335617441306,
+            "H": 0.008719170767119243,
+            "same": 0.28974911724000335,
+            "allocation_tv": 0.7772652609066778,
+            "concurrent_G": -0.04157130287854413,
+            "concurrent_H": 0.009517854853406884,
+            "concurrent_minus_lag_G": -0.005657946704131075,
+            "fixed_mass_concurrent_advantage": 0.005102998184384938,
+            "lag_signed_tv": 0.8799134596862196,
+            "concurrent_signed_tv": 0.8614025842416565
+          },
+          "all_defined": {
+            "G": -0.03591335617441306,
+            "H": 0.008719170767119243,
+            "same": 0.28974911724000335,
+            "allocation_tv": 0.7772652609066778,
+            "concurrent_G": -0.04157130287854413,
+            "concurrent_H": 0.009517854853406884,
+            "concurrent_minus_lag_G": -0.005657946704131075,
+            "fixed_mass_concurrent_advantage": 0.005102998184384938,
+            "lag_signed_tv": 0.8799134596862196,
+            "concurrent_signed_tv": 0.8614025842416565
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "3+2": {
+          "common": {
+            "G": -0.028896540050309467,
+            "H": 0.007624049085548483,
+            "same": 0.3410330701554335,
+            "allocation_tv": 0.7836165231276546,
+            "concurrent_G": -0.031813093603946255,
+            "concurrent_H": 0.00882293429936167,
+            "concurrent_minus_lag_G": -0.002916553553636789,
+            "fixed_mass_concurrent_advantage": 0.0029161442359119756,
+            "lag_signed_tv": 0.884184212478279,
+            "concurrent_signed_tv": 0.8657465184181747
+          },
+          "all_defined": {
+            "G": -0.028896540050309467,
+            "H": 0.007624049085548483,
+            "same": 0.3410330701554335,
+            "allocation_tv": 0.7836165231276546,
+            "concurrent_G": -0.031813093603946255,
+            "concurrent_H": 0.00882293429936167,
+            "concurrent_minus_lag_G": -0.002916553553636789,
+            "fixed_mass_concurrent_advantage": 0.0029161442359119756,
+            "lag_signed_tv": 0.884184212478279,
+            "concurrent_signed_tv": 0.8657465184181747
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "3+3": {
+          "common": {
+            "G": -0.0324746061597284,
+            "H": 0.009146107437224044,
+            "same": 0.3360270767369811,
+            "allocation_tv": 0.7686439795906728,
+            "concurrent_G": -0.036357573429141345,
+            "concurrent_H": 0.010365558758427266,
+            "concurrent_minus_lag_G": -0.003882967269412943,
+            "fixed_mass_concurrent_advantage": 0.002821785193391136,
+            "lag_signed_tv": 0.8751758823581122,
+            "concurrent_signed_tv": 0.8547604316993285
+          },
+          "all_defined": {
+            "G": -0.0324746061597284,
+            "H": 0.009146107437224044,
+            "same": 0.3360270767369811,
+            "allocation_tv": 0.7686439795906728,
+            "concurrent_G": -0.036357573429141345,
+            "concurrent_H": 0.010365558758427266,
+            "concurrent_minus_lag_G": -0.003882967269412943,
+            "fixed_mass_concurrent_advantage": 0.002821785193391136,
+            "lag_signed_tv": 0.8751758823581122,
+            "concurrent_signed_tv": 0.8547604316993285
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "4+2": {
+          "common": {
+            "G": -0.027734620216110333,
+            "H": 0.008376272146043322,
+            "same": 0.36575622981445294,
+            "allocation_tv": 0.7761348957805371,
+            "concurrent_G": -0.030542621029113017,
+            "concurrent_H": 0.009517854853406884,
+            "concurrent_minus_lag_G": -0.0028080008130026693,
+            "fixed_mass_concurrent_advantage": 0.002648630128232017,
+            "lag_signed_tv": 0.8796911757442254,
+            "concurrent_signed_tv": 0.8614025842416565
+          },
+          "all_defined": {
+            "G": -0.027734620216110333,
+            "H": 0.008376272146043322,
+            "same": 0.36575622981445294,
+            "allocation_tv": 0.7761348957805371,
+            "concurrent_G": -0.030542621029113017,
+            "concurrent_H": 0.009517854853406884,
+            "concurrent_minus_lag_G": -0.0028080008130026693,
+            "fixed_mass_concurrent_advantage": 0.002648630128232017,
+            "lag_signed_tv": 0.8796911757442254,
+            "concurrent_signed_tv": 0.8614025842416565
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        },
+        "4+4": {
+          "common": {
+            "G": -0.03419699363098026,
+            "H": 0.01049936568867613,
+            "same": 0.3566834990912038,
+            "allocation_tv": 0.7493931070947127,
+            "concurrent_G": -0.03777903024018487,
+            "concurrent_H": 0.012188413706592162,
+            "concurrent_minus_lag_G": -0.0035820366092046024,
+            "fixed_mass_concurrent_advantage": 0.0030256847469406997,
+            "lag_signed_tv": 0.8641971878586803,
+            "concurrent_signed_tv": 0.8416724500339623
+          },
+          "all_defined": {
+            "G": -0.03419699363098026,
+            "H": 0.01049936568867613,
+            "same": 0.3566834990912038,
+            "allocation_tv": 0.7493931070947127,
+            "concurrent_G": -0.03777903024018487,
+            "concurrent_H": 0.012188413706592162,
+            "concurrent_minus_lag_G": -0.0035820366092046024,
+            "fixed_mass_concurrent_advantage": 0.0030256847469406997,
+            "lag_signed_tv": 0.8641971878586803,
+            "concurrent_signed_tv": 0.8416724500339623
+          },
+          "n_common": 5120,
+          "n_total": 5120,
+          "n_defined": 5120
+        }
+      },
+      "site_average_secondary": {
+        "1+1": {
+          "common": {
+            "G": -0.028748904533022073,
+            "H": 0.005347116283167983,
+            "same": 0.28214347904597614,
+            "allocation_tv": 0.8080680773448783,
+            "concurrent_G": -0.03197732691912366,
+            "concurrent_H": 0.006469460997793728,
+            "concurrent_minus_lag_G": -0.003228422386101603,
+            "fixed_mass_concurrent_advantage": 0.003612032345551206,
+            "lag_signed_tv": 0.8986869223892711,
+            "concurrent_signed_tv": 0.8836681670728487
+          },
+          "all_defined": {
+            "G": -0.028748904533022073,
+            "H": 0.005347116283167983,
+            "same": 0.28214347904597614,
+            "allocation_tv": 0.8080680773448783,
+            "concurrent_G": -0.03197732691912366,
+            "concurrent_H": 0.006469460997793728,
+            "concurrent_minus_lag_G": -0.003228422386101603,
+            "fixed_mass_concurrent_advantage": 0.003612032345551206,
+            "lag_signed_tv": 0.8986869223892711,
+            "concurrent_signed_tv": 0.8836681670728487
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "1+2": {
+          "common": {
+            "G": -0.0355487770301527,
+            "H": 0.006760696272440326,
+            "same": 0.2735307859950864,
+            "allocation_tv": 0.7896259096466242,
+            "concurrent_G": -0.040130734274228,
+            "concurrent_H": 0.0074618386208399525,
+            "concurrent_minus_lag_G": -0.004581957244075313,
+            "fixed_mass_concurrent_advantage": 0.0054404933525680575,
+            "lag_signed_tv": 0.8880522585508718,
+            "concurrent_signed_tv": 0.8718150005865943
+          },
+          "all_defined": {
+            "G": -0.0355487770301527,
+            "H": 0.006760696272440326,
+            "same": 0.2735307859950864,
+            "allocation_tv": 0.7896259096466242,
+            "concurrent_G": -0.040130734274228,
+            "concurrent_H": 0.0074618386208399525,
+            "concurrent_minus_lag_G": -0.004581957244075313,
+            "fixed_mass_concurrent_advantage": 0.0054404933525680575,
+            "lag_signed_tv": 0.8880522585508718,
+            "concurrent_signed_tv": 0.8718150005865943
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "2+1": {
+          "common": {
+            "G": -0.02756577877238166,
+            "H": 0.006296833892556611,
+            "same": 0.3481179932501273,
+            "allocation_tv": 0.7878441300982566,
+            "concurrent_G": -0.03000609529904704,
+            "concurrent_H": 0.007461838620839954,
+            "concurrent_minus_lag_G": -0.0024403165266653785,
+            "fixed_mass_concurrent_advantage": 0.0029567219525731816,
+            "lag_signed_tv": 0.8876252311565714,
+            "concurrent_signed_tv": 0.8718150005865943
+          },
+          "all_defined": {
+            "G": -0.02756577877238166,
+            "H": 0.006296833892556611,
+            "same": 0.3481179932501273,
+            "allocation_tv": 0.7878441300982566,
+            "concurrent_G": -0.03000609529904704,
+            "concurrent_H": 0.007461838620839954,
+            "concurrent_minus_lag_G": -0.0024403165266653785,
+            "fixed_mass_concurrent_advantage": 0.0029567219525731816,
+            "lag_signed_tv": 0.8876252311565714,
+            "concurrent_signed_tv": 0.8718150005865943
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "2+2": {
+          "common": {
+            "G": -0.033390241663968076,
+            "H": 0.008887921008267966,
+            "same": 0.34309810582658984,
+            "allocation_tv": 0.7604158718629171,
+            "concurrent_G": -0.03825688624516782,
+            "concurrent_H": 0.009438442971653666,
+            "concurrent_minus_lag_G": -0.0048666445811997635,
+            "fixed_mass_concurrent_advantage": 0.0031825154074213166,
+            "lag_signed_tv": 0.8713200149231908,
+            "concurrent_signed_tv": 0.8533934796316445
+          },
+          "all_defined": {
+            "G": -0.033390241663968076,
+            "H": 0.008887921008267966,
+            "same": 0.34309810582658984,
+            "allocation_tv": 0.7604158718629171,
+            "concurrent_G": -0.03825688624516782,
+            "concurrent_H": 0.009438442971653666,
+            "concurrent_minus_lag_G": -0.0048666445811997635,
+            "fixed_mass_concurrent_advantage": 0.0031825154074213166,
+            "lag_signed_tv": 0.8713200149231908,
+            "concurrent_signed_tv": 0.8533934796316445
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "2+3": {
+          "common": {
+            "G": -0.036028735725779575,
+            "H": 0.010880934065939119,
+            "same": 0.3383365391684835,
+            "allocation_tv": 0.7481178221815739,
+            "concurrent_G": -0.04232502085817657,
+            "concurrent_H": 0.011093483442804922,
+            "concurrent_minus_lag_G": -0.006296285132396963,
+            "fixed_mass_concurrent_advantage": 0.003253675756088178,
+            "lag_signed_tv": 0.863177977024848,
+            "concurrent_signed_tv": 0.8441268168372172
+          },
+          "all_defined": {
+            "G": -0.036028735725779575,
+            "H": 0.010880934065939119,
+            "same": 0.3383365391684835,
+            "allocation_tv": 0.7481178221815739,
+            "concurrent_G": -0.04232502085817657,
+            "concurrent_H": 0.011093483442804922,
+            "concurrent_minus_lag_G": -0.006296285132396963,
+            "fixed_mass_concurrent_advantage": 0.003253675756088178,
+            "lag_signed_tv": 0.863177977024848,
+            "concurrent_signed_tv": 0.8441268168372172
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "2+4": {
+          "common": {
+            "G": -0.03760841069015887,
+            "H": 0.012103920898889713,
+            "same": 0.33498596607350295,
+            "allocation_tv": 0.7405011678164382,
+            "concurrent_G": -0.044705482335861704,
+            "concurrent_H": 0.012306779090579482,
+            "concurrent_minus_lag_G": -0.007097071645702821,
+            "fixed_mass_concurrent_advantage": 0.003839534195226749,
+            "lag_signed_tv": 0.8581466630093291,
+            "concurrent_signed_tv": 0.8394673373062093
+          },
+          "all_defined": {
+            "G": -0.03760841069015887,
+            "H": 0.012103920898889713,
+            "same": 0.33498596607350295,
+            "allocation_tv": 0.7405011678164382,
+            "concurrent_G": -0.044705482335861704,
+            "concurrent_H": 0.012306779090579482,
+            "concurrent_minus_lag_G": -0.007097071645702821,
+            "fixed_mass_concurrent_advantage": 0.003839534195226749,
+            "lag_signed_tv": 0.8581466630093291,
+            "concurrent_signed_tv": 0.8394673373062093
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "3+2": {
+          "common": {
+            "G": -0.03148393961776187,
+            "H": 0.010349275873907566,
+            "same": 0.37912316076754454,
+            "allocation_tv": 0.748279003298507,
+            "concurrent_G": -0.03559718678298606,
+            "concurrent_H": 0.011093483442804924,
+            "concurrent_minus_lag_G": -0.00411324716522418,
+            "fixed_mass_concurrent_advantage": 0.0019332221294748333,
+            "lag_signed_tv": 0.8637902257753458,
+            "concurrent_signed_tv": 0.8441268168372172
+          },
+          "all_defined": {
+            "G": -0.03148393961776187,
+            "H": 0.010349275873907566,
+            "same": 0.37912316076754454,
+            "allocation_tv": 0.748279003298507,
+            "concurrent_G": -0.03559718678298606,
+            "concurrent_H": 0.011093483442804924,
+            "concurrent_minus_lag_G": -0.00411324716522418,
+            "fixed_mass_concurrent_advantage": 0.0019332221294748333,
+            "lag_signed_tv": 0.8637902257753458,
+            "concurrent_signed_tv": 0.8441268168372172
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "3+3": {
+          "common": {
+            "G": -0.0338030968701209,
+            "H": 0.012856624674849016,
+            "same": 0.37590306525941813,
+            "allocation_tv": 0.7322424198816423,
+            "concurrent_G": -0.03937096296156029,
+            "concurrent_H": 0.013260103621156974,
+            "concurrent_minus_lag_G": -0.005567866091439397,
+            "fixed_mass_concurrent_advantage": 0.0013639701439427184,
+            "lag_signed_tv": 0.8532645852659723,
+            "concurrent_signed_tv": 0.8326265183027454
+          },
+          "all_defined": {
+            "G": -0.0338030968701209,
+            "H": 0.012856624674849016,
+            "same": 0.37590306525941813,
+            "allocation_tv": 0.7322424198816423,
+            "concurrent_G": -0.03937096296156029,
+            "concurrent_H": 0.013260103621156974,
+            "concurrent_minus_lag_G": -0.005567866091439397,
+            "fixed_mass_concurrent_advantage": 0.0013639701439427184,
+            "lag_signed_tv": 0.8532645852659723,
+            "concurrent_signed_tv": 0.8326265183027454
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "4+2": {
+          "common": {
+            "G": -0.030553317825583515,
+            "H": 0.01122879579055248,
+            "same": 0.40155222625020526,
+            "allocation_tv": 0.7406496928618851,
+            "concurrent_G": -0.03383038644978319,
+            "concurrent_H": 0.012306779090579482,
+            "concurrent_minus_lag_G": -0.0032770686241996687,
+            "fixed_mass_concurrent_advantage": 0.00229714071194315,
+            "lag_signed_tv": 0.85909605064039,
+            "concurrent_signed_tv": 0.8394673373062093
+          },
+          "all_defined": {
+            "G": -0.030553317825583515,
+            "H": 0.01122879579055248,
+            "same": 0.40155222625020526,
+            "allocation_tv": 0.7406496928618851,
+            "concurrent_G": -0.03383038644978319,
+            "concurrent_H": 0.012306779090579482,
+            "concurrent_minus_lag_G": -0.0032770686241996687,
+            "fixed_mass_concurrent_advantage": 0.00229714071194315,
+            "lag_signed_tv": 0.85909605064039,
+            "concurrent_signed_tv": 0.8394673373062093
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        },
+        "4+4": {
+          "common": {
+            "G": -0.0340121298128314,
+            "H": 0.01551707516942739,
+            "same": 0.3955517529601057,
+            "allocation_tv": 0.7121587055702749,
+            "concurrent_G": -0.03968069026963185,
+            "concurrent_H": 0.016425289504884547,
+            "concurrent_minus_lag_G": -0.005668560456800467,
+            "fixed_mass_concurrent_advantage": 0.0019346650505824743,
+            "lag_signed_tv": 0.8405622776157096,
+            "concurrent_signed_tv": 0.8190967284343926
+          },
+          "all_defined": {
+            "G": -0.0340121298128314,
+            "H": 0.01551707516942739,
+            "same": 0.3955517529601057,
+            "allocation_tv": 0.7121587055702749,
+            "concurrent_G": -0.03968069026963185,
+            "concurrent_H": 0.016425289504884547,
+            "concurrent_minus_lag_G": -0.005668560456800467,
+            "fixed_mass_concurrent_advantage": 0.0019346650505824743,
+            "lag_signed_tv": 0.8405622776157096,
+            "concurrent_signed_tv": 0.8190967284343926
+          },
+          "n_common": 2560,
+          "n_total": 2560,
+          "n_defined": 2560
+        }
+      }
+    },
+    "hayashi": {
+      "capacity": 93,
+      "n_panels": 6,
+      "n_group_units": 760,
+      "configs": {
+        "1+1": {
+          "common": {
+            "G": 0.01708041415417431,
+            "H": 0.08692961440018097,
+            "same": 0.5867993850607637,
+            "allocation_tv": 0.36724040600803676,
+            "concurrent_G": 0.03133921014901992,
+            "concurrent_H": 0.10424076894878471,
+            "concurrent_minus_lag_G": 0.014258795994845608,
+            "fixed_mass_concurrent_advantage": 0.005712741884109313,
+            "lag_signed_tv": 0.5966905886038374,
+            "concurrent_signed_tv": 0.5717335826389448
+          },
+          "all_defined": {
+            "G": 0.01708041415417431,
+            "H": 0.08692961440018097,
+            "same": 0.5867993850607637,
+            "allocation_tv": 0.36724040600803676,
+            "concurrent_G": 0.03133921014901992,
+            "concurrent_H": 0.10424076894878471,
+            "concurrent_minus_lag_G": 0.014258795994845608,
+            "fixed_mass_concurrent_advantage": 0.005712741884109313,
+            "lag_signed_tv": 0.5966905886038374,
+            "concurrent_signed_tv": 0.5717335826389448
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "1+2": {
+          "common": {
+            "G": 0.02696144477296351,
+            "H": 0.1028527003262724,
+            "same": 0.6065982580215211,
+            "allocation_tv": 0.3691469090849256,
+            "concurrent_G": 0.04882716443935851,
+            "concurrent_H": 0.12753733927343264,
+            "concurrent_minus_lag_G": 0.021865719666395,
+            "fixed_mass_concurrent_advantage": 0.010160589692230363,
+            "lag_signed_tv": 0.5817207542161903,
+            "concurrent_signed_tv": 0.5505332265451083
+          },
+          "all_defined": {
+            "G": 0.02696144477296351,
+            "H": 0.1028527003262724,
+            "same": 0.6065982580215211,
+            "allocation_tv": 0.3691469090849256,
+            "concurrent_G": 0.04882716443935851,
+            "concurrent_H": 0.12753733927343264,
+            "concurrent_minus_lag_G": 0.021865719666395,
+            "fixed_mass_concurrent_advantage": 0.010160589692230363,
+            "lag_signed_tv": 0.5817207542161903,
+            "concurrent_signed_tv": 0.5505332265451083
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+1": {
+          "common": {
+            "G": 0.036121806396004486,
+            "H": 0.10317654957157311,
+            "same": 0.6260830629409891,
+            "allocation_tv": 0.37635714106475165,
+            "concurrent_G": 0.05687140582134583,
+            "concurrent_H": 0.12753733927343264,
+            "concurrent_minus_lag_G": 0.02074959942534136,
+            "fixed_mass_concurrent_advantage": 0.010761893186355231,
+            "lag_signed_tv": 0.5850020209608026,
+            "concurrent_signed_tv": 0.5505332265451083
+          },
+          "all_defined": {
+            "G": 0.036121806396004486,
+            "H": 0.10317654957157311,
+            "same": 0.6260830629409891,
+            "allocation_tv": 0.37635714106475165,
+            "concurrent_G": 0.05687140582134583,
+            "concurrent_H": 0.12753733927343264,
+            "concurrent_minus_lag_G": 0.02074959942534136,
+            "fixed_mass_concurrent_advantage": 0.010761893186355231,
+            "lag_signed_tv": 0.5850020209608026,
+            "concurrent_signed_tv": 0.5505332265451083
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+2": {
+          "common": {
+            "G": 0.05483808180714963,
+            "H": 0.12708200784778548,
+            "same": 0.6523361245763601,
+            "allocation_tv": 0.367606130265143,
+            "concurrent_G": 0.08584399896556565,
+            "concurrent_H": 0.16142071793404109,
+            "concurrent_minus_lag_G": 0.031005917158416,
+            "fixed_mass_concurrent_advantage": 0.01665576107414046,
+            "lag_signed_tv": 0.556721057284786,
+            "concurrent_signed_tv": 0.512182070101333
+          },
+          "all_defined": {
+            "G": 0.05483808180714963,
+            "H": 0.12708200784778548,
+            "same": 0.6523361245763601,
+            "allocation_tv": 0.367606130265143,
+            "concurrent_G": 0.08584399896556565,
+            "concurrent_H": 0.16142071793404109,
+            "concurrent_minus_lag_G": 0.031005917158416,
+            "fixed_mass_concurrent_advantage": 0.01665576107414046,
+            "lag_signed_tv": 0.556721057284786,
+            "concurrent_signed_tv": 0.512182070101333
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+3": {
+          "common": {
+            "G": 0.06622980972422884,
+            "H": 0.14166218042927994,
+            "same": 0.6681060103432702,
+            "allocation_tv": 0.3585928691896047,
+            "concurrent_G": 0.10176905293815448,
+            "concurrent_H": 0.18007267999960289,
+            "concurrent_minus_lag_G": 0.035539243213925646,
+            "fixed_mass_concurrent_advantage": 0.019192218450799454,
+            "lag_signed_tv": 0.5376342541655226,
+            "concurrent_signed_tv": 0.4889379659031965
+          },
+          "all_defined": {
+            "G": 0.06622980972422884,
+            "H": 0.14166218042927994,
+            "same": 0.6681060103432702,
+            "allocation_tv": 0.3585928691896047,
+            "concurrent_G": 0.10176905293815448,
+            "concurrent_H": 0.18007267999960289,
+            "concurrent_minus_lag_G": 0.035539243213925646,
+            "fixed_mass_concurrent_advantage": 0.019192218450799454,
+            "lag_signed_tv": 0.5376342541655226,
+            "concurrent_signed_tv": 0.4889379659031965
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+4": {
+          "common": {
+            "G": 0.07248491748389128,
+            "H": 0.14896272815902303,
+            "same": 0.6752326771307772,
+            "allocation_tv": 0.35397343076493426,
+            "concurrent_G": 0.1117002108025596,
+            "concurrent_H": 0.19086960807777556,
+            "concurrent_minus_lag_G": 0.03921529331866828,
+            "fixed_mass_concurrent_advantage": 0.02203014072760767,
+            "lag_signed_tv": 0.5280239872234439,
+            "concurrent_signed_tv": 0.47614112333619363
+          },
+          "all_defined": {
+            "G": 0.07248491748389128,
+            "H": 0.14896272815902303,
+            "same": 0.6752326771307772,
+            "allocation_tv": 0.35397343076493426,
+            "concurrent_G": 0.1117002108025596,
+            "concurrent_H": 0.19086960807777556,
+            "concurrent_minus_lag_G": 0.03921529331866828,
+            "fixed_mass_concurrent_advantage": 0.02203014072760767,
+            "lag_signed_tv": 0.5280239872234439,
+            "concurrent_signed_tv": 0.47614112333619363
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+8": {
+          "common": {
+            "G": 0.08673518383199176,
+            "H": 0.16569292640342684,
+            "same": 0.6929342671124008,
+            "allocation_tv": 0.3446001148697683,
+            "concurrent_G": 0.13181331364350138,
+            "concurrent_H": 0.2128854497103283,
+            "concurrent_minus_lag_G": 0.04507812981150961,
+            "fixed_mass_concurrent_advantage": 0.02519589251063968,
+            "lag_signed_tv": 0.5066071310314572,
+            "concurrent_signed_tv": 0.44904105183912857
+          },
+          "all_defined": {
+            "G": 0.08673518383199176,
+            "H": 0.16569292640342684,
+            "same": 0.6929342671124008,
+            "allocation_tv": 0.3446001148697683,
+            "concurrent_G": 0.13181331364350138,
+            "concurrent_H": 0.2128854497103283,
+            "concurrent_minus_lag_G": 0.04507812981150961,
+            "fixed_mass_concurrent_advantage": 0.02519589251063968,
+            "lag_signed_tv": 0.5066071310314572,
+            "concurrent_signed_tv": 0.44904105183912857
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+16": {
+          "common": {
+            "G": 0.09467272169918951,
+            "H": 0.17278262506549927,
+            "same": 0.6992033474939915,
+            "allocation_tv": 0.3386258767031365,
+            "concurrent_G": 0.1435158842331322,
+            "concurrent_H": 0.22398122931571196,
+            "concurrent_minus_lag_G": 0.04884316253394269,
+            "fixed_mass_concurrent_advantage": 0.028842777551891925,
+            "lag_signed_tv": 0.49653031328606895,
+            "concurrent_signed_tv": 0.4345008350721908
+          },
+          "all_defined": {
+            "G": 0.09467272169918951,
+            "H": 0.17278262506549927,
+            "same": 0.6992033474939915,
+            "allocation_tv": 0.3386258767031365,
+            "concurrent_G": 0.1435158842331322,
+            "concurrent_H": 0.22398122931571196,
+            "concurrent_minus_lag_G": 0.04884316253394269,
+            "fixed_mass_concurrent_advantage": 0.028842777551891925,
+            "lag_signed_tv": 0.49653031328606895,
+            "concurrent_signed_tv": 0.4345008350721908
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "2+32": {
+          "common": {
+            "G": 0.10126684006000937,
+            "H": 0.1779407763799,
+            "same": 0.7047463737876862,
+            "allocation_tv": 0.3317497760331041,
+            "concurrent_G": 0.15042531405647888,
+            "concurrent_H": 0.2304783866549428,
+            "concurrent_minus_lag_G": 0.049158473996469554,
+            "fixed_mass_concurrent_advantage": 0.029684804085291835,
+            "lag_signed_tv": 0.4879341116366522,
+            "concurrent_signed_tv": 0.42436417570269286
+          },
+          "all_defined": {
+            "G": 0.10126684006000937,
+            "H": 0.1779407763799,
+            "same": 0.7047463737876862,
+            "allocation_tv": 0.3317497760331041,
+            "concurrent_G": 0.15042531405647888,
+            "concurrent_H": 0.2304783866549428,
+            "concurrent_minus_lag_G": 0.049158473996469554,
+            "fixed_mass_concurrent_advantage": 0.029684804085291835,
+            "lag_signed_tv": 0.4879341116366522,
+            "concurrent_signed_tv": 0.42436417570269286
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "3+2": {
+          "common": {
+            "G": 0.07333107870136597,
+            "H": 0.1439506291404717,
+            "same": 0.6812380047921126,
+            "allocation_tv": 0.3636239120324997,
+            "concurrent_G": 0.10638673302955737,
+            "concurrent_H": 0.18007267999960289,
+            "concurrent_minus_lag_G": 0.03305565432819142,
+            "fixed_mass_concurrent_advantage": 0.018801539294461777,
+            "lag_signed_tv": 0.5378613268757783,
+            "concurrent_signed_tv": 0.4889379659031965
+          },
+          "all_defined": {
+            "G": 0.07333107870136597,
+            "H": 0.1439506291404717,
+            "same": 0.6812380047921126,
+            "allocation_tv": 0.3636239120324997,
+            "concurrent_G": 0.10638673302955737,
+            "concurrent_H": 0.18007267999960289,
+            "concurrent_minus_lag_G": 0.03305565432819142,
+            "fixed_mass_concurrent_advantage": 0.018801539294461777,
+            "lag_signed_tv": 0.5378613268757783,
+            "concurrent_signed_tv": 0.4889379659031965
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "3+3": {
+          "common": {
+            "G": 0.08468829270332116,
+            "H": 0.15902142984169218,
+            "same": 0.6973921817953063,
+            "allocation_tv": 0.35461123210959994,
+            "concurrent_G": 0.12379482610984878,
+            "concurrent_H": 0.20040956150419018,
+            "concurrent_minus_lag_G": 0.039106533406527595,
+            "fixed_mass_concurrent_advantage": 0.02211557974924204,
+            "lag_signed_tv": 0.5182841862131078,
+            "concurrent_signed_tv": 0.4637002766032117
+          },
+          "all_defined": {
+            "G": 0.08468829270332116,
+            "H": 0.15902142984169218,
+            "same": 0.6973921817953063,
+            "allocation_tv": 0.35461123210959994,
+            "concurrent_G": 0.12379482610984878,
+            "concurrent_H": 0.20040956150419018,
+            "concurrent_minus_lag_G": 0.039106533406527595,
+            "fixed_mass_concurrent_advantage": 0.02211557974924204,
+            "lag_signed_tv": 0.5182841862131078,
+            "concurrent_signed_tv": 0.4637002766032117
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "4+2": {
+          "common": {
+            "G": 0.08462238270527488,
+            "H": 0.15425507785160633,
+            "same": 0.6951181482130867,
+            "allocation_tv": 0.3628350839921121,
+            "concurrent_G": 0.11820259472200993,
+            "concurrent_H": 0.19086960807777556,
+            "concurrent_minus_lag_G": 0.03358021201673508,
+            "fixed_mass_concurrent_advantage": 0.018305100066766493,
+            "lag_signed_tv": 0.5271624641444498,
+            "concurrent_signed_tv": 0.4761411233361936
+          },
+          "all_defined": {
+            "G": 0.08462238270527488,
+            "H": 0.15425507785160633,
+            "same": 0.6951181482130867,
+            "allocation_tv": 0.3628350839921121,
+            "concurrent_G": 0.11820259472200993,
+            "concurrent_H": 0.19086960807777556,
+            "concurrent_minus_lag_G": 0.03358021201673508,
+            "fixed_mass_concurrent_advantage": 0.018305100066766493,
+            "lag_signed_tv": 0.5271624641444498,
+            "concurrent_signed_tv": 0.4761411233361936
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "4+4": {
+          "common": {
+            "G": 0.10726051032128041,
+            "H": 0.18083095156213555,
+            "same": 0.7222413257051512,
+            "allocation_tv": 0.34618202292955486,
+            "concurrent_G": 0.1524693269607865,
+            "concurrent_H": 0.2282798068209235,
+            "concurrent_minus_lag_G": 0.04520881663950607,
+            "fixed_mass_concurrent_advantage": 0.024002056563056286,
+            "lag_signed_tv": 0.4922600599026417,
+            "concurrent_signed_tv": 0.42801271637013255
+          },
+          "all_defined": {
+            "G": 0.10726051032128041,
+            "H": 0.18083095156213555,
+            "same": 0.7222413257051512,
+            "allocation_tv": 0.34618202292955486,
+            "concurrent_G": 0.1524693269607865,
+            "concurrent_H": 0.2282798068209235,
+            "concurrent_minus_lag_G": 0.04520881663950607,
+            "fixed_mass_concurrent_advantage": 0.024002056563056286,
+            "lag_signed_tv": 0.4922600599026417,
+            "concurrent_signed_tv": 0.42801271637013255
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "8+2": {
+          "common": {
+            "G": 0.1068808149064241,
+            "H": 0.17448088976223783,
+            "same": 0.7267192440341358,
+            "allocation_tv": 0.3613024596772824,
+            "concurrent_G": 0.14181913057136164,
+            "concurrent_H": 0.2128854497103283,
+            "concurrent_minus_lag_G": 0.03493831566493759,
+            "fixed_mass_concurrent_advantage": 0.017438387471551423,
+            "lag_signed_tv": 0.5061703400764034,
+            "concurrent_signed_tv": 0.44904105183912857
+          },
+          "all_defined": {
+            "G": 0.1068808149064241,
+            "H": 0.17448088976223783,
+            "same": 0.7267192440341358,
+            "allocation_tv": 0.3613024596772824,
+            "concurrent_G": 0.14181913057136164,
+            "concurrent_H": 0.2128854497103283,
+            "concurrent_minus_lag_G": 0.03493831566493759,
+            "fixed_mass_concurrent_advantage": 0.017438387471551423,
+            "lag_signed_tv": 0.5061703400764034,
+            "concurrent_signed_tv": 0.44904105183912857
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "8+8": {
+          "common": {
+            "G": 0.15447908986998002,
+            "H": 0.22652007803825538,
+            "same": 0.7773010846401766,
+            "allocation_tv": 0.31803582661973834,
+            "concurrent_G": 0.2151318506036862,
+            "concurrent_H": 0.28741518420020346,
+            "concurrent_minus_lag_G": 0.06065276073370617,
+            "fixed_mass_concurrent_advantage": 0.028435300100182137,
+            "lag_signed_tv": 0.43249783527161395,
+            "concurrent_signed_tv": 0.3467950131790037
+          },
+          "all_defined": {
+            "G": 0.15447908986998002,
+            "H": 0.22652007803825538,
+            "same": 0.7773010846401766,
+            "allocation_tv": 0.31803582661973834,
+            "concurrent_G": 0.2151318506036862,
+            "concurrent_H": 0.28741518420020346,
+            "concurrent_minus_lag_G": 0.06065276073370617,
+            "fixed_mass_concurrent_advantage": 0.028435300100182137,
+            "lag_signed_tv": 0.43249783527161395,
+            "concurrent_signed_tv": 0.3467950131790037
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "16+2": {
+          "common": {
+            "G": 0.11659500049301375,
+            "H": 0.18272504422603042,
+            "same": 0.740822808081175,
+            "allocation_tv": 0.36537166883482314,
+            "concurrent_G": 0.15367431586971184,
+            "concurrent_H": 0.22398122931571196,
+            "concurrent_minus_lag_G": 0.037079315376698126,
+            "fixed_mass_concurrent_advantage": 0.017842353159963163,
+            "lag_signed_tv": 0.4999607901913811,
+            "concurrent_signed_tv": 0.4345008350721908
+          },
+          "all_defined": {
+            "G": 0.11659500049301375,
+            "H": 0.18272504422603042,
+            "same": 0.740822808081175,
+            "allocation_tv": 0.36537166883482314,
+            "concurrent_G": 0.15367431586971184,
+            "concurrent_H": 0.22398122931571196,
+            "concurrent_minus_lag_G": 0.037079315376698126,
+            "fixed_mass_concurrent_advantage": 0.017842353159963163,
+            "lag_signed_tv": 0.4999607901913811,
+            "concurrent_signed_tv": 0.4345008350721908
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "16+16": {
+          "common": {
+            "G": 0.19308895748532742,
+            "H": 0.26377610711033145,
+            "same": 0.8202752204529565,
+            "allocation_tv": 0.2971605461013268,
+            "concurrent_G": 0.27280051205438055,
+            "concurrent_H": 0.3398609139224631,
+            "concurrent_minus_lag_G": 0.07971155456905311,
+            "fixed_mass_concurrent_advantage": 0.032431480777857714,
+            "lag_signed_tv": 0.38480416594033207,
+            "concurrent_signed_tv": 0.2726882391365332
+          },
+          "all_defined": {
+            "G": 0.19308895748532742,
+            "H": 0.26377610711033145,
+            "same": 0.8202752204529565,
+            "allocation_tv": 0.2971605461013268,
+            "concurrent_G": 0.27280051205438055,
+            "concurrent_H": 0.3398609139224631,
+            "concurrent_minus_lag_G": 0.07971155456905311,
+            "fixed_mass_concurrent_advantage": 0.032431480777857714,
+            "lag_signed_tv": 0.38480416594033207,
+            "concurrent_signed_tv": 0.2726882391365332
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "32+2": {
+          "common": {
+            "G": 0.12474859992768528,
+            "H": 0.18938886310040673,
+            "same": 0.7551891258942014,
+            "allocation_tv": 0.3668281545915471,
+            "concurrent_G": 0.16111217109014347,
+            "concurrent_H": 0.2304783866549428,
+            "concurrent_minus_lag_G": 0.03636357116245816,
+            "fixed_mass_concurrent_advantage": 0.013475652949185688,
+            "lag_signed_tv": 0.4940252141953669,
+            "concurrent_signed_tv": 0.42436417570269286
+          },
+          "all_defined": {
+            "G": 0.12474859992768528,
+            "H": 0.18938886310040673,
+            "same": 0.7551891258942014,
+            "allocation_tv": 0.3668281545915471,
+            "concurrent_G": 0.16111217109014347,
+            "concurrent_H": 0.2304783866549428,
+            "concurrent_minus_lag_G": 0.03636357116245816,
+            "fixed_mass_concurrent_advantage": 0.013475652949185688,
+            "lag_signed_tv": 0.4940252141953669,
+            "concurrent_signed_tv": 0.42436417570269286
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        },
+        "32+32": {
+          "common": {
+            "G": 0.22600697622159527,
+            "H": 0.2933713048175101,
+            "same": 0.8615210650150852,
+            "allocation_tv": 0.2736872123702502,
+            "concurrent_G": 0.3223366457483388,
+            "concurrent_H": 0.38181273314732517,
+            "concurrent_minus_lag_G": 0.0963296695267436,
+            "fixed_mass_concurrent_advantage": 0.03288628860178321,
+            "lag_signed_tv": 0.3434723013676149,
+            "concurrent_signed_tv": 0.20470358610699466
+          },
+          "all_defined": {
+            "G": 0.22600697622159527,
+            "H": 0.2933713048175101,
+            "same": 0.8615210650150852,
+            "allocation_tv": 0.2736872123702502,
+            "concurrent_G": 0.3223366457483388,
+            "concurrent_H": 0.38181273314732517,
+            "concurrent_minus_lag_G": 0.0963296695267436,
+            "fixed_mass_concurrent_advantage": 0.03288628860178321,
+            "lag_signed_tv": 0.3434723013676149,
+            "concurrent_signed_tv": 0.20470358610699466
+          },
+          "n_common": 6144,
+          "n_total": 6144,
+          "n_defined": 6144
+        }
+      }
+    }
+  }
+}
