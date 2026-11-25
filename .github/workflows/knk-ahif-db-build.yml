@@ -12,6 +12,10 @@ on:
       - "benchmarks/ahif_prediction_tables.py"
       - "benchmarks/ahif_low_order_tables.py"
       - "benchmarks/ahif_cancellation_tables.py"
+      - "benchmarks/ahif_curated_seed_tables.py"
+      - "validation/ahif_v1/ladouceur2020_synthesis_source_audit_v1.json"
+      - "validation/ahif_v1/ladouceur2020_two_direction_validation_v1.json"
+      - "validation/ahif_v1/kansas2020_time_block_forecast_v1.json"
       - "validation/ahif_v1/poem_field_absolute_compensation_v1.json"
       - "validation/ahif_v1/lear2024_resident_cancellation_v1.json"
       - "validation/ahif_v1/vansteijn2026_field_opposition_v1.json"
@@ -124,7 +128,10 @@ jobs:
               assert db.execute("SELECT COUNT(*) FROM effects WHERE panel_id='P_ISHIZAWA2024'").fetchone()==(0,)
               assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts").fetchone()==(92,)
               assert db.execute("SELECT COUNT(*) FROM cancellation_intervals").fetchone()==(59,)
-          print("AHIF source-backed v0.9 DB audited")
+              assert db.execute("SELECT COUNT(*) FROM curated_seed_experiments").fetchone()==(12,)
+              assert db.execute("SELECT COUNT(*) FROM curated_seed_comparisons").fetchone()==(59,)
+              assert db.execute("SELECT COUNT(*) FROM curated_kansas_forecast").fetchone()==(81,)
+          print("AHIF source-backed v1.0 DB audited")
           PY
       - name: Upload portable user-owned DB artifact, not source author raw data
         uses: actions/upload-artifact@v4
@@ -147,6 +154,9 @@ jobs:
             ${{ runner.temp }}/ahif/low_order_model_contrasts.csv
             ${{ runner.temp }}/ahif/cancellation_contrasts.csv
             ${{ runner.temp }}/ahif/cancellation_intervals.csv
+            ${{ runner.temp }}/ahif/curated_seed_experiments.csv
+            ${{ runner.temp }}/ahif/curated_seed_comparisons.csv
+            ${{ runner.temp }}/ahif/curated_kansas_forecast.csv
             ${{ runner.temp }}/ahif/prior_art_verified.csv
             ${{ runner.temp }}/ahif/methodological_prior_art.csv
             ${{ runner.temp }}/ahif/review_candidates_unreviewed_2023.csv

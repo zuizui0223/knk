@@ -118,3 +118,7 @@ SELECT baseline,enhanced,endpoint,absolute_improvement,relative_gain,improved,wo
 -- 18. Absolute response opposition: compare within each source and aggregation scope only.
 SELECT study_id,comparison_id,scope,unit,gross,net,cancellation,fraction,crossfit_gap FROM cancellation_contrasts ORDER BY study_id,comparison_id,scope;
 SELECT study_id,comparison_id,endpoint,estimate,ci95_low,ci95_high,interval_family_size FROM cancellation_intervals ORDER BY study_id,comparison_id,endpoint;
+
+-- 19. Curated synthesis lane: never join these as independent original effect sizes.
+SELECT experiment,mode,source_age_code,status,strong_descriptive_gate,held_increase,held_decrease,held_min FROM curated_seed_comparisons ORDER BY experiment,mode,source_age_code;
+SELECT model,sse,held_min,strong_descriptive_gate FROM curated_kansas_forecast WHERE time_scope='all_forecast_times' ORDER BY sse;

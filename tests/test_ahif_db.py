@@ -260,3 +260,16 @@ def test_field_reference_sensitive_opposition(tmp_path):
         assert z["pooled_2022_vs_SFearly"][1]>0 and z["pooled_2022_vs_SFearly"][3]==1
         assert db.execute("SELECT COUNT(*) FROM cancellation_contrasts WHERE study_id='ST_VANSTEIJNFIELD2026'").fetchone()==(48,)
         assert db.execute("SELECT COUNT(*) FROM cancellation_intervals WHERE study_id='ST_VANSTEIJNFIELD2026'").fetchone()==(32,)
+
+def test_curated_seed_synthesis_separate_evidence_lane(tmp_path):
+    z=build(ROOT,tmp_path)
+    assert z["curated_seed_experiment_labels"]==12
+    assert z["curated_seed_comparison_rows"]==59
+    assert z["curated_seed_scored_comparisons"]==58
+    assert z["curated_kansas_forecast_summary_rows"]==81
+    assert z["curated_synthesis_meta_eligible"] is False
+    with sqlite3.connect(tmp_path/"ahif_v1.sqlite") as db:
+        assert db.execute("SELECT COUNT(*) FROM curated_seed_comparisons WHERE mode='direct' AND strong_descriptive_gate=1").fetchone()==(5,)
+        assert db.execute("SELECT COUNT(*) FROM curated_seed_comparisons WHERE mode='direct' AND final_matched_age=1 AND strong_descriptive_gate=1").fetchone()==(0,)
+        assert db.execute("SELECT model FROM curated_kansas_forecast WHERE time_scope='all_forecast_times' AND sse IS NOT NULL ORDER BY sse LIMIT 1").fetchone()==("zero",)
+        assert db.execute("SELECT COUNT(*) FROM effects").fetchone()==(161,)
