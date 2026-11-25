@@ -1,0 +1,33 @@
+name: AHIF Kansas equal-target role forecasts
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-kansas-group-forecast.yml"
+      - "benchmarks/score_ahif_kansas_group_forecast.py"
+      - "tests/test_ahif_kansas_group_forecast.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate equal targets and strict temporal holdout
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_kansas_group_forecast.py -q
+      - name: Verify original curated bytes and compare group forecasts
+        run: python -m benchmarks.score_ahif_kansas_group_forecast --root "$RUNNER_TEMP/kansas" --mapping database/ahif_v1/foster2009_curated_name_bridge.csv --paper database/ahif_v1/foster2009_published_sown_roster.csv --prior validation/ahif_v1/kansas2020_time_block_forecast_v1.json --out "$RUNNER_TEMP/kansas/group_forecast.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-kansas-group-forecast-derived-only
+          path: ${{ runner.temp }}/kansas/group_forecast.json
+          retention-days: 30
