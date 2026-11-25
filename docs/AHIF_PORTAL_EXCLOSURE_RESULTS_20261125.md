@@ -1,0 +1,16 @@
+# Portal held-plot exclosure results — 2026-11-25
+
+Verified run https://github.com/zuizui0223/knk/actions/runs/45591404506, job 139126252643, scorer/workflow head 550dfc4838709475bb48e21346e0f9fc4c53fc3f. Artifact 15010119246 sha256:f1282254cef3327cf308bd0aab3a567edf4359955b429fad6ea4f8ba76749b26. Exact 8 public source Git blobs checked at PortalData commit a4dc266c0068d26370cd88bec5272a02623d5470. Original treatment history and monthly 2016–2024 assignments agree. 10 control and 8 exclosure plots, one site. 112 moons in scope, 72 full-effort surveys, two further flag exclusions, 70 eligible surveys, 56 consecutive lunar transitions. 79,828 original captures; 10,273 eligible identified target capture rows; 1 ambiguous plot-period ID (2 rows) and 3 duplicate rows excluded, 10,268 counted. 52 individual-period IDs captured on multiple plots, 104 rows removed in sensitivity. No missing individual IDs. Named target rodent roster 21 source codes; 18 non-Dipodomys codes in primary. Capture counts not detection-corrected population sizes. No causal competition claim or independent plot-by-date inference.
+
+| Lane | n+n | G pp | H pp | O | A* | J pp | Concurrent G pp | Fixed-mass concurrent advantage pp | Common cells |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| non-target | 1+1 | 1.0941 | 6.9128 | .469740 | .647162 | 5.8187 | 1.3934 | .1854 | 24788 |
+| non-target | 2+2 | 3.4385 | 10.0873 | .510789 | .697484 | 6.6488 | 3.5959 | -.2088 | 24788 |
+| non-target | 3+3 | 5.5956 | 12.5572 | .540055 | .732516 | 6.9616 | 5.7118 | -.4503 | 24788 |
+| non-target | 4+4 | 7.5908 | 14.7668 | .567960 | .759997 | 7.1760 | 7.3654 | -.7292 | 24788 |
+| all species | 2+2 | 14.6261 | 22.0652 | .602466 | .866248 | 7.4391 | 15.0869 | -.2972 | 28494 |
+| non-target no crossplot IDs | 2+2 | 3.6131 | 10.2469 | .510372 | .700773 | 6.6338 | 3.7489 | -.2274 | 24778 |
+
+G compared to signblind equal-mass hedge; H vs expected fair hard random sign, no significance interpretation. O allocation overlap; A*=.5+H/O, overlap-mass weighted agreement; J=H-G. All 56 dates have common-defined cells; primary 24788/28672 common across sizes. At 2+2 separately all-defined G +3.3783 pp, H +10.0512 pp, 27907 cells. Different measurement rosters/eligibility masks across lanes; no causal subtraction or claim that the difference between all and non-target is a directly measured target effect. Disjoint plot splits are repeated and temporal windows overlap. Crossplot sensitivity does not ensure individual independence across time or movement outside plots.
+
+Non-target G increases with replicate number and is positive across all four fixed sizes. At 2+2, concurrent G differs from lag by only +.1574 pp, fixed-lag-mass current signs provide -.2088 pp. Therefore no evidence from these descriptive comparisons for a distinct short-term temporal loss; a stable difference between the two current treatment rosters is sufficient as an explanation. Historical treatments differ (including ant/plant treatments and 2015 switches), fence gate size changes movement, capture detectability may differ. Separate animal system, previously used Portal source in PR7; not a newly recruited independent publication. No pooled meta-analysis, calibrated SE or manuscript changes. Archive exact JSON in validation/ahif_v1/portal_exclosure_summary_20261125.json.
