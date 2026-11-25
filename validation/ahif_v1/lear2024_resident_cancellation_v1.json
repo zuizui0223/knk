@@ -1,0 +1,663 @@
+{
+  "status": "SOURCE_LOCKED_RESIDENT_COUNT_CANCELLATION_NOT_INTERACTION_MEDIATION",
+  "source_doi": "10.5281/zenodo.12528023",
+  "audit": {
+    "source_rows": 197,
+    "planned_microcosms": 198,
+    "observed_treatment_cells": 33,
+    "documented_missing_cell": {
+      "day": "8.1",
+      "level": "B",
+      "missing": 1
+    },
+    "ambiguous_rep_cells": [
+      {
+        "day": "6",
+        "level": "A",
+        "duplicate_labels": {
+          "1": 2
+        },
+        "missing_labels": [
+          3
+        ]
+      },
+      {
+        "day": "6",
+        "level": "B",
+        "duplicate_labels": {
+          "3": 2
+        },
+        "missing_labels": [
+          1
+        ]
+      }
+    ],
+    "rep_ids_used_for_pairing": false,
+    "source_file_md5": {
+      "invader timing data.txt": "208b709aabc1b1b7d1f37cc550f5c304",
+      "README.txt": "3c2e18e459a910a95b0063bd599eb474",
+      "invader timing markdown.Rmd": "de0b10f9f62156c3684ee1db6789ba89"
+    },
+    "resident_columns": [
+      "p",
+      "o",
+      "s",
+      "a",
+      "v"
+    ]
+  },
+  "contrasts": [
+    {
+      "before": "7.9",
+      "after": "8.1",
+      "pooled": {
+        "delta": [
+          0.01666666666666572,
+          -13.15,
+          -9.858333333333333,
+          -5.908333333333333,
+          -6.233333333333333
+        ],
+        "signed_total_delta": -35.13333333333333,
+        "gross": 35.166666666666664,
+        "net": 35.13333333333333,
+        "cancellation": 0.03333333333333144,
+        "fraction": 0.0009478672985781452
+      },
+      "by_level": [
+        {
+          "level": "A",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            4.833333333333333,
+            -6.666666666666666,
+            -10.333333333333336,
+            -4.166666666666667,
+            0.8333333333333333
+          ],
+          "signed_total_delta": -15.500000000000002,
+          "gross": 26.833333333333336,
+          "net": 15.500000000000002,
+          "cancellation": 11.333333333333334,
+          "fraction": 0.42236024844720493
+        },
+        {
+          "level": "B",
+          "n_before": 6,
+          "n_after": 5,
+          "delta": [
+            5.066666666666666,
+            -15.766666666666667,
+            -2.5999999999999943,
+            0.033333333333333215,
+            -1.4333333333333327
+          ],
+          "signed_total_delta": -14.699999999999996,
+          "gross": 24.899999999999995,
+          "net": 14.699999999999996,
+          "cancellation": 10.2,
+          "fraction": 0.4096385542168675
+        },
+        {
+          "level": "C",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -2.3333333333333335,
+            -13.333333333333332,
+            -39.16666666666666,
+            -7.666666666666667,
+            -11
+          ],
+          "signed_total_delta": -73.49999999999999,
+          "gross": 73.49999999999999,
+          "net": 73.49999999999999,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "D",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -7.500000000000002,
+            -16.833333333333336,
+            12.666666666666657,
+            -11.833333333333332,
+            -13.333333333333334
+          ],
+          "signed_total_delta": -36.83333333333334,
+          "gross": 62.166666666666664,
+          "net": 36.83333333333334,
+          "cancellation": 25.33333333333332,
+          "fraction": 0.40750670241286846
+        }
+      ],
+      "mean_within_level_cancellation": 11.716666666666663,
+      "mean_within_level_gross": 46.849999999999994,
+      "mean_within_level_net": 35.13333333333333,
+      "status": "SCORED_APPROXIMATE_INDEPENDENT_GROUPS",
+      "intervals": {
+        "n_family": 5,
+        "rows": [
+          {
+            "resident": "p",
+            "delta": 0.01666666666666572,
+            "se": 2.094868067975218,
+            "df": 14.812246543575954,
+            "simultaneous_ci95": [
+              -6.167427717513427,
+              6.200761050846759
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "o",
+            "delta": -13.15,
+            "se": 2.9479748227479075,
+            "df": 19.085990603596958,
+            "simultaneous_ci95": [
+              -21.5798023103438,
+              -4.720197689656201
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "s",
+            "delta": -9.858333333333333,
+            "se": 9.874205312608987,
+            "df": 21.261529097321485,
+            "simultaneous_ci95": [
+              -37.7819835686021,
+              18.06531690193544
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "a",
+            "delta": -5.908333333333333,
+            "se": 1.426947986282456,
+            "df": 15.802612372398226,
+            "simultaneous_ci95": [
+              -10.083026320923123,
+              -1.7336403457435434
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "v",
+            "delta": -6.233333333333333,
+            "se": 2.3851974062258803,
+            "df": 20.481936042777985,
+            "simultaneous_ci95": [
+              -13.003516900049373,
+              0.5368502333827054
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          }
+        ],
+        "positive": [],
+        "negative": [
+          "o",
+          "a"
+        ],
+        "opposing_signs_supported": false
+      },
+      "crossfit": {
+        "n_seeded_twofold_splits": 256,
+        "pooled_validated_gap": -9.793131510416668,
+        "mean_within_level_validated_gap": 4.868977864583334,
+        "pooled_validated_signed_gross": 25.045328776041664,
+        "pooled_validated_signed_net": 34.83846028645833,
+        "descriptive_only": true
+      }
+    },
+    {
+      "before": "7",
+      "after": "9",
+      "pooled": {
+        "delta": [
+          5.458333333333334,
+          13.625,
+          35.25,
+          8.666666666666666,
+          11.75
+        ],
+        "signed_total_delta": 74.75,
+        "gross": 74.75,
+        "net": 74.75,
+        "cancellation": 0,
+        "fraction": 0
+      },
+      "by_level": [
+        {
+          "level": "A",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            4.333333333333334,
+            6.833333333333332,
+            3.6666666666666643,
+            11.666666666666666,
+            13
+          ],
+          "signed_total_delta": 39.5,
+          "gross": 39.5,
+          "net": 39.5,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "B",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -0.833333333333333,
+            14.833333333333334,
+            24.499999999999993,
+            11.499999999999998,
+            -8.833333333333334
+          ],
+          "signed_total_delta": 41.16666666666666,
+          "gross": 60.49999999999999,
+          "net": 41.16666666666666,
+          "cancellation": 19.333333333333336,
+          "fraction": 0.3195592286501378
+        },
+        {
+          "level": "C",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            6.833333333333334,
+            12.333333333333332,
+            44.99999999999999,
+            7.5,
+            19.833333333333332
+          ],
+          "signed_total_delta": 91.49999999999999,
+          "gross": 91.49999999999999,
+          "net": 91.49999999999999,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "D",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            11.499999999999998,
+            20.499999999999996,
+            67.83333333333334,
+            4,
+            23
+          ],
+          "signed_total_delta": 126.83333333333334,
+          "gross": 126.83333333333334,
+          "net": 126.83333333333334,
+          "cancellation": 0,
+          "fraction": 0
+        }
+      ],
+      "mean_within_level_cancellation": 4.833333333333334,
+      "mean_within_level_gross": 79.58333333333334,
+      "mean_within_level_net": 74.75,
+      "status": "SCORED_APPROXIMATE_INDEPENDENT_GROUPS",
+      "intervals": {
+        "n_family": 10,
+        "rows": [
+          {
+            "resident": "p",
+            "delta": 5.458333333333334,
+            "se": 1.9714102397353355,
+            "df": 12.559718922223611,
+            "simultaneous_ci95": [
+              -1.2362361820743013,
+              12.152902848740968
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "o",
+            "delta": 13.625,
+            "se": 3.2735789962126227,
+            "df": 16.646871746855485,
+            "simultaneous_ci95": [
+              3.0434006247916177,
+              24.206599375208384
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "s",
+            "delta": 35.25,
+            "se": 7.596600116718882,
+            "df": 21.93857334039039,
+            "simultaneous_ci95": [
+              11.550253753323126,
+              58.949746246676874
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "a",
+            "delta": 8.666666666666666,
+            "se": 2.244592266859272,
+            "df": 22.45676653178392,
+            "simultaneous_ci95": [
+              1.6817819794473516,
+              15.651551353885981
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "v",
+            "delta": 11.75,
+            "se": 4.371863955390703,
+            "df": 8.762829434609875,
+            "simultaneous_ci95": [
+              -4.5127589743520495,
+              28.01275897435205
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          }
+        ],
+        "positive": [
+          "o",
+          "s",
+          "a"
+        ],
+        "negative": [],
+        "opposing_signs_supported": false
+      },
+      "crossfit": {
+        "n_seeded_twofold_splits": 256,
+        "pooled_validated_gap": -0.044596354166666644,
+        "mean_within_level_validated_gap": -7.592447916666667,
+        "pooled_validated_signed_gross": 74.70540364583334,
+        "pooled_validated_signed_net": 74.75,
+        "descriptive_only": true
+      }
+    },
+    {
+      "before": "6",
+      "after": "10",
+      "pooled": {
+        "delta": [
+          -0.16666666666666696,
+          9.250000000000002,
+          10.791666666666668,
+          2.75,
+          6.666666666666665
+        ],
+        "signed_total_delta": 29.291666666666668,
+        "gross": 29.625,
+        "net": 29.291666666666668,
+        "cancellation": 0.33333333333333215,
+        "fraction": 0.011251758087201085
+      },
+      "by_level": [
+        {
+          "level": "A",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            6.166666666666667,
+            8.5,
+            -0.6666666666666643,
+            -6.500000000000001,
+            9.166666666666666
+          ],
+          "signed_total_delta": 16.666666666666668,
+          "gross": 31,
+          "net": 16.666666666666668,
+          "cancellation": 14.333333333333332,
+          "fraction": 0.46236559139784944
+        },
+        {
+          "level": "B",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            4.833333333333333,
+            17.166666666666668,
+            46,
+            4.333333333333333,
+            7.5
+          ],
+          "signed_total_delta": 79.83333333333333,
+          "gross": 79.83333333333333,
+          "net": 79.83333333333333,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "C",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -2.499999999999999,
+            8.5,
+            -9.166666666666664,
+            9,
+            7.166666666666666
+          ],
+          "signed_total_delta": 13.000000000000004,
+          "gross": 36.33333333333333,
+          "net": 13.000000000000004,
+          "cancellation": 23.333333333333325,
+          "fraction": 0.6422018348623851
+        },
+        {
+          "level": "D",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -9.166666666666668,
+            2.833333333333334,
+            7,
+            4.166666666666667,
+            2.833333333333333
+          ],
+          "signed_total_delta": 7.666666666666666,
+          "gross": 26,
+          "net": 7.666666666666666,
+          "cancellation": 18.333333333333336,
+          "fraction": 0.7051282051282052
+        }
+      ],
+      "mean_within_level_cancellation": 13.999999999999998,
+      "mean_within_level_gross": 43.291666666666664,
+      "mean_within_level_net": 29.291666666666668,
+      "status": "DESCRIPTIVE_ONLY_AMBIGUOUS_REP_LABELS",
+      "intervals": null,
+      "crossfit": null
+    },
+    {
+      "before": "5",
+      "after": "11",
+      "pooled": {
+        "delta": [
+          0.4583333333333335,
+          8.75,
+          12.375,
+          4.583333333333333,
+          13.041666666666668
+        ],
+        "signed_total_delta": 39.208333333333336,
+        "gross": 39.208333333333336,
+        "net": 39.208333333333336,
+        "cancellation": 0,
+        "fraction": 0
+      },
+      "by_level": [
+        {
+          "level": "A",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            1,
+            10,
+            11.833333333333336,
+            5.666666666666667,
+            20.333333333333332
+          ],
+          "signed_total_delta": 48.833333333333336,
+          "gross": 48.833333333333336,
+          "net": 48.833333333333336,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "B",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            0.666666666666667,
+            11.333333333333334,
+            10.333333333333336,
+            2.833333333333333,
+            12.833333333333332
+          ],
+          "signed_total_delta": 38,
+          "gross": 38,
+          "net": 38,
+          "cancellation": 0,
+          "fraction": 0
+        },
+        {
+          "level": "C",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            -0.33333333333333304,
+            4.333333333333334,
+            25.833333333333332,
+            5.166666666666666,
+            5.333333333333334
+          ],
+          "signed_total_delta": 40.333333333333336,
+          "gross": 41,
+          "net": 40.333333333333336,
+          "cancellation": 0.6666666666666643,
+          "fraction": 0.01626016260162596
+        },
+        {
+          "level": "D",
+          "n_before": 6,
+          "n_after": 6,
+          "delta": [
+            0.5,
+            9.333333333333332,
+            1.5,
+            4.666666666666666,
+            13.666666666666668
+          ],
+          "signed_total_delta": 29.666666666666664,
+          "gross": 29.666666666666664,
+          "net": 29.666666666666664,
+          "cancellation": 0,
+          "fraction": 0
+        }
+      ],
+      "mean_within_level_cancellation": 0.16666666666666607,
+      "mean_within_level_gross": 39.375,
+      "mean_within_level_net": 39.208333333333336,
+      "status": "SCORED_APPROXIMATE_INDEPENDENT_GROUPS",
+      "intervals": {
+        "n_family": 10,
+        "rows": [
+          {
+            "resident": "p",
+            "delta": 0.4583333333333335,
+            "se": 1.6680202836496523,
+            "df": 26.698091977944696,
+            "simultaneous_ci95": [
+              -4.6450884144728,
+              5.5617550811394665
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "o",
+            "delta": 8.75,
+            "se": 1.8863545089227882,
+            "df": 27.54588992461211,
+            "simultaneous_ci95": [
+              2.9943713618240393,
+              14.50562863817596
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "s",
+            "delta": 12.375,
+            "se": 5.298158747254663,
+            "df": 24.022994607651885,
+            "simultaneous_ci95": [
+              -3.99746480460556,
+              28.74746480460556
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "a",
+            "delta": 4.583333333333333,
+            "se": 1.6370281338789237,
+            "df": 26.28030787665522,
+            "simultaneous_ci95": [
+              -0.432374939229355,
+              9.599041605896021
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          },
+          {
+            "resident": "v",
+            "delta": 13.041666666666668,
+            "se": 2.0221859734235896,
+            "df": 27.983990433878393,
+            "simultaneous_ci95": [
+              6.879911261073515,
+              19.20342207225982
+            ],
+            "status": "APPROXIMATE_WELCH_BONFERRONI"
+          }
+        ],
+        "positive": [
+          "o",
+          "v"
+        ],
+        "negative": [],
+        "opposing_signs_supported": false
+      },
+      "crossfit": {
+        "n_seeded_twofold_splits": 256,
+        "pooled_validated_gap": -1.739583333333333,
+        "mean_within_level_validated_gap": -8.418131510416666,
+        "pooled_validated_signed_gross": 37.46875,
+        "pooled_validated_signed_net": 39.20833333333333,
+        "descriptive_only": true
+      }
+    }
+  ],
+  "control_resident_mean": [
+    5.833333333333333,
+    19.333333333333332,
+    42.833333333333336,
+    14,
+    13.833333333333334
+  ],
+  "limits": [
+    "Only resident count responses; no newcomer performance or growth analysis.",
+    "C=G−N nonnegative by construction; simultaneous intervals and descriptive cross-fit assess sign reproducibility.",
+    "Replicate labels ambiguous in two day-6 cells; no inferential scoring for affected comparison.",
+    "Approximate independent-group Welch intervals; not an exact randomization test.",
+    "No causal interaction coefficients, biomass inference or independent replication across contrasts."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45527948842",
+  "source_job_id": 138915847327,
+  "source_commit": "2267688c5d6fd7468ad501bdac969278ba1c4b4b",
+  "article_doi": "10.1111/ele.14493",
+  "prescore_contract": "docs/AHIF_LEAR2024_CANCELLATION_PRESCORE_20261125.md"
+}
