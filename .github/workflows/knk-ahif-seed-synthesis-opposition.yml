@@ -1,0 +1,31 @@
+name: AHIF seed-addition synthesis descriptive species opposition
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-seed-synthesis-opposition.yml"
+      - "benchmarks/score_ahif_seed_synthesis_opposition.py"
+      - "tests/test_ahif_seed_synthesis_opposition.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate cancellation and source strata gates
+        run: |
+          python -m pip install numpy pytest
+          python -m pytest tests/test_ahif_seed_synthesis_opposition.py -q
+      - name: Verify pinned original files and score descriptive matched contrasts
+        run: python -m benchmarks.score_ahif_seed_synthesis_opposition --root "$RUNNER_TEMP/seed-synthesis" --out "$RUNNER_TEMP/seed-synthesis/opposition.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-seed-synthesis-opposition-derived-only
+          path: ${{ runner.temp }}/seed-synthesis/opposition.json
+          retention-days: 30

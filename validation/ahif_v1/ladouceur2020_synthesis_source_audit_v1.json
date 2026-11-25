@@ -1,0 +1,802 @@
+{
+  "status": "SOURCE_BYTES_VERIFIED_SCHEMA_AUDITED_NOT_ECOLOGICAL_SCORING",
+  "manifest": {
+    "article_id": 12319682,
+    "version": 1,
+    "doi": "10.6084/m9.figshare.12319682.v1",
+    "title": "Reducing dispersal limitation via seed addition increases species richness but not aboveground biomass",
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "source_description": " We searched for seed addition studies where the experiment included: 1)  an unmanipulated control and a treatment of diverse seed mixtures selected from the regional species pool, (2) the number and identity of every species added as seed, and (3) measured species richness and the relative contribution of each species to community biomass (that were not weeded or otherwise altered). Because these criteria were relatively stringent, we did not restrict ourselves to formally standardized literature searches, but rather attempted to find as many datasets as possible that met our search criteria.     We began by consulting published meta-analyses , and other experimental data sources (e.g., U.S. Long Term Ecological Research [LTER] websites). We then used different combinations of standardized search strings including terms related to biodiversity (‘richness’, ‘diversity’), biomass (‘ecosystem function’, ‘above-ground biomass’) and seed addition (‘propagule arrival’, ‘BEF experiment’, ‘seeding’). For each experiment identified, we scanned the paper to determine whether it met our inclusion criteria. For some studies, we were able to download or extract data directly. For the rest, we contacted authors to request species-level data and other needed information (i.e. seeded richness).     We found a total of 12 studies that tested the effect of seed addition on species richness and biomass in grassland habitats, where the identity and number of seeds per species added was known ( see Table 1, Table S1, Figure S1 in paper). In all studies, species added via the seed addition treatments were part of the broader regional species pool, and were added to each community through a high density of seed mixes added to treatment (but not control) plots .     Several experiments included treatments other than the primary focus of this study (e.g., disturbance, nutrient addition), which we omitted from all analyses. We also removed treatments with unknown richness of added seeds (e.g., hay). This led to some experiments having an unbalanced design between controls and treatments. Community level biomass was sometimes measured directly within plots, and other times estimated from percent cover or coarser samples (e.g., biomass strip) (Table S1). Where biomass was measured indirectly (sampled on smaller subplots), the percent cover of each species was divided by the plot percent cover and multiplied by the community biomass (g/m2) sample from a neighboring plot or biomass strip with the same treatment, and per species biomass estimates were then summed to the plot level .  We standardized data for each experiment in a hierarchical experimental design: plots nested in blocks, nested in sites. The experiments varied in the number of species added (hereafter seeded richness), the density of seeds added, and length of experiment . Combined, the study-level treatments resulted in a ‘seeded richness gradient’ ranging from one to sixty species .     These data were derived from existing studies cited in the paper in Table 1, but as methods indicate these data posted here contain only control and treated plots. Please contact original authors for use of these data, or for entire datasets relating to these studies. Cite original papers when using these data. ",
+    "files": {
+      "species": {
+        "source_name": "SeedAdd_Sp_level.csv",
+        "file_id": 22714958,
+        "size": 23301361,
+        "md5": "420281357484766c25df281a4cd2ed45",
+        "sha256": "d9f09ea90b3bac6e9913000d93acf24e1c8b0293bebac563477c9e90a9fd590e"
+      },
+      "plot": {
+        "source_name": "SeedAdd_Plot_Level.csv",
+        "file_id": 22714961,
+        "size": 962570,
+        "md5": "715c3ed27e6c11d41185a02a2ab07b90",
+        "sha256": "0455c64afd914af5c7f85273ae950104ece31bf94fe9737f1a172aa6d9f437a3"
+      }
+    },
+    "csv_encoding": {
+      "plot": "cp1252",
+      "species": "cp1252"
+    }
+  },
+  "plot_rows": 3393,
+  "species_rows": 58426,
+  "plot_unique_state_ids": 3393,
+  "duplicate_plot_state_rows": 0,
+  "species_unique_state_ids": 3393,
+  "duplicate_state_species_rows": 0,
+  "plot_only_state_ids": 0,
+  "species_only_state_ids": 0,
+  "metadata_mismatch_fields": {},
+  "n_experiments": 12,
+  "experiments": [
+    {
+      "experiment": "ASGA_Michigan",
+      "plot_rows": 48,
+      "unique_plot_state_ids": 48,
+      "species_rows": 511,
+      "distinct_species": 48,
+      "seed_richness_levels": {
+        "0": 24,
+        "43": 24
+      },
+      "treatment_labels": {
+        "Control": 24,
+        "Seeds": 24
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 24,
+      "strata_with_seed0_and_positive": 24,
+      "n_joined_unique_states": 48,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 48,
+      "species_count_matches_reported_richness": 48,
+      "positive_weights_match_reported_richness": 48,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9998598458304135,
+        1,
+        1.00029123386079
+      ],
+      "states_mass_sum_within_one_percent": 48
+    },
+    {
+      "experiment": "CCR_04",
+      "plot_rows": 28,
+      "unique_plot_state_ids": 28,
+      "species_rows": 197,
+      "distinct_species": 36,
+      "seed_richness_levels": {
+        "0": 14,
+        "10": 14
+      },
+      "treatment_labels": {
+        "Seeds": 14,
+        "Control": 14
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 2,
+      "strata_with_seed0_and_positive": 2,
+      "n_joined_unique_states": 28,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 28,
+      "species_count_matches_reported_richness": 28,
+      "positive_weights_match_reported_richness": 28,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.22565999663695982,
+        0.9993108201240524,
+        1.000903342366757
+      ],
+      "states_mass_sum_within_one_percent": 14
+    },
+    {
+      "experiment": "CCR_093",
+      "plot_rows": 960,
+      "unique_plot_state_ids": 960,
+      "species_rows": 15695,
+      "distinct_species": 169,
+      "seed_richness_levels": {
+        "0": 474,
+        "5": 54,
+        "10": 54,
+        "15": 54,
+        "20": 54,
+        "25": 54,
+        "30": 54,
+        "35": 54,
+        "40": 54,
+        "54": 54
+      },
+      "treatment_labels": {
+        "Seeds": 486,
+        "Control": 474
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 270,
+      "strata_with_seed0_and_positive": 222,
+      "n_joined_unique_states": 960,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 960,
+      "species_count_matches_reported_richness": 847,
+      "positive_weights_match_reported_richness": 847,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.7073170741056676,
+        1,
+        1.0000000002690583
+      ],
+      "states_mass_sum_within_one_percent": 925
+    },
+    {
+      "experiment": "California_Invade",
+      "plot_rows": 80,
+      "unique_plot_state_ids": 80,
+      "species_rows": 720,
+      "distinct_species": 39,
+      "seed_richness_levels": {
+        "0": 40,
+        "5": 40
+      },
+      "treatment_labels": {
+        "Control": 40,
+        "Seeds": 40
+      },
+      "site_count": 2,
+      "site_block_yeartrt_strata": 40,
+      "strata_with_seed0_and_positive": 40,
+      "n_joined_unique_states": 80,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 80,
+      "species_count_matches_reported_richness": 80,
+      "positive_weights_match_reported_richness": 74,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9998554495518935,
+        1,
+        1.0000743439149506
+      ],
+      "states_mass_sum_within_one_percent": 80
+    },
+    {
+      "experiment": "California_Prop_Limi",
+      "plot_rows": 531,
+      "unique_plot_state_ids": 531,
+      "species_rows": 5385,
+      "distinct_species": 131,
+      "seed_richness_levels": {
+        "0": 36,
+        "1": 316,
+        "3": 179
+      },
+      "treatment_labels": {
+        "Seeds": 495,
+        "Control": 36
+      },
+      "site_count": 3,
+      "site_block_yeartrt_strata": 36,
+      "strata_with_seed0_and_positive": 36,
+      "n_joined_unique_states": 531,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 531,
+      "species_count_matches_reported_richness": 530,
+      "positive_weights_match_reported_richness": 530,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.4999999999453552,
+        1,
+        1.0000000003222558
+      ],
+      "states_mass_sum_within_one_percent": 530
+    },
+    {
+      "experiment": "Germany_Montane",
+      "plot_rows": 232,
+      "unique_plot_state_ids": 232,
+      "species_rows": 5306,
+      "distinct_species": 119,
+      "seed_richness_levels": {
+        "0": 116,
+        "60": 116
+      },
+      "treatment_labels": {
+        "Control": 116,
+        "Seeds": 116
+      },
+      "site_count": 20,
+      "site_block_yeartrt_strata": 58,
+      "strata_with_seed0_and_positive": 58,
+      "n_joined_unique_states": 232,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 232,
+      "species_count_matches_reported_richness": 230,
+      "positive_weights_match_reported_richness": 230,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.99966982170372,
+        1,
+        1.0005733944954127
+      ],
+      "states_mass_sum_within_one_percent": 232
+    },
+    {
+      "experiment": "Halle",
+      "plot_rows": 120,
+      "unique_plot_state_ids": 120,
+      "species_rows": 1782,
+      "distinct_species": 138,
+      "seed_richness_levels": {
+        "0": 60,
+        "20": 60
+      },
+      "treatment_labels": {
+        "Control": 60,
+        "Seeds": 60
+      },
+      "site_count": 10,
+      "site_block_yeartrt_strata": 30,
+      "strata_with_seed0_and_positive": 20,
+      "n_joined_unique_states": 120,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 120,
+      "species_count_matches_reported_richness": 120,
+      "positive_weights_match_reported_richness": 120,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9999999997179126,
+        0.9999999999999998,
+        1.0000000003025282
+      ],
+      "states_mass_sum_within_one_percent": 120
+    },
+    {
+      "experiment": "Jena",
+      "plot_rows": 1020,
+      "unique_plot_state_ids": 1020,
+      "species_rows": 22408,
+      "distinct_species": 190,
+      "seed_richness_levels": {
+        "0": 36,
+        "1": 192,
+        "2": 192,
+        "4": 192,
+        "8": 192,
+        "16": 168,
+        "60": 48
+      },
+      "treatment_labels": {
+        "Seeds": 984,
+        "Control": 36
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 12,
+      "strata_with_seed0_and_positive": 6,
+      "n_joined_unique_states": 1020,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 1020,
+      "species_count_matches_reported_richness": 1020,
+      "positive_weights_match_reported_richness": 1020,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9999999999999998,
+        1,
+        1.0000000000000002
+      ],
+      "states_mass_sum_within_one_percent": 1020
+    },
+    {
+      "experiment": "Jena2",
+      "plot_rows": 36,
+      "unique_plot_state_ids": 36,
+      "species_rows": 688,
+      "distinct_species": 61,
+      "seed_richness_levels": {
+        "0": 18,
+        "30": 18
+      },
+      "treatment_labels": {
+        "Seeds": 18,
+        "Control": 18
+      },
+      "site_count": 6,
+      "site_block_yeartrt_strata": 6,
+      "strata_with_seed0_and_positive": 6,
+      "n_joined_unique_states": 36,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 36,
+      "species_count_matches_reported_richness": 36,
+      "positive_weights_match_reported_richness": 36,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9999999998554229,
+        1.0000000000248974,
+        1.000000000113032
+      ],
+      "states_mass_sum_within_one_percent": 36
+    },
+    {
+      "experiment": "Kansas_KUFS_LTER_Hay_Meadow_Exp_2",
+      "plot_rows": 120,
+      "unique_plot_state_ids": 120,
+      "species_rows": 1572,
+      "distinct_species": 100,
+      "seed_richness_levels": {
+        "0": 60,
+        "41": 60
+      },
+      "treatment_labels": {
+        "Control": 60,
+        "Seeds": 60
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 60,
+      "strata_with_seed0_and_positive": 60,
+      "n_joined_unique_states": 120,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 120,
+      "species_count_matches_reported_richness": 120,
+      "positive_weights_match_reported_richness": 113,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.999349593495935,
+        0.9999360122856412,
+        1.0003311623799536
+      ],
+      "states_mass_sum_within_one_percent": 120
+    },
+    {
+      "experiment": "Kansas_KUFS_LTER_Old_Field_Exp_1",
+      "plot_rows": 168,
+      "unique_plot_state_ids": 168,
+      "species_rows": 3849,
+      "distinct_species": 128,
+      "seed_richness_levels": {
+        "0": 84,
+        "50": 84
+      },
+      "treatment_labels": {
+        "Control": 84,
+        "Seeds": 84
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 84,
+      "strata_with_seed0_and_positive": 84,
+      "n_joined_unique_states": 168,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 168,
+      "species_count_matches_reported_richness": 168,
+      "positive_weights_match_reported_richness": 165,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.9995068222916326,
+        1,
+        1.0004540088985745
+      ],
+      "states_mass_sum_within_one_percent": 168
+    },
+    {
+      "experiment": "Texas_Temple_Prarie",
+      "plot_rows": 50,
+      "unique_plot_state_ids": 50,
+      "species_rows": 313,
+      "distinct_species": 49,
+      "seed_richness_levels": {
+        "0": 25,
+        "20": 25
+      },
+      "treatment_labels": {
+        "Control": 25,
+        "Seeds": 25
+      },
+      "site_count": 1,
+      "site_block_yeartrt_strata": 1,
+      "strata_with_seed0_and_positive": 1,
+      "n_joined_unique_states": 50,
+      "metadata_mismatch_states": 0,
+      "valid_species_mass_states": 50,
+      "species_count_matches_reported_richness": 37,
+      "positive_weights_match_reported_richness": 37,
+      "species_weight_sum_ratio_to_plot_mass_quantiles": [
+        0.32234432234432236,
+        1,
+        1.0000000000000002
+      ],
+      "states_mass_sum_within_one_percent": 38
+    }
+  ],
+  "plot_field_profile": {
+    "": {
+      "distinct": 3393,
+      "missing": 0
+    },
+    "unique.id_": {
+      "distinct": 3393,
+      "missing": 0
+    },
+    "Experiment_": {
+      "distinct": 12,
+      "missing": 0,
+      "values": {
+        "ASGA_Michigan": 48,
+        "CCR_04": 28,
+        "CCR_093": 960,
+        "California_Invade": 80,
+        "California_Prop_Limi": 531,
+        "Germany_Montane": 232,
+        "Halle": 120,
+        "Jena": 1020,
+        "Jena2": 36,
+        "Kansas_KUFS_LTER_Hay_Meadow_Exp_2": 120,
+        "Kansas_KUFS_LTER_Old_Field_Exp_1": 168,
+        "Texas_Temple_Prarie": 50
+      }
+    },
+    "yr.trt": {
+      "distinct": 18,
+      "missing": 0,
+      "values": {
+        "0": 120,
+        "1": 806,
+        "2": 778,
+        "3": 815,
+        "4": 170,
+        "5": 36,
+        "6": 140,
+        "7": 80,
+        "8": 20,
+        "9": 20,
+        "10": 20,
+        "11": 20,
+        "12": 20,
+        "13": 80,
+        "14": 20,
+        "15": 8,
+        "17": 120,
+        "21": 120
+      }
+    },
+    "trt": {
+      "distinct": 2,
+      "missing": 0,
+      "values": {
+        "Control": 987,
+        "Seeds": 2406
+      }
+    },
+    "site": {
+      "distinct": 48,
+      "missing": 0
+    },
+    "block": {
+      "distinct": 107,
+      "missing": 0
+    },
+    "plot": {
+      "distinct": 822,
+      "missing": 0
+    },
+    "seed.rich": {
+      "distinct": 20,
+      "missing": 0,
+      "values": {
+        "0": 987,
+        "1": 508,
+        "2": 192,
+        "3": 179,
+        "4": 192,
+        "5": 94,
+        "8": 192,
+        "10": 68,
+        "15": 54,
+        "16": 168,
+        "20": 139,
+        "25": 54,
+        "30": 72,
+        "35": 54,
+        "40": 54,
+        "41": 60,
+        "43": 24,
+        "50": 84,
+        "54": 54,
+        "60": 164
+      }
+    },
+    "biomass.plot": {
+      "distinct": 2426,
+      "missing": 0
+    },
+    "rich.plot": {
+      "distinct": 51,
+      "missing": 0
+    },
+    "cover.plot": {
+      "distinct": 1320,
+      "missing": 312
+    },
+    "cover.measure": {
+      "distinct": 5,
+      "missing": 2419,
+      "values": {
+        "AbsoluteCover": 540,
+        "NA": 2419,
+        "Relative.Abundance": 14,
+        "RelativeCover": 360,
+        "RelativeSplit": 60
+      }
+    },
+    "custodian": {
+      "distinct": 10,
+      "missing": 0,
+      "values": {
+        "Auge": 120,
+        "Buchmann, Roscher": 36,
+        "Clark": 28,
+        "Foster": 288,
+        "Reynolds": 48,
+        "Roscher": 1020,
+        "Seabloom": 611,
+        "Stein": 232,
+        "Tilman": 960,
+        "Wilsey": 50
+      }
+    },
+    "reference": {
+      "distinct": 12,
+      "missing": 0,
+      "values": {
+        "Clark, C.M. & Tilman, D. (2010). Recovery of plant diversity following N cessation: effects of recruitment, litter, and elevated N cycling. Ecology, 91, 3620â€“3630.": 28,
+        "Foster, B. (n.d.). Long-term studies of secondary succession and community assembly in the prairie-forest ecotone of eastern Kansas, Hay meadow restoration experiment.": 120,
+        "Foster, B. (n.d.). Long-term studies of secondary succession and community assembly in the prairie-forest ecotone of eastern Kansas, Old-field succession experiment.": 168,
+        "Maron, J.L., Auge, H., Pearson, D.E., Korell, L., Hensen, I., Suding, K.N., et al. (2014). Staged invasions across disparate grasslands: effects of seed provenance, consumers and disturbance on productivity and species richness. Ecol Lett, 17, 499â€“507.": 120,
+        "Reynolds, H.L., Mittlebach, G.G., Darcy-Hall, T.L., Houseman, G.R. & Gross, K.L. (2007). No effect of varying soil resource heterogeneity on plant species richness in a low fertility grassland. J Ecology, 95, 723Ð733.": 48,
+        "Roscher, C., Schumacher, J., Baade, J., Wilcke, W., Gleixner, G., Weisser, W.W., et al. (2004). The role of biodiversity for element cycling and trophic interactions: an experimental approach in a grassland community. Basic and Applied Ecology, 5, 107â€“121.": 1020,
+        "Seabloom, E.W. (2010). Spatial and temporal variability in propagule limitation of California native grasses. Oikos, 120, 291â€“301": 531,
+        "Seabloom, E.W., Harpole, W.S., Reichman, O.J. & Tilman, D. (2003). Invasion, competitive dominance, and resource use by exotic and native California grassland species. Proceedings of the National Academy of Sciences, 100, 13384Ð13389.": 80,
+        "Stein, C., Auge, H., Fischer, M., Weisser, W.W. & Prati, D. (2008). Dispersal and seed limitation affect diversity and productivity of montane grasslands. Oikos, 117, 1469â€“1478.": 232,
+        "Tilman, D. (1997). Community invasibility, recruitment limitation, and grassland biodiversity. Ecology, 78, 81â€“92.": 960,
+        "Wilsey, B.J. & Polley, H.W. (2003). Effects of Seed Additions and Grazing History on Diversity and Productivity of Subhumid Grasslands_. Ecology, 84, 920Ð931.": 50,
+        "no reference": 36
+      }
+    }
+  },
+  "species_field_profile": {
+    "": {
+      "distinct": 58426,
+      "missing": 0
+    },
+    "unique.id_": {
+      "distinct": 3393,
+      "missing": 0
+    },
+    "Experiment": {
+      "distinct": 12,
+      "missing": 0,
+      "values": {
+        "ASGA Michigan": 511,
+        "CCR 04": 197,
+        "CCR 093": 15695,
+        "California Invade": 720,
+        "California Prop Limi": 5385,
+        "Germany Montane": 5306,
+        "Halle": 1782,
+        "Jena": 22408,
+        "Jena2": 688,
+        "Kansas (KUFS) LTER Hay Meadow Exp 2": 1572,
+        "Kansas (KUFS) LTER Old Field Exp 1": 3849,
+        "Texas Temple Prarie": 313
+      }
+    },
+    "Experiment_": {
+      "distinct": 12,
+      "missing": 0,
+      "values": {
+        "ASGA_Michigan": 511,
+        "CCR_04": 197,
+        "CCR_093": 15695,
+        "California_Invade": 720,
+        "California_Prop_Limi": 5385,
+        "Germany_Montane": 5306,
+        "Halle": 1782,
+        "Jena": 22408,
+        "Jena2": 688,
+        "Kansas_KUFS_LTER_Hay_Meadow_Exp_2": 1572,
+        "Kansas_KUFS_LTER_Old_Field_Exp_1": 3849,
+        "Texas_Temple_Prarie": 313
+      }
+    },
+    "yr.trt": {
+      "distinct": 18,
+      "missing": 0,
+      "values": {
+        "0": 1734,
+        "1": 11942,
+        "2": 15337,
+        "3": 15543,
+        "4": 1741,
+        "5": 554,
+        "6": 2307,
+        "7": 1459,
+        "8": 400,
+        "9": 403,
+        "10": 375,
+        "11": 333,
+        "12": 324,
+        "13": 1368,
+        "14": 304,
+        "15": 120,
+        "17": 2010,
+        "21": 2172
+      }
+    },
+    "trt": {
+      "distinct": 3,
+      "missing": 0,
+      "values": {
+        "Control": 14484,
+        "Seed": 5060,
+        "Seeds": 38882
+      }
+    },
+    "species": {
+      "distinct": 1053,
+      "missing": 0
+    },
+    "biomass.sp": {
+      "distinct": 18505,
+      "missing": 0
+    },
+    "seed.rich": {
+      "distinct": 20,
+      "missing": 0,
+      "values": {
+        "0": 14484,
+        "1": 7689,
+        "2": 4132,
+        "3": 1804,
+        "4": 3787,
+        "5": 1228,
+        "8": 3688,
+        "10": 907,
+        "15": 821,
+        "16": 3697,
+        "20": 2135,
+        "25": 938,
+        "30": 1335,
+        "35": 1112,
+        "40": 1074,
+        "41": 865,
+        "43": 288,
+        "50": 2449,
+        "54": 1205,
+        "60": 4788
+      }
+    },
+    "biomass.plot": {
+      "distinct": 2426,
+      "missing": 0
+    },
+    "seed.density": {
+      "distinct": 14,
+      "missing": 0,
+      "values": {
+        "1": 14167,
+        "2": 511,
+        "3": 2449,
+        "4": 14218,
+        "5": 1036,
+        "6": 1471,
+        "7": 2965,
+        "8": 1440,
+        "9": 161,
+        "10": 1045,
+        "12": 865,
+        "14": 197,
+        "16": 8732,
+        "17": 9169
+      }
+    },
+    "biomass.measure": {
+      "distinct": 2,
+      "missing": 0,
+      "values": {
+        "direct": 3212,
+        "indirect": 55214
+      }
+    },
+    "cover.sp": {
+      "distinct": 4363,
+      "missing": 3212
+    },
+    "cover.plot": {
+      "distinct": 1320,
+      "missing": 3212
+    },
+    "custodian": {
+      "distinct": 10,
+      "missing": 0,
+      "values": {
+        "Auge": 1782,
+        "Buchmann, Roscher": 688,
+        "Clark": 197,
+        "Foster": 5421,
+        "Reynolds": 511,
+        "Roscher": 22408,
+        "Seabloom": 6105,
+        "Stein": 5306,
+        "Tilman": 15695,
+        "Wilsey": 313
+      }
+    },
+    "reference": {
+      "distinct": 12,
+      "missing": 0,
+      "values": {
+        "Clark, C.M. & Tilman, D. (2010). Recovery of plant diversity following N cessation: effects of recruitment, litter, and elevated N cycling. Ecology, 91, 3620â€“3630.": 197,
+        "Foster, B. (n.d.). Long-term studies of secondary succession and community assembly in the prairie-forest ecotone of eastern Kansas, Hay meadow restoration experiment.": 1572,
+        "Foster, B. (n.d.). Long-term studies of secondary succession and community assembly in the prairie-forest ecotone of eastern Kansas, Old-field succession experiment.": 3849,
+        "Maron, J.L., Auge, H., Pearson, D.E., Korell, L., Hensen, I., Suding, K.N., et al. (2014). Staged invasions across disparate grasslands: effects of seed provenance, consumers and disturbance on productivity and species richness. Ecol Lett, 17, 499â€“507.": 1782,
+        "Reynolds, H.L., Mittlebach, G.G., Darcy-Hall, T.L., Houseman, G.R. & Gross, K.L. (2007). No effect of varying soil resource heterogeneity on plant species richness in a low fertility grassland. J Ecology, 95, 723Ð733.": 511,
+        "Roscher, C., Schumacher, J., Baade, J., Wilcke, W., Gleixner, G., Weisser, W.W., et al. (2004). The role of biodiversity for element cycling and trophic interactions: an experimental approach in a grassland community. Basic and Applied Ecology, 5, 107â€“121.": 22408,
+        "Seabloom, E.W. (2010). Spatial and temporal variability in propagule limitation of California native grasses. Oikos, 120, 291â€“301": 5385,
+        "Seabloom, E.W., Harpole, W.S., Reichman, O.J. & Tilman, D. (2003). Invasion, competitive dominance, and resource use by exotic and native California grassland species. Proceedings of the National Academy of Sciences, 100, 13384Ð13389.": 720,
+        "Stein, C., Auge, H., Fischer, M., Weisser, W.W. & Prati, D. (2008). Dispersal and seed limitation affect diversity and productivity of montane grasslands. Oikos, 117, 1469â€“1478.": 5306,
+        "Tilman, D. (1997). Community invasibility, recruitment limitation, and grassland biodiversity. Ecology, 78, 81â€“92.": 15695,
+        "Wilsey, B.J. & Polley, H.W. (2003). Effects of Seed Additions and Grazing History on Diversity and Productivity of Subhumid Grasslands_. Ecology, 84, 920Ð931.": 313,
+        "no reference": 688
+      }
+    },
+    "cover.measure": {
+      "distinct": 5,
+      "missing": 42630,
+      "values": {
+        "AbsoluteCover": 8584,
+        "NA": 42630,
+        "Relative.Abundance": 101,
+        "RelativeCover": 6081,
+        "RelativeSplit": 1030
+      }
+    },
+    "site": {
+      "distinct": 48,
+      "missing": 0
+    },
+    "block": {
+      "distinct": 107,
+      "missing": 0
+    },
+    "plot": {
+      "distinct": 822,
+      "missing": 0
+    },
+    "rich.plot": {
+      "distinct": 51,
+      "missing": 0
+    },
+    "unique.id.sp": {
+      "distinct": 58426,
+      "missing": 0
+    }
+  },
+  "potential_original_physical_id_fields": [
+    "plot",
+    "biomass.plot",
+    "rich.plot",
+    "cover.plot"
+  ],
+  "potential_seed_membership_fields": [
+    "seed.rich",
+    "seed.density"
+  ],
+  "limits": [
+    "Secondary synthesis, not original raw-source audit.",
+    "Species masses may derive from cover and measured total.",
+    "State IDs may not identify independent plots across years.",
+    "No treatment inference or recruitment identity assignment."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45539188760",
+  "source_job_id": 138953217266,
+  "source_commit": "a32a06f9afd5651150e5922dddabbe28d18ea7f0",
+  "article_doi": "10.1111/ele.13566"
+}
