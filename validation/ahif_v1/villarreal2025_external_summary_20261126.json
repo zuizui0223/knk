@@ -1,0 +1,751 @@
+{
+  "status": "INDEPENDENT_ZOOPLANKTON_EXTERNAL_VALIDATION_NOT_META",
+  "source_audit": {
+    "source_doi": "10.6084/m9.figshare.28651985.v1",
+    "source_files": {
+      "Dadosbrutosfinais1.1.txt": {
+        "md5": "e608f24dffd5f28b4f8d6bf125b19668",
+        "sha256": "acd9c98361e526b409679cf48f69b2fdb38a132bac560f43715a6c0e4b216bf7"
+      },
+      "1. Analyses-v7-06Oct2025.R": {
+        "md5": "2558c595613346c75a8b591282b41162",
+        "sha256": "464d6cfa645e36b95c813a732d57c82157b2e7f4f16a1d966540f4e2751f7e2e"
+      }
+    },
+    "tank_pairs": [
+      [
+        1,
+        16
+      ],
+      [
+        5,
+        15
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        26
+      ],
+      [
+        8,
+        22
+      ],
+      [
+        18,
+        2
+      ],
+      [
+        20,
+        23
+      ],
+      [
+        28,
+        25
+      ],
+      [
+        30,
+        21
+      ],
+      [
+        38,
+        13
+      ],
+      [
+        3,
+        31
+      ],
+      [
+        11,
+        35
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        17,
+        34
+      ],
+      [
+        19,
+        9
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        29,
+        33
+      ],
+      [
+        32,
+        39
+      ],
+      [
+        36,
+        10
+      ],
+      [
+        40,
+        37
+      ]
+    ],
+    "n_tanks": 40,
+    "n_linked_pairs": 20,
+    "n_profiles": 200,
+    "n_post_profiles": 120,
+    "n_taxa": 63,
+    "source_encoding": "latin-1",
+    "taxon_codes": [
+      "Alonelladadayi",
+      "Arcellacostata",
+      "Arcellacrenulata",
+      "Arcellagibbosa",
+      "Arcellamitrata",
+      "Arcellarotundataalta",
+      "Arcellavulgaris",
+      "Arcellavulgarisundulata",
+      "Bosminahagmanni",
+      "Bosminalongirostris",
+      "Bosminatubicen",
+      "Bosminopsisbrandorffi",
+      "Brachionusdolabratusdolabratus",
+      "Brachionusfalcatusfalcatus",
+      "Brachionuspatuluspatulus",
+      "Centropyxisaculeata",
+      "Centropyxisaculeataoblonga",
+      "Centropyxisdiscoides",
+      "Centropyxisecornis",
+      "Centropyxismarsupiformis",
+      "Centropyxisminuta",
+      "Ceriodaphniacornuta",
+      "Ceriodaphniasilvestrii",
+      "Chydorussphaericus",
+      "Colurellacoluruscolurus",
+      "Curcubitellavlasinensis",
+      "Daphniaambigua",
+      "Diaphonosomabirgei",
+      "Difflugiadifficilis",
+      "Difflugiaelegans",
+      "Difflugialitophila",
+      "Difflugialobostoma",
+      "Difflugiaoblonga",
+      "Difflugiasp7",
+      "Hexarthramiramira",
+      "Keratellaamericana",
+      "Keratellafalculata",
+      "Lecaneaculeata",
+      "Lecanecurviformis",
+      "LecaneH.elasma",
+      "Lecanesignifera",
+      "Lepadellaimbricata",
+      "Lepadellapatellapatella",
+      "Mesocyclopsmeridianus",
+      "Mesocyclopsogumnus",
+      "Microcyclopsalius",
+      "Microcyclopsancepsanceps",
+      "Microcyclopsceibaensis",
+      "Microcyclopsfinitimus",
+      "Moinamicrura",
+      "Moinaminuta",
+      "Moinodaphniamacleayi",
+      "Netzeliacorona",
+      "Netzeliatuberculata",
+      "Notodiaptomusbrandorffi",
+      "Notodiaptomussp.",
+      "Polyarthradolichoptera",
+      "Polyarthravulgaris",
+      "Thermocyclopsminutus",
+      "Trichorcercabidens",
+      "trichorcercaD.tigris",
+      "Lesquereusiaglobulosa",
+      "Daphniagessneri"
+    ],
+    "excluded_columns": [
+      "Copepoditocalanoida",
+      "Copepoditocyclopoida",
+      "Náupliocalanoida",
+      "Náupliocyclopoida"
+    ],
+    "individuals": 88774,
+    "sample_total_range": [
+      126,
+      1225
+    ],
+    "post_dates_days": [
+      65,
+      86,
+      101
+    ],
+    "arm_sample_counts": {
+      "A0": 50,
+      "Aa": 50,
+      "B0": 50,
+      "Ab": 50
+    }
+  },
+  "seed": 2026112613,
+  "n_splits": 256,
+  "primary": {
+    "2": {
+      "n_common": 1024,
+      "n_total": 1024,
+      "factorial": {
+        "OO": 0.6422728410412525,
+        "RO": 0.6429440099203929,
+        "OR": 0.654686558224346,
+        "RR": 0.6310201000113392,
+        "old_mass_TV": 0.4574046194828976,
+        "recent_mass_TV": 0.44996768646045954,
+        "mass_first": -0.0006711688791409993,
+        "mass_second": 0.02366645821300652,
+        "mass_symmetric": 0.01149764466693276,
+        "sign_first": -0.01241371718309358,
+        "sign_second": 0.01192390990905394,
+        "sign_symmetric": -0.00024490363701980353,
+        "total_gain": 0.011252741029912956,
+        "interaction": -0.024337627092147526,
+        "hybrid_over_lag": -0.01192390990905394,
+        "hybrid_over_old": -0.0006711688791409993,
+        "mass_only_gain": 0.007436933022438573
+      },
+      "one_lag": {
+        "G": 0.015938112543333605,
+        "H": 0.09396374321889026,
+        "same": 0.5388533796212265,
+        "allocation_tv": 0.44996768646045954,
+        "concurrent_G": 0.06415678853228045,
+        "concurrent_H": 0.13845923722157777,
+        "concurrent_minus_lag_G": 0.0482186759889468,
+        "fixed_mass_concurrent_advantage": 0.013377389616834249,
+        "lag_signed_tv": 0.6310201000113392,
+        "concurrent_signed_tv": 0.5729454162855703,
+        "O": 0.5500323135395404,
+        "Astar": 0.670833132719457,
+        "J": 0.07802563067555665
+      }
+    },
+    "4": {
+      "n_common": 1024,
+      "n_total": 1024,
+      "factorial": {
+        "OO": 0.5785945017753712,
+        "RO": 0.564692082152886,
+        "OR": 0.5802851069749118,
+        "RR": 0.5470874411257637,
+        "old_mass_TV": 0.40759923572022394,
+        "recent_mass_TV": 0.38961287641394127,
+        "mass_first": 0.013902419622485977,
+        "mass_second": 0.0331976658491477,
+        "mass_symmetric": 0.02355004273581685,
+        "sign_first": -0.0016906051995400594,
+        "sign_second": 0.017604641027121663,
+        "sign_symmetric": 0.007957017913790807,
+        "total_gain": 0.03150706064960765,
+        "interaction": -0.019295246226661716,
+        "hybrid_over_lag": -0.017604641027121663,
+        "hybrid_over_old": 0.013902419622485977,
+        "mass_only_gain": 0.01798635930628249
+      },
+      "one_lag": {
+        "G": 0.063736965040962,
+        "H": 0.1477189970812067,
+        "same": 0.6597016424515413,
+        "allocation_tv": 0.38961287641394127,
+        "concurrent_G": 0.12680274263453403,
+        "concurrent_H": 0.2068525336677684,
+        "concurrent_minus_lag_G": 0.06306577759357207,
+        "fixed_mass_concurrent_advantage": 0.02113955723552074,
+        "lag_signed_tv": 0.5470874411257637,
+        "concurrent_signed_tv": 0.47256664335064646,
+        "O": 0.6103871235860587,
+        "Astar": 0.7420087045961082,
+        "J": 0.0839820320402447
+      }
+    }
+  },
+  "by_panel": {
+    "Aa-A0": {
+      "2": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6524144117329098,
+            "RO": 0.6642806353213436,
+            "OR": 0.6678361084857233,
+            "RR": 0.6722347148909249,
+            "old_mass_TV": 0.4370525387592691,
+            "recent_mass_TV": 0.45086140760002236,
+            "mass_first": -0.011866223588434857,
+            "mass_second": -0.0043986064052012955,
+            "mass_symmetric": -0.008132414996818086,
+            "sign_first": -0.015421696752814257,
+            "sign_second": -0.0079540795695807,
+            "sign_symmetric": -0.01168788816119746,
+            "total_gain": -0.01982030315801556,
+            "interaction": -0.007467617183233572,
+            "hybrid_over_lag": 0.0079540795695807,
+            "hybrid_over_old": -0.011866223588434857,
+            "mass_only_gain": -0.013808868840752834
+          },
+          "one_lag": {
+            "G": -0.022956543830563465,
+            "H": 0.05319598890908607,
+            "same": 0.5188874058805542,
+            "allocation_tv": 0.45086140760002236,
+            "concurrent_G": 0.03622517873728182,
+            "concurrent_H": 0.1122210516521145,
+            "concurrent_minus_lag_G": 0.05918172256784527,
+            "fixed_mass_concurrent_advantage": 0.02616500572576686,
+            "lag_signed_tv": 0.6722347148909249,
+            "concurrent_signed_tv": 0.6043307024046543,
+            "O": 0.5491385923999776,
+            "Astar": 0.5968716998683268,
+            "J": 0.07615253273964953
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6524144117329098,
+            "RO": 0.6642806353213436,
+            "OR": 0.6678361084857233,
+            "RR": 0.6722347148909249,
+            "old_mass_TV": 0.4370525387592691,
+            "recent_mass_TV": 0.45086140760002236,
+            "mass_first": -0.011866223588434857,
+            "mass_second": -0.0043986064052012955,
+            "mass_symmetric": -0.008132414996818086,
+            "sign_first": -0.015421696752814257,
+            "sign_second": -0.0079540795695807,
+            "sign_symmetric": -0.01168788816119746,
+            "total_gain": -0.01982030315801556,
+            "interaction": -0.007467617183233572,
+            "hybrid_over_lag": 0.0079540795695807,
+            "hybrid_over_old": -0.011866223588434857,
+            "mass_only_gain": -0.013808868840752834
+          },
+          "one_lag": {
+            "G": -0.022956543830563465,
+            "H": 0.05319598890908607,
+            "same": 0.5188874058805542,
+            "allocation_tv": 0.45086140760002236,
+            "concurrent_G": 0.03622517873728182,
+            "concurrent_H": 0.1122210516521145,
+            "concurrent_minus_lag_G": 0.05918172256784527,
+            "fixed_mass_concurrent_advantage": 0.02616500572576686,
+            "lag_signed_tv": 0.6722347148909249,
+            "concurrent_signed_tv": 0.6043307024046543,
+            "O": 0.5491385923999776,
+            "Astar": 0.5968716998683268,
+            "J": 0.07615253273964953
+          }
+        }
+      },
+      "4": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6000888676224849,
+            "RO": 0.6067635345933501,
+            "OR": 0.6018104973753383,
+            "RR": 0.5981122354368367,
+            "old_mass_TV": 0.39892781628033663,
+            "recent_mass_TV": 0.40583425317414523,
+            "mass_first": -0.006674666970864611,
+            "mass_second": 0.0036982619385018617,
+            "mass_symmetric": -0.001488202516181375,
+            "sign_first": -0.0017216297528537864,
+            "sign_second": 0.008651299156512684,
+            "sign_symmetric": 0.0034648347018294483,
+            "total_gain": 0.001976632185648073,
+            "interaction": -0.01037292890936647,
+            "hybrid_over_lag": -0.008651299156512684,
+            "hybrid_over_old": -0.006674666970864611,
+            "mass_only_gain": -0.006906436893808437
+          },
+          "one_lag": {
+            "G": 0.021110002567745766,
+            "H": 0.10480489115023588,
+            "same": 0.6261575244440251,
+            "allocation_tv": 0.40583425317414523,
+            "concurrent_G": 0.10581818544243028,
+            "concurrent_H": 0.18778009505409787,
+            "concurrent_minus_lag_G": 0.08470818287468455,
+            "fixed_mass_concurrent_advantage": 0.03780451766427007,
+            "lag_signed_tv": 0.5981122354368367,
+            "concurrent_signed_tv": 0.5033499048435294,
+            "O": 0.5941657468258548,
+            "Astar": 0.676389991698652,
+            "J": 0.0836948885824901
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6000888676224849,
+            "RO": 0.6067635345933501,
+            "OR": 0.6018104973753383,
+            "RR": 0.5981122354368367,
+            "old_mass_TV": 0.39892781628033663,
+            "recent_mass_TV": 0.40583425317414523,
+            "mass_first": -0.006674666970864611,
+            "mass_second": 0.0036982619385018617,
+            "mass_symmetric": -0.001488202516181375,
+            "sign_first": -0.0017216297528537864,
+            "sign_second": 0.008651299156512684,
+            "sign_symmetric": 0.0034648347018294483,
+            "total_gain": 0.001976632185648073,
+            "interaction": -0.01037292890936647,
+            "hybrid_over_lag": -0.008651299156512684,
+            "hybrid_over_old": -0.006674666970864611,
+            "mass_only_gain": -0.006906436893808437
+          },
+          "one_lag": {
+            "G": 0.021110002567745766,
+            "H": 0.10480489115023588,
+            "same": 0.6261575244440251,
+            "allocation_tv": 0.40583425317414523,
+            "concurrent_G": 0.10581818544243028,
+            "concurrent_H": 0.18778009505409787,
+            "concurrent_minus_lag_G": 0.08470818287468455,
+            "fixed_mass_concurrent_advantage": 0.03780451766427007,
+            "lag_signed_tv": 0.5981122354368367,
+            "concurrent_signed_tv": 0.5033499048435294,
+            "O": 0.5941657468258548,
+            "Astar": 0.676389991698652,
+            "J": 0.0836948885824901
+          }
+        }
+      }
+    },
+    "Ab-A0": {
+      "2": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6321312703495952,
+            "RO": 0.6216073845194423,
+            "OR": 0.6415370079629688,
+            "RR": 0.5898054851317536,
+            "old_mass_TV": 0.47775670020652616,
+            "recent_mass_TV": 0.4490739653208967,
+            "mass_first": 0.010523885830152858,
+            "mass_second": 0.051731522831214335,
+            "mass_symmetric": 0.031127704330683605,
+            "sign_first": -0.009405737613372904,
+            "sign_second": 0.03180189938768858,
+            "sign_symmetric": 0.011198080887157853,
+            "total_gain": 0.04232578521784147,
+            "interaction": -0.04120763700106148,
+            "hybrid_over_lag": -0.03180189938768858,
+            "hybrid_over_old": 0.010523885830152858,
+            "mass_only_gain": 0.02868273488562998
+          },
+          "one_lag": {
+            "G": 0.05483276891723067,
+            "H": 0.13473149752869443,
+            "same": 0.5588193533618989,
+            "allocation_tv": 0.4490739653208967,
+            "concurrent_G": 0.09208839832727907,
+            "concurrent_H": 0.16469742279104105,
+            "concurrent_minus_lag_G": 0.03725562941004834,
+            "fixed_mass_concurrent_advantage": 0.0005897735079016358,
+            "lag_signed_tv": 0.5898054851317536,
+            "concurrent_signed_tv": 0.5415601301664863,
+            "O": 0.5509260346791033,
+            "Astar": 0.7445546027011978,
+            "J": 0.07989872861146376
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.6321312703495952,
+            "RO": 0.6216073845194423,
+            "OR": 0.6415370079629688,
+            "RR": 0.5898054851317536,
+            "old_mass_TV": 0.47775670020652616,
+            "recent_mass_TV": 0.4490739653208967,
+            "mass_first": 0.010523885830152858,
+            "mass_second": 0.051731522831214335,
+            "mass_symmetric": 0.031127704330683605,
+            "sign_first": -0.009405737613372904,
+            "sign_second": 0.03180189938768858,
+            "sign_symmetric": 0.011198080887157853,
+            "total_gain": 0.04232578521784147,
+            "interaction": -0.04120763700106148,
+            "hybrid_over_lag": -0.03180189938768858,
+            "hybrid_over_old": 0.010523885830152858,
+            "mass_only_gain": 0.02868273488562998
+          },
+          "one_lag": {
+            "G": 0.05483276891723067,
+            "H": 0.13473149752869443,
+            "same": 0.5588193533618989,
+            "allocation_tv": 0.4490739653208967,
+            "concurrent_G": 0.09208839832727907,
+            "concurrent_H": 0.16469742279104105,
+            "concurrent_minus_lag_G": 0.03725562941004834,
+            "fixed_mass_concurrent_advantage": 0.0005897735079016358,
+            "lag_signed_tv": 0.5898054851317536,
+            "concurrent_signed_tv": 0.5415601301664863,
+            "O": 0.5509260346791033,
+            "Astar": 0.7445546027011978,
+            "J": 0.07989872861146376
+          }
+        }
+      },
+      "4": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5571001359282575,
+            "RO": 0.5226206297124218,
+            "OR": 0.5587597165744853,
+            "RR": 0.49606264681469064,
+            "old_mass_TV": 0.4162706551601112,
+            "recent_mass_TV": 0.37339149965373736,
+            "mass_first": 0.034479506215836564,
+            "mass_second": 0.06269706975979353,
+            "mass_symmetric": 0.048588287987815074,
+            "sign_first": -0.0016595806462263326,
+            "sign_second": 0.02655798289773064,
+            "sign_symmetric": 0.012449201125752166,
+            "total_gain": 0.06103748911356722,
+            "interaction": -0.028217563543956964,
+            "hybrid_over_lag": -0.02655798289773064,
+            "hybrid_over_old": 0.034479506215836564,
+            "mass_only_gain": 0.04287915550637342
+          },
+          "one_lag": {
+            "G": 0.10636392751417825,
+            "H": 0.19063310301217753,
+            "same": 0.6932457604590575,
+            "allocation_tv": 0.37339149965373736,
+            "concurrent_G": 0.1477872998266378,
+            "concurrent_H": 0.22592497228143896,
+            "concurrent_minus_lag_G": 0.04142337231245957,
+            "fixed_mass_concurrent_advantage": 0.00447459680677141,
+            "lag_signed_tv": 0.49606264681469064,
+            "concurrent_signed_tv": 0.4417833818577635,
+            "O": 0.6266085003462627,
+            "Astar": 0.8042299983272394,
+            "J": 0.08426917549799928
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5571001359282575,
+            "RO": 0.5226206297124218,
+            "OR": 0.5587597165744853,
+            "RR": 0.49606264681469064,
+            "old_mass_TV": 0.4162706551601112,
+            "recent_mass_TV": 0.37339149965373736,
+            "mass_first": 0.034479506215836564,
+            "mass_second": 0.06269706975979353,
+            "mass_symmetric": 0.048588287987815074,
+            "sign_first": -0.0016595806462263326,
+            "sign_second": 0.02655798289773064,
+            "sign_symmetric": 0.012449201125752166,
+            "total_gain": 0.06103748911356722,
+            "interaction": -0.028217563543956964,
+            "hybrid_over_lag": -0.02655798289773064,
+            "hybrid_over_old": 0.034479506215836564,
+            "mass_only_gain": 0.04287915550637342
+          },
+          "one_lag": {
+            "G": 0.10636392751417825,
+            "H": 0.19063310301217753,
+            "same": 0.6932457604590575,
+            "allocation_tv": 0.37339149965373736,
+            "concurrent_G": 0.1477872998266378,
+            "concurrent_H": 0.22592497228143896,
+            "concurrent_minus_lag_G": 0.04142337231245957,
+            "fixed_mass_concurrent_advantage": 0.00447459680677141,
+            "lag_signed_tv": 0.49606264681469064,
+            "concurrent_signed_tv": 0.4417833818577635,
+            "O": 0.6266085003462627,
+            "Astar": 0.8042299983272394,
+            "J": 0.08426917549799928
+          }
+        }
+      }
+    },
+    "Ab-Aa": {
+      "2": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5953844040252968,
+            "RO": 0.5860805761290336,
+            "OR": 0.6164245277133541,
+            "RR": 0.5550809477083107,
+            "old_mass_TV": 0.46052429655130483,
+            "recent_mass_TV": 0.4268727868368465,
+            "mass_first": 0.009303827896261916,
+            "mass_second": 0.06134358000504351,
+            "mass_symmetric": 0.035323703950652686,
+            "sign_first": -0.021040123688058243,
+            "sign_second": 0.03099962842072346,
+            "sign_symmetric": 0.004979752366332611,
+            "total_gain": 0.04030345631698539,
+            "interaction": -0.052039752108781714,
+            "hybrid_over_lag": -0.03099962842072346,
+            "hybrid_over_old": 0.009303827896261916,
+            "mass_only_gain": 0.033651509714458225
+          },
+          "one_lag": {
+            "G": 0.07468759575942913,
+            "H": 0.1583554457101125,
+            "same": 0.5998083622041,
+            "allocation_tv": 0.4268727868368465,
+            "concurrent_G": 0.11572266642829973,
+            "concurrent_H": 0.1912842000090996,
+            "concurrent_minus_lag_G": 0.041035070668870674,
+            "fixed_mass_concurrent_advantage": 0.0020960946814695966,
+            "lag_signed_tv": 0.5550809477083107,
+            "concurrent_signed_tv": 0.5010059824613516,
+            "O": 0.5731272131631535,
+            "Astar": 0.7763006921903621,
+            "J": 0.08366784995068338
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5953844040252968,
+            "RO": 0.5860805761290336,
+            "OR": 0.6164245277133541,
+            "RR": 0.5550809477083107,
+            "old_mass_TV": 0.46052429655130483,
+            "recent_mass_TV": 0.4268727868368465,
+            "mass_first": 0.009303827896261916,
+            "mass_second": 0.06134358000504351,
+            "mass_symmetric": 0.035323703950652686,
+            "sign_first": -0.021040123688058243,
+            "sign_second": 0.03099962842072346,
+            "sign_symmetric": 0.004979752366332611,
+            "total_gain": 0.04030345631698539,
+            "interaction": -0.052039752108781714,
+            "hybrid_over_lag": -0.03099962842072346,
+            "hybrid_over_old": 0.009303827896261916,
+            "mass_only_gain": 0.033651509714458225
+          },
+          "one_lag": {
+            "G": 0.07468759575942913,
+            "H": 0.1583554457101125,
+            "same": 0.5998083622041,
+            "allocation_tv": 0.4268727868368465,
+            "concurrent_G": 0.11572266642829973,
+            "concurrent_H": 0.1912842000090996,
+            "concurrent_minus_lag_G": 0.041035070668870674,
+            "fixed_mass_concurrent_advantage": 0.0020960946814695966,
+            "lag_signed_tv": 0.5550809477083107,
+            "concurrent_signed_tv": 0.5010059824613516,
+            "O": 0.5731272131631535,
+            "Astar": 0.7763006921903621,
+            "J": 0.08366784995068338
+          }
+        }
+      },
+      "4": {
+        "n_total": 512,
+        "common": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5155236932346047,
+            "RO": 0.48713836293219887,
+            "OR": 0.5342283619358145,
+            "RR": 0.4618000487573207,
+            "old_mass_TV": 0.40527276219148245,
+            "recent_mass_TV": 0.3588942227099263,
+            "mass_first": 0.028385330302405566,
+            "mass_second": 0.07242831317849349,
+            "mass_symmetric": 0.05040682174044958,
+            "sign_first": -0.018704668701209876,
+            "sign_second": 0.02533831417487805,
+            "sign_symmetric": 0.0033168227368340934,
+            "total_gain": 0.05372364447728357,
+            "interaction": -0.04404298287608789,
+            "hybrid_over_lag": -0.02533831417487805,
+            "hybrid_over_old": 0.028385330302405566,
+            "mass_only_gain": 0.046378539481555944
+          },
+          "one_lag": {
+            "G": 0.13175866146029103,
+            "H": 0.21764706259764194,
+            "same": 0.7366830219551351,
+            "allocation_tv": 0.3588942227099263,
+            "concurrent_G": 0.1754511529526402,
+            "concurrent_H": 0.25542331768890564,
+            "concurrent_minus_lag_G": 0.04369249149234892,
+            "fixed_mass_concurrent_advantage": 0.0050731542704408345,
+            "lag_signed_tv": 0.4618000487573207,
+            "concurrent_signed_tv": 0.4039651427347508,
+            "O": 0.6411057772900737,
+            "Astar": 0.8394869775119274,
+            "J": 0.08588840113735091
+          }
+        },
+        "all_defined": {
+          "n": 512,
+          "factorial": {
+            "OO": 0.5155236932346047,
+            "RO": 0.48713836293219887,
+            "OR": 0.5342283619358145,
+            "RR": 0.4618000487573207,
+            "old_mass_TV": 0.40527276219148245,
+            "recent_mass_TV": 0.3588942227099263,
+            "mass_first": 0.028385330302405566,
+            "mass_second": 0.07242831317849349,
+            "mass_symmetric": 0.05040682174044958,
+            "sign_first": -0.018704668701209876,
+            "sign_second": 0.02533831417487805,
+            "sign_symmetric": 0.0033168227368340934,
+            "total_gain": 0.05372364447728357,
+            "interaction": -0.04404298287608789,
+            "hybrid_over_lag": -0.02533831417487805,
+            "hybrid_over_old": 0.028385330302405566,
+            "mass_only_gain": 0.046378539481555944
+          },
+          "one_lag": {
+            "G": 0.13175866146029103,
+            "H": 0.21764706259764194,
+            "same": 0.7366830219551351,
+            "allocation_tv": 0.3588942227099263,
+            "concurrent_G": 0.1754511529526402,
+            "concurrent_H": 0.25542331768890564,
+            "concurrent_minus_lag_G": 0.04369249149234892,
+            "fixed_mass_concurrent_advantage": 0.0050731542704408345,
+            "lag_signed_tv": 0.4618000487573207,
+            "concurrent_signed_tv": 0.4039651427347508,
+            "O": 0.6411057772900737,
+            "Astar": 0.8394869775119274,
+            "J": 0.08588840113735091
+          }
+        }
+      }
+    }
+  },
+  "notes": [
+    "Source-recipient linked cluster split; current A0 donor is reference, not unmanipulated water control",
+    "Ab-Aa is secondary; no p-values from dependent folds"
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45714536073",
+  "source_commit": "7718c241c1e3a601fecec870c87c7c886bbac938",
+  "artifact_id": 15068962599,
+  "artifact_digest": "sha256:0a3a246711cc948d83153c8cd2529947028c97ec013cb8825d7bae24cf29fac6",
+  "failed_run": 45714453690,
+  "failed_reason": "Source not UTF-8; lossless latin-1 decode only, no scores changed"
+}
