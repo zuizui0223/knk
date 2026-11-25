@@ -1,6 +1,6 @@
 """Official Figshare v1 source access and schema/lineage gate; no ecological scores."""
 from __future__ import annotations
-import argparse,csv,hashlib,json,math,re,urllib.request,urllib.error
+import argparse,csv,hashlib,io,json,math,re,urllib.request,urllib.error
 from collections import Counter,defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -52,14 +52,23 @@ def acquire(root):
             "files":out}
 
 def load(p):
-    with p.open(encoding="utf-8-sig",newline="") as f:
-        rd=csv.DictReader(f)
-        fields=rd.fieldnames or []
-        if len(fields)!=len(set(fields)):raise ValueError("duplicate header")
-        rows=list(rd)
+    b=p.read_bytes()
+    for encoding in ("utf-8-sig","cp1252","latin-1"):
+        try:
+            txt=b.decode(encoding,errors="strict")
+            if txt.encode(encoding).removeprefix(b"\xef\xbb\xbf")!=b.removeprefix(b"\xef\xbb\xbf"):
+                raise ValueError("non-reversible CSV decoding")
+            break
+        except UnicodeError:
+            continue
+    else:raise ValueError("unrecognized CSV encoding")
+    rd=csv.DictReader(io.StringIO(txt,newline=""))
+    fields=rd.fieldnames or []
+    if len(fields)!=len(set(fields)):raise ValueError("duplicate header")
+    rows=list(rd)
     if not rows or any(None in r or any(v is None for v in r.values()) for r in rows):
         raise ValueError("nonrectangular CSV")
-    return fields,rows
+    return fields,rows,encoding
 
 def number(x):
     if str(x).strip() in NA:return None
@@ -77,7 +86,8 @@ def field_profile(fields,rows):
     return ans
 
 def audit(root,manifest):
-    pf,p=load(root/"plot.csv");sf,s=load(root/"species.csv")
+    pf,p,pe=load(root/"plot.csv");sf,s,se=load(root/"species.csv")
+    manifest["csv_encoding"]={"plot":pe,"species":se}
     required={"unique.id_","Experiment_","site","block","yr.trt","seed.rich","biomass.plot","rich.plot"}
     if not required<=set(pf) or not (required|{"species","biomass.sp"})<=set(sf):
         return {"status":"STOP_SCHEMA_RECONCILIATION","manifest":manifest,"plot_fields":pf,"species_fields":sf,
@@ -141,13 +151,14 @@ def audit(root,manifest):
 def main():
     p=argparse.ArgumentParser();p.add_argument("--root",type=Path,required=True);p.add_argument("--out",type=Path,required=True);a=p.parse_args()
     a.root.mkdir(parents=True,exist_ok=True)
+    m=None
     try:
         m=acquire(a.root);z=audit(a.root,m)
     except urllib.error.HTTPError as e:
         z={"status":"STOP_PUBLIC_SOURCE_HTTP_ERROR","http_status":e.code,"source":e.url,
            "limits":["No access workaround or ecological scores."]}
     except (ValueError,KeyError,OSError) as e:
-        z={"status":"STOP_SOURCE_GATE","reason":str(e)[:600],"limits":["No ecological scores."]}
+        z={"status":"STOP_SOURCE_GATE","reason":str(e)[:600],"manifest":m,"limits":["No ecological scores."]}
     a.out.write_text(json.dumps(z,indent=2,allow_nan=False)+"\n")
     print("SEED_SYNTHESIS_AUDIT",json.dumps(z,allow_nan=False))
 if __name__=="__main__":main()
