@@ -1,0 +1,18 @@
+# van Steijn 2025 → 2026: independent pot-to-field transfer — source-verified weak/null result
+
+2026-11-25 JST. Successful source run https://github.com/zuizui0223/knk/actions/runs/45527393961, job 138914024698, scorer commit ee1e0ec6040f04fae8859966b2634e109ea8a258. Three synthetic tests, all twelve original pinned file MD5s, exact plant/plot joins, real-data scoring, and artifact upload passed. Pot source DOI 10.5281/zenodo.10512662 (Ecology 10.1002/ecy.4528), field source DOI 10.5281/zenodo.15363824 (Ecology 10.1002/ecy.70291). Prescore docs/AHIF_VANSTEIJN_POT_FIELD_PRESCORE_20261125.md. Separate physical experiments by overlapping authors, not independent laboratory replication. 15 pot taxa, 20 sown field taxa; ten exact shared species, six fast and four slow. 202 matched pot directed pairs, 43 of 48 possible directed cross-speed-group shared-species pairs measured. Five missing pairs retained as missing; no imputation. One pot per directed pair. 40 field plots in ten blocks, two sites, four repeated years; 20 held-site/held-focal prediction cells per year, not independent study replicates.
+
+## Prediction outcome
+
+| Year | Trait SSE | Trait + simultaneous RII SSE | Add history delta SSE | Incremental gain | Improved cells |
+|---|---:|---:|---:|---:|---:|
+| 2021 | 2.501874 | 2.219468 | 2.241088 | -0.9741% | 8/20 |
+| 2022 | 3.026792 | 3.979240 | 3.991463 | -0.3072% | 9/20 |
+| 2023 | 12.789000 | 14.404809 | 14.406191 | -0.0096% | 10/20 |
+| 2024 | 15.498570 | 16.378832 | 16.119046 | 1.5861% | 11/20 |
+
+Prespecified primary 2024 gain +1.5861%, 1999 within-block assignment permutations, sharp-null p=.0885, null median −5.2312%, null central 95% [−13.6653%,+5.6336%]. The sharp null is no schedule effect, NOT the nonzero-effect null of no additional competition predictor. Raw-hit sensitivity reverses sign (−2.2251%). 2024 gain over the simpler trait-only model is -4.0034%, i.e. the expanded model does not beat the trait-only predictor. Early-neighbor RII instead of delta gives −0.8134% incremental gain. All years 2021–23 have nonpositive delta gain. Do not present primary result as significant or general transfer. Site and speed subgroup gains are descriptive only, no direct difference test, no selected subgroup rescue. Final-year MAL −.0718%, UME +3.1367%; fast −1.5078%, slow +3.7165%. Holdout excludes focal field response and whole target site, not held taxon from independent pot assay. Matched focal sowing date makes field contrast more comparable to pot response, but other early species, germination, density, soil, and survival differ. Field hits are not biomass. No causal history-mediated interaction path identified.
+
+## Interpretation
+
+The source-derived history delta does not robustly improve over trait and simultaneous-response baseline. The apparent small final-year gain is sensitive to response scale and weaker than the simpler trait-only prediction. This is an important boundary condition for H09/H11, not evidence against the existence of priority effects. Original pot and field papers already establish competitive-trait and germination-speed effects. The cross-study forecast uses partial species overlap and aggregate pot responses, not fully known field interaction networks or measured neighbor density. Do not optimize penalties, subsets, or target years against these held outcomes. Archive all years, all target cells, all source species features, and sensitivities in validation/ahif_v1/vansteijn2025_2026_pot_field_transfer_v1.json. No new source study or effect record: both source experiments were already registered in DB v0.7, and this auxiliary predictive diagnostic is separate from the frozen effect ledger. No meta pooling, no causal-bridge promotion, no main/manuscript change.

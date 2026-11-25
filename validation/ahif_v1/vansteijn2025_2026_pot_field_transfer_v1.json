@@ -1,0 +1,1587 @@
+{
+  "status": "SOURCE_LOCKED_POT_FIELD_TRANSFER_NOT_CAUSAL_MEDIATION",
+  "n_shared_species": 10,
+  "n_pot_matched_directed_pairs": 202,
+  "n_cross_guild_measured_pairs": 43,
+  "n_field_plots": 40,
+  "n_field_blocks": 10,
+  "source_species_features": [
+    {
+      "species": "Agrostis capillaris",
+      "speed": "Fast",
+      "density": "High",
+      "form": "Grass",
+      "solo_mean": 6.8787,
+      "mean_sim_RII": -0.2945270505706376,
+      "mean_history_delta_RII": -0.5434608545914575,
+      "mean_pre_RII": -0.8379879051620951,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Phalaris arundinacea"
+      ],
+      "missing_opposite_partners": [
+        "Poa pratensis"
+      ]
+    },
+    {
+      "species": "Antennaria dioica",
+      "speed": "Slow",
+      "density": "High",
+      "form": "Forb",
+      "solo_mean": 2.4043,
+      "mean_sim_RII": -0.7840076409947573,
+      "mean_history_delta_RII": -0.210134181684107,
+      "mean_pre_RII": -0.9941418226788642,
+      "matched_opposite_partners": [
+        "Agrostis capillaris",
+        "Cardamine pratensis",
+        "Dianthus deltoides",
+        "Festuca rubra",
+        "Leucanthemum vulgare",
+        "Sedum acre"
+      ],
+      "missing_opposite_partners": []
+    },
+    {
+      "species": "Briza media",
+      "speed": "Slow",
+      "density": "Low",
+      "form": "Grass",
+      "solo_mean": 2.60282,
+      "mean_sim_RII": -0.46223486617209275,
+      "mean_history_delta_RII": -0.520011777337448,
+      "mean_pre_RII": -0.9822466435095407,
+      "matched_opposite_partners": [
+        "Agrostis capillaris",
+        "Dianthus deltoides",
+        "Festuca rubra",
+        "Leucanthemum vulgare",
+        "Sedum acre"
+      ],
+      "missing_opposite_partners": [
+        "Cardamine pratensis"
+      ]
+    },
+    {
+      "species": "Cardamine pratensis",
+      "speed": "Fast",
+      "density": "Low",
+      "form": "Forb",
+      "solo_mean": 4.70468,
+      "mean_sim_RII": -0.004444065649098619,
+      "mean_history_delta_RII": -0.6119380666066729,
+      "mean_pre_RII": -0.6163821322557715,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Poa pratensis"
+      ],
+      "missing_opposite_partners": [
+        "Phalaris arundinacea"
+      ]
+    },
+    {
+      "species": "Dianthus deltoides",
+      "speed": "Fast",
+      "density": "Low",
+      "form": "Forb",
+      "solo_mean": 4.14766,
+      "mean_sim_RII": -0.3425515874597915,
+      "mean_history_delta_RII": -0.3629731890617882,
+      "mean_pre_RII": -0.7055247765215796,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Phalaris arundinacea",
+        "Poa pratensis"
+      ],
+      "missing_opposite_partners": []
+    },
+    {
+      "species": "Festuca rubra",
+      "speed": "Fast",
+      "density": "High",
+      "form": "Grass",
+      "solo_mean": 6.101520000000001,
+      "mean_sim_RII": -0.17749663002023527,
+      "mean_history_delta_RII": -0.5239178892080815,
+      "mean_pre_RII": -0.7014145192283167,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Poa pratensis"
+      ],
+      "missing_opposite_partners": [
+        "Phalaris arundinacea"
+      ]
+    },
+    {
+      "species": "Leucanthemum vulgare",
+      "speed": "Fast",
+      "density": "High",
+      "form": "Forb",
+      "solo_mean": 5.78628,
+      "mean_sim_RII": -0.23883490009158256,
+      "mean_history_delta_RII": -0.4055899731373428,
+      "mean_pre_RII": -0.6444248732289253,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Phalaris arundinacea",
+        "Poa pratensis"
+      ],
+      "missing_opposite_partners": []
+    },
+    {
+      "species": "Phalaris arundinacea",
+      "speed": "Slow",
+      "density": "High",
+      "form": "Grass",
+      "solo_mean": 6.739525,
+      "mean_sim_RII": -0.030552958113910223,
+      "mean_history_delta_RII": -0.8630692631649293,
+      "mean_pre_RII": -0.8936222212788396,
+      "matched_opposite_partners": [
+        "Agrostis capillaris",
+        "Cardamine pratensis",
+        "Dianthus deltoides",
+        "Leucanthemum vulgare",
+        "Sedum acre"
+      ],
+      "missing_opposite_partners": [
+        "Festuca rubra"
+      ]
+    },
+    {
+      "species": "Poa pratensis",
+      "speed": "Slow",
+      "density": "High",
+      "form": "Grass",
+      "solo_mean": 4.26828,
+      "mean_sim_RII": -0.126516603037607,
+      "mean_history_delta_RII": -0.7914538082328265,
+      "mean_pre_RII": -0.9179704112704333,
+      "matched_opposite_partners": [
+        "Agrostis capillaris",
+        "Cardamine pratensis",
+        "Dianthus deltoides",
+        "Festuca rubra",
+        "Leucanthemum vulgare",
+        "Sedum acre"
+      ],
+      "missing_opposite_partners": []
+    },
+    {
+      "species": "Sedum acre",
+      "speed": "Fast",
+      "density": "Low",
+      "form": "Forb",
+      "solo_mean": 3.04442,
+      "mean_sim_RII": -0.26361738488777664,
+      "mean_history_delta_RII": -0.4970297807787167,
+      "mean_pre_RII": -0.7606471656664933,
+      "matched_opposite_partners": [
+        "Antennaria dioica",
+        "Briza media",
+        "Phalaris arundinacea",
+        "Poa pratensis"
+      ],
+      "missing_opposite_partners": []
+    }
+  ],
+  "by_year_log1p_hit_contrast": {
+    "2021": {
+      "losses": {
+        "trait": 2.501873972996576,
+        "base": 2.2194678166588666,
+        "history": 2.2410877950888723,
+        "pre": 2.1839390139609924
+      },
+      "history_gain": -0.00974106417210948,
+      "sim_gain_over_trait": 0.11287785051757117,
+      "pre_gain_over_base": 0.01600780260529228,
+      "by_site": {
+        "MAL": -0.060053281695551186,
+        "UME": 0.012076531739681918
+      },
+      "by_speed": {
+        "Fast": -0.02148555162418292,
+        "Slow": 0.07609451815590969
+      },
+      "n_improved_cells": 8,
+      "gain_without_focal": {
+        "Agrostis capillaris": -0.019082314835119758,
+        "Antennaria dioica": -0.0112502949014754,
+        "Briza media": -0.010738450776104773,
+        "Cardamine pratensis": -0.008812940842370985,
+        "Dianthus deltoides": -0.010175629406077243,
+        "Festuca rubra": 0.002425140389958598,
+        "Leucanthemum vulgare": -0.002489119717211372,
+        "Phalaris arundinacea": -0.012873506848905708,
+        "Poa pratensis": -0.014870932645580872,
+        "Sedum acre": -0.013615655802999525
+      },
+      "cells": [
+        {
+          "site": "MAL",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.4158883083359671,
+          "predictions": {
+            "trait": -0.11475665319066194,
+            "base": -0.06481779858854766,
+            "history": -0.06841066143313333,
+            "pre": -0.08866038402205215
+          },
+          "history_training_standardized_slope": 0.045129715129398444
+        },
+        {
+          "site": "MAL",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.5660620030897342,
+            "base": -0.03136794342773376,
+            "history": -0.037748330741308185,
+            "pre": 0.0055102082112702955
+          },
+          "history_training_standardized_slope": -0.01210501904113521
+        },
+        {
+          "site": "MAL",
+          "species": "Briza media",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.08842787556862246,
+            "base": 0.08143601747822614,
+            "history": 0.09033940383210308,
+            "pre": 0.08187562679611093
+          },
+          "history_training_standardized_slope": 0.024011240937883493
+        },
+        {
+          "site": "MAL",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": 0.21816904532736509,
+            "base": -0.009989133059911212,
+            "history": -0.013893844610853433,
+            "pre": -0.06251516324804154
+          },
+          "history_training_standardized_slope": 0.026732137664858414
+        },
+        {
+          "site": "MAL",
+          "species": "Dianthus deltoides",
+          "observed_contrast": -0.21972245773362192,
+          "predictions": {
+            "trait": 0.16409935436430892,
+            "base": 0.2707554287303432,
+            "history": 0.2820173243853591,
+            "pre": 0.256824314567753
+          },
+          "history_training_standardized_slope": 0.03185977968480559
+        },
+        {
+          "site": "MAL",
+          "species": "Festuca rubra",
+          "observed_contrast": 0.15158448322053858,
+          "predictions": {
+            "trait": 0.42137180004330926,
+            "base": 0.4250194737786047,
+            "history": 0.4627112307562521,
+            "pre": 0.38666066850478437
+          },
+          "history_training_standardized_slope": 0.07306403780717988
+        },
+        {
+          "site": "MAL",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.16123138749273425,
+          "predictions": {
+            "trait": 0.18636264736063693,
+            "base": 0.17907986751620644,
+            "history": 0.2017934626041603,
+            "pre": 0.13293851877039614
+          },
+          "history_training_standardized_slope": 0.055925366287758134
+        },
+        {
+          "site": "MAL",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.18124807920413083,
+          "predictions": {
+            "trait": 0.039153445793186914,
+            "base": -0.09405656881271937,
+            "history": -0.09975348969136177,
+            "pre": -0.03243971681464419
+          },
+          "history_training_standardized_slope": 0.0071384908207749445
+        },
+        {
+          "site": "MAL",
+          "species": "Poa pratensis",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": 0.0016356327796124993,
+            "base": -0.1648296555829813,
+            "history": -0.1707319612047922,
+            "pre": -0.15268272325248186
+          },
+          "history_training_standardized_slope": 0.009334442902305543
+        },
+        {
+          "site": "MAL",
+          "species": "Sedum acre",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": 0.234732625581655,
+            "base": 0.13423190511753813,
+            "history": 0.11634741808594073,
+            "pre": 0.17707417115155935
+          },
+          "history_training_standardized_slope": 0.03467481832156748
+        },
+        {
+          "site": "UME",
+          "species": "Agrostis capillaris",
+          "observed_contrast": 0.9883284845218607,
+          "predictions": {
+            "trait": -0.005575963018383029,
+            "base": 0.0011037108629152678,
+            "history": -0.00027644594149442946,
+            "pre": -0.016767092582170906
+          },
+          "history_training_standardized_slope": 0.017336059324049774
+        },
+        {
+          "site": "UME",
+          "species": "Antennaria dioica",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -0.02195072123166937,
+            "base": -0.249771836317863,
+            "history": -0.23196750959822698,
+            "pre": -0.27891240998672284
+          },
+          "history_training_standardized_slope": 0.033778782284463384
+        },
+        {
+          "site": "UME",
+          "species": "Briza media",
+          "observed_contrast": 0.13862943611198905,
+          "predictions": {
+            "trait": -0.01567990101674171,
+            "base": -0.06564571165091007,
+            "history": -0.05759645104598321,
+            "pre": -0.06594067899223013
+          },
+          "history_training_standardized_slope": 0.02170777815033865
+        },
+        {
+          "site": "UME",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0.13862943611198905,
+          "predictions": {
+            "trait": -0.20428770123374757,
+            "base": -0.18115237246498733,
+            "history": -0.18560687138393428,
+            "pre": -0.15304938545053817
+          },
+          "history_training_standardized_slope": 0.030496049906816453
+        },
+        {
+          "site": "UME",
+          "species": "Dianthus deltoides",
+          "observed_contrast": 0.2772588722239781,
+          "predictions": {
+            "trait": -0.08354595321661945,
+            "base": -0.10466623927105571,
+            "history": -0.09376708142140333,
+            "pre": -0.0947034536618164
+          },
+          "history_training_standardized_slope": 0.030833598399145762
+        },
+        {
+          "site": "UME",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.009758032833886432,
+          "predictions": {
+            "trait": -0.28080934174431005,
+            "base": -0.28174901734901414,
+            "history": -0.2900930230523058,
+            "pre": -0.2688762629959815
+          },
+          "history_training_standardized_slope": -0.01617453780491493
+        },
+        {
+          "site": "UME",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.15970153924355424,
+          "predictions": {
+            "trait": -0.14608484206646424,
+            "base": -0.1442338708450194,
+            "history": -0.1342402073977919,
+            "pre": -0.0953421921832886
+          },
+          "history_training_standardized_slope": 0.024606377223797066
+        },
+        {
+          "site": "UME",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.2772588722239781,
+          "predictions": {
+            "trait": -0.06376296464236664,
+            "base": -0.017339229208499063,
+            "history": -0.027190008255508782,
+            "pre": -0.049161957678153324
+          },
+          "history_training_standardized_slope": 0.012343456632544776
+        },
+        {
+          "site": "UME",
+          "species": "Poa pratensis",
+          "observed_contrast": -0.35367580411679816,
+          "predictions": {
+            "trait": -0.07593763293416504,
+            "base": -0.03257873421730684,
+            "history": -0.05089794598616478,
+            "pre": -0.04048367218603944
+          },
+          "history_training_standardized_slope": 0.02897166755305747
+        },
+        {
+          "site": "UME",
+          "species": "Sedum acre",
+          "observed_contrast": 0.13862943611198905,
+          "predictions": {
+            "trait": -0.053799008108694216,
+            "base": -0.02394195784132589,
+            "history": -0.03061484631328247,
+            "pre": -0.05010509351215751
+          },
+          "history_training_standardized_slope": 0.012937536035357577
+        }
+      ]
+    },
+    "2022": {
+      "losses": {
+        "trait": 3.0267919002853314,
+        "base": 3.979240164650439,
+        "history": 3.9914625435806212,
+        "pre": 4.0594585387354805
+      },
+      "history_gain": -0.003071535877316414,
+      "sim_gain_over_trait": -0.31467252977494803,
+      "pre_gain_over_base": -0.020159219038262895,
+      "by_site": {
+        "MAL": 0.0018944196395645713,
+        "UME": -0.009313324493407523
+      },
+      "by_speed": {
+        "Fast": -0.024766210629178585,
+        "Slow": 0.016459657182009382
+      },
+      "n_improved_cells": 9,
+      "gain_without_focal": {
+        "Agrostis capillaris": -0.004021073105955868,
+        "Antennaria dioica": 0.008589703029546869,
+        "Briza media": -0.0021084403767779995,
+        "Cardamine pratensis": 0.00018696409442933454,
+        "Dianthus deltoides": 0.0015889313166061786,
+        "Festuca rubra": 0.0026709138827045367,
+        "Leucanthemum vulgare": -0.00033076078618569417,
+        "Phalaris arundinacea": -0.009965202819989076,
+        "Poa pratensis": -0.016828595120545187,
+        "Sedum acre": -0.006942296424203305
+      },
+      "cells": [
+        {
+          "site": "MAL",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.2407945608651872,
+          "predictions": {
+            "trait": -0.7254655137971731,
+            "base": -0.7562862356090977,
+            "history": -0.757562155134035,
+            "pre": -0.7985840977585746
+          },
+          "history_training_standardized_slope": 0.0160267416762739
+        },
+        {
+          "site": "MAL",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.5847718868099874,
+            "base": -1.013858500948917,
+            "history": -1.0192598082899573,
+            "pre": -1.0340878215830402
+          },
+          "history_training_standardized_slope": -0.010247485771156218
+        },
+        {
+          "site": "MAL",
+          "species": "Briza media",
+          "observed_contrast": 0.21972245773362195,
+          "predictions": {
+            "trait": -0.3798769319554477,
+            "base": -0.4095399116692684,
+            "history": -0.40794807922564236,
+            "pre": -0.4096655401536449
+          },
+          "history_training_standardized_slope": 0.004292958972851834
+        },
+        {
+          "site": "MAL",
+          "species": "Cardamine pratensis",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -0.4987319805910203,
+            "base": -0.6449749382678406,
+            "history": -0.6507784226167842,
+            "pre": -0.6631432407908204
+          },
+          "history_training_standardized_slope": 0.03973137081390428
+        },
+        {
+          "site": "MAL",
+          "species": "Dianthus deltoides",
+          "observed_contrast": 0.25782612253324855,
+          "predictions": {
+            "trait": 0.03610857078807207,
+            "base": 0.07048316379038318,
+            "history": 0.0943382581115913,
+            "pre": 0.07709109164486666
+          },
+          "history_training_standardized_slope": 0.06748580103345644
+        },
+        {
+          "site": "MAL",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.30097968816228154,
+          "predictions": {
+            "trait": -0.6882456798334984,
+            "base": -0.6884355098100577,
+            "history": -0.6856665237374562,
+            "pre": -0.6760788608683257
+          },
+          "history_training_standardized_slope": 0.005367574220965319
+        },
+        {
+          "site": "MAL",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.20140556932614134,
+          "predictions": {
+            "trait": -0.3983505562364999,
+            "base": -0.3979757793787931,
+            "history": -0.3870012832612924,
+            "pre": -0.36697718995252365
+          },
+          "history_training_standardized_slope": 0.027021381371736417
+        },
+        {
+          "site": "MAL",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.6206929946713746,
+          "predictions": {
+            "trait": -0.6459949435676282,
+            "base": -0.6288968845398462,
+            "history": -0.6314835846871424,
+            "pre": -0.6397067713714848
+          },
+          "history_training_standardized_slope": 0.003241248325353546
+        },
+        {
+          "site": "MAL",
+          "species": "Poa pratensis",
+          "observed_contrast": -0.17704002896082488,
+          "predictions": {
+            "trait": -0.45764064214378875,
+            "base": -0.38247052113361585,
+            "history": -0.3663674220574218,
+            "pre": -0.3847471903271094
+          },
+          "history_training_standardized_slope": -0.025466905393960623
+        },
+        {
+          "site": "MAL",
+          "species": "Sedum acre",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.07086389950895772,
+            "base": -0.06310739792384618,
+            "history": -0.06771013914905641,
+            "pre": -0.07312041688916568
+          },
+          "history_training_standardized_slope": 0.008923891162401403
+        },
+        {
+          "site": "UME",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.621391581732843,
+          "predictions": {
+            "trait": -0.36267442317643994,
+            "base": -0.2662670401049227,
+            "history": -0.27125794802577113,
+            "pre": -0.28054963645799297
+          },
+          "history_training_standardized_slope": 0.06269046786586242
+        },
+        {
+          "site": "UME",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.013085810066228803,
+            "base": 0.37599820735336714,
+            "history": 0.40835306472401467,
+            "pre": 0.3699024689863399
+          },
+          "history_training_standardized_slope": 0.061384387075003675
+        },
+        {
+          "site": "UME",
+          "species": "Briza media",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -0.055069385618620834,
+            "base": 0.0202053861861492,
+            "history": 0.040115605664501966,
+            "pre": 0.020152298938540356
+          },
+          "history_training_standardized_slope": 0.053695196189334875
+        },
+        {
+          "site": "UME",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0.358351893845611,
+          "predictions": {
+            "trait": 0.052761437026413484,
+            "base": -0.04560636935288788,
+            "history": -0.05415188963551015,
+            "pre": -0.036029367271002824
+          },
+          "history_training_standardized_slope": 0.0585036875663147
+        },
+        {
+          "site": "UME",
+          "species": "Dianthus deltoides",
+          "observed_contrast": -0.7515744651201777,
+          "predictions": {
+            "trait": -0.04964739712485748,
+            "base": -0.0031121677064177705,
+            "history": 0.014039113176020798,
+            "pre": -0.00247562119944459
+          },
+          "history_training_standardized_slope": 0.04852078610614169
+        },
+        {
+          "site": "UME",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.5753820583103664,
+          "predictions": {
+            "trait": -0.2569321747374075,
+            "base": -0.25500559874351336,
+            "history": -0.21907515914605058,
+            "pre": -0.2401732113043006
+          },
+          "history_training_standardized_slope": 0.06964979103347385
+        },
+        {
+          "site": "UME",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.5641581648115317,
+          "predictions": {
+            "trait": -0.2626066025133886,
+            "base": -0.2665537845810686,
+            "history": -0.2421166715294083,
+            "pre": -0.2629772065817267
+          },
+          "history_training_standardized_slope": 0.060169008610805944
+        },
+        {
+          "site": "UME",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.7742402021815782,
+          "predictions": {
+            "trait": -0.2019027357220627,
+            "base": -0.25562844209426044,
+            "history": -0.2801163699445235,
+            "pre": -0.25017999653036865
+          },
+          "history_training_standardized_slope": 0.030684443737712553
+        },
+        {
+          "site": "UME",
+          "species": "Poa pratensis",
+          "observed_contrast": -0.8188689124444203,
+          "predictions": {
+            "trait": -0.24193990044834518,
+            "base": -0.38032318956524463,
+            "history": -0.4343130078096226,
+            "pre": -0.3819447324696799
+          },
+          "history_training_standardized_slope": 0.08538440873778
+        },
+        {
+          "site": "UME",
+          "species": "Sedum acre",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": 0.2156004967667469,
+            "base": 0.1688557298956782,
+            "history": 0.14284231094365293,
+            "pre": 0.16894776635596626
+          },
+          "history_training_standardized_slope": 0.0504353619139688
+        }
+      ]
+    },
+    "2023": {
+      "losses": {
+        "trait": 12.789000286379515,
+        "base": 14.404808914530252,
+        "history": 14.406190657509363,
+        "pre": 14.671683229571991
+      },
+      "history_gain": -0.00009592234005392785,
+      "sim_gain_over_trait": -0.12634362279838227,
+      "pre_gain_over_base": -0.018526751491478758,
+      "by_site": {
+        "MAL": -0.018953847226016254,
+        "UME": 0.02130559574659428
+      },
+      "by_speed": {
+        "Fast": -0.04505732472068103,
+        "Slow": 0.034489119438959055
+      },
+      "n_improved_cells": 10,
+      "gain_without_focal": {
+        "Agrostis capillaris": -0.0005094887867603695,
+        "Antennaria dioica": -0.0060516243051858655,
+        "Briza media": -0.006638637492382931,
+        "Cardamine pratensis": 0.004738716288383747,
+        "Dianthus deltoides": 0.020265012779456037,
+        "Festuca rubra": -0.006025173406274274,
+        "Leucanthemum vulgare": 0.0019377354660997195,
+        "Phalaris arundinacea": 0.008352781040630666,
+        "Poa pratensis": -0.022201419161926576,
+        "Sedum acre": 0.0026803308527118975
+      },
+      "cells": [
+        {
+          "site": "MAL",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.4815891217303744,
+          "predictions": {
+            "trait": -0.9155868179848423,
+            "base": -0.7747917261321379,
+            "history": -0.7841372104237975,
+            "pre": -0.8292161898048412
+          },
+          "history_training_standardized_slope": 0.11738801676341509
+        },
+        {
+          "site": "MAL",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -1.5383908315326922,
+            "base": -1.827851597652765,
+            "history": -1.8075937028668958,
+            "pre": -1.8627726894369085
+          },
+          "history_training_standardized_slope": 0.03843374862126832
+        },
+        {
+          "site": "MAL",
+          "species": "Briza media",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -1.0533133330248823,
+            "base": -0.9609367608931103,
+            "history": -0.9314261009877349,
+            "pre": -0.9610807445633073
+          },
+          "history_training_standardized_slope": 0.07958629863516498
+        },
+        {
+          "site": "MAL",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.7137147472231282,
+            "base": -1.1007335540646186,
+            "history": -1.1214970207803994,
+            "pre": -1.1234330536365664
+          },
+          "history_training_standardized_slope": 0.14214925824982882
+        },
+        {
+          "site": "MAL",
+          "species": "Dianthus deltoides",
+          "observed_contrast": 0.14570468824958244,
+          "predictions": {
+            "trait": 0.10411815666056995,
+            "base": 0.28355851947624106,
+            "history": 0.36504349509440515,
+            "pre": 0.29443539130599106
+          },
+          "history_training_standardized_slope": 0.2305201051707673
+        },
+        {
+          "site": "MAL",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.034347012666967915,
+          "predictions": {
+            "trait": -0.994837456333922,
+            "base": -0.9916724950754892,
+            "history": -0.9654321013108884,
+            "pre": -1.0391108485604308
+          },
+          "history_training_standardized_slope": 0.05086600561573888
+        },
+        {
+          "site": "MAL",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.007904942144728455,
+          "predictions": {
+            "trait": -0.5344819145143372,
+            "base": -0.5409560050283017,
+            "history": -0.48399694131638865,
+            "pre": -0.49530570573336996
+          },
+          "history_training_standardized_slope": 0.14024448746054685
+        },
+        {
+          "site": "MAL",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.8651874336045674,
+          "predictions": {
+            "trait": -1.3350579664019622,
+            "base": -1.4897009977648081,
+            "history": -1.6207493252356007,
+            "pre": -1.5269728222582541
+          },
+          "history_training_standardized_slope": 0.1642092812338822
+        },
+        {
+          "site": "MAL",
+          "species": "Poa pratensis",
+          "observed_contrast": -0.8605966854666859,
+          "predictions": {
+            "trait": -0.4032989761669973,
+            "base": -0.2829489836614406,
+            "history": -0.2410944394879767,
+            "pre": -0.28275636445767616
+          },
+          "history_training_standardized_slope": -0.06619258266557752
+        },
+        {
+          "site": "MAL",
+          "species": "Sedum acre",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.2871943925498579,
+            "base": -0.3900209703583849,
+            "history": -0.4711698238560812,
+            "pre": -0.41663761882393635
+          },
+          "history_training_standardized_slope": 0.15733309806788404
+        },
+        {
+          "site": "UME",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.5835499046802888,
+          "predictions": {
+            "trait": -0.3339977676610951,
+            "base": -0.14184803666177984,
+            "history": -0.1549255738500612,
+            "pre": -0.22140029358679844
+          },
+          "history_training_standardized_slope": 0.16426608902999143
+        },
+        {
+          "site": "UME",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.3605318093489641,
+            "base": 0.0017902140672143574,
+            "history": 0.0898758678485285,
+            "pre": -0.05547217793598194
+          },
+          "history_training_standardized_slope": 0.16711814876897846
+        },
+        {
+          "site": "UME",
+          "species": "Briza media",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -0.5489811168166099,
+            "base": -0.4499186036876479,
+            "history": -0.39411459350936456,
+            "pre": -0.45044812409731694
+          },
+          "history_training_standardized_slope": 0.15049594395141602
+        },
+        {
+          "site": "UME",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0.21972245773362195,
+          "predictions": {
+            "trait": 0.0646395515208534,
+            "base": -0.11341585612831565,
+            "history": -0.13834815875709677,
+            "pre": -0.05163888780333476
+          },
+          "history_training_standardized_slope": 0.1706896239271955
+        },
+        {
+          "site": "UME",
+          "species": "Dianthus deltoides",
+          "observed_contrast": -1.5127838482657985,
+          "predictions": {
+            "trait": 0.06841526141505817,
+            "base": 0.15238099826402535,
+            "history": 0.21359620918991398,
+            "pre": 0.17013798378849454
+          },
+          "history_training_standardized_slope": 0.1731771624601302
+        },
+        {
+          "site": "UME",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.24294577371216422,
+          "predictions": {
+            "trait": -0.4977132458471345,
+            "base": -0.49495195508760126,
+            "history": -0.42612483472250584,
+            "pre": -0.43573989452786355
+          },
+          "history_training_standardized_slope": 0.13341875592312982
+        },
+        {
+          "site": "UME",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.8536734632402719,
+          "predictions": {
+            "trait": -0.21680139596327966,
+            "base": -0.22251798517641486,
+            "history": -0.15810964316962178,
+            "pre": -0.14894022668188162
+          },
+          "history_training_standardized_slope": 0.1585860848874359
+        },
+        {
+          "site": "UME",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.9574983485564091,
+          "predictions": {
+            "trait": -0.5454694714854855,
+            "base": -0.6412306916395315,
+            "history": -0.7657240247687999,
+            "pre": -0.7022088461822851
+          },
+          "history_training_standardized_slope": 0.15599558686564421
+        },
+        {
+          "site": "UME",
+          "species": "Poa pratensis",
+          "observed_contrast": -2.196216094796033,
+          "predictions": {
+            "trait": -0.3831223502756651,
+            "base": -0.47666646598774737,
+            "history": -0.5648443745290328,
+            "pre": -0.49010242229957585
+          },
+          "history_training_standardized_slope": 0.13945256400850525
+        },
+        {
+          "site": "UME",
+          "species": "Sedum acre",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": 0.29787403453514993,
+            "base": 0.22990423147506772,
+            "history": 0.1497107650859096,
+            "pre": 0.18254651101964625
+          },
+          "history_training_standardized_slope": 0.1554807735166235
+        }
+      ]
+    },
+    "2024": {
+      "losses": {
+        "trait": 15.498570351405181,
+        "base": 16.378832418612173,
+        "history": 16.119045621504043,
+        "pre": 16.512054246026683
+      },
+      "history_gain": 0.01586113041934055,
+      "sim_gain_over_trait": -0.056796339742857825,
+      "pre_gain_over_base": -0.00813378048017158,
+      "by_site": {
+        "MAL": -0.0007176871023199706,
+        "UME": 0.03136690369518449
+      },
+      "by_speed": {
+        "Fast": -0.01507840725874951,
+        "Slow": 0.037164662791789344
+      },
+      "n_improved_cells": 11,
+      "gain_without_focal": {
+        "Agrostis capillaris": 0.016661905999856272,
+        "Antennaria dioica": 0.0020433625655584035,
+        "Briza media": 0.008630382982712414,
+        "Cardamine pratensis": 0.0237416390230508,
+        "Dianthus deltoides": 0.03066939885337143,
+        "Festuca rubra": 0.006702316337497371,
+        "Leucanthemum vulgare": 0.012502953119967651,
+        "Phalaris arundinacea": 0.036656065367747515,
+        "Poa pratensis": 0.0004027616412091893,
+        "Sedum acre": 0.019267476623218326
+      },
+      "cells": [
+        {
+          "site": "MAL",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.5210580934288883,
+          "predictions": {
+            "trait": -1.1113182378958681,
+            "base": -0.8803479621142426,
+            "history": -0.8964630890936399,
+            "pre": -0.9824271150579517
+          },
+          "history_training_standardized_slope": 0.20242105566324942
+        },
+        {
+          "site": "MAL",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -1.4562570430614454,
+            "base": -1.4900600011400247,
+            "history": -1.4145777631709429,
+            "pre": -1.5592179390311935
+          },
+          "history_training_standardized_slope": 0.1432066554861432
+        },
+        {
+          "site": "MAL",
+          "species": "Briza media",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -1.3355689727527738,
+            "base": -1.2144471511016288,
+            "history": -1.1556716092073165,
+            "pre": -1.2149477696463018
+          },
+          "history_training_standardized_slope": 0.15850976713646361
+        },
+        {
+          "site": "MAL",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0.13862943611198905,
+          "predictions": {
+            "trait": -0.6555572719672307,
+            "base": -1.0881937353947064,
+            "history": -1.1217555110625237,
+            "pre": -1.064962604074706
+          },
+          "history_training_standardized_slope": 0.2297680624354239
+        },
+        {
+          "site": "MAL",
+          "species": "Dianthus deltoides",
+          "observed_contrast": 0.014318558786494507,
+          "predictions": {
+            "trait": 0.10906417752368651,
+            "base": 0.3140063485570783,
+            "history": 0.42497902657945663,
+            "pre": 0.33625480965659377
+          },
+          "history_training_standardized_slope": 0.3139404928912799
+        },
+        {
+          "site": "MAL",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.06638633908916143,
+          "predictions": {
+            "trait": -1.2718905795677986,
+            "base": -1.2677131419302854,
+            "history": -1.2006167111757406,
+            "pre": -1.2592320798373375
+          },
+          "history_training_standardized_slope": 0.1300638799163476
+        },
+        {
+          "site": "MAL",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.06541838410732988,
+          "predictions": {
+            "trait": -0.7163873502897238,
+            "base": -0.7250163622531967,
+            "history": -0.640028812310714,
+            "pre": -0.6427927742414759
+          },
+          "history_training_standardized_slope": 0.2092561675959966
+        },
+        {
+          "site": "MAL",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -0.8418492934555729,
+          "predictions": {
+            "trait": -1.549449859694558,
+            "base": -1.7224593164275168,
+            "history": -1.902156136062226,
+            "pre": -1.793085882044447
+          },
+          "history_training_standardized_slope": 0.22516796789189666
+        },
+        {
+          "site": "MAL",
+          "species": "Poa pratensis",
+          "observed_contrast": -0.3116289236093099,
+          "predictions": {
+            "trait": -0.6855262603835326,
+            "base": -0.6427451675279616,
+            "history": -0.6681865976001322,
+            "pre": -0.6523035860520726
+          },
+          "history_training_standardized_slope": 0.04023539131625207
+        },
+        {
+          "site": "MAL",
+          "species": "Sedum acre",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.10025127360398775,
+            "base": -0.22472280801310307,
+            "history": -0.3458649708129583,
+            "pre": -0.2826242341575501
+          },
+          "history_training_standardized_slope": 0.23487296441577288
+        },
+        {
+          "site": "UME",
+          "species": "Agrostis capillaris",
+          "observed_contrast": -0.9663835677979862,
+          "predictions": {
+            "trait": -0.26308776831683445,
+            "base": -0.20791690544044075,
+            "history": -0.2148439806730599,
+            "pre": -0.28253010354591185
+          },
+          "history_training_standardized_slope": 0.08701053879613622
+        },
+        {
+          "site": "UME",
+          "species": "Antennaria dioica",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": -0.10469995099000175,
+            "base": -0.13433258998341785,
+            "history": -0.08000744976612768,
+            "pre": -0.18441559145552755
+          },
+          "history_training_standardized_slope": 0.10306691810755003
+        },
+        {
+          "site": "UME",
+          "species": "Briza media",
+          "observed_contrast": -0.13862943611198905,
+          "predictions": {
+            "trait": -0.2426820235881918,
+            "base": -0.23950779454477808,
+            "history": -0.2070233322712017,
+            "pre": -0.24000141302955763
+          },
+          "history_training_standardized_slope": 0.08760624546510733
+        },
+        {
+          "site": "UME",
+          "species": "Cardamine pratensis",
+          "observed_contrast": 0.13862943611198905,
+          "predictions": {
+            "trait": -0.07000050248479173,
+            "base": -0.13039009414342054,
+            "history": -0.14512798476564856,
+            "pre": -0.07993942120823302
+          },
+          "history_training_standardized_slope": 0.10089741991517062
+        },
+        {
+          "site": "UME",
+          "species": "Dianthus deltoides",
+          "observed_contrast": -1.3595392485085513,
+          "predictions": {
+            "trait": 0.0504766869256526,
+            "base": 0.06277604924812402,
+            "history": 0.09713353421506936,
+            "pre": 0.0793091140134414
+          },
+          "history_training_standardized_slope": 0.09719694935047393
+        },
+        {
+          "site": "UME",
+          "species": "Festuca rubra",
+          "observed_contrast": -0.3721909300477238,
+          "predictions": {
+            "trait": -0.43559928062843334,
+            "base": -0.43533119220529753,
+            "history": -0.4035621302208961,
+            "pre": -0.3746393535967561
+          },
+          "history_training_standardized_slope": 0.06158311875202561
+        },
+        {
+          "site": "UME",
+          "species": "Leucanthemum vulgare",
+          "observed_contrast": -0.7126956375145326,
+          "predictions": {
+            "trait": -0.15901834456708341,
+            "base": -0.15965034370823583,
+            "history": -0.12406618961567822,
+            "pre": -0.08442228058436616
+          },
+          "history_training_standardized_slope": 0.08761522973180647
+        },
+        {
+          "site": "UME",
+          "species": "Phalaris arundinacea",
+          "observed_contrast": -1.5546347360965072,
+          "predictions": {
+            "trait": -0.3131180042023807,
+            "base": -0.2913948566668072,
+            "history": -0.3296145316968689,
+            "pre": -0.33567361208031177
+          },
+          "history_training_standardized_slope": 0.04789092304194224
+        },
+        {
+          "site": "UME",
+          "species": "Poa pratensis",
+          "observed_contrast": -2.4249052615943207,
+          "predictions": {
+            "trait": -0.42890527532597406,
+            "base": -0.47217719191889473,
+            "history": -0.5431822407316781,
+            "pre": -0.48560681999293426
+          },
+          "history_training_standardized_slope": 0.11229384182837165
+        },
+        {
+          "site": "UME",
+          "species": "Sedum acre",
+          "observed_contrast": 0,
+          "predictions": {
+            "trait": 0.21333485729927623,
+            "base": 0.21375571104206412,
+            "history": 0.17466501059989104,
+            "pre": 0.1696747786547362
+          },
+          "history_training_standardized_slope": 0.07578986937117088
+        }
+      ]
+    }
+  },
+  "raw_2024_sensitivity": {
+    "losses": {
+      "trait": 855.0520956502909,
+      "base": 894.3754496705797,
+      "history": 914.275827536039,
+      "pre": 873.9431005872076
+    },
+    "history_gain": -0.0222505860070165,
+    "sim_gain_over_trait": -0.04598942476175358,
+    "pre_gain_over_base": 0.022845382317792592,
+    "by_site": {
+      "MAL": -0.03129557634564621,
+      "UME": -0.015609258708566326
+    },
+    "by_speed": {
+      "Fast": -0.02868857005852069,
+      "Slow": 0.03379787993759807
+    },
+    "n_improved_cells": 9,
+    "gain_without_focal": {
+      "Agrostis capillaris": -0.04374969535247949,
+      "Antennaria dioica": -0.018870688513539752,
+      "Briza media": -0.02105244574248866,
+      "Cardamine pratensis": -0.02270517865036407,
+      "Dianthus deltoides": -0.01839995995157288,
+      "Festuca rubra": -0.006337544908580744,
+      "Leucanthemum vulgare": -0.015106490198138997,
+      "Phalaris arundinacea": -0.021933130066911298,
+      "Poa pratensis": -0.033068767136507596,
+      "Sedum acre": -0.024670128394121162
+    },
+    "cells": [
+      {
+        "site": "MAL",
+        "species": "Agrostis capillaris",
+        "observed_contrast": -2.8,
+        "predictions": {
+          "trait": -12.661934913484783,
+          "base": -12.928264960817899,
+          "history": -12.87878348772089,
+          "pre": -12.306267327871952
+        },
+        "history_training_standardized_slope": -0.6215335462682815
+      },
+      {
+        "site": "MAL",
+        "species": "Antennaria dioica",
+        "observed_contrast": 0,
+        "predictions": {
+          "trait": -0.43980597758720563,
+          "base": -6.188130988294375,
+          "history": -6.424901383042757,
+          "pre": -6.3127965964825155
+        },
+        "history_training_standardized_slope": -0.44920629359107606
+      },
+      {
+        "site": "MAL",
+        "species": "Briza media",
+        "observed_contrast": -0.2,
+        "predictions": {
+          "trait": -2.6677937418192434,
+          "base": -4.064075537948087,
+          "history": -4.293884099766453,
+          "pre": -4.0652570996712445
+        },
+        "history_training_standardized_slope": -0.6197629225655819
+      },
+      {
+        "site": "MAL",
+        "species": "Cardamine pratensis",
+        "observed_contrast": 0.2,
+        "predictions": {
+          "trait": -4.7077229040752915,
+          "base": -4.095790492953601,
+          "history": -4.042315699493758,
+          "pre": -4.1568436010153125
+        },
+        "history_training_standardized_slope": -0.3660950422889517
+      },
+      {
+        "site": "MAL",
+        "species": "Dianthus deltoides",
+        "observed_contrast": 0.8,
+        "predictions": {
+          "trait": -1.1896472124847046,
+          "base": -1.6196049123366392,
+          "history": -1.6917176580085913,
+          "pre": -1.5781027567245494
+        },
+        "history_training_standardized_slope": -0.20400616911696515
+      },
+      {
+        "site": "MAL",
+        "species": "Festuca rubra",
+        "observed_contrast": -3.2,
+        "predictions": {
+          "trait": -14.719609192156112,
+          "base": -14.743108738553044,
+          "history": -15.000701978228824,
+          "pre": -14.52833689822327
+        },
+        "history_training_standardized_slope": -0.4993347010516587
+      },
+      {
+        "site": "MAL",
+        "species": "Leucanthemum vulgare",
+        "observed_contrast": -2.4,
+        "predictions": {
+          "trait": -9.633581139761247,
+          "base": -9.586676234958084,
+          "history": -9.858321701615134,
+          "pre": -9.584993916662826
+        },
+        "history_training_standardized_slope": -0.6688448994699946
+      },
+      {
+        "site": "MAL",
+        "species": "Phalaris arundinacea",
+        "observed_contrast": -10.6,
+        "predictions": {
+          "trait": -13.61555247786239,
+          "base": -13.11715273386027,
+          "history": -13.308510359600355,
+          "pre": -13.533644968159027
+        },
+        "history_training_standardized_slope": 0.23977946752815374
+      },
+      {
+        "site": "MAL",
+        "species": "Poa pratensis",
+        "observed_contrast": -2.6,
+        "predictions": {
+          "trait": -6.743740794488664,
+          "base": -4.492700127344972,
+          "history": -3.7908729643617107,
+          "pre": -4.5084433243391375
+        },
+        "history_training_standardized_slope": -1.1099333040203216
+      },
+      {
+        "site": "MAL",
+        "species": "Sedum acre",
+        "observed_contrast": 0,
+        "predictions": {
+          "trait": -2.4978407632635884,
+          "base": -1.933809291022772,
+          "history": -1.7463985781538183,
+          "pre": -2.07668522085838
+        },
+        "history_training_standardized_slope": -0.3633558183002581
+      },
+      {
+        "site": "UME",
+        "species": "Agrostis capillaris",
+        "observed_contrast": -20.4,
+        "predictions": {
+          "trait": -4.775758752003896,
+          "base": -4.099624091356813,
+          "history": -4.164663022920973,
+          "pre": -4.689997284943818
+        },
+        "history_training_standardized_slope": 0.8169497642344526
+      },
+      {
+        "site": "UME",
+        "species": "Antennaria dioica",
+        "observed_contrast": 0,
+        "predictions": {
+          "trait": -1.5746640080166565,
+          "base": 0.755723130341302,
+          "history": 1.1580216463694335,
+          "pre": 0.5336201848961771
+        },
+        "history_training_standardized_slope": 0.7632500908495302
+      },
+      {
+        "site": "UME",
+        "species": "Briza media",
+        "observed_contrast": -0.2,
+        "predictions": {
+          "trait": -1.7919857066711393,
+          "base": -1.1042442154853132,
+          "history": -0.826088666735658,
+          "pre": -1.1062237689247987
+        },
+        "history_training_standardized_slope": 0.7501482732273985
+      },
+      {
+        "site": "UME",
+        "species": "Cardamine pratensis",
+        "observed_contrast": 0.2,
+        "predictions": {
+          "trait": -0.7555949861820802,
+          "base": -2.0964150682565412,
+          "history": -2.2212089092251444,
+          "pre": -1.926839522718358
+        },
+        "history_training_standardized_slope": 0.854354052271605
+      },
+      {
+        "site": "UME",
+        "species": "Dianthus deltoides",
+        "observed_contrast": -6.6,
+        "predictions": {
+          "trait": -0.0799085927515189,
+          "base": 0.4178733957426544,
+          "history": 0.7043968874196267,
+          "pre": 0.48123117909806673
+        },
+        "history_training_standardized_slope": 0.8105718254709502
+      },
+      {
+        "site": "UME",
+        "species": "Festuca rubra",
+        "observed_contrast": -15.2,
+        "predictions": {
+          "trait": -3.571270372637228,
+          "base": -3.554563463896671,
+          "history": -3.1360401585111424,
+          "pre": -3.1917255836885325
+        },
+        "history_training_standardized_slope": 0.8112915146409522
+      },
+      {
+        "site": "UME",
+        "species": "Leucanthemum vulgare",
+        "observed_contrast": -7.6,
+        "predictions": {
+          "trait": -2.4036959511293827,
+          "base": -2.4380734447844348,
+          "history": -2.100955819169654,
+          "pre": -2.1139595617572544
+        },
+        "history_training_standardized_slope": 0.8300503122275346
+      },
+      {
+        "site": "UME",
+        "species": "Phalaris arundinacea",
+        "observed_contrast": -5.2,
+        "predictions": {
+          "trait": -2.813168491264391,
+          "base": -3.020433487031285,
+          "history": -3.1317573545083524,
+          "pre": -3.0141504954577565
+        },
+        "history_training_standardized_slope": 0.13949367088763087
+      },
+      {
+        "site": "UME",
+        "species": "Poa pratensis",
+        "observed_contrast": -11,
+        "predictions": {
+          "trait": -4.712952405288898,
+          "base": -6.218172534229945,
+          "history": -6.9714639613613985,
+          "pre": -6.275453504653861
+        },
+        "history_training_standardized_slope": 1.191323571820977
+      },
+      {
+        "site": "UME",
+        "species": "Sedum acre",
+        "observed_contrast": 0,
+        "predictions": {
+          "trait": 2.43485129359908,
+          "base": 2.0539046060259913,
+          "history": 1.71481299208663,
+          "pre": 1.9121910735409773
+        },
+        "history_training_standardized_slope": 0.6574379285769335
+      }
+    ]
+  },
+  "primary_sharp_null_reference": {
+    "n_permutations": 1999,
+    "p_upper": 0.0885,
+    "null_median": -0.052311945647987995,
+    "null95": [
+      -0.1366534567334775,
+      0.05633556034906026
+    ]
+  },
+  "limits": [
+    "Distinct pot and field experiments but same research team and shared taxa.",
+    "One pot per directed species pair; measured net biomass response not dynamic competition coefficient.",
+    "Other-site and other-focal field calibration; two sites only, not independent species replication.",
+    "Only 10 common sown species. Other field species remain unmeasured.",
+    "Sharp null is no schedule effect, not a nonzero-effect no-moderation test. No causal mediation."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45527393961",
+  "source_job_id": 138914024698,
+  "source_commit": "ee1e0ec6040f04fae8859966b2634e109ea8a258",
+  "pot_doi": "10.5281/zenodo.10512662",
+  "field_doi": "10.5281/zenodo.15363824",
+  "prescore_contract": "docs/AHIF_VANSTEIJN_POT_FIELD_PRESCORE_20261125.md"
+}
