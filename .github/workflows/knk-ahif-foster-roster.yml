@@ -1,0 +1,40 @@
+name: AHIF Foster published roster and public EDI legacy host gate
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - ".github/workflows/knk-ahif-foster-roster.yml"
+      - "benchmarks/audit_ahif_foster_roster.py"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  roster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Verify source and inspect exact species names without response scores
+        run: python -m benchmarks.audit_ahif_foster_roster --root "$RUNNER_TEMP/roster" --out "$RUNNER_TEMP/roster/audit.json" --roster database/ahif_v1/foster2009_published_sown_roster.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-foster-roster-audit-only
+          path: ${{ runner.temp }}/roster/audit.json
+  edi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retry documented public legacy hostname after DNS failure
+        run: python -m benchmarks.audit_ahif_foster_original --api-base https://pasta.lternet.edu --root "$RUNNER_TEMP/foster" --out "$RUNNER_TEMP/foster/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-foster-legacy-edi-metadata-audit-only
+          path: ${{ runner.temp }}/foster/audit.json

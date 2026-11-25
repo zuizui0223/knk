@@ -157,7 +157,10 @@ def inventory(root):
     return z
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--root",type=Path,required=True);p.add_argument("--out",type=Path,required=True);a=p.parse_args()
+    global BASE
+    p=argparse.ArgumentParser();p.add_argument("--root",type=Path,required=True);p.add_argument("--out",type=Path,required=True)
+    p.add_argument("--api-base",choices=["https://pasta.edirepository.org","https://pasta.lternet.edu"],default=BASE)
+    a=p.parse_args();BASE=a.api_base
     z=inventory(a.root);a.out.write_text(json.dumps(z,indent=2,allow_nan=False)+"\n")
     print("FOSTER_ORIGINAL_AUDIT",json.dumps(z,allow_nan=False))
 if __name__=="__main__":main()
