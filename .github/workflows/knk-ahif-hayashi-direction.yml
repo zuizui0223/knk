@@ -1,0 +1,44 @@
+name: AHIF Hayashi held-well direction
+on:
+  push:
+    branches: [analysis/ahif-mechanism-db-20261125]
+    paths:
+      - '.github/workflows/knk-ahif-hayashi-direction.yml'
+      - 'benchmarks/export_ahif_hayashi2026.R'
+      - 'benchmarks/score_ahif_hayashi2026.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Acquire exact author release files
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/hayashi"
+          cd "$RUNNER_TEMP/hayashi"
+          base=https://raw.githubusercontent.com/Ibuki-Hayashi/Founding-Community-Size-Governs-Divergent-Ecological-Trajectories/a37af8c186a9438edccf5f729a0fdd48eed4469f
+          curl -fL --max-time 60 "$base/Data/expdata_rep.csv" -o expdata_rep.csv
+          curl -fL --max-time 60 "$base/Output/List_seqtab_3000.rds" -o List_seqtab_3000.rds
+          curl -fL --max-time 60 "$base/Output/List_data_rep.rds" -o List_data_rep.rds
+          test "$(git hash-object expdata_rep.csv)" = 7e2ea1e28b48e6c52f87521090cd17fc34423e01
+          test "$(git hash-object List_seqtab_3000.rds)" = d9d48453cdab64ec7833aba63e303552bf21534a
+          test "$(git hash-object List_data_rep.rds)" = 2bee26705f666b0cffb124fb3dcd315ba22d31a4
+          sha256sum *.csv *.rds
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends r-base-core
+      - run: Rscript benchmarks/export_ahif_hayashi2026.R "$RUNNER_TEMP/hayashi" "$RUNNER_TEMP/hayashi/ephemeral"
+      - run: python -m benchmarks.score_ahif_hayashi2026 --source "$RUNNER_TEMP/hayashi/ephemeral" --out "$RUNNER_TEMP/hayashi-derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-hayashi-held-well-derived-only
+          path: ${{ runner.temp }}/hayashi-derived/result.json
+          retention-days: 30

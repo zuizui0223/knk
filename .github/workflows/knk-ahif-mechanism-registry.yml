@@ -1,0 +1,23 @@
+name: AHIF mechanism registry integrity
+on:
+  push:
+    branches: [analysis/ahif-mechanism-db-20261125]
+    paths:
+      - 'database/ahif_mechanism_v0/**'
+      - 'benchmarks/build_ahif_mechanism_registry.py'
+      - '.github/workflows/knk-ahif-mechanism-registry.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.build_ahif_mechanism_registry --out "$RUNNER_TEMP/registry"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-mechanism-registry-v0
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30
