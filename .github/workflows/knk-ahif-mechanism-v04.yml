@@ -1,0 +1,24 @@
+name: AHIF mechanism registry v0.4
+on:
+  push:
+    branches: [analysis/ahif-mass-direction-transfer-20261125]
+    paths:
+      - 'benchmarks/build_ahif_mechanism_registry_v04.py'
+      - 'database/ahif_mechanism_v0/mass_direction_transfer_effects_20261126.csv'
+      - 'validation/ahif_v1/mass_direction_transfer_summary_20261126.json'
+      - '.github/workflows/knk-ahif-mechanism-v04.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.build_ahif_mechanism_registry_v04 --out "$RUNNER_TEMP/registry"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-mechanism-registry-v04
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30
