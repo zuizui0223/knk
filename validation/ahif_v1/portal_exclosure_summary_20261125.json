@@ -1,0 +1,1054 @@
+{
+  "status": "PORTAL_SINGLE_SITE_NON_TARGET_DESCRIPTIVE_NOT_META",
+  "seed": 2026112511,
+  "n_splits": 256,
+  "audit": {
+    "source_commit": "a4dc266c0068d26370cd88bec5272a02623d5470",
+    "hashes": {
+      "Rodents/Portal_rodent.csv": "6fee8dcd0c80648bdf812fad0c73c9389c555dc40e9692cc232e60f8d5a7a279",
+      "Rodents/Portal_rodent_trapping.csv": "8da7baff405c278f3e3685de3face102cdd04c5f2aea4e70d8962e49cb8c9b57",
+      "Rodents/Portal_rodent_species.csv": "0496f3bba78cc347bc0ab1464303e9ddad5a4dc20914d3a6861ab844dd30dce1",
+      "SiteandMethods/Portal_plots.csv": "e4bc5d1290be0ef2fe2845c3773dac9bf90a7004d7fa2df0252df63c6d0b76fe",
+      "Rodents/moon_dates.csv": "1abf0a677cf7a633360ce2b0da35d4fb36872fcb0638bdd9344bbfb0c02a8e13",
+      "SiteandMethods/Portal_plot_treatments.csv": "bc018a448f15d4d56977a679eb1233f6027e09c51b9f83ab674ccf4feadad3e9",
+      "SiteandMethods/Methods.md": "fd751acfc5dc3717ad450fc1e67c3e8701034a145df109b70c6c1f781eb5a6ec",
+      "Rodents/Portal_rodent_datanotes.csv": "b436b860f760135155dfd2e8deb0544cae840d0f63cbf1bacbfa3b75ad9bd5d8"
+    },
+    "raw_capture_rows": 79828,
+    "control": [
+      4,
+      5,
+      6,
+      7,
+      11,
+      13,
+      14,
+      17,
+      18,
+      24
+    ],
+    "exclosure": [
+      2,
+      3,
+      8,
+      15,
+      19,
+      20,
+      21,
+      22
+    ],
+    "treatment_history": {
+      "2": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Small seeds added",
+        "aug1979_jan1980": "Small seeds added",
+        "feb1980_jul1985": "Small seeds added",
+        "aug1985_dec1987": "Summer annuals removed",
+        "jan1988_dec2004": "Unmanipulated control",
+        "jan2005_jul2009": "Unmanipulated control",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "3": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Kangaroo rats removed",
+        "aug1979_jan1980": "Kangaroo rats removed",
+        "feb1980_jul1985": "Kangaroo rats removed",
+        "aug1985_dec1987": "Kangaroo rats removed",
+        "jan1988_dec2004": "Kangaroo rats removed, All ants removed",
+        "jan2005_jul2009": "Kangaroo rats removed, All ants removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "4": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "All ants removed",
+        "aug1979_jan1980": "All ants removed",
+        "feb1980_jul1985": "All ants removed",
+        "aug1985_dec1987": "All ants removed",
+        "jan1988_dec2004": "All ants removed",
+        "jan2005_jul2009": "All ants removed",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "5": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Dipodomys spectabilis removed",
+        "aug1979_jan1980": "Dipodomys spectabilis removed",
+        "feb1980_jul1985": "Dipodomys spectabilis removed",
+        "aug1985_dec1987": "Dipodomys spectabilis removed",
+        "jan1988_dec2004": "All rodents removed",
+        "jan2005_jul2009": "All rodents removed",
+        "aug2009_mar2015": "All rodents removed",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "6": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Large seeds added",
+        "aug1979_jan1980": "Large seeds added",
+        "feb1980_jul1985": "Large seeds added",
+        "aug1985_dec1987": "Winter annuals removed",
+        "jan1988_dec2004": "Kangaroo rats removed",
+        "jan2005_jul2009": "Kangaroo rats removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "7": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "All rodents removed",
+        "aug1979_jan1980": "All rodents removed",
+        "feb1980_jul1985": "All rodents removed",
+        "aug1985_dec1987": "All rodents removed",
+        "jan1988_dec2004": "All rodents removed",
+        "jan2005_jul2009": "All rodents removed",
+        "aug2009_mar2015": "All rodents removed",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "8": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Pogonomyrmex rugosus removed",
+        "aug1979_jan1980": "Pogonomyrmex rugosus removed",
+        "feb1980_jul1985": "Pogonomyrmex rugosus removed",
+        "aug1985_dec1987": "Pogonomyrmex rugosus removed",
+        "jan1988_dec2004": "All ants removed",
+        "jan2005_jul2009": "All ants removed",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "11": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Unmanipulated control",
+        "aug1979_jan1980": "Unmanipulated control",
+        "feb1980_jul1985": "Unmanipulated control",
+        "aug1985_dec1987": "Unmanipulated control",
+        "jan1988_dec2004": "Unmanipulated control",
+        "jan2005_jul2009": "Unmanipulated control",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "13": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Large seeds added",
+        "aug1979_jan1980": "Large seeds added",
+        "feb1980_jul1985": "Large seeds added",
+        "aug1985_dec1987": "Winter annuals removed",
+        "jan1988_dec2004": "Kangaroo rats removed, All ants removed",
+        "jan2005_jul2009": "Kangaroo rats removed, All ants removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "14": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Unmanipulated control",
+        "aug1979_jan1980": "Unmanipulated control",
+        "feb1980_jul1985": "Unmanipulated control",
+        "aug1985_dec1987": "Unmanipulated control",
+        "jan1988_dec2004": "Unmanipulated control",
+        "jan2005_jul2009": "Unmanipulated control",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "15": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "aug1979_jan1980": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "feb1980_jul1985": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "aug1985_dec1987": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "jan1988_dec2004": "Kangaroo rats removed",
+        "jan2005_jul2009": "Kangaroo rats removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "17": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "All ants removed",
+        "aug1979_jan1980": "All ants removed",
+        "feb1980_jul1985": "All ants removed",
+        "aug1985_dec1987": "All ants removed",
+        "jan1988_dec2004": "All ants removed",
+        "jan2005_jul2009": "All ants removed",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "18": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Mixed-sized seeds added in pulse",
+        "aug1979_jan1980": "Mixed-sized seeds added in pulse",
+        "feb1980_jul1985": "Mixed-sized seeds added in pulse",
+        "aug1985_dec1987": "All annuals removed",
+        "jan1988_dec2004": "Kangaroo rats removed",
+        "jan2005_jul2009": "Kangaroo rats removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Unmanipulated control"
+      },
+      "19": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Kangaroo rats removed",
+        "aug1979_jan1980": "Kangaroo rats removed",
+        "feb1980_jul1985": "Kangaroo rats removed",
+        "aug1985_dec1987": "Kangaroo rats removed",
+        "jan1988_dec2004": "Kangaroo rats removed, All ants removed",
+        "jan2005_jul2009": "Kangaroo rats removed, All ants removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "20": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Mixed-sized seeds added",
+        "aug1979_jan1980": "Mixed-sized seeds added",
+        "feb1980_jul1985": "Mixed-sized seeds added",
+        "aug1985_dec1987": "Bi-seasonal annuals removed",
+        "jan1988_dec2004": "Kangaroo rats removed, All ants removed",
+        "jan2005_jul2009": "Kangaroo rats removed, All ants removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "21": {
+        "term": "longterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "aug1979_jan1980": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "feb1980_jul1985": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "aug1985_dec1987": "Kangaroo rats removed, Pogonomyrmex rugosus removed",
+        "jan1988_dec2004": "Kangaroo rats removed",
+        "jan2005_jul2009": "Kangaroo rats removed",
+        "aug2009_mar2015": "Kangaroo rats removed",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "22": {
+        "term": "shortterm",
+        "jul1977_sep1977": "setup",
+        "oct1977_jul1979": "Small seeds added",
+        "aug1979_jan1980": "Small seeds added",
+        "feb1980_jul1985": "Small seeds added",
+        "aug1985_dec1987": "Summer annuals removed",
+        "jan1988_dec2004": "Unmanipulated control",
+        "jan2005_jul2009": "Unmanipulated control",
+        "aug2009_mar2015": "Unmanipulated control",
+        "apr2015_present": "Kangaroo rats removed"
+      },
+      "24": {
+        "term": "shortterm",
+        "jul1977_sep1977": "DNE",
+        "oct1977_jul1979": "DNE",
+        "aug1979_jan1980": "control",
+        "feb1980_jul1985": "Dipodomys spectabilis removed",
+        "aug1985_dec1987": "Dipodomys spectabilis removed",
+        "jan1988_dec2004": "All rodents removed",
+        "jan2005_jul2009": "All rodents removed",
+        "aug2009_mar2015": "All rodents removed",
+        "apr2015_present": "Unmanipulated control"
+      }
+    },
+    "n_moons_scope": 112,
+    "n_full_effort_periods": 72,
+    "bad_flag_periods": [
+      479,
+      524
+    ],
+    "n_eligible_periods": 70,
+    "n_consecutive_pairs": 56,
+    "eligible_moons": [
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      497,
+      498,
+      499,
+      500,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      512,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      544,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      557,
+      558,
+      559,
+      560,
+      561,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      572,
+      573,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      583,
+      584,
+      585,
+      587
+    ],
+    "pairs": [
+      [
+        481,
+        482
+      ],
+      [
+        482,
+        483
+      ],
+      [
+        483,
+        484
+      ],
+      [
+        484,
+        485
+      ],
+      [
+        485,
+        486
+      ],
+      [
+        486,
+        487
+      ],
+      [
+        490,
+        491
+      ],
+      [
+        491,
+        492
+      ],
+      [
+        492,
+        493
+      ],
+      [
+        493,
+        494
+      ],
+      [
+        494,
+        495
+      ],
+      [
+        497,
+        498
+      ],
+      [
+        498,
+        499
+      ],
+      [
+        499,
+        500
+      ],
+      [
+        504,
+        505
+      ],
+      [
+        505,
+        506
+      ],
+      [
+        506,
+        507
+      ],
+      [
+        507,
+        508
+      ],
+      [
+        508,
+        509
+      ],
+      [
+        509,
+        510
+      ],
+      [
+        516,
+        517
+      ],
+      [
+        517,
+        518
+      ],
+      [
+        518,
+        519
+      ],
+      [
+        519,
+        520
+      ],
+      [
+        520,
+        521
+      ],
+      [
+        521,
+        522
+      ],
+      [
+        522,
+        523
+      ],
+      [
+        523,
+        524
+      ],
+      [
+        524,
+        525
+      ],
+      [
+        525,
+        526
+      ],
+      [
+        526,
+        527
+      ],
+      [
+        548,
+        549
+      ],
+      [
+        549,
+        550
+      ],
+      [
+        550,
+        551
+      ],
+      [
+        551,
+        552
+      ],
+      [
+        552,
+        553
+      ],
+      [
+        553,
+        554
+      ],
+      [
+        554,
+        555
+      ],
+      [
+        557,
+        558
+      ],
+      [
+        558,
+        559
+      ],
+      [
+        559,
+        560
+      ],
+      [
+        560,
+        561
+      ],
+      [
+        563,
+        564
+      ],
+      [
+        564,
+        565
+      ],
+      [
+        565,
+        566
+      ],
+      [
+        566,
+        567
+      ],
+      [
+        567,
+        568
+      ],
+      [
+        568,
+        569
+      ],
+      [
+        572,
+        573
+      ],
+      [
+        576,
+        577
+      ],
+      [
+        577,
+        578
+      ],
+      [
+        578,
+        579
+      ],
+      [
+        579,
+        580
+      ],
+      [
+        580,
+        581
+      ],
+      [
+        583,
+        584
+      ],
+      [
+        584,
+        585
+      ]
+    ],
+    "species": [
+      "BA",
+      "DM",
+      "DO",
+      "DS",
+      "NA",
+      "OL",
+      "OT",
+      "PB",
+      "PE",
+      "PF",
+      "PH",
+      "PI",
+      "PL",
+      "PM",
+      "PP",
+      "RF",
+      "RM",
+      "RO",
+      "SF",
+      "SH",
+      "SO"
+    ],
+    "excluded_target_species": [
+      "DM",
+      "DO",
+      "DS"
+    ],
+    "n_eligible_capture_rows": 10273,
+    "n_missing_id_rows": 0,
+    "n_ambiguous_plot_period_ids": 1,
+    "n_duplicate_rows_removed": 3,
+    "n_counted": 10268,
+    "n_crossplot_individual_periods": 52,
+    "n_crossplot_rows": 104,
+    "n_counted_no_crossplot": 10164
+  },
+  "primary_nontarget": {
+    "1": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.010941297927944198,
+        "H": 0.06912794635654337,
+        "same": 0.4159584211879454,
+        "allocation_tv": 0.5302597268919322,
+        "concurrent_G": 0.013933929009892033,
+        "concurrent_H": 0.07338072305155238,
+        "concurrent_minus_lag_G": 0.002992631081947844,
+        "fixed_mass_concurrent_advantage": 0.0018543919011656195,
+        "lag_signed_tv": 0.6960019170894227,
+        "concurrent_signed_tv": 0.6850918572468349,
+        "O": 0.46974027310806776,
+        "Astar": 0.6471620602150072,
+        "J": 0.05818664842859918,
+        "n_dates": 56,
+        "n_defined": 24788
+      },
+      "all_defined": {
+        "G": 0.009959372064904909,
+        "H": 0.06829979887948863,
+        "same": 0.4147646193772964,
+        "allocation_tv": 0.5294768499475349,
+        "concurrent_G": 0.012892672872579848,
+        "concurrent_H": 0.0725126962244749,
+        "concurrent_minus_lag_G": 0.0029333008076749376,
+        "fixed_mass_concurrent_advantage": 0.0019294285358449508,
+        "lag_signed_tv": 0.6964386260942786,
+        "concurrent_signed_tv": 0.6857417331900743,
+        "O": 0.47052315005246514,
+        "Astar": 0.6451571487436334,
+        "J": 0.05834042681458372,
+        "n_dates": 56,
+        "n_defined": 25273
+      }
+    },
+    "2": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.034384651097514395,
+        "H": 0.10087278560654432,
+        "same": 0.4965063242551643,
+        "allocation_tv": 0.4892107131281767,
+        "concurrent_G": 0.035958969833416246,
+        "concurrent_H": 0.10328478160260379,
+        "concurrent_minus_lag_G": 0.0015743187359018667,
+        "fixed_mass_concurrent_advantage": -0.0020878565992503736,
+        "lag_signed_tv": 0.6437325709575438,
+        "concurrent_signed_tv": 0.6362833262516718,
+        "O": 0.5107892868718233,
+        "Astar": 0.6974841450264347,
+        "J": 0.06648813450902993,
+        "n_dates": 56,
+        "n_defined": 24788
+      },
+      "all_defined": {
+        "G": 0.03378342763663863,
+        "H": 0.1005122884922209,
+        "same": 0.49480671308993013,
+        "allocation_tv": 0.4900939445668477,
+        "concurrent_G": 0.03650631304237788,
+        "concurrent_H": 0.10371145058369757,
+        "concurrent_minus_lag_G": 0.002722885405739272,
+        "fixed_mass_concurrent_advantage": -0.0014069928144608953,
+        "lag_signed_tv": 0.644534683791203,
+        "concurrent_signed_tv": 0.6363141907930662,
+        "O": 0.5099060554331523,
+        "Astar": 0.6971192289662813,
+        "J": 0.06672886085558227,
+        "n_dates": 56,
+        "n_defined": 27907
+      }
+    },
+    "3": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.05595610065856293,
+        "H": 0.1255716601439595,
+        "same": 0.5482679048900637,
+        "allocation_tv": 0.4599445556432152,
+        "concurrent_G": 0.05711831864616116,
+        "concurrent_H": 0.12738380785411288,
+        "concurrent_minus_lag_G": 0.0011622179875982008,
+        "fixed_mass_concurrent_advantage": -0.004502718635762179,
+        "lag_signed_tv": 0.6044006176776483,
+        "concurrent_signed_tv": 0.5963648393082568,
+        "O": 0.5400554443567849,
+        "Astar": 0.7325162378346495,
+        "J": 0.06961555948539658,
+        "n_dates": 56,
+        "n_defined": 24788
+      },
+      "all_defined": {
+        "G": 0.055530059771423,
+        "H": 0.12540255922299026,
+        "same": 0.5456616551190091,
+        "allocation_tv": 0.46164076907227886,
+        "concurrent_G": 0.05866747802209333,
+        "concurrent_H": 0.1288453027256334,
+        "concurrent_minus_lag_G": 0.003137418250670299,
+        "fixed_mass_concurrent_advantage": -0.003405653275118627,
+        "lag_signed_tv": 0.6054178253131494,
+        "concurrent_signed_tv": 0.5953459624137778,
+        "O": 0.5383592309277212,
+        "Astar": 0.7329347246575335,
+        "J": 0.06987249945156726,
+        "n_dates": 56,
+        "n_defined": 28447
+      }
+    },
+    "4": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.07590765596612725,
+        "H": 0.14766776532783457,
+        "same": 0.593690178557277,
+        "allocation_tv": 0.43203964671800205,
+        "concurrent_G": 0.0736542118186813,
+        "concurrent_H": 0.14636875900517807,
+        "concurrent_minus_lag_G": -0.0022534441474459303,
+        "fixed_mass_concurrent_advantage": -0.007292188290109595,
+        "lag_signed_tv": 0.5683520580311666,
+        "concurrent_signed_tv": 0.5623665299516205,
+        "O": 0.5679603532819979,
+        "Astar": 0.7599966079930162,
+        "J": 0.07176010936170732,
+        "n_dates": 56,
+        "n_defined": 24788
+      },
+      "all_defined": {
+        "G": 0.07545175271593393,
+        "H": 0.14748570875990272,
+        "same": 0.5912301356019639,
+        "allocation_tv": 0.43454775843680565,
+        "concurrent_G": 0.07502267394419596,
+        "concurrent_H": 0.14783809001458711,
+        "concurrent_minus_lag_G": -0.0004290787717379844,
+        "fixed_mass_concurrent_advantage": -0.006092357149169482,
+        "lag_signed_tv": 0.5697881704584999,
+        "concurrent_signed_tv": 0.5615951170124859,
+        "O": 0.5654522415631944,
+        "Astar": 0.7608278788535315,
+        "J": 0.07203395604396878,
+        "n_dates": 56,
+        "n_defined": 28624
+      }
+    }
+  },
+  "all_species": {
+    "1": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.10265418873765028,
+        "H": 0.1709947632060424,
+        "same": 0.5935160663703852,
+        "allocation_tv": 0.47683832441021295,
+        "concurrent_G": 0.10637117218589968,
+        "concurrent_H": 0.17477161762888113,
+        "concurrent_minus_lag_G": 0.0037169834482494307,
+        "fixed_mass_concurrent_advantage": -0.0021959978921146017,
+        "lag_signed_tv": 0.567424398999064,
+        "concurrent_signed_tv": 0.5585924140616336,
+        "O": 0.523161675589787,
+        "Astar": 0.8268487949031649,
+        "J": 0.06834057446839212,
+        "n_dates": 56,
+        "n_defined": 28494
+      },
+      "all_defined": {
+        "G": 0.10262780398778301,
+        "H": 0.17096819183128362,
+        "same": 0.5934964746842356,
+        "allocation_tv": 0.4767864088509378,
+        "concurrent_G": 0.1063566865670669,
+        "concurrent_H": 0.1747630373544735,
+        "concurrent_minus_lag_G": 0.0037288825792839075,
+        "fixed_mass_concurrent_advantage": -0.002181057705687744,
+        "lag_signed_tv": 0.5674250125941852,
+        "concurrent_signed_tv": 0.5586193449465935,
+        "O": 0.5232135911490622,
+        "Astar": 0.826765578577211,
+        "J": 0.0683403878435006,
+        "n_dates": 56,
+        "n_defined": 28503
+      }
+    },
+    "2": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.1462612600234876,
+        "H": 0.22065193687160853,
+        "same": 0.7028592480715875,
+        "allocation_tv": 0.39753379397333793,
+        "concurrent_G": 0.1508688755803504,
+        "concurrent_H": 0.22406882125805966,
+        "concurrent_minus_lag_G": 0.004607615556862741,
+        "fixed_mass_concurrent_advantage": -0.002972233537070913,
+        "lag_signed_tv": 0.47811496011506044,
+        "concurrent_signed_tv": 0.46957332348076447,
+        "O": 0.6024662060266621,
+        "Astar": 0.8662478238021596,
+        "J": 0.07439067684812092,
+        "n_dates": 56,
+        "n_defined": 28494
+      },
+      "all_defined": {
+        "G": 0.14629421281372632,
+        "H": 0.22066388173068474,
+        "same": 0.7028590308489805,
+        "allocation_tv": 0.3977174864830369,
+        "concurrent_G": 0.15087424122608567,
+        "concurrent_H": 0.22405435004511245,
+        "concurrent_minus_lag_G": 0.004580028412359313,
+        "fixed_mass_concurrent_advantage": -0.003042498786830723,
+        "lag_signed_tv": 0.4781948615108336,
+        "concurrent_signed_tv": 0.46963188719585774,
+        "O": 0.6022825135169632,
+        "Astar": 0.8663793598159475,
+        "J": 0.07436966891695843,
+        "n_dates": 56,
+        "n_defined": 28663
+      }
+    },
+    "3": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.175992454494282,
+        "H": 0.25088244263536386,
+        "same": 0.7540125697335319,
+        "allocation_tv": 0.3547295033063323,
+        "concurrent_G": 0.18171254279284105,
+        "concurrent_H": 0.25459997098541304,
+        "concurrent_minus_lag_G": 0.005720088298559006,
+        "fixed_mass_concurrent_advantage": -0.003475719349422052,
+        "lag_signed_tv": 0.426482309017802,
+        "concurrent_signed_tv": 0.41679902634733584,
+        "O": 0.6452704966936678,
+        "Astar": 0.8888019736232671,
+        "J": 0.07488998814108186,
+        "n_dates": 56,
+        "n_defined": 28494
+      },
+      "all_defined": {
+        "G": 0.175991773177913,
+        "H": 0.2508629796318861,
+        "same": 0.7539988082397701,
+        "allocation_tv": 0.35491075977208114,
+        "concurrent_G": 0.18177089626436754,
+        "concurrent_H": 0.2546310375784723,
+        "concurrent_minus_lag_G": 0.0057791230864545065,
+        "fixed_mass_concurrent_advantage": -0.0034400974242044633,
+        "lag_signed_tv": 0.42659240025415424,
+        "concurrent_signed_tv": 0.4168797002232517,
+        "O": 0.6450892402279189,
+        "Astar": 0.8888810477496923,
+        "J": 0.07487120645397308,
+        "n_dates": 56,
+        "n_defined": 28672
+      }
+    },
+    "4": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.19707834436637026,
+        "H": 0.2720717946564933,
+        "same": 0.7879600322862698,
+        "allocation_tv": 0.3263138170361592,
+        "concurrent_G": 0.20217192319837873,
+        "concurrent_H": 0.2751213271758789,
+        "concurrent_minus_lag_G": 0.005093578832008519,
+        "fixed_mass_concurrent_advantage": -0.004297058139136981,
+        "lag_signed_tv": 0.39108511386158623,
+        "concurrent_signed_tv": 0.38169482577291614,
+        "O": 0.6736861829638408,
+        "Astar": 0.903855387770505,
+        "J": 0.07499345029012303,
+        "n_dates": 56,
+        "n_defined": 28494
+      },
+      "all_defined": {
+        "G": 0.1970695823506314,
+        "H": 0.27204986770985545,
+        "same": 0.7879024222406354,
+        "allocation_tv": 0.32641882756636503,
+        "concurrent_G": 0.20220879544353285,
+        "concurrent_H": 0.2751346018749338,
+        "concurrent_minus_lag_G": 0.005139213092901473,
+        "fixed_mass_concurrent_advantage": -0.004246712885494517,
+        "lag_signed_tv": 0.391159546073327,
+        "concurrent_signed_tv": 0.3817505309288477,
+        "O": 0.6735811724336349,
+        "Astar": 0.9038857955707771,
+        "J": 0.07498028535922405,
+        "n_dates": 56,
+        "n_defined": 28672
+      }
+    }
+  },
+  "nontarget_no_crossplot_ID": {
+    "1": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.01155875660161859,
+        "H": 0.07014036535192483,
+        "same": 0.4185094396630042,
+        "allocation_tv": 0.5280727060358447,
+        "concurrent_G": 0.01428027793258525,
+        "concurrent_H": 0.0739592469057351,
+        "concurrent_minus_lag_G": 0.0027215213309666653,
+        "fixed_mass_concurrent_advantage": 0.0009332430515887717,
+        "lag_signed_tv": 0.6938959876659975,
+        "concurrent_signed_tv": 0.6824192229851374,
+        "O": 0.47192729396415534,
+        "Astar": 0.6486253629510402,
+        "J": 0.05858160875030624,
+        "n_dates": 56,
+        "n_defined": 24778
+      },
+      "all_defined": {
+        "G": 0.010395699704859302,
+        "H": 0.0691172958975208,
+        "same": 0.41696309879871307,
+        "allocation_tv": 0.5272995283822123,
+        "concurrent_G": 0.012952718985628034,
+        "concurrent_H": 0.07279364149020974,
+        "concurrent_minus_lag_G": 0.002557019280768732,
+        "fixed_mass_concurrent_advantage": 0.0009210713084188872,
+        "lag_signed_tv": 0.6945324682935853,
+        "concurrent_signed_tv": 0.6835460143119091,
+        "O": 0.4727004716177877,
+        "Astar": 0.6462179541750217,
+        "J": 0.0587215961926615,
+        "n_dates": 56,
+        "n_defined": 25267
+      }
+    },
+    "2": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.03613114548515508,
+        "H": 0.10246878008929591,
+        "same": 0.4986687511475014,
+        "allocation_tv": 0.48962766638867095,
+        "concurrent_G": 0.037488794236120705,
+        "concurrent_H": 0.10484168036296473,
+        "concurrent_minus_lag_G": 0.0013576487509656312,
+        "fixed_mass_concurrent_advantage": -0.0022744956085094833,
+        "lag_signed_tv": 0.6423450531050398,
+        "concurrent_signed_tv": 0.6348177216290922,
+        "O": 0.510372333611329,
+        "Astar": 0.7007725994162732,
+        "J": 0.06633763460414083,
+        "n_dates": 56,
+        "n_defined": 24778
+      },
+      "all_defined": {
+        "G": 0.03539930625445795,
+        "H": 0.10197171044241017,
+        "same": 0.4967966401580976,
+        "allocation_tv": 0.4903085829597943,
+        "concurrent_G": 0.0381295077070433,
+        "concurrent_H": 0.10532291981271223,
+        "concurrent_minus_lag_G": 0.002730201452585361,
+        "fixed_mass_concurrent_advantage": -0.0013343581263188752,
+        "lag_signed_tv": 0.6431825810374868,
+        "concurrent_signed_tv": 0.6347026913617919,
+        "O": 0.5096914170402057,
+        "Astar": 0.7000655828865299,
+        "J": 0.06657240418795221,
+        "n_dates": 56,
+        "n_defined": 27855
+      }
+    },
+    "3": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.05690201607718177,
+        "H": 0.1264512269565017,
+        "same": 0.5494879298749547,
+        "allocation_tv": 0.4597158843737832,
+        "concurrent_G": 0.05819869022041229,
+        "concurrent_H": 0.12854928874718194,
+        "concurrent_minus_lag_G": 0.0012966741432304876,
+        "fixed_mass_concurrent_advantage": -0.00425660513811779,
+        "lag_signed_tv": 0.6034067152303901,
+        "concurrent_signed_tv": 0.5951168223089082,
+        "O": 0.5402841156262168,
+        "Astar": 0.734045797940845,
+        "J": 0.06954921087931995,
+        "n_dates": 56,
+        "n_defined": 24778
+      },
+      "all_defined": {
+        "G": 0.05651838506623615,
+        "H": 0.12636689825292116,
+        "same": 0.5469448665970423,
+        "allocation_tv": 0.46122200786230827,
+        "concurrent_G": 0.05960076525845719,
+        "concurrent_H": 0.12984097131584874,
+        "concurrent_minus_lag_G": 0.0030823801922210373,
+        "fixed_mass_concurrent_advantage": -0.003333745124191766,
+        "lag_signed_tv": 0.6042441056782332,
+        "concurrent_signed_tv": 0.5942679884015272,
+        "O": 0.5387779921376917,
+        "Astar": 0.734543541304535,
+        "J": 0.069848513186685,
+        "n_dates": 56,
+        "n_defined": 28457
+      }
+    },
+    "4": {
+      "n_total": 28672,
+      "common": {
+        "G": 0.07688868659800366,
+        "H": 0.14840067014593497,
+        "same": 0.5949098424522378,
+        "allocation_tv": 0.43089951735669973,
+        "concurrent_G": 0.07562839398455189,
+        "concurrent_H": 0.14808951408561125,
+        "concurrent_minus_lag_G": -0.0012602926134517958,
+        "fixed_mass_concurrent_advantage": -0.006747953075946716,
+        "lag_signed_tv": 0.5670490885324149,
+        "concurrent_signed_tv": 0.5606236030852346,
+        "O": 0.5691004826433003,
+        "Astar": 0.7607635640311858,
+        "J": 0.07151198354793131,
+        "n_dates": 56,
+        "n_defined": 24778
+      },
+      "all_defined": {
+        "G": 0.07642186717158446,
+        "H": 0.14833596268468172,
+        "same": 0.5924631856321986,
+        "allocation_tv": 0.4333712722088804,
+        "concurrent_G": 0.07686163729898302,
+        "concurrent_H": 0.14951893202546174,
+        "concurrent_minus_lag_G": 0.0004397701273985456,
+        "fixed_mass_concurrent_advantage": -0.005644613834544237,
+        "lag_signed_tv": 0.5683496734197584,
+        "concurrent_signed_tv": 0.5598070900149733,
+        "O": 0.5666287277911196,
+        "Astar": 0.7617868727957681,
+        "J": 0.07191409551309726,
+        "n_dates": 56,
+        "n_defined": 28636
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45591404506",
+  "artifact_id": 15010119246,
+  "artifact_digest": "sha256:f1282254cef3327cf308bd0aab3a567edf4359955b429fad6ea4f8ba76749b26"
+}
