@@ -1,0 +1,58 @@
+{
+  "status": "VALIDATED_DESCRIPTIVE_REGISTRY_NOT_META",
+  "version": "0.2.0",
+  "counts": {
+    "studies": 7,
+    "panels": 38,
+    "study_effects": 7,
+    "variable_dictionary": 13,
+    "candidates": 3
+  },
+  "effect_directions": {
+    "positive": 4,
+    "negative": 3
+  },
+  "meta_eligible": 0,
+  "by_measurement_lane": [
+    [
+      "absolute_biomass",
+      1
+    ],
+    [
+      "absolute_biomass_conditional",
+      1
+    ],
+    [
+      "absolute_biovolume",
+      1
+    ],
+    [
+      "relative_read_composition",
+      3
+    ],
+    [
+      "unclosed_pin_hits",
+      1
+    ]
+  ],
+  "mechanism_unmeasured": [
+    [
+      "direct_interaction"
+    ],
+    [
+      "functional_diversity"
+    ],
+    [
+      "generation_time"
+    ],
+    [
+      "immigration_rate"
+    ]
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45588507412",
+  "artifact_id": 15009722406,
+  "artifact_digest": "sha256:2ab06eda995b811d38878583000f4a345803e1f0a0aba55dd9ad882a3578fe51",
+  "previous_version_run": 45588314548,
+  "intermediate_failed_run": 45588478253,
+  "intermediate_failure_note": "Catalog expanded before builder schema/coverage update; subsequent validated commit 96008bb."
+}
