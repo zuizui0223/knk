@@ -1,0 +1,24 @@
+name: AHIF Vanvelk Dryad public source gate
+on:
+  push:
+    branches: [analysis/ahif-zooplankton-transfer-20261125]
+    paths:
+      - 'benchmarks/probe_ahif_vanvelk_dryad.py'
+      - '.github/workflows/knk-ahif-vanvelk-dryad.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.probe_ahif_vanvelk_dryad --out "$RUNNER_TEMP/vanvelk"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vanvelk-dryad-source-audit-only
+          path: ${{ runner.temp }}/vanvelk/audit.json
+          if-no-files-found: warn
+          retention-days: 30
