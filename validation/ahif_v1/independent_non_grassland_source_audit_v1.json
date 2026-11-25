@@ -1,0 +1,312 @@
+{
+  "status": "INDEPENDENT_SOURCE_SCREEN_NOT_ECOLOGICAL_SCORING",
+  "sources": {
+    "jiang_pat2008": {
+      "status": "PUBLIC_COLLECTION_AUDITED_NOT_SCORED",
+      "n_items": 2,
+      "items": [
+        {
+          "id": 3529661,
+          "title": "Appendix A. Protist population dynamics in different treatments.",
+          "doi": "10.6084/m9.figshare.3529661.v1",
+          "description": "Protist population dynamics in different treatments.",
+          "files": [
+            {
+              "id": 5601677,
+              "name": "appendix-A.htm",
+              "size": 1032230,
+              "md5": "8fa4f492badec44d498a3415ff5b9e51"
+            }
+          ]
+        },
+        {
+          "id": 3529658,
+          "title": "Appendix B. Results of ANOVAs for the effects of disturbance and assembly sequence on protist abundances.",
+          "doi": "10.6084/m9.figshare.3529658.v1",
+          "description": "Results of ANOVAs for the effects of disturbance and assembly sequence on protist abundances.",
+          "files": [
+            {
+              "id": 5601674,
+              "name": "appendix-B.htm",
+              "size": 10071,
+              "md5": "8f8708ed485115d03eafec4dd2335099"
+            }
+          ]
+        }
+      ]
+    },
+    "narwani2019": {
+      "status": "SOURCE_BYTES_VERIFIED_SCHEMA_ONLY",
+      "source_record": 4941856,
+      "sha256": "6242f9c3a92cde7f451066ceebf6ae6c9cc6f924d5ed9bc0a7f11de7b9beb3c3",
+      "bytes": 314077,
+      "sheets": [
+        {
+          "sheet": "Narwani_et_al_2019_Proceedings_",
+          "rows": 661,
+          "columns": 170,
+          "first_header_row": [
+            "Pond",
+            "Date",
+            "Week",
+            "Block",
+            "Rep",
+            "Dreisse",
+            "Macrophytes",
+            "Nutrients",
+            "TreatNR",
+            "Treatment",
+            "pH",
+            "TN",
+            "orthoP",
+            "TP",
+            "Nitrate",
+            "Temperature",
+            "O2",
+            "Turbidity",
+            "CHL",
+            "TED",
+            "CtoN",
+            "CtoP",
+            "c_Cyanobacteria",
+            "c_Golden_algae",
+            "c_Diatoms",
+            "c_Dinoflagellates",
+            "c_Cryptophytes",
+            "c_Green_algae",
+            "c_Achnthaceae",
+            "c_Aphanocapsa",
+            "c_Asterionella",
+            "c_Bicosoeca",
+            "c_Carteria",
+            "c_Chlamydomos",
+            "c_Chroococus",
+            "c_Coelastrum_1",
+            "c_Coelastrum_2",
+            "c_Coelastrum_3",
+            "c_Cosmarium_1",
+            "c_Cosmarium_2",
+            "c_Cryptomos",
+            "c_Cyclotella_1",
+            "c_Cyclotella_2",
+            "c_Diatoma",
+            "c_Elakatothrix",
+            "c_Erkenia",
+            "c_Gomphosphaeria",
+            "c_Gymnodinium",
+            "c_Haematococcaceae",
+            "c_Katablepharis",
+            "c_Kirchneriella",
+            "c_Lagerheimia_1",
+            "c_Lagerheimia_2",
+            "c_Leptothrix",
+            "c_Mallomos",
+            "c_Monoraphidium",
+            "c_Nephrocitium",
+            "c_Nitzschia",
+            "c_Oocystis_1",
+            "c_Oocystis_2"
+          ],
+          "id_fields": {
+            "Pond": {
+              "n_levels": 20,
+              "values": {
+                "1A": 33,
+                "1B": 33,
+                "1C": 33,
+                "1D": 33,
+                "2A": 33,
+                "2B": 33,
+                "2C": 33,
+                "2D": 33,
+                "3A": 33,
+                "3B": 33,
+                "3C": 33,
+                "3D": 33,
+                "4A": 33,
+                "4B": 33,
+                "4C": 33,
+                "4D": 33,
+                "5A": 33,
+                "5B": 33,
+                "5C": 33,
+                "5D": 33
+              }
+            },
+            "Date": {
+              "n_levels": 33,
+              "values": {
+                "2016-07-04 00:00:00": 20,
+                "2016-07-11 00:00:00": 20,
+                "2016-07-18 00:00:00": 20,
+                "2016-07-25 00:00:00": 20,
+                "2016-08-02 00:00:00": 20,
+                "2016-08-08 00:00:00": 20,
+                "2016-08-15 00:00:00": 20,
+                "2016-08-22 00:00:00": 20,
+                "2016-08-29 00:00:00": 20,
+                "2016-09-05 00:00:00": 20,
+                "2016-09-12 00:00:00": 20,
+                "2016-09-19 00:00:00": 20,
+                "2016-09-26 00:00:00": 20,
+                "2016-10-03 00:00:00": 20,
+                "2016-10-10 00:00:00": 20,
+                "2016-10-17 00:00:00": 20,
+                "2016-10-24 00:00:00": 20,
+                "2016-10-31 00:00:00": 20,
+                "2016-11-14 00:00:00": 20,
+                "2016-11-24 00:00:00": 20,
+                "2016-11-28 00:00:00": 20,
+                "2016-12-19 00:00:00": 20,
+                "2017-01-16 00:00:00": 20,
+                "2017-02-13 00:00:00": 20,
+                "2017-02-27 00:00:00": 20,
+                "2017-03-06 00:00:00": 20,
+                "2017-03-13 00:00:00": 20,
+                "2017-03-20 00:00:00": 20,
+                "2017-03-27 00:00:00": 20,
+                "2017-04-03 00:00:00": 20,
+                "2017-04-10 00:00:00": 20,
+                "2017-04-18 00:00:00": 20,
+                "2017-04-24 00:00:00": 20
+              }
+            },
+            "Week": {
+              "n_levels": 33,
+              "values": {
+                "0": 20,
+                "1": 20,
+                "2": 20,
+                "3": 20,
+                "4": 20,
+                "5": 20,
+                "6": 20,
+                "7": 20,
+                "8": 20,
+                "9": 20,
+                "10": 20,
+                "11": 20,
+                "12": 20,
+                "13": 20,
+                "14": 20,
+                "15": 20,
+                "16": 20,
+                "17": 20,
+                "19": 20,
+                "20": 20,
+                "21": 20,
+                "24": 20,
+                "28": 20,
+                "32": 20,
+                "34": 20,
+                "35": 20,
+                "36": 20,
+                "37": 20,
+                "38": 20,
+                "39": 20,
+                "40": 20,
+                "41": 20,
+                "42": 20
+              }
+            },
+            "Block": {
+              "n_levels": 5,
+              "values": {
+                "1": 132,
+                "2": 132,
+                "3": 132,
+                "4": 132,
+                "5": 132
+              }
+            },
+            "Rep": {
+              "n_levels": 4,
+              "values": {
+                "1": 165,
+                "2": 165,
+                "3": 165,
+                "4": 165
+              }
+            },
+            "Nutrients": {
+              "n_levels": 2,
+              "values": {
+                "0": 132,
+                "1": 528
+              }
+            },
+            "TreatNR": {
+              "n_levels": 5,
+              "values": {
+                "1": 132,
+                "2": 132,
+                "3": 132,
+                "4": 132,
+                "5": 132
+              }
+            },
+            "Treatment": {
+              "n_levels": 5,
+              "values": {
+                "D": 132,
+                "C": 132,
+                "O": 132,
+                "MD": 132,
+                "M": 132
+              }
+            }
+          }
+        },
+        {
+          "sheet": "Metadata",
+          "rows": 171,
+          "columns": 5,
+          "first_header_row": [
+            "Column",
+            "Description",
+            "Units ",
+            "Proposed_name_or_species",
+            "Comments"
+          ],
+          "id_fields": {
+            "Proposed_name_or_species": {
+              "n_levels": 69,
+              "values": null
+            }
+          }
+        }
+      ]
+    },
+    "hayashi2026": {
+      "status": "PUBLIC_MANIFEST_ONLY",
+      "id": 19396153,
+      "title": "Ibuki-Hayashi/Founding-Community-Size-Governs-Divergent-Ecological-Trajectories: Update the repository",
+      "doi": "10.5281/zenodo.19396153",
+      "description": "The research in HS3",
+      "files": [
+        {
+          "name": "Ibuki-Hayashi/Founding-Community-Size-Governs-Divergent-Ecological-Trajectories-v2.0.0.zip",
+          "size": 2907908,
+          "checksum": "md5:ed3a2b60b8392db65b35d965619b39e6"
+        }
+      ]
+    },
+    "wojcik": {
+      "status": "PUBLIC_MANIFEST_ONLY",
+      "id": 14773023,
+      "title": "Data for: Top-down control and species composition non-linearly influence the short-term response of experimental food webs to a nutrient pulse perturbation",
+      "doi": "10.5281/zenodo.14773023",
+      "description": " Extreme weather events intensify with global change and frequently disturb aquatic ecosystems via e.g., nutrient pulses through surface runoff. While there is accumulating evidence that the associated short-term responses of plankton communities depend on their top-down control (TC), the actual shape of TC-community response relationships remains unclear. We therefore conducted 24 flow-through (chemostat) experiments to investigate algal and rotifer biomass responses to a nutrient pulse along a gradient of TC values. To generate this gradient, we used a trait-based method instead of varying the inoculation species densities. We complemented our analysis by estimating non-measured nutrient dynamics and feeding interactions via Bayesian modelling. We found support for hump-shaped relationships. At low TC, algal species were strongly nutrient-depleted, limiting their immediate growth potential after the pulse, and thereby one of the rotifer species. At high TC, algae were not nutrient-limited, thus algae and rotifers hardly responded. At intermediate TC, responses were larger because algae immediately exploited the pulse, and rotifers exploited the increased algal biomass production without preventing an algal bloom. This study showed the importance of investigating community responses to resource pulses along a gradient of TC values, thereby improving the understanding of the ecological stability of food webs under global change. ",
+      "files": [
+        {
+          "name": "scripts_data_plankton_responses_Npulse.zip",
+          "size": 98674395,
+          "checksum": "md5:42c1a05d90a8d328351caa6431555774"
+        }
+      ]
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45556580156",
+  "source_commit": "1db80c78653526c37054aab5661bd3c11621bd6d",
+  "source_job_id": 139009967947
+}
