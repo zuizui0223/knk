@@ -108,7 +108,7 @@ def main():
     # these ten plots have "Unmanipulated control" throughout Apr2015-present.
     # Do not generalize missing=none to other years/studies.
     authors_unmanipulated=[4,5,6,7,11,13,14,17,18,24]
-    cond=(pl.treatment.str.lower()=="control")&pl.plot.isin(authors_unmanipulated)&pl.resourcetreatment.isna()&pl.anttreatment.isna()
+    cond=(pl.treatment.str.lower()=="control")&pl["plot"].isin(authors_unmanipulated)&pl.resourcetreatment.isna()&pl.anttreatment.isna()
     pl["eligible"]=cond
     pc=pl.groupby("plot").agg(n=("month","size"),ok=("eligible","all"))
     roster=sorted(pc.index[(pc.n==108)&pc.ok].astype(int).tolist())
@@ -120,14 +120,14 @@ def main():
     assert not mo.newmoonnumber.duplicated().any()
     mp=mo[mo.period.notna()&(mo.period>0)][["period","newmoonnumber"]].copy()
     assert not mp.period.duplicated().any()
-    tr=tr[tr.plot.isin(roster)&tr.period.isin(mp.period)].copy()
+    tr=tr[tr["plot"].isin(roster)&tr.period.isin(mp.period)].copy()
     # stop rather than resolving duplicated trap effort records
     assert not tr.duplicated(["plot","period"]).any()
     tr=tr[(tr.sampled==1)&(tr.effort==49)&(tr.qcflag==1)]
     complete=tr.groupby("period").plot.nunique()
     periods=complete.index[complete==len(roster)]
     tr=tr[tr.period.isin(periods)]
-    raw=c[c.period.isin(periods)&c.plot.isin(roster)].copy()
+    raw=c[c.period.isin(periods)&c["plot"].isin(roster)].copy()
     raw=raw[raw.species.isin(spp)&~pd.to_numeric(raw.note1,errors="coerce").isin([2,4])]
     if "qcflag" in raw: raw=raw[raw.qcflag==1]
     ids=raw.id.astype("string").str.strip()
