@@ -63,7 +63,7 @@ def audit_exp(root,exp):
         assert m.panels(z,names,named)[3]==pairs
         results[str(seed)]=summarize(m.run(z,names,named))
     return {"original_pairs":original,"depth_pairs":pairs,"coverage":coverage,
-      "n_profiles_above_depth":sum(x.sum()>=DEPTH for x in raw.values()),
+      "n_profiles_above_depth":int(sum(x.sum()>=DEPTH for x in raw.values())),
       "n_profiles":len(raw),"results":results}
 def main():
     p=argparse.ArgumentParser();p.add_argument("--root",type=Path,required=True);p.add_argument("--out",type=Path,required=True);a=p.parse_args()
