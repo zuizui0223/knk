@@ -61,7 +61,8 @@ def main():
             assert PurePosixPath(name).name==name
             if size<=MAX and used+size<=TOTAL:
                 try:
-                    url=f["downloadUrl"]
+                    url=f.get("downloadUrl") or f.get("download_url")
+                    assert isinstance(url,str),"published download URL missing: "+str(sorted(f))
                     assert urlparse(url).scheme=="https" and urlparse(url).hostname in ("figshare.com","api.figshare.com","ndownloader.figshare.com","s3-eu-west-1.amazonaws.com","s3.amazonaws.com")
                     assert not f.get("is_link_only") and re.fullmatch("[0-9a-f]{32}",md5)
                     b=get(url,size+100)
@@ -70,7 +71,8 @@ def main():
                     d.update(status="checksum_verified",sha256=hashlib.sha256(b).hexdigest(),inventory=inventory(name,b))
                 except Exception as e:d.update(status="STOP_FILE",error=type(e).__name__+": "+str(e))
             z["files"].append(d)
-        z["status"]="MANIFEST_AND_SOURCE_AUDITED_NO_ECOLOGICAL_SCORES" if z["files"] else "STOP_NO_FILES"
+        z["n_checksum_verified"]=sum(f["status"]=="checksum_verified" for f in z["files"])
+        z["status"]="MANIFEST_AND_SOURCE_AUDITED_NO_ECOLOGICAL_SCORES" if z["files"] and z["n_checksum_verified"]==len(z["files"]) else "STOP_SOURCE_FILES_NOT_FULLY_VERIFIED"
     except Exception as e:z.update(status="STOP_SOURCE_IDENTITY_OR_ACCESS",error=type(e).__name__+": "+str(e))
     (a.out/"audit.json").write_text(json.dumps(z,ensure_ascii=False,indent=2)+"\n")
     print("VILLARREAL_SOURCE_RESULT",json.dumps(z,ensure_ascii=False),flush=True)
