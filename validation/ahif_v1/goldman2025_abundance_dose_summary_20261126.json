@@ -1,0 +1,521 @@
+{
+  "status": "POST_SCORE_DIAGNOSTIC_NOT_CAUSAL",
+  "results": {
+    "p3_control_proxy": {
+      "threshold_0.001": {
+        "by_pair": {
+          "XBA-XBB": {
+            "pool": 0.09927364070037703,
+            "identity": 0.07809602390817824,
+            "dose": 0.07742798187486441,
+            "dose_weighted_abundance": 0.07584476267135716,
+            "abundance_only": 0.07623891334569076,
+            "weighted_abundance_only": 0.07583937689032799,
+            "abundance_plus_dose": 0.07555777282725538,
+            "abundance_gain": 0.0018571105624874823,
+            "nominal_dose_after_abundance": 0.0006811405184353747,
+            "weighting_at_equal_dimension": 0.0003995364553627673,
+            "weighted_vs_unweighted_with_dose": -0.00028698984410177597
+          },
+          "XCA-XCB": {
+            "pool": 0.0960316587933597,
+            "identity": 0.07942294384638192,
+            "dose": 0.07967882751611137,
+            "dose_weighted_abundance": 0.0788908985241503,
+            "abundance_only": 0.07836483931683678,
+            "weighted_abundance_only": 0.0790263727776694,
+            "abundance_plus_dose": 0.07861431566173499,
+            "abundance_gain": 0.0010581045295451341,
+            "nominal_dose_after_abundance": -0.0002494763448982057,
+            "weighting_at_equal_dimension": -0.000661533460832614,
+            "weighted_vs_unweighted_with_dose": -0.0002765828624153033
+          },
+          "XDA-XDB": {
+            "pool": 0.08740981168280393,
+            "identity": 0.07207012909454513,
+            "dose": 0.07325780040993518,
+            "dose_weighted_abundance": 0.07343587909719763,
+            "abundance_only": 0.07187213680596871,
+            "weighted_abundance_only": 0.07327194534532006,
+            "abundance_plus_dose": 0.07306665149187333,
+            "abundance_gain": 0.0001979922885764207,
+            "nominal_dose_after_abundance": -0.0011945146859046185,
+            "weighting_at_equal_dimension": -0.0013998085393513438,
+            "weighted_vs_unweighted_with_dose": -0.0003692276053243043
+          },
+          "XFA-XFB": {
+            "pool": 0.13555821973097543,
+            "identity": 0.10136856472265542,
+            "dose": 0.09967988475690998,
+            "dose_weighted_abundance": 0.0970435240050357,
+            "abundance_only": 0.09852688996088209,
+            "weighted_abundance_only": 0.09685198436553721,
+            "abundance_plus_dose": 0.09681351457140921,
+            "abundance_gain": 0.0028416747617733273,
+            "nominal_dose_after_abundance": 0.0017133753894728737,
+            "weighting_at_equal_dimension": 0.001674905595344875,
+            "weighted_vs_unweighted_with_dose": -0.00023000943362648518
+          },
+          "XBA-XCA": {
+            "pool": 0.11981962256730733,
+            "identity": 0.0991543201508106,
+            "dose": 0.09795021649359058,
+            "dose_weighted_abundance": 0.09700918777541385,
+            "abundance_only": 0.09846223919970203,
+            "weighted_abundance_only": 0.09704862930437287,
+            "abundance_plus_dose": 0.09725125877568225,
+            "abundance_gain": 0.0006920809511085785,
+            "nominal_dose_after_abundance": 0.001210980424019778,
+            "weighting_at_equal_dimension": 0.0014136098953291543,
+            "weighted_vs_unweighted_with_dose": 0.0002420710002683929
+          },
+          "XCA-XDA": {
+            "pool": 0.10814776640522218,
+            "identity": 0.07752473242786984,
+            "dose": 0.07674992878607062,
+            "dose_weighted_abundance": 0.07522683365070545,
+            "abundance_only": 0.07615640434633503,
+            "weighted_abundance_only": 0.0751705212962968,
+            "abundance_plus_dose": 0.07538100227104504,
+            "abundance_gain": 0.0013683280815348087,
+            "nominal_dose_after_abundance": 0.0007754020752899909,
+            "weighting_at_equal_dimension": 0.0009858830500382304,
+            "weighted_vs_unweighted_with_dose": 0.00015416862033958145
+          },
+          "XDA-XFA": {
+            "pool": 0.1411800406449892,
+            "identity": 0.09359261705977916,
+            "dose": 0.09277015304462324,
+            "dose_weighted_abundance": 0.08907412903562502,
+            "abundance_only": 0.09001215571189582,
+            "weighted_abundance_only": 0.08901947570033393,
+            "abundance_plus_dose": 0.0892140525430279,
+            "abundance_gain": 0.0035804613478833403,
+            "nominal_dose_after_abundance": 0.0007981031688679141,
+            "weighting_at_equal_dimension": 0.0009926800115618861,
+            "weighted_vs_unweighted_with_dose": 0.00013992350740288373
+          },
+          "XFA-XBA": {
+            "pool": 0.14400511334941796,
+            "identity": 0.10851086066287137,
+            "dose": 0.1083623847166518,
+            "dose_weighted_abundance": 0.10543981492745924,
+            "abundance_only": 0.10528736432522434,
+            "weighted_abundance_only": 0.10566052018906716,
+            "abundance_plus_dose": 0.10513564587326074,
+            "abundance_gain": 0.0032234963376470277,
+            "nominal_dose_after_abundance": 0.00015171845196360056,
+            "weighting_at_equal_dimension": -0.00037315586384281674,
+            "weighted_vs_unweighted_with_dose": -0.0003041690541984998
+          }
+        },
+        "means": {
+          "pool": 0.11642823423430658,
+          "identity": 0.08871752398413646,
+          "dose": 0.08823464719984464,
+          "dose_weighted_abundance": 0.08649562871086805,
+          "abundance_only": 0.08686511787656695,
+          "weighted_abundance_only": 0.08648610323361568,
+          "abundance_plus_dose": 0.08637927675191111,
+          "abundance_gain": 0.001852406107569515,
+          "nominal_dose_after_abundance": 0.0004858411246558385,
+          "weighting_at_equal_dimension": 0.0003790146429512673,
+          "weighted_vs_unweighted_with_dose": -0.00011635195895693881
+        },
+        "positive_counts": {
+          "abundance_gain": 8,
+          "nominal_dose_after_abundance": 6,
+          "weighting_at_equal_dimension": 5,
+          "weighted_vs_unweighted_with_dose": 3
+        }
+      },
+      "raw_detection": {
+        "by_pair": {
+          "XBA-XBB": {
+            "pool": 0.08206156161403841,
+            "identity": 0.06998846605245489,
+            "dose": 0.06993317275741355,
+            "dose_weighted_abundance": 0.06679652890062161,
+            "abundance_only": 0.06686143999477219,
+            "weighted_abundance_only": 0.06713346448819317,
+            "abundance_plus_dose": 0.06679821200745363,
+            "abundance_gain": 0.003127026057682697,
+            "nominal_dose_after_abundance": 0.00006322798731855928,
+            "weighting_at_equal_dimension": -0.00027202449342098034,
+            "weighted_vs_unweighted_with_dose": 0.0000016831068320177778
+          },
+          "XCA-XCB": {
+            "pool": 0.08018671893957456,
+            "identity": 0.06837750272890795,
+            "dose": 0.06869385584974885,
+            "dose_weighted_abundance": 0.06599118881283929,
+            "abundance_only": 0.06564098847820625,
+            "weighted_abundance_only": 0.06643349222477485,
+            "abundance_plus_dose": 0.06592706567416708,
+            "abundance_gain": 0.002736514250701705,
+            "nominal_dose_after_abundance": -0.0002860771959608266,
+            "weighting_at_equal_dimension": -0.0007925037465685986,
+            "weighted_vs_unweighted_with_dose": -0.00006412313867221187
+          },
+          "XDA-XDB": {
+            "pool": 0.06981082973981913,
+            "identity": 0.0617766720277095,
+            "dose": 0.06215185610760861,
+            "dose_weighted_abundance": 0.061326108490658726,
+            "abundance_only": 0.060938023585041544,
+            "weighted_abundance_only": 0.06147134352487096,
+            "abundance_plus_dose": 0.0612902088273028,
+            "abundance_gain": 0.0008386484426679552,
+            "nominal_dose_after_abundance": -0.0003521852422612576,
+            "weighting_at_equal_dimension": -0.0005333199398294131,
+            "weighted_vs_unweighted_with_dose": -0.000035899663355924705
+          },
+          "XFA-XFB": {
+            "pool": 0.09030219443961873,
+            "identity": 0.07980038678084775,
+            "dose": 0.07851447513110056,
+            "dose_weighted_abundance": 0.07486838783574196,
+            "abundance_only": 0.07654364035087716,
+            "weighted_abundance_only": 0.07441584549322185,
+            "abundance_plus_dose": 0.07518252923403244,
+            "abundance_gain": 0.0032567464299705917,
+            "nominal_dose_after_abundance": 0.0013611111168447126,
+            "weighting_at_equal_dimension": 0.00212779485765531,
+            "weighted_vs_unweighted_with_dose": 0.0003141413982904878
+          },
+          "XBA-XCA": {
+            "pool": 0.11167990202314507,
+            "identity": 0.09676819546670103,
+            "dose": 0.09598670704921285,
+            "dose_weighted_abundance": 0.09221479716365104,
+            "abundance_only": 0.09310855429685971,
+            "weighted_abundance_only": 0.09220412915000131,
+            "abundance_plus_dose": 0.09230582488267312,
+            "abundance_gain": 0.003659641169841313,
+            "nominal_dose_after_abundance": 0.0008027294141865898,
+            "weighting_at_equal_dimension": 0.0009044251468584008,
+            "weighted_vs_unweighted_with_dose": 0.0000910277190220854
+          },
+          "XCA-XDA": {
+            "pool": 0.10186887188862695,
+            "identity": 0.08173577145958488,
+            "dose": 0.08119057945614476,
+            "dose_weighted_abundance": 0.07660177400381256,
+            "abundance_only": 0.07691612241281581,
+            "weighted_abundance_only": 0.07649623818643347,
+            "abundance_plus_dose": 0.07635180743864915,
+            "abundance_gain": 0.00481964904676907,
+            "nominal_dose_after_abundance": 0.0005643149741666603,
+            "weighting_at_equal_dimension": 0.0004198842263823388,
+            "weighted_vs_unweighted_with_dose": -0.00024996656516340643
+          },
+          "XDA-XFA": {
+            "pool": 0.10686908643704883,
+            "identity": 0.08179793232323047,
+            "dose": 0.08169438809373966,
+            "dose_weighted_abundance": 0.07532489124577983,
+            "abundance_only": 0.07530196816239346,
+            "weighted_abundance_only": 0.07560751895222469,
+            "abundance_plus_dose": 0.07519728520931447,
+            "abundance_gain": 0.006495964160837017,
+            "nominal_dose_after_abundance": 0.00010468295307898556,
+            "weighting_at_equal_dimension": -0.00030555078983122985,
+            "weighted_vs_unweighted_with_dose": -0.00012760603646536084
+          },
+          "XFA-XBA": {
+            "pool": 0.12785079597918947,
+            "identity": 0.10232302811158253,
+            "dose": 0.10213498415622675,
+            "dose_weighted_abundance": 0.0969325455953782,
+            "abundance_only": 0.09668695641690515,
+            "weighted_abundance_only": 0.09724303951842887,
+            "abundance_plus_dose": 0.09649646603993797,
+            "abundance_gain": 0.0056360716946773776,
+            "nominal_dose_after_abundance": 0.00019049037696718119,
+            "weighting_at_equal_dimension": -0.0005560831015237189,
+            "weighted_vs_unweighted_with_dose": -0.0004360795554402275
+          }
+        },
+        "means": {
+          "pool": 0.09632874513263265,
+          "identity": 0.08032099436887738,
+          "dose": 0.08003750232514945,
+          "dose_weighted_abundance": 0.0762570277560604,
+          "abundance_only": 0.07649971171223391,
+          "weighted_abundance_only": 0.07637563394226865,
+          "abundance_plus_dose": 0.07619367491419134,
+          "abundance_gain": 0.003821282656643466,
+          "nominal_dose_after_abundance": 0.0003060367980425756,
+          "weighting_at_equal_dimension": 0.00012407776996526364,
+          "weighted_vs_unweighted_with_dose": -0.00006335284186906754
+        },
+        "positive_counts": {
+          "abundance_gain": 8,
+          "nominal_dose_after_abundance": 6,
+          "weighting_at_equal_dimension": 3,
+          "weighted_vs_unweighted_with_dose": 3
+        }
+      }
+    },
+    "p15_stock_proxy": {
+      "threshold_0.001": {
+        "by_pair": {
+          "XBA-XBB": {
+            "pool": 0.1062697806173101,
+            "identity": 0.09020140063730897,
+            "dose": 0.0900660890251471,
+            "dose_weighted_abundance": 0.08852216816518763,
+            "abundance_only": 0.08891882345352485,
+            "weighted_abundance_only": 0.08870947904668414,
+            "abundance_plus_dose": 0.08879501807241279,
+            "abundance_gain": 0.0012825771837841199,
+            "nominal_dose_after_abundance": 0.00012380538111206318,
+            "weighting_at_equal_dimension": 0.0002093444068407141,
+            "weighted_vs_unweighted_with_dose": 0.00027284990722516167
+          },
+          "XCA-XCB": {
+            "pool": 0.10234561842447107,
+            "identity": 0.08311701350010374,
+            "dose": 0.08294620833249895,
+            "dose_weighted_abundance": 0.0821824159396314,
+            "abundance_only": 0.08219949309301508,
+            "weighted_abundance_only": 0.08229508850618823,
+            "abundance_plus_dose": 0.08202868512376348,
+            "abundance_gain": 0.0009175204070886595,
+            "nominal_dose_after_abundance": 0.00017080796925160457,
+            "weighting_at_equal_dimension": -0.00009559541317315234,
+            "weighted_vs_unweighted_with_dose": -0.0001537308158679196
+          },
+          "XDA-XDB": {
+            "pool": 0.10499600013198088,
+            "identity": 0.09309793835553422,
+            "dose": 0.09347625364338838,
+            "dose_weighted_abundance": 0.09265119879471057,
+            "abundance_only": 0.09216384090458081,
+            "weighted_abundance_only": 0.09290846272180195,
+            "abundance_plus_dose": 0.09254427744681089,
+            "abundance_gain": 0.0009340974509534083,
+            "nominal_dose_after_abundance": -0.00038043654223007817,
+            "weighting_at_equal_dimension": -0.0007446218172211388,
+            "weighted_vs_unweighted_with_dose": -0.00010692134789967722
+          },
+          "XFA-XFB": {
+            "pool": 0.13689066021798052,
+            "identity": 0.12850043092080496,
+            "dose": 0.12791085081516254,
+            "dose_weighted_abundance": 0.12316027469517454,
+            "abundance_only": 0.1227734094534436,
+            "weighted_abundance_only": 0.12321664445407093,
+            "abundance_plus_dose": 0.12216925877322583,
+            "abundance_gain": 0.005727021467361357,
+            "nominal_dose_after_abundance": 0.0006041506802177687,
+            "weighting_at_equal_dimension": -0.0004432350006273317,
+            "weighted_vs_unweighted_with_dose": -0.0009910159219487097
+          },
+          "XBA-XCA": {
+            "pool": 0.1095658845305745,
+            "identity": 0.09164117113345129,
+            "dose": 0.09130868988509934,
+            "dose_weighted_abundance": 0.0891906839755998,
+            "abundance_only": 0.0894916969183014,
+            "weighted_abundance_only": 0.08926777676506266,
+            "abundance_plus_dose": 0.08917517848098613,
+            "abundance_gain": 0.0021494742151498825,
+            "nominal_dose_after_abundance": 0.0003165184373152691,
+            "weighting_at_equal_dimension": 0.0002239201532387436,
+            "weighted_vs_unweighted_with_dose": -0.000015505494613668458
+          },
+          "XCA-XDA": {
+            "pool": 0.08801588987625136,
+            "identity": 0.06910154822069745,
+            "dose": 0.06878760082263549,
+            "dose_weighted_abundance": 0.06617456694502424,
+            "abundance_only": 0.06629694794392756,
+            "weighted_abundance_only": 0.0662093041021224,
+            "abundance_plus_dose": 0.06599158223152876,
+            "abundance_gain": 0.002804600276769889,
+            "nominal_dose_after_abundance": 0.0003053657123987946,
+            "weighting_at_equal_dimension": 0.00008764384180515172,
+            "weighted_vs_unweighted_with_dose": -0.00018298471349548207
+          },
+          "XDA-XFA": {
+            "pool": 0.1304359347705457,
+            "identity": 0.10632307626947678,
+            "dose": 0.10610265132866062,
+            "dose_weighted_abundance": 0.1035232431718517,
+            "abundance_only": 0.10356809788522359,
+            "weighted_abundance_only": 0.1035733754821771,
+            "abundance_plus_dose": 0.10335510382060109,
+            "abundance_gain": 0.00275497838425319,
+            "nominal_dose_after_abundance": 0.00021299406462249593,
+            "weighting_at_equal_dimension": -0.000005277596953512376,
+            "weighted_vs_unweighted_with_dose": -0.00016813935125060964
+          },
+          "XFA-XBA": {
+            "pool": 0.12931791609276178,
+            "identity": 0.10937871081971705,
+            "dose": 0.1093180535681319,
+            "dose_weighted_abundance": 0.10713704666155681,
+            "abundance_only": 0.10706352035893475,
+            "weighted_abundance_only": 0.10731997284940648,
+            "abundance_plus_dose": 0.10699956797627812,
+            "abundance_gain": 0.002315190460782296,
+            "nominal_dose_after_abundance": 0.00006395238265663461,
+            "weighting_at_equal_dimension": -0.000256452490471723,
+            "weighted_vs_unweighted_with_dose": -0.00013747868527869134
+          }
+        },
+        "means": {
+          "pool": 0.1134797105827345,
+          "identity": 0.09642016123213681,
+          "dose": 0.09623954967759055,
+          "dose_weighted_abundance": 0.09406769979359209,
+          "abundance_only": 0.09405947875136896,
+          "weighted_abundance_only": 0.09418751299093923,
+          "abundance_plus_dose": 0.0938823339907009,
+          "abundance_gain": 0.0023606824807678502,
+          "nominal_dose_after_abundance": 0.00017714476066806907,
+          "weighting_at_equal_dimension": -0.0001280342395702811,
+          "weighted_vs_unweighted_with_dose": -0.00018536580289119954
+        },
+        "positive_counts": {
+          "abundance_gain": 8,
+          "nominal_dose_after_abundance": 7,
+          "weighting_at_equal_dimension": 3,
+          "weighted_vs_unweighted_with_dose": 1
+        }
+      },
+      "raw_detection": {
+        "by_pair": {
+          "XBA-XBB": {
+            "pool": 0.07171430015367236,
+            "identity": 0.05890523005437691,
+            "dose": 0.05879475972484992,
+            "dose_weighted_abundance": 0.05599060732070982,
+            "abundance_only": 0.056061981242671866,
+            "weighted_abundance_only": 0.05618506569668446,
+            "abundance_plus_dose": 0.05594806696234591,
+            "abundance_gain": 0.002843248811705043,
+            "nominal_dose_after_abundance": 0.00011391428032595657,
+            "weighting_at_equal_dimension": -0.00012308445401259388,
+            "weighted_vs_unweighted_with_dose": -0.000042540358363908626
+          },
+          "XCA-XCB": {
+            "pool": 0.08279387053659096,
+            "identity": 0.06923862257256527,
+            "dose": 0.06915200190828064,
+            "dose_weighted_abundance": 0.06735903203677773,
+            "abundance_only": 0.0672958852487979,
+            "weighted_abundance_only": 0.06752407858338884,
+            "abundance_plus_dose": 0.06720157333115265,
+            "abundance_gain": 0.001942737323767374,
+            "nominal_dose_after_abundance": 0.00009431191764525115,
+            "weighting_at_equal_dimension": -0.00022819333459093982,
+            "weighted_vs_unweighted_with_dose": -0.00015745870562508535
+          },
+          "XDA-XDB": {
+            "pool": 0.08573623560934945,
+            "identity": 0.0788796190088797,
+            "dose": 0.07910961148799374,
+            "dose_weighted_abundance": 0.07830780037783232,
+            "abundance_only": 0.07800233896870488,
+            "weighted_abundance_only": 0.07860776733524352,
+            "abundance_plus_dose": 0.07822376128382377,
+            "abundance_gain": 0.000877280040174816,
+            "nominal_dose_after_abundance": -0.0002214223151188882,
+            "weighting_at_equal_dimension": -0.0006054283665386379,
+            "weighted_vs_unweighted_with_dose": -0.00008403909400854503
+          },
+          "XFA-XFB": {
+            "pool": 0.0917898452441633,
+            "identity": 0.0870180727973555,
+            "dose": 0.08685163720814648,
+            "dose_weighted_abundance": 0.08168241521948792,
+            "abundance_only": 0.08176465051474073,
+            "weighted_abundance_only": 0.0819270220927858,
+            "abundance_plus_dose": 0.08155542951331209,
+            "abundance_gain": 0.0052534222826147725,
+            "nominal_dose_after_abundance": 0.00020922100142864442,
+            "weighting_at_equal_dimension": -0.00016237157804506464,
+            "weighted_vs_unweighted_with_dose": -0.00012698570617583615
+          },
+          "XBA-XCA": {
+            "pool": 0.09247426810657623,
+            "identity": 0.0770190515651922,
+            "dose": 0.07683186185270512,
+            "dose_weighted_abundance": 0.07371826368495077,
+            "abundance_only": 0.07385744221060052,
+            "weighted_abundance_only": 0.07377385514476072,
+            "abundance_plus_dose": 0.07366423000940986,
+            "abundance_gain": 0.003161609354591685,
+            "nominal_dose_after_abundance": 0.00019321220119065952,
+            "weighting_at_equal_dimension": 0.00008358706583980191,
+            "weighted_vs_unweighted_with_dose": -0.000054033675540909876
+          },
+          "XCA-XDA": {
+            "pool": 0.0883048186712015,
+            "identity": 0.07419909324769054,
+            "dose": 0.07402568381409975,
+            "dose_weighted_abundance": 0.07088361960172253,
+            "abundance_only": 0.07089300800828012,
+            "weighted_abundance_only": 0.07099105760565277,
+            "abundance_plus_dose": 0.07070418039378805,
+            "abundance_gain": 0.0033060852394104223,
+            "nominal_dose_after_abundance": 0.00018882761449207086,
+            "weighting_at_equal_dimension": -0.00009804959737265417,
+            "weighted_vs_unweighted_with_dose": -0.00017943920793447865
+          },
+          "XDA-XFA": {
+            "pool": 0.09413129260360753,
+            "identity": 0.0746351615938041,
+            "dose": 0.074535957738517,
+            "dose_weighted_abundance": 0.07036961246947726,
+            "abundance_only": 0.07028329488225357,
+            "weighted_abundance_only": 0.0704027988215188,
+            "abundance_plus_dose": 0.07017817142634114,
+            "abundance_gain": 0.004351866711550523,
+            "nominal_dose_after_abundance": 0.00010512345591243144,
+            "weighting_at_equal_dimension": -0.00011950393926522807,
+            "weighted_vs_unweighted_with_dose": -0.0001914410431361202
+          },
+          "XFA-XBA": {
+            "pool": 0.09761320294595097,
+            "identity": 0.08157843648075228,
+            "dose": 0.08152345244504322,
+            "dose_weighted_abundance": 0.07870020596084915,
+            "abundance_only": 0.07853330483965051,
+            "weighted_abundance_only": 0.078846041290739,
+            "abundance_plus_dose": 0.07847644509718266,
+            "abundance_gain": 0.0030451316411017615,
+            "nominal_dose_after_abundance": 0.00005685974246785741,
+            "weighting_at_equal_dimension": -0.00031273645108848003,
+            "weighted_vs_unweighted_with_dose": -0.00022376086366648895
+          }
+        },
+        "means": {
+          "pool": 0.08806972923388903,
+          "identity": 0.07518416091507707,
+          "dose": 0.07510312077245448,
+          "dose_weighted_abundance": 0.07212644458397593,
+          "abundance_only": 0.07208648823946251,
+          "weighted_abundance_only": 0.07228221082134674,
+          "abundance_plus_dose": 0.07199398225216952,
+          "abundance_gain": 0.0030976726756145496,
+          "nominal_dose_after_abundance": 0.0000925059872929979,
+          "weighting_at_equal_dimension": -0.00019572258188422457,
+          "weighted_vs_unweighted_with_dose": -0.0001324623318064216
+        },
+        "positive_counts": {
+          "abundance_gain": 8,
+          "nominal_dose_after_abundance": 7,
+          "weighting_at_equal_dimension": 1,
+          "weighted_vs_unweighted_with_dose": 0
+        }
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45718804466",
+  "code_commit": "5249b62acaaa0566f08c73d91aad5f087a223dfa",
+  "artifact_id": 15071242389,
+  "artifact_digest": "sha256:d183c7781cbe23112f8b8dcbbbb194f4e114d406d67ccc842ff5ec1b86a18d57"
+}
