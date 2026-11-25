@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "source_frozen_commit": "0d40b6699897bef770a235f6e827a87aafd05bf7",
   "status": "DESCRIPTIVE_MECHANISM_REGISTRY_NOT_META",
   "study_columns": [
@@ -194,6 +194,31 @@
       "Saine",
       "source_verified_qc_conditional",
       "https://doi.org/10.1093/ismeco/ycaf166"
+    ],
+    [
+      "hayashi",
+      "Hayashi et al. 2026",
+      "bacteria",
+      "soil_and_freshwater_derived_lab_culture",
+      "relative_read_composition",
+      "OTU99",
+      "culture_well_conditional",
+      760,
+      6,
+      "founder dilution vs undiluted reference",
+      "founder_size",
+      "initial founder size",
+      "not quantified",
+      "days",
+      [
+        2,
+        4,
+        6,
+        8
+      ],
+      "Hayashi",
+      "source_verified_density_position_aliased",
+      "https://github.com/Ibuki-Hayashi/Founding-Community-Size-Governs-Divergent-Ecological-Trajectories/tree/a37af8c186a9438edccf5f729a0fdd48eed4469f"
     ]
   ],
   "candidate_sources": [
@@ -211,8 +236,8 @@
         6,
         8
       ],
-      "status": "SOURCE_GATE_PENDING",
-      "note": "Already registered candidate in AHIF v1; no new source outcome before gate"
+      "status": "SCORED_DESCRIPTIVE_POSITION_ALIASED_NOT_META",
+      "note": "Author v2.0.0 release hash verified, 760 complete wells/3040 samples, all six contrasts; density aliases Plate_position; relative-read endpoint only; already candidate in AHIF v1"
     },
     {
       "candidate_id": "JACQUET2020",
@@ -290,7 +315,7 @@
       "treatment_reliability",
       "derived_diagnostic",
       "U=(Q-W)/(Q+W)",
-      "available_five_prior_sources",
+      "available_six_sources",
       "Training-only fold diagnostic; not independent mechanism or causal noise"
     ],
     [
