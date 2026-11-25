@@ -21,6 +21,7 @@ from benchmarks.ahif_routing_tables import insert_routing, META_FILE, CAGE_FILE
 from benchmarks.ahif_saine_table import insert_saine, SAINE_FILE
 from benchmarks.ahif_prediction_tables import insert_predictions, PRED_FILE, FOLD_FILE
 from benchmarks.ahif_low_order_tables import insert_low_order, MODEL_FILE, CONTRAST_FILE
+from benchmarks.ahif_cancellation_tables import insert_cancellation
 
 FILES={"studies":"studies.csv","panels":"panels.csv",
        "effects":"effects.csv","hypotheses":"hypotheses.csv"}
@@ -121,7 +122,7 @@ def validate(tables):
             raise ValueError("False equivalence of null-calibrated R2 and information "+k)
         if not e["evidence_url"].startswith("https://") or not e["limitations"]:
             raise ValueError("Effect missing source or caveat "+k)
-        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked","derived_matrix_descriptive","prediction_only"}:
+        if panelmap[e["panel_id"]]["source_status"] in {"candidate","paper_only","binary_source_blocked","derived_matrix_descriptive","prediction_only","cancellation_only"}:
             raise ValueError("Candidate presented as scored "+k)
     hids=set()
     for h in hypotheses:
@@ -413,7 +414,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
     ps=[num(x["p_value"],"p") for x in e]
     return {
       "result_status":"CURATED_TARGETED_PILOT_NOT_SYSTEMATIC_OR_META_POOLED",
-      "db_version":"AHIF-DB v0.7",
+      "db_version":"AHIF-DB v0.8",
       "generated_on":date.today().isoformat(),
       "study_records":len(s),"experimental_panels":len(p),
       "aggregate_effect_rows":len(e),"falsifiable_hypotheses":len(h),
@@ -460,7 +461,7 @@ def report(tables,review_staged_n:int=0,priority_n:int=0,verified_prior_art_n:in
 
 def gap_report(r):
     return "\n".join([
-      "# AHIF-DB v0.7 — novelty and source-coverage gate",
+      "# AHIF-DB v0.8 — novelty and source-coverage gate",
       "",
       "Targeted preliminary curation only: NOT a systematic survey or a random-effects meta-analysis.",
       "",
@@ -538,6 +539,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
         saine_summary=insert_saine(connection,source)
         prediction_summary=insert_predictions(connection,source)
         low_order_summary=insert_low_order(connection,source)
+        cancellation_summary=insert_cancellation(connection,source,out)
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Foreign key audit failure")
         if connection.execute("SELECT COUNT(*) FROM v_bridge_gate WHERE evidence_status='identified_joint_mechanism_to_storage'").fetchone()[0]!=0:
@@ -551,6 +553,7 @@ def build(source:Path,out:Path,review_screening:Path|None=None,review_priority:P
     result.update(saine_summary)
     result.update(prediction_summary)
     result.update(low_order_summary)
+    result.update(cancellation_summary)
     (out/"ahif_v1_validation.json").write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n")
     (out/"ahif_v1_gap_report.md").write_text(gap_report(result))
     if review_screening is not None:

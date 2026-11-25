@@ -114,3 +114,7 @@ SELECT prediction_id,panel_id,estimand_lane,training_window,endpoint,gain_fracti
 -- 17. Finite combinatorial predictions: NEVER count target types or models as independent experiments.
 SELECT model,endpoint,mean_error,n_target_types FROM low_order_model_errors ORDER BY endpoint,mean_error;
 SELECT baseline,enhanced,endpoint,absolute_improvement,relative_gain,improved,worsened,tied FROM low_order_model_contrasts ORDER BY endpoint,baseline,enhanced;
+
+-- 18. Absolute response opposition: compare within each source and aggregation scope only.
+SELECT study_id,comparison_id,scope,unit,gross,net,cancellation,fraction,crossfit_gap FROM cancellation_contrasts ORDER BY study_id,comparison_id,scope;
+SELECT study_id,comparison_id,endpoint,estimate,ci95_low,ci95_high,interval_family_size FROM cancellation_intervals ORDER BY study_id,comparison_id,endpoint;
