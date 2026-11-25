@@ -1,0 +1,4155 @@
+{
+  "status": "CURATED_CONDITIONAL_PUBLISHED_SOWN_ROLE_OPPOSITION_NOT_ORIGINAL_OR_CAUSAL",
+  "article_doi": "10.1111/ele.13566",
+  "membership_paper_doi": "10.1890/08-0849.1",
+  "cited_original_doi": "10.6073/pasta/5703e8819c81da0beed4660f467c288e",
+  "source_manifest": {
+    "article_id": 12319682,
+    "version": 1,
+    "doi": "10.6084/m9.figshare.12319682.v1",
+    "title": "Reducing dispersal limitation via seed addition increases species richness but not aboveground biomass",
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "source_description": " We searched for seed addition studies where the experiment included: 1)  an unmanipulated control and a treatment of diverse seed mixtures selected from the regional species pool, (2) the number and identity of every species added as seed, and (3) measured species richness and the relative contribution of each species to community biomass (that were not weeded or otherwise altered). Because these criteria were relatively stringent, we did not restrict ourselves to formally standardized literature searches, but rather attempted to find as many datasets as possible that met our search criteria.     We began by consulting published meta-analyses , and other experimental data sources (e.g., U.S. Long Term Ecological Research [LTER] websites). We then used different combinations of standardized search strings including terms related to biodiversity (‘richness’, ‘diversity’), biomass (‘ecosystem function’, ‘above-ground biomass’) and seed addition (‘propagule arrival’, ‘BEF experiment’, ‘seeding’). For each experiment identified, we scanned the paper to determine whether it met our inclusion criteria. For some studies, we were able to download or extract data directly. For the rest, we contacted authors to request species-level data and other needed information (i.e. seeded richness).     We found a total of 12 studies that tested the effect of seed addition on species richness and biomass in grassland habitats, where the identity and number of seeds per species added was known ( see Table 1, Table S1, Figure S1 in paper). In all studies, species added via the seed addition treatments were part of the broader regional species pool, and were added to each community through a high density of seed mixes added to treatment (but not control) plots .     Several experiments included treatments other than the primary focus of this study (e.g., disturbance, nutrient addition), which we omitted from all analyses. We also removed treatments with unknown richness of added seeds (e.g., hay). This led to some experiments having an unbalanced design between controls and treatments. Community level biomass was sometimes measured directly within plots, and other times estimated from percent cover or coarser samples (e.g., biomass strip) (Table S1). Where biomass was measured indirectly (sampled on smaller subplots), the percent cover of each species was divided by the plot percent cover and multiplied by the community biomass (g/m2) sample from a neighboring plot or biomass strip with the same treatment, and per species biomass estimates were then summed to the plot level .  We standardized data for each experiment in a hierarchical experimental design: plots nested in blocks, nested in sites. The experiments varied in the number of species added (hereafter seeded richness), the density of seeds added, and length of experiment . Combined, the study-level treatments resulted in a ‘seeded richness gradient’ ranging from one to sixty species .     These data were derived from existing studies cited in the paper in Table 1, but as methods indicate these data posted here contain only control and treated plots. Please contact original authors for use of these data, or for entire datasets relating to these studies. Cite original papers when using these data. ",
+    "files": {
+      "species": {
+        "source_name": "SeedAdd_Sp_level.csv",
+        "file_id": 22714958,
+        "size": 23301361,
+        "md5": "420281357484766c25df281a4cd2ed45",
+        "sha256": "d9f09ea90b3bac6e9913000d93acf24e1c8b0293bebac563477c9e90a9fd590e"
+      },
+      "plot": {
+        "source_name": "SeedAdd_Plot_Level.csv",
+        "file_id": 22714961,
+        "size": 962570,
+        "md5": "715c3ed27e6c11d41185a02a2ab07b90",
+        "sha256": "0455c64afd914af5c7f85273ae950104ece31bf94fe9737f1a172aa6d9f437a3"
+      }
+    }
+  },
+  "experiment": "Kansas_KUFS_LTER_Hay_Meadow_Exp_2",
+  "n_states": 120,
+  "n_blocks": 4,
+  "n_source_ages": 15,
+  "mapping_counts": {
+    "sown_list": 27,
+    "other_named": 62,
+    "unresolved": 11,
+    "preexisting_sown": 3,
+    "exact_matches": 23
+  },
+  "by_age": [
+    {
+      "age": 1,
+      "pooled": {
+        "sown_list": -0.5,
+        "other_named": 64.355,
+        "unresolved": -2.2199999999999998,
+        "total_species_mass": 61.63499999999999,
+        "sown_preexisting_three": 0,
+        "sown_other": -0.5,
+        "sown_assignment_range": [
+          -2.7199999999999998,
+          -0.5
+        ],
+        "other_assignment_range": [
+          62.135000000000005,
+          64.355
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "exact23_sensitivity": {
+        "sown_list": -0.5,
+        "other_named": 64.355,
+        "unresolved": -2.2199999999999998,
+        "total_species_mass": 61.63499999999999,
+        "sown_preexisting_three": 0,
+        "sown_other": -0.5,
+        "sown_assignment_range": [
+          -2.7199999999999998,
+          -0.5
+        ],
+        "other_assignment_range": [
+          62.135000000000005,
+          64.355
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": -0.5,
+        "mean_held_decrease": -64.355,
+        "mean_held_min": -64.355,
+        "fraction_both_positive": 0,
+        "fraction_robust_unresolved": 0,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 0,
+          "other_named": 118.75,
+          "unresolved": 0,
+          "total_species_mass": 118.75,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            0,
+            0
+          ],
+          "other_assignment_range": [
+            118.75,
+            118.75
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": 5.38999999999999,
+          "unresolved": -7.38,
+          "total_species_mass": -1.9900000000000082,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -7.38,
+            0
+          ],
+          "other_assignment_range": [
+            -1.99000000000001,
+            5.38999999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": -2,
+          "other_named": 135.96,
+          "unresolved": 0,
+          "total_species_mass": 133.95999999999998,
+          "sown_preexisting_three": 0,
+          "sown_other": -2,
+          "sown_assignment_range": [
+            -2,
+            -2
+          ],
+          "other_assignment_range": [
+            135.96,
+            135.96
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": -2.6800000000000015,
+          "unresolved": -1.5,
+          "total_species_mass": -4.18,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -1.5,
+            0
+          ],
+          "other_assignment_range": [
+            -4.1800000000000015,
+            -2.6800000000000015
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 0,
+          "other_named": 62.07,
+          "unresolved": -3.69,
+          "total_species_mass": 58.379999999999995,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -3.69,
+            0
+          ],
+          "other_assignment_range": [
+            58.38,
+            62.07
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": -1,
+          "other_named": 127.35499999999999,
+          "unresolved": 0,
+          "total_species_mass": 126.35499999999999,
+          "sown_preexisting_three": 0,
+          "sown_other": -1,
+          "sown_assignment_range": [
+            -1,
+            -1
+          ],
+          "other_assignment_range": [
+            127.35499999999999,
+            127.35499999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 58.035,
+          "unresolved": -0.75,
+          "total_species_mass": 57.285000000000004,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.75,
+            0
+          ],
+          "other_assignment_range": [
+            57.285,
+            58.035
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": -1,
+          "other_named": 70.67499999999998,
+          "unresolved": -3.69,
+          "total_species_mass": 65.98499999999999,
+          "sown_preexisting_three": 0,
+          "sown_other": -1,
+          "sown_assignment_range": [
+            -4.6899999999999995,
+            -1
+          ],
+          "other_assignment_range": [
+            66.98499999999999,
+            70.67499999999998
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 1.3549999999999915,
+          "unresolved": -4.4399999999999995,
+          "total_species_mass": -3.0850000000000066,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -4.4399999999999995,
+            0
+          ],
+          "other_assignment_range": [
+            -3.085000000000008,
+            1.3549999999999915
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": -1,
+          "other_named": 66.63999999999999,
+          "unresolved": -0.75,
+          "total_species_mass": 64.88999999999999,
+          "sown_preexisting_three": 0,
+          "sown_other": -1,
+          "sown_assignment_range": [
+            -1.75,
+            -1
+          ],
+          "other_assignment_range": [
+            65.88999999999999,
+            66.63999999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 2,
+      "pooled": {
+        "sown_list": 0,
+        "other_named": 1.2149999999999992,
+        "unresolved": -1.7475,
+        "total_species_mass": -0.532500000000001,
+        "sown_preexisting_three": 0,
+        "sown_other": 0,
+        "sown_assignment_range": [
+          -1.8425000000000002,
+          0.095
+        ],
+        "other_assignment_range": [
+          -0.6275000000000011,
+          1.3099999999999992
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "exact23_sensitivity": {
+        "sown_list": 0,
+        "other_named": 1.2149999999999992,
+        "unresolved": -1.7475,
+        "total_species_mass": -0.532500000000001,
+        "sown_preexisting_three": 0,
+        "sown_other": 0,
+        "sown_assignment_range": [
+          -1.8425000000000002,
+          0.095
+        ],
+        "other_assignment_range": [
+          -0.6275000000000011,
+          1.3099999999999992
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 0,
+        "mean_held_decrease": -1.2149999999999992,
+        "mean_held_min": -4.624166666666667,
+        "fraction_both_positive": 0,
+        "fraction_robust_unresolved": 0,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 0,
+          "other_named": -20.12000000000001,
+          "unresolved": -4.43,
+          "total_species_mass": -24.550000000000008,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -4.62,
+            0.19
+          ],
+          "other_assignment_range": [
+            -24.740000000000013,
+            -19.93000000000001
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": -20.789999999999996,
+          "unresolved": 0,
+          "total_species_mass": -20.79,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            0,
+            0
+          ],
+          "other_assignment_range": [
+            -20.789999999999996,
+            -20.789999999999996
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": 22.260000000000005,
+          "unresolved": 0.19,
+          "total_species_mass": 22.45,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            0,
+            0.19
+          ],
+          "other_assignment_range": [
+            22.260000000000005,
+            22.450000000000006
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": 23.51,
+          "unresolved": -2.75,
+          "total_species_mass": 20.760000000000005,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -2.78,
+            0.03
+          ],
+          "other_assignment_range": [
+            20.73,
+            23.540000000000003
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 0,
+          "other_named": -20.45500000000001,
+          "unresolved": -2.215,
+          "total_species_mass": -22.67,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -2.31,
+            0.095
+          ],
+          "other_assignment_range": [
+            -22.765000000000008,
+            -20.36000000000001
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 0,
+          "other_named": 1.0699999999999967,
+          "unresolved": -2.12,
+          "total_species_mass": -1.0500000000000005,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -2.31,
+            0.19
+          ],
+          "other_assignment_range": [
+            -1.2400000000000033,
+            1.2599999999999967
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 1.6949999999999992,
+          "unresolved": -3.5900000000000003,
+          "total_species_mass": -1.895000000000002,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -3.6850000000000005,
+            0.095
+          ],
+          "other_assignment_range": [
+            -1.9900000000000013,
+            1.7899999999999991
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 0,
+          "other_named": 0.7350000000000043,
+          "unresolved": 0.095,
+          "total_species_mass": 0.8300000000000036,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            0,
+            0.095
+          ],
+          "other_assignment_range": [
+            0.7350000000000043,
+            0.8300000000000043
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 1.3600000000000037,
+          "unresolved": -1.375,
+          "total_species_mass": -0.014999999999997016,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -1.39,
+            0.015
+          ],
+          "other_assignment_range": [
+            -0.029999999999996252,
+            1.3750000000000036
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 22.885,
+          "unresolved": -1.2799999999999998,
+          "total_species_mass": 21.604999999999997,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -1.39,
+            0.11
+          ],
+          "other_assignment_range": [
+            21.495,
+            22.995
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 3,
+      "pooled": {
+        "sown_list": 0.7275,
+        "other_named": -23.212499999999995,
+        "unresolved": 1.33,
+        "total_species_mass": -21.154999999999998,
+        "sown_preexisting_three": 0,
+        "sown_other": 0.7275,
+        "sown_assignment_range": [
+          0.7275,
+          2.0575
+        ],
+        "other_assignment_range": [
+          -23.212499999999995,
+          -21.882499999999993
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 0.7275,
+        "other_named": -23.212499999999995,
+        "unresolved": 1.33,
+        "total_species_mass": -21.154999999999998,
+        "sown_preexisting_three": 0,
+        "sown_other": 0.7275,
+        "sown_assignment_range": [
+          0.7275,
+          2.0575
+        ],
+        "other_assignment_range": [
+          -23.212499999999995,
+          -21.882499999999993
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 0.7275,
+        "mean_held_decrease": 23.21249999999999,
+        "mean_held_min": -7.092500000000001,
+        "fraction_both_positive": 0.3333333333333333,
+        "fraction_robust_unresolved": 0.3333333333333333,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 0,
+          "other_named": -57.010000000000005,
+          "unresolved": -0.4600000000000001,
+          "total_species_mass": -57.470000000000006,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.4600000000000001,
+            0
+          ],
+          "other_assignment_range": [
+            -57.470000000000006,
+            -57.010000000000005
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 2.91,
+          "other_named": -81,
+          "unresolved": 5.84,
+          "total_species_mass": -72.25,
+          "sown_preexisting_three": 0,
+          "sown_other": 2.91,
+          "sown_assignment_range": [
+            2.91,
+            8.75
+          ],
+          "other_assignment_range": [
+            -81,
+            -75.16
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 0,
+          "other_named": -46.72999999999999,
+          "unresolved": -0.06,
+          "total_species_mass": -46.78999999999999,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.06,
+            0
+          ],
+          "other_assignment_range": [
+            -46.78999999999999,
+            -46.72999999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0,
+          "other_named": 91.89,
+          "unresolved": 0,
+          "total_species_mass": 91.89,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            0,
+            0
+          ],
+          "other_assignment_range": [
+            91.89,
+            91.89
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 1.455,
+          "other_named": -69.005,
+          "unresolved": 2.69,
+          "total_species_mass": -64.86,
+          "sown_preexisting_three": 0,
+          "sown_other": 1.455,
+          "sown_assignment_range": [
+            1.455,
+            4.145
+          ],
+          "other_assignment_range": [
+            -69.005,
+            -66.315
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 0,
+          "other_named": -51.86999999999999,
+          "unresolved": -0.26,
+          "total_species_mass": -52.129999999999995,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.26,
+            0
+          ],
+          "other_assignment_range": [
+            -52.12999999999999,
+            -51.86999999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 17.440000000000005,
+          "unresolved": -0.23000000000000004,
+          "total_species_mass": 17.21,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.23000000000000004,
+            0
+          ],
+          "other_assignment_range": [
+            17.210000000000004,
+            17.440000000000005
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 1.455,
+          "other_named": -63.864999999999995,
+          "unresolved": 2.89,
+          "total_species_mass": -59.519999999999996,
+          "sown_preexisting_three": 0,
+          "sown_other": 1.455,
+          "sown_assignment_range": [
+            1.455,
+            4.345000000000001
+          ],
+          "other_assignment_range": [
+            -63.864999999999995,
+            -60.974999999999994
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 1.455,
+          "other_named": 5.445000000000002,
+          "unresolved": 2.92,
+          "total_species_mass": 9.820000000000002,
+          "sown_preexisting_three": 0,
+          "sown_other": 1.455,
+          "sown_assignment_range": [
+            1.455,
+            4.375
+          ],
+          "other_assignment_range": [
+            5.445000000000002,
+            8.365000000000002
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 0,
+          "other_named": 22.580000000000002,
+          "unresolved": -0.03,
+          "total_species_mass": 22.55,
+          "sown_preexisting_three": 0,
+          "sown_other": 0,
+          "sown_assignment_range": [
+            -0.03,
+            0
+          ],
+          "other_assignment_range": [
+            22.55,
+            22.580000000000002
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 4,
+      "pooled": {
+        "sown_list": 0.1375,
+        "other_named": -5.1875,
+        "unresolved": -1.6875,
+        "total_species_mass": -6.737500000000001,
+        "sown_preexisting_three": 0,
+        "sown_other": 0.1375,
+        "sown_assignment_range": [
+          -1.55,
+          0.1375
+        ],
+        "other_assignment_range": [
+          -6.875,
+          -5.1875
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": false
+      },
+      "exact23_sensitivity": {
+        "sown_list": -0.010000000000000009,
+        "other_named": -5.1875,
+        "unresolved": -1.54,
+        "total_species_mass": -6.737500000000001,
+        "sown_preexisting_three": 0,
+        "sown_other": -0.010000000000000009,
+        "sown_assignment_range": [
+          -1.6975,
+          0.1375
+        ],
+        "other_assignment_range": [
+          -6.875,
+          -5.04
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 0.13749999999999998,
+        "mean_held_decrease": 5.187499999999999,
+        "mean_held_min": -5.290833333333334,
+        "fraction_both_positive": 0.5,
+        "fraction_robust_unresolved": 0.16666666666666666,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": -0.13000000000000003,
+          "other_named": 4.560000000000002,
+          "unresolved": -2.5,
+          "total_species_mass": 1.9299999999999962,
+          "sown_preexisting_three": 0,
+          "sown_other": -0.13,
+          "sown_assignment_range": [
+            -2.63,
+            -0.13000000000000003
+          ],
+          "other_assignment_range": [
+            2.0600000000000023,
+            4.560000000000002
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0.06,
+          "other_named": -23.03,
+          "unresolved": -3.84,
+          "total_species_mass": -26.810000000000006,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.06,
+          "sown_assignment_range": [
+            -3.78,
+            0.06
+          ],
+          "other_assignment_range": [
+            -26.87,
+            -23.03
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 0.28,
+          "other_named": -43.78,
+          "unresolved": 0.03,
+          "total_species_mass": -43.47,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.28,
+          "sown_assignment_range": [
+            0.28,
+            0.31000000000000005
+          ],
+          "other_assignment_range": [
+            -43.78,
+            -43.75
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 0.33999999999999997,
+          "other_named": 41.500000000000014,
+          "unresolved": -0.44,
+          "total_species_mass": 41.40000000000001,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.33999999999999997,
+          "sown_assignment_range": [
+            -0.10000000000000003,
+            0.33999999999999997
+          ],
+          "other_assignment_range": [
+            41.06000000000002,
+            41.500000000000014
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": -0.03500000000000002,
+          "other_named": -9.234999999999996,
+          "unresolved": -3.17,
+          "total_species_mass": -12.440000000000005,
+          "sown_preexisting_three": 0,
+          "sown_other": -0.03500000000000002,
+          "sown_assignment_range": [
+            -3.205,
+            -0.03500000000000002
+          ],
+          "other_assignment_range": [
+            -12.404999999999996,
+            -9.234999999999996
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 0.07499999999999996,
+          "other_named": -19.61,
+          "unresolved": -1.235,
+          "total_species_mass": -20.770000000000003,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.07499999999999997,
+          "sown_assignment_range": [
+            -1.1600000000000001,
+            0.07499999999999996
+          ],
+          "other_assignment_range": [
+            -20.845,
+            -19.61
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 0.10499999999999998,
+          "other_named": 23.03,
+          "unresolved": -1.47,
+          "total_species_mass": 21.665000000000006,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.10499999999999997,
+          "sown_assignment_range": [
+            -1.365,
+            0.10499999999999998
+          ],
+          "other_assignment_range": [
+            21.560000000000002,
+            23.03
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 0.16999999999999998,
+          "other_named": -33.405,
+          "unresolved": -1.905,
+          "total_species_mass": -35.14,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.17000000000000004,
+          "sown_assignment_range": [
+            -1.735,
+            0.16999999999999998
+          ],
+          "other_assignment_range": [
+            -35.31,
+            -33.405
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 0.2,
+          "other_named": 9.235000000000003,
+          "unresolved": -2.14,
+          "total_species_mass": 7.295000000000007,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.2,
+          "sown_assignment_range": [
+            -1.9400000000000002,
+            0.2
+          ],
+          "other_assignment_range": [
+            7.095000000000002,
+            9.235000000000003
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 0.31000000000000005,
+          "other_named": -1.140000000000002,
+          "unresolved": -0.20500000000000002,
+          "total_species_mass": -1.034999999999993,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.31000000000000005,
+          "sown_assignment_range": [
+            0.10500000000000004,
+            0.31000000000000005
+          ],
+          "other_assignment_range": [
+            -1.345000000000002,
+            -1.140000000000002
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 5,
+      "pooled": {
+        "sown_list": 3.6675000000000004,
+        "other_named": 16.787500000000005,
+        "unresolved": -1.0849999999999997,
+        "total_species_mass": 19.370000000000005,
+        "sown_preexisting_three": 0.09999999999999999,
+        "sown_other": 3.5675,
+        "sown_assignment_range": [
+          2.5350000000000006,
+          3.7150000000000003
+        ],
+        "other_assignment_range": [
+          15.655000000000005,
+          16.835000000000004
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "exact23_sensitivity": {
+        "sown_list": 3.5975,
+        "other_named": 16.787500000000005,
+        "unresolved": -1.0149999999999997,
+        "total_species_mass": 19.370000000000005,
+        "sown_preexisting_three": 0.09999999999999999,
+        "sown_other": 3.4974999999999996,
+        "sown_assignment_range": [
+          2.4650000000000003,
+          3.7150000000000003
+        ],
+        "other_assignment_range": [
+          15.655000000000005,
+          16.905000000000005
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 3.6675000000000004,
+        "mean_held_decrease": -16.787499999999998,
+        "mean_held_min": -19.139999999999997,
+        "fraction_both_positive": 0.16666666666666666,
+        "fraction_robust_unresolved": 0.16666666666666666,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 0.71,
+          "other_named": -21.439999999999998,
+          "unresolved": 0.5,
+          "total_species_mass": -20.229999999999997,
+          "sown_preexisting_three": 0,
+          "sown_other": 0.71,
+          "sown_assignment_range": [
+            0.71,
+            1.21
+          ],
+          "other_assignment_range": [
+            -21.439999999999998,
+            -20.939999999999998
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 10.870000000000001,
+          "other_named": -18.369999999999997,
+          "unresolved": 2.16,
+          "total_species_mass": -5.339999999999998,
+          "sown_preexisting_three": 0.4,
+          "sown_other": 10.47,
+          "sown_assignment_range": [
+            10.870000000000001,
+            13.030000000000001
+          ],
+          "other_assignment_range": [
+            -18.369999999999997,
+            -16.209999999999997
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 1.71,
+          "other_named": 38.790000000000006,
+          "unresolved": 2.5,
+          "total_species_mass": 42.999999999999986,
+          "sown_preexisting_three": 0.06,
+          "sown_other": 1.65,
+          "sown_assignment_range": [
+            1.71,
+            4.21
+          ],
+          "other_assignment_range": [
+            38.790000000000006,
+            41.290000000000006
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 1.3800000000000001,
+          "other_named": 68.16999999999999,
+          "unresolved": -9.5,
+          "total_species_mass": 60.05,
+          "sown_preexisting_three": -0.06,
+          "sown_other": 1.44,
+          "sown_assignment_range": [
+            -8.309999999999999,
+            1.57
+          ],
+          "other_assignment_range": [
+            58.47999999999999,
+            68.35999999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 5.79,
+          "other_named": -19.904999999999994,
+          "unresolved": 1.33,
+          "total_species_mass": -12.784999999999993,
+          "sown_preexisting_three": 0.2,
+          "sown_other": 5.59,
+          "sown_assignment_range": [
+            5.79,
+            7.12
+          ],
+          "other_assignment_range": [
+            -19.904999999999994,
+            -18.574999999999996
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 1.21,
+          "other_named": 8.675000000000002,
+          "unresolved": 1.5,
+          "total_species_mass": 11.385,
+          "sown_preexisting_three": 0.03,
+          "sown_other": 1.18,
+          "sown_assignment_range": [
+            1.21,
+            2.71
+          ],
+          "other_assignment_range": [
+            8.675000000000002,
+            10.175000000000002
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 1.045,
+          "other_named": 23.365000000000002,
+          "unresolved": -4.5,
+          "total_species_mass": 19.909999999999997,
+          "sown_preexisting_three": -0.03,
+          "sown_other": 1.075,
+          "sown_assignment_range": [
+            -3.55,
+            1.14
+          ],
+          "other_assignment_range": [
+            18.770000000000003,
+            23.46
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 6.29,
+          "other_named": 10.209999999999999,
+          "unresolved": 2.33,
+          "total_species_mass": 18.83,
+          "sown_preexisting_three": 0.22999999999999998,
+          "sown_other": 6.0600000000000005,
+          "sown_assignment_range": [
+            6.29,
+            8.620000000000001
+          ],
+          "other_assignment_range": [
+            10.209999999999999,
+            12.54
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 6.125,
+          "other_named": 24.89999999999999,
+          "unresolved": -3.6699999999999995,
+          "total_species_mass": 27.354999999999997,
+          "sown_preexisting_three": 0.16999999999999998,
+          "sown_other": 5.955,
+          "sown_assignment_range": [
+            2.3600000000000003,
+            6.22
+          ],
+          "other_assignment_range": [
+            21.13499999999999,
+            24.99499999999999
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 1.545,
+          "other_named": 53.48,
+          "unresolved": -3.4999999999999996,
+          "total_species_mass": 51.525000000000006,
+          "sown_preexisting_three": 0,
+          "sown_other": 1.545,
+          "sown_assignment_range": [
+            -2.05,
+            1.64
+          ],
+          "other_assignment_range": [
+            49.885,
+            53.574999999999996
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 6,
+      "pooled": {
+        "sown_list": 85.84249999999999,
+        "other_named": 13.257500000000002,
+        "unresolved": -3.6700000000000004,
+        "total_species_mass": 95.43,
+        "sown_preexisting_three": 36.9425,
+        "sown_other": 48.900000000000006,
+        "sown_assignment_range": [
+          82.07,
+          85.945
+        ],
+        "other_assignment_range": [
+          9.485000000000001,
+          13.360000000000001
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "exact23_sensitivity": {
+        "sown_list": 78.61749999999999,
+        "other_named": 13.257500000000002,
+        "unresolved": 3.5549999999999993,
+        "total_species_mass": 95.43,
+        "sown_preexisting_three": 36.9425,
+        "sown_other": 41.675000000000004,
+        "sown_assignment_range": [
+          74.845,
+          85.945
+        ],
+        "other_assignment_range": [
+          9.485000000000001,
+          20.585
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 85.84249999999999,
+        "mean_held_decrease": -13.257500000000006,
+        "mean_held_min": -13.257500000000006,
+        "fraction_both_positive": 0.5,
+        "fraction_robust_unresolved": 0.5,
+        "strong_descriptive_gate": false
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 99.6,
+          "other_named": -47.24999999999999,
+          "unresolved": -0.34,
+          "total_species_mass": 52.00999999999999,
+          "sown_preexisting_three": 23.84,
+          "sown_other": 75.75999999999999,
+          "sown_assignment_range": [
+            99.25999999999999,
+            99.6
+          ],
+          "other_assignment_range": [
+            -47.589999999999996,
+            -47.24999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 56.55,
+          "other_named": -5.560000000000002,
+          "unresolved": -6.5600000000000005,
+          "total_species_mass": 44.43000000000001,
+          "sown_preexisting_three": 32.59,
+          "sown_other": 23.96,
+          "sown_assignment_range": [
+            49.989999999999995,
+            56.55
+          ],
+          "other_assignment_range": [
+            -12.120000000000003,
+            -5.560000000000002
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 154.49,
+          "other_named": 102.67,
+          "unresolved": -7.590000000000001,
+          "total_species_mass": 249.57,
+          "sown_preexisting_three": 72,
+          "sown_other": 82.49000000000001,
+          "sown_assignment_range": [
+            146.46,
+            154.93
+          ],
+          "other_assignment_range": [
+            94.64,
+            103.11
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 32.730000000000004,
+          "other_named": 3.1700000000000044,
+          "unresolved": -0.19000000000000003,
+          "total_species_mass": 35.71000000000001,
+          "sown_preexisting_three": 19.34,
+          "sown_other": 13.39,
+          "sown_assignment_range": [
+            32.540000000000006,
+            32.730000000000004
+          ],
+          "other_assignment_range": [
+            2.9800000000000044,
+            3.1700000000000044
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 78.07500000000002,
+          "other_named": -26.404999999999998,
+          "unresolved": -3.45,
+          "total_species_mass": 48.22,
+          "sown_preexisting_three": 28.215000000000003,
+          "sown_other": 49.86,
+          "sown_assignment_range": [
+            74.62500000000001,
+            78.07500000000002
+          ],
+          "other_assignment_range": [
+            -29.854999999999997,
+            -26.404999999999998
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 127.045,
+          "other_named": 27.710000000000008,
+          "unresolved": -3.9650000000000003,
+          "total_species_mass": 150.79,
+          "sown_preexisting_three": 47.92,
+          "sown_other": 79.125,
+          "sown_assignment_range": [
+            122.86,
+            127.265
+          ],
+          "other_assignment_range": [
+            23.525000000000006,
+            27.930000000000007
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 66.16499999999999,
+          "other_named": -22.039999999999992,
+          "unresolved": -0.265,
+          "total_species_mass": 43.86,
+          "sown_preexisting_three": 21.590000000000003,
+          "sown_other": 44.574999999999996,
+          "sown_assignment_range": [
+            65.89999999999999,
+            66.16499999999999
+          ],
+          "other_assignment_range": [
+            -22.304999999999993,
+            -22.039999999999992
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 105.52,
+          "other_named": 48.55500000000001,
+          "unresolved": -7.075,
+          "total_species_mass": 147,
+          "sown_preexisting_three": 52.295,
+          "sown_other": 53.224999999999994,
+          "sown_assignment_range": [
+            98.24,
+            105.725
+          ],
+          "other_assignment_range": [
+            41.275000000000006,
+            48.760000000000005
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 44.64000000000001,
+          "other_named": -1.1949999999999963,
+          "unresolved": -3.375,
+          "total_species_mass": 40.07000000000001,
+          "sown_preexisting_three": 25.965000000000003,
+          "sown_other": 18.675,
+          "sown_assignment_range": [
+            41.26500000000001,
+            44.64000000000001
+          ],
+          "other_assignment_range": [
+            -4.569999999999997,
+            -1.1949999999999963
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 93.61000000000001,
+          "other_named": 52.92,
+          "unresolved": -3.89,
+          "total_species_mass": 142.64,
+          "sown_preexisting_three": 45.67,
+          "sown_other": 47.940000000000005,
+          "sown_assignment_range": [
+            89.50000000000001,
+            93.83000000000001
+          ],
+          "other_assignment_range": [
+            48.81,
+            53.14
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 7,
+      "pooled": {
+        "sown_list": 134.5425,
+        "other_named": -3.2550000000000066,
+        "unresolved": 1.795,
+        "total_species_mass": 133.08249999999998,
+        "sown_preexisting_three": 27.7725,
+        "sown_other": 106.77000000000001,
+        "sown_assignment_range": [
+          134.45,
+          136.42999999999998
+        ],
+        "other_assignment_range": [
+          -3.3475000000000064,
+          -1.3675000000000068
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 92.9175,
+        "other_named": -3.2550000000000066,
+        "unresolved": 43.42,
+        "total_species_mass": 133.08249999999998,
+        "sown_preexisting_three": 27.7725,
+        "sown_other": 65.14500000000001,
+        "sown_assignment_range": [
+          92.825,
+          136.43
+        ],
+        "other_assignment_range": [
+          -3.3475000000000064,
+          40.25749999999999
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": false
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 134.5425,
+        "mean_held_decrease": 3.2550000000000026,
+        "mean_held_min": 3.2550000000000026,
+        "fraction_both_positive": 0.6666666666666666,
+        "fraction_robust_unresolved": 0.5,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 53.67,
+          "other_named": -34.629999999999995,
+          "unresolved": 1.56,
+          "total_species_mass": 20.599999999999987,
+          "sown_preexisting_three": 14.03,
+          "sown_other": 39.64,
+          "sown_assignment_range": [
+            53.67,
+            55.230000000000004
+          ],
+          "other_assignment_range": [
+            -34.629999999999995,
+            -33.06999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 56.81,
+          "other_named": -68.95000000000002,
+          "unresolved": 3.709999999999999,
+          "total_species_mass": -8.430000000000003,
+          "sown_preexisting_three": -5.250000000000002,
+          "sown_other": 62.06,
+          "sown_assignment_range": [
+            56.81,
+            60.52
+          ],
+          "other_assignment_range": [
+            -68.95000000000002,
+            -65.24000000000002
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 282.33,
+          "other_named": 31.35,
+          "unresolved": -5.78,
+          "total_species_mass": 307.90000000000003,
+          "sown_preexisting_three": 87.47,
+          "sown_other": 194.86,
+          "sown_assignment_range": [
+            276.55,
+            282.33
+          ],
+          "other_assignment_range": [
+            25.57,
+            31.35
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 145.36,
+          "other_named": 59.20999999999999,
+          "unresolved": 7.69,
+          "total_species_mass": 212.26000000000002,
+          "sown_preexisting_three": 14.84,
+          "sown_other": 130.52,
+          "sown_assignment_range": [
+            144.99,
+            153.42000000000002
+          ],
+          "other_assignment_range": [
+            58.83999999999999,
+            67.26999999999998
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 55.239999999999995,
+          "other_named": -51.790000000000006,
+          "unresolved": 2.635,
+          "total_species_mass": 6.084999999999999,
+          "sown_preexisting_three": 4.389999999999999,
+          "sown_other": 50.85,
+          "sown_assignment_range": [
+            55.239999999999995,
+            57.87499999999999
+          ],
+          "other_assignment_range": [
+            -51.790000000000006,
+            -49.15500000000001
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 168,
+          "other_named": -1.6400000000000083,
+          "unresolved": -2.1100000000000003,
+          "total_species_mass": 164.25,
+          "sown_preexisting_three": 50.75,
+          "sown_other": 117.25,
+          "sown_assignment_range": [
+            165.735,
+            168.155
+          ],
+          "other_assignment_range": [
+            -3.9050000000000082,
+            -1.4850000000000083
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 99.515,
+          "other_named": 12.289999999999996,
+          "unresolved": 4.624999999999999,
+          "total_species_mass": 116.43,
+          "sown_preexisting_three": 14.434999999999999,
+          "sown_other": 85.08,
+          "sown_assignment_range": [
+            99.33,
+            104.325
+          ],
+          "other_assignment_range": [
+            12.104999999999995,
+            17.099999999999994
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 169.57,
+          "other_named": -18.8,
+          "unresolved": -1.0350000000000006,
+          "total_species_mass": 149.73499999999999,
+          "sown_preexisting_three": 41.11,
+          "sown_other": 128.46,
+          "sown_assignment_range": [
+            168.505,
+            169.6
+          ],
+          "other_assignment_range": [
+            -19.865000000000002,
+            -18.77
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 101.085,
+          "other_named": -4.8700000000000045,
+          "unresolved": 5.699999999999999,
+          "total_species_mass": 101.91499999999999,
+          "sown_preexisting_three": 4.795,
+          "sown_other": 96.28999999999999,
+          "sown_assignment_range": [
+            100.89999999999999,
+            106.97
+          ],
+          "other_assignment_range": [
+            -5.055000000000004,
+            1.0149999999999944
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 213.84499999999997,
+          "other_named": 45.28,
+          "unresolved": 0.9549999999999996,
+          "total_species_mass": 260.08,
+          "sown_preexisting_three": 51.155,
+          "sown_other": 162.69,
+          "sown_assignment_range": [
+            213.65999999999997,
+            214.98499999999996
+          ],
+          "other_assignment_range": [
+            45.095,
+            46.42
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 8,
+      "pooled": {
+        "sown_list": 34.9625,
+        "other_named": -45.122499999999995,
+        "unresolved": -4.172499999999999,
+        "total_species_mass": -14.332500000000003,
+        "sown_preexisting_three": 9.82,
+        "sown_other": 25.1425,
+        "sown_assignment_range": [
+          30.445,
+          35.3075
+        ],
+        "other_assignment_range": [
+          -49.63999999999999,
+          -44.777499999999996
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 28.58,
+        "other_named": -45.122499999999995,
+        "unresolved": 2.2100000000000004,
+        "total_species_mass": -14.332500000000003,
+        "sown_preexisting_three": 9.82,
+        "sown_other": 18.759999999999998,
+        "sown_assignment_range": [
+          24.0625,
+          35.3075
+        ],
+        "other_assignment_range": [
+          -49.63999999999999,
+          -38.394999999999996
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 34.9625,
+        "mean_held_decrease": 45.1225,
+        "mean_held_min": 8.929166666666665,
+        "fraction_both_positive": 0.6666666666666666,
+        "fraction_robust_unresolved": 0.6666666666666666,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 50.54,
+          "other_named": 2.4199999999999933,
+          "unresolved": -2.9699999999999998,
+          "total_species_mass": 49.989999999999995,
+          "sown_preexisting_three": 21.78,
+          "sown_other": 28.759999999999998,
+          "sown_assignment_range": [
+            47.57,
+            50.54
+          ],
+          "other_assignment_range": [
+            -0.5500000000000065,
+            2.4199999999999933
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 33.370000000000005,
+          "other_named": -230.21,
+          "unresolved": -0.06000000000000005,
+          "total_species_mass": -196.9,
+          "sown_preexisting_three": 9.53,
+          "sown_other": 23.840000000000003,
+          "sown_assignment_range": [
+            32.02,
+            34.660000000000004
+          ],
+          "other_assignment_range": [
+            -231.56,
+            -228.92000000000002
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 30.63,
+          "other_named": 94.11000000000001,
+          "unresolved": -7.28,
+          "total_species_mass": 117.46000000000001,
+          "sown_preexisting_three": 3.06,
+          "sown_other": 27.57,
+          "sown_assignment_range": [
+            23.259999999999998,
+            30.72
+          ],
+          "other_assignment_range": [
+            86.74000000000001,
+            94.20000000000002
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 25.310000000000002,
+          "other_named": -46.81,
+          "unresolved": -6.38,
+          "total_species_mass": -27.879999999999995,
+          "sown_preexisting_three": 4.91,
+          "sown_other": 20.4,
+          "sown_assignment_range": [
+            18.930000000000003,
+            25.310000000000002
+          ],
+          "other_assignment_range": [
+            -53.190000000000005,
+            -46.81
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 41.955,
+          "other_named": -113.895,
+          "unresolved": -1.5150000000000001,
+          "total_species_mass": -73.45500000000001,
+          "sown_preexisting_three": 15.655000000000001,
+          "sown_other": 26.3,
+          "sown_assignment_range": [
+            39.795,
+            42.6
+          ],
+          "other_assignment_range": [
+            -116.05499999999999,
+            -113.25
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 40.585,
+          "other_named": 48.265,
+          "unresolved": -5.125,
+          "total_species_mass": 83.725,
+          "sown_preexisting_three": 12.42,
+          "sown_other": 28.165,
+          "sown_assignment_range": [
+            35.415,
+            40.63
+          ],
+          "other_assignment_range": [
+            43.095,
+            48.31
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 37.925,
+          "other_named": -22.195,
+          "unresolved": -4.675,
+          "total_species_mass": 11.055000000000001,
+          "sown_preexisting_three": 13.345,
+          "sown_other": 24.580000000000002,
+          "sown_assignment_range": [
+            33.25,
+            37.925
+          ],
+          "other_assignment_range": [
+            -26.87,
+            -22.195
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 32,
+          "other_named": -68.05,
+          "unresolved": -3.6700000000000004,
+          "total_species_mass": -39.71999999999999,
+          "sown_preexisting_three": 6.295,
+          "sown_other": 25.705000000000002,
+          "sown_assignment_range": [
+            27.64,
+            32.69
+          ],
+          "other_assignment_range": [
+            -72.41,
+            -67.36
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 29.34,
+          "other_named": -138.51,
+          "unresolved": -3.2199999999999998,
+          "total_species_mass": -112.39000000000001,
+          "sown_preexisting_three": 7.22,
+          "sown_other": 22.12,
+          "sown_assignment_range": [
+            25.475,
+            29.985
+          ],
+          "other_assignment_range": [
+            -142.375,
+            -137.86499999999998
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 27.970000000000002,
+          "other_named": 23.65,
+          "unresolved": -6.830000000000001,
+          "total_species_mass": 44.79,
+          "sown_preexisting_three": 3.9850000000000003,
+          "sown_other": 23.985,
+          "sown_assignment_range": [
+            21.095000000000002,
+            28.015000000000004
+          ],
+          "other_assignment_range": [
+            16.775,
+            23.695
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        }
+      ]
+    },
+    {
+      "age": 9,
+      "pooled": {
+        "sown_list": 33.5775,
+        "other_named": -58.574999999999996,
+        "unresolved": -0.5675000000000002,
+        "total_species_mass": -25.564999999999998,
+        "sown_preexisting_three": 10.805,
+        "sown_other": 22.772499999999997,
+        "sown_assignment_range": [
+          32.2525,
+          34.335
+        ],
+        "other_assignment_range": [
+          -59.9,
+          -57.817499999999995
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 29.0475,
+        "other_named": -58.574999999999996,
+        "unresolved": 3.9625000000000004,
+        "total_species_mass": -25.564999999999998,
+        "sown_preexisting_three": 10.805,
+        "sown_other": 18.2425,
+        "sown_assignment_range": [
+          27.7225,
+          34.335
+        ],
+        "other_assignment_range": [
+          -59.9,
+          -53.287499999999994
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 33.5775,
+        "mean_held_decrease": 58.57499999999999,
+        "mean_held_min": 33.5775,
+        "fraction_both_positive": 1,
+        "fraction_robust_unresolved": 1,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 12.350000000000001,
+          "other_named": -45.55,
+          "unresolved": 3.56,
+          "total_species_mass": -29.639999999999993,
+          "sown_preexisting_three": 2.59,
+          "sown_other": 9.760000000000002,
+          "sown_assignment_range": [
+            12.350000000000001,
+            15.910000000000002
+          ],
+          "other_assignment_range": [
+            -45.55,
+            -41.989999999999995
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 50.39999999999999,
+          "other_named": -86.46000000000001,
+          "unresolved": -1.7200000000000002,
+          "total_species_mass": -37.779999999999994,
+          "sown_preexisting_three": 8.25,
+          "sown_other": 42.15,
+          "sown_assignment_range": [
+            48.42999999999999,
+            50.64999999999999
+          ],
+          "other_assignment_range": [
+            -88.43,
+            -86.21000000000001
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 29.65,
+          "other_named": -36.120000000000005,
+          "unresolved": 1.93,
+          "total_species_mass": -4.540000000000004,
+          "sown_preexisting_three": 12.19,
+          "sown_other": 17.46,
+          "sown_assignment_range": [
+            29.08,
+            32.15
+          ],
+          "other_assignment_range": [
+            -36.690000000000005,
+            -33.620000000000005
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 41.910000000000004,
+          "other_named": -66.16999999999999,
+          "unresolved": -6.04,
+          "total_species_mass": -30.299999999999997,
+          "sown_preexisting_three": 20.19,
+          "sown_other": 21.72,
+          "sown_assignment_range": [
+            35.56,
+            42.220000000000006
+          ],
+          "other_assignment_range": [
+            -72.51999999999998,
+            -65.85999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 31.375,
+          "other_named": -66.005,
+          "unresolved": 0.9199999999999999,
+          "total_species_mass": -33.709999999999994,
+          "sown_preexisting_three": 5.42,
+          "sown_other": 25.955,
+          "sown_assignment_range": [
+            31.375,
+            32.295
+          ],
+          "other_assignment_range": [
+            -66.005,
+            -65.085
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 21,
+          "other_named": -40.835,
+          "unresolved": 2.745,
+          "total_species_mass": -17.09,
+          "sown_preexisting_three": 7.39,
+          "sown_other": 13.61,
+          "sown_assignment_range": [
+            20.905,
+            23.84
+          ],
+          "other_assignment_range": [
+            -40.93,
+            -37.995000000000005
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 27.130000000000003,
+          "other_named": -55.85999999999999,
+          "unresolved": -1.2400000000000002,
+          "total_species_mass": -29.969999999999995,
+          "sown_preexisting_three": 11.39,
+          "sown_other": 15.739999999999998,
+          "sown_assignment_range": [
+            25.735000000000003,
+            27.285000000000004
+          ],
+          "other_assignment_range": [
+            -57.254999999999995,
+            -55.70499999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 40.025,
+          "other_named": -61.29,
+          "unresolved": 0.10499999999999998,
+          "total_species_mass": -21.159999999999993,
+          "sown_preexisting_three": 10.219999999999999,
+          "sown_other": 29.805,
+          "sown_assignment_range": [
+            38.769999999999996,
+            41.385
+          ],
+          "other_assignment_range": [
+            -62.545,
+            -59.93
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 46.155,
+          "other_named": -76.315,
+          "unresolved": -3.88,
+          "total_species_mass": -34.04,
+          "sown_preexisting_three": 14.22,
+          "sown_other": 31.935000000000002,
+          "sown_assignment_range": [
+            41.995000000000005,
+            46.435
+          ],
+          "other_assignment_range": [
+            -80.475,
+            -76.035
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 35.78,
+          "other_named": -51.144999999999996,
+          "unresolved": -2.0550000000000006,
+          "total_species_mass": -17.419999999999995,
+          "sown_preexisting_three": 16.19,
+          "sown_other": 19.589999999999996,
+          "sown_assignment_range": [
+            32.335,
+            37.17
+          ],
+          "other_assignment_range": [
+            -54.589999999999996,
+            -49.754999999999995
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 10,
+      "pooled": {
+        "sown_list": 44.455000000000005,
+        "other_named": -56.35,
+        "unresolved": 2.0425,
+        "total_species_mass": -9.8525,
+        "sown_preexisting_three": 2.9225,
+        "sown_other": 41.5325,
+        "sown_assignment_range": [
+          44.050000000000004,
+          46.9025
+        ],
+        "other_assignment_range": [
+          -56.755,
+          -53.9025
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 34.972500000000004,
+        "other_named": -56.35,
+        "unresolved": 11.524999999999999,
+        "total_species_mass": -9.8525,
+        "sown_preexisting_three": 2.9225,
+        "sown_other": 32.05,
+        "sown_assignment_range": [
+          34.5675,
+          46.9025
+        ],
+        "other_assignment_range": [
+          -56.755,
+          -44.42
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 44.45499999999999,
+        "mean_held_decrease": 56.35,
+        "mean_held_min": 43.76666666666666,
+        "fraction_both_positive": 1,
+        "fraction_robust_unresolved": 1,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 22.25,
+          "other_named": -26.04,
+          "unresolved": 8.98,
+          "total_species_mass": 5.190000000000005,
+          "sown_preexisting_three": 2,
+          "sown_other": 20.25,
+          "sown_assignment_range": [
+            22.19,
+            31.29
+          ],
+          "other_assignment_range": [
+            -26.099999999999998,
+            -17
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 60.54,
+          "other_named": -50.74000000000001,
+          "unresolved": -0.09000000000000002,
+          "total_species_mass": 9.709999999999981,
+          "sown_preexisting_three": 6.75,
+          "sown_other": 53.78999999999999,
+          "sown_assignment_range": [
+            60.36,
+            60.63
+          ],
+          "other_assignment_range": [
+            -50.92000000000001,
+            -50.650000000000006
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 33.339999999999996,
+          "other_named": -40.88999999999999,
+          "unresolved": -3.19,
+          "total_species_mass": -10.739999999999995,
+          "sown_preexisting_three": 2.3499999999999996,
+          "sown_other": 30.990000000000002,
+          "sown_assignment_range": [
+            27.399999999999995,
+            36.089999999999996
+          ],
+          "other_assignment_range": [
+            -46.82999999999999,
+            -38.13999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 61.69,
+          "other_named": -107.73,
+          "unresolved": 2.47,
+          "total_species_mass": -43.56999999999999,
+          "sown_preexisting_three": 0.59,
+          "sown_other": 61.1,
+          "sown_assignment_range": [
+            61.69,
+            64.16
+          ],
+          "other_assignment_range": [
+            -107.73,
+            -105.26
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 41.394999999999996,
+          "other_named": -38.39000000000001,
+          "unresolved": 4.445,
+          "total_species_mass": 7.450000000000003,
+          "sown_preexisting_three": 4.375,
+          "sown_other": 37.02,
+          "sown_assignment_range": [
+            41.334999999999994,
+            45.9
+          ],
+          "other_assignment_range": [
+            -38.45000000000001,
+            -33.885000000000005
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 27.794999999999998,
+          "other_named": -33.464999999999996,
+          "unresolved": 2.895,
+          "total_species_mass": -2.775000000000001,
+          "sown_preexisting_three": 2.175,
+          "sown_other": 25.62,
+          "sown_assignment_range": [
+            25.735,
+            32.75
+          ],
+          "other_assignment_range": [
+            -35.525,
+            -28.509999999999998
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 41.97,
+          "other_named": -66.885,
+          "unresolved": 5.7250000000000005,
+          "total_species_mass": -19.189999999999998,
+          "sown_preexisting_three": 1.295,
+          "sown_other": 40.675,
+          "sown_assignment_range": [
+            41.94,
+            47.725
+          ],
+          "other_assignment_range": [
+            -66.915,
+            -61.13
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 46.94,
+          "other_named": -45.815000000000005,
+          "unresolved": -1.6400000000000001,
+          "total_species_mass": -0.5150000000000006,
+          "sown_preexisting_three": 4.55,
+          "sown_other": 42.39,
+          "sown_assignment_range": [
+            43.985,
+            48.254999999999995
+          ],
+          "other_assignment_range": [
+            -48.77,
+            -44.50000000000001
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 61.114999999999995,
+          "other_named": -79.235,
+          "unresolved": 1.19,
+          "total_species_mass": -16.93,
+          "sown_preexisting_three": 3.67,
+          "sown_other": 57.44499999999999,
+          "sown_assignment_range": [
+            61.02499999999999,
+            62.394999999999996
+          ],
+          "other_assignment_range": [
+            -79.325,
+            -77.955
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 47.515,
+          "other_named": -74.31,
+          "unresolved": -0.3599999999999999,
+          "total_species_mass": -27.154999999999994,
+          "sown_preexisting_three": 1.4699999999999998,
+          "sown_other": 46.045,
+          "sown_assignment_range": [
+            45.78,
+            48.89
+          ],
+          "other_assignment_range": [
+            -76.045,
+            -72.935
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 11,
+      "pooled": {
+        "sown_list": 15.4325,
+        "other_named": -22.919999999999998,
+        "unresolved": -0.19500000000000006,
+        "total_species_mass": -7.6825,
+        "sown_preexisting_three": 6.14,
+        "sown_other": 9.292499999999999,
+        "sown_assignment_range": [
+          14.3475,
+          16.322499999999998
+        ],
+        "other_assignment_range": [
+          -24.005,
+          -22.029999999999998
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 14.1125,
+        "other_named": -22.919999999999998,
+        "unresolved": 1.125,
+        "total_species_mass": -7.6825,
+        "sown_preexisting_three": 6.14,
+        "sown_other": 7.9725,
+        "sown_assignment_range": [
+          13.0275,
+          16.3225
+        ],
+        "other_assignment_range": [
+          -24.005,
+          -20.709999999999997
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 15.4325,
+        "mean_held_decrease": 22.920000000000005,
+        "mean_held_min": 6.775833333333334,
+        "fraction_both_positive": 0.8333333333333334,
+        "fraction_robust_unresolved": 0.6666666666666666,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 25.61,
+          "other_named": 10.15,
+          "unresolved": -1.0899999999999999,
+          "total_species_mass": 34.67,
+          "sown_preexisting_three": 3.88,
+          "sown_other": 21.73,
+          "sown_assignment_range": [
+            21.49,
+            28.64
+          ],
+          "other_assignment_range": [
+            6.03,
+            13.18
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 26.6,
+          "other_named": -5.610000000000001,
+          "unresolved": -0.6799999999999999,
+          "total_species_mass": 20.31,
+          "sown_preexisting_three": 20.56,
+          "sown_other": 6.04,
+          "sown_assignment_range": [
+            25.92,
+            26.6
+          ],
+          "other_assignment_range": [
+            -6.290000000000001,
+            -5.610000000000001
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 7.059999999999999,
+          "other_named": -11.870000000000003,
+          "unresolved": 0.08999999999999997,
+          "total_species_mass": -4.7200000000000015,
+          "sown_preexisting_three": 4.529999999999999,
+          "sown_other": 2.53,
+          "sown_assignment_range": [
+            6.679999999999999,
+            7.5299999999999985
+          ],
+          "other_assignment_range": [
+            -12.250000000000004,
+            -11.400000000000002
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 2.46,
+          "other_named": -84.35,
+          "unresolved": 0.8999999999999999,
+          "total_species_mass": -80.99,
+          "sown_preexisting_three": -4.41,
+          "sown_other": 6.87,
+          "sown_assignment_range": [
+            2.46,
+            3.36
+          ],
+          "other_assignment_range": [
+            -84.35,
+            -83.44999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 26.104999999999997,
+          "other_named": 2.2700000000000005,
+          "unresolved": -0.8849999999999998,
+          "total_species_mass": 27.49,
+          "sown_preexisting_three": 12.219999999999999,
+          "sown_other": 13.885,
+          "sown_assignment_range": [
+            23.97,
+            27.354999999999997
+          ],
+          "other_assignment_range": [
+            0.13500000000000068,
+            3.5200000000000005
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 16.335,
+          "other_named": -0.8600000000000007,
+          "unresolved": -0.5,
+          "total_species_mass": 14.975000000000003,
+          "sown_preexisting_three": 4.205,
+          "sown_other": 12.13,
+          "sown_assignment_range": [
+            14.21,
+            17.96
+          ],
+          "other_assignment_range": [
+            -2.9850000000000008,
+            0.7649999999999993
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 14.035,
+          "other_named": -37.10000000000001,
+          "unresolved": -0.09499999999999975,
+          "total_species_mass": -23.159999999999997,
+          "sown_preexisting_three": -0.2650000000000001,
+          "sown_other": 14.299999999999997,
+          "sown_assignment_range": [
+            11.99,
+            15.985
+          ],
+          "other_assignment_range": [
+            -39.14500000000001,
+            -35.150000000000006
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 16.83,
+          "other_named": -8.740000000000002,
+          "unresolved": -0.29500000000000004,
+          "total_species_mass": 7.794999999999998,
+          "sown_preexisting_three": 12.544999999999998,
+          "sown_other": 4.285,
+          "sown_assignment_range": [
+            16.299999999999997,
+            17.064999999999998
+          ],
+          "other_assignment_range": [
+            -9.270000000000001,
+            -8.505000000000003
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 14.53,
+          "other_named": -44.980000000000004,
+          "unresolved": 0.10999999999999992,
+          "total_species_mass": -30.340000000000007,
+          "sown_preexisting_three": 8.075,
+          "sown_other": 6.455,
+          "sown_assignment_range": [
+            14.485,
+            14.684999999999999
+          ],
+          "other_assignment_range": [
+            -45.025000000000006,
+            -44.825
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 4.76,
+          "other_named": -48.11000000000001,
+          "unresolved": 0.4949999999999999,
+          "total_species_mass": -42.855,
+          "sown_preexisting_three": 0.05999999999999961,
+          "sown_other": 4.699999999999999,
+          "sown_assignment_range": [
+            4.725,
+            5.29
+          ],
+          "other_assignment_range": [
+            -48.145,
+            -47.580000000000005
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 12,
+      "pooled": {
+        "sown_list": 93.52000000000001,
+        "other_named": -59.42,
+        "unresolved": -1.7950000000000002,
+        "total_species_mass": 32.305,
+        "sown_preexisting_three": 37.0825,
+        "sown_other": 56.4375,
+        "sown_assignment_range": [
+          89.99750000000002,
+          95.24750000000002
+        ],
+        "other_assignment_range": [
+          -62.9425,
+          -57.6925
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 74.6825,
+        "other_named": -59.42,
+        "unresolved": 17.042499999999997,
+        "total_species_mass": 32.305,
+        "sown_preexisting_three": 37.0825,
+        "sown_other": 37.6,
+        "sown_assignment_range": [
+          71.16000000000001,
+          95.2475
+        ],
+        "other_assignment_range": [
+          -62.9425,
+          -38.855000000000004
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 93.52,
+        "mean_held_decrease": 59.419999999999995,
+        "mean_held_min": 59.419999999999995,
+        "fraction_both_positive": 1,
+        "fraction_robust_unresolved": 1,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 121.13,
+          "other_named": -84.03999999999999,
+          "unresolved": 1.16,
+          "total_species_mass": 38.25,
+          "sown_preexisting_three": 41,
+          "sown_other": 80.13,
+          "sown_assignment_range": [
+            121.1,
+            122.32
+          ],
+          "other_assignment_range": [
+            -84.07,
+            -82.85
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 139.74,
+          "other_named": -83.93,
+          "unresolved": -15.19,
+          "total_species_mass": 40.62000000000001,
+          "sown_preexisting_three": 75,
+          "sown_other": 64.74,
+          "sown_assignment_range": [
+            124.55000000000001,
+            139.74
+          ],
+          "other_assignment_range": [
+            -99.12,
+            -83.93
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": -9.409999999999995,
+          "other_named": 2.850000000000005,
+          "unresolved": 4.63,
+          "total_species_mass": -1.9299999999999997,
+          "sown_preexisting_three": -48.29,
+          "sown_other": 38.879999999999995,
+          "sown_assignment_range": [
+            -10.659999999999995,
+            -3.529999999999995
+          ],
+          "other_assignment_range": [
+            1.600000000000005,
+            8.730000000000004
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 122.62,
+          "other_named": -72.55999999999999,
+          "unresolved": 2.22,
+          "total_species_mass": 52.280000000000015,
+          "sown_preexisting_three": 80.62,
+          "sown_other": 42,
+          "sown_assignment_range": [
+            122.62,
+            124.84
+          ],
+          "other_assignment_range": [
+            -72.55999999999999,
+            -70.33999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 130.435,
+          "other_named": -83.985,
+          "unresolved": -7.015,
+          "total_species_mass": 39.434999999999995,
+          "sown_preexisting_three": 58,
+          "sown_other": 72.435,
+          "sown_assignment_range": [
+            122.905,
+            130.95
+          ],
+          "other_assignment_range": [
+            -91.515,
+            -83.47
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 55.86,
+          "other_named": -40.595,
+          "unresolved": 2.895,
+          "total_species_mass": 18.159999999999997,
+          "sown_preexisting_three": -3.644999999999998,
+          "sown_other": 59.504999999999995,
+          "sown_assignment_range": [
+            55.3,
+            59.315
+          ],
+          "other_assignment_range": [
+            -41.155,
+            -37.14
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 121.875,
+          "other_named": -78.3,
+          "unresolved": 1.6900000000000002,
+          "total_species_mass": 45.26500000000001,
+          "sown_preexisting_three": 60.81,
+          "sown_other": 61.065,
+          "sown_assignment_range": [
+            121.86,
+            123.58
+          ],
+          "other_assignment_range": [
+            -78.315,
+            -76.595
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 65.16499999999999,
+          "other_named": -40.54,
+          "unresolved": -5.279999999999999,
+          "total_species_mass": 19.344999999999995,
+          "sown_preexisting_three": 13.355,
+          "sown_other": 51.81,
+          "sown_assignment_range": [
+            56.94499999999999,
+            68.10499999999999
+          ],
+          "other_assignment_range": [
+            -48.76,
+            -37.6
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 131.18,
+          "other_named": -78.24499999999999,
+          "unresolved": -6.484999999999999,
+          "total_species_mass": 46.45,
+          "sown_preexisting_three": 77.81,
+          "sown_other": 53.37,
+          "sown_assignment_range": [
+            124.69500000000001,
+            131.18
+          ],
+          "other_assignment_range": [
+            -84.72999999999999,
+            -78.24499999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 56.605000000000004,
+          "other_named": -34.85499999999999,
+          "unresolved": 3.425,
+          "total_species_mass": 25.175000000000004,
+          "sown_preexisting_three": 16.165000000000003,
+          "sown_other": 40.44,
+          "sown_assignment_range": [
+            56.605000000000004,
+            60.03
+          ],
+          "other_assignment_range": [
+            -34.85499999999999,
+            -31.42999999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 13,
+      "pooled": {
+        "sown_list": 21.394999999999996,
+        "other_named": -25.205,
+        "unresolved": -0.5075000000000001,
+        "total_species_mass": -4.317499999999996,
+        "sown_preexisting_three": 7.53,
+        "sown_other": 13.864999999999998,
+        "sown_assignment_range": [
+          19.644999999999996,
+          22.637499999999996
+        ],
+        "other_assignment_range": [
+          -26.955,
+          -23.9625
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 14.7925,
+        "other_named": -25.205,
+        "unresolved": 6.095,
+        "total_species_mass": -4.317499999999996,
+        "sown_preexisting_three": 7.53,
+        "sown_other": 7.2625,
+        "sown_assignment_range": [
+          13.0425,
+          22.6375
+        ],
+        "other_assignment_range": [
+          -26.955,
+          -17.36
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 21.394999999999996,
+        "mean_held_decrease": 25.205,
+        "mean_held_min": 18.451666666666668,
+        "fraction_both_positive": 1,
+        "fraction_robust_unresolved": 1,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 6.72,
+          "other_named": 1.3600000000000065,
+          "unresolved": -0.87,
+          "total_species_mass": 7.210000000000005,
+          "sown_preexisting_three": 0.44,
+          "sown_other": 6.279999999999999,
+          "sown_assignment_range": [
+            4.9399999999999995,
+            7.63
+          ],
+          "other_assignment_range": [
+            -0.4199999999999935,
+            2.2700000000000067
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 20.09,
+          "other_named": -52.99,
+          "unresolved": 2.5100000000000002,
+          "total_species_mass": -30.390000000000004,
+          "sown_preexisting_three": 18.25,
+          "sown_other": 1.8399999999999999,
+          "sown_assignment_range": [
+            20.09,
+            22.6
+          ],
+          "other_assignment_range": [
+            -52.99,
+            -50.480000000000004
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 32.410000000000004,
+          "other_named": -15.349999999999996,
+          "unresolved": -1.51,
+          "total_species_mass": 15.550000000000008,
+          "sown_preexisting_three": 12.12,
+          "sown_other": 20.29,
+          "sown_assignment_range": [
+            26.370000000000005,
+            36.940000000000005
+          ],
+          "other_assignment_range": [
+            -21.389999999999997,
+            -10.819999999999997
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 26.359999999999996,
+          "other_named": -33.84,
+          "unresolved": -2.1599999999999997,
+          "total_species_mass": -9.640000000000002,
+          "sown_preexisting_three": -0.6900000000000013,
+          "sown_other": 27.049999999999997,
+          "sown_assignment_range": [
+            24.139999999999997,
+            26.419999999999995
+          ],
+          "other_assignment_range": [
+            -36.06,
+            -33.78
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 13.405000000000001,
+          "other_named": -25.814999999999998,
+          "unresolved": 0.8200000000000002,
+          "total_species_mass": -11.59,
+          "sown_preexisting_three": 9.345,
+          "sown_other": 4.06,
+          "sown_assignment_range": [
+            12.530000000000001,
+            15.100000000000001
+          ],
+          "other_assignment_range": [
+            -26.689999999999998,
+            -24.119999999999997
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 19.565,
+          "other_named": -6.9949999999999966,
+          "unresolved": -1.19,
+          "total_species_mass": 11.380000000000003,
+          "sown_preexisting_three": 6.279999999999999,
+          "sown_other": 13.285,
+          "sown_assignment_range": [
+            15.985000000000001,
+            21.955000000000002
+          ],
+          "other_assignment_range": [
+            -10.574999999999996,
+            -4.604999999999997
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 16.539999999999996,
+          "other_named": -16.24,
+          "unresolved": -1.5149999999999997,
+          "total_species_mass": -1.2149999999999992,
+          "sown_preexisting_three": -0.12500000000000064,
+          "sown_other": 16.665,
+          "sown_assignment_range": [
+            14.884999999999996,
+            16.679999999999996
+          ],
+          "other_assignment_range": [
+            -17.895,
+            -16.099999999999998
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 26.25,
+          "other_named": -34.17,
+          "unresolved": 0.5,
+          "total_species_mass": -7.42,
+          "sown_preexisting_three": 15.184999999999999,
+          "sown_other": 11.065,
+          "sown_assignment_range": [
+            24.405,
+            28.595
+          ],
+          "other_assignment_range": [
+            -36.015,
+            -31.825000000000003
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 23.225,
+          "other_named": -43.415,
+          "unresolved": 0.17500000000000016,
+          "total_species_mass": -20.015000000000004,
+          "sown_preexisting_three": 8.78,
+          "sown_other": 14.445,
+          "sown_assignment_range": [
+            23.225,
+            23.400000000000002
+          ],
+          "other_assignment_range": [
+            -43.415,
+            -43.24
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 29.384999999999998,
+          "other_named": -24.595000000000002,
+          "unresolved": -1.835,
+          "total_species_mass": 2.955000000000006,
+          "sown_preexisting_three": 5.714999999999999,
+          "sown_other": 23.67,
+          "sown_assignment_range": [
+            25.255,
+            31.68
+          ],
+          "other_assignment_range": [
+            -28.725,
+            -22.300000000000004
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 14,
+      "pooled": {
+        "sown_list": 46.782500000000006,
+        "other_named": -47.55,
+        "unresolved": 3.9775,
+        "total_species_mass": 3.2100000000000004,
+        "sown_preexisting_three": 14.875,
+        "sown_other": 31.9075,
+        "sown_assignment_range": [
+          46.782500000000006,
+          50.760000000000005
+        ],
+        "other_assignment_range": [
+          -47.55,
+          -43.5725
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 25.355,
+        "other_named": -47.55,
+        "unresolved": 25.405,
+        "total_species_mass": 3.2100000000000004,
+        "sown_preexisting_three": 14.875,
+        "sown_other": 10.48,
+        "sown_assignment_range": [
+          25.355,
+          50.760000000000005
+        ],
+        "other_assignment_range": [
+          -47.55,
+          -22.144999999999996
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 46.7825,
+        "mean_held_decrease": 47.54999999999999,
+        "mean_held_min": 33.54333333333333,
+        "fraction_both_positive": 1,
+        "fraction_robust_unresolved": 1,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 38.15,
+          "other_named": -28.389999999999993,
+          "unresolved": -0.05999999999999997,
+          "total_species_mass": 9.700000000000001,
+          "sown_preexisting_three": 35.94,
+          "sown_other": 2.21,
+          "sown_assignment_range": [
+            38.059999999999995,
+            38.18
+          ],
+          "other_assignment_range": [
+            -28.479999999999993,
+            -28.359999999999992
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 52.78,
+          "other_named": -93.25,
+          "unresolved": -0.31,
+          "total_species_mass": -40.779999999999994,
+          "sown_preexisting_three": 5.06,
+          "sown_other": 47.720000000000006,
+          "sown_assignment_range": [
+            52.47,
+            52.78
+          ],
+          "other_assignment_range": [
+            -93.56,
+            -93.25
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 76.78999999999999,
+          "other_named": 4.179999999999998,
+          "unresolved": 0,
+          "total_species_mass": 80.97,
+          "sown_preexisting_three": 12.97,
+          "sown_other": 63.81999999999999,
+          "sown_assignment_range": [
+            76.78999999999999,
+            76.78999999999999
+          ],
+          "other_assignment_range": [
+            4.179999999999998,
+            4.179999999999998
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 19.409999999999997,
+          "other_named": -72.74,
+          "unresolved": 16.28,
+          "total_species_mass": -37.05000000000001,
+          "sown_preexisting_three": 5.529999999999998,
+          "sown_other": 13.88,
+          "sown_assignment_range": [
+            19.409999999999997,
+            35.69
+          ],
+          "other_assignment_range": [
+            -72.74,
+            -56.459999999999994
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 45.465,
+          "other_named": -60.81999999999999,
+          "unresolved": -0.185,
+          "total_species_mass": -15.539999999999978,
+          "sown_preexisting_three": 20.5,
+          "sown_other": 24.965000000000003,
+          "sown_assignment_range": [
+            45.265,
+            45.480000000000004
+          ],
+          "other_assignment_range": [
+            -61.019999999999996,
+            -60.80499999999999
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 57.47,
+          "other_named": -12.104999999999997,
+          "unresolved": -0.029999999999999985,
+          "total_species_mass": 45.335,
+          "sown_preexisting_three": 24.455,
+          "sown_other": 33.015,
+          "sown_assignment_range": [
+            57.425,
+            57.485
+          ],
+          "other_assignment_range": [
+            -12.149999999999997,
+            -12.089999999999996
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 28.78,
+          "other_named": -50.565,
+          "unresolved": 8.110000000000001,
+          "total_species_mass": -13.674999999999994,
+          "sown_preexisting_three": 20.735,
+          "sown_other": 8.045,
+          "sown_assignment_range": [
+            28.78,
+            36.89
+          ],
+          "other_assignment_range": [
+            -50.565,
+            -42.455
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 64.785,
+          "other_named": -44.535,
+          "unresolved": -0.155,
+          "total_species_mass": 20.095,
+          "sown_preexisting_three": 9.015,
+          "sown_other": 55.769999999999996,
+          "sown_assignment_range": [
+            64.63,
+            64.785
+          ],
+          "other_assignment_range": [
+            -44.69,
+            -44.535
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 36.095,
+          "other_named": -82.995,
+          "unresolved": 7.985,
+          "total_species_mass": -38.915000000000006,
+          "sown_preexisting_three": 5.294999999999998,
+          "sown_other": 30.800000000000008,
+          "sown_assignment_range": [
+            36.095,
+            44.08
+          ],
+          "other_assignment_range": [
+            -82.995,
+            -75.01
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 48.1,
+          "other_named": -34.28,
+          "unresolved": 8.14,
+          "total_species_mass": 21.959999999999994,
+          "sown_preexisting_three": 9.25,
+          "sown_other": 38.85,
+          "sown_assignment_range": [
+            48.1,
+            56.24
+          ],
+          "other_assignment_range": [
+            -34.28,
+            -26.14
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    },
+    {
+      "age": 15,
+      "pooled": {
+        "sown_list": 20.74,
+        "other_named": -43.5275,
+        "unresolved": 1.3375,
+        "total_species_mass": -21.45000000000001,
+        "sown_preexisting_three": 14.989999999999998,
+        "sown_other": 5.75,
+        "sown_assignment_range": [
+          20.724999999999998,
+          22.092499999999998
+        ],
+        "other_assignment_range": [
+          -43.542500000000004,
+          -42.175000000000004
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "exact23_sensitivity": {
+        "sown_list": 18.56,
+        "other_named": -43.5275,
+        "unresolved": 3.517499999999999,
+        "total_species_mass": -21.45000000000001,
+        "sown_preexisting_three": 14.989999999999998,
+        "sown_other": 3.57,
+        "sown_assignment_range": [
+          18.544999999999998,
+          22.092499999999998
+        ],
+        "other_assignment_range": [
+          -43.542500000000004,
+          -39.995000000000005
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      "held_half_summary": {
+        "n_oriented_held_halves": 6,
+        "mean_held_increase": 20.739999999999995,
+        "mean_held_decrease": 43.527499999999996,
+        "mean_held_min": 9.575833333333332,
+        "fraction_both_positive": 0.8333333333333334,
+        "fraction_robust_unresolved": 0.8333333333333334,
+        "strong_descriptive_gate": true
+      },
+      "block_role_contrasts": [
+        {
+          "sown_list": 19.529999999999998,
+          "other_named": -48.20000000000001,
+          "unresolved": 0.1,
+          "total_species_mass": -28.57000000000001,
+          "sown_preexisting_three": 19.31,
+          "sown_other": 0.22,
+          "sown_assignment_range": [
+            18.659999999999997,
+            20.499999999999996
+          ],
+          "other_assignment_range": [
+            -49.07000000000001,
+            -47.23000000000001
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 13.339999999999998,
+          "other_named": -117.14,
+          "unresolved": -0.81,
+          "total_species_mass": -104.61,
+          "sown_preexisting_three": 6.97,
+          "sown_other": 6.37,
+          "sown_assignment_range": [
+            12.529999999999998,
+            13.339999999999998
+          ],
+          "other_assignment_range": [
+            -117.95,
+            -117.14
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "sown_list": 26.679999999999996,
+          "other_named": 85.88000000000001,
+          "unresolved": 6.09,
+          "total_species_mass": 118.65,
+          "sown_preexisting_three": 10.559999999999999,
+          "sown_other": 16.12,
+          "sown_assignment_range": [
+            26.679999999999996,
+            32.769999999999996
+          ],
+          "other_assignment_range": [
+            85.88000000000001,
+            91.97000000000001
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "sown_list": 23.410000000000004,
+          "other_named": -94.65,
+          "unresolved": -0.030000000000000054,
+          "total_species_mass": -71.27000000000001,
+          "sown_preexisting_three": 23.12,
+          "sown_other": 0.28999999999999915,
+          "sown_assignment_range": [
+            23.350000000000005,
+            23.440000000000005
+          ],
+          "other_assignment_range": [
+            -94.71000000000001,
+            -94.62
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ],
+      "held_halves": [
+        {
+          "held_indices": [
+            0,
+            1
+          ],
+          "sown_list": 16.435,
+          "other_named": -82.67,
+          "unresolved": -0.3550000000000001,
+          "total_species_mass": -66.59,
+          "sown_preexisting_three": 13.139999999999999,
+          "sown_other": 3.295,
+          "sown_assignment_range": [
+            15.594999999999999,
+            16.919999999999998
+          ],
+          "other_assignment_range": [
+            -83.51,
+            -82.185
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            0,
+            2
+          ],
+          "sown_list": 23.104999999999997,
+          "other_named": 18.840000000000003,
+          "unresolved": 3.095,
+          "total_species_mass": 45.040000000000006,
+          "sown_preexisting_three": 14.934999999999999,
+          "sown_other": 8.17,
+          "sown_assignment_range": [
+            23.089999999999996,
+            26.214999999999996
+          ],
+          "other_assignment_range": [
+            18.825000000000003,
+            21.950000000000003
+          ],
+          "opposite_named_signs": false,
+          "robust_to_unresolved": false
+        },
+        {
+          "held_indices": [
+            0,
+            3
+          ],
+          "sown_list": 21.469999999999995,
+          "other_named": -71.425,
+          "unresolved": 0.034999999999999976,
+          "total_species_mass": -49.920000000000016,
+          "sown_preexisting_three": 21.215,
+          "sown_other": 0.2549999999999999,
+          "sown_assignment_range": [
+            21.004999999999995,
+            21.969999999999995
+          ],
+          "other_assignment_range": [
+            -71.89,
+            -70.925
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            2
+          ],
+          "sown_list": 20.009999999999998,
+          "other_named": -15.630000000000004,
+          "unresolved": 2.6399999999999997,
+          "total_species_mass": 7.019999999999996,
+          "sown_preexisting_three": 8.764999999999999,
+          "sown_other": 11.245,
+          "sown_assignment_range": [
+            19.994999999999997,
+            22.665
+          ],
+          "other_assignment_range": [
+            -15.645000000000005,
+            -12.975000000000005
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            1,
+            3
+          ],
+          "sown_list": 18.375,
+          "other_named": -105.895,
+          "unresolved": -0.42000000000000004,
+          "total_species_mass": -87.94000000000001,
+          "sown_preexisting_three": 15.045,
+          "sown_other": 3.3299999999999996,
+          "sown_assignment_range": [
+            17.94,
+            18.39
+          ],
+          "other_assignment_range": [
+            -106.33,
+            -105.88
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        },
+        {
+          "held_indices": [
+            2,
+            3
+          ],
+          "sown_list": 25.044999999999995,
+          "other_named": -4.385,
+          "unresolved": 3.03,
+          "total_species_mass": 23.689999999999998,
+          "sown_preexisting_three": 16.84,
+          "sown_other": 8.205000000000002,
+          "sown_assignment_range": [
+            25.044999999999995,
+            28.074999999999996
+          ],
+          "other_assignment_range": [
+            -4.385,
+            -1.355
+          ],
+          "opposite_named_signs": true,
+          "robust_to_unresolved": true
+        }
+      ]
+    }
+  ],
+  "all_age_mean": {
+    "pooled": {
+      "sown_list": 35.685500000000005,
+      "other_named": -19.64733333333333,
+      "unresolved": -0.4776666666666665,
+      "total_species_mass": 15.5605,
+      "sown_preexisting_three": 11.265333333333334,
+      "sown_other": 24.420166666666667,
+      "sown_assignment_range": [
+        34.72283333333334,
+        36.170500000000004
+      ],
+      "other_assignment_range": [
+        -20.609999999999996,
+        -19.16233333333333
+      ],
+      "opposite_named_signs": true,
+      "robust_to_unresolved": true
+    },
+    "exact23_sensitivity": {
+      "sown_list": 27.696833333333334,
+      "other_named": -19.64733333333333,
+      "unresolved": 7.510999999999999,
+      "total_species_mass": 15.5605,
+      "sown_preexisting_three": 11.265333333333334,
+      "sown_other": 16.4315,
+      "sown_assignment_range": [
+        26.734166666666667,
+        36.170500000000004
+      ],
+      "other_assignment_range": [
+        -20.609999999999996,
+        -11.173666666666662
+      ],
+      "opposite_named_signs": true,
+      "robust_to_unresolved": true
+    },
+    "held_half_summary": {
+      "n_oriented_held_halves": 6,
+      "mean_held_increase": 35.6855,
+      "mean_held_decrease": 19.647333333333332,
+      "mean_held_min": 17.238666666666663,
+      "fraction_both_positive": 0.6666666666666666,
+      "fraction_robust_unresolved": 0.6666666666666666,
+      "strong_descriptive_gate": true
+    },
+    "block_role_contrasts": [
+      {
+        "sown_list": 30.008666666666667,
+        "other_named": -18.361999999999977,
+        "unresolved": 0.2093333333333336,
+        "total_species_mass": 11.856000000000009,
+        "sown_preexisting_three": 10.987333333333334,
+        "sown_other": 19.021333333333335,
+        "sown_assignment_range": [
+          29.490666666666666,
+          30.736
+        ],
+        "other_assignment_range": [
+          -18.879999999999978,
+          -17.634666666666643
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "sown_list": 34.93733333333334,
+        "other_named": -62.175999999999995,
+        "unresolved": -1.4946666666666666,
+        "total_species_mass": -28.733333333333334,
+        "sown_preexisting_three": 11.874,
+        "sown_other": 23.063333333333336,
+        "sown_assignment_range": [
+          33.34400000000001,
+          35.03600000000001
+        ],
+        "other_assignment_range": [
+          -63.76933333333333,
+          -62.07733333333333
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "sown_list": 44.264,
+        "other_named": 21.554,
+        "unresolved": -0.6633333333333333,
+        "total_species_mass": 65.15466666666667,
+        "sown_preexisting_three": 11.268,
+        "sown_other": 32.996,
+        "sown_assignment_range": [
+          42.24,
+          45.62466666666667
+        ],
+        "other_assignment_range": [
+          19.529999999999998,
+          22.914666666666665
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      {
+        "sown_list": 33.532,
+        "other_named": -19.60533333333333,
+        "unresolved": 0.03800000000000021,
+        "total_species_mass": 13.964666666666668,
+        "sown_preexisting_three": 10.932000000000002,
+        "sown_other": 22.6,
+        "sown_assignment_range": [
+          33.35066666666666,
+          33.75133333333333
+        ],
+        "other_assignment_range": [
+          -19.786666666666665,
+          -19.385999999999996
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      }
+    ],
+    "held_halves": [
+      {
+        "held_indices": [
+          0,
+          1
+        ],
+        "sown_list": 32.473,
+        "other_named": -40.269,
+        "unresolved": -0.6426666666666666,
+        "total_species_mass": -8.438666666666654,
+        "sown_preexisting_three": 11.430666666666667,
+        "sown_other": 21.042333333333332,
+        "sown_assignment_range": [
+          31.424333333333333,
+          32.879
+        ],
+        "other_assignment_range": [
+          -41.31766666666667,
+          -39.863
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "held_indices": [
+          0,
+          2
+        ],
+        "sown_list": 37.13633333333333,
+        "other_named": 1.5960000000000143,
+        "unresolved": -0.22700000000000004,
+        "total_species_mass": 38.505333333333354,
+        "sown_preexisting_three": 11.127666666666666,
+        "sown_other": 26.008666666666667,
+        "sown_assignment_range": [
+          35.86533333333333,
+          38.18033333333333
+        ],
+        "other_assignment_range": [
+          0.3250000000000144,
+          2.6400000000000143
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      },
+      {
+        "held_indices": [
+          0,
+          3
+        ],
+        "sown_list": 31.770333333333333,
+        "other_named": -18.98366666666666,
+        "unresolved": 0.1236666666666669,
+        "total_species_mass": 12.910333333333346,
+        "sown_preexisting_three": 10.959666666666667,
+        "sown_other": 20.81066666666667,
+        "sown_assignment_range": [
+          31.441333333333333,
+          32.223
+        ],
+        "other_assignment_range": [
+          -19.31266666666666,
+          -18.530999999999995
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "held_indices": [
+          1,
+          2
+        ],
+        "sown_list": 39.60066666666667,
+        "other_named": -20.311000000000003,
+        "unresolved": -1.079,
+        "total_species_mass": 18.21066666666667,
+        "sown_preexisting_three": 11.571000000000002,
+        "sown_other": 28.02966666666667,
+        "sown_assignment_range": [
+          37.88366666666667,
+          40.23866666666667
+        ],
+        "other_assignment_range": [
+          -22.028000000000002,
+          -19.673000000000002
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "held_indices": [
+          1,
+          3
+        ],
+        "sown_list": 34.23466666666666,
+        "other_named": -40.89066666666666,
+        "unresolved": -0.7283333333333333,
+        "total_species_mass": -7.384333333333331,
+        "sown_preexisting_three": 11.403,
+        "sown_other": 22.831666666666667,
+        "sown_assignment_range": [
+          33.50333333333333,
+          34.23766666666666
+        ],
+        "other_assignment_range": [
+          -41.62199999999999,
+          -40.88766666666666
+        ],
+        "opposite_named_signs": true,
+        "robust_to_unresolved": true
+      },
+      {
+        "held_indices": [
+          2,
+          3
+        ],
+        "sown_list": 38.897999999999996,
+        "other_named": 0.9743333333333318,
+        "unresolved": -0.3126666666666666,
+        "total_species_mass": 39.55966666666666,
+        "sown_preexisting_three": 11.100000000000001,
+        "sown_other": 27.798000000000002,
+        "sown_assignment_range": [
+          37.89566666666666,
+          39.587666666666664
+        ],
+        "other_assignment_range": [
+          -0.028000000000001468,
+          1.6639999999999984
+        ],
+        "opposite_named_signs": false,
+        "robust_to_unresolved": false
+      }
+    ]
+  },
+  "limits": [
+    "Probable paper-to-curated lineage, original EDI archive and plot subset not independently verified.",
+    "Sown-list membership not individual recruitment identity; other named provisional.",
+    "Unresolved assignment bounds are not uncertainty intervals, no p-values; repeated age codes and held halves dependent.",
+    "No independent causal mediation, treatment-by-fertility/hay comparison or new study."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45543133793",
+  "source_job_id": 138966209626,
+  "source_commit": "16e83ffd4fc7e17d4e97707f5bff4744a52faa0e",
+  "prescore_contract": "docs/AHIF_KANSAS_SOWN_ROLES_PRESCORE_20261125.md",
+  "source_roster": "database/ahif_v1/foster2009_published_sown_roster.csv",
+  "source_mapping": "database/ahif_v1/foster2009_curated_name_bridge.csv",
+  "original_access": "STOP_DNS_AND_HTTP403"
+}
