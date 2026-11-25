@@ -1,0 +1,23 @@
+name: AHIF mechanism registry v0.5
+on:
+  push:
+    branches: [analysis/ahif-independent-dispersal-20261126]
+    paths:
+      - 'benchmarks/build_ahif_mechanism_registry_v05.py'
+      - '.github/workflows/knk-ahif-mechanism-v05.yml'
+      - 'database/ahif_mechanism_v0/external_villarreal_effects_20261126.csv'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.build_ahif_mechanism_registry_v05 --out "$RUNNER_TEMP/registry"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-mechanism-registry-v05
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30
