@@ -32,8 +32,14 @@ def resolve(text):
         q=u.path.strip("/").split("/")
         if len(q)==6 and q[:3]==["package","metadata","eml"]:meta.append(tuple(q[3:]))
         if len(q)==7 and q[:3]==["package","data","eml"]:data.append((tuple(q[3:6]),q[6]))
-    if len(meta)!=1 or not data or any(k!=meta[0] for k,id in data) or len(set(id for k,id in data))!=len(data):
-        raise ValueError("resource-map version/coverage mismatch")
+    if len(meta)!=1 or not data:
+        raise ValueError("resource-map coverage mismatch")
+    expected_version=meta[0]
+    for entity_version,entity_id in data:
+        if entity_version != expected_version:
+            raise ValueError("resource-map version mismatch")
+    if len({entity_id for _,entity_id in data}) != len(data):
+        raise ValueError("resource-map duplicate entity")
     if not re.fullmatch(r"[A-Za-z0-9_.-]+",meta[0][0]) or not all(x.isdigit() for x in meta[0][1:]):
         raise ValueError("unexpected EDI identifier")
     if any(not re.fullmatch(r"[0-9a-fA-F]{32}",i) for k,i in data):
