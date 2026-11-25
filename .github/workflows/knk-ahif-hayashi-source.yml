@@ -1,0 +1,24 @@
+name: AHIF Hayashi founder-size source gate
+on:
+  push:
+    branches: [analysis/ahif-mechanism-db-20261125]
+    paths:
+      - '.github/workflows/knk-ahif-hayashi-source.yml'
+      - 'benchmarks/probe_ahif_hayashi2026.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.probe_ahif_hayashi2026 --out "$RUNNER_TEMP/hayashi"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hayashi-source-audit-only
+          path: ${{ runner.temp }}/hayashi/audit.json
+          if-no-files-found: warn
+          retention-days: 30
