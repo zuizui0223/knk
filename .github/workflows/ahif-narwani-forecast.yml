@@ -1,0 +1,28 @@
+name: AHIF Narwani pond independent forecast
+on:
+  push:
+    branches: [analysis/ahif-db-v1-20261124]
+    paths:
+      - benchmarks/score_ahif_narwani_forecast.py
+      - tests/test_ahif_narwani_forecast.py
+      - .github/workflows/ahif-narwani-forecast.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy openpyxl pytest
+      - run: python -m pytest -q tests/test_ahif_narwani_forecast.py
+      - run: python -m benchmarks.score_ahif_narwani_forecast --out /tmp/ahif/narwani.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: narwani-independent-forecast
+          path: /tmp/ahif/narwani.json
+          retention-days: 30
