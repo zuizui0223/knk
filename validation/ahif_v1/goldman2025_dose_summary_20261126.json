@@ -1,0 +1,1954 @@
+{
+  "status": "EXPLORATORY_ENDPOINT_DOSE_SOURCE_PROXY_NOT_TEMPORAL_META",
+  "source_commit": "b07cf57f837b8b6041031f76625792dce4e0ed64",
+  "audit": {
+    "source_files": {
+      "sequencing/communityCoalescence/data/intermediates/mixtureDataframe.zip": {
+        "blob": "eabfd7ff302e19607237649c73eccb7f6a698a25",
+        "sha256": "ebd804e58de451d37e8e5cdaeaccacb0d5ad7cfe9b89a2b4d82b59860feec309",
+        "bytes": 4780720
+      },
+      "sequencing/communityCoalescence/data/210819-e0015-e0020-16S-samplesheet.txt": {
+        "blob": "bc61d1bcc0ea65d5e68ccbec909744a210ad20a5",
+        "sha256": "da6008a096e03fbe2461999d046114c8fafc5343da777f9d656eaeab20e06d0e",
+        "bytes": 225241
+      },
+      "sequencing/parentCommunities/data/intermediates/e0012-mixtureDataframe.txt": {
+        "blob": "d57e4efb9c49b5f2127f14c61011394e005f60a2",
+        "sha256": "cebccce796866b37b7dc7f8ade15bcd1779a4694a0cc195572a6bf7e0671f3b4",
+        "bytes": 6553421
+      },
+      "sequencing/parentCommunities/data/20210201-e0012-samplesheet.txt": {
+        "blob": "d79a9c29dd65adaed52d2a304d0749dd82fa8369",
+        "sha256": "ab94dd621fa819ab73a6c303931d5dea5ab195f00a9db3b6d7e4051aff9c2fb3",
+        "bytes": 32873
+      }
+    },
+    "planned_p5": 168,
+    "observed_p5": 167,
+    "missing_p5": [
+      [
+        "XFA-XBA",
+        5,
+        "100:1",
+        1
+      ]
+    ],
+    "p5_nonunit_profiles": {},
+    "p5_ratio_counts": {
+      "XBA-XBB": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XCA-XCB": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XDA-XDB": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XFA-XFB": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XBA-XCA": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XCA-XDA": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XDA-XFA": {
+        "1000:1": 3,
+        "100:1": 3,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      },
+      "XFA-XBA": {
+        "1000:1": 3,
+        "100:1": 2,
+        "10:1": 3,
+        "1:1": 3,
+        "1:10": 3,
+        "1:100": 3,
+        "1:1000": 3
+      }
+    },
+    "p5_sum_range": [
+      0.9999999999999988,
+      1.000000000000001
+    ],
+    "p3_control_profiles": {
+      "XBA": [
+        2
+      ],
+      "XBB": [
+        2
+      ],
+      "XCA": [
+        1,
+        2
+      ],
+      "XCB": [
+        1,
+        2
+      ],
+      "XDA": [
+        1,
+        2
+      ],
+      "XDB": [
+        1,
+        2
+      ],
+      "XFA": [
+        1,
+        2
+      ],
+      "XFB": [
+        1,
+        2
+      ]
+    },
+    "p3_control_conflicts": [],
+    "p3_control_nonunit": {},
+    "stock_metadata_conflicts": [],
+    "p15_stock_profiles": {
+      "XBA": [
+        "XBA-029-mBHImucin-r1-p15-PCR1",
+        "XBA-029-mBHImucin-r2-p15-PCR1",
+        "XBA-029-mBHImucin-r3-p15-PCR1"
+      ],
+      "XBB": [
+        "XBB-029-mBHImucin-r1-p15-PCR1",
+        "XBB-029-mBHImucin-r2-p15-PCR1",
+        "XBB-029-mBHImucin-r3-p15-PCR1"
+      ],
+      "XCA": [
+        "XCA-029-mBHImucin-r2-p15-PCR1",
+        "XCA-029-mBHImucin-r1-p15-PCR1",
+        "XCA-029-mBHImucin-r3-p15-PCR1"
+      ],
+      "XCB": [
+        "XCB-029-mBHImucin-r1-p15-PCR1",
+        "XCB-029-mBHImucin-r2-p15-PCR1",
+        "XCB-029-mBHImucin-r3-p15-PCR1"
+      ],
+      "XDA": [
+        "XDA-029-mBHImucin-r1-p15-PCR1",
+        "XDA-029-mBHImucin-r2-p15-PCR1",
+        "XDA-029-mBHImucin-r3-p15-PCR1"
+      ],
+      "XDB": [
+        "XDB-029-mBHImucin-r2-p15-PCR1",
+        "XDB-029-mBHImucin-r3-p15-PCR1",
+        "XDB-029-mBHImucin-r1-p15-PCR1"
+      ],
+      "XFA": [
+        "XFA-029-mBHImucin-r1-p15-PCR1",
+        "XFA-029-mBHImucin-r3-p15-PCR1",
+        "XFA-029-mBHImucin-r2-p15-PCR1"
+      ],
+      "XFB": [
+        "XFB-029-mBHImucin-r1-p15-PCR1",
+        "XFB-029-mBHImucin-r2-p15-PCR1",
+        "XFB-029-mBHImucin-r3-p15-PCR1"
+      ]
+    },
+    "p15_stock_nonunit": {}
+  },
+  "lanes": {
+    "p15_stock_proxy": {
+      "source_roster": 464,
+      "parent_lengths": {
+        "200": 1,
+        "218": 1,
+        "220": 1,
+        "252": 104,
+        "253": 339,
+        "254": 16,
+        "273": 1,
+        "285": 1
+      },
+      "endpoint_lengths": {
+        "200": 1,
+        "205": 1,
+        "208": 2,
+        "222": 1,
+        "229": 1,
+        "236": 3,
+        "251": 2,
+        "252": 172,
+        "253": 543,
+        "254": 12,
+        "271": 3,
+        "273": 1,
+        "275": 2,
+        "276": 1,
+        "279": 1,
+        "281": 1,
+        "283": 1,
+        "284": 1,
+        "285": 1,
+        "288": 1,
+        "296": 1
+      },
+      "coverage_by_pair": {
+        "XBA-XBB": 0.9904549044483856,
+        "XCA-XCB": 0.9979297727440242,
+        "XDA-XDB": 0.990950139582712,
+        "XFA-XFB": 0.9837197903377574,
+        "XBA-XCA": 0.9979693179337613,
+        "XCA-XDA": 0.9972609234047399,
+        "XDA-XFA": 0.9961946992454377,
+        "XFA-XBA": 0.9916596446745947
+      },
+      "status": "SCORED_CONDITIONAL_SOURCE_PROXY",
+      "results": {
+        "threshold_0.001": {
+          "source_roster": 170,
+          "source_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.13314357328427137,
+              "fixed_identity": 0.1104165240565251,
+              "fixed_dose": 0.10567653067443707,
+              "fit_pool": 0.1134797105827345,
+              "fit_identity": 0.09642016123213681,
+              "fit_dose": 0.09623954967759055,
+              "fit_dose_abundance": 0.09406769979359209,
+              "identity_gain": 0.017059549350597683,
+              "dose_gain": 0.0001806115545462672,
+              "dose_abundance_gain": 0.0021718498839984612,
+              "fixed_identity_gain": 0.022727049227746265,
+              "fixed_dose_increment": 0.00473999338208804
+            },
+            "n_positive_dose": 7,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 5019,
+                "target_prevalence": 0.1246839960245199,
+                "fixed": {
+                  "fixed_pool": 0.13127700069149764,
+                  "fixed_identity": 0.10860809281457516,
+                  "fixed_dose": 0.10212500087824634
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1062697806173101,
+                  "fit_identity": 0.09020140063730896,
+                  "fit_dose": 0.0900660890251471,
+                  "fit_dose_abundance": 0.08852216816518763
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5208,
+                "target_prevalence": 0.12589557335320048,
+                "fixed": {
+                  "fixed_pool": 0.11765795409863943,
+                  "fixed_identity": 0.09882763187848549,
+                  "fixed_dose": 0.0935374524213894
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10234561842447107,
+                  "fit_identity": 0.08311701350010374,
+                  "fit_dose": 0.08294620833249895,
+                  "fit_dose_abundance": 0.0821824159396314
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5208,
+                "target_prevalence": 0.12268094587350135,
+                "fixed": {
+                  "fixed_pool": 0.12942196791517868,
+                  "fixed_identity": 0.11169900895653458,
+                  "fixed_dose": 0.10675910037674377
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10499600013198088,
+                  "fit_identity": 0.09309793835553422,
+                  "fit_dose": 0.09347625364338838,
+                  "fit_dose_abundance": 0.09265119879471057
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 5124,
+                "target_prevalence": 0.17112205360542387,
+                "fixed": {
+                  "fixed_pool": 0.15797399611148072,
+                  "fixed_identity": 0.1372521807666039,
+                  "fixed_dose": 0.1267857509211208
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.13689066021798052,
+                  "fit_identity": 0.12850043092080496,
+                  "fit_dose": 0.12791085081516254,
+                  "fit_dose_abundance": 0.12316027469517454
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4956,
+                "target_prevalence": 0.12933817594834543,
+                "fixed": {
+                  "fixed_pool": 0.12843018563359182,
+                  "fixed_identity": 0.10990886467582783,
+                  "fixed_dose": 0.10285096470646778
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1095658845305745,
+                  "fit_identity": 0.09164117113345129,
+                  "fit_dose": 0.09130868988509934,
+                  "fit_dose_abundance": 0.0891906839755998
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5019,
+                "target_prevalence": 0.09756435141643152,
+                "fixed": {
+                  "fixed_pool": 0.11590856284617075,
+                  "fixed_identity": 0.0877965420771749,
+                  "fixed_dose": 0.08050177877129525
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08801588987625136,
+                  "fit_identity": 0.06910154822069745,
+                  "fit_dose": 0.06878760082263549,
+                  "fit_dose_abundance": 0.06617456694502424
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 5124,
+                "target_prevalence": 0.16172654642721163,
+                "fixed": {
+                  "fixed_pool": 0.13845214898431124,
+                  "fixed_identity": 0.10839035215421923,
+                  "fixed_dose": 0.11292181901550508
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1304359347705457,
+                  "fit_identity": 0.10632307626947678,
+                  "fit_dose": 0.10610265132866062,
+                  "fit_dose_abundance": 0.1035232431718517
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 4820,
+                "target_prevalence": 0.1548562307656975,
+                "fixed": {
+                  "fixed_pool": 0.14602676999330075,
+                  "fixed_identity": 0.12084951912877971,
+                  "fixed_dose": 0.11993037830472811
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.12931791609276178,
+                  "fit_identity": 0.10937871081971705,
+                  "fit_dose": 0.1093180535681319,
+                  "fit_dose_abundance": 0.10713704666155681
+                }
+              }
+            }
+          },
+          "household_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.13314357328427137,
+              "fixed_identity": 0.1104165240565251,
+              "fixed_dose": 0.10567653067443707,
+              "fit_pool": 0.1134797105827345,
+              "fit_identity": 0.09642016123213681,
+              "fit_dose": 0.09623954967759055,
+              "fit_dose_abundance": 0.09406769979359209,
+              "identity_gain": 0.017059549350597683,
+              "dose_gain": 0.0001806115545462672,
+              "dose_abundance_gain": 0.0021718498839984612,
+              "fixed_identity_gain": 0.022727049227746265,
+              "fixed_dose_increment": 0.00473999338208804
+            },
+            "n_positive_dose": 7,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 5019,
+                "target_prevalence": 0.1246839960245199,
+                "fixed": {
+                  "fixed_pool": 0.13127700069149764,
+                  "fixed_identity": 0.10860809281457516,
+                  "fixed_dose": 0.10212500087824634
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1062697806173101,
+                  "fit_identity": 0.09020140063730896,
+                  "fit_dose": 0.0900660890251471,
+                  "fit_dose_abundance": 0.08852216816518763
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5208,
+                "target_prevalence": 0.12589557335320048,
+                "fixed": {
+                  "fixed_pool": 0.11765795409863943,
+                  "fixed_identity": 0.09882763187848549,
+                  "fixed_dose": 0.0935374524213894
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10234561842447107,
+                  "fit_identity": 0.08311701350010374,
+                  "fit_dose": 0.08294620833249895,
+                  "fit_dose_abundance": 0.0821824159396314
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5208,
+                "target_prevalence": 0.12268094587350135,
+                "fixed": {
+                  "fixed_pool": 0.12942196791517868,
+                  "fixed_identity": 0.11169900895653458,
+                  "fixed_dose": 0.10675910037674377
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10499600013198088,
+                  "fit_identity": 0.09309793835553422,
+                  "fit_dose": 0.09347625364338838,
+                  "fit_dose_abundance": 0.09265119879471057
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 5124,
+                "target_prevalence": 0.17112205360542387,
+                "fixed": {
+                  "fixed_pool": 0.15797399611148072,
+                  "fixed_identity": 0.1372521807666039,
+                  "fixed_dose": 0.1267857509211208
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.13689066021798052,
+                  "fit_identity": 0.12850043092080496,
+                  "fit_dose": 0.12791085081516254,
+                  "fit_dose_abundance": 0.12316027469517454
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4956,
+                "target_prevalence": 0.12933817594834543,
+                "fixed": {
+                  "fixed_pool": 0.12843018563359182,
+                  "fixed_identity": 0.10990886467582783,
+                  "fixed_dose": 0.10285096470646778
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1095658845305745,
+                  "fit_identity": 0.09164117113345129,
+                  "fit_dose": 0.09130868988509934,
+                  "fit_dose_abundance": 0.0891906839755998
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 5019,
+                "target_prevalence": 0.09756435141643152,
+                "fixed": {
+                  "fixed_pool": 0.11590856284617075,
+                  "fixed_identity": 0.0877965420771749,
+                  "fixed_dose": 0.08050177877129525
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08801588987625136,
+                  "fit_identity": 0.06910154822069745,
+                  "fit_dose": 0.06878760082263549,
+                  "fit_dose_abundance": 0.06617456694502424
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 5124,
+                "target_prevalence": 0.16172654642721163,
+                "fixed": {
+                  "fixed_pool": 0.13845214898431124,
+                  "fixed_identity": 0.10839035215421923,
+                  "fixed_dose": 0.11292181901550508
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1304359347705457,
+                  "fit_identity": 0.10632307626947678,
+                  "fit_dose": 0.10610265132866062,
+                  "fit_dose_abundance": 0.1035232431718517
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 4820,
+                "target_prevalence": 0.1548562307656975,
+                "fixed": {
+                  "fixed_pool": 0.14602676999330075,
+                  "fixed_identity": 0.12084951912877971,
+                  "fixed_dose": 0.11993037830472811
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.12931791609276178,
+                  "fit_identity": 0.10937871081971705,
+                  "fit_dose": 0.1093180535681319,
+                  "fit_dose_abundance": 0.10713704666155681
+                }
+              }
+            }
+          }
+        },
+        "raw_detection": {
+          "source_roster": 464,
+          "source_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.10350485035112961,
+              "fixed_identity": 0.0901142284511631,
+              "fixed_dose": 0.0837935825831451,
+              "fit_pool": 0.08806972923388903,
+              "fit_identity": 0.07518416091507707,
+              "fit_dose": 0.07510312077245448,
+              "fit_dose_abundance": 0.07212644458397593,
+              "identity_gain": 0.012885568318811963,
+              "dose_gain": 0.00008104014262258485,
+              "dose_abundance_gain": 0.0029766761884785498,
+              "fixed_identity_gain": 0.01339062189996651,
+              "fixed_dose_increment": 0.006320645868018004
+            },
+            "n_positive_dose": 7,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 16086,
+                "target_prevalence": 0.08151302515756959,
+                "fixed": {
+                  "fixed_pool": 0.09722026088729828,
+                  "fixed_identity": 0.06741402995620925,
+                  "fixed_dose": 0.06629709353791964
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.07171430015367236,
+                  "fit_identity": 0.05890523005437691,
+                  "fit_dose": 0.05879475972484992,
+                  "fit_dose_abundance": 0.05599060732070982
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 15792,
+                "target_prevalence": 0.09784939696955874,
+                "fixed": {
+                  "fixed_pool": 0.09479281228933303,
+                  "fixed_identity": 0.07722311689897052,
+                  "fixed_dose": 0.07487481650115882
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08279387053659096,
+                  "fit_identity": 0.06923862257256527,
+                  "fit_dose": 0.06915200190828064,
+                  "fit_dose_abundance": 0.06735903203677773
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 15582,
+                "target_prevalence": 0.10076053213308116,
+                "fixed": {
+                  "fixed_pool": 0.09982442541405896,
+                  "fixed_identity": 0.09153145237613185,
+                  "fixed_dose": 0.08660538086667477
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08573623560934945,
+                  "fit_identity": 0.0788796190088797,
+                  "fit_dose": 0.07910961148799374,
+                  "fit_dose_abundance": 0.07830780037783232
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 12600,
+                "target_prevalence": 0.10622208203500857,
+                "fixed": {
+                  "fixed_pool": 0.11116248653881931,
+                  "fixed_identity": 0.13077459143920814,
+                  "fixed_dose": 0.10352055685729339
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0917898452441633,
+                  "fit_identity": 0.0870180727973555,
+                  "fit_dose": 0.08685163720814648,
+                  "fit_dose_abundance": 0.08168241521948792
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 15456,
+                "target_prevalence": 0.10705827264549678,
+                "fixed": {
+                  "fixed_pool": 0.10312930367271385,
+                  "fixed_identity": 0.07991195936188122,
+                  "fixed_dose": 0.080042556369307
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09247426810657623,
+                  "fit_identity": 0.0770190515651922,
+                  "fit_dose": 0.07683186185270512,
+                  "fit_dose_abundance": 0.07371826368495077
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 14826,
+                "target_prevalence": 0.10081342757399095,
+                "fixed": {
+                  "fixed_pool": 0.10025273515098243,
+                  "fixed_identity": 0.08647196569729082,
+                  "fixed_dose": 0.08037403894021793
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0883048186712015,
+                  "fit_identity": 0.07419909324769054,
+                  "fit_dose": 0.07402568381409975,
+                  "fit_dose_abundance": 0.07088361960172253
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 14049,
+                "target_prevalence": 0.1091324235978324,
+                "fixed": {
+                  "fixed_pool": 0.10754196498429008,
+                  "fixed_identity": 0.09259835203229458,
+                  "fixed_dose": 0.08684784372692358
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09413129260360753,
+                  "fit_identity": 0.0746351615938041,
+                  "fit_dose": 0.074535957738517,
+                  "fit_dose_abundance": 0.07036961246947726
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 13980,
+                "target_prevalence": 0.11264659134589308,
+                "fixed": {
+                  "fixed_pool": 0.11411481387154102,
+                  "fixed_identity": 0.09498835984731845,
+                  "fixed_dose": 0.09178637386566559
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09761320294595097,
+                  "fit_identity": 0.08157843648075229,
+                  "fit_dose": 0.08152345244504322,
+                  "fit_dose_abundance": 0.07870020596084913
+                }
+              }
+            }
+          },
+          "household_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.10350485035112961,
+              "fixed_identity": 0.0901142284511631,
+              "fixed_dose": 0.0837935825831451,
+              "fit_pool": 0.08806972923388903,
+              "fit_identity": 0.07518416091507707,
+              "fit_dose": 0.07510312077245448,
+              "fit_dose_abundance": 0.07212644458397593,
+              "identity_gain": 0.012885568318811963,
+              "dose_gain": 0.00008104014262258485,
+              "dose_abundance_gain": 0.0029766761884785498,
+              "fixed_identity_gain": 0.01339062189996651,
+              "fixed_dose_increment": 0.006320645868018004
+            },
+            "n_positive_dose": 7,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 16086,
+                "target_prevalence": 0.08151302515756959,
+                "fixed": {
+                  "fixed_pool": 0.09722026088729828,
+                  "fixed_identity": 0.06741402995620925,
+                  "fixed_dose": 0.06629709353791964
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.07171430015367236,
+                  "fit_identity": 0.05890523005437691,
+                  "fit_dose": 0.05879475972484992,
+                  "fit_dose_abundance": 0.05599060732070982
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 15792,
+                "target_prevalence": 0.09784939696955874,
+                "fixed": {
+                  "fixed_pool": 0.09479281228933303,
+                  "fixed_identity": 0.07722311689897052,
+                  "fixed_dose": 0.07487481650115882
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08279387053659096,
+                  "fit_identity": 0.06923862257256527,
+                  "fit_dose": 0.06915200190828064,
+                  "fit_dose_abundance": 0.06735903203677773
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 15582,
+                "target_prevalence": 0.10076053213308116,
+                "fixed": {
+                  "fixed_pool": 0.09982442541405896,
+                  "fixed_identity": 0.09153145237613185,
+                  "fixed_dose": 0.08660538086667477
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08573623560934945,
+                  "fit_identity": 0.0788796190088797,
+                  "fit_dose": 0.07910961148799374,
+                  "fit_dose_abundance": 0.07830780037783232
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 12600,
+                "target_prevalence": 0.10622208203500857,
+                "fixed": {
+                  "fixed_pool": 0.11116248653881931,
+                  "fixed_identity": 0.13077459143920814,
+                  "fixed_dose": 0.10352055685729339
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0917898452441633,
+                  "fit_identity": 0.0870180727973555,
+                  "fit_dose": 0.08685163720814648,
+                  "fit_dose_abundance": 0.08168241521948792
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 15456,
+                "target_prevalence": 0.10705827264549678,
+                "fixed": {
+                  "fixed_pool": 0.10312930367271385,
+                  "fixed_identity": 0.07991195936188122,
+                  "fixed_dose": 0.080042556369307
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09247426810657623,
+                  "fit_identity": 0.0770190515651922,
+                  "fit_dose": 0.07683186185270512,
+                  "fit_dose_abundance": 0.07371826368495077
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 14826,
+                "target_prevalence": 0.10081342757399095,
+                "fixed": {
+                  "fixed_pool": 0.10025273515098243,
+                  "fixed_identity": 0.08647196569729082,
+                  "fixed_dose": 0.08037403894021793
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0883048186712015,
+                  "fit_identity": 0.07419909324769054,
+                  "fit_dose": 0.07402568381409975,
+                  "fit_dose_abundance": 0.07088361960172253
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 14049,
+                "target_prevalence": 0.1091324235978324,
+                "fixed": {
+                  "fixed_pool": 0.10754196498429008,
+                  "fixed_identity": 0.09259835203229458,
+                  "fixed_dose": 0.08684784372692358
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09413129260360753,
+                  "fit_identity": 0.0746351615938041,
+                  "fit_dose": 0.074535957738517,
+                  "fit_dose_abundance": 0.07036961246947726
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 13980,
+                "target_prevalence": 0.11264659134589308,
+                "fixed": {
+                  "fixed_pool": 0.11411481387154102,
+                  "fixed_identity": 0.09498835984731845,
+                  "fixed_dose": 0.09178637386566559
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09761320294595097,
+                  "fit_identity": 0.08157843648075229,
+                  "fit_dose": 0.08152345244504322,
+                  "fit_dose_abundance": 0.07870020596084913
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "p3_control_proxy": {
+      "source_roster": 311,
+      "parent_lengths": {
+        "252": 73,
+        "253": 230,
+        "254": 8
+      },
+      "endpoint_lengths": {
+        "200": 1,
+        "205": 1,
+        "208": 2,
+        "222": 1,
+        "229": 1,
+        "236": 3,
+        "251": 2,
+        "252": 172,
+        "253": 543,
+        "254": 12,
+        "271": 3,
+        "273": 1,
+        "275": 2,
+        "276": 1,
+        "279": 1,
+        "281": 1,
+        "283": 1,
+        "284": 1,
+        "285": 1,
+        "288": 1,
+        "296": 1
+      },
+      "coverage_by_pair": {
+        "XBA-XBB": 0.998948478238409,
+        "XCA-XCB": 0.9995433758229006,
+        "XDA-XDB": 0.9922125789462444,
+        "XFA-XFB": 0.9938655519376948,
+        "XBA-XCA": 0.9977214080157162,
+        "XCA-XDA": 0.9998077345788371,
+        "XDA-XFA": 0.9997182876657714,
+        "XFA-XBA": 0.9942342669319038
+      },
+      "status": "SCORED_CONDITIONAL_SOURCE_PROXY",
+      "results": {
+        "threshold_0.001": {
+          "source_roster": 152,
+          "source_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.14344467112572026,
+              "fixed_identity": 0.10487058680913165,
+              "fixed_dose": 0.101517060274899,
+              "fit_pool": 0.11642823423430658,
+              "fit_identity": 0.08871752398413646,
+              "fit_dose": 0.08823464719984464,
+              "fit_dose_abundance": 0.08649562871086805,
+              "identity_gain": 0.02771071025017012,
+              "dose_gain": 0.00048287678429181913,
+              "dose_abundance_gain": 0.0017390184889765903,
+              "fixed_identity_gain": 0.03857408431658861,
+              "fixed_dose_increment": 0.0033535265342326537
+            },
+            "n_positive_dose": 6,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4263,
+                "target_prevalence": 0.11298995788791708,
+                "fixed": {
+                  "fixed_pool": 0.1465527480833551,
+                  "fixed_identity": 0.09502551020407828,
+                  "fixed_dose": 0.09065443692153535
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09927364070037703,
+                  "fit_identity": 0.07809602390817824,
+                  "fit_dose": 0.07742798187486441,
+                  "fit_dose_abundance": 0.07584476267135716
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4158,
+                "target_prevalence": 0.1176046176046176,
+                "fixed": {
+                  "fixed_pool": 0.12950937950937086,
+                  "fixed_identity": 0.09681136764469452,
+                  "fixed_dose": 0.09343020220044645
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0960316587933597,
+                  "fit_identity": 0.07942294384638192,
+                  "fit_dose": 0.07967882751611137,
+                  "fit_dose_abundance": 0.0788908985241503
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4116,
+                "target_prevalence": 0.09863945578231292,
+                "fixed": {
+                  "fixed_pool": 0.12392695173307068,
+                  "fixed_identity": 0.09886722546161043,
+                  "fixed_dose": 0.09235303057422198
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08740981168280393,
+                  "fit_identity": 0.07207012909454513,
+                  "fit_dose": 0.07325780040993518,
+                  "fit_dose_abundance": 0.07343587909719763
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 4263,
+                "target_prevalence": 0.16846824316188252,
+                "fixed": {
+                  "fixed_pool": 0.18472585007549774,
+                  "fixed_identity": 0.11267268002643388,
+                  "fixed_dose": 0.10920836131016341
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.13555821973097543,
+                  "fit_identity": 0.10136856472265542,
+                  "fit_dose": 0.09967988475690998,
+                  "fit_dose_abundance": 0.0970435240050357
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4137,
+                "target_prevalence": 0.1452915942711861,
+                "fixed": {
+                  "fixed_pool": 0.14798863268250317,
+                  "fixed_identity": 0.11428669591934353,
+                  "fixed_dose": 0.10596594259409124
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.11981962256730733,
+                  "fit_identity": 0.0991543201508106,
+                  "fit_dose": 0.09795021649359058,
+                  "fit_dose_abundance": 0.09700918777541385
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4137,
+                "target_prevalence": 0.1313057690608711,
+                "fixed": {
+                  "fixed_pool": 0.13493535942514895,
+                  "fixed_identity": 0.0990511283878584,
+                  "fixed_dose": 0.09295860028740645
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10814776640522218,
+                  "fit_identity": 0.07752473242786984,
+                  "fit_dose": 0.07674992878607062,
+                  "fit_dose_abundance": 0.07522683365070545
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 4095,
+                "target_prevalence": 0.18459519301093041,
+                "fixed": {
+                  "fixed_pool": 0.12860883184888922,
+                  "fixed_identity": 0.10150126570019147,
+                  "fixed_dose": 0.10384677612952165
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1411800406449892,
+                  "fit_identity": 0.09359261705977916,
+                  "fit_dose": 0.09277015304462324,
+                  "fit_dose_abundance": 0.08907412903562503
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 3900,
+                "target_prevalence": 0.18070667147565947,
+                "fixed": {
+                  "fixed_pool": 0.1513096156479264,
+                  "fixed_identity": 0.12074882112884273,
+                  "fixed_dose": 0.12371913218180548
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.14400511334941796,
+                  "fit_identity": 0.10851086066287137,
+                  "fit_dose": 0.1083623847166518,
+                  "fit_dose_abundance": 0.10543981492745924
+                }
+              }
+            }
+          },
+          "household_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.14344467112572026,
+              "fixed_identity": 0.10487058680913165,
+              "fixed_dose": 0.101517060274899,
+              "fit_pool": 0.11642823423430658,
+              "fit_identity": 0.08871752398413646,
+              "fit_dose": 0.08823464719984464,
+              "fit_dose_abundance": 0.08649562871086805,
+              "identity_gain": 0.02771071025017012,
+              "dose_gain": 0.00048287678429181913,
+              "dose_abundance_gain": 0.0017390184889765903,
+              "fixed_identity_gain": 0.03857408431658861,
+              "fixed_dose_increment": 0.0033535265342326537
+            },
+            "n_positive_dose": 6,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4263,
+                "target_prevalence": 0.11298995788791708,
+                "fixed": {
+                  "fixed_pool": 0.1465527480833551,
+                  "fixed_identity": 0.09502551020407828,
+                  "fixed_dose": 0.09065443692153535
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09927364070037703,
+                  "fit_identity": 0.07809602390817824,
+                  "fit_dose": 0.07742798187486441,
+                  "fit_dose_abundance": 0.07584476267135716
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4158,
+                "target_prevalence": 0.1176046176046176,
+                "fixed": {
+                  "fixed_pool": 0.12950937950937086,
+                  "fixed_identity": 0.09681136764469452,
+                  "fixed_dose": 0.09343020220044645
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.0960316587933597,
+                  "fit_identity": 0.07942294384638192,
+                  "fit_dose": 0.07967882751611137,
+                  "fit_dose_abundance": 0.0788908985241503
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4116,
+                "target_prevalence": 0.09863945578231292,
+                "fixed": {
+                  "fixed_pool": 0.12392695173307068,
+                  "fixed_identity": 0.09886722546161043,
+                  "fixed_dose": 0.09235303057422198
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08740981168280393,
+                  "fit_identity": 0.07207012909454513,
+                  "fit_dose": 0.07325780040993518,
+                  "fit_dose_abundance": 0.07343587909719763
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 4263,
+                "target_prevalence": 0.16846824316188252,
+                "fixed": {
+                  "fixed_pool": 0.18472585007549774,
+                  "fixed_identity": 0.11267268002643388,
+                  "fixed_dose": 0.10920836131016341
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.13555821973097543,
+                  "fit_identity": 0.10136856472265542,
+                  "fit_dose": 0.09967988475690998,
+                  "fit_dose_abundance": 0.0970435240050357
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 4137,
+                "target_prevalence": 0.1452915942711861,
+                "fixed": {
+                  "fixed_pool": 0.14798863268250317,
+                  "fixed_identity": 0.11428669591934353,
+                  "fixed_dose": 0.10596594259409124
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.11981962256730733,
+                  "fit_identity": 0.0991543201508106,
+                  "fit_dose": 0.09795021649359058,
+                  "fit_dose_abundance": 0.09700918777541385
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 4137,
+                "target_prevalence": 0.1313057690608711,
+                "fixed": {
+                  "fixed_pool": 0.13493535942514895,
+                  "fixed_identity": 0.0990511283878584,
+                  "fixed_dose": 0.09295860028740645
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10814776640522218,
+                  "fit_identity": 0.07752473242786984,
+                  "fit_dose": 0.07674992878607062,
+                  "fit_dose_abundance": 0.07522683365070545
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 4095,
+                "target_prevalence": 0.18459519301093041,
+                "fixed": {
+                  "fixed_pool": 0.12860883184888922,
+                  "fixed_identity": 0.10150126570019147,
+                  "fixed_dose": 0.10384677612952165
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.1411800406449892,
+                  "fit_identity": 0.09359261705977916,
+                  "fit_dose": 0.09277015304462324,
+                  "fit_dose_abundance": 0.08907412903562503
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 3900,
+                "target_prevalence": 0.18070667147565947,
+                "fixed": {
+                  "fixed_pool": 0.1513096156479264,
+                  "fixed_identity": 0.12074882112884273,
+                  "fixed_dose": 0.12371913218180548
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.14400511334941796,
+                  "fit_identity": 0.10851086066287137,
+                  "fit_dose": 0.1083623847166518,
+                  "fit_dose_abundance": 0.10543981492745924
+                }
+              }
+            }
+          }
+        },
+        "raw_detection": {
+          "source_roster": 311,
+          "source_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.1341593692283954,
+              "fixed_identity": 0.10978493391427921,
+              "fixed_dose": 0.0957657730259269,
+              "fit_pool": 0.09632874513263265,
+              "fit_identity": 0.08032099436887738,
+              "fit_dose": 0.08003750232514945,
+              "fit_dose_abundance": 0.0762570277560604,
+              "identity_gain": 0.01600775076375527,
+              "dose_gain": 0.00028349204372793424,
+              "dose_abundance_gain": 0.0037804745690890457,
+              "fixed_identity_gain": 0.024374435314116177,
+              "fixed_dose_increment": 0.014019160888352311
+            },
+            "n_positive_dose": 6,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 8484,
+                "target_prevalence": 0.09629564780931371,
+                "fixed": {
+                  "fixed_pool": 0.13840009182575408,
+                  "fixed_identity": 0.10880792853154451,
+                  "fixed_dose": 0.09137299614305587
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08206156161403841,
+                  "fit_identity": 0.06998846605245489,
+                  "fit_dose": 0.06993317275741355,
+                  "fit_dose_abundance": 0.06679652890062161
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 7749,
+                "target_prevalence": 0.0908221516007533,
+                "fixed": {
+                  "fixed_pool": 0.12506550701731145,
+                  "fixed_identity": 0.104796952767692,
+                  "fixed_dose": 0.09146720023647628
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08018671893957456,
+                  "fit_identity": 0.06837750272890795,
+                  "fit_dose": 0.06869385584974885,
+                  "fit_dose_abundance": 0.06599118881283929
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 8421,
+                "target_prevalence": 0.07856252004418629,
+                "fixed": {
+                  "fixed_pool": 0.1086795286003386,
+                  "fixed_identity": 0.09437091197583806,
+                  "fixed_dose": 0.08057657263053072
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.06981082973981913,
+                  "fit_identity": 0.0617766720277095,
+                  "fit_dose": 0.0621518561076086,
+                  "fit_dose_abundance": 0.061326108490658726
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 8169,
+                "target_prevalence": 0.10268561800884227,
+                "fixed": {
+                  "fixed_pool": 0.16012807357582262,
+                  "fixed_identity": 0.1169917066764805,
+                  "fixed_dose": 0.09189987207206593
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09030219443961873,
+                  "fit_identity": 0.07980038678084775,
+                  "fit_dose": 0.07851447513110056,
+                  "fit_dose_abundance": 0.07486838783574196
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 7896,
+                "target_prevalence": 0.1347577272966933,
+                "fixed": {
+                  "fixed_pool": 0.1432146158106525,
+                  "fixed_identity": 0.12510390149113923,
+                  "fixed_dose": 0.10655763549125874
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.11167990202314507,
+                  "fit_identity": 0.09676819546670103,
+                  "fit_dose": 0.09598670704921285,
+                  "fit_dose_abundance": 0.09221479716365104
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 7707,
+                "target_prevalence": 0.11946886991490023,
+                "fixed": {
+                  "fixed_pool": 0.13221076467063286,
+                  "fixed_identity": 0.1068157239851128,
+                  "fixed_dose": 0.095578729044834
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10186887188862695,
+                  "fit_identity": 0.08173577145958488,
+                  "fit_dose": 0.08119057945614476,
+                  "fit_dose_abundance": 0.07660177400381256
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 7749,
+                "target_prevalence": 0.12836630682852385,
+                "fixed": {
+                  "fixed_pool": 0.11998285984982685,
+                  "fixed_identity": 0.09969282785643281,
+                  "fixed_dose": 0.09486268638359556
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10686908643704883,
+                  "fit_identity": 0.08179793232323047,
+                  "fit_dose": 0.08169438809373966,
+                  "fit_dose_abundance": 0.07532489124577983
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 7560,
+                "target_prevalence": 0.1539494492948916,
+                "fixed": {
+                  "fixed_pool": 0.14559351247682417,
+                  "fixed_identity": 0.12169951802999367,
+                  "fixed_dose": 0.11381049220559813
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.12785079597918947,
+                  "fit_identity": 0.10232302811158253,
+                  "fit_dose": 0.10213498415622675,
+                  "fit_dose_abundance": 0.0969325455953782
+                }
+              }
+            }
+          },
+          "household_disjoint": {
+            "n_scored_pairs": 8,
+            "n_total_pairs": 8,
+            "means": {
+              "fixed_pool": 0.1341593692283954,
+              "fixed_identity": 0.10978493391427921,
+              "fixed_dose": 0.0957657730259269,
+              "fit_pool": 0.09632874513263265,
+              "fit_identity": 0.08032099436887738,
+              "fit_dose": 0.08003750232514945,
+              "fit_dose_abundance": 0.0762570277560604,
+              "identity_gain": 0.01600775076375527,
+              "dose_gain": 0.00028349204372793424,
+              "dose_abundance_gain": 0.0037804745690890457,
+              "fixed_identity_gain": 0.024374435314116177,
+              "fixed_dose_increment": 0.014019160888352311
+            },
+            "n_positive_dose": 6,
+            "n_positive_identity": 8,
+            "by_pair": {
+              "XBA-XBB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XCA-XDA",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 8484,
+                "target_prevalence": 0.09629564780931371,
+                "fixed": {
+                  "fixed_pool": 0.13840009182575408,
+                  "fixed_identity": 0.10880792853154451,
+                  "fixed_dose": 0.09137299614305587
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08206156161403841,
+                  "fit_identity": 0.06998846605245489,
+                  "fit_dose": 0.06993317275741355,
+                  "fit_dose_abundance": 0.06679652890062161
+                }
+              },
+              "XCA-XCB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 7749,
+                "target_prevalence": 0.0908221516007533,
+                "fixed": {
+                  "fixed_pool": 0.12506550701731145,
+                  "fixed_identity": 0.104796952767692,
+                  "fixed_dose": 0.09146720023647628
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.08018671893957456,
+                  "fit_identity": 0.06837750272890795,
+                  "fit_dose": 0.06869385584974885,
+                  "fit_dose_abundance": 0.06599118881283929
+                }
+              },
+              "XDA-XDB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XFA-XFB",
+                  "XBA-XCA",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 8421,
+                "target_prevalence": 0.07856252004418629,
+                "fixed": {
+                  "fixed_pool": 0.1086795286003386,
+                  "fixed_identity": 0.09437091197583806,
+                  "fixed_dose": 0.08057657263053072
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.06981082973981913,
+                  "fit_identity": 0.0617766720277095,
+                  "fit_dose": 0.0621518561076086,
+                  "fit_dose_abundance": 0.061326108490658726
+                }
+              },
+              "XFA-XFB": {
+                "n_training_pairs": 5,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XBA-XCA",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 8169,
+                "target_prevalence": 0.10268561800884227,
+                "fixed": {
+                  "fixed_pool": 0.16012807357582262,
+                  "fixed_identity": 0.1169917066764805,
+                  "fixed_dose": 0.09189987207206593
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.09030219443961873,
+                  "fit_identity": 0.07980038678084775,
+                  "fit_dose": 0.07851447513110056,
+                  "fit_dose_abundance": 0.07486838783574196
+                }
+              },
+              "XBA-XCA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XDA-XDB",
+                  "XFA-XFB",
+                  "XDA-XFA"
+                ],
+                "n_risk_cells": 7896,
+                "target_prevalence": 0.1347577272966933,
+                "fixed": {
+                  "fixed_pool": 0.1432146158106525,
+                  "fixed_identity": 0.12510390149113923,
+                  "fixed_dose": 0.10655763549125874
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.11167990202314507,
+                  "fit_identity": 0.09676819546670103,
+                  "fit_dose": 0.09598670704921285,
+                  "fit_dose_abundance": 0.09221479716365104
+                }
+              },
+              "XCA-XDA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XFA-XFB",
+                  "XFA-XBA"
+                ],
+                "n_risk_cells": 7707,
+                "target_prevalence": 0.11946886991490023,
+                "fixed": {
+                  "fixed_pool": 0.13221076467063286,
+                  "fixed_identity": 0.1068157239851128,
+                  "fixed_dose": 0.095578729044834
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10186887188862695,
+                  "fit_identity": 0.08173577145958488,
+                  "fit_dose": 0.08119057945614476,
+                  "fit_dose_abundance": 0.07660177400381256
+                }
+              },
+              "XDA-XFA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XBA-XBB",
+                  "XCA-XCB",
+                  "XBA-XCA"
+                ],
+                "n_risk_cells": 7749,
+                "target_prevalence": 0.12836630682852385,
+                "fixed": {
+                  "fixed_pool": 0.11998285984982685,
+                  "fixed_identity": 0.09969282785643281,
+                  "fixed_dose": 0.09486268638359556
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.10686908643704883,
+                  "fit_identity": 0.08179793232323047,
+                  "fit_dose": 0.08169438809373966,
+                  "fit_dose_abundance": 0.07532489124577983
+                }
+              },
+              "XFA-XBA": {
+                "n_training_pairs": 3,
+                "training_pairs": [
+                  "XCA-XCB",
+                  "XDA-XDB",
+                  "XCA-XDA"
+                ],
+                "n_risk_cells": 7560,
+                "target_prevalence": 0.1539494492948916,
+                "fixed": {
+                  "fixed_pool": 0.14559351247682417,
+                  "fixed_identity": 0.12169951802999367,
+                  "fixed_dose": 0.11381049220559813
+                },
+                "status": "SCORED",
+                "fit": {
+                  "fit_pool": 0.12785079597918947,
+                  "fit_identity": 0.10232302811158253,
+                  "fit_dose": 0.10213498415622675,
+                  "fit_dose_abundance": 0.0969325455953782
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45718594570",
+  "code_commit": "aa005f8e84a23816bf6de1ea8654b9b804ab0278",
+  "artifact_id": 15071426021,
+  "artifact_digest": "sha256:bc5d105ad0502078962f3155bfb42656aad65873cfb4cc4657befe46132525b8"
+}
