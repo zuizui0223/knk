@@ -1,0 +1,56 @@
+name: BioTIMEr published subset diagnostic
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/knk-biotime-subset.yml'
+      - 'benchmarks/prepare_biotime_subset.R'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: knk-biotime-subset-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  subset:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch separately published BioTIMEr teaching data and pin Git blob bytes
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/biotime_subset outputs/subset outputs/fixture
+          cd /tmp/biotime_subset
+          curl --fail --location --max-time 60 --output BTsubset_data.RData 'https://raw.githubusercontent.com/bioTIMEHub/BioTIMEr/7c33f32f0235d2bb396ea8b71f7f39a91f0253f9/data/BTsubset_data.RData'
+          curl --fail --location --max-time 60 --output BTsubset_meta.RData 'https://raw.githubusercontent.com/bioTIMEHub/BioTIMEr/7c33f32f0235d2bb396ea8b71f7f39a91f0253f9/data/BTsubset_meta.RData'
+          test "$(git hash-object BTsubset_data.RData)" = f97694a3ecb4db933790cf852c66a74fad5723a6
+          test "$(git hash-object BTsubset_meta.RData)" = 2f416f74e6fef3cd56f46733d5b8cdf69812cd43
+          sha256sum *.RData
+      - name: Install base R and data.table
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends r-base-core r-cran-data.table
+      - name: Prepare separately scoped subset and synthetic fixture
+        run: Rscript benchmarks/prepare_biotime_subset.R /tmp/biotime_subset outputs/subset
+      - name: Test full scorer on synthetic observations
+        run: |
+          Rscript benchmarks/score_biotime_response_memory.R /tmp/biotime_subset/fixture.rds /tmp/biotime_subset/fixture.csv outputs/fixture
+          Rscript -e 'x<-read.csv("outputs/fixture/summary.csv"); stopifnot(nrow(x)==2L, all(x$n_windows==2L), all(x$scored_windows==2L)); y<-read.csv("outputs/fixture/window_metrics.csv"); stopifnot(all(abs(y$cancellation-1)<1e-12),all(y$rankTV<=y$namedTV+1e-12))'
+      - name: Score subset using unchanged preregistered model
+        run: |
+          Rscript benchmarks/score_biotime_response_memory.R /tmp/biotime_subset/subset.rds /tmp/biotime_subset/subset.csv outputs/subset
+          for f in source_audit.csv summary.csv study_metrics.csv; do cat "=== $f ==="; cat "outputs/subset/$f"; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: biotime-teaching-subset-diagnostic
+          path: |
+            outputs/subset/subset_source_studies.csv
+            outputs/subset/source_audit.csv
+            outputs/subset/summary.csv
+            outputs/subset/study_metrics.csv
+            outputs/subset/metadata_eligible.csv
+            outputs/fixture/summary.csv
+          if-no-files-found: warn
+          retention-days: 30

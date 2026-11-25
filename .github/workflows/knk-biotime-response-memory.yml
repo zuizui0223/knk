@@ -1,0 +1,45 @@
+name: BioTIME response memory prescored pilot
+# Full-source auto-retries paused after HTTP 403; leave as manual configuration.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: knk-biotime-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  source-and-score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4.3'
+          use-public-rspm: true
+      - name: Install minimal R dependency
+        run: Rscript -e 'install.packages("data.table")'
+      - name: Fetch exact public BioTIME 2.0 release and verify original bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/biotime outputs/biotime
+          cd /tmp/biotime
+          curl --fail --location --retry 2 --connect-timeout 30 --max-time 600 --output raw.rds 'https://zenodo.org/records/15222193/files/biotime_v2_query_15April25.rds?download=1'
+          curl --fail --location --retry 2 --connect-timeout 30 --max-time 180 --output meta.csv 'https://zenodo.org/records/15222193/files/biotime_v2_metadata_15April25.csv?download=1'
+          printf '%s\n' '2fed9f6c8028d4c44d80769c594be056  raw.rds' '3daed71ed554888309f9f2443a847bea  meta.csv' | md5sum -c -
+          sha256sum raw.rds meta.csv
+      - name: Score prespecified pilot
+        run: |
+          Rscript benchmarks/score_biotime_response_memory.R /tmp/biotime/raw.rds /tmp/biotime/meta.csv outputs/biotime
+      - name: Upload aggregate only
+        uses: actions/upload-artifact@v4
+        with:
+          name: biotime-response-memory-study-aggregates
+          path: |
+            outputs/biotime/source_audit.csv
+            outputs/biotime/summary.csv
+            outputs/biotime/study_metrics.csv
+            outputs/biotime/metadata_eligible.csv
+          if-no-files-found: error
+          retention-days: 30

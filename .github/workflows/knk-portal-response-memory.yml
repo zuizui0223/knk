@@ -1,0 +1,38 @@
+name: Portal response allocation pilot
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'benchmarks/score_portal_response_memory.py'
+      - '.github/workflows/knk-portal-response-memory.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: knk-portal-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  source-score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==1.26.4 pandas==2.2.3
+      - name: Download pinned public Portal files
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/portal/Rodents /tmp/portal/SiteandMethods outputs/portal
+          for f in Rodents/Portal_rodent.csv Rodents/Portal_rodent_trapping.csv Rodents/Portal_rodent_species.csv Rodents/moon_dates.csv SiteandMethods/Portal_plots.csv; do
+            curl --fail --location --max-time 90 -o "/tmp/portal/$f" "https://raw.githubusercontent.com/weecology/PortalData/a4dc266c0068d26370cd88bec5272a02623d5470/$f"
+          done
+      - run: python benchmarks/score_portal_response_memory.py /tmp/portal outputs/portal
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portal-response-allocation-derived-only
+          path: outputs/portal/
+          if-no-files-found: warn
+          retention-days: 30
