@@ -147,7 +147,7 @@ def diaz(R):
             tv=float(np.abs(v-(a+b)/2).sum()/2)
             community_tv=float(np.abs(rawmix[i,j]-(rawc[i]+rawc[j])/2).sum()/2)
             aid=f"{m}:{r['Sample']}";pair_id=f"{m}:{min(i,j)+1}:{max(i,j)+1}"
-            R.c.execute("INSERT INTO opportunity_assays VALUES ("+",".join("?" for _ in range(18))+")",
+            R.c.execute("INSERT INTO opportunity_assays VALUES ("+",".join("?" for _ in range(19))+")",
                 (aid,s,m,f"Champion{i+1}",f"Champion{j+1}",pair_id,r["Sample"],r["Row"]+r["Column"],ac[i]["Sample"],ac[j]["Sample"],depth[r["Sample"]],int(mi.sum()),int(mj.sum()),u,w,rem,u/(u+w) if u+w>1e-12 else None,tv,"controlled_coculture_relative_read_endpoint"))
             R.c.execute("INSERT INTO opportunity_assay_links VALUES (?,?,?,?,?,?,?)",(aid,s,mx[i,j]["Sample"],c[i]["Sample"],c[j]["Sample"],community_tv,"same_medium_origin_label_and_well_not_taxon_identity"))
     for t,mode,role in ((0,"raw_detected","primary"),(.001,"relative_0.001","sensitivity")):
