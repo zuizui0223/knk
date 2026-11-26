@@ -55,7 +55,9 @@ def villarreal(R,root):
     refs=vv.acquire(root);mats,audit=vv.load(root,refs)
     prior=read("villarreal2025_donor_pool_summary_20261126.json")
     external=read("villarreal2025_external_summary_20261126.json")
-    assert audit==external["source_audit"]
+    # JSON roundtrip converts source parser tuple pairs to the archived JSON lists.
+    audit=json.loads(json.dumps(audit,allow_nan=False))
+    assert audit==external["source_audit"], [k for k in audit if audit[k]!=external["source_audit"].get(k)]
     R.lane(l,s,res,0,"observed_preceding_sample","fixed_volume_count_fraction","all 63 author bins undetected in actual recipient", "primary")
     labels=audit["taxon_codes"];keys=[local_key(k) for k in labels];assert len(keys)==63
     for donor,rec in (("A0","Aa"),("B0","Ab")):
