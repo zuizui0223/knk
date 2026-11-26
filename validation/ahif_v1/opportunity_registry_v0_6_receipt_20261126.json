@@ -1,0 +1,186 @@
+{
+  "status": "VALIDATED_DERIVED_OPPORTUNITY_REGISTRY_NOT_SIGNED_NETWORK_NOT_META",
+  "version": "0.6.0",
+  "counts": {
+    "opportunity_assay_links": 112,
+    "opportunity_assays": 112,
+    "opportunity_events": 1864,
+    "opportunity_lanes": 7,
+    "opportunity_risk": 281235,
+    "opportunity_signed_interaction_effects": 0,
+    "opportunity_sources": 3,
+    "opportunity_taxa": 718,
+    "opportunity_primary_events": 638
+  },
+  "coverage": [
+    {
+      "lane": "diaz_common233_raw_detected",
+      "events": 224,
+      "physical_targets_within_lane": 112,
+      "dependent_risk_rows": 13244
+    },
+    {
+      "lane": "diaz_common233_relative_0.001",
+      "events": 224,
+      "physical_targets_within_lane": 112,
+      "dependent_risk_rows": 8988
+    },
+    {
+      "lane": "goldman_p15_stock_proxy_raw_detection",
+      "events": 334,
+      "physical_targets_within_lane": 167,
+      "dependent_risk_rows": 118371
+    },
+    {
+      "lane": "goldman_p15_stock_proxy_threshold_0.001",
+      "events": 334,
+      "physical_targets_within_lane": 167,
+      "dependent_risk_rows": 40478
+    },
+    {
+      "lane": "goldman_p3_control_proxy_raw_detection",
+      "events": 334,
+      "physical_targets_within_lane": 167,
+      "dependent_risk_rows": 63735
+    },
+    {
+      "lane": "goldman_p3_control_proxy_threshold_0.001",
+      "events": 334,
+      "physical_targets_within_lane": 167,
+      "dependent_risk_rows": 33069
+    },
+    {
+      "lane": "villarreal_raw",
+      "events": 80,
+      "physical_targets_within_lane": 80,
+      "dependent_risk_rows": 3350
+    }
+  ],
+  "assay_summary": [
+    {
+      "medium": "Citrate",
+      "wells": 56,
+      "mean_isolate_reference_tv": 0.281948429542466,
+      "mean_community_reference_tv": 0.3332224220559551,
+      "mean_unresolved_signature_mass": 0.44448693178035237,
+      "defined_signature_shares": 52
+    },
+    {
+      "medium": "Glutamine",
+      "wells": 56,
+      "mean_isolate_reference_tv": 0.2758914630517892,
+      "mean_community_reference_tv": 0.3960304260745234,
+      "mean_unresolved_signature_mass": 0.7031456899482639,
+      "defined_signature_shares": 50
+    }
+  ],
+  "source_receipts": {
+    "villarreal2025": {
+      "source_receipt": "villarreal2025_external_summary_20261126.json",
+      "replayed_run": 45716249512,
+      "verified_profiles": 200,
+      "events": 80,
+      "source_files": {
+        "Dadosbrutosfinais1.1.txt": {
+          "md5": "e608f24dffd5f28b4f8d6bf125b19668",
+          "sha256": "acd9c98361e526b409679cf48f69b2fdb38a132bac560f43715a6c0e4b216bf7"
+        },
+        "1. Analyses-v7-06Oct2025.R": {
+          "md5": "2558c595613346c75a8b591282b41162",
+          "sha256": "464d6cfa645e36b95c813a732d57c82157b2e7f4f16a1d966540f4e2751f7e2e"
+        }
+      }
+    },
+    "diazcolunga2022": {
+      "source_receipt": "diazcolunga2022_harmonized_endpoint_20261126.json",
+      "replayed_run": 45717729776,
+      "verified_detection_profiles": 144,
+      "additional_assay_profiles": 128,
+      "assay_monocultures": 16,
+      "assay_mixed_wells": 112,
+      "assay_reads_range": [
+        8892,
+        64150
+      ],
+      "source_files": {
+        "data/metaData.csv": {
+          "blob": "4039c5ed6f1aa87519d846b1ddc952eb07fb5327",
+          "bytes": 302560,
+          "sha256": "68b31d743c341ba977fff3d741dd14a7127b93d4b950f5b3d20fb2797d87a03f"
+        },
+        "data/OTU_table.csv": {
+          "blob": "00e527c890bc324c2e1b3d3f8a842ef484b22b0b",
+          "bytes": 14480507,
+          "sha256": "9d5eaa36bc794a4fecaf0a2188dd10be7dc6c1310aa7e7d94cd901baa50e7b74"
+        },
+        "data/analyzeData.R": {
+          "blob": "88f31dc57777f0c249840d67f6cd1fc9e8f4ef2f",
+          "bytes": 90568,
+          "sha256": "f8ec99d6b27bae664fc4ba2e3bcbf50ed91a11871c65ad889695db1bdb95910d"
+        },
+        "data/taxonomy_silva.csv": {
+          "blob": "b174b773a2887ee5fe2341bbfc01a5386ab57285",
+          "bytes": 1334090,
+          "sha256": "a67641ed77c5658fd44a8124c6527575681ed16cf66e205415412fc9cbf1885f"
+        }
+      }
+    },
+    "goldman2025": {
+      "source_receipt": "goldman2025_dose_summary_20261126.json",
+      "replayed_run": 45718594570,
+      "verified_endpoint_profiles": 167,
+      "stock_proxy_profiles": 24,
+      "earlier_control_profiles": 14,
+      "source_files": {
+        "sequencing/communityCoalescence/data/intermediates/mixtureDataframe.zip": {
+          "blob": "eabfd7ff302e19607237649c73eccb7f6a698a25",
+          "sha256": "ebd804e58de451d37e8e5cdaeaccacb0d5ad7cfe9b89a2b4d82b59860feec309",
+          "bytes": 4780720
+        },
+        "sequencing/communityCoalescence/data/210819-e0015-e0020-16S-samplesheet.txt": {
+          "blob": "bc61d1bcc0ea65d5e68ccbec909744a210ad20a5",
+          "sha256": "da6008a096e03fbe2461999d046114c8fafc5343da777f9d656eaeab20e06d0e",
+          "bytes": 225241
+        },
+        "sequencing/parentCommunities/data/intermediates/e0012-mixtureDataframe.txt": {
+          "blob": "d57e4efb9c49b5f2127f14c61011394e005f60a2",
+          "sha256": "cebccce796866b37b7dc7f8ade15bcd1779a4694a0cc195572a6bf7e0671f3b4",
+          "bytes": 6553421
+        },
+        "sequencing/parentCommunities/data/20210201-e0012-samplesheet.txt": {
+          "blob": "d79a9c29dd65adaed52d2a304d0749dd82fa8369",
+          "sha256": "ab94dd621fa819ab73a6c303931d5dea5ab195f00a9db3b6d7e4051aff9c2fb3",
+          "bytes": 32873
+        }
+      }
+    }
+  },
+  "prior_table_counts_unchanged": true,
+  "integrity": "ok",
+  "foreign_key_check": "ok",
+  "meta_eligible": 0,
+  "notes": [
+    "Three existing endpoint study families, no newly recruited publication.",
+    "Risk rows and analytical orientations dependent; thresholds/proxies duplicate physical targets.",
+    "Coculture relative-read endpoint and linked original community pair, not signed pairwise coefficient or ancestry."
+  ],
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45760516458",
+  "code_commit": "3a5dc2189e84f227d241bef7d4a006ae41fc9030",
+  "artifact_id": 15089042943,
+  "artifact_digest": "sha256:d50d6d93d28a7c25e6b7671150266f6fef8e00b11c7f9b35c845c08cd0e7def6",
+  "artifact_size": 24537115,
+  "previous_failed_builds": [
+    {
+      "run": 45760238723,
+      "reason": "Tuple/list representation in source audit"
+    },
+    {
+      "run": 45760317816,
+      "reason": "Assay SQL insert placeholder count"
+    },
+    {
+      "run": 45760426444,
+      "reason": "Ambiguous physical_target in final coverage SQL"
+    }
+  ]
+}
