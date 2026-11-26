@@ -226,7 +226,7 @@ def main():
     assert con.execute("SELECT COUNT(*) FROM opportunity_assays").fetchone()[0]==112
     assert con.execute("SELECT COUNT(*) FROM opportunity_assay_links").fetchone()[0]==112
     assert con.execute("SELECT COUNT(*) FROM opportunity_signed_interaction_effects").fetchone()[0]==0
-    coverage=con.execute("""SELECT e.lane,COUNT(*),COUNT(DISTINCT physical_target),SUM(b.n_risk)
+    coverage=con.execute("""SELECT e.lane,COUNT(*),COUNT(DISTINCT e.physical_target),SUM(b.n_risk)
         FROM opportunity_events e JOIN opportunity_event_brier b USING(lane,event_id,source) GROUP BY e.lane ORDER BY e.lane""").fetchall()
     for l,n,target,risk in coverage:
         assert n== (80 if l=="villarreal_raw" else 224 if l.startswith("diaz") else 334)
