@@ -1,0 +1,29 @@
+name: AHIF opportunity registry v0.6
+on:
+  push:
+    branches: [analysis/ahif-opportunity-db-20261126]
+    paths:
+      - 'benchmarks/build_ahif_opportunity_registry_v06.py'
+      - 'database/ahif_mechanism_v0/opportunity_schema_v06.sql'
+      - '.github/workflows/knk-ahif-opportunity-v06.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy scipy openpyxl scikit-learn
+      - run: python -m benchmarks.build_ahif_opportunity_registry_v06 --out "$RUNNER_TEMP/registry" --scratch "$RUNNER_TEMP/source"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-opportunity-registry-v06
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30
