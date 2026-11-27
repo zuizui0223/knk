@@ -1,0 +1,30 @@
+name: AHIF finite context registry v0.7
+on:
+  push:
+    branches: [analysis/ahif-context-cross-taxa-20261127]
+    paths:
+      - 'benchmarks/build_ahif_finite_context_registry_v07.py'
+      - '.github/workflows/knk-ahif-finite-context-v07.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Acquire exact frozen v0.6 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --max-time 120 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/15089042943/zip" -o "$RUNNER_TEMP/v06.zip"
+          echo "d50d6d93d28a7c25e6b7671150266f6fef8e00b11c7f9b35c845c08cd0e7def6  $RUNNER_TEMP/v06.zip" | sha256sum -c -
+      - run: python -m benchmarks.build_ahif_finite_context_registry_v07 --base-zip "$RUNNER_TEMP/v06.zip" --out "$RUNNER_TEMP/registry" --scratch "$RUNNER_TEMP/scratch"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-finite-context-registry-v07
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30

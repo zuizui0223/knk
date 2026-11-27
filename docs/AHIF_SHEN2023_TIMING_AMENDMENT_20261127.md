@@ -1,0 +1,3 @@
+# Timing amendment before viewing scores
+
+Source article Methods (https://doi.org/10.1002/ece3.10502) specifies focal consumer stocks at 10% of carrying capacity, predator introductions on days 4 and 8, with ten individuals each time. The already frozen post-day1 arm-assignment contrast remains unchanged. Add fixed sensitivity using common observed days >=9 (after both additions), same normalization and fixed disjoint fold forecast. Whole-period contrast includes pre-predator dates and therefore measures differences by assigned treatment, not exposure throughout. No initial-dose matching inferred from observed day1 densities; species-specific stock density and total consumer inoculum can differ. No post-score selection.

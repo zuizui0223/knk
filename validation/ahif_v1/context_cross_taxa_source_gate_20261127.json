@@ -1,0 +1,672 @@
+{
+  "run": 45940531744,
+  "code_commit": "ff7cb4b0d1f9d441bd90dc4708ccb93a6becff6b",
+  "previous_run": 45940427700,
+  "previous_shen_stop": "title token heuristic; DOI and author identity subsequently verified",
+  "results": [
+    {
+      "job": 140313552443,
+      "source_job": "audit (mickalide)",
+      "artifact_id": 15172328010,
+      "artifact_digest": "sha256:9de5e0bf391b92a005aea6d7f62898f62e40b07cbb1ae2022c6220835218b804",
+      "manifest_identity": null,
+      "output": {
+        "source": "mickalide",
+        "status": "STOP_SOURCE_ACCESS_OR_SCHEMA",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "job": 140313552712,
+      "source_job": "audit (mahaut)",
+      "artifact_id": 15172826008,
+      "artifact_digest": "sha256:437833685175fc74c5b2e2f5ebdc430f879c40d764c8f4cfe69b54d20750bd59",
+      "manifest_identity": null,
+      "output": {
+        "source": "mahaut2020",
+        "data_doi": "10.5061/dryad.1jwstqjqh",
+        "status": "SOURCE_ONLY",
+        "title": "Data from: Multiple facets of diversity effects on plant productivity: species richness, functional diversity, species identity and intraspecific competition",
+        "license": "https://spdx.org/licenses/CC0-1.0.html",
+        "version": 5,
+        "version_links": {
+          "self": {
+            "href": "/api/v2/versions/43652"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.1jwstqjqh"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/43652/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/versions/43652/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "data_FE_2019_00762.xlsx",
+            "size": 46596,
+            "digest": "a5cd6cbe063be5a211603415176dd3dba8b4c149d619bc6e4ecd142876a7a2cb",
+            "digestType": "sha-256",
+            "status": "STOP_FILE",
+            "error": "HTTPError: HTTP Error 401: Unauthorized"
+          }
+        ]
+      }
+    },
+    {
+      "job": 140313552769,
+      "source_job": "audit (shen)",
+      "artifact_id": 15172024572,
+      "artifact_digest": "sha256:07c9099c135afae43104cc5546317bd83fd553212baef8bc81843e7cd652745d",
+      "manifest_identity": {
+        "id": 7896204,
+        "doi": "10.5281/zenodo.7896204",
+        "title": "pennekampster/HOI_stability: Data and code for HOI_stability ms",
+        "related_identifiers": [
+          {
+            "identifier": "https://github.com/pennekampster/HOI_stability/tree/release",
+            "relation": "isSupplementTo",
+            "scheme": "url"
+          }
+        ],
+        "creators": [
+          {
+            "name": "Frank Pennekamp",
+            "affiliation": null
+          }
+        ],
+        "file_names": [
+          "pennekampster/HOI_stability-release.zip"
+        ]
+      },
+      "output": {
+        "source": "shen2023",
+        "data_doi": "10.5281/zenodo.7896204",
+        "status": "SOURCE_ONLY",
+        "title": "pennekampster/HOI_stability: Data and code for HOI_stability ms",
+        "record": 7896204,
+        "doi": "10.5281/zenodo.7896204",
+        "related_identifiers": [
+          {
+            "identifier": "https://github.com/pennekampster/HOI_stability/tree/release",
+            "relation": "isSupplementTo",
+            "scheme": "url"
+          }
+        ],
+        "files": [
+          {
+            "name": "pennekampster/HOI_stability-release.zip",
+            "size": 3049300,
+            "checksum": "md5:bfd823577278883d5bc5662110980f89",
+            "status": "VERIFIED",
+            "sha256": "445be66918e9ad8a57f3cc4de9989f6dc08cac67bbfdd35b98460aed98160cc4",
+            "inventory": [
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/.Rhistory",
+                "bytes": 30347
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/.gitignore",
+                "bytes": 59
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/AIC_table_HOIs.csv",
+                "bytes": 5315,
+                "header": [
+                  "Modnames",
+                  "K",
+                  "AIC",
+                  "Delta_AIC",
+                  "ModelLik",
+                  "AICWt",
+                  "LL",
+                  "Cum.Wt",
+                  "growth",
+                  "community"
+                ],
+                "n_columns": 10,
+                "n_rows": 36,
+                "delimiter": ","
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_figures/coef_plot_Colp.png",
+                "bytes": 112213
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_figures/coef_plot_Dexio.png",
+                "bytes": 101943
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_figures/figure1.png",
+                "bytes": 803386
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_figures/figure2.png",
+                "bytes": 82273
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/AIC_table_HOIs.csv",
+                "bytes": 5315,
+                "header": [
+                  "Modnames",
+                  "K",
+                  "AIC",
+                  "Delta_AIC",
+                  "ModelLik",
+                  "AICWt",
+                  "LL",
+                  "Cum.Wt",
+                  "growth",
+                  "community"
+                ],
+                "n_columns": 10,
+                "n_rows": 36,
+                "delimiter": ","
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/Abundance_ANOVA_table.docx",
+                "bytes": 14947
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/Abundance_ANOVA_table.html",
+                "bytes": 48556
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/colp_table.docx",
+                "bytes": 13505
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/dexio_table.docx",
+                "bytes": 13506
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/para_table.docx",
+                "bytes": 13052
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/spath_table.docx",
+                "bytes": 13141
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/MS_tables/spiro_table.docx",
+                "bytes": 13051
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/README.md",
+                "bytes": 16,
+                "mapping_lines": []
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/data/Abundance_replicate_mean.Rdata",
+                "bytes": 14292
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/data/Extinctions.Rdata",
+                "bytes": 1135
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Colp_GR_CD.png",
+                "bytes": 178701
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Colp_GR_CDP.png",
+                "bytes": 174190
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Colp_GR_CDS.png",
+                "bytes": 201823
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Dexio_GR_CD.png",
+                "bytes": 181630
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Dexio_GR_CDP.png",
+                "bytes": 223005
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/Dexio_GR_CDS.png",
+                "bytes": 268742
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CD.docx",
+                "bytes": 14077
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CD.png",
+                "bytes": 103018
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CDP.docx",
+                "bytes": 14686
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CDP.png",
+                "bytes": 145119
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CDS.docx",
+                "bytes": 14717
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Colp_GR_CDS.png",
+                "bytes": 145856
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CD.docx",
+                "bytes": 14083
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CD.png",
+                "bytes": 103840
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CDP.docx",
+                "bytes": 14654
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CDP.png",
+                "bytes": 145606
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CDS.docx",
+                "bytes": 14724
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/other_output/model_output_Dexio_GR_CDS.png",
+                "bytes": 143677
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/scripts/Abundance_analysis.R",
+                "bytes": 9584,
+                "mapping_lines": [
+                  [
+                    9,
+                    "load(here(\"data/Abundance_replicate_mean.Rdata\"))"
+                  ],
+                  [
+                    10,
+                    "replicate_mean <- replicate_mean %>% mutate(species = case_when(predict_spec == \"Colp\" ~ \"Colpidium\","
+                  ],
+                  [
+                    16,
+                    "replicate_mean$treatment <- factor(replicate_mean$treatment, levels=c(\"C+D\", \"C+D+P\", \"C+D+S\", \"C+D+Pd\", \"C+D+P+Pd\", \"C+D+S+Pd\"))"
+                  ],
+                  [
+                    18,
+                    "# expand the dataset to include all dates where no density was detected and hence abundance = 0."
+                  ],
+                  [
+                    19,
+                    "exp_design <- replicate_mean %>% filter(NumDays==1) %>% ungroup %>% select(replicate, treatment, predict_spec, species)"
+                  ],
+                  [
+                    23,
+                    "replicate_mean <- merge(exp_design, replicate_mean, all.x = T)"
+                  ],
+                  [
+                    24,
+                    "replicate_mean$mean.dens.ml <- ifelse(is.na(replicate_mean$mean.dens.ml), 0, replicate_mean$mean.dens.ml)"
+                  ],
+                  [
+                    25,
+                    "replicate_mean$species <- factor(replicate_mean$species, levels=c(\"Colpidium\", \"Dexiostoma\", \"Paramecium\", \"Spirostomum\", \"Spathidium\"))"
+                  ],
+                  [
+                    27,
+                    "ggplot(data=subset(replicate_mean, predict_spec != \"Noise\"), aes(x=NumDays, y=mean.dens.ml+1, group=species, colour=species)) + geom_point() +"
+                  ],
+                  [
+                    28,
+                    "  geom_path(aes(group=species)) + facet_grid(treatment~replicate) + scale_y_continuous(trans = \"sqrt\", breaks=c(0,100,200,400, 600))  + theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), legend.positi"
+                  ],
+                  [
+                    29,
+                    "  ylab(\"Mean density per mL\") + xlab(\"Time (in days)\") + guides(colour = guide_legend(\"Species\")) + scale_x_continuous(breaks=c(0, 10, 20, 30, 40, 50))"
+                  ],
+                  [
+                    32,
+                    "replicate_mean <- replicate_mean %>% filter(predict_spec != \"Noise\") %>% "
+                  ],
+                  [
+                    33,
+                    "  group_by(treatment, replicate, predict_spec) %>% "
+                  ],
+                  [
+                    36,
+                    "#replicate_mean <- bind_rows(mono, replicate_mean)"
+                  ],
+                  [
+                    38,
+                    "replicate_mean <- replicate_mean %>% mutate(predation ="
+                  ],
+                  [
+                    39,
+                    "  case_when(grepl(\"Pd\", treatment) ~ \"yes\","
+                  ],
+                  [
+                    42,
+                    "           case_when(!grepl(\"Pd\", treatment) ~ \"yes\","
+                  ],
+                  [
+                    45,
+                    "           case_when(treatment %in% c(\"C+D\", \"C+D+Pd\") ~ \"none\","
+                  ],
+                  [
+                    46,
+                    "                     treatment %in% c(\"C+D+S\", \"C+D+S+Pd\") ~ \"Spiro\","
+                  ],
+                  [
+                    47,
+                    "                     treatment %in% c(\"C+D+P\", \"C+D+P+Pd\") ~ \"Para\"))"
+                  ],
+                  [
+                    48,
+                    "replicate_mean$competitor <- factor(replicate_mean$competitor, level=c(\"none\", \"Colp/Dexio\", \"Para\", \"Spiro\"))"
+                  ],
+                  [
+                    49,
+                    "replicate_mean$interaction <- ifelse(replicate_mean$predation == \"yes\", \"With predator and competition\", \"only competition\")"
+                  ],
+                  [
+                    51,
+                    "replicate_mean <- replicate_mean %>% mutate(species = case_when(predict_spec == \"Colp\" ~ \"Colpidium\","
+                  ],
+                  [
+                    56,
+                    "                                            treatment2 ="
+                  ],
+                  [
+                    57,
+                    "                                              case_when(treatment == \"C+D\" ~ \"CD\","
+                  ],
+                  [
+                    58,
+                    "                                                        treatment == \"C+D+P\" ~ \"CDP\","
+                  ],
+                  [
+                    59,
+                    "                                                        treatment == \"C+D+S\" ~ \"CDS\","
+                  ],
+                  [
+                    60,
+                    "                                                        treatment == \"C+D+Pd\" ~ \"CD\","
+                  ],
+                  [
+                    61,
+                    "                                                        treatment == \"C+D+P+Pd\" ~ \"CDP\","
+                  ],
+                  [
+                    62,
+                    "                                                        treatment == \"C+D+S+Pd\" ~ \"CDS\"))"
+                  ],
+                  [
+                    63,
+                    "replicate_mean$treatment2 <- factor(replicate_mean$treatment2, levels=c(\"CD\", \"CDP\", \"CDS\"))"
+                  ],
+                  [
+                    65,
+                    "# split competition and predation treatments"
+                  ],
+                  [
+                    66,
+                    "replicate_mean_competition <- subset(replicate_mean, predation == \"no\")"
+                  ],
+                  [
+                    67,
+                    "replicate_mean_competition <- replicate_mean_competition %>% mutate(species ="
+                  ],
+                  [
+                    72,
+                    "                    treatment2 ="
+                  ],
+                  [
+                    73,
+                    "                      case_when(treatment == \"C+D\" ~ \"CD\","
+                  ],
+                  [
+                    74,
+                    "                                treatment == \"C+D+P\" ~ \"CDP\","
+                  ],
+                  [
+                    75,
+                    "                                treatment == \"C+D+S\" ~ \"CDS\"))"
+                  ],
+                  [
+                    78,
+                    "replicate_mean_predation <- subset(replicate_mean, predation == \"yes\")"
+                  ],
+                  [
+                    79,
+                    "replicate_mean_predation$treatment <- factor(replicate_mean_predation$treatment, levels=c(\"C+D+Pd\", \"C+D+P+Pd\", \"C+D+S+Pd\"))"
+                  ]
+                ]
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/scripts/Nonlinear_regression_HOI.R",
+                "bytes": 29397,
+                "mapping_lines": [
+                  [
+                    31,
+                    "load(here(\"data/Abundance_replicate_mean.Rdata\"))"
+                  ],
+                  [
+                    33,
+                    "# expand the dataset to include all dates where no density was detected and hence abundance = 0."
+                  ],
+                  [
+                    34,
+                    "exp_design <- replicate_mean %>% filter(NumDays==1) %>% ungroup %>% dplyr::select(replicate, treatment, predict_spec)"
+                  ],
+                  [
+                    38,
+                    "replicate_mean <- merge(exp_design, replicate_mean, all.x = T)"
+                  ],
+                  [
+                    39,
+                    "replicate_mean$mean.dens.ml <- ifelse(is.na(replicate_mean$mean.dens.ml), 0, replicate_mean$mean.dens.ml)"
+                  ],
+                  [
+                    50,
+                    "  dd <- subset(replicate_mean, treatment == \"C+D\" & NumDays < NumDaysMax & replicate == i)"
+                  ],
+                  [
+                    57,
+                    "  # get time-lagged observations for each species"
+                  ],
+                  [
+                    58,
+                    "  Colp_lagged<-get_lag(x = ddt$Colp, time = ddt$NumDays)"
+                  ],
+                  [
+                    59,
+                    "  Dexio_lagged<-get_lag(x = ddt$Dexio, time = ddt$NumDays)"
+                  ],
+                  [
+                    76,
+                    "  Dexio_mod_dat$replicate <- i"
+                  ],
+                  [
+                    80,
+                    "  Colp_mod_dat$replicate <- i"
+                  ],
+                  [
+                    92,
+                    "Dexio_CD_df$target_species <- \"Dexio\""
+                  ],
+                  [
+                    93,
+                    "Dexio_CD_df$replicate <- rep(1:4, each=3)"
+                  ],
+                  [
+                    95,
+                    "Colp_CD_df$target_species <- \"Colp\""
+                  ],
+                  [
+                    96,
+                    "Colp_CD_df$replicate <- rep(1:4, each=3)"
+                  ],
+                  [
+                    110,
+                    "  dd <- subset(replicate_mean, treatment == \"C+D+P\" & NumDays < NumDaysMax & replicate == i)"
+                  ],
+                  [
+                    116,
+                    "  time<-ddt$NumDays"
+                  ],
+                  [
+                    118,
+                    "  # get time-lagged observations for each species"
+                  ],
+                  [
+                    119,
+                    "  Colp_lagged<-get_lag(x = ddt$Colp, time = ddt$NumDays)"
+                  ],
+                  [
+                    120,
+                    "  Dexio_lagged<-get_lag(x = ddt$Dexio, time = ddt$NumDays)"
+                  ],
+                  [
+                    121,
+                    "  Para_lagged<-get_lag(x = ddt$Para, time = ddt$NumDays)"
+                  ],
+                  [
+                    149,
+                    "  Dexio_mod_dat$replicate <- i"
+                  ],
+                  [
+                    153,
+                    "  Colp_mod_dat$replicate <- i"
+                  ],
+                  [
+                    161,
+                    "Dexio_CDP_df$target_species <- \"Dexio\""
+                  ],
+                  [
+                    162,
+                    "Dexio_CDP_df$replicate <- rep(1:4, each=4)"
+                  ],
+                  [
+                    164,
+                    "Colp_CDP_df$target_species <- \"Colp\""
+                  ],
+                  [
+                    165,
+                    "Colp_CDP_df$replicate <- rep(1:4, each=4)"
+                  ],
+                  [
+                    167,
+                    "Para_CDP_df$target_species <- \"Para\""
+                  ],
+                  [
+                    168,
+                    "Para_CDP_df$replicate <- rep(1:4, each=4)"
+                  ],
+                  [
+                    181,
+                    "  dd <- subset(replicate_mean, treatment == \"C+D+S\" & NumDays < NumDaysMax & replicate == i)"
+                  ],
+                  [
+                    187,
+                    "  time<-ddt$NumDays"
+                  ],
+                  [
+                    189,
+                    "    # get time-lagged observations for each species"
+                  ],
+                  [
+                    190,
+                    "  Colp_lagged<-get_lag(x = ddt$Colp, time = ddt$NumDays)"
+                  ],
+                  [
+                    191,
+                    "  Dexio_lagged<-get_lag(x = ddt$Dexio, time = ddt$NumDays)"
+                  ],
+                  [
+                    192,
+                    "  Spiro_lagged<-get_lag(x = ddt$Spiro, time = ddt$NumDays)"
+                  ],
+                  [
+                    219,
+                    "  Dexio_mod_dat$replicate <- i"
+                  ],
+                  [
+                    222,
+                    "  Colp_mod_dat$replicate <- i"
+                  ],
+                  [
+                    228,
+                    "Dexio_CDS_df$target_species <- \"Dexio\""
+                  ],
+                  [
+                    229,
+                    "Dexio_CDS_df$replicate <- rep(1:4, each=4)"
+                  ],
+                  [
+                    231,
+                    "Colp_CDS_df$target_species <- \"Colp\""
+                  ]
+                ]
+              },
+              {
+                "name": "pennekampster-HOI_stability-6df03dc/scripts/Survival_analysis.R",
+                "bytes": 6997,
+                "mapping_lines": [
+                  [
+                    6,
+                    "load(here(\"data/Extinctions.Rdata\"))"
+                  ],
+                  [
+                    8,
+                    "Extinction <- Extinction %>% group_by(treatment, predict_spec, replicate) %>% summarize(extincation_days = mean(extincation_days, na.rm = T))"
+                  ],
+                  [
+                    11,
+                    "Extinction$Predation <- ifelse(grepl(\"Pd\", Extinction$treatment), \"yes\", \"no\")"
+                  ],
+                  [
+                    12,
+                    "Extinction$Competition <- ifelse(!grepl(\"Pd\", Extinction$treatment), \"yes\", \"no\")"
+                  ],
+                  [
+                    14,
+                    "Extinction$Competitor <- ifelse(Extinction$treatment %in% c(\"C+D\", \"C+D+Pd\"), \"none\", ifelse(Extinction$treatment %in% c(\"C+D+P\", \"C+D+P+Pd\"), \"P\", \"S\"))"
+                  ],
+                  [
+                    31,
+                    "           legend.title = \"treatment\","
+                  ],
+                  [
+                    54,
+                    "           legend.title = \"treatment\","
+                  ],
+                  [
+                    81,
+                    "           legend.title = \"treatment\","
+                  ],
+                  [
+                    108,
+                    "           legend.title = \"treatment\","
+                  ],
+                  [
+                    139,
+                    "           legend.title = \"treatment\","
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

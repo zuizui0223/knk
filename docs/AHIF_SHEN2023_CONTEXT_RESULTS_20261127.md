@@ -1,0 +1,32 @@
+# Shen 2023: predator × competitor contextual portability — verified 2026-11-27
+
+Publication 10.1002/ece3.10502, author release DOI 10.5281/zenodo.7896204. Zenodo manifest and 3,049,300-byte ZIP verified in run 45940531744: SHA256 445be66918e9ad8a57f3cc4de9989f6dc08cac67bbfdd35b98460aed98160cc4. Author Git commit 6df03dc4f0a8eb4efca99d729e23e917a06b1812; replicate-mean Rdata Git blob 62161977bd93a0ac73b329abf23d0119e1206e05 (SHA256 62e279193c4b6a29964817a5f8bcb9442f50759d0163f1aca0bfeafa380d6d97), method script 420a3ea2b9340c5d26f5ef67d8281864ae06465a (SHA256 ad2cc0d1cc8e174ca06abbaeb0eab93318e322a09848e9be1c5fba050e8d272d). Source gate identity initially stopped on a title-token heuristic; exact DOI, authors and GitHub release verified before source scoring. 
+Prescore 4880be2fa5b81a193751c361695918a71466277d. First score run 45940700521 SUCCESS, job 140314088536, artifact 15172736531 SHA256 81010e1658540351102a6e48ac04aadb52388bb5638bc4e653ec4078f9e47ded. Article methods checked before viewing scores: predators added on days 4 and 8, hence amendment 8107c9db4d7c5a322e0cdfea09b989a2ef6c86d8 freezes a separate day>=9 sensitivity, not replacement of the original arm-assignment analysis. Run 45940785495 SUCCESS, job 140314350582, commit 96deaa110d7a9006b1e910df9f6e70cd859bce9c, artifact 15173081157 SHA256 07055ec11c15e1a011680810240a6bc006c7434afe66a2b0e48119e59c4a60c4. All initial audit/results replayed exactly. 
+
+## Design and support
+24 physical cultures (6 treatment arms x 4), 1322 deposited replicate-mean rows, 807 focal density records. Focal species Colpidium striatum, Dexiostoma campylum; additional competitors Paramecium caudatum or Spirostomum teres; predator Spathidium sp. No monoculture source rows, so contrast is finite additional-agent response relative to focal pair CD, not Castledine pair-alone effect. Each consumer introduced from stock at nominal 10% carrying capacity; actual day1 means differ between future predator and no-predator arms. No assumption of exact initial density equality. 
+Original protocol sampled every other day to day53 and assigns zero when no detection. Deposited table lacks all observed rows for 172 culture-days, especially in predator treatments; cannot independently distinguish zero detection from unrecorded sample at entire-culture-day level. Primary restricts all cultures to common evidence-of-sampling dates 3,5,7,9,11,13,15,17. Within sampled culture-day, 52 missing focal records receive zero following author's convention; none of observed focal rows in those dates were explicitly zero. Strict-complete focal sensitivity retains days 3,5,7,9; early duplicates primary and late STOP (no common dates). All windows use fixed primary CD normalization, 281.674 and 345.353 individuals/mL for Colp and Dexio. Post-day8 sensitivity days9,11,13,15,17. Selective temporal support prevents claims about entire 53-day trajectory or long-term persistence.
+
+## Finite marginal response 
+Normalized density differences in four shared factorial squares (two focal species × two added competitors). Each square contributes two related marginal comparisons, not independent effects. Difference-in-differences positive in all four squares in primary and after day8. 
+
+| Focal | Competitor added | Without predator | With predator | Difference, post-day8 |
+|---|---|---:|---:|---:|
+| Colp | P | -.470853 | +.136101 | +.606955 |
+| Colp | S | -.171446 | +.022811 | +.194257 |
+| Dexio | P | -.539568 | +.125322 | +.664890 |
+| Dexio | S | -.415053 | +.002241 | +.417294 |
+
+These are post-day8 marginal differences in common-CD-normalized mean density, not percentages relative to the predator-arm starting density or causal coefficients. P addition reverses sign for both focal species in primary, strict, and post-addition window; S reversal post-addition is small and unresolved by .05 threshold. All four predator marginal responses after day8 remain negative; magnitude attenuates with additional competitor. Primary 4/8 opposite, 4/8 same; .05 threshold 2 opposite,4 same,2 unresolved. Strict 5 opposite,3 same; threshold 4 opposite,2 same,2 unresolved, different date support including pre-introduction. Post-day8 4 opposite,4 same; threshold 2 opposite,4 same,2 unresolved. No causal interaction sign or separate species-specific growth parameter inferred; day1 differences, unmeasured food dynamics, shared controls and time support remain limitations. Authors already showed predator-related buffering in original paper; novel diagnostic is standardized marginal sign portability and matched disjoint-culture forecast, not discovery of original trophic mechanism.
+
+## Held-culture transfer
+256 fixed permutations, both orientations, 512 valid folds, 4096 dependent panel-fold outcomes per scored lane, two train and two held cultures per arm. Given held background density, predict held target with training marginal from baseline CD. Error normalized by training focal CD. Same split seeds and complete support. 
+| Window | No-change | Additive | Multiplicative |
+|---|---:|---:|---:|
+| Common days3–17 | .150096 | .348473 | .178554 |
+| Strict days3–9 | .135498 | .319321 | .220834 |
+| After both introductions days9–17 | .224529 | .208514 | .136475 |
+
+Prediction benefit depends on window: both transfer forecasts lose to no-change across common days3–17 and strict days3–9, both improve after day8, multiplicative lowers mean loss by about 39.22% relative to no-change in that window. This is not a richness-only effect or proof that earlier negative results were wrong. Conditional forecasts using observed held background, repeated folds dependent, no iid SE/p-values or formal meta-analysis. 
+
+Receipts: validation/ahif_v1/shen2023_context_initial_summary_20261127.json and shen2023_context_summary_20261127.json; 32 timing-lane × focal/competitor/agent rows in database/ahif_mechanism_v0/shen_context_factorial_effects_20261127.csv, including duplicated early/primary. Separate from Castledine finite pair-alone tables. Existing validated v0.7 SQLite (run 45940487030, artifact 15172313192 SHA256 16baafefe72853bd6880921dfb043b2e198b92d5b5b4d6815b0b7f80114f305c) unchanged by Shen; new result CSV registered, not yet integrated into SQLite. Plant Mahaut official version5 workbook 46,596 bytes, SHA256 a5cd6cbe063be5a211603415176dd3dba8b4c149d619bc6e4ecd142876a7a2cb, access 401; no outcome. Mickalide Illinois Data Bank 403; no outcome. No bypass; no formal meta-analysis or manuscript submission.

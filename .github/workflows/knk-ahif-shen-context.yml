@@ -1,0 +1,42 @@
+name: AHIF Shen protist context portability
+on:
+  push:
+    branches: [analysis/ahif-context-cross-taxa-20261127]
+    paths:
+      - 'benchmarks/export_ahif_shen2023.R'
+      - 'benchmarks/score_ahif_shen2023_context.py'
+      - '.github/workflows/knk-ahif-shen-context.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+      - run: python -m pip install numpy
+      - name: Acquire pinned author data and method script
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/shen"
+          base=https://raw.githubusercontent.com/pennekampster/HOI_stability/6df03dc4f0a8eb4efca99d729e23e917a06b1812
+          curl -fL --max-time 60 "$base/data/Abundance_replicate_mean.Rdata" -o "$RUNNER_TEMP/shen/density.Rdata"
+          curl -fL --max-time 60 "$base/scripts/Abundance_analysis.R" -o "$RUNNER_TEMP/shen/method.R"
+          test "$(git hash-object "$RUNNER_TEMP/shen/density.Rdata")" = 62161977bd93a0ac73b329abf23d0119e1206e05
+          test "$(git hash-object "$RUNNER_TEMP/shen/method.R")" = 420a3ea2b9340c5d26f5ef67d8281864ae06465a
+          sha256sum "$RUNNER_TEMP/shen/"*
+      - run: Rscript benchmarks/export_ahif_shen2023.R "$RUNNER_TEMP/shen/density.Rdata" "$RUNNER_TEMP/shen/density.csv"
+      - run: python -m benchmarks.score_ahif_shen2023_context --csv "$RUNNER_TEMP/shen/density.csv" --out "$RUNNER_TEMP/derived/result.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shen-protist-context-derived
+          path: ${{ runner.temp }}/derived/result.json
+          retention-days: 30
