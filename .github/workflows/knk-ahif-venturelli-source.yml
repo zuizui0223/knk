@@ -1,0 +1,22 @@
+name: AHIF Venturelli experimental source gate
+on:
+  push:
+    branches: [analysis/ahif-venturelli-net-effects-20261127]
+    paths:
+      - 'benchmarks/probe_ahif_venturelli2018.py'
+      - '.github/workflows/knk-ahif-venturelli-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.probe_ahif_venturelli2018 --out "$RUNNER_TEMP/derived/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: venturelli-source-audit-only
+          path: ${{ runner.temp }}/derived/audit.json
+          retention-days: 30
