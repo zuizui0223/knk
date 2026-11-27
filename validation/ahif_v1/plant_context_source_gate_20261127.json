@@ -1,0 +1,71 @@
+{
+  "run": 45946645514,
+  "code_commit": "3cdce78ff6da8c49f3b7823fc3b6df533180cfc9",
+  "results": [
+    {
+      "job": 140332751570,
+      "artifact_id": 15174694492,
+      "artifact_digest": "sha256:26a057bd5b3d34a3ffd133b77e0b881b38d1d1ac16e6534afda9f56e7106d9c0",
+      "output": {
+        "status": "SOURCE_ONLY_NO_OUTCOME",
+        "source": "reynaert2023",
+        "record": 10167759,
+        "doi": "10.5281/zenodo.10167759",
+        "title": "Data from: Direct and higher-order interactions in plant communities under increasing weather persistence",
+        "files": [
+          {
+            "name": "Reynaertetal_Oikos_2023.xlsx",
+            "size": 118145,
+            "checksum": "md5:52033ebf9ab3918655ef70961d82c7ff",
+            "status": "VERIFIED",
+            "sha256": "7f51f1c3cfbd0400d7d60097df00fbf91dd60e3d98dcc5b49fcea5ce2bbd5d54",
+            "inventory": [
+              {
+                "name": "Reynaertetal_Oikos_2023.xlsx",
+                "bytes": 118145,
+                "sheets": [
+                  {
+                    "name": "README_Reynaertetal_2023_Oikos",
+                    "rows": 21,
+                    "cols": 2,
+                    "first_row": [
+                      "Explanatory file of data with publication 'Direct and higher-order interactions in plant communities",
+                      null
+                    ]
+                  },
+                  {
+                    "name": "BM_per_species",
+                    "rows": 2307,
+                    "cols": 10,
+                    "first_row": [
+                      "Date",
+                      "Fati",
+                      "Pot",
+                      "Treatment",
+                      "Fctgrp",
+                      "Species",
+                      "Letter",
+                      "Days",
+                      "DW",
+                      "Dry weight (g) (corrected for # of individuals)"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "job": 140332751860,
+      "artifact_id": 15174972334,
+      "artifact_digest": "sha256:857c1edeb611351d54aeedef02df5a267b08b71f96697fe7d1bdf3544b656a67",
+      "output": {
+        "source": "yang",
+        "status": "STOP_SOURCE_ACCESS_OR_SCHEMA",
+        "error": "AssertionError: "
+      }
+    }
+  ]
+}
