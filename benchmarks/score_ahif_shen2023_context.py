@@ -81,11 +81,11 @@ def main():
     mat,common,strict,audit=load(a.csv)
     print("SHEN_DENSITY_AUDIT",json.dumps(audit),flush=True)
     x=mat(common);ref=x[:,0].mean((1,2));res={}
-    for lane,ds in (("primary_common",common),("early",[d for d in common if d<=27]),("late",[d for d in common if d>=29]),("strict_complete_focals",strict)):
+    for lane,ds in (("primary_common",common),("early",[d for d in common if d<=27]),("late",[d for d in common if d>=29]),("strict_complete_focals",strict),("after_second_predator_addition",[d for d in common if d>=9])):
         if len(ds)<3:res[lane]={"status":"STOP_INSUFFICIENT_DATES","dates":ds};continue
         xx=mat(ds);r=rows_for(xx,ds,ref)
         res[lane]={"status":"SCORED_DESCRIPTIVE","dates":ds,"marginals":r,"counts":dict(Counter(v["direction"] for v in r)),"counts_threshold_005":dict(Counter(v["direction_threshold_005"] for v in r))}
-        if lane in ("primary_common","strict_complete_focals"):res[lane]["forecast"]=forecast(xx)
+        if lane in ("primary_common","strict_complete_focals","after_second_predator_addition"):res[lane]["forecast"]=forecast(xx)
     z={"status":"FACTORIAL_CONTEXT_NOT_PAIR_ALONE_NOT_META","source_commit":"6df03dc4f0a8eb4efca99d729e23e917a06b1812","publication":"10.1002/ece3.10502","audit":audit,"results":res}
     a.out.parent.mkdir(parents=True,exist_ok=True);a.out.write_text(json.dumps(z,indent=2,allow_nan=False)+"\n")
     print("SHEN_CONTEXT_RESULT",json.dumps(z,allow_nan=False),flush=True)
