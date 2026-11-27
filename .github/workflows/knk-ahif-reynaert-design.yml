@@ -1,0 +1,23 @@
+name: AHIF Reynaert plant design gate
+on:
+  push:
+    branches: [analysis/ahif-context-baseline-plant-20261127]
+    paths:
+      - 'benchmarks/probe_ahif_reynaert2023_design.py'
+      - '.github/workflows/knk-ahif-reynaert-design.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install openpyxl
+      - run: python -m benchmarks.probe_ahif_reynaert2023_design --out "$RUNNER_TEMP/derived/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reynaert-plant-design-audit
+          path: ${{ runner.temp }}/derived/audit.json
+          retention-days: 30

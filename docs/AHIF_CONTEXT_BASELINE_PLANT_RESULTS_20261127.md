@@ -1,0 +1,24 @@
+# Context portability baseline diagnostic and plant source boundary — 2026-11-27
+
+Frozen parent PR24 cce3de2f41adc0bfa5e77a40165ac6b87d34b2f6. Prescore c153f557f75f3109b93c4e4b0c63e7985c490b3c. Registry v0.8 [run 45946692452](https://github.com/zuizui0223/knk/actions/runs/45946692452) SUCCESS at 06fc86188fd4340ea690aad7b312ab102021f5d7, artifact 15174982390 SHA256 6710935021e57c05c5fe5023f26c50c4fc8094151981748f0796781d1fc36bf3. Exact v0.7 artifact verified, prior table counts unchanged, integrity/FK pass, 1 new factorial source, 5 lanes (late STOP, early duplicates primary), 32 dependent marginal rows, 24 forecast rows. No signed coefficients or meta-eligible effects.
+
+## Shen baseline sensitivity
+Successful [run 45946791560](https://github.com/zuizui0223/knk/actions/runs/45946791560) at 87dbcbf1638795a177ff0233fa67b1ecf4828065, job 140333209258, artifact 15174089797 SHA256 a6d88b07489f713d807ecfa49469f6fa9a3f8f17d547710cd168cbda5ac6d938. Earlier run 45946603196 stopped at serialization of NumPy bool, no outcome change. Same verified source hashes and original source audit, day3–17 and day9–17 scores/held-culture forecasts replayed. Same 24 cultures, 5 dates after second predator introduction, no additional zero fills beyond prior rule. All eight dependent directions across four factorial squares.
+
+| Diagnostic | opposite | same | opposite at .05 | same at .05 | unresolved at .05 |
+|---|---:|---:|---:|---:|---:|
+| raw post-day8 | 4 | 4 | 2 | 4 | 2 |
+| day1 pre-predator, after competitor assignment | 1 | 7 | 0 | 6 | 2 |
+| day3 pre-predator | 4 | 4 | 3 | 3 | 2 |
+| change from day1 | 4 | 4 | 4 | 3 | 1 |
+| change from day3 | 0 | 8 | 0 | 6 | 2 |
+| mean of culture post/day1 ratios | 4 | 4 | 4 | 3 | 1 |
+| ratio of arm mean post/day1 | 4 | 4 | 4 | 2 | 2 |
+| within-arm slope ANCOVA | 3 | 5 | 2 | 4 | 2 |
+
+Raw and additive change contrasts use same primary CD denominator. Ratios are dimensionless fold changes, .05 is not the same biological scale. Day1 code label 'pre_assignment' is erroneous for competitor treatment: actual day1 is after consumer assignment, before predator introduction. Day3 is also after competitor assignment; it is not a pre-competitor baseline. Pre-predator differences already large, especially Colp P factorial square: raw day3 difference-in-differences .702612 versus .606955 post day8. Dexio P .509511 versus .664890. Day3-to-post difference-in-differences −.095657/+ .155378, respective competitor marginals without/with assigned predator +.214954/+ .119297 for Colp, +.005055/+ .160433 for Dexio. Both no sign reversal, Dexio near-zero base unresolved at .05. The four-square pattern of raw reversals cannot establish predator-caused reversal: prior trajectories differ, and raw results fail one important pre-exposure change diagnostic. Subtracting day3 also removes early competitor responses and changes the estimand; not a definitive causal correction. ANCOVA slopes .220925 and .240326; day1 range 26.156–331.410; only Dexio-S has common baseline range across all four arms. Both P squares lack overlap, hence ANCOVA reversal is extrapolative, not validation. No independent replication, no p-values, no assertion of direction reversal as a biological mechanism. Keep prior positive raw results and negative sensitivity together. Exact JSON shen2023_baseline_summary_20261127.json and separate 64-row diagnostic CSV, not yet in v0.8.
+
+## Plant source gates
+[Source run 45946645514](https://github.com/zuizui0223/knk/actions/runs/45946645514): Reynaert DOI 10.1111/oik.10128 (published online 2023, 2024 issue), exact author Zenodo 10167759 workbook 118145 bytes, MD5 52033ebf9ab3918655ef70961d82c7ff, SHA256 7f51f1c3cfbd0400d7d60097df00fbf91dd60e3d98dcc5b49fcea5ce2bbd5d54. Yang Figshare v5 identity/schema assertion stopped; no data scored. Cheng 2025 data on request; Mahaut still 401; no contact or bypass.
+[Design run 45946879018](https://github.com/zuizui0223/knk/actions/runs/45946879018) success at a44a42b760e93f246cff7a1da5b7f547a74963bb, artifact 15174124488 SHA256 d9886865e2e2a76641d9634f89916d4e4f22d0e4971b96129d4e64ee99d30efb. Initial run 45946830065 failed on two fully blank worksheet rows, removed after blank-row audit only. 2304 nonempty rows, 192 unique Fati×Pot, all 12 species in EVERY pot, six FATI plots (1,2,5,9,11,12), 16 weather/start combinations. Four missing corrected biomass values. All samples share composition; cannot identify finite species-addition effects from this table, regardless of original paper's model-based HOIs. Weather contrast has distinct short/long duration plot sets; no unqualified cross-duration effect inference. STOP same marginal estimand; source retained for weather/context or other spatial-design analyses after verifying additional metadata. No plant outcome scored. 
+No new independent empirical result beyond same-study Shen diagnostics, no formal meta-analysis or manuscript changes. 

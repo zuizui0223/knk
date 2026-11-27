@@ -1,0 +1,812 @@
+{
+  "status": "POST_SCORE_BASELINE_DIAGNOSTIC_NOT_CAUSAL_NOT_META",
+  "dates": [
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "n_cultures": 24,
+  "source_replay": true,
+  "normalization_CD": {
+    "Colp": 281.67353658536587,
+    "Dexio": 345.3530081300812
+  },
+  "day1_range": [
+    26.1559523809524,
+    331.409864498645
+  ],
+  "within_arm_slopes": {
+    "Colp": 0.22092543060785044,
+    "Dexio": 0.24032599911333966
+  },
+  "ANCOVA_support": [
+    {
+      "focal": "Colp",
+      "competitor": "P",
+      "max_of_min": 142.638265582656,
+      "min_of_max": 99.5383589399489,
+      "common_support": false,
+      "grand_mean_day1": 137.62825275096705,
+      "grand_mean_inside_all_four_arms": false
+    },
+    {
+      "focal": "Colp",
+      "competitor": "S",
+      "max_of_min": 151.639891598916,
+      "min_of_max": 99.5383589399489,
+      "common_support": false,
+      "grand_mean_day1": 137.62825275096705,
+      "grand_mean_inside_all_four_arms": false
+    },
+    {
+      "focal": "Dexio",
+      "competitor": "P",
+      "max_of_min": 139.712737127371,
+      "min_of_max": 115.890849294934,
+      "common_support": false,
+      "grand_mean_day1": 162.98883828626194,
+      "grand_mean_inside_all_four_arms": false
+    },
+    {
+      "focal": "Dexio",
+      "competitor": "S",
+      "max_of_min": 125.085094850949,
+      "min_of_max": 169.830677506775,
+      "common_support": true,
+      "grand_mean_day1": 162.98883828626194,
+      "grand_mean_inside_all_four_arms": true
+    }
+  ],
+  "results": {
+    "raw_post": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.47085340327356945,
+          "background_marginal": 0.13610131211249,
+          "difference": 0.6069547153860595,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.8395875465008865,
+          "background_marginal": -0.23263283111482708,
+          "difference": 0.6069547153860595,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.1714461671618437,
+          "background_marginal": 0.02281057499481383,
+          "difference": 0.1942567421566575,
+          "direction": "opposite",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.8395875465008865,
+          "background_marginal": -0.645330804344229,
+          "difference": 0.19425674215665756,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.5395680850954767,
+          "background_marginal": 0.12532159563916784,
+          "difference": 0.6648896807346445,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.7835454360819185,
+          "background_marginal": -0.11865575534727407,
+          "difference": 0.6648896807346445,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.4150525372648043,
+          "background_marginal": 0.002241433847026797,
+          "difference": 0.4172939711118311,
+          "direction": "opposite",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.7835454360819185,
+          "background_marginal": -0.3662514649700875,
+          "difference": 0.41729397111183103,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "opposite": 4,
+        "same": 4
+      },
+      "counts_threshold_005": {
+        "opposite": 2,
+        "same": 4,
+        "unresolved": 2
+      }
+    },
+    "day1_pre_assignment_diagnostic": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.03765011359948056,
+          "background_marginal": -0.021617211904966904,
+          "difference": 0.016032901694513657,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.3466927133784569,
+          "background_marginal": -0.33065981168394326,
+          "difference": 0.016032901694513657,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": 0.17463527492738795,
+          "background_marginal": 0.09514839275985343,
+          "difference": -0.07948688216753452,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.3466927133784569,
+          "background_marginal": -0.42617959554599144,
+          "difference": -0.07948688216753452,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.12709402405582337,
+          "background_marginal": -0.10906052218733925,
+          "difference": 0.018033501868484125,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.23100964416625985,
+          "background_marginal": -0.21297614229777573,
+          "difference": 0.018033501868484125,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.1440091227498579,
+          "background_marginal": 0.02820370254643617,
+          "difference": 0.17221282529629406,
+          "direction": "opposite",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.23100964416625985,
+          "background_marginal": -0.058796818869965795,
+          "difference": 0.17221282529629406,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "same": 7,
+        "opposite": 1
+      },
+      "counts_threshold_005": {
+        "unresolved": 2,
+        "same": 6
+      }
+    },
+    "day3_pre_predator_diagnostic": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.6858074068807977,
+          "background_marginal": 0.016804465464151597,
+          "difference": 0.7026118723449493,
+          "direction": "opposite",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.5795654091661882,
+          "background_marginal": 0.12304646317876111,
+          "difference": 0.7026118723449493,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.18282442430446266,
+          "background_marginal": -0.06964872789659587,
+          "difference": 0.11317569640786679,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.5795654091661882,
+          "background_marginal": -0.46638971275832136,
+          "difference": 0.11317569640786679,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.5446227362819359,
+          "background_marginal": -0.035111245199829555,
+          "difference": 0.5095114910821064,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.452472102305122,
+          "background_marginal": 0.057039388776984334,
+          "difference": 0.5095114910821064,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.7495044934973248,
+          "background_marginal": -0.18014378934958686,
+          "difference": 0.569360704147738,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.452472102305122,
+          "background_marginal": 0.11688860184261596,
+          "difference": 0.569360704147738,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        }
+      ],
+      "counts": {
+        "opposite": 4,
+        "same": 4
+      },
+      "counts_threshold_005": {
+        "unresolved": 2,
+        "opposite": 3,
+        "same": 3
+      }
+    },
+    "change_from_day1": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.4332032896740888,
+          "background_marginal": 0.1577185240174569,
+          "difference": 0.5909218136915457,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.49289483312242943,
+          "background_marginal": 0.09802698056911621,
+          "difference": 0.5909218136915456,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.3460814420892313,
+          "background_marginal": -0.07233781776503956,
+          "difference": 0.27374362432419175,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.49289483312242943,
+          "background_marginal": -0.2191512087982377,
+          "difference": 0.27374362432419175,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.41247406103965334,
+          "background_marginal": 0.2343821178265071,
+          "difference": 0.6468561788661604,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.5525357919156588,
+          "background_marginal": 0.0943203869505016,
+          "difference": 0.6468561788661604,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.27104341451494657,
+          "background_marginal": -0.02596226869940932,
+          "difference": 0.24508114581553725,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.5525357919156588,
+          "background_marginal": -0.3074546461001216,
+          "difference": 0.24508114581553725,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "opposite": 4,
+        "same": 4
+      },
+      "counts_threshold_005": {
+        "opposite": 4,
+        "same": 3,
+        "unresolved": 1
+      }
+    },
+    "change_from_day3": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": 0.21495400360722824,
+          "background_marginal": 0.11929684664833845,
+          "difference": -0.0956571569588898,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.26002213733469826,
+          "background_marginal": -0.3556792942935881,
+          "difference": -0.09565715695888982,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": 0.011378257142619114,
+          "background_marginal": 0.09245930289140963,
+          "difference": 0.08108104574879052,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.26002213733469826,
+          "background_marginal": -0.17894109158590776,
+          "difference": 0.08108104574879049,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": 0.005054651186459369,
+          "background_marginal": 0.16043284083899745,
+          "difference": 0.15537818965253808,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.33107333377679665,
+          "background_marginal": -0.17569514412425857,
+          "difference": 0.15537818965253808,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": 0.33445195623252044,
+          "background_marginal": 0.18238522319661366,
+          "difference": -0.1520667330359068,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.33107333377679665,
+          "background_marginal": -0.48314006681270344,
+          "difference": -0.1520667330359068,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "same": 8
+      },
+      "counts_threshold_005": {
+        "same": 6,
+        "unresolved": 2
+      }
+    },
+    "ratio_of_culture_post_to_day1": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.7212003223149275,
+          "background_marginal": 0.9067683054960596,
+          "difference": 1.627968627810987,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -1.1113258296262287,
+          "background_marginal": 0.5166427981847583,
+          "difference": 1.627968627810987,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.5244836559447823,
+          "background_marginal": -0.05938337285053508,
+          "difference": 0.4651002830942472,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -1.1113258296262287,
+          "background_marginal": -0.6462255465319815,
+          "difference": 0.4651002830942472,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.7690282844551207,
+          "background_marginal": 0.5367125545903477,
+          "difference": 1.3057408390454683,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -1.1957380627048348,
+          "background_marginal": 0.1100027763406336,
+          "difference": 1.3057408390454683,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.46960703179806784,
+          "background_marginal": -0.03141924202102592,
+          "difference": 0.4381877897770419,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -1.1957380627048348,
+          "background_marginal": -0.7575502729277929,
+          "difference": 0.438187789777042,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "opposite": 4,
+        "same": 4
+      },
+      "counts_threshold_005": {
+        "opposite": 4,
+        "same": 3,
+        "unresolved": 1
+      }
+    },
+    "ratio_of_arm_means_post_to_day1": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.7016225531128055,
+          "background_marginal": 0.5612502818721686,
+          "difference": 1.2628728349849743,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -1.10868779644955,
+          "background_marginal": 0.1541850385354242,
+          "difference": 1.2628728349849743,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.5463377312059499,
+          "background_marginal": -0.04494826514272199,
+          "difference": 0.5013894660632279,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -1.10868779644955,
+          "background_marginal": -0.6072983303863221,
+          "difference": 0.501389466063228,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.6882691685680562,
+          "background_marginal": 0.5326297634729535,
+          "difference": 1.2208989320410097,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -1.0891580757164754,
+          "background_marginal": 0.13174085632453436,
+          "difference": 1.2208989320410097,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.4151352832808892,
+          "background_marginal": -0.016928247369586813,
+          "difference": 0.3982070359113024,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -1.0891580757164754,
+          "background_marginal": -0.690951039805173,
+          "difference": 0.39820703591130235,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "opposite": 4,
+        "same": 4
+      },
+      "counts_threshold_005": {
+        "opposite": 4,
+        "unresolved": 2,
+        "same": 2
+      }
+    },
+    "within_arm_common_slope_ANCOVA": {
+      "rows": [
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.4625355357141698,
+          "background_marginal": 0.14087710396113592,
+          "difference": 0.6034126396753057,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.7629943095091468,
+          "background_marginal": -0.15958166983384114,
+          "difference": 0.6034126396753057,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.21002754047449723,
+          "background_marginal": 0.0017898753526983113,
+          "difference": 0.21181741582719554,
+          "direction": "opposite",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Colp",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.7629943095091468,
+          "background_marginal": -0.5511768936819513,
+          "difference": 0.2118174158271955,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "competitor",
+          "base_marginal": -0.5090240867829261,
+          "background_marginal": 0.1515316745976627,
+          "difference": 0.6605557613805888,
+          "direction": "opposite",
+          "direction_threshold_005": "opposite"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "P",
+          "added_agent": "predator",
+          "base_marginal": -0.7280278125428451,
+          "background_marginal": -0.0674720511622563,
+          "difference": 0.6605557613805888,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "competitor",
+          "base_marginal": -0.38044340095850915,
+          "background_marginal": -0.004536649146140936,
+          "difference": 0.3759067518123682,
+          "direction": "same",
+          "direction_threshold_005": "unresolved"
+        },
+        {
+          "focal": "Dexio",
+          "competitor": "S",
+          "added_agent": "predator",
+          "base_marginal": -0.7280278125428451,
+          "background_marginal": -0.3521210607304769,
+          "difference": 0.3759067518123682,
+          "direction": "same",
+          "direction_threshold_005": "same"
+        }
+      ],
+      "counts": {
+        "opposite": 3,
+        "same": 5
+      },
+      "counts_threshold_005": {
+        "opposite": 2,
+        "same": 4,
+        "unresolved": 2
+      }
+    }
+  },
+  "timing_label_correction": "day1_pre_assignment_diagnostic is day1 after competitor assignment but before predator introduction; preserve original machine key, not pretreatment for competitor",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45946791560",
+  "code_commit": "87dbcbf1638795a177ff0233fa67b1ecf4828065",
+  "artifact_id": 15174089797,
+  "artifact_digest": "sha256:a6d88b07489f713d807ecfa49469f6fa9a3f8f17d547710cd168cbda5ac6d938",
+  "failed_run": 45946603196,
+  "failed_reason": "NumPy boolean JSON serialization; no score changes"
+}

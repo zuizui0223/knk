@@ -1,0 +1,30 @@
+name: AHIF factorial context registry v0.8
+on:
+  push:
+    branches: [analysis/ahif-context-baseline-plant-20261127]
+    paths:
+      - 'benchmarks/build_ahif_factorial_context_registry_v08.py'
+      - '.github/workflows/knk-ahif-factorial-context-v08.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Acquire exact frozen v0.7 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --max-time 120 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/15172313192/zip" -o "$RUNNER_TEMP/v07.zip"
+          echo "16baafefe72853bd6880921dfb043b2e198b92d5b5b4d6815b0b7f80114f305c  $RUNNER_TEMP/v07.zip" | sha256sum -c -
+      - run: python -m benchmarks.build_ahif_factorial_context_registry_v08 --base-zip "$RUNNER_TEMP/v07.zip" --out "$RUNNER_TEMP/registry"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ahif-factorial-context-registry-v08
+          path: ${{ runner.temp }}/registry/
+          retention-days: 30
