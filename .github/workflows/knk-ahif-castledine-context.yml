@@ -1,0 +1,22 @@
+name: AHIF Castledine context portability
+on:
+  push:
+    branches: [analysis/ahif-venturelli-net-effects-20261127]
+    paths:
+      - 'benchmarks/score_ahif_castledine2024_context.py'
+      - '.github/workflows/knk-ahif-castledine-context.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m benchmarks.score_ahif_castledine2024_context --out "$RUNNER_TEMP/derived"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: castledine-finite-context-derived
+          path: ${{ runner.temp }}/derived/
+          retention-days: 30

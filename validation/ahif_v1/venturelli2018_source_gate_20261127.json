@@ -1,0 +1,722 @@
+{
+  "status": "SOURCE_ONLY_NO_SCORES",
+  "publication": "10.15252/msb.20178157",
+  "files": {
+    "EV1": {
+      "status": "VERIFIED_XLSX",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fmsb.20178157/MediaObjects/44320_2018_BFMSB178157_MOESM2_ESM.xlsx",
+      "bytes": 15594,
+      "sha256": "66a1cdce97ae896068cd8fe0a208e4abd3872e3b75be61ddc2858298e4b8377e",
+      "sheets": [
+        {
+          "sheet": "PW1",
+          "rows": 66,
+          "cells": 528,
+          "cell_types": {
+            "s": 102,
+            "n": 426
+          },
+          "formulas": 0,
+          "header_preview": [
+            [
+              [
+                "A1",
+                "BHCA'"
+              ],
+              [
+                "B1",
+                "numeric"
+              ],
+              [
+                "C1",
+                "numeric"
+              ],
+              [
+                "D1",
+                "numeric"
+              ],
+              [
+                "E1",
+                "numeric"
+              ],
+              [
+                "F1",
+                "numeric"
+              ],
+              [
+                "G1",
+                "numeric"
+              ],
+              [
+                "H1",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A2",
+                "    'BUBH'"
+              ],
+              [
+                "B2",
+                "numeric"
+              ],
+              [
+                "C2",
+                "numeric"
+              ],
+              [
+                "D2",
+                "numeric"
+              ],
+              [
+                "E2",
+                "numeric"
+              ],
+              [
+                "F2",
+                "numeric"
+              ],
+              [
+                "G2",
+                "numeric"
+              ],
+              [
+                "H2",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A3",
+                "    'PCBH'"
+              ],
+              [
+                "B3",
+                "numeric"
+              ],
+              [
+                "C3",
+                "numeric"
+              ],
+              [
+                "D3",
+                "numeric"
+              ],
+              [
+                "E3",
+                "numeric"
+              ],
+              [
+                "F3",
+                "numeric"
+              ],
+              [
+                "G3",
+                "numeric"
+              ],
+              [
+                "H3",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A4",
+                "    'BOBH'"
+              ],
+              [
+                "B4",
+                "numeric"
+              ],
+              [
+                "C4",
+                "numeric"
+              ],
+              [
+                "D4",
+                "numeric"
+              ],
+              [
+                "E4",
+                "numeric"
+              ],
+              [
+                "F4",
+                "numeric"
+              ],
+              [
+                "G4",
+                "numeric"
+              ],
+              [
+                "H4",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A5",
+                "    'BVBH'"
+              ],
+              [
+                "B5",
+                "numeric"
+              ],
+              [
+                "C5",
+                "numeric"
+              ],
+              [
+                "D5",
+                "numeric"
+              ],
+              [
+                "E5",
+                "numeric"
+              ],
+              [
+                "F5",
+                "numeric"
+              ],
+              [
+                "G5",
+                "numeric"
+              ],
+              [
+                "H5",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A6",
+                "    'BTBH'"
+              ],
+              [
+                "B6",
+                "numeric"
+              ],
+              [
+                "C6",
+                "numeric"
+              ],
+              [
+                "D6",
+                "numeric"
+              ],
+              [
+                "E6",
+                "numeric"
+              ],
+              [
+                "F6",
+                "numeric"
+              ],
+              [
+                "G6",
+                "numeric"
+              ],
+              [
+                "H6",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A7",
+                "    'ELBH'"
+              ],
+              [
+                "B7",
+                "numeric"
+              ],
+              [
+                "C7",
+                "numeric"
+              ],
+              [
+                "D7",
+                "numeric"
+              ],
+              [
+                "E7",
+                "numeric"
+              ],
+              [
+                "F7",
+                "numeric"
+              ],
+              [
+                "G7",
+                "numeric"
+              ],
+              [
+                "H7",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A8",
+                "    'FPBH'"
+              ],
+              [
+                "B8",
+                "numeric"
+              ],
+              [
+                "C8",
+                "numeric"
+              ],
+              [
+                "D8",
+                "numeric"
+              ],
+              [
+                "E8",
+                "numeric"
+              ],
+              [
+                "F8",
+                "numeric"
+              ],
+              [
+                "G8",
+                "numeric"
+              ],
+              [
+                "H8",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A9",
+                "    'CHBH'"
+              ],
+              [
+                "B9",
+                "numeric"
+              ],
+              [
+                "C9",
+                "numeric"
+              ],
+              [
+                "D9",
+                "numeric"
+              ],
+              [
+                "E9",
+                "numeric"
+              ],
+              [
+                "F9",
+                "numeric"
+              ],
+              [
+                "G9",
+                "numeric"
+              ],
+              [
+                "H9",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A10",
+                "    'DPBH'"
+              ],
+              [
+                "B10",
+                "numeric"
+              ],
+              [
+                "C10",
+                "numeric"
+              ],
+              [
+                "D10",
+                "numeric"
+              ],
+              [
+                "E10",
+                "numeric"
+              ],
+              [
+                "F10",
+                "numeric"
+              ],
+              [
+                "G10",
+                "numeric"
+              ],
+              [
+                "H10",
+                "NaN"
+              ]
+            ],
+            [
+              [
+                "A11",
+                "    'ERBH'"
+              ],
+              [
+                "B11",
+                "numeric"
+              ],
+              [
+                "C11",
+                "numeric"
+              ],
+              [
+                "D11",
+                "numeric"
+              ],
+              [
+                "E11",
+                "numeric"
+              ],
+              [
+                "F11",
+                "numeric"
+              ],
+              [
+                "G11",
+                "numeric"
+              ],
+              [
+                "H11",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A12",
+                "    'BUCA'"
+              ],
+              [
+                "B12",
+                "numeric"
+              ],
+              [
+                "C12",
+                "numeric"
+              ],
+              [
+                "D12",
+                "numeric"
+              ],
+              [
+                "E12",
+                "numeric"
+              ],
+              [
+                "F12",
+                "numeric"
+              ],
+              [
+                "G12",
+                "numeric"
+              ],
+              [
+                "H12",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A13",
+                "    'PCCA'"
+              ],
+              [
+                "B13",
+                "numeric"
+              ],
+              [
+                "C13",
+                "numeric"
+              ],
+              [
+                "D13",
+                "numeric"
+              ],
+              [
+                "E13",
+                "numeric"
+              ],
+              [
+                "F13",
+                "numeric"
+              ],
+              [
+                "G13",
+                "numeric"
+              ],
+              [
+                "H13",
+                "numeric"
+              ]
+            ],
+            [
+              [
+                "A14",
+                "    'BOCA'"
+              ],
+              [
+                "B14",
+                "numeric"
+              ],
+              [
+                "C14",
+                "numeric"
+              ],
+              [
+                "D14",
+                "numeric"
+              ],
+              [
+                "E14",
+                "numeric"
+              ],
+              [
+                "F14",
+                "numeric"
+              ],
+              [
+                "G14",
+                "numeric"
+              ],
+              [
+                "H14",
+                "numeric"
+              ]
+            ]
+          ]
+        },
+        {
+          "sheet": "Description",
+          "rows": 1,
+          "cells": 1,
+          "cell_types": {
+            "s": 1
+          },
+          "formulas": 0,
+          "header_preview": [
+            [
+              [
+                "A1",
+                "This dataset contains time-series measurements of species relative abundance for PW1 shown in Fig. 2A. The pairwise community is indicated in column A. The data"
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    "EV3": {
+      "status": "VERIFIED_XLSX",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.15252%2Fmsb.20178157/MediaObjects/44320_2018_BFMSB178157_MOESM4_ESM.xlsx",
+      "bytes": 13754,
+      "sha256": "6b1dcf5e9aa0171df64c7f0c52462ca0ca1f4d0d6bcaec5dbc991a0357a22d0b",
+      "sheets": [
+        {
+          "sheet": "Dataset EV3",
+          "rows": 104,
+          "cells": 104,
+          "cell_types": {
+            "s": 104
+          },
+          "formulas": 0,
+          "header_preview": [
+            [
+              [
+                "A1",
+                "'ER-'"
+              ]
+            ],
+            [
+              [
+                "A2",
+                "    0.0190    0.0118    0.0779    0.2137    0.1516    0.0526    0.1353    0.0290    0.2423    0.0112    0.0555    0.0001"
+              ]
+            ],
+            [
+              [
+                "A3",
+                "    0.0052    0.0043    0.2500    0.0070    0.4054    0.0613    0.0475    0.0400    0.1273    0.0280    0.0239    0.0001"
+              ]
+            ],
+            [
+              [
+                "A4",
+                "    0.0075    0.0154    0.2460    0.0035    0.3810    0.0389    0.0449    0.0800    0.0889    0.0343    0.0592    0.0002"
+              ]
+            ],
+            [
+              [
+                "A5",
+                "    0.0121    0.0086    0.2491    0.0003    0.3640    0.0069    0.0882    0.0281    0.1873    0.0503    0.0052    0.0000"
+              ]
+            ],
+            [
+              [
+                "A6",
+                "    0.0062    0.0227    0.2224    0.0004    0.2914    0.0606    0.0490    0.0263    0.2602    0.0320    0.0288    0.0000"
+              ]
+            ],
+            [
+              [
+                "A7",
+                "    0.0084    0.0405    0.3550    0.0001    0.1622    0.0158    0.1483    0.0270    0.2288    0.0121    0.0018    0.0000"
+              ]
+            ],
+            [
+              [
+                "A8",
+                "    0.0109    0.0255    0.3809    0.0003    0.1343    0.0415    0.1607    0.0190    0.2153    0.0106    0.0006    0.0003"
+              ]
+            ],
+            [
+              [
+                "A9",
+                "'BH-'"
+              ]
+            ],
+            [
+              [
+                "A10",
+                "    0.0002    0.0272    0.0620    0.1700    0.1258    0.0419    0.1147    0.0251    0.1844    0.0099    0.0537    0.1851"
+              ]
+            ],
+            [
+              [
+                "A11",
+                "    0.0001    0.0064    0.2322    0.0064    0.3484    0.0483    0.0458    0.0426    0.1423    0.0306    0.0322    0.0646"
+              ]
+            ],
+            [
+              [
+                "A12",
+                "    0.0001    0.0103    0.2296    0.0045    0.3651    0.0295    0.0436    0.0684    0.0856    0.0889    0.0443    0.0302"
+              ]
+            ],
+            [
+              [
+                "A13",
+                "    0.0001    0.0049    0.3229    0.0004    0.3862    0.0064    0.0920    0.0365    0.1038    0.0230    0.0053    0.0185"
+              ]
+            ],
+            [
+              [
+                "A14",
+                "    0.0001    0.0124    0.2951    0.0005    0.2743    0.0689    0.0588    0.0261    0.1862    0.0342    0.0273    0.0161"
+              ]
+            ]
+          ]
+        },
+        {
+          "sheet": "Description",
+          "rows": 14,
+          "cells": 14,
+          "cell_types": {
+            "s": 14
+          },
+          "formulas": 0,
+          "header_preview": [
+            [
+              [
+                "A1",
+                "This dataset contains time-series measurements of relative species abundance for the multi-species communities shown in Fig. 3A. The name of each community is i"
+              ]
+            ],
+            [
+              [
+                "A3",
+                "The relative abundance data is listed in the following order: "
+              ]
+            ],
+            [
+              [
+                "A4",
+                "BH"
+              ]
+            ],
+            [
+              [
+                "A5",
+                "CA"
+              ]
+            ],
+            [
+              [
+                "A6",
+                "BU"
+              ]
+            ],
+            [
+              [
+                "A7",
+                "PC"
+              ]
+            ],
+            [
+              [
+                "A8",
+                "BO"
+              ]
+            ],
+            [
+              [
+                "A9",
+                "BV"
+              ]
+            ],
+            [
+              [
+                "A10",
+                "BT"
+              ]
+            ],
+            [
+              [
+                "A11",
+                "EL"
+              ]
+            ],
+            [
+              [
+                "A12",
+                "FP"
+              ]
+            ],
+            [
+              [
+                "A13",
+                "CH"
+              ]
+            ],
+            [
+              [
+                "A14",
+                "DP"
+              ]
+            ],
+            [
+              [
+                "A15",
+                "ER"
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "decision": "STOP_ABSOLUTE_RESPONSE_EV1_EV3_RELATIVE_COMPOSITION_ONLY_NO_MATCHED_OD_OR_MONOCULTURE_TABLE",
+  "run": 45939324000,
+  "job_id": 140309746739,
+  "artifact_id": 15171808350,
+  "artifact_digest": "sha256:04142ddb2ebae3449d779f49a47cb054524629062dce9b423f08ee319186c1ca"
+}
