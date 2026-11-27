@@ -1,0 +1,881 @@
+{
+  "status": "FIXED_TRAIN_HELD_CULTURE_AGGREGATION_NOT_META",
+  "prior_replayed": true,
+  "train_per_arm": 2,
+  "results": {
+    "primary_common": {
+      "folds": 512,
+      "panel_folds": 4096,
+      "h": {
+        "1": {
+          "MAE": {
+            "no_change": 0.16483803898202687,
+            "additive": 0.348757453013481,
+            "multiplicative": 0.18352457281984302
+          },
+          "MSE": {
+            "no_change": 0.053157815293626856,
+            "additive": 0.1459082531914347,
+            "multiplicative": 0.048830534205260116
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": -0.09275043789780783,
+            "multiplicative": 0.00432728108836674
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.11175583885838837,
+                "additive": 0.40958288215590116,
+                "multiplicative": 0.2556304962390574
+              },
+              "MSE": {
+                "no_change": 0.02030151846787123,
+                "additive": 0.17910697251509541,
+                "multiplicative": 0.07491514994483509
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.11232963887526164,
+                "additive": 0.4092476190518102,
+                "multiplicative": 0.2557736135026311
+              },
+              "MSE": {
+                "no_change": 0.01715009416890741,
+                "additive": 0.17874832301561627,
+                "multiplicative": 0.07474695920562846
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.07314443614325415,
+                "additive": 0.17799458064857773,
+                "multiplicative": 0.08054939891051503
+              },
+              "MSE": {
+                "no_change": 0.007797517547071844,
+                "additive": 0.041259261314311256,
+                "multiplicative": 0.010862793018082934
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.5187969257317542,
+                "additive": 0.1800009535190377,
+                "multiplicative": 0.08010639309997647
+              },
+              "MSE": {
+                "no_change": 0.28509269439146884,
+                "additive": 0.04349073000764111,
+                "multiplicative": 0.010858510951869708
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.11379874022613884,
+                "additive": 0.5097373279171767,
+                "multiplicative": 0.3004116330987785
+              },
+              "MSE": {
+                "no_change": 0.018564557420321055,
+                "additive": 0.26843995805848775,
+                "multiplicative": 0.09756688542175675
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.07213558870545347,
+                "additive": 0.5112409508732317,
+                "multiplicative": 0.30031071312171576
+              },
+              "MSE": {
+                "no_change": 0.007339284353719533,
+                "additive": 0.26913251366831464,
+                "multiplicative": 0.09693729292808016
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.09124746572425547,
+                "additive": 0.29547652385523754,
+                "multiplicative": 0.09882894594294281
+              },
+              "MSE": {
+                "no_change": 0.013822701265824166,
+                "additive": 0.09368729212582584,
+                "multiplicative": 0.01264518000215074
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.22549567759170863,
+                "additive": 0.2967787860868748,
+                "multiplicative": 0.0965853886431272
+              },
+              "MSE": {
+                "no_change": 0.0551941547338308,
+                "additive": 0.09340097482618535,
+                "multiplicative": 0.012111502169677027
+              }
+            }
+          ]
+        },
+        "2": {
+          "MAE": {
+            "no_change": 0.150096005661517,
+            "additive": 0.3484727511165328,
+            "multiplicative": 0.1785540988134454
+          },
+          "MSE": {
+            "no_change": 0.047483456132569296,
+            "additive": 0.14240727413639964,
+            "multiplicative": 0.04438604829341581
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": -0.09492381800383035,
+            "multiplicative": 0.0030974078391534862
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.10061296072472953,
+                "additive": 0.41060376017473704,
+                "multiplicative": 0.2556304962390574
+              },
+              "MSE": {
+                "no_change": 0.0135700878889763,
+                "additive": 0.17414754137620025,
+                "multiplicative": 0.06875407280367365
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.08436960482838342,
+                "additive": 0.4106508854722689,
+                "multiplicative": 0.25577361350263106
+              },
+              "MSE": {
+                "no_change": 0.010109183492875866,
+                "additive": 0.1741350447878604,
+                "multiplicative": 0.06867524190181983
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.043094824508908475,
+                "additive": 0.17146385576597933,
+                "multiplicative": 0.06442327796963357
+              },
+              "MSE": {
+                "no_change": 0.0025685019883625523,
+                "additive": 0.03628667741936312,
+                "multiplicative": 0.0058217276412753155
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.5187969257317542,
+                "additive": 0.17159749431236038,
+                "multiplicative": 0.06390563502911371
+              },
+              "MSE": {
+                "no_change": 0.27629852584138,
+                "additive": 0.036802693444079375,
+                "multiplicative": 0.0059526516282046825
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.09779980433260137,
+                "additive": 0.5133723377495253,
+                "multiplicative": 0.3004116330987785
+              },
+              "MSE": {
+                "no_change": 0.012488501112820814,
+                "additive": 0.2668706006388866,
+                "multiplicative": 0.09283501656515551
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.039784416304817494,
+                "additive": 0.5131850328883698,
+                "multiplicative": 0.3003107131217158
+              },
+              "MSE": {
+                "no_change": 0.0022987137543591615,
+                "additive": 0.2665100063082337,
+                "multiplicative": 0.09263052233163907
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.09081383126923301,
+                "additive": 0.29807433742316813,
+                "multiplicative": 0.09380729060417158
+              },
+              "MSE": {
+                "no_change": 0.010164047511404987,
+                "additive": 0.09214703522414194,
+                "multiplicative": 0.010240742728748998
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.22549567759170855,
+                "additive": 0.29883430514585346,
+                "multiplicative": 0.09417013094246147
+              },
+              "MSE": {
+                "no_change": 0.05237008747037474,
+                "additive": 0.09235859389243156,
+                "multiplicative": 0.01017841074680941
+              }
+            }
+          ]
+        }
+      },
+      "mean_prediction_plus_target_variance": {
+        "no_change": 0.005674359161057499,
+        "additive": 0.0051045434354746125,
+        "multiplicative": 0.004444485911844276
+      },
+      "max_linear_squared_loss_identity_error": 2.402592014227878e-16
+    },
+    "strict_complete_focals": {
+      "folds": 512,
+      "panel_folds": 4096,
+      "h": {
+        "1": {
+          "MAE": {
+            "no_change": 0.1637145708614033,
+            "additive": 0.3276306679410055,
+            "multiplicative": 0.23386923778806934
+          },
+          "MSE": {
+            "no_change": 0.043024587487294104,
+            "additive": 0.1517343926617071,
+            "multiplicative": 0.08124426606851345
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": -0.108709805174413,
+            "multiplicative": -0.03821967858121935
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.14774027357381597,
+                "additive": 0.5695845022209391,
+                "multiplicative": 0.37520048025805647
+              },
+              "MSE": {
+                "no_change": 0.03822193615037133,
+                "additive": 0.3544380001693075,
+                "multiplicative": 0.1682787480216139
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.18482227324979553,
+                "additive": 0.5708959188819048,
+                "multiplicative": 0.3753845655642518
+              },
+              "MSE": {
+                "no_change": 0.05813345738840498,
+                "additive": 0.3563734081663241,
+                "multiplicative": 0.1686027724305199
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.12824592280568842,
+                "additive": 0.20679643779599577,
+                "multiplicative": 0.141399788352562
+              },
+              "MSE": {
+                "no_change": 0.023167940467561113,
+                "additive": 0.06255629919054614,
+                "multiplicative": 0.03258234867823255
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.2756122732376652,
+                "additive": 0.20880231888057338,
+                "multiplicative": 0.14314895721341073
+              },
+              "MSE": {
+                "no_change": 0.09731108825612589,
+                "additive": 0.06622232547236308,
+                "multiplicative": 0.032984053975533764
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.14939047899724375,
+                "additive": 0.34180504510902304,
+                "multiplicative": 0.2906074499087072
+              },
+              "MSE": {
+                "no_change": 0.03140640469120687,
+                "additive": 0.14070294124193042,
+                "multiplicative": 0.1025534460786404
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.17233437582448194,
+                "additive": 0.3379577424210579,
+                "multiplicative": 0.2871817709020541
+              },
+              "MSE": {
+                "no_change": 0.03896313647989755,
+                "additive": 0.13538416807094036,
+                "multiplicative": 0.09933559350046112
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.17517214260473182,
+                "additive": 0.19912988473230267,
+                "multiplicative": 0.1329741278782283
+              },
+              "MSE": {
+                "no_change": 0.048124862418276376,
+                "additive": 0.0523378815701562,
+                "multiplicative": 0.024205058575860267
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.0763988265978037,
+                "additive": 0.1860734934862474,
+                "multiplicative": 0.12505676222728399
+              },
+              "MSE": {
+                "no_change": 0.008867874046508753,
+                "additive": 0.045860117412089056,
+                "multiplicative": 0.021412107287245647
+              }
+            }
+          ]
+        },
+        "2": {
+          "MAE": {
+            "no_change": 0.1354978061764511,
+            "additive": 0.3193209834230871,
+            "multiplicative": 0.22083378002654475
+          },
+          "MSE": {
+            "no_change": 0.02813329944944261,
+            "additive": 0.13833258369017354,
+            "multiplicative": 0.06837986124445455
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": -0.11019928424073093,
+            "multiplicative": -0.040246561795011945
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.10853058718670928,
+                "additive": 0.5740091879670602,
+                "multiplicative": 0.37520048025805647
+              },
+              "MSE": {
+                "no_change": 0.01830175683137559,
+                "additive": 0.34110656163769665,
+                "multiplicative": 0.15055273885605144
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.16552833256967162,
+                "additive": 0.5746663191144277,
+                "multiplicative": 0.3753845655642518
+              },
+              "MSE": {
+                "no_change": 0.037712008520247906,
+                "additive": 0.34122300182628645,
+                "multiplicative": 0.15045529626158585
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.07311384145055065,
+                "additive": 0.18874421604073524,
+                "multiplicative": 0.11193465370660637
+              },
+              "MSE": {
+                "no_change": 0.007513245175976368,
+                "additive": 0.04690160389896142,
+                "multiplicative": 0.017732480018945108
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.2621772411497746,
+                "additive": 0.18831475134469036,
+                "multiplicative": 0.11202698343615473
+              },
+              "MSE": {
+                "no_change": 0.07832627449715718,
+                "additive": 0.04729356092843346,
+                "multiplicative": 0.0181481478680546
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.10264793591965682,
+                "additive": 0.3355690371481689,
+                "multiplicative": 0.2846003456850671
+              },
+              "MSE": {
+                "no_change": 0.015455198352298537,
+                "additive": 0.12475173490302183,
+                "multiplicative": 0.0892024293886189
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.1502875800937012,
+                "additive": 0.33547311696477783,
+                "multiplicative": 0.28443151208456824
+              },
+              "MSE": {
+                "no_change": 0.027919971999969383,
+                "additive": 0.12434100359101209,
+                "multiplicative": 0.08871189593663581
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.17517214260473182,
+                "additive": 0.17873606853315033,
+                "multiplicative": 0.11178125969763501
+              },
+              "MSE": {
+                "no_change": 0.03676005452093809,
+                "additive": 0.04097307367281801,
+                "multiplicative": 0.016376393578618285
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.04652478843681266,
+                "additive": 0.17905517027168627,
+                "multiplicative": 0.11131043978001813
+              },
+              "MSE": {
+                "no_change": 0.003077885697577856,
+                "additive": 0.04007012906315821,
+                "multiplicative": 0.015859508047126443
+              }
+            }
+          ]
+        }
+      },
+      "mean_prediction_plus_target_variance": {
+        "no_change": 0.014891288037851516,
+        "additive": 0.014644639938698944,
+        "multiplicative": 0.012864404824058965
+      },
+      "max_linear_squared_loss_identity_error": 1.9255430583342559e-16
+    },
+    "after_second_predator_addition": {
+      "folds": 512,
+      "panel_folds": 4096,
+      "h": {
+        "1": {
+          "MAE": {
+            "no_change": 0.228163414581514,
+            "additive": 0.20910510130438914,
+            "multiplicative": 0.1374476619238139
+          },
+          "MSE": {
+            "no_change": 0.09825132433964902,
+            "additive": 0.051350455023877334,
+            "multiplicative": 0.026930848192858875
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": 0.046900869315771684,
+            "multiplicative": 0.07132047614679014
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.14478411952875148,
+                "additive": 0.26909563133471764,
+                "multiplicative": 0.20376730491734263
+              },
+              "MSE": {
+                "no_change": 0.023105391407492147,
+                "additive": 0.07530090139131354,
+                "multiplicative": 0.043523397435509315
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.247428233757933,
+                "additive": 0.26909563133471764,
+                "multiplicative": 0.20380753477549315
+              },
+              "MSE": {
+                "no_change": 0.06476294220135773,
+                "additive": 0.07530090139131354,
+                "multiplicative": 0.04349648763923636
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.03782462110000929,
+                "additive": 0.11949171934898895,
+                "multiplicative": 0.04841707532227746
+              },
+              "MSE": {
+                "no_change": 0.0029703166571329975,
+                "additive": 0.017187575111705825,
+                "multiplicative": 0.004195366111150479
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.6860027957966396,
+                "additive": 0.1171070257195421,
+                "multiplicative": 0.048083548557886366
+              },
+              "MSE": {
+                "no_change": 0.48583517458029707,
+                "additive": 0.016722503307917524,
+                "multiplicative": 0.0041330677678934405
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.13579387983755375,
+                "additive": 0.2911218227484097,
+                "multiplicative": 0.22574336301524622
+              },
+              "MSE": {
+                "no_change": 0.022817788022904892,
+                "additive": 0.08690636637086552,
+                "multiplicative": 0.053338789222596016
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.12845853738191718,
+                "additive": 0.2911218227484097,
+                "multiplicative": 0.22570998768896988
+              },
+              "MSE": {
+                "no_change": 0.019195189349676865,
+                "additive": 0.08690636637086552,
+                "multiplicative": 0.05301150372798174
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.04856655297487625,
+                "additive": 0.15790357860016377,
+                "multiplicative": 0.072109072711514
+              },
+              "MSE": {
+                "no_change": 0.003634923906017342,
+                "additive": 0.026239513123518604,
+                "multiplicative": 0.007051985928233097
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.39644857627443153,
+                "additive": 0.15790357860016377,
+                "multiplicative": 0.07194340840178151
+              },
+              "MSE": {
+                "no_change": 0.16368886859231305,
+                "additive": 0.026239513123518604,
+                "multiplicative": 0.006696187710270562
+              }
+            }
+          ]
+        },
+        "2": {
+          "MAE": {
+            "no_change": 0.22452912320202562,
+            "additive": 0.20851407966486057,
+            "multiplicative": 0.1364751352463483
+          },
+          "MSE": {
+            "no_change": 0.09563846742111237,
+            "additive": 0.05021584636873809,
+            "multiplicative": 0.02567773567260993
+          },
+          "MSE_gain_vs_zero": {
+            "no_change": 0,
+            "additive": 0.04542262105237428,
+            "multiplicative": 0.06996073174850244
+          },
+          "by_panel": [
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.1447841195287515,
+                "additive": 0.26909563133471764,
+                "multiplicative": 0.20376730491734263
+              },
+              "MSE": {
+                "no_change": 0.021931892478946342,
+                "additive": 0.07424258197378544,
+                "multiplicative": 0.04243146861068641
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.247428233757933,
+                "additive": 0.26909563133471764,
+                "multiplicative": 0.20380753477549315
+              },
+              "MSE": {
+                "no_change": 0.06306044746876037,
+                "additive": 0.07424258197378544,
+                "multiplicative": 0.04242716025235008
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.02984822364853748,
+                "additive": 0.11725299568727567,
+                "multiplicative": 0.044977255012377045
+              },
+              "MSE": {
+                "no_change": 0.0014250398230146563,
+                "additive": 0.01579425049880073,
+                "multiplicative": 0.002677593173248439
+              }
+            },
+            {
+              "focal": "Colp",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.6860027957966396,
+                "additive": 0.11461757626502693,
+                "multiplicative": 0.04471677383437176
+              },
+              "MSE": {
+                "no_change": 0.4806443031040964,
+                "additive": 0.015079649344577301,
+                "multiplicative": 0.002639794441543403
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.13579387983755378,
+                "additive": 0.2911218227484097,
+                "multiplicative": 0.22574336301524622
+              },
+              "MSE": {
+                "no_change": 0.019950408008302885,
+                "additive": 0.08571359635130947,
+                "multiplicative": 0.051845467736261135
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "P",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.12845853738191718,
+                "additive": 0.2911218227484097,
+                "multiplicative": 0.2257099876889699
+              },
+              "MSE": {
+                "no_change": 0.017359322653998942,
+                "additive": 0.08571359635130947,
+                "multiplicative": 0.051801993582758735
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "competitor",
+              "MAE": {
+                "no_change": 0.02746861939044127,
+                "additive": 0.15790357860016377,
+                "multiplicative": 0.07151434920656677
+              },
+              "MSE": {
+                "no_change": 0.0011910580156213543,
+                "additive": 0.025470257228168404,
+                "multiplicative": 0.005757633596957158
+              }
+            },
+            {
+              "focal": "Dexio",
+              "competitor": "S",
+              "added_agent": "predator",
+              "MAE": {
+                "no_change": 0.39644857627443153,
+                "additive": 0.15790357860016377,
+                "multiplicative": 0.0715645135204188
+              },
+              "MSE": {
+                "no_change": 0.1595452678161581,
+                "additive": 0.025470257228168404,
+                "multiplicative": 0.005840773987074053
+              }
+            }
+          ]
+        }
+      },
+      "mean_prediction_plus_target_variance": {
+        "no_change": 0.002612856918536503,
+        "additive": 0.0013218055693210928,
+        "multiplicative": 0.0012531125202489498
+      },
+      "max_linear_squared_loss_identity_error": 4.2674197509029455e-16
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45951771253",
+  "code_commit": "ba54729558f5b17ca0e0aac64e10bade9b2c396d",
+  "artifact_id": 15176569226,
+  "artifact_digest": "sha256:6403654124bb5575026eeb942e476b7406ad21aab97a17bd16f14489bd99fcea"
+}

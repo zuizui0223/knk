@@ -1,0 +1,2283 @@
+{
+  "status": "FIXED_TRAIN_TARGET_AGGREGATION_NOT_GEOGRAPHIC_SCALE_NOT_META",
+  "prior_replayed": true,
+  "train_labels": 10,
+  "held_label_pool": 5,
+  "n_folds": 256,
+  "results": {
+    "author_raw": {
+      "raw": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.5091009768649221,
+                "other_pair_mean": 0.5340036877690477,
+                "known_pair_mean": 0.537817116469017,
+                "other_focals_same_pair": 0.5608406465150765,
+                "held_pair_additive_identity": 0.5320499897363412
+              },
+              "MSE": {
+                "zero": 0.5931528510661129,
+                "other_pair_mean": 0.5374724586819976,
+                "known_pair_mean": 0.5715985146210537,
+                "other_focals_same_pair": 0.5342274433001793,
+                "held_pair_additive_identity": 0.5319637316514109
+              },
+              "MSE_full_target": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "common_target_variance": 0.413860501491666,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.055680392384115374,
+                "known_pair_mean": 0.02155433644505922,
+                "other_focals_same_pair": 0.05892540776593358,
+                "held_pair_additive_identity": 0.061189119414702065
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.055680392384115374,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.034126055939056155,
+                "other_focals_same_pair": 0.003245015381818206,
+                "held_pair_additive_identity": 0.005508727030586691
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.4052159916003136,
+                "other_pair_mean": 0.3934121530988802,
+                "known_pair_mean": 0.40434752872857677,
+                "other_focals_same_pair": 0.41078327541746257,
+                "held_pair_additive_identity": 0.3876683647295553
+              },
+              "MSE": {
+                "zero": 0.3344900376338217,
+                "other_pair_mean": 0.2788096452497062,
+                "known_pair_mean": 0.3129357011887625,
+                "other_focals_same_pair": 0.27556462986788816,
+                "held_pair_additive_identity": 0.2733009182191195
+              },
+              "MSE_full_target": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "common_target_variance": 0.1551976880593747,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.055680392384115485,
+                "known_pair_mean": 0.021554336445059163,
+                "other_focals_same_pair": 0.058925407765933524,
+                "held_pair_additive_identity": 0.061189119414702176
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.055680392384115485,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03412605593905632,
+                "other_focals_same_pair": 0.0032450153818180394,
+                "held_pair_additive_identity": 0.005508727030586691
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.3568701195038651,
+                "other_pair_mean": 0.3312334039824556,
+                "known_pair_mean": 0.34672320582863425,
+                "other_focals_same_pair": 0.34360708787354516,
+                "held_pair_additive_identity": 0.322626276047811
+              },
+              "MSE": {
+                "zero": 0.24826909982305798,
+                "other_pair_mean": 0.19258870743894257,
+                "known_pair_mean": 0.22671476337799887,
+                "other_focals_same_pair": 0.18934369205712442,
+                "held_pair_additive_identity": 0.18707998040835577
+              },
+              "MSE_full_target": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "common_target_variance": 0.06897675024861098,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.0556803923841154,
+                "known_pair_mean": 0.021554336445059108,
+                "other_focals_same_pair": 0.05892540776593355,
+                "held_pair_additive_identity": 0.0611891194147022
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.0556803923841154,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03412605593905629,
+                "other_focals_same_pair": 0.0032450153818181504,
+                "held_pair_additive_identity": 0.005508727030586802
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.3286113323207156,
+                "other_pair_mean": 0.2932112474449105,
+                "known_pair_mean": 0.31273941126935395,
+                "other_focals_same_pair": 0.303360032397905,
+                "held_pair_additive_identity": 0.28328046667242984
+              },
+              "MSE": {
+                "zero": 0.20515863091767603,
+                "other_pair_mean": 0.14947823853356065,
+                "known_pair_mean": 0.18360429447261703,
+                "other_focals_same_pair": 0.14623322315174253,
+                "held_pair_additive_identity": 0.14396951150297402
+              },
+              "MSE_full_target": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "common_target_variance": 0.025866281343229124,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.055680392384115374,
+                "known_pair_mean": 0.021554336445058997,
+                "other_focals_same_pair": 0.058925407765933496,
+                "held_pair_additive_identity": 0.06118911941470201
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.055680392384115374,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03412605593905638,
+                "other_focals_same_pair": 0.0032450153818181227,
+                "held_pair_additive_identity": 0.005508727030586635
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.30969816360024777,
+                "other_pair_mean": 0.2672376467244115,
+                "known_pair_mean": 0.2910965387866825,
+                "other_focals_same_pair": 0.2744795675000665,
+                "held_pair_additive_identity": 0.2563239762898698
+              },
+              "MSE": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "MSE_full_target": {
+                "zero": 0.17929234957444695,
+                "other_pair_mean": 0.12361195719033156,
+                "known_pair_mean": 0.15773801312938793,
+                "other_focals_same_pair": 0.12036694180851343,
+                "held_pair_additive_identity": 0.11810323015974486
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.05568039238411539,
+                "known_pair_mean": 0.021554336445059025,
+                "other_focals_same_pair": 0.058925407765933524,
+                "held_pair_additive_identity": 0.06118911941470209
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.05568039238411539,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03412605593905636,
+                "other_focals_same_pair": 0.0032450153818181365,
+                "held_pair_additive_identity": 0.005508727030586705
+              }
+            }
+          },
+          "eligible_fold_groups": 6325,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 176,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 185,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 37,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "SA|FE-PL": 176,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 62,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.7763568394002505e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.5119021154902098,
+                "other_pair_mean": 0.5374502661778627,
+                "known_pair_mean": 0.5385958387422393,
+                "other_focals_same_pair": 0.5644616607772358,
+                "held_pair_additive_identity": 0.5343539292006011
+              },
+              "MSE": {
+                "zero": 0.5992890395840501,
+                "other_pair_mean": 0.5432212314286738,
+                "known_pair_mean": 0.5735747771874519,
+                "other_focals_same_pair": 0.5387071897811263,
+                "held_pair_additive_identity": 0.5354778637970504
+              },
+              "MSE_full_target": {
+                "zero": 0.18794078604381698,
+                "other_pair_mean": 0.1318729778884406,
+                "known_pair_mean": 0.16222652364721882,
+                "other_focals_same_pair": 0.12735893624089323,
+                "held_pair_additive_identity": 0.12412961025681707
+              },
+              "common_target_variance": 0.4113482535402332,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.056067808155376264,
+                "known_pair_mean": 0.025714262396598242,
+                "other_focals_same_pair": 0.060581849802923804,
+                "held_pair_additive_identity": 0.06381117578699969
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.056067808155376264,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.030353545758778022,
+                "other_focals_same_pair": 0.00451404164754754,
+                "held_pair_additive_identity": 0.007743367631623421
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.4074788379086591,
+                "other_pair_mean": 0.39680545974164066,
+                "known_pair_mean": 0.4038635403385001,
+                "other_focals_same_pair": 0.41261161097015214,
+                "held_pair_additive_identity": 0.38866494654005435
+              },
+              "MSE": {
+                "zero": 0.33895386003159356,
+                "other_pair_mean": 0.2828860518762172,
+                "known_pair_mean": 0.31323959763499537,
+                "other_focals_same_pair": 0.2783720102286699,
+                "held_pair_additive_identity": 0.2751426842445937
+              },
+              "MSE_full_target": {
+                "zero": 0.18794078604381698,
+                "other_pair_mean": 0.1318729778884406,
+                "known_pair_mean": 0.16222652364721882,
+                "other_focals_same_pair": 0.12735893624089323,
+                "held_pair_additive_identity": 0.12412961025681707
+              },
+              "common_target_variance": 0.15101307398777666,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.056067808155376375,
+                "known_pair_mean": 0.025714262396598186,
+                "other_focals_same_pair": 0.06058184980292364,
+                "held_pair_additive_identity": 0.06381117578699985
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.056067808155376375,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03035354575877819,
+                "other_focals_same_pair": 0.004514041647547262,
+                "held_pair_additive_identity": 0.007743367631623477
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.35904610752847693,
+                "other_pair_mean": 0.33535114589762577,
+                "known_pair_mean": 0.34590633790383873,
+                "other_focals_same_pair": 0.34559671797378644,
+                "held_pair_additive_identity": 0.3240630569020381
+              },
+              "MSE": {
+                "zero": 0.2521754668474415,
+                "other_pair_mean": 0.19610765869206517,
+                "known_pair_mean": 0.22646120445084333,
+                "other_focals_same_pair": 0.19159361704451777,
+                "held_pair_additive_identity": 0.18836429106044153
+              },
+              "MSE_full_target": {
+                "zero": 0.18794078604381698,
+                "other_pair_mean": 0.1318729778884406,
+                "known_pair_mean": 0.16222652364721882,
+                "other_focals_same_pair": 0.12735893624089323,
+                "held_pair_additive_identity": 0.12412961025681707
+              },
+              "common_target_variance": 0.06423468080362453,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.05606780815537635,
+                "known_pair_mean": 0.025714262396598186,
+                "other_focals_same_pair": 0.06058184980292375,
+                "held_pair_additive_identity": 0.06381117578699999
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.05606780815537635,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03035354575877816,
+                "other_focals_same_pair": 0.004514041647547401,
+                "held_pair_additive_identity": 0.007743367631623643
+              }
+            }
+          },
+          "eligible_fold_groups": 7643,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 235,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "SA|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 247,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.7763568394002505e-15
+        }
+      },
+      "density_standardized": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.5303103174466933,
+                "other_pair_mean": 0.5238312635469442,
+                "known_pair_mean": 0.5470481707314877,
+                "other_focals_same_pair": 0.5592041188770392,
+                "held_pair_additive_identity": 0.5261985253541008
+              },
+              "MSE": {
+                "zero": 0.5792099996803189,
+                "other_pair_mean": 0.5170098855300991,
+                "known_pair_mean": 0.5601080886668853,
+                "other_focals_same_pair": 0.5268359845520385,
+                "held_pair_additive_identity": 0.5136799591562892
+              },
+              "MSE_full_target": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "common_target_variance": 0.4048890042019129,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.062200114150219865,
+                "known_pair_mean": 0.019101911013433615,
+                "other_focals_same_pair": 0.05237401512828044,
+                "held_pair_additive_identity": 0.06553004052402978
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.062200114150219865,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04309820313678625,
+                "other_focals_same_pair": -0.009826099021939427,
+                "held_pair_additive_identity": 0.0033299263738099105
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.4135742607356947,
+                "other_pair_mean": 0.38262100148756206,
+                "known_pair_mean": 0.40983047308662696,
+                "other_focals_same_pair": 0.4129292139697444,
+                "held_pair_additive_identity": 0.3799325355740613
+              },
+              "MSE": {
+                "zero": 0.3261543720541233,
+                "other_pair_mean": 0.2639542579039035,
+                "known_pair_mean": 0.3070524610406898,
+                "other_focals_same_pair": 0.2737803569258432,
+                "held_pair_additive_identity": 0.26062433153009373
+              },
+              "MSE_full_target": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "common_target_variance": 0.15183337657571727,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06220011415021981,
+                "known_pair_mean": 0.019101911013433504,
+                "other_focals_same_pair": 0.052374015128280105,
+                "held_pair_additive_identity": 0.06553004052402955
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06220011415021981,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.043098203136786306,
+                "other_focals_same_pair": -0.009826099021939705,
+                "held_pair_additive_identity": 0.003329926373809744
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.3619133519199916,
+                "other_pair_mean": 0.3182374182375965,
+                "known_pair_mean": 0.35105814818522163,
+                "other_focals_same_pair": 0.34613473962186236,
+                "held_pair_additive_identity": 0.3136289133444535
+              },
+              "MSE": {
+                "zero": 0.24180249617872476,
+                "other_pair_mean": 0.17960238202850506,
+                "known_pair_mean": 0.22270058516529126,
+                "other_focals_same_pair": 0.18942848105044469,
+                "held_pair_additive_identity": 0.17627245565469524
+              },
+              "MSE_full_target": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "common_target_variance": 0.06748150070031882,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.0622001141502197,
+                "known_pair_mean": 0.019101911013433504,
+                "other_focals_same_pair": 0.05237401512828008,
+                "held_pair_additive_identity": 0.06553004052402953
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.0622001141502197,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.043098203136786195,
+                "other_focals_same_pair": -0.009826099021939622,
+                "held_pair_additive_identity": 0.0033299263738098273
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.3323086778348042,
+                "other_pair_mean": 0.2791298159309599,
+                "known_pair_mean": 0.31664812070607745,
+                "other_focals_same_pair": 0.30726179541174237,
+                "held_pair_additive_identity": 0.2733704842982254
+              },
+              "MSE": {
+                "zero": 0.19962655824102557,
+                "other_pair_mean": 0.1374264440908058,
+                "known_pair_mean": 0.180524647227592,
+                "other_focals_same_pair": 0.1472525431127454,
+                "held_pair_additive_identity": 0.134096517716996
+              },
+              "MSE_full_target": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "common_target_variance": 0.025305562762619558,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06220011415021978,
+                "known_pair_mean": 0.01910191101343356,
+                "other_focals_same_pair": 0.05237401512828016,
+                "held_pair_additive_identity": 0.06553004052402958
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06220011415021978,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04309820313678622,
+                "other_focals_same_pair": -0.009826099021939622,
+                "held_pair_additive_identity": 0.0033299263738097995
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.31325772016560827,
+                "other_pair_mean": 0.2524591738913475,
+                "known_pair_mean": 0.2946725982324568,
+                "other_focals_same_pair": 0.27968111723621725,
+                "held_pair_additive_identity": 0.2452638622979704
+              },
+              "MSE": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "MSE_full_target": {
+                "zero": 0.1743209954784061,
+                "other_pair_mean": 0.11212088132818622,
+                "known_pair_mean": 0.15521908446497243,
+                "other_focals_same_pair": 0.12194698035012588,
+                "held_pair_additive_identity": 0.10879095495437645
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06220011415021988,
+                "known_pair_mean": 0.01910191101343367,
+                "other_focals_same_pair": 0.052374015128280216,
+                "held_pair_additive_identity": 0.06553004052402965
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06220011415021988,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04309820313678621,
+                "other_focals_same_pair": -0.009826099021939663,
+                "held_pair_additive_identity": 0.0033299263738097717
+              }
+            }
+          },
+          "eligible_fold_groups": 6325,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 176,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 185,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 37,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "SA|FE-PL": 176,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 62,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.3322676295501878e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.5330939160395191,
+                "other_pair_mean": 0.5275824498804714,
+                "known_pair_mean": 0.5479069671492819,
+                "other_focals_same_pair": 0.5622530790677576,
+                "held_pair_additive_identity": 0.5287489498450587
+              },
+              "MSE": {
+                "zero": 0.5845626740419959,
+                "other_pair_mean": 0.522303373374252,
+                "known_pair_mean": 0.5616278776613811,
+                "other_focals_same_pair": 0.5304322471779668,
+                "held_pair_additive_identity": 0.5168571764481005
+              },
+              "MSE_full_target": {
+                "zero": 0.18250884999187936,
+                "other_pair_mean": 0.12024954932413531,
+                "known_pair_mean": 0.15957405361126425,
+                "other_focals_same_pair": 0.12837842312785014,
+                "held_pair_additive_identity": 0.11480335239798382
+              },
+              "common_target_variance": 0.40205382405011675,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06225930066774388,
+                "known_pair_mean": 0.022934796380614797,
+                "other_focals_same_pair": 0.054130426864029135,
+                "held_pair_additive_identity": 0.06770549759389544
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06225930066774388,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03932450428712908,
+                "other_focals_same_pair": -0.008128873803714742,
+                "held_pair_additive_identity": 0.005446196926151559
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.4160833434844487,
+                "other_pair_mean": 0.38614731105223504,
+                "known_pair_mean": 0.4097990115549717,
+                "other_focals_same_pair": 0.41431011552772085,
+                "held_pair_additive_identity": 0.38129064873822976
+              },
+              "MSE": {
+                "zero": 0.3301480560082774,
+                "other_pair_mean": 0.2678887553405334,
+                "known_pair_mean": 0.30721325962766244,
+                "other_focals_same_pair": 0.2760176291442484,
+                "held_pair_additive_identity": 0.26244255841438197
+              },
+              "MSE_full_target": {
+                "zero": 0.18250884999187936,
+                "other_pair_mean": 0.12024954932413531,
+                "known_pair_mean": 0.15957405361126425,
+                "other_focals_same_pair": 0.12837842312785014,
+                "held_pair_additive_identity": 0.11480335239798382
+              },
+              "common_target_variance": 0.1476392060163981,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06225930066774399,
+                "known_pair_mean": 0.022934796380614964,
+                "other_focals_same_pair": 0.054130426864029024,
+                "held_pair_additive_identity": 0.06770549759389544
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06225930066774399,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.039324504287129025,
+                "other_focals_same_pair": -0.008128873803714964,
+                "held_pair_additive_identity": 0.005446196926151448
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.364183869695259,
+                "other_pair_mean": 0.32236826075740616,
+                "known_pair_mean": 0.3508113769606498,
+                "other_focals_same_pair": 0.3476010455556287,
+                "held_pair_additive_identity": 0.3152067591102371
+              },
+              "MSE": {
+                "zero": 0.24534318333037125,
+                "other_pair_mean": 0.18308388266262726,
+                "known_pair_mean": 0.2224083869497562,
+                "other_focals_same_pair": 0.1912127564663421,
+                "held_pair_additive_identity": 0.17763768573647573
+              },
+              "MSE_full_target": {
+                "zero": 0.18250884999187936,
+                "other_pair_mean": 0.12024954932413531,
+                "known_pair_mean": 0.15957405361126425,
+                "other_focals_same_pair": 0.12837842312785014,
+                "held_pair_additive_identity": 0.11480335239798382
+              },
+              "common_target_variance": 0.06283433333849195,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.06225930066774399,
+                "known_pair_mean": 0.022934796380615047,
+                "other_focals_same_pair": 0.05413042686402916,
+                "held_pair_additive_identity": 0.06770549759389552
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.06225930066774399,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03932450428712894,
+                "other_focals_same_pair": -0.008128873803714826,
+                "held_pair_additive_identity": 0.005446196926151531
+              }
+            }
+          },
+          "eligible_fold_groups": 7643,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 235,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "SA|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 247,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.3322676295501878e-15
+        }
+      }
+    },
+    "hypothetical_SA_x10": {
+      "raw": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.70692539680292,
+                "other_pair_mean": 0.7041743740870587,
+                "known_pair_mean": 0.7101033008031867,
+                "other_focals_same_pair": 0.6969888679846739,
+                "held_pair_additive_identity": 0.6938577389578646
+              },
+              "MSE": {
+                "zero": 0.877764462692903,
+                "other_pair_mean": 0.7817267135357552,
+                "known_pair_mean": 0.8013022662505219,
+                "other_focals_same_pair": 0.7608584826375562,
+                "held_pair_additive_identity": 0.7507415209118986
+              },
+              "MSE_full_target": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "common_target_variance": 0.5805700107353442,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.0960377491571478,
+                "known_pair_mean": 0.07646219644238106,
+                "other_focals_same_pair": 0.1169059800553468,
+                "held_pair_additive_identity": 0.12702294178100437
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.0960377491571478,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.019575552714766742,
+                "other_focals_same_pair": 0.020868230898199003,
+                "held_pair_additive_identity": 0.030985192623856572
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5493154151289992,
+                "other_pair_mean": 0.5084507325617753,
+                "known_pair_mean": 0.5182421244972993,
+                "other_focals_same_pair": 0.4972707996661919,
+                "held_pair_additive_identity": 0.49262928657709176
+              },
+              "MSE": {
+                "zero": 0.5149082059833128,
+                "other_pair_mean": 0.41887045682616514,
+                "known_pair_mean": 0.43844600954093166,
+                "other_focals_same_pair": 0.398002225927966,
+                "held_pair_additive_identity": 0.3878852642023086
+              },
+              "MSE_full_target": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "common_target_variance": 0.21771375402575419,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09603774915714763,
+                "known_pair_mean": 0.07646219644238111,
+                "other_focals_same_pair": 0.11690598005534675,
+                "held_pair_additive_identity": 0.12702294178100415
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09603774915714763,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.01957555271476652,
+                "other_focals_same_pair": 0.020868230898199114,
+                "held_pair_additive_identity": 0.030985192623856517
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.4829567043178784,
+                "other_pair_mean": 0.4286851419472754,
+                "known_pair_mean": 0.44136983674987224,
+                "other_focals_same_pair": 0.4165019333282642,
+                "held_pair_additive_identity": 0.4088790834070807
+              },
+              "MSE": {
+                "zero": 0.39395612041344924,
+                "other_pair_mean": 0.2979183712563018,
+                "known_pair_mean": 0.31749392397106835,
+                "other_focals_same_pair": 0.2770501403581027,
+                "held_pair_additive_identity": 0.26693317863244526
+              },
+              "MSE_full_target": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "common_target_variance": 0.09676166845589072,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09603774915714747,
+                "known_pair_mean": 0.07646219644238089,
+                "other_focals_same_pair": 0.11690598005534653,
+                "held_pair_additive_identity": 0.12702294178100398
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09603774915714747,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.019575552714766575,
+                "other_focals_same_pair": 0.02086823089819906,
+                "held_pair_additive_identity": 0.030985192623856517
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.4457058333728629,
+                "other_pair_mean": 0.3825045255793288,
+                "known_pair_mean": 0.39734058185649507,
+                "other_focals_same_pair": 0.3686155619587389,
+                "held_pair_additive_identity": 0.35983184149625835
+              },
+              "MSE": {
+                "zero": 0.33348007762851756,
+                "other_pair_mean": 0.2374423284713701,
+                "known_pair_mean": 0.25701788118613667,
+                "other_focals_same_pair": 0.21657409757317084,
+                "held_pair_additive_identity": 0.20645713584751357
+              },
+              "MSE_full_target": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "common_target_variance": 0.03628562567095901,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09603774915714747,
+                "known_pair_mean": 0.07646219644238089,
+                "other_focals_same_pair": 0.11690598005534672,
+                "held_pair_additive_identity": 0.12702294178100398
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09603774915714747,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.019575552714766575,
+                "other_focals_same_pair": 0.020868230898199253,
+                "held_pair_additive_identity": 0.030985192623856517
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.4212399939399927,
+                "other_pair_mean": 0.35170106549886043,
+                "known_pair_mean": 0.3690304427825651,
+                "other_focals_same_pair": 0.3360526210926219,
+                "held_pair_additive_identity": 0.3269051895643221
+              },
+              "MSE": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "MSE_full_target": {
+                "zero": 0.2971944519575586,
+                "other_pair_mean": 0.20115670280041106,
+                "known_pair_mean": 0.22073225551517764,
+                "other_focals_same_pair": 0.1802884719022119,
+                "held_pair_additive_identity": 0.17017151017655452
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09603774915714755,
+                "known_pair_mean": 0.07646219644238098,
+                "other_focals_same_pair": 0.11690598005534672,
+                "held_pair_additive_identity": 0.1270229417810041
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09603774915714755,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.019575552714766575,
+                "other_focals_same_pair": 0.02086823089819917,
+                "held_pair_additive_identity": 0.030985192623856544
+              }
+            }
+          },
+          "eligible_fold_groups": 6325,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 176,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 185,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 37,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "SA|FE-PL": 176,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 62,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 2.220446049250313e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.7094488211791511,
+                "other_pair_mean": 0.7073256950050034,
+                "known_pair_mean": 0.7099544580995285,
+                "other_focals_same_pair": 0.6976439558551456,
+                "held_pair_additive_identity": 0.6967474478353588
+              },
+              "MSE": {
+                "zero": 0.8846590465074143,
+                "other_pair_mean": 0.7897619275356367,
+                "known_pair_mean": 0.7997417407344863,
+                "other_focals_same_pair": 0.7606886018564359,
+                "held_pair_additive_identity": 0.7562097557524117
+              },
+              "MSE_full_target": {
+                "zero": 0.311571838599679,
+                "other_pair_mean": 0.21667471962790122,
+                "known_pair_mean": 0.22665453282675083,
+                "other_focals_same_pair": 0.1876013939487003,
+                "held_pair_additive_identity": 0.18312254784467613
+              },
+              "common_target_variance": 0.5730872079077354,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09489711897177766,
+                "known_pair_mean": 0.084917305772928,
+                "other_focals_same_pair": 0.1239704446509784,
+                "held_pair_additive_identity": 0.12844929075500267
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09489711897177766,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.009979813198849663,
+                "other_focals_same_pair": 0.029073325679200734,
+                "held_pair_additive_identity": 0.033552171783225004
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.551567910393296,
+                "other_pair_mean": 0.5121416795252474,
+                "known_pair_mean": 0.5167536636028311,
+                "other_focals_same_pair": 0.49663019983259665,
+                "held_pair_additive_identity": 0.4951079389285882
+              },
+              "MSE": {
+                "zero": 0.5209926771443252,
+                "other_pair_mean": 0.42609555817254746,
+                "known_pair_mean": 0.43607537137139707,
+                "other_focals_same_pair": 0.3970222324933465,
+                "held_pair_additive_identity": 0.39254338638932224
+              },
+              "MSE_full_target": {
+                "zero": 0.311571838599679,
+                "other_pair_mean": 0.21667471962790122,
+                "known_pair_mean": 0.22665453282675083,
+                "other_focals_same_pair": 0.1876013939487003,
+                "held_pair_additive_identity": 0.18312254784467613
+              },
+              "common_target_variance": 0.20942083854464624,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09489711897177772,
+                "known_pair_mean": 0.08491730577292811,
+                "other_focals_same_pair": 0.12397044465097867,
+                "held_pair_additive_identity": 0.12844929075500294
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09489711897177772,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.009979813198849607,
+                "other_focals_same_pair": 0.029073325679200956,
+                "held_pair_additive_identity": 0.033552171783225226
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.4852185125878116,
+                "other_pair_mean": 0.43358442292801136,
+                "known_pair_mean": 0.4396515069354289,
+                "other_focals_same_pair": 0.4161015783423287,
+                "held_pair_additive_identity": 0.41247325565652965
+              },
+              "MSE": {
+                "zero": 0.39977055402329553,
+                "other_pair_mean": 0.3048734350515177,
+                "known_pair_mean": 0.31485324825036726,
+                "other_focals_same_pair": 0.27580010937231675,
+                "held_pair_additive_identity": 0.2713212632682925
+              },
+              "MSE_full_target": {
+                "zero": 0.311571838599679,
+                "other_pair_mean": 0.21667471962790122,
+                "known_pair_mean": 0.22665453282675083,
+                "other_focals_same_pair": 0.1876013939487003,
+                "held_pair_additive_identity": 0.18312254784467613
+              },
+              "common_target_variance": 0.08819871542361642,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09489711897177783,
+                "known_pair_mean": 0.08491730577292828,
+                "other_focals_same_pair": 0.12397044465097878,
+                "held_pair_additive_identity": 0.12844929075500305
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09489711897177783,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.009979813198849552,
+                "other_focals_same_pair": 0.029073325679200956,
+                "held_pair_additive_identity": 0.033552171783225226
+              }
+            }
+          },
+          "eligible_fold_groups": 7643,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 235,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "SA|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 247,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 2.220446049250313e-15
+        }
+      },
+      "density_standardized": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.7106585453407865,
+                "other_pair_mean": 0.687726293677668,
+                "known_pair_mean": 0.7023157264555159,
+                "other_focals_same_pair": 0.6863829168247435,
+                "held_pair_additive_identity": 0.6792014736923003
+              },
+              "MSE": {
+                "zero": 0.8526323579816665,
+                "other_pair_mean": 0.7498067022777015,
+                "known_pair_mean": 0.7798150306959726,
+                "other_focals_same_pair": 0.7387895121927953,
+                "held_pair_additive_identity": 0.7252704714180691
+              },
+              "MSE_full_target": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "common_target_variance": 0.5643001861210453,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10282565570396496,
+                "known_pair_mean": 0.0728173272856939,
+                "other_focals_same_pair": 0.11384284578887116,
+                "held_pair_additive_identity": 0.12736188656359737
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10282565570396496,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.030008328418271057,
+                "other_focals_same_pair": 0.011017190084906203,
+                "held_pair_additive_identity": 0.024536230859632413
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5469632700874563,
+                "other_pair_mean": 0.49501399540020735,
+                "known_pair_mean": 0.5125914249318428,
+                "other_focals_same_pair": 0.49095205235559636,
+                "held_pair_additive_identity": 0.4814496117262361
+              },
+              "MSE": {
+                "zero": 0.4999447416560132,
+                "other_pair_mean": 0.3971190859520481,
+                "known_pair_mean": 0.4271274143703193,
+                "other_focals_same_pair": 0.3861018958671421,
+                "held_pair_additive_identity": 0.37258285509241584
+              },
+              "MSE_full_target": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "common_target_variance": 0.21161256979539197,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10282565570396512,
+                "known_pair_mean": 0.0728173272856939,
+                "other_focals_same_pair": 0.1138428457888711,
+                "held_pair_additive_identity": 0.12736188656359737
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10282565570396512,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.030008328418271224,
+                "other_focals_same_pair": 0.011017190084905981,
+                "held_pair_additive_identity": 0.024536230859632246
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.48069191387818594,
+                "other_pair_mean": 0.41437368529480917,
+                "known_pair_mean": 0.4364090614287461,
+                "other_focals_same_pair": 0.4100188696076103,
+                "held_pair_additive_identity": 0.39822177718489454
+              },
+              "MSE": {
+                "zero": 0.38238220288079544,
+                "other_pair_mean": 0.27955654717683043,
+                "known_pair_mean": 0.3095648755951018,
+                "other_focals_same_pair": 0.2685393570919243,
+                "held_pair_additive_identity": 0.255020316317198
+              },
+              "MSE_full_target": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "common_target_variance": 0.09405003102017423,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10282565570396501,
+                "known_pair_mean": 0.07281732728569362,
+                "other_focals_same_pair": 0.11384284578887116,
+                "held_pair_additive_identity": 0.12736188656359743
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10282565570396501,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03000832841827139,
+                "other_focals_same_pair": 0.011017190084906148,
+                "held_pair_additive_identity": 0.024536230859632413
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.4436498284506412,
+                "other_pair_mean": 0.36733332811263214,
+                "known_pair_mean": 0.3925475632989652,
+                "other_focals_same_pair": 0.3633229109914734,
+                "held_pair_additive_identity": 0.34912005152367154
+              },
+              "MSE": {
+                "zero": 0.32360093349318647,
+                "other_pair_mean": 0.22077527778922165,
+                "known_pair_mean": 0.25078360620749296,
+                "other_focals_same_pair": 0.2097580877043155,
+                "held_pair_additive_identity": 0.1962390469295891
+              },
+              "MSE_full_target": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "common_target_variance": 0.03526876163256533,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10282565570396482,
+                "known_pair_mean": 0.07281732728569351,
+                "other_focals_same_pair": 0.11384284578887097,
+                "held_pair_additive_identity": 0.12736188656359737
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10282565570396482,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.030008328418271307,
+                "other_focals_same_pair": 0.011017190084906148,
+                "held_pair_additive_identity": 0.024536230859632552
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.42023123029566484,
+                "other_pair_mean": 0.33607939187037505,
+                "known_pair_mean": 0.3651503806160845,
+                "other_focals_same_pair": 0.33167862386985636,
+                "held_pair_additive_identity": 0.31582308637772244
+              },
+              "MSE": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "MSE_full_target": {
+                "zero": 0.2883321718606212,
+                "other_pair_mean": 0.18550651615665628,
+                "known_pair_mean": 0.21551484457492756,
+                "other_focals_same_pair": 0.17448932607175008,
+                "held_pair_additive_identity": 0.1609702852970237
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10282565570396493,
+                "known_pair_mean": 0.07281732728569365,
+                "other_focals_same_pair": 0.11384284578887113,
+                "held_pair_additive_identity": 0.1273618865635975
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10282565570396493,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.03000832841827128,
+                "other_focals_same_pair": 0.011017190084906203,
+                "held_pair_additive_identity": 0.02453623085963258
+              }
+            }
+          },
+          "eligible_fold_groups": 6325,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 176,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 185,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 37,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "SA|FE-PL": 176,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 62,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.7832957333041577e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.7129164133631588,
+                "other_pair_mean": 0.6918333954700943,
+                "known_pair_mean": 0.7017113434961212,
+                "other_focals_same_pair": 0.687051316665163,
+                "held_pair_additive_identity": 0.6826422768085462
+              },
+              "MSE": {
+                "zero": 0.8590038817782677,
+                "other_pair_mean": 0.7577795272583806,
+                "known_pair_mean": 0.7773952124479703,
+                "other_focals_same_pair": 0.7387495446759582,
+                "held_pair_additive_identity": 0.7310458374943478
+              },
+              "MSE_full_target": {
+                "zero": 0.3025560146114014,
+                "other_pair_mean": 0.2013316600915145,
+                "known_pair_mean": 0.22094734528110427,
+                "other_focals_same_pair": 0.18230167750909215,
+                "held_pair_additive_identity": 0.17459797032748192
+              },
+              "common_target_variance": 0.5564478671668661,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.1012243545198871,
+                "known_pair_mean": 0.08160866933029742,
+                "other_focals_same_pair": 0.12025433710230948,
+                "held_pair_additive_identity": 0.12795804428391988
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.1012243545198871,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.01961568518958967,
+                "other_focals_same_pair": 0.01902998258242239,
+                "held_pair_additive_identity": 0.026733689764032786
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5495234793597187,
+                "other_pair_mean": 0.4989048997361168,
+                "known_pair_mean": 0.511193700912282,
+                "other_focals_same_pair": 0.49069222168413246,
+                "held_pair_additive_identity": 0.48474781291640723
+              },
+              "MSE": {
+                "zero": 0.5060286222365937,
+                "other_pair_mean": 0.4048042677167066,
+                "known_pair_mean": 0.42441995290629625,
+                "other_focals_same_pair": 0.3857742851342843,
+                "held_pair_additive_identity": 0.37807057795267407
+              },
+              "MSE_full_target": {
+                "zero": 0.3025560146114014,
+                "other_pair_mean": 0.2013316600915145,
+                "known_pair_mean": 0.22094734528110427,
+                "other_focals_same_pair": 0.18230167750909215,
+                "held_pair_additive_identity": 0.17459797032748192
+              },
+              "common_target_variance": 0.2034726076251922,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10122435451988715,
+                "known_pair_mean": 0.08160866933029748,
+                "other_focals_same_pair": 0.12025433710230943,
+                "held_pair_additive_identity": 0.12795804428391966
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10122435451988715,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.01961568518958967,
+                "other_focals_same_pair": 0.019029982582422278,
+                "held_pair_additive_identity": 0.02673368976403251
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.4830903682670481,
+                "other_pair_mean": 0.419467830990232,
+                "known_pair_mean": 0.4345859743527013,
+                "other_focals_same_pair": 0.4098542313533454,
+                "held_pair_additive_identity": 0.40248977973783984
+              },
+              "MSE": {
+                "zero": 0.38837020238936903,
+                "other_pair_mean": 0.287145847869482,
+                "known_pair_mean": 0.3067615330590718,
+                "other_focals_same_pair": 0.2681158652870596,
+                "held_pair_additive_identity": 0.26041215810544954
+              },
+              "MSE_full_target": {
+                "zero": 0.3025560146114014,
+                "other_pair_mean": 0.2013316600915145,
+                "known_pair_mean": 0.22094734528110427,
+                "other_focals_same_pair": 0.18230167750909215,
+                "held_pair_additive_identity": 0.17459797032748192
+              },
+              "common_target_variance": 0.08581418777796754,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.10122435451988704,
+                "known_pair_mean": 0.08160866933029726,
+                "other_focals_same_pair": 0.12025433710230943,
+                "held_pair_additive_identity": 0.1279580442839195
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.10122435451988704,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.019615685189589782,
+                "other_focals_same_pair": 0.01902998258242239,
+                "held_pair_additive_identity": 0.026733689764032453
+              }
+            }
+          },
+          "eligible_fold_groups": 7643,
+          "possible_fold_groups": 7680,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "SA|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "SA|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "SA|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "SA|AC-UR": 235,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "SA|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "SA|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "SA|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "SA|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "SA|PL-UR": 247,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "SA|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.9984014443252818e-15
+        }
+      }
+    },
+    "AC_UR_only": {
+      "raw": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.6722602444511662,
+                "other_pair_mean": 0.6783595704047052,
+                "known_pair_mean": 0.6901467390233427,
+                "other_focals_same_pair": 0.6631721621959644,
+                "held_pair_additive_identity": 0.6767398011164545
+              },
+              "MSE": {
+                "zero": 0.793832903522867,
+                "other_pair_mean": 0.7140750558175845,
+                "known_pair_mean": 0.7624079848606015,
+                "other_focals_same_pair": 0.6992860601834137,
+                "held_pair_additive_identity": 0.7111955048161247
+              },
+              "MSE_full_target": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "common_target_variance": 0.5537933781354729,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.07975784770528249,
+                "known_pair_mean": 0.03142491866226549,
+                "other_focals_same_pair": 0.09454684333945329,
+                "held_pair_additive_identity": 0.08263739870674225
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.07975784770528249,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.048332929043017,
+                "other_focals_same_pair": 0.014788995634170798,
+                "held_pair_additive_identity": 0.002879551001459757
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5245048833253715,
+                "other_pair_mean": 0.4806931199904607,
+                "known_pair_mean": 0.5102158355470612,
+                "other_focals_same_pair": 0.47052245698658945,
+                "held_pair_additive_identity": 0.4806509412309056
+              },
+              "MSE": {
+                "zero": 0.4477120421881963,
+                "other_pair_mean": 0.36795419448291383,
+                "known_pair_mean": 0.4162871235259308,
+                "other_focals_same_pair": 0.3531651988487431,
+                "held_pair_additive_identity": 0.3650746434814542
+              },
+              "MSE_full_target": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "common_target_variance": 0.20767251680080237,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.07975784770528249,
+                "known_pair_mean": 0.031424918662265544,
+                "other_focals_same_pair": 0.09454684333945323,
+                "held_pair_additive_identity": 0.08263739870674214
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.07975784770528249,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04833292904301695,
+                "other_focals_same_pair": 0.014788995634170743,
+                "held_pair_additive_identity": 0.002879551001459646
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.45740704895397516,
+                "other_pair_mean": 0.39746613566251005,
+                "known_pair_mean": 0.4355816081789,
+                "other_focals_same_pair": 0.387453925678685,
+                "held_pair_additive_identity": 0.39756605898910824
+              },
+              "MSE": {
+                "zero": 0.3323384217433066,
+                "other_pair_mean": 0.25258057403802375,
+                "known_pair_mean": 0.30091350308104065,
+                "other_focals_same_pair": 0.2377915784038529,
+                "held_pair_additive_identity": 0.24970102303656394
+              },
+              "MSE_full_target": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "common_target_variance": 0.09229889635591212,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.07975784770528282,
+                "known_pair_mean": 0.03142491866226593,
+                "other_focals_same_pair": 0.09454684333945368,
+                "held_pair_additive_identity": 0.08263739870674264
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.07975784770528282,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04833292904301689,
+                "other_focals_same_pair": 0.014788995634170854,
+                "held_pair_additive_identity": 0.0028795510014598125
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.4192278680294789,
+                "other_pair_mean": 0.3481115007392136,
+                "known_pair_mean": 0.3916167486558557,
+                "other_focals_same_pair": 0.33762785535689777,
+                "held_pair_additive_identity": 0.34792614628823804
+              },
+              "MSE": {
+                "zero": 0.27465161152086137,
+                "other_pair_mean": 0.19489376381557866,
+                "known_pair_mean": 0.24322669285859563,
+                "other_focals_same_pair": 0.18010476818140778,
+                "held_pair_additive_identity": 0.1920142128141189
+              },
+              "MSE_full_target": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "common_target_variance": 0.03461208613346706,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.07975784770528271,
+                "known_pair_mean": 0.03142491866226574,
+                "other_focals_same_pair": 0.0945468433394536,
+                "held_pair_additive_identity": 0.08263739870674247
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.07975784770528271,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.048332929043016976,
+                "other_focals_same_pair": 0.014788995634170882,
+                "held_pair_additive_identity": 0.002879551001459757
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.39428259816732003,
+                "other_pair_mean": 0.3147353638450107,
+                "known_pair_mean": 0.36377371482372134,
+                "other_focals_same_pair": 0.30215227559468183,
+                "held_pair_additive_identity": 0.3143896658304438
+              },
+              "MSE": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "MSE_full_target": {
+                "zero": 0.24003952538739431,
+                "other_pair_mean": 0.1602816776821116,
+                "known_pair_mean": 0.20861460672512852,
+                "other_focals_same_pair": 0.14549268204794075,
+                "held_pair_additive_identity": 0.15740212668065176
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.07975784770528271,
+                "known_pair_mean": 0.031424918662265794,
+                "other_focals_same_pair": 0.09454684333945357,
+                "held_pair_additive_identity": 0.08263739870674255
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.07975784770528271,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04833292904301692,
+                "other_focals_same_pair": 0.014788995634170854,
+                "held_pair_additive_identity": 0.0028795510014598402
+              }
+            }
+          },
+          "eligible_fold_groups": 4409,
+          "possible_fold_groups": 5120,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.7763568394002505e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.6762994826951638,
+                "other_pair_mean": 0.6822767424272853,
+                "known_pair_mean": 0.6924775350825734,
+                "other_focals_same_pair": 0.6654679151259802,
+                "held_pair_additive_identity": 0.6807786901551248
+              },
+              "MSE": {
+                "zero": 0.8032308769340479,
+                "other_pair_mean": 0.7225075097752233,
+                "known_pair_mean": 0.7661370766504321,
+                "other_focals_same_pair": 0.7031617254791598,
+                "held_pair_additive_identity": 0.7166293846684361
+              },
+              "MSE_full_target": {
+                "zero": 0.2517595491307613,
+                "other_pair_mean": 0.17103618197193637,
+                "known_pair_mean": 0.21466574884714515,
+                "other_focals_same_pair": 0.151690397675873,
+                "held_pair_additive_identity": 0.1651580568651491
+              },
+              "common_target_variance": 0.5514713278032868,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.08072336715882467,
+                "known_pair_mean": 0.03709380028361586,
+                "other_focals_same_pair": 0.10006915145488815,
+                "held_pair_additive_identity": 0.08660149226561187
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.08072336715882467,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.0436295668752088,
+                "other_focals_same_pair": 0.019345784296063484,
+                "held_pair_additive_identity": 0.005878125106787202
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5278326145968575,
+                "other_pair_mean": 0.4844775845399836,
+                "known_pair_mean": 0.5107512528081629,
+                "other_focals_same_pair": 0.47112569840209495,
+                "held_pair_additive_identity": 0.48262776283041753
+              },
+              "MSE": {
+                "zero": 0.4546729378495146,
+                "other_pair_mean": 0.37394957069068985,
+                "known_pair_mean": 0.4175791375658985,
+                "other_focals_same_pair": 0.35460378639462653,
+                "held_pair_additive_identity": 0.3680714455839026
+              },
+              "MSE_full_target": {
+                "zero": 0.2517595491307613,
+                "other_pair_mean": 0.17103618197193637,
+                "known_pair_mean": 0.21466574884714515,
+                "other_focals_same_pair": 0.151690397675873,
+                "held_pair_additive_identity": 0.1651580568651491
+              },
+              "common_target_variance": 0.20291338871875353,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.08072336715882478,
+                "known_pair_mean": 0.03709380028361614,
+                "other_focals_same_pair": 0.1000691514548881,
+                "held_pair_additive_identity": 0.08660149226561203
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.08072336715882478,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.043629566875208636,
+                "other_focals_same_pair": 0.019345784296063318,
+                "held_pair_additive_identity": 0.0058781251067872575
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.46069690022705645,
+                "other_pair_mean": 0.40227389890384996,
+                "known_pair_mean": 0.4358768732032142,
+                "other_focals_same_pair": 0.3875429485358608,
+                "held_pair_additive_identity": 0.40012528324012875
+              },
+              "MSE": {
+                "zero": 0.33848695815467045,
+                "other_pair_mean": 0.25776359099584556,
+                "known_pair_mean": 0.30139315787105414,
+                "other_focals_same_pair": 0.2384178066997821,
+                "held_pair_additive_identity": 0.25188546588905814
+              },
+              "MSE_full_target": {
+                "zero": 0.2517595491307613,
+                "other_pair_mean": 0.17103618197193637,
+                "known_pair_mean": 0.21466574884714515,
+                "other_focals_same_pair": 0.151690397675873,
+                "held_pair_additive_identity": 0.1651580568651491
+              },
+              "common_target_variance": 0.08672740902390912,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.08072336715882489,
+                "known_pair_mean": 0.03709380028361631,
+                "other_focals_same_pair": 0.10006915145488834,
+                "held_pair_additive_identity": 0.08660149226561231
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.08072336715882489,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.04362956687520858,
+                "other_focals_same_pair": 0.019345784296063456,
+                "held_pair_additive_identity": 0.005878125106787424
+              }
+            }
+          },
+          "eligible_fold_groups": 5113,
+          "possible_fold_groups": 5120,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.7763568394002505e-15
+        }
+      },
+      "density_standardized": {
+        "exact_five_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.679552639660962,
+                "other_pair_mean": 0.656438999838717,
+                "known_pair_mean": 0.6823889838554733,
+                "other_focals_same_pair": 0.650473448514086,
+                "held_pair_additive_identity": 0.6578433193054133
+              },
+              "MSE": {
+                "zero": 0.7679292977916484,
+                "other_pair_mean": 0.6759598164673062,
+                "known_pair_mean": 0.7367905132672247,
+                "other_focals_same_pair": 0.6801831001377409,
+                "held_pair_additive_identity": 0.677930081524037
+              },
+              "MSE_full_target": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "common_target_variance": 0.5346223977729812,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09196948132434224,
+                "known_pair_mean": 0.031138784524423757,
+                "other_focals_same_pair": 0.08774619765390756,
+                "held_pair_additive_identity": 0.08999921626761143
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09196948132434224,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.06083069679991848,
+                "other_focals_same_pair": -0.004223283670434674,
+                "held_pair_additive_identity": -0.0019702650567308133
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5217227421780805,
+                "other_pair_mean": 0.4650301979027677,
+                "known_pair_mean": 0.5026083084712906,
+                "other_focals_same_pair": 0.46498991013113466,
+                "held_pair_additive_identity": 0.4666379832078148
+              },
+              "MSE": {
+                "zero": 0.4337902991835353,
+                "other_pair_mean": 0.3418208178591927,
+                "known_pair_mean": 0.4026515146591114,
+                "other_focals_same_pair": 0.34604410152962767,
+                "held_pair_additive_identity": 0.34379108291592375
+              },
+              "MSE_full_target": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "common_target_variance": 0.20048339916486793,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09196948132434257,
+                "known_pair_mean": 0.031138784524423868,
+                "other_focals_same_pair": 0.08774619765390762,
+                "held_pair_additive_identity": 0.08999921626761154
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09196948132434257,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.060830696799918704,
+                "other_focals_same_pair": -0.004223283670434952,
+                "held_pair_additive_identity": -0.0019702650567310354
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.4550517950307585,
+                "other_pair_mean": 0.3800034772454165,
+                "known_pair_mean": 0.4284050159568622,
+                "other_focals_same_pair": 0.38433853617016756,
+                "held_pair_additive_identity": 0.3831304506877836
+              },
+              "MSE": {
+                "zero": 0.3224106329808308,
+                "other_pair_mean": 0.23044115165648837,
+                "known_pair_mean": 0.29127184845640697,
+                "other_focals_same_pair": 0.23466443532692333,
+                "held_pair_additive_identity": 0.23241141671321927
+              },
+              "MSE_full_target": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "common_target_variance": 0.08910373296216355,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.0919694813243424,
+                "known_pair_mean": 0.031138784524423813,
+                "other_focals_same_pair": 0.08774619765390745,
+                "held_pair_additive_identity": 0.08999921626761151
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.0919694813243424,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.06083069679991859,
+                "other_focals_same_pair": -0.004223283670434952,
+                "held_pair_additive_identity": -0.0019702650567308966
+              }
+            },
+            "4": {
+              "MAE": {
+                "zero": 0.41819973809541516,
+                "other_pair_mean": 0.3293954038406096,
+                "known_pair_mean": 0.3850656361264603,
+                "other_focals_same_pair": 0.33693148175957727,
+                "held_pair_additive_identity": 0.33336515763997826
+              },
+              "MSE": {
+                "zero": 0.2667207998794786,
+                "other_pair_mean": 0.1747513185551361,
+                "known_pair_mean": 0.23558201535505482,
+                "other_focals_same_pair": 0.17897460222557113,
+                "held_pair_additive_identity": 0.17672158361186707
+              },
+              "MSE_full_target": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "common_target_variance": 0.03341389986081132,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09196948132434252,
+                "known_pair_mean": 0.031138784524423785,
+                "other_focals_same_pair": 0.08774619765390748,
+                "held_pair_additive_identity": 0.08999921626761154
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09196948132434252,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.06083069679991873,
+                "other_focals_same_pair": -0.004223283670435035,
+                "held_pair_additive_identity": -0.00197026505673098
+              }
+            },
+            "5": {
+              "MAE": {
+                "zero": 0.39518516360759726,
+                "other_pair_mean": 0.2948312095240137,
+                "known_pair_mean": 0.3582844050566453,
+                "other_focals_same_pair": 0.3044277525779324,
+                "held_pair_additive_identity": 0.29889587270386553
+              },
+              "MSE": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "MSE_full_target": {
+                "zero": 0.23330690001866725,
+                "other_pair_mean": 0.14133741869432476,
+                "known_pair_mean": 0.2021681154942434,
+                "other_focals_same_pair": 0.14556070236475976,
+                "held_pair_additive_identity": 0.1433076837510558
+              },
+              "common_target_variance": 0,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09196948132434249,
+                "known_pair_mean": 0.03113878452442384,
+                "other_focals_same_pair": 0.08774619765390748,
+                "held_pair_additive_identity": 0.08999921626761145
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09196948132434249,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.06083069679991865,
+                "other_focals_same_pair": -0.004223283670435007,
+                "held_pair_additive_identity": -0.0019702650567310354
+              }
+            }
+          },
+          "eligible_fold_groups": 4409,
+          "possible_fold_groups": 5120,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "UR|AC-PL": 66,
+            "AC|AC-SA": 256,
+            "UR|AC-SA": 120,
+            "AC|AC-UR": 256,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 185,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 177,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 176,
+            "UR|PL-SA": 101,
+            "AC|PL-UR": 256,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.3322676295501878e-15
+        },
+        "at_least_three_support": {
+          "h": {
+            "1": {
+              "MAE": {
+                "zero": 0.6826548565531009,
+                "other_pair_mean": 0.6603692194768275,
+                "known_pair_mean": 0.6842204209008969,
+                "other_focals_same_pair": 0.6522821908676217,
+                "held_pair_additive_identity": 0.6613165199682187
+              },
+              "MSE": {
+                "zero": 0.7746181051334192,
+                "other_pair_mean": 0.6827174696056254,
+                "known_pair_mean": 0.7390126930433436,
+                "other_focals_same_pair": 0.682418962173137,
+                "held_pair_additive_identity": 0.6821316416448597
+              },
+              "MSE_full_target": {
+                "zero": 0.24383603562315187,
+                "other_pair_mean": 0.15193540009535816,
+                "known_pair_mean": 0.20823062353307648,
+                "other_focals_same_pair": 0.15163689266286987,
+                "held_pair_additive_identity": 0.15134957213459252
+              },
+              "common_target_variance": 0.5307820695102673,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09190063552779382,
+                "known_pair_mean": 0.03560541209007562,
+                "other_focals_same_pair": 0.0921991429602822,
+                "held_pair_additive_identity": 0.09248646348855949
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09190063552779382,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.0562952234377182,
+                "other_focals_same_pair": 0.00029850743248838185,
+                "held_pair_additive_identity": 0.0005858279607656725
+              }
+            },
+            "2": {
+              "MAE": {
+                "zero": 0.5245788599419605,
+                "other_pair_mean": 0.4686406464252081,
+                "known_pair_mean": 0.5034084643136091,
+                "other_focals_same_pair": 0.46543126140730856,
+                "held_pair_additive_identity": 0.46863675967803753
+              },
+              "MSE": {
+                "zero": 0.4393007635488896,
+                "other_pair_mean": 0.3474001280210958,
+                "known_pair_mean": 0.40369535145881413,
+                "other_focals_same_pair": 0.3471016205886075,
+                "held_pair_additive_identity": 0.34681430006033026
+              },
+              "MSE_full_target": {
+                "zero": 0.24383603562315187,
+                "other_pair_mean": 0.15193540009535816,
+                "known_pair_mean": 0.20823062353307648,
+                "other_focals_same_pair": 0.15163689266286987,
+                "held_pair_additive_identity": 0.15134957213459252
+              },
+              "common_target_variance": 0.19546472792573766,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.09190063552779376,
+                "known_pair_mean": 0.03560541209007545,
+                "other_focals_same_pair": 0.09219914296028209,
+                "held_pair_additive_identity": 0.09248646348855932
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.09190063552779376,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.05629522343771831,
+                "other_focals_same_pair": 0.00029850743248832634,
+                "held_pair_additive_identity": 0.0005858279607655614
+              }
+            },
+            "3": {
+              "MAE": {
+                "zero": 0.4576647674062563,
+                "other_pair_mean": 0.38441059870170086,
+                "known_pair_mean": 0.42909133250149606,
+                "other_focals_same_pair": 0.38463431515174235,
+                "held_pair_additive_identity": 0.38559978758528285
+              },
+              "MSE": {
+                "zero": 0.3275283163540464,
+                "other_pair_mean": 0.2356276808262528,
+                "known_pair_mean": 0.29192290426397094,
+                "other_focals_same_pair": 0.23532917339376436,
+                "held_pair_additive_identity": 0.235041852865487
+              },
+              "MSE_full_target": {
+                "zero": 0.24383603562315187,
+                "other_pair_mean": 0.15193540009535816,
+                "known_pair_mean": 0.20823062353307648,
+                "other_focals_same_pair": 0.15163689266286987,
+                "held_pair_additive_identity": 0.15134957213459252
+              },
+              "common_target_variance": 0.0836922807308945,
+              "MSE_gain_vs_zero": {
+                "zero": 0,
+                "other_pair_mean": 0.0919006355277936,
+                "known_pair_mean": 0.03560541209007545,
+                "other_focals_same_pair": 0.09219914296028203,
+                "held_pair_additive_identity": 0.09248646348855938
+              },
+              "MSE_gain_vs_anonymous": {
+                "zero": -0.0919006355277936,
+                "other_pair_mean": 0,
+                "known_pair_mean": -0.056295223437718145,
+                "other_focals_same_pair": 0.00029850743248843736,
+                "held_pair_additive_identity": 0.0005858279607657835
+              }
+            }
+          },
+          "eligible_fold_groups": 5113,
+          "possible_fold_groups": 5120,
+          "support_by_group": {
+            "AC|AC-FE": 256,
+            "UR|AC-FE": 256,
+            "AC|AC-PL": 256,
+            "UR|AC-PL": 249,
+            "AC|AC-SA": 256,
+            "UR|AC-SA": 256,
+            "AC|AC-UR": 256,
+            "UR|AC-UR": 256,
+            "AC|FE-PL": 256,
+            "UR|FE-PL": 256,
+            "AC|FE-SA": 256,
+            "UR|FE-SA": 256,
+            "AC|FE-UR": 256,
+            "UR|FE-UR": 256,
+            "AC|PL-SA": 256,
+            "UR|PL-SA": 256,
+            "AC|PL-UR": 256,
+            "UR|PL-UR": 256,
+            "AC|SA-UR": 256,
+            "UR|SA-UR": 256
+          },
+          "max_squared_loss_identity_error": 1.3322676295501878e-15
+        }
+      }
+    }
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45951734930",
+  "code_commit": "a4af377e2ce65c45500235068771d5227e8c5970",
+  "artifact_id": 15176882763,
+  "artifact_digest": "sha256:746fd6def131ffa51b65eff851eb2f3ad1c6291290873d9005059d4f28b6315b"
+}
