@@ -1,0 +1,26 @@
+{
+  "status": "VALIDATED_FACTORIAL_CONTEXT_REGISTRY_NOT_META",
+  "version": "0.8.0",
+  "base_v07_sha256": "16baafefe72853bd6880921dfb043b2e198b92d5b5b4d6815b0b7f80114f305c",
+  "counts": {
+    "factorial_context_sources": 1,
+    "factorial_context_lanes": 5,
+    "factorial_context_marginals": 32,
+    "factorial_context_forecasts": 24
+  },
+  "source_run": 45940785495,
+  "primary_marginals": 8,
+  "early_duplicate_marginals": 8,
+  "late_stop": true,
+  "forecast_lanes": 3,
+  "prior_table_counts_unchanged": true,
+  "integrity": "ok",
+  "foreign_key_check": "ok",
+  "signed_coefficient_rows": 0,
+  "meta_eligible": 0,
+  "registry_run": 45946692452,
+  "code_commit": "06fc86188fd4340ea690aad7b312ab102021f5d7",
+  "artifact_id": 15174982390,
+  "artifact_digest": "sha256:6710935021e57c05c5fe5023f26c50c4fc8094151981748f0796781d1fc36bf3",
+  "artifact_size": 24571910
+}
