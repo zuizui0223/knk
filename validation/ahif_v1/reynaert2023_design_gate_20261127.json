@@ -1,0 +1,889 @@
+{
+  "status": "SOURCE_DESIGN_ONLY",
+  "source_sha256": "7f51f1c3cfbd0400d7d60097df00fbf91dd60e3d98dcc5b49fcea5ce2bbd5d54",
+  "n_rows": 2304,
+  "n_fati_pots": 192,
+  "readme": [
+    [
+      "Explanatory file of data with publication 'Direct and higher-order interactions in plant communities under increasing weather persistence' by Reynaert et al. 2023 - Oikos",
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "All data was recorded between 28/10/2019 and 8/11/2019 at the N site, Drie Eiken Campus, University of Antwerp, Antwerp, Belgium (51°09’41’’N, 04°24’9’’E).",
+      null
+    ],
+    [
+      "R code is available upon request.",
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "Column labels of next tab  include:",
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      "Date: ",
+      "The date  on which the measurment was taken (DD/MM/YYYY)."
+    ],
+    [
+      "Fati:",
+      "The plot/FATI number including 1, 2, 5, 7, 8, 9, 11 and 12 (for more explanation on the FATI platform visit https://www.uantwerpen.be/en/research-groups/pleco/research/research-projects/esfri-grants/esfri-anaee/fati-platform/)."
+    ],
+    [
+      "Pot:",
+      "The pot/mesocosm label. For further information see methods section of the publication."
+    ],
+    [
+      "Treatment:",
+      "Refers to the treatment and made up by the number of days with or without precipitation (irrigation) followed by the letter D or W for dry or wet start (16 unique combinations: 1W, 1D, 3W, 3D, 6W, 6D, 10W, 10D, 15W, 15D, 20W, 20D, 30W, 30D, 60W, 60D)"
+    ],
+    [
+      "DW:",
+      "Refers to dry (D) or wet start (W) treatments."
+    ],
+    [
+      "Letter:",
+      "Refer to species names including A (Agrostis capillaris), B (Plantago lanceolata), C (Centaurea Jacea), D (Trifolium pratense), E (Poa pratensis), F (Deschampsia cespitosa), G (Anthoxanthum odoratum), H (Holcus lanatus), I (Trifolium medium), J (Lotus corniculatus), K (Lychnis flos-cuculi) and L (Phleum pratense). See figure S1 in supplement for details. "
+    ],
+    [
+      "Fctgrp:",
+      "Refers to the functional group of the species (N-fixer, Forb, Grass) and whether it was in a treatment with dry (D) or wet (W) start. See methods section of publication for details. "
+    ],
+    [
+      "Species:",
+      "Abbreviation of the species names including AC (Agrostis capillaris), AO (Anthoxanthum odoratum), DC (Deschampsia cespitosa), HL (Holcus lanatus), PHP (Phleum pratensis), POP (Poa pratensis), LC (Lotus corniculatus), TM (Trifolium medium), TP (Trifolium pratense), SF (Lychnis flos-cuculi), CJ (Centaurea jacea), PL (Plantago lanceolata). See methods section in publication for details."
+    ],
+    [
+      "Dry weight (g) (corrected for # of individuals)",
+      "Combined dry weight of the three individuals of the specific species per pot in grams (corrected when one of them was harvested)"
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ]
+  ],
+  "metadata_values": {
+    "Fati": [
+      "1",
+      "11",
+      "12",
+      "2",
+      "5",
+      "9"
+    ],
+    "Treatment": [
+      "10D",
+      "10W",
+      "15D",
+      "15W",
+      "1D",
+      "1W",
+      "20D",
+      "20W",
+      "30D",
+      "30W",
+      "3D",
+      "3W",
+      "60D",
+      "60W",
+      "6D",
+      "6W"
+    ],
+    "Fctgrp": [
+      "Forb",
+      "Grass",
+      "N-fixer"
+    ],
+    "Species": [
+      "AC",
+      "AO",
+      "CJ",
+      "DC",
+      "HL",
+      "LC",
+      "PHP",
+      "PL",
+      "POP",
+      "SF",
+      "TM",
+      "TP"
+    ],
+    "Letter": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L"
+    ],
+    "Days": [
+      "1",
+      "10",
+      "15",
+      "20",
+      "3",
+      "30",
+      "6",
+      "60"
+    ]
+  },
+  "species_per_pot": {
+    "12": 192
+  },
+  "dup_species_pots": [],
+  "inconsistent_treatment_pots": [],
+  "treatments": [
+    [
+      "1",
+      "15D",
+      "15",
+      4
+    ],
+    [
+      "1",
+      "15W",
+      "15",
+      4
+    ],
+    [
+      "1",
+      "20D",
+      "20",
+      4
+    ],
+    [
+      "1",
+      "20W",
+      "20",
+      4
+    ],
+    [
+      "1",
+      "30D",
+      "30",
+      4
+    ],
+    [
+      "1",
+      "30W",
+      "30",
+      4
+    ],
+    [
+      "1",
+      "60D",
+      "60",
+      4
+    ],
+    [
+      "1",
+      "60W",
+      "60",
+      4
+    ],
+    [
+      "11",
+      "15D",
+      "15",
+      4
+    ],
+    [
+      "11",
+      "15W",
+      "15",
+      4
+    ],
+    [
+      "11",
+      "20D",
+      "20",
+      4
+    ],
+    [
+      "11",
+      "20W",
+      "20",
+      4
+    ],
+    [
+      "11",
+      "30D",
+      "30",
+      4
+    ],
+    [
+      "11",
+      "30W",
+      "30",
+      4
+    ],
+    [
+      "11",
+      "60D",
+      "60",
+      4
+    ],
+    [
+      "11",
+      "60W",
+      "60",
+      4
+    ],
+    [
+      "12",
+      "10D",
+      "10",
+      4
+    ],
+    [
+      "12",
+      "10W",
+      "10",
+      4
+    ],
+    [
+      "12",
+      "1D",
+      "1",
+      4
+    ],
+    [
+      "12",
+      "1W",
+      "1",
+      4
+    ],
+    [
+      "12",
+      "3D",
+      "3",
+      4
+    ],
+    [
+      "12",
+      "3W",
+      "3",
+      4
+    ],
+    [
+      "12",
+      "6D",
+      "6",
+      4
+    ],
+    [
+      "12",
+      "6W",
+      "6",
+      4
+    ],
+    [
+      "2",
+      "10D",
+      "10",
+      4
+    ],
+    [
+      "2",
+      "10W",
+      "10",
+      4
+    ],
+    [
+      "2",
+      "1D",
+      "1",
+      4
+    ],
+    [
+      "2",
+      "1W",
+      "1",
+      4
+    ],
+    [
+      "2",
+      "3D",
+      "3",
+      4
+    ],
+    [
+      "2",
+      "3W",
+      "3",
+      4
+    ],
+    [
+      "2",
+      "6D",
+      "6",
+      4
+    ],
+    [
+      "2",
+      "6W",
+      "6",
+      4
+    ],
+    [
+      "5",
+      "10D",
+      "10",
+      4
+    ],
+    [
+      "5",
+      "10W",
+      "10",
+      4
+    ],
+    [
+      "5",
+      "1D",
+      "1",
+      4
+    ],
+    [
+      "5",
+      "1W",
+      "1",
+      4
+    ],
+    [
+      "5",
+      "3D",
+      "3",
+      4
+    ],
+    [
+      "5",
+      "3W",
+      "3",
+      4
+    ],
+    [
+      "5",
+      "6D",
+      "6",
+      4
+    ],
+    [
+      "5",
+      "6W",
+      "6",
+      4
+    ],
+    [
+      "9",
+      "15D",
+      "15",
+      4
+    ],
+    [
+      "9",
+      "15W",
+      "15",
+      4
+    ],
+    [
+      "9",
+      "20D",
+      "20",
+      4
+    ],
+    [
+      "9",
+      "20W",
+      "20",
+      4
+    ],
+    [
+      "9",
+      "30D",
+      "30",
+      4
+    ],
+    [
+      "9",
+      "30W",
+      "30",
+      4
+    ],
+    [
+      "9",
+      "60D",
+      "60",
+      4
+    ],
+    [
+      "9",
+      "60W",
+      "60",
+      4
+    ]
+  ],
+  "composition": [
+    [
+      "1",
+      "15D",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "15W",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "20D",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "20W",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "30D",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "30W",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "60D",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "1",
+      "60W",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "15D",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "15W",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "20D",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "20W",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "30D",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "30W",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "60D",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "11",
+      "60W",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "10D",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "10W",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "1D",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "1W",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "3D",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "3W",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "6D",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "12",
+      "6W",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "10D",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "10W",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "1D",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "1W",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "3D",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "3W",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "6D",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "2",
+      "6W",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "10D",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "10W",
+      "10",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "1D",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "1W",
+      "1",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "3D",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "3W",
+      "3",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "6D",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "5",
+      "6W",
+      "6",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "15D",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "15W",
+      "15",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "20D",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "20W",
+      "20",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "30D",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "30W",
+      "30",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "60D",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ],
+    [
+      "9",
+      "60W",
+      "60",
+      "AC+AO+CJ+DC+HL+LC+PHP+PL+POP+SF+TM+TP",
+      4
+    ]
+  ],
+  "sample_metadata": [
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Grass",
+      "Species": "AC",
+      "Letter": "A",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Forb",
+      "Species": "PL",
+      "Letter": "B",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Forb",
+      "Species": "CJ",
+      "Letter": "C",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "N-fixer",
+      "Species": "TP",
+      "Letter": "D",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Grass",
+      "Species": "POP",
+      "Letter": "E",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Grass",
+      "Species": "DC",
+      "Letter": "F",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Grass",
+      "Species": "AO",
+      "Letter": "G",
+      "Days": "60"
+    },
+    {
+      "Date": "2019-11-04 00:00:00",
+      "Fati": "1",
+      "Pot": "60W1A",
+      "Treatment": "60W",
+      "Fctgrp": "Grass",
+      "Species": "HL",
+      "Letter": "H",
+      "Days": "60"
+    }
+  ],
+  "missing_corrected_biomass_rows": 4,
+  "n_composition_cells": 48,
+  "row_grain": {
+    "nonempty_rows": 2304,
+    "blank_rows": 2,
+    "incomplete_keys": [],
+    "n_incomplete": 0
+  },
+  "decision": "STOP_MARGINAL_SPECIES_ADDITION_ALL_POTS_CONTAIN_ALL_12_SPECIES",
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45946879018",
+  "code_commit": "a44a42b760e93f246cff7a1da5b7f547a74963bb",
+  "artifact_id": 15174124488,
+  "artifact_digest": "sha256:d9886865e2e2a76641d9634f89916d4e4f22d0e4971b96129d4e64ee99d30efb",
+  "failed_run": 45946830065,
+  "failed_reason": "Two fully blank worksheet rows were initially counted as incomplete keys; subsequent audit excludes only wholly blank rows"
+}
