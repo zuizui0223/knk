@@ -11,8 +11,11 @@ def load():
     w=openpyxl.load_workbook(io.BytesIO(b),read_only=True,data_only=True)
     s=w["BM_per_species"];rows=list(s.values);h=rows[0]
     assert len(h)==10 and len(rows)==2307
-    r=[dict(zip(h,x)) for x in rows[1:]]
-    assert all(x["Species"] is not None and x["Pot"] is not None for x in r)
+    nonempty=[(i,x) for i,x in enumerate(rows[1:],2) if any(v is not None for v in x)]
+    incomplete=[{"excel_row":i,"metadata":{str(k):str(v) for k,v in zip(h[:8],x[:8])},"nonempty_outcome_columns":sum(v is not None for v in x[8:])} for i,x in nonempty if x[2] is None or x[5] is None]
+    print("REYNAERT_ROW_GRAIN",json.dumps({"nonempty_rows":len(nonempty),"blank_rows":len(rows)-1-len(nonempty),"incomplete_keys":incomplete[:25],"n_incomplete":len(incomplete)}),flush=True)
+    assert not incomplete,"STOP incomplete nonempty sample keys"
+    r=[dict(zip(h,x)) for i,x in nonempty]
     return w,r
 def main():
     p=argparse.ArgumentParser();p.add_argument("--out",type=Path,required=True);a=p.parse_args()
