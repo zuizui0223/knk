@@ -1,0 +1,27 @@
+name: AHIF plant context source recruitment
+on:
+  push:
+    branches: [analysis/ahif-context-baseline-plant-20261127]
+    paths:
+      - 'benchmarks/probe_ahif_plant_context.py'
+      - '.github/workflows/knk-ahif-plant-context-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [reynaert, yang]
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install openpyxl
+      - run: python -m benchmarks.probe_ahif_plant_context --source ${{ matrix.source }} --out "$RUNNER_TEMP/derived/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plant-context-${{ matrix.source }}-audit
+          path: ${{ runner.temp }}/derived/audit.json
+          retention-days: 30
