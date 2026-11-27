@@ -1,0 +1,27 @@
+name: AHIF context cross-taxa source gates
+on:
+  push:
+    branches: [analysis/ahif-context-cross-taxa-20261127]
+    paths:
+      - 'benchmarks/probe_ahif_context_cross_taxa.py'
+      - '.github/workflows/knk-ahif-context-cross-taxa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    strategy:
+      fail-fast: false
+      matrix:
+        source: [shen, mahaut, mickalide]
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install openpyxl
+      - run: python -m benchmarks.probe_ahif_context_cross_taxa --source ${{ matrix.source }} --out "$RUNNER_TEMP/derived/audit.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: context-source-${{ matrix.source }}-audit
+          path: ${{ runner.temp }}/derived/audit.json
+          retention-days: 30
