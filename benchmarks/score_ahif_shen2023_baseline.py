@@ -47,7 +47,7 @@ def main():
         for comp,j,k in (("P",1,4),("S",2,5)):
             ids=[0,j,3,k];r=ini[i,ids,:]
             lo=float(r.min(1).max());hi=float(r.max(1).min())
-            support.append({"focal":f,"competitor":comp,"max_of_min":lo,"min_of_max":hi,"common_support":lo<=hi,"grand_mean_day1":float(g[i]),"grand_mean_inside_all_four_arms":lo<=g[i]<=hi})
+            support.append({"focal":f,"competitor":comp,"max_of_min":lo,"min_of_max":hi,"common_support":lo<=hi,"grand_mean_day1":float(g[i]),"grand_mean_inside_all_four_arms":bool(lo<=g[i]<=hi)})
     result={"status":"POST_SCORE_BASELINE_DIAGNOSTIC_NOT_CAUSAL_NOT_META","dates":ds,"n_cultures":24,"source_replay":True,"normalization_CD":dict(zip(s.FOCAL,ref.tolist())),"day1_range":[float(ini.min()),float(ini.max())],"within_arm_slopes":dict(zip(s.FOCAL,slope.tolist())),"ANCOVA_support":support,"results":out}
     a.out.parent.mkdir(parents=True,exist_ok=True);a.out.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n")
     print("SHEN_BASELINE_RESULT",json.dumps(result,allow_nan=False),flush=True)
