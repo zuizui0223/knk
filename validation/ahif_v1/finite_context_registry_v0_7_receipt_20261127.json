@@ -1,0 +1,55 @@
+{
+  "status": "VALIDATED_FINITE_CONTEXT_REGISTRY_NOT_META",
+  "version": "0.7.0",
+  "base_v06_sha256": "d50d6d93d28a7c25e6b7671150266f6fef8e00b11c7f9b35c845c08cd0e7def6",
+  "prior_table_counts_unchanged": true,
+  "counts": {
+    "finite_response_sources": 1,
+    "finite_density_endpoints": 80,
+    "finite_context_marginals": 160,
+    "finite_full_endpoint_forecasts": 55
+  },
+  "observed_endpoint_rows": 75,
+  "definition_only_rows": 5,
+  "sign_by_background": [
+    [
+      1,
+      60,
+      47,
+      13,
+      9,
+      10
+    ],
+    [
+      2,
+      60,
+      42,
+      18,
+      12,
+      15
+    ],
+    [
+      3,
+      20,
+      12,
+      8,
+      6,
+      6
+    ]
+  ],
+  "primary_identity_MAE": {
+    "zero": 0.27255460636369416,
+    "additive": 0.23014387178905665,
+    "multiplicative": 0.22422319840106536,
+    "anonymous": 0.21553564804738393
+  },
+  "source_run": "https://github.com/zuizui0223/knk/actions/runs/45940487030",
+  "integrity": "ok",
+  "foreign_key_check": "ok",
+  "meta_eligible": 0,
+  "signed_coefficient_rows": 0,
+  "code_commit": "6786b71cd58c854df3dc6fe1ea8654b9b804ab0278",
+  "artifact_id": 15172313192,
+  "artifact_digest": "sha256:16baafefe72853bd6880921dfb043b2e198b92d5b5b4d6815b0b7f80114f305c",
+  "artifact_size": 24563780
+}
