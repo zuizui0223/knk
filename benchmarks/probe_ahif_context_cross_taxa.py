@@ -43,7 +43,10 @@ def describe(b,name):
 def shen():
     z={"source":"shen2023","data_doi":"10.5281/zenodo.7896204","status":"SOURCE_ONLY"}
     m,_=manifest("https://zenodo.org/api/records/7896204")
-    title=m["metadata"]["title"];assert "interaction" in title.lower()
+    title=m["metadata"]["title"]
+    print("SHEN_MANIFEST_IDENTITY",json.dumps({"id":m.get("id"),"doi":m.get("doi"),"title":title,"related_identifiers":m["metadata"].get("related_identifiers"),"creators":m["metadata"].get("creators"),"file_names":[f.get("key") for f in m.get("files",[])]}),flush=True)
+    assert str(m["id"])=="7896204" or m.get("conceptdoi")=="10.5281/zenodo.7896204","record identity mismatch"
+    assert "shen" in json.dumps(m["metadata"].get("creators",[])).lower() or "pennekamp" in json.dumps(m["metadata"]).lower(),"author mismatch"
     z.update(title=title,record=m["id"],doi=m.get("doi"),related_identifiers=m["metadata"].get("related_identifiers"),files=[])
     for f in m["files"]:
         k=f["key"];size=f["size"];checksum=f["checksum"]
